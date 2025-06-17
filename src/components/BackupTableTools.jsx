@@ -3,6 +3,7 @@ import useBackupStore from '../util/store';
 import BackupConfigModal from './BackupConfigModal';
 
 const BackupTableTools = ({ onFilterChange, selectedBackups, onDeleteBackups }) => {
+  const { buildBackupProcess } = useBackupStore();
   const [dateFilter, setDateFilter] = React.useState('');
   const [isConfigModalOpen, setIsConfigModalOpen] = React.useState(false);
 
@@ -35,6 +36,7 @@ const BackupTableTools = ({ onFilterChange, selectedBackups, onDeleteBackups }) 
 
   const handleSaveBackup = async (config) => {
     console.log('Save backup:', config);
+    buildBackupProcess(config);
   };
 
   return (

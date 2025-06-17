@@ -57,10 +57,18 @@ const useBackupStore = create(
       set((state) => {
         state.backupProcess = process;
       });
+
+      // set inProgress to true
+      set((state) => {
+        state.inProgress = true;
+      });
+
+      // set step to 1
+      set((state) => {
+        state.inProgressStep = 1;
+      });
     },
 
-    getBackupProcess: () =>
-      get().backupProcess,
   }))
 );
 

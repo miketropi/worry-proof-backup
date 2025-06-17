@@ -29122,25 +29122,27 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _components_BackupTable__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./components/BackupTable */ "./src/components/BackupTable.jsx");
 /* harmony import */ var _components_Footer__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./components/Footer */ "./src/components/Footer.jsx");
 /* harmony import */ var _components_ServerMetrics__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./components/ServerMetrics */ "./src/components/ServerMetrics.jsx");
-/* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! react/jsx-runtime */ "./node_modules/react/jsx-runtime.js");
+/* harmony import */ var _components_BackupProcess__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./components/BackupProcess */ "./src/components/BackupProcess.jsx");
+/* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! react/jsx-runtime */ "./node_modules/react/jsx-runtime.js");
+
 
 
 
 
 function App() {
-  return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsxs)("div", {
-    children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsxs)("div", {
+  return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsxs)("div", {
+    children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)(_components_BackupProcess__WEBPACK_IMPORTED_MODULE_3__["default"], {}), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsxs)("div", {
       className: "tw-grid tw-grid-cols-1 md:tw-grid-cols-12 tw-gap-8",
-      children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("div", {
+      children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)("div", {
         className: "md:tw-col-span-9",
-        children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)(_components_BackupTable__WEBPACK_IMPORTED_MODULE_0__["default"], {})
-      }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("div", {
+        children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)(_components_BackupTable__WEBPACK_IMPORTED_MODULE_0__["default"], {})
+      }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)("div", {
         className: "md:tw-col-span-3",
-        children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)(_components_ServerMetrics__WEBPACK_IMPORTED_MODULE_2__["default"], {
+        children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)(_components_ServerMetrics__WEBPACK_IMPORTED_MODULE_2__["default"], {
           metrics: wp_backup_php_data.server_metrics
         })
       })]
-    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)(_components_Footer__WEBPACK_IMPORTED_MODULE_1__["default"], {})]
+    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)(_components_Footer__WEBPACK_IMPORTED_MODULE_1__["default"], {})]
   });
 }
 
@@ -29303,6 +29305,121 @@ var BackupConfigModal = function BackupConfigModal(_ref) {
   });
 };
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (BackupConfigModal);
+
+/***/ }),
+
+/***/ "./src/components/BackupProcess.jsx":
+/*!******************************************!*\
+  !*** ./src/components/BackupProcess.jsx ***!
+  \******************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _util_store__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../util/store */ "./src/util/store.js");
+/* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! react/jsx-runtime */ "./node_modules/react/jsx-runtime.js");
+
+
+
+/**
+ * BackupProcess - Stepper UI for backup process
+ * Shows each step, highlights current, marks completed, and disables future steps
+ * Uses Tailwind CSS with 'tw-' prefix for all classes
+ */
+
+var BackupProcess = function BackupProcess() {
+  var _useBackupStore = (0,_util_store__WEBPACK_IMPORTED_MODULE_1__["default"])(),
+    backupProcess = _useBackupStore.backupProcess,
+    inProgress = _useBackupStore.inProgress,
+    inProgressStep = _useBackupStore.inProgressStep;
+  if (!inProgress || !backupProcess.length) return null;
+  return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsxs)("div", {
+    className: "tw-bg-white tw-border tw-border-gray-200 tw-p-6 tw-mb-6",
+    children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsxs)("h2", {
+      className: "tw-text-lg tw-font-semibold tw-text-gray-800 tw-mb-6 tw-flex tw-items-center tw-gap-2",
+      children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("svg", {
+        className: "tw-w-6 tw-h-6 tw-text-blue-500",
+        fill: "none",
+        stroke: "currentColor",
+        viewBox: "0 0 24 24",
+        children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("path", {
+          strokeLinecap: "round",
+          strokeLinejoin: "round",
+          strokeWidth: 2,
+          d: "M12 8v4l3 3M12 6a9 9 0 100 18 9 9 0 000-18z"
+        })
+      }), "Backup Progress"]
+    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("ol", {
+      className: "tw-relative tw-border-l-2 tw-border-blue-200 tw-ml-4",
+      children: backupProcess.map(function (step, idx) {
+        var isCompleted = inProgressStep > step.step;
+        var isCurrent = inProgressStep === step.step;
+        return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsxs)("li", {
+          className: "tw-mb-8 tw-ml-6 tw-last:mb-0",
+          children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("span", {
+            className: "tw-absolute tw--left-4 tw-flex tw-items-center tw-justify-center tw-w-8 tw-h-8 tw-rounded-full tw-border-2 ".concat(isCompleted ? 'tw-bg-blue-500 tw-border-blue-500' : isCurrent ? 'tw-bg-white tw-border-blue-500 tw-animate-pulse' : 'tw-bg-gray-100 tw-border-gray-300'),
+            children: isCompleted ? /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("svg", {
+              className: "tw-w-5 tw-h-5 tw-text-white",
+              fill: "none",
+              stroke: "currentColor",
+              viewBox: "0 0 24 24",
+              children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("path", {
+                strokeLinecap: "round",
+                strokeLinejoin: "round",
+                strokeWidth: 2,
+                d: "M5 13l4 4L19 7"
+              })
+            }) : /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("span", {
+              className: "tw-text-base ".concat(isCurrent ? 'tw-text-blue-600' : 'tw-text-gray-400'),
+              children: step.step
+            })
+          }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsxs)("div", {
+            className: "tw-pl-4",
+            children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("h3", {
+              className: "tw-text-base tw-font-semibold ".concat(isCompleted ? 'tw-text-blue-600' : isCurrent ? 'tw-text-blue-700' : 'tw-text-gray-500'),
+              children: step.name
+            }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("p", {
+              className: "tw-mt-1 tw-text-sm tw-text-gray-500",
+              children: step.description
+            }), isCurrent && /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsxs)("div", {
+              className: "tw-mt-2 tw-flex tw-items-center tw-gap-2",
+              children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsxs)("svg", {
+                className: "tw-w-4 tw-h-4 tw-text-blue-400 tw-animate-spin",
+                fill: "none",
+                stroke: "currentColor",
+                viewBox: "0 0 24 24",
+                children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("circle", {
+                  className: "tw-opacity-25",
+                  cx: "12",
+                  cy: "12",
+                  r: "10",
+                  stroke: "currentColor",
+                  strokeWidth: "4"
+                }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("path", {
+                  className: "tw-opacity-75",
+                  fill: "currentColor",
+                  d: "M4 12a8 8 0 018-8v8z"
+                })]
+              }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("span", {
+                className: "tw-text-xs tw-text-blue-500 tw-font-medium",
+                children: "In progress..."
+              })]
+            }), isCompleted && /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("span", {
+              className: "tw-mt-2 tw-inline-block tw-text-xs tw-text-green-600 tw-font-medium",
+              children: "Completed"
+            })]
+          })]
+        }, step.step);
+      })
+    })]
+  });
+};
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (BackupProcess);
 
 /***/ }),
 
@@ -29740,6 +29857,8 @@ var BackupTableTools = function BackupTableTools(_ref) {
   var onFilterChange = _ref.onFilterChange,
     selectedBackups = _ref.selectedBackups,
     onDeleteBackups = _ref.onDeleteBackups;
+  var _useBackupStore = (0,_util_store__WEBPACK_IMPORTED_MODULE_1__["default"])(),
+    buildBackupProcess = _useBackupStore.buildBackupProcess;
   var _React$useState = react__WEBPACK_IMPORTED_MODULE_0___default().useState(''),
     _React$useState2 = _slicedToArray(_React$useState, 2),
     dateFilter = _React$useState2[0],
@@ -29816,6 +29935,7 @@ var BackupTableTools = function BackupTableTools(_ref) {
         while (1) switch (_context4.n) {
           case 0:
             console.log('Save backup:', config);
+            buildBackupProcess(config);
           case 1:
             return _context4.a(2);
         }
@@ -30464,9 +30584,16 @@ var useBackupStore = (0,zustand__WEBPACK_IMPORTED_MODULE_0__.create)((0,zustand_
       set(function (state) {
         state.backupProcess = process;
       });
-    },
-    getBackupProcess: function getBackupProcess() {
-      return get().backupProcess;
+
+      // set inProgress to true
+      set(function (state) {
+        state.inProgress = true;
+      });
+
+      // set step to 1
+      set(function (state) {
+        state.inProgressStep = 1;
+      });
     }
   };
 }));
