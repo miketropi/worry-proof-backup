@@ -2,6 +2,11 @@
 
 A powerful, user-friendly WordPress plugin to backup, restore, import, and export your entire site—including database, plugins, themes, uploads, and demo content. Built for reliability, speed, and ease of use.
 
+![WP Backup Preview](https://github.com/miketropi/wp-backup/blob/master/image-preview/preview_1.jpeg?raw=true)
+![WP Backup Preview](https://github.com/miketropi/wp-backup/blob/master/image-preview/preview_2.jpeg?raw=true)
+![WP Backup Preview](https://github.com/miketropi/wp-backup/blob/master/image-preview/preview_3.jpeg?raw=true)
+![WP Backup Preview](https://github.com/miketropi/wp-backup/blob/master/image-preview/preview_4.jpeg?raw=true)
+
 ## Features
 
 - **One-Click Backup & Restore**: Effortlessly create and restore backups of your WordPress site.
