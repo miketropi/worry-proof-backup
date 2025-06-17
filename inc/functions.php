@@ -249,6 +249,53 @@ function wp_backup_database($exclude_tables = array()) {
   return $sql_dump;
 }
 
+/**
+ * generate config file 
+ * Create a new folder in uploads/wp-backup/backup_<random_string>
+ * Create a new file in the folder: config.json
+ * The file should contain the following information:
+ * - backup_id
+ * - backup_name
+ * - backup_types
+ * - backup_date
+ * - backup_description
+ * - backup_author_email
+ * - backup_status
+ * - backup_size
+ */
+function wp_backup_generate_config_file($args = array()) {
+  $defaults = array(
+    'backup_id' => wp_generate_password(12, false),
+    'backup_name' => '',
+    'backup_types' => '',
+    'backup_date' => date('c'),
+    'backup_description' => '',
+    'backup_author_email' => is_user_logged_in() ? wp_get_current_user()->user_email : '',
+    'backup_status' => 'pending',
+    'backup_size' => '???',
+    'site_url' => home_url(),
+  );
+  $args = wp_parse_args($args, $defaults);
+
+
+  $upload_dir = wp_upload_dir();
+  $name_folder = 'backup_' . $args['backup_id'] . '_' . date('Y-m-d_H-i-s');
+  $backup_folder = $upload_dir['basedir'] . '/wp-backup/' . $name_folder;
+  if (!file_exists($backup_folder)) {
+    mkdir($backup_folder, 0755, true);
+  }
+
+  $config_file = $backup_folder . '/config.json';
+
+  file_put_contents($config_file, json_encode($args));
+
+  return [
+    'backup_folder' => $backup_folder,
+    'config_file' => $config_file,
+    'name_folder' => $name_folder,
+  ];
+}
+
 function __test() {
   # check GET parameter not test = true return
   if (!isset($_GET['test']) || $_GET['test'] != 'true') {

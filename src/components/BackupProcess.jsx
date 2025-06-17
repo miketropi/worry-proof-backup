@@ -1,5 +1,6 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import useBackupStore from '../util/store';
+import { doBackupProcess } from '../util/lib';
 
 /**
  * BackupProcess - Stepper UI for backup process
@@ -7,7 +8,30 @@ import useBackupStore from '../util/store';
  * Uses Tailwind CSS with 'tw-' prefix for all classes
  */
 const BackupProcess = () => {
-  const { backupProcess, inProgress, inProgressStep } = useBackupStore();
+  const { backupProcess, inProgress, inProgressStep, setInProgressStep } = useBackupStore();
+
+  const backupProcessHandler = async (process) => {
+    console.log(process);
+    const response = await doBackupProcess(process);
+    console.log(response);
+    
+    // setTimeout(() => {
+    //   console.log(process);
+    //   setInProgressStep(process.step + 1);
+    // }, 1000);
+
+
+  };
+
+  useEffect(() => {
+    if (inProgress == true) {
+      // get process by step
+      const process = backupProcess.find((step) => step.step === inProgressStep);
+      backupProcessHandler(process);
+
+      // console.log(inProgress, inProgressStep);
+    }
+  }, [inProgress, inProgressStep]);
 
   if (!inProgress || !backupProcess.length) return null;
 

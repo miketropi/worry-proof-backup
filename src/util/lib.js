@@ -18,3 +18,21 @@ export const getBackups = async () => {
   });
   return response;
 };
+
+export const doBackupProcess = async (process) => {
+  const { action, payload } = process;
+
+  const response = await __request(ajax_url, {
+    method: 'POST',
+    headers: {
+      'Content-Type': 'application/x-www-form-urlencoded',
+    },
+    body: new URLSearchParams({
+      action,
+      ...Object.fromEntries(Object.entries(payload).map(([key, value]) => [`payload[${key}]`, value])),
+      nonce: nonce.wp_backup_nonce,
+    }),
+  });
+
+  return response;
+}
