@@ -44,11 +44,11 @@ const BackupTable = () => {
 
   if (isLoading) {
     return (
-      <div className="animate-pulse">
-        <div className="h-8 bg-gray-200 rounded mb-4"></div>
-        <div className="space-y-3">
+      <div className="tw-animate-pulse">
+        <div className="tw-h-8 tw-bg-gray-200 tw-rounded tw-mb-4"></div>
+        <div className="tw-space-y-3">
           {[1, 2, 3].map((i) => (
-            <div key={i} className="h-16 bg-gray-200 rounded"></div>
+            <div key={i} className="tw-h-16 tw-bg-gray-200 tw-rounded"></div>
           ))}
         </div>
       </div>
@@ -57,10 +57,10 @@ const BackupTable = () => {
 
   if (!backups || backups.length === 0) {
     return (
-      <div className="text-center py-12">
-        <div className="bg-gray-50 rounded-lg p-8">
+      <div className="tw-text-center tw-py-12">
+        <div className="tw-bg-gray-50 tw-rounded-lg tw-p-8">
           <svg
-            className="mx-auto h-12 w-12 text-gray-400"
+            className="tw-mx-auto tw-h-12 tw-w-12 tw-text-gray-400"
             fill="none"
             stroke="currentColor"
             viewBox="0 0 24 24"
@@ -72,17 +72,17 @@ const BackupTable = () => {
               d="M20 13V6a2 2 0 00-2-2H6a2 2 0 00-2 2v7m16 0v5a2 2 0 01-2 2H6a2 2 0 01-2-2v-5m16 0h-2.586a1 1 0 00-.707.293l-2.414 2.414a1 1 0 01-.707.293h-3.172a1 1 0 01-.707-.293l-2.414-2.414A1 1 0 006.586 13H4"
             />
           </svg>
-          <h3 className="mt-2 text-sm font-medium text-gray-900">No backups</h3>
-          <p className="mt-1 text-sm text-gray-500">
+          <h3 className="tw-mt-2 tw-text-sm tw-font-medium tw-text-gray-900">No backups</h3>
+          <p className="tw-mt-1 tw-text-sm tw-text-gray-500">
             Get started by creating a new backup.
           </p>
-          <div className="mt-6">
+          <div className="tw-mt-6">
             <button
               type="button"
-              className="inline-flex items-center px-4 py-2 border border-transparent shadow-sm text-sm font-medium rounded-md text-white bg-blue-600 hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500"
+              className="tw-inline-flex tw-items-center tw-px-4 tw-py-2 tw-border tw-border-transparent tw-shadow-sm tw-text-sm tw-font-medium tw-rounded-md tw-text-white tw-bg-blue-600 hover:tw-bg-blue-700 focus:tw-outline-none focus:tw-ring-2 focus:tw-ring-offset-2 focus:tw-ring-blue-500"
             >
               <svg
-                className="-ml-1 mr-2 h-5 w-5"
+                className="tw--ml-1 tw-mr-2 tw-h-5 tw-w-5"
                 fill="none"
                 stroke="currentColor"
                 viewBox="0 0 24 24"
@@ -128,47 +128,47 @@ const BackupTable = () => {
   };
 
   return (
-    <div className="bg-white border border-gray-200 rounded-lg">
+    <div className="tw-bg-white tw-border tw-border-gray-200 tw-rounded-lg">
       <BackupTableTools 
         onFilterChange={handleFilterChange} 
         onDeleteBackups={handleDeleteBackups}
         selectedBackups={selectedBackups} />
       
       {/* Mobile/Tablet View */}
-      <div className="block md:hidden">
+      <div className="tw-block md:tw-hidden">
         {filteredBackups.map((backup) => (
-          <div key={backup.id} className="p-4 border-b border-gray-200">
-            <div className="flex items-center justify-between mb-2">
+          <div key={backup.id} className="tw-p-4 tw-border-b tw-border-gray-200">
+            <div className="tw-flex tw-items-center tw-justify-between tw-mb-2">
               <input 
                 type="checkbox" 
-                className="form-checkbox h-4 w-4 text-blue-600" 
+                className="tw-form-checkbox tw-h-4 tw-w-4 tw-text-blue-600" 
                 checked={selectedBackups.includes(backup.id)}
                 onChange={(e) => handleSelectBackup(e, backup.id)}
               />
-              <div className="text-sm font-medium text-gray-900">{backup.name}</div>
+              <div className="tw-text-sm tw-font-medium tw-text-gray-900">{backup.name}</div>
             </div>
-            <div className="space-y-2">
-              <div className="flex flex-wrap gap-1">
+            <div className="tw-space-y-2">
+              <div className="tw-flex tw-flex-wrap tw-gap-1">
                 {backup.type.map((type, index) => (
                   <span 
                     key={index}
-                    className="inline-flex items-center px-2 py-0.5 text-xs font-medium rounded-md bg-gray-100 text-gray-800"
+                    className="tw-inline-flex tw-items-center tw-px-2 tw-py-0.5 tw-text-xs tw-font-medium tw-rounded-md tw-bg-gray-100 tw-text-gray-800"
                   >
                     {type}
                   </span>
                 ))}
               </div>
-              <div className="flex justify-between text-sm text-gray-500">
+              <div className="tw-flex tw-justify-between tw-text-sm tw-text-gray-500">
                 <span>{backup.date}</span>
                 <span>{backup.size}</span>
               </div>
-              <div className="flex items-center justify-between">
-                <span className="px-2 inline-flex text-xs leading-5 font-semibold rounded-full bg-green-100 text-green-800">
+              <div className="tw-flex tw-items-center tw-justify-between">
+                <span className="tw-px-2 tw-inline-flex tw-text-xs tw-leading-5 tw-font-semibold tw-rounded-full tw-bg-green-100 tw-text-green-800">
                   {backup.status}
                 </span>
-                <div className="space-x-2">
-                  <button className="text-blue-600 hover:text-blue-900">Download</button>
-                  <button className="text-red-600 hover:text-red-900">Delete</button>
+                <div className="tw-space-x-2">
+                  <button className="tw-text-blue-600 hover:tw-text-blue-900">Download</button>
+                  <button className="tw-text-red-600 hover:tw-text-red-900">Delete</button>
                 </div>
               </div>
             </div>
@@ -177,85 +177,99 @@ const BackupTable = () => {
       </div>
 
       {/* Desktop View */}
-      <div className="hidden md:block overflow-x-auto">
-        <table className="min-w-full divide-y divide-gray-200">
-          <thead className="bg-gray-50">
+      <div className="tw-hidden md:tw-block tw-overflow-x-auto">
+        <table className="tw-min-w-full tw-divide-y tw-divide-gray-200">
+          <thead className="tw-bg-gray-50">
             <tr>
-              <th scope="col" className="px-6 py-3 text-left text-xs font-medium text-gray-500" width="3%">
-                <input type="checkbox" className="form-checkbox h-4 w-4 text-blue-600" checked={selectedBackups.length === filteredBackups.length} onChange={handleSelectAllBackups} />
+              <th scope="col" className="tw-px-6 tw-py-3 tw-text-left tw-text-xs tw-font-medium tw-text-gray-500" width="3%">
+                <input type="checkbox" className="tw-form-checkbox tw-h-4 tw-w-4 tw-text-blue-600" checked={selectedBackups.length === filteredBackups.length} onChange={handleSelectAllBackups} />
               </th>
-              <th scope="col" className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase">
+              <th scope="col" className="tw-px-6 tw-py-3 tw-text-left tw-text-xs tw-font-medium tw-text-gray-500 tw-uppercase">
                 Name
               </th>
-              {/* <th scope="col" className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
-                Type
-              </th> */}
-              {/* <th scope="col" className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
-                Date
-              </th> */}
-              <th scope="col" className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
+              <th scope="col" className="tw-px-6 tw-py-3 tw-text-left tw-text-xs tw-font-medium tw-text-gray-500 tw-uppercase tw-tracking-wider">
                 Size
               </th>
-              <th scope="col" className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
+              <th scope="col" className="tw-px-6 tw-py-3 tw-text-left tw-text-xs tw-font-medium tw-text-gray-500 tw-uppercase tw-tracking-wider">
                 Status
               </th>
-              <th scope="col" className="relative px-6 py-3">
-                <span className="sr-only">Actions</span>
+              <th scope="col" className="tw-relative tw-px-6 tw-py-3">
+                <span className="tw-sr-only">Actions</span>
               </th>
             </tr>
           </thead>
-          <tbody className="bg-white divide-y divide-gray-200">
+          <tbody className="tw-bg-white tw-divide-y tw-divide-gray-200">
             {filteredBackups.map((backup) => (
               <tr key={backup.id}>
-                <td className="px-6 py-4" width="3%">
+                <td className="tw-px-6 tw-py-4" width="3%">
                   <input 
                     type="checkbox" 
-                    className="form-checkbox h-4 w-4 text-blue-600" 
+                    className="tw-form-checkbox tw-h-4 tw-w-4 tw-text-blue-600" 
                     checked={selectedBackups.includes(backup.id)}
                     onChange={(e) => handleSelectBackup(e, backup.id)}
                   />
                 </td>
-                <td className="px-6 py-4">
-                  <div className="text-sm font-medium text-gray-900">
+                <td className="tw-px-6 tw-py-4">
+                  <div className="tw-text-sm tw-font-medium tw-text-gray-900">
                     {backup.name} 
-                    <span className="ml-2 inline-block px-2 py-0.5 text-xs rounded bg-gray-200 text-gray-700 align-middle">
+                    <span className="tw-ml-2 tw-inline-block tw-px-2 tw-py-0.5 tw-text-xs tw-rounded tw-bg-gray-200 tw-text-gray-700 tw-align-middle">
                       {backup.date}
                     </span>
                   </div>
-                  <div className="flex flex-wrap gap-1 mt-2">
-                    {backup.type.map((type, index) => (
-                      <span 
-                        key={index}
-                        className="inline-flex items-center px-2 py-0.5 text-xs font-medium rounded-md bg-gray-100 text-gray-800 hover:bg-gray-200 transition-colors duration-200"
-                      >
-                        {type}
-                      </span>
-                    ))}
+                  <div className="tw-flex tw-flex-wrap tw-gap-1 tw-mt-2">
+                    {backup.type.map((type, index) => {
+                      let style = "";
+                      let label = "";
+                      switch (type) {
+                        case "database":
+                          style = "tw-bg-blue-100 tw-text-blue-800 tw-border tw-border-blue-200";
+                          label = "Database";
+                          break;
+                        case "plugin":
+                          style = "tw-bg-purple-100 tw-text-purple-800 tw-border tw-border-purple-200";
+                          label = "Plugins";
+                          break;
+                        case "theme":
+                          style = "tw-bg-yellow-100 tw-text-yellow-800 tw-border tw-border-yellow-200";
+                          label = "Themes";
+                          break;
+                        case "folder-uploads":
+                          style = "tw-bg-green-100 tw-text-green-800 tw-border tw-border-green-200";
+                          label = "Uploads";
+                          break;
+                        default:
+                          style = "tw-bg-gray-100 tw-text-gray-800 tw-border tw-border-gray-200";
+                          label = type;
+                      }
+                      return (
+                        <span
+                          key={index}
+                          className={`tw-inline-flex tw-items-center tw-gap-1 tw-px-2 tw-py-0.5 tw-text-xs tw-font-medium tw-rounded-full ${style} tw-transition-colors tw-duration-200`}
+                          style={{ letterSpacing: "0.01em" }}
+                        >
+                          {label}
+                        </span>
+                      );
+                    })}
                   </div>
                   
                 </td>
-                {/* <td className="px-6 py-4 whitespace-nowrap">
-                  
-                </td> */}
-                {/* <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-500">
-                  
-                </td> */}
-                <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-500">
+                <td className="tw-px-6 tw-py-4 tw-whitespace-nowrap tw-text-sm tw-text-gray-500">
                   {backup.size}
                 </td>
-                <td className="px-6 py-4 whitespace-nowrap">
-                  <span className="px-2 inline-flex text-xs leading-5 font-semibold rounded-full bg-green-100 text-green-800">
+                <td className="tw-px-6 tw-py-4 tw-whitespace-nowrap">
+                  <span className="tw-px-2 tw-inline-flex tw-text-xs tw-leading-5 tw-font-semibold tw-rounded-full tw-bg-green-100 tw-text-green-800">
                     {backup.status}
                   </span>
                 </td>
-                <td className="px-6 py-4 whitespace-nowrap text-right text-sm font-medium">
-                  <button className="text-blue-600 hover:text-blue-900 mr-4" title="Download">
-                    <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 inline" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <td className="tw-px-6 tw-py-4 tw-whitespace-nowrap tw-text-right tw-text-sm tw-font-medium">
+                  <button className="tw-text-blue-600 hover:tw-text-blue-900 tw-mr-4" title="Download">
+                    <svg xmlns="http://www.w3.org/2000/svg" className="tw-h-5 tw-w-5 tw-inline" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 16v2a2 2 0 002 2h12a2 2 0 002-2v-2M7 10l5 5 5-5M12 15V3" />
                     </svg>
                   </button>
-                  <button className="text-red-600 hover:text-red-900" title="Delete">
-                    <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 inline" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <button className="tw-text-red-600 hover:tw-text-red-900" title="Delete">
+                    <svg xmlns="http://www.w3.org/2000/svg" className="tw-h-5 tw-w-5 tw-inline" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
                     </svg>
                   </button>

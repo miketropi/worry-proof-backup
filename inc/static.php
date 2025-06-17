@@ -11,8 +11,10 @@ function wp_backup_wp_enqueue_scripts() {
   # enqueue script
   wp_enqueue_script( 'wp-backup', WP_BACKUP_PLUGIN_URL . 'dist/wp-backup.bundle.js', array('jquery'), WP_BACKUP_PLUGIN_VERSION, true );
  
-  # enqueue style.css 
-  wp_enqueue_style( 'wp-backup-style', WP_BACKUP_PLUGIN_URL . 'dist/css/wp-backup.bundle.css', array(), WP_BACKUP_PLUGIN_VERSION, 'all' );
+  // Only enqueue style if on the WP Backup admin page
+  if ( isset($_GET['page']) && $_GET['page'] === 'wp-backup' ) {
+    wp_enqueue_style( 'wp-backup-style', WP_BACKUP_PLUGIN_URL . 'dist/css/wp-backup.bundle.css', array(), WP_BACKUP_PLUGIN_VERSION, 'all' );
+  }
 
   # current user id
   $current_user_id = get_current_user_id();

@@ -56,12 +56,12 @@ const BackupConfigModal = ({ isOpen, onClose, onSave }) => {
       title="Backup Configuration"
       size="md"
     >
-      <form onSubmit={handleSubmit} className="space-y-8">
+      <form onSubmit={handleSubmit} className="tw-space-y-8">
         {/* Backup Name Input */}
-        <div className="space-y-2">
+        <div className="tw-space-y-2">
           <label
             htmlFor="backup-name"
-            className="block text-sm font-semibold text-gray-800"
+            className="tw-block tw-text-sm tw-font-semibold tw-text-gray-800"
           >
             Backup Name
           </label>
@@ -70,48 +70,48 @@ const BackupConfigModal = ({ isOpen, onClose, onSave }) => {
             id="backup-name"
             value={config.name}
             onChange={handleNameChange}
-            className="block w-full p-4 rounded-lg border border-gray-200 bg-gray-50 text-gray-900 placeholder-gray-400 transition-colors focus:border-blue-500 focus:ring-2 focus:ring-blue-200 focus:bg-white"
+            className="tw-block tw-w-full tw-p-4 tw-rounded-lg tw-border tw-border-gray-200 tw-bg-gray-50 tw-text-gray-900 tw-placeholder-gray-400 tw-transition-colors focus:tw-border-blue-500 focus:tw-ring-2 focus:tw-ring-blue-200 focus:tw-bg-white"
             placeholder="Enter backup name"
             required
           />
         </div>
 
         {/* Backup Types Selection */}
-        <div className="space-y-3">
-          <label className="block text-sm font-semibold text-gray-800">
+        <div className="tw-space-y-3">
+          <label className="tw-block tw-text-sm tw-font-semibold tw-text-gray-800">
             Backup Types
           </label>
-          <div className="grid gap-3 p-4 bg-gray-50 rounded-lg border border-gray-200">
+          <div className="tw-grid tw-gap-3 tw-p-4 tw-bg-gray-50 tw-rounded-lg tw-border tw-border-gray-200">
             {BACKUP_TYPES.map((type) => (
               <label
                 key={type.id}
-                className="flex items-center p-3 rounded-md hover:bg-white transition-colors cursor-pointer"
+                className="tw-flex tw-items-center tw-p-3 tw-rounded-md hover:tw-bg-white tw-transition-colors tw-cursor-pointer"
               >
                 <input
                   type="checkbox"
                   checked={config.types.includes(type.id)}
                   onChange={() => handleTypeChange(type.id)}
-                  className="h-5 w-5 rounded-md border-gray-300 text-blue-600 focus:ring-2 focus:ring-blue-200"
+                  className="tw-h-5 tw-w-5 tw-rounded-md tw-border-gray-300 tw-text-blue-600 focus:tw-ring-2 focus:tw-ring-blue-200"
                 />
-                <span className="ml-3 text-sm font-medium text-gray-700">{type.label}</span>
+                <span className="tw-ml-3 tw-text-sm tw-font-medium tw-text-gray-700">{type.label}</span>
               </label>
             ))}
           </div>
         </div>
 
         {/* Action Buttons */}
-        <div className="flex justify-end gap-3 pt-6 border-t border-gray-200">
+        <div className="tw-flex tw-justify-end tw-gap-3 tw-pt-6 tw-border-t tw-border-gray-200">
           <button
             type="button"
             onClick={onClose}
-            className="px-5 py-2.5 text-sm font-medium text-gray-700 bg-white border border-gray-200 rounded-lg shadow-sm hover:bg-gray-50 hover:border-gray-300 transition-colors focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500"
+            className="tw-px-5 tw-py-2.5 tw-text-sm tw-font-medium tw-text-gray-700 tw-bg-white tw-border tw-border-gray-200 tw-rounded-lg tw-shadow-sm hover:tw-bg-gray-50 hover:tw-border-gray-300 tw-transition-colors focus:tw-outline-none focus:tw-ring-2 focus:tw-ring-offset-2 focus:tw-ring-blue-500"
           >
             Cancel
           </button>
           <button
             type="submit"
             disabled={!config.name || config.types.length === 0}
-            className="px-5 py-2.5 text-sm font-medium text-white bg-blue-600 rounded-lg shadow-sm hover:bg-blue-700 transition-colors focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500 disabled:opacity-50 disabled:cursor-not-allowed disabled:hover:bg-blue-600"
+            className="tw-px-5 tw-py-2.5 tw-text-sm tw-font-medium tw-text-white tw-bg-blue-600 tw-rounded-lg tw-shadow-sm hover:tw-bg-blue-700 tw-transition-colors focus:tw-outline-none focus:tw-ring-2 focus:tw-ring-offset-2 focus:tw-ring-blue-500 disabled:tw-opacity-50 disabled:tw-cursor-not-allowed disabled:hover:tw-bg-blue-600"
           >
             Start Backup
           </button>

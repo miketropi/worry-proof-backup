@@ -29130,12 +29130,12 @@ __webpack_require__.r(__webpack_exports__);
 function App() {
   return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsxs)("div", {
     children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsxs)("div", {
-      className: "grid grid-cols-1 md:grid-cols-12 gap-8",
+      className: "tw-grid tw-grid-cols-1 md:tw-grid-cols-12 tw-gap-8",
       children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("div", {
-        className: "md:col-span-9",
+        className: "md:tw-col-span-9",
         children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)(_components_BackupTable__WEBPACK_IMPORTED_MODULE_0__["default"], {})
       }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("div", {
-        className: "md:col-span-3",
+        className: "md:tw-col-span-3",
         children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)(_components_ServerMetrics__WEBPACK_IMPORTED_MODULE_2__["default"], {
           metrics: wp_backup_php_data.server_metrics
         })
@@ -29245,57 +29245,57 @@ var BackupConfigModal = function BackupConfigModal(_ref) {
     size: "md",
     children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsxs)("form", {
       onSubmit: handleSubmit,
-      className: "space-y-8",
+      className: "tw-space-y-8",
       children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsxs)("div", {
-        className: "space-y-2",
+        className: "tw-space-y-2",
         children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("label", {
           htmlFor: "backup-name",
-          className: "block text-sm font-semibold text-gray-800",
+          className: "tw-block tw-text-sm tw-font-semibold tw-text-gray-800",
           children: "Backup Name"
         }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("input", {
           type: "text",
           id: "backup-name",
           value: config.name,
           onChange: handleNameChange,
-          className: "block w-full p-4 rounded-lg border border-gray-200 bg-gray-50 text-gray-900 placeholder-gray-400 transition-colors focus:border-blue-500 focus:ring-2 focus:ring-blue-200 focus:bg-white",
+          className: "tw-block tw-w-full tw-p-4 tw-rounded-lg tw-border tw-border-gray-200 tw-bg-gray-50 tw-text-gray-900 tw-placeholder-gray-400 tw-transition-colors focus:tw-border-blue-500 focus:tw-ring-2 focus:tw-ring-blue-200 focus:tw-bg-white",
           placeholder: "Enter backup name",
           required: true
         })]
       }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsxs)("div", {
-        className: "space-y-3",
+        className: "tw-space-y-3",
         children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("label", {
-          className: "block text-sm font-semibold text-gray-800",
+          className: "tw-block tw-text-sm tw-font-semibold tw-text-gray-800",
           children: "Backup Types"
         }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("div", {
-          className: "grid gap-3 p-4 bg-gray-50 rounded-lg border border-gray-200",
+          className: "tw-grid tw-gap-3 tw-p-4 tw-bg-gray-50 tw-rounded-lg tw-border tw-border-gray-200",
           children: BACKUP_TYPES.map(function (type) {
             return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsxs)("label", {
-              className: "flex items-center p-3 rounded-md hover:bg-white transition-colors cursor-pointer",
+              className: "tw-flex tw-items-center tw-p-3 tw-rounded-md hover:tw-bg-white tw-transition-colors tw-cursor-pointer",
               children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("input", {
                 type: "checkbox",
                 checked: config.types.includes(type.id),
                 onChange: function onChange() {
                   return handleTypeChange(type.id);
                 },
-                className: "h-5 w-5 rounded-md border-gray-300 text-blue-600 focus:ring-2 focus:ring-blue-200"
+                className: "tw-h-5 tw-w-5 tw-rounded-md tw-border-gray-300 tw-text-blue-600 focus:tw-ring-2 focus:tw-ring-blue-200"
               }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("span", {
-                className: "ml-3 text-sm font-medium text-gray-700",
+                className: "tw-ml-3 tw-text-sm tw-font-medium tw-text-gray-700",
                 children: type.label
               })]
             }, type.id);
           })
         })]
       }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsxs)("div", {
-        className: "flex justify-end gap-3 pt-6 border-t border-gray-200",
+        className: "tw-flex tw-justify-end tw-gap-3 tw-pt-6 tw-border-t tw-border-gray-200",
         children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("button", {
           type: "button",
           onClick: onClose,
-          className: "px-5 py-2.5 text-sm font-medium text-gray-700 bg-white border border-gray-200 rounded-lg shadow-sm hover:bg-gray-50 hover:border-gray-300 transition-colors focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500",
+          className: "tw-px-5 tw-py-2.5 tw-text-sm tw-font-medium tw-text-gray-700 tw-bg-white tw-border tw-border-gray-200 tw-rounded-lg tw-shadow-sm hover:tw-bg-gray-50 hover:tw-border-gray-300 tw-transition-colors focus:tw-outline-none focus:tw-ring-2 focus:tw-ring-offset-2 focus:tw-ring-blue-500",
           children: "Cancel"
         }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("button", {
           type: "submit",
           disabled: !config.name || config.types.length === 0,
-          className: "px-5 py-2.5 text-sm font-medium text-white bg-blue-600 rounded-lg shadow-sm hover:bg-blue-700 transition-colors focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500 disabled:opacity-50 disabled:cursor-not-allowed disabled:hover:bg-blue-600",
+          className: "tw-px-5 tw-py-2.5 tw-text-sm tw-font-medium tw-text-white tw-bg-blue-600 tw-rounded-lg tw-shadow-sm hover:tw-bg-blue-700 tw-transition-colors focus:tw-outline-none focus:tw-ring-2 focus:tw-ring-offset-2 focus:tw-ring-blue-500 disabled:tw-opacity-50 disabled:tw-cursor-not-allowed disabled:hover:tw-bg-blue-600",
           children: "Start Backup"
         })]
       })]
@@ -29409,14 +29409,14 @@ var BackupTable = function BackupTable() {
   };
   if (isLoading) {
     return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsxs)("div", {
-      className: "animate-pulse",
+      className: "tw-animate-pulse",
       children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)("div", {
-        className: "h-8 bg-gray-200 rounded mb-4"
+        className: "tw-h-8 tw-bg-gray-200 tw-rounded tw-mb-4"
       }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)("div", {
-        className: "space-y-3",
+        className: "tw-space-y-3",
         children: [1, 2, 3].map(function (i) {
           return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)("div", {
-            className: "h-16 bg-gray-200 rounded"
+            className: "tw-h-16 tw-bg-gray-200 tw-rounded"
           }, i);
         })
       })]
@@ -29424,11 +29424,11 @@ var BackupTable = function BackupTable() {
   }
   if (!backups || backups.length === 0) {
     return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)("div", {
-      className: "text-center py-12",
+      className: "tw-text-center tw-py-12",
       children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsxs)("div", {
-        className: "bg-gray-50 rounded-lg p-8",
+        className: "tw-bg-gray-50 tw-rounded-lg tw-p-8",
         children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)("svg", {
-          className: "mx-auto h-12 w-12 text-gray-400",
+          className: "tw-mx-auto tw-h-12 tw-w-12 tw-text-gray-400",
           fill: "none",
           stroke: "currentColor",
           viewBox: "0 0 24 24",
@@ -29439,18 +29439,18 @@ var BackupTable = function BackupTable() {
             d: "M20 13V6a2 2 0 00-2-2H6a2 2 0 00-2 2v7m16 0v5a2 2 0 01-2 2H6a2 2 0 01-2-2v-5m16 0h-2.586a1 1 0 00-.707.293l-2.414 2.414a1 1 0 01-.707.293h-3.172a1 1 0 01-.707-.293l-2.414-2.414A1 1 0 006.586 13H4"
           })
         }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)("h3", {
-          className: "mt-2 text-sm font-medium text-gray-900",
+          className: "tw-mt-2 tw-text-sm tw-font-medium tw-text-gray-900",
           children: "No backups"
         }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)("p", {
-          className: "mt-1 text-sm text-gray-500",
+          className: "tw-mt-1 tw-text-sm tw-text-gray-500",
           children: "Get started by creating a new backup."
         }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)("div", {
-          className: "mt-6",
+          className: "tw-mt-6",
           children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsxs)("button", {
             type: "button",
-            className: "inline-flex items-center px-4 py-2 border border-transparent shadow-sm text-sm font-medium rounded-md text-white bg-blue-600 hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500",
+            className: "tw-inline-flex tw-items-center tw-px-4 tw-py-2 tw-border tw-border-transparent tw-shadow-sm tw-text-sm tw-font-medium tw-rounded-md tw-text-white tw-bg-blue-600 hover:tw-bg-blue-700 focus:tw-outline-none focus:tw-ring-2 focus:tw-ring-offset-2 focus:tw-ring-blue-500",
             children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)("svg", {
-              className: "-ml-1 mr-2 h-5 w-5",
+              className: "tw--ml-1 tw-mr-2 tw-h-5 tw-w-5",
               fill: "none",
               stroke: "currentColor",
               viewBox: "0 0 24 24",
@@ -29495,58 +29495,58 @@ var BackupTable = function BackupTable() {
     }
   };
   return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsxs)("div", {
-    className: "bg-white border border-gray-200 rounded-lg",
+    className: "tw-bg-white tw-border tw-border-gray-200 tw-rounded-lg",
     children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)(_BackupTableTools__WEBPACK_IMPORTED_MODULE_3__["default"], {
       onFilterChange: handleFilterChange,
       onDeleteBackups: handleDeleteBackups,
       selectedBackups: selectedBackups
     }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)("div", {
-      className: "block md:hidden",
+      className: "tw-block md:tw-hidden",
       children: filteredBackups.map(function (backup) {
         return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsxs)("div", {
-          className: "p-4 border-b border-gray-200",
+          className: "tw-p-4 tw-border-b tw-border-gray-200",
           children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsxs)("div", {
-            className: "flex items-center justify-between mb-2",
+            className: "tw-flex tw-items-center tw-justify-between tw-mb-2",
             children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)("input", {
               type: "checkbox",
-              className: "form-checkbox h-4 w-4 text-blue-600",
+              className: "tw-form-checkbox tw-h-4 tw-w-4 tw-text-blue-600",
               checked: selectedBackups.includes(backup.id),
               onChange: function onChange(e) {
                 return handleSelectBackup(e, backup.id);
               }
             }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)("div", {
-              className: "text-sm font-medium text-gray-900",
+              className: "tw-text-sm tw-font-medium tw-text-gray-900",
               children: backup.name
             })]
           }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsxs)("div", {
-            className: "space-y-2",
+            className: "tw-space-y-2",
             children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)("div", {
-              className: "flex flex-wrap gap-1",
+              className: "tw-flex tw-flex-wrap tw-gap-1",
               children: backup.type.map(function (type, index) {
                 return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)("span", {
-                  className: "inline-flex items-center px-2 py-0.5 text-xs font-medium rounded-md bg-gray-100 text-gray-800",
+                  className: "tw-inline-flex tw-items-center tw-px-2 tw-py-0.5 tw-text-xs tw-font-medium tw-rounded-md tw-bg-gray-100 tw-text-gray-800",
                   children: type
                 }, index);
               })
             }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsxs)("div", {
-              className: "flex justify-between text-sm text-gray-500",
+              className: "tw-flex tw-justify-between tw-text-sm tw-text-gray-500",
               children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)("span", {
                 children: backup.date
               }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)("span", {
                 children: backup.size
               })]
             }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsxs)("div", {
-              className: "flex items-center justify-between",
+              className: "tw-flex tw-items-center tw-justify-between",
               children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)("span", {
-                className: "px-2 inline-flex text-xs leading-5 font-semibold rounded-full bg-green-100 text-green-800",
+                className: "tw-px-2 tw-inline-flex tw-text-xs tw-leading-5 tw-font-semibold tw-rounded-full tw-bg-green-100 tw-text-green-800",
                 children: backup.status
               }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsxs)("div", {
-                className: "space-x-2",
+                className: "tw-space-x-2",
                 children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)("button", {
-                  className: "text-blue-600 hover:text-blue-900",
+                  className: "tw-text-blue-600 hover:tw-text-blue-900",
                   children: "Download"
                 }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)("button", {
-                  className: "text-red-600 hover:text-red-900",
+                  className: "tw-text-red-600 hover:tw-text-red-900",
                   children: "Delete"
                 })]
               })]
@@ -29555,92 +29555,118 @@ var BackupTable = function BackupTable() {
         }, backup.id);
       })
     }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)("div", {
-      className: "hidden md:block overflow-x-auto",
+      className: "tw-hidden md:tw-block tw-overflow-x-auto",
       children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsxs)("table", {
-        className: "min-w-full divide-y divide-gray-200",
+        className: "tw-min-w-full tw-divide-y tw-divide-gray-200",
         children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)("thead", {
-          className: "bg-gray-50",
+          className: "tw-bg-gray-50",
           children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsxs)("tr", {
             children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)("th", {
               scope: "col",
-              className: "px-6 py-3 text-left text-xs font-medium text-gray-500",
+              className: "tw-px-6 tw-py-3 tw-text-left tw-text-xs tw-font-medium tw-text-gray-500",
               width: "3%",
               children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)("input", {
                 type: "checkbox",
-                className: "form-checkbox h-4 w-4 text-blue-600",
+                className: "tw-form-checkbox tw-h-4 tw-w-4 tw-text-blue-600",
                 checked: selectedBackups.length === filteredBackups.length,
                 onChange: handleSelectAllBackups
               })
             }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)("th", {
               scope: "col",
-              className: "px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase",
+              className: "tw-px-6 tw-py-3 tw-text-left tw-text-xs tw-font-medium tw-text-gray-500 tw-uppercase",
               children: "Name"
             }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)("th", {
               scope: "col",
-              className: "px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider",
+              className: "tw-px-6 tw-py-3 tw-text-left tw-text-xs tw-font-medium tw-text-gray-500 tw-uppercase tw-tracking-wider",
               children: "Size"
             }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)("th", {
               scope: "col",
-              className: "px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider",
+              className: "tw-px-6 tw-py-3 tw-text-left tw-text-xs tw-font-medium tw-text-gray-500 tw-uppercase tw-tracking-wider",
               children: "Status"
             }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)("th", {
               scope: "col",
-              className: "relative px-6 py-3",
+              className: "tw-relative tw-px-6 tw-py-3",
               children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)("span", {
-                className: "sr-only",
+                className: "tw-sr-only",
                 children: "Actions"
               })
             })]
           })
         }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)("tbody", {
-          className: "bg-white divide-y divide-gray-200",
+          className: "tw-bg-white tw-divide-y tw-divide-gray-200",
           children: filteredBackups.map(function (backup) {
             return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsxs)("tr", {
               children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)("td", {
-                className: "px-6 py-4",
+                className: "tw-px-6 tw-py-4",
                 width: "3%",
                 children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)("input", {
                   type: "checkbox",
-                  className: "form-checkbox h-4 w-4 text-blue-600",
+                  className: "tw-form-checkbox tw-h-4 tw-w-4 tw-text-blue-600",
                   checked: selectedBackups.includes(backup.id),
                   onChange: function onChange(e) {
                     return handleSelectBackup(e, backup.id);
                   }
                 })
               }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsxs)("td", {
-                className: "px-6 py-4",
+                className: "tw-px-6 tw-py-4",
                 children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsxs)("div", {
-                  className: "text-sm font-medium text-gray-900",
+                  className: "tw-text-sm tw-font-medium tw-text-gray-900",
                   children: [backup.name, /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)("span", {
-                    className: "ml-2 inline-block px-2 py-0.5 text-xs rounded bg-gray-200 text-gray-700 align-middle",
+                    className: "tw-ml-2 tw-inline-block tw-px-2 tw-py-0.5 tw-text-xs tw-rounded tw-bg-gray-200 tw-text-gray-700 tw-align-middle",
                     children: backup.date
                   })]
                 }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)("div", {
-                  className: "flex flex-wrap gap-1 mt-2",
+                  className: "tw-flex tw-flex-wrap tw-gap-1 tw-mt-2",
                   children: backup.type.map(function (type, index) {
+                    var style = "";
+                    var label = "";
+                    switch (type) {
+                      case "database":
+                        style = "tw-bg-blue-100 tw-text-blue-800 tw-border tw-border-blue-200";
+                        label = "Database";
+                        break;
+                      case "plugin":
+                        style = "tw-bg-purple-100 tw-text-purple-800 tw-border tw-border-purple-200";
+                        label = "Plugins";
+                        break;
+                      case "theme":
+                        style = "tw-bg-yellow-100 tw-text-yellow-800 tw-border tw-border-yellow-200";
+                        label = "Themes";
+                        break;
+                      case "folder-uploads":
+                        style = "tw-bg-green-100 tw-text-green-800 tw-border tw-border-green-200";
+                        label = "Uploads";
+                        break;
+                      default:
+                        style = "tw-bg-gray-100 tw-text-gray-800 tw-border tw-border-gray-200";
+                        label = type;
+                    }
                     return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)("span", {
-                      className: "inline-flex items-center px-2 py-0.5 text-xs font-medium rounded-md bg-gray-100 text-gray-800 hover:bg-gray-200 transition-colors duration-200",
-                      children: type
+                      className: "tw-inline-flex tw-items-center tw-gap-1 tw-px-2 tw-py-0.5 tw-text-xs tw-font-medium tw-rounded-full ".concat(style, " tw-transition-colors tw-duration-200"),
+                      style: {
+                        letterSpacing: "0.01em"
+                      },
+                      children: label
                     }, index);
                   })
                 })]
               }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)("td", {
-                className: "px-6 py-4 whitespace-nowrap text-sm text-gray-500",
+                className: "tw-px-6 tw-py-4 tw-whitespace-nowrap tw-text-sm tw-text-gray-500",
                 children: backup.size
               }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)("td", {
-                className: "px-6 py-4 whitespace-nowrap",
+                className: "tw-px-6 tw-py-4 tw-whitespace-nowrap",
                 children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)("span", {
-                  className: "px-2 inline-flex text-xs leading-5 font-semibold rounded-full bg-green-100 text-green-800",
+                  className: "tw-px-2 tw-inline-flex tw-text-xs tw-leading-5 tw-font-semibold tw-rounded-full tw-bg-green-100 tw-text-green-800",
                   children: backup.status
                 })
               }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsxs)("td", {
-                className: "px-6 py-4 whitespace-nowrap text-right text-sm font-medium",
+                className: "tw-px-6 tw-py-4 tw-whitespace-nowrap tw-text-right tw-text-sm tw-font-medium",
                 children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)("button", {
-                  className: "text-blue-600 hover:text-blue-900 mr-4",
+                  className: "tw-text-blue-600 hover:tw-text-blue-900 tw-mr-4",
                   title: "Download",
                   children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)("svg", {
                     xmlns: "http://www.w3.org/2000/svg",
-                    className: "h-5 w-5 inline",
+                    className: "tw-h-5 tw-w-5 tw-inline",
                     fill: "none",
                     viewBox: "0 0 24 24",
                     stroke: "currentColor",
@@ -29652,11 +29678,11 @@ var BackupTable = function BackupTable() {
                     })
                   })
                 }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)("button", {
-                  className: "text-red-600 hover:text-red-900",
+                  className: "tw-text-red-600 hover:tw-text-red-900",
                   title: "Delete",
                   children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)("svg", {
                     xmlns: "http://www.w3.org/2000/svg",
-                    className: "h-5 w-5 inline",
+                    className: "tw-h-5 tw-w-5 tw-inline",
                     fill: "none",
                     viewBox: "0 0 24 24",
                     stroke: "currentColor",
@@ -29784,15 +29810,30 @@ var BackupTableTools = function BackupTableTools(_ref) {
       return _ref4.apply(this, arguments);
     };
   }();
+  var handleSaveBackup = /*#__PURE__*/function () {
+    var _ref5 = _asyncToGenerator(/*#__PURE__*/_regenerator().m(function _callee4(config) {
+      return _regenerator().w(function (_context4) {
+        while (1) switch (_context4.n) {
+          case 0:
+            console.log('Save backup:', config);
+          case 1:
+            return _context4.a(2);
+        }
+      }, _callee4);
+    }));
+    return function handleSaveBackup(_x) {
+      return _ref5.apply(this, arguments);
+    };
+  }();
   return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsxs)("div", {
-    className: "flex flex-wrap items-center justify-between gap-4 p-4 bg-white border-b border-gray-200",
+    className: "tw-flex tw-flex-wrap tw-items-center tw-justify-between tw-gap-4 tw-p-4 tw-bg-white tw-border-b tw-border-gray-200",
     children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsxs)("div", {
-      className: "flex items-center gap-4",
+      className: "tw-flex tw-items-center tw-gap-4",
       children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsxs)("button", {
         onClick: handleCreateBackup,
-        className: "inline-flex items-center px-4 py-2 border border-transparent shadow-sm text-sm font-medium rounded-md text-white bg-blue-600 hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500",
+        className: "tw-inline-flex tw-items-center tw-px-4 tw-py-2 tw-border tw-border-transparent tw-shadow-sm tw-text-sm tw-font-medium tw-rounded-md tw-text-white tw-bg-blue-600 hover:tw-bg-blue-700 focus:tw-outline-none focus:tw-ring-2 focus:tw-ring-offset-2 focus:tw-ring-blue-500",
         children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("svg", {
-          className: "-ml-1 mr-2 h-5 w-5",
+          className: "tw--ml-1 tw-mr-2 tw-h-5 tw-w-5",
           fill: "none",
           stroke: "currentColor",
           viewBox: "0 0 24 24",
@@ -29807,13 +29848,14 @@ var BackupTableTools = function BackupTableTools(_ref) {
         isOpen: isConfigModalOpen,
         onClose: function onClose() {
           return setIsConfigModalOpen(false);
-        }
+        },
+        onSave: handleSaveBackup
       }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsxs)("button", {
         onClick: handleDeleteBackups,
         disabled: selectedBackups.length === 0,
-        className: "inline-flex items-center px-4 py-2 border border-transparent shadow-sm text-sm font-medium rounded-md text-white ".concat(selectedBackups.length === 0 ? 'bg-gray-400 cursor-not-allowed' : 'bg-red-600 hover:bg-red-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-red-500'),
+        className: "tw-inline-flex tw-items-center tw-px-4 tw-py-2 tw-border tw-border-transparent tw-shadow-sm tw-text-sm tw-font-medium tw-rounded-md tw-text-white ".concat(selectedBackups.length === 0 ? 'tw-bg-gray-400 tw-cursor-not-allowed' : 'tw-bg-red-600 hover:tw-bg-red-700 focus:tw-outline-none focus:tw-ring-2 focus:tw-ring-offset-2 focus:tw-ring-red-500'),
         children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("svg", {
-          className: "-ml-1 mr-2 h-5 w-5",
+          className: "tw--ml-1 tw-mr-2 tw-h-5 tw-w-5",
           fill: "none",
           stroke: "currentColor",
           viewBox: "0 0 24 24",
@@ -29826,9 +29868,9 @@ var BackupTableTools = function BackupTableTools(_ref) {
         }), "Delete Selected"]
       }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsxs)("button", {
         onClick: handleUploadBackup,
-        className: "inline-flex items-center px-4 py-2 border border-transparent shadow-sm text-sm font-medium rounded-md text-white bg-green-600 hover:bg-green-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-green-500",
+        className: "tw-inline-flex tw-items-center tw-px-4 tw-py-2 tw-border tw-border-transparent tw-shadow-sm tw-text-sm tw-font-medium tw-rounded-md tw-text-white tw-bg-green-600 hover:tw-bg-green-700 focus:tw-outline-none focus:tw-ring-2 focus:tw-ring-offset-2 focus:tw-ring-green-500",
         children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("svg", {
-          className: "-ml-1 mr-2 h-5 w-5",
+          className: "tw--ml-1 tw-mr-2 tw-h-5 tw-w-5",
           fill: "none",
           stroke: "currentColor",
           viewBox: "0 0 24 24",
@@ -29841,14 +29883,14 @@ var BackupTableTools = function BackupTableTools(_ref) {
         }), "Upload Backup"]
       })]
     }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("div", {
-      className: "flex items-center gap-4",
+      className: "tw-flex tw-items-center tw-gap-4",
       children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("div", {
-        className: "relative",
+        className: "tw-relative",
         children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("input", {
           type: "date",
           value: dateFilter,
           onChange: handleDateFilterChange,
-          className: "block w-full rounded-md border-gray-300 shadow-sm focus:border-blue-500 focus:ring-blue-500 sm:text-sm"
+          className: "tw-block tw-w-full tw-rounded-md tw-border-gray-300 tw-shadow-sm focus:tw-border-blue-500 focus:tw-ring-blue-500 sm:tw-text-sm"
         })
       })
     })]
@@ -29876,13 +29918,13 @@ __webpack_require__.r(__webpack_exports__);
 
 var Footer = function Footer() {
   return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("footer", {
-    className: "w-full py-6 mt-8 text-center",
+    className: "tw-w-full tw-py-6 tw-mt-8 tw-text-center",
     children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)("p", {
-      className: "text-gray-700 text-sm",
+      className: "tw-text-gray-700 tw-text-sm",
       children: ["Thanks for choosing ", /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("span", {
-        className: "font-semibold text-blue-600",
+        className: "tw-font-semibold tw-text-blue-600",
         children: "WP Backup"
-      }), "! \uD83D\uDE80", /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("br", {}), "Your site\u2019s safety is our superpower! Happy backing up! \uD83C\uDF89\uD83D\uDCBE"]
+      }), "! \uD83D\uDE80", /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("br", {}), "Your site's safety is our superpower! Happy backing up! \uD83C\uDF89\uD83D\uDCBE"]
     })
   });
 };
@@ -29921,7 +29963,7 @@ __webpack_require__.r(__webpack_exports__);
  */
 
 /**
- * A modern, flexible modal component built with Tailwind CSS
+ * A modern, flexible modal component built with Tailwind CSS (tw- prefix)
  * @param {ModalProps} props
  */
 
@@ -29941,38 +29983,30 @@ var Modal = function Modal(_ref) {
   var modalRef = (0,react__WEBPACK_IMPORTED_MODULE_0__.useRef)(null);
   var previousActiveElement = (0,react__WEBPACK_IMPORTED_MODULE_0__.useRef)(null);
 
-  // Size classes mapping
+  // Size classes mapping with tw- prefix
   var sizeClasses = {
-    sm: 'max-w-sm',
-    md: 'max-w-md',
-    lg: 'max-w-lg',
-    xl: 'max-w-xl',
-    full: 'max-w-full mx-4'
+    sm: 'tw-max-w-sm',
+    md: 'tw-max-w-md',
+    lg: 'tw-max-w-lg',
+    xl: 'tw-max-w-xl',
+    full: 'tw-max-w-full tw-mx-4'
   };
   (0,react__WEBPACK_IMPORTED_MODULE_0__.useEffect)(function () {
     if (isOpen) {
       var _modalRef$current;
-      // Store the previously focused element
       previousActiveElement.current = document.activeElement;
-
-      // Focus the modal when it opens
       (_modalRef$current = modalRef.current) === null || _modalRef$current === void 0 || _modalRef$current.focus();
-
-      // Add event listener for ESC key
       var handleEscKey = function handleEscKey(event) {
         if (event.key === 'Escape') {
           onClose();
         }
       };
       document.addEventListener('keydown', handleEscKey);
-
-      // Prevent body scrolling when modal is open
       document.body.style.overflow = 'hidden';
       return function () {
         var _previousActiveElemen;
         document.removeEventListener('keydown', handleEscKey);
         document.body.style.overflow = '';
-        // Restore focus to the previous element
         (_previousActiveElemen = previousActiveElement.current) === null || _previousActiveElemen === void 0 || _previousActiveElemen.focus();
       };
     }
@@ -29984,32 +30018,32 @@ var Modal = function Modal(_ref) {
     }
   };
   var modalContent = /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsxs)("div", {
-    className: "fixed inset-0 z-50 overflow-y-auto font-space-mono",
+    className: "tw-fixed tw-inset-0 tw-z-50 tw-overflow-y-auto tw-font-space-mono",
     onClick: handleBackdropClick,
     role: "presentation",
     children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("div", {
-      className: "fixed inset-0 bg-black bg-opacity-50 transition-opacity"
+      className: "tw-fixed tw-inset-0 tw-bg-black tw-bg-opacity-50 tw-transition-opacity"
     }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("div", {
-      className: "flex min-h-full items-center justify-center p-4 text-center",
+      className: "tw-flex tw-min-h-full tw-items-center tw-justify-center tw-p-4 tw-text-center",
       children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsxs)("div", {
         ref: modalRef,
-        className: "relative transform overflow-hidden rounded-lg bg-white text-left shadow-xl transition-all sm:my-8 w-full ".concat(sizeClasses[size], " ").concat(className),
+        className: "tw-relative tw-transform tw-overflow-hidden tw-rounded-lg tw-bg-white tw-text-left tw-shadow-xl tw-transition-all sm:tw-my-8 tw-w-full ".concat(sizeClasses[size], " ").concat(className),
         role: "dialog",
         "aria-modal": "true",
         "aria-labelledby": "modal-title",
         tabIndex: "-1",
         children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsxs)("div", {
-          className: "flex items-center justify-between border-b border-gray-200 px-6 py-4",
+          className: "tw-flex tw-items-center tw-justify-between tw-border-b tw-border-gray-200 tw-px-6 tw-py-4",
           children: [title && /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("h3", {
             id: "modal-title",
-            className: "text-lg font-semibold text-gray-900",
+            className: "tw-text-lg tw-font-semibold tw-text-gray-900",
             children: title
           }), showCloseButton && /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("button", {
             onClick: onClose,
-            className: "rounded-md p-2 text-gray-400 hover:bg-gray-100 hover:text-gray-500 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2",
+            className: "tw-rounded-md tw-p-2 tw-text-gray-400 hover:tw-bg-gray-100 hover:tw-text-gray-500 focus:tw-outline-none focus:tw-ring-2 focus:tw-ring-blue-500 focus:tw-ring-offset-2",
             "aria-label": "Close modal",
             children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("svg", {
-              className: "h-6 w-6",
+              className: "tw-h-6 tw-w-6",
               fill: "none",
               viewBox: "0 0 24 24",
               strokeWidth: "1.5",
@@ -30022,7 +30056,7 @@ var Modal = function Modal(_ref) {
             })
           })]
         }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("div", {
-          className: "px-6 py-4",
+          className: "tw-px-6 tw-py-4",
           children: children
         })]
       })
@@ -30075,7 +30109,7 @@ var metricsConfig = [{
   label: "Disk Free Space",
   format: formatBytes,
   icon: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("svg", {
-    className: "w-5 h-5 text-blue-500",
+    className: "tw-w-5 tw-h-5 tw-text-blue-500",
     fill: "none",
     stroke: "currentColor",
     viewBox: "0 0 24 24",
@@ -30091,7 +30125,7 @@ var metricsConfig = [{
   label: "Disk Total Space",
   format: formatBytes,
   icon: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("svg", {
-    className: "w-5 h-5 text-indigo-500",
+    className: "tw-w-5 tw-h-5 tw-text-indigo-500",
     fill: "none",
     stroke: "currentColor",
     viewBox: "0 0 24 24",
@@ -30107,7 +30141,7 @@ var metricsConfig = [{
   label: "Memory Limit",
   format: formatBytes,
   icon: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("svg", {
-    className: "w-5 h-5 text-green-500",
+    className: "tw-w-5 tw-h-5 tw-text-green-500",
     fill: "none",
     stroke: "currentColor",
     viewBox: "0 0 24 24",
@@ -30123,7 +30157,7 @@ var metricsConfig = [{
   label: "Memory Usage",
   format: formatBytes,
   icon: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("svg", {
-    className: "w-5 h-5 text-yellow-500",
+    className: "tw-w-5 tw-h-5 tw-text-yellow-500",
     fill: "none",
     stroke: "currentColor",
     viewBox: "0 0 24 24",
@@ -30139,7 +30173,7 @@ var metricsConfig = [{
   label: "Max Execution Time",
   format: formatSeconds,
   icon: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("svg", {
-    className: "w-5 h-5 text-pink-500",
+    className: "tw-w-5 tw-h-5 tw-text-pink-500",
     fill: "none",
     stroke: "currentColor",
     viewBox: "0 0 24 24",
@@ -30155,7 +30189,7 @@ var metricsConfig = [{
   label: "Upload Max Filesize",
   format: formatBytes,
   icon: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("svg", {
-    className: "w-5 h-5 text-purple-500",
+    className: "tw-w-5 tw-h-5 tw-text-purple-500",
     fill: "none",
     stroke: "currentColor",
     viewBox: "0 0 24 24",
@@ -30171,7 +30205,7 @@ var metricsConfig = [{
   label: "Post Max Size",
   format: formatBytes,
   icon: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("svg", {
-    className: "w-5 h-5 text-red-500",
+    className: "tw-w-5 tw-h-5 tw-text-red-500",
     fill: "none",
     stroke: "currentColor",
     viewBox: "0 0 24 24",
@@ -30189,7 +30223,7 @@ var metricsConfig = [{
     return v ? "On" : "Off";
   },
   icon: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("svg", {
-    className: "w-5 h-5 text-gray-500",
+    className: "tw-w-5 tw-h-5 tw-text-gray-500",
     fill: "none",
     stroke: "currentColor",
     viewBox: "0 0 24 24",
@@ -30207,7 +30241,7 @@ var metricsConfig = [{
     return v || "-";
   },
   icon: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("svg", {
-    className: "w-5 h-5 text-cyan-500",
+    className: "tw-w-5 tw-h-5 tw-text-cyan-500",
     fill: "none",
     stroke: "currentColor",
     viewBox: "0 0 24 24",
@@ -30225,7 +30259,7 @@ var metricsConfig = [{
     return v || "-";
   },
   icon: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)("svg", {
-    className: "w-5 h-5 text-fuchsia-500",
+    className: "tw-w-5 tw-h-5 tw-text-fuchsia-500",
     fill: "none",
     stroke: "currentColor",
     viewBox: "0 0 24 24",
@@ -30247,11 +30281,11 @@ var metricsConfig = [{
 var ServerMetrics = function ServerMetrics(_ref) {
   var metrics = _ref.metrics;
   return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)("aside", {
-    className: "bg-white border border-gray-200 p-4 ",
+    className: "tw-bg-white tw-border tw-border-gray-200 tw-p-4",
     children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)("h2", {
-      className: "text-base font-semibold text-gray-800 mb-3 flex items-center gap-2",
+      className: "tw-text-base tw-font-semibold tw-text-gray-800 tw-mb-3 tw-flex tw-items-center tw-gap-2",
       children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("svg", {
-        className: "w-5 h-5 text-blue-500",
+        className: "tw-w-5 tw-h-5 tw-text-blue-500",
         fill: "none",
         stroke: "currentColor",
         viewBox: "0 0 24 24",
@@ -30263,25 +30297,25 @@ var ServerMetrics = function ServerMetrics(_ref) {
         })
       }), "Server Metrics"]
     }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("ul", {
-      className: "space-y-2",
+      className: "tw-space-y-2",
       children: metricsConfig.map(function (_ref2) {
         var key = _ref2.key,
           label = _ref2.label,
           format = _ref2.format,
           icon = _ref2.icon;
         return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)("li", {
-          className: "flex flex-col sm:flex-row sm:items-center sm:justify-between px-2 py-2 rounded hover:bg-gray-50 transition",
+          className: "tw-flex tw-flex-col sm:tw-flex-row sm:tw-items-center sm:tw-justify-between tw-px-2 tw-py-2 tw-rounded hover:tw-bg-gray-50 tw-transition",
           children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)("div", {
-            className: "flex items-center gap-2 mb-1 sm:mb-0",
+            className: "tw-flex tw-items-center tw-gap-2 tw-mb-1 sm:tw-mb-0",
             children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("span", {
-              className: "w-4 h-4 flex items-center justify-center",
+              className: "tw-w-4 tw-h-4 tw-flex tw-items-center tw-justify-center",
               children: icon
             }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("span", {
-              className: "text-xs text-gray-600",
+              className: "tw-text-xs tw-text-gray-600",
               children: label
             })]
           }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("span", {
-            className: "text-xs font-mono text-gray-900 sm:text-right",
+            className: "tw-text-xs tw-font-mono tw-text-gray-900 sm:tw-text-right",
             children: format(metrics === null || metrics === void 0 ? void 0 : metrics[key])
           })]
         }, key);
@@ -30375,11 +30409,24 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var zustand_middleware_immer__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! zustand/middleware/immer */ "./node_modules/zustand/esm/middleware/immer.mjs");
 
 
-var useBackupStore = (0,zustand__WEBPACK_IMPORTED_MODULE_0__.create)((0,zustand_middleware_immer__WEBPACK_IMPORTED_MODULE_1__.immer)(function (set) {
+var useBackupStore = (0,zustand__WEBPACK_IMPORTED_MODULE_0__.create)((0,zustand_middleware_immer__WEBPACK_IMPORTED_MODULE_1__.immer)(function (set, get) {
   return {
     // State
     backups: [],
+    backupProcess: [],
+    inProgress: false,
+    inProgressStep: 0,
     // Actions
+    setInProgress: function setInProgress(inProgress) {
+      return set(function (state) {
+        state.inProgress = inProgress;
+      });
+    },
+    setInProgressStep: function setInProgressStep(inProgressStep) {
+      return set(function (state) {
+        state.inProgressStep = inProgressStep;
+      });
+    },
     setBackups: function setBackups(backups) {
       return set(function (state) {
         state.backups = backups;
@@ -30391,6 +30438,35 @@ var useBackupStore = (0,zustand__WEBPACK_IMPORTED_MODULE_0__.create)((0,zustand_
           return backup.id !== backupId;
         });
       });
+    },
+    buildBackupProcess: function buildBackupProcess(backupConfig) {
+      var name = backupConfig.name,
+        types = backupConfig.types;
+      // backup process had 2 steps: 1. generate config file containing the backup config, 2. generate the backup with types (database, plugins, themes, uploads)
+      var process = [{
+        step: 1,
+        name: 'Generate Config File',
+        description: 'Create a config file containing the backup configuration.',
+        action: 'generate_config_file',
+        payload: {
+          name: name,
+          types: types
+        }
+      }, {
+        step: 2,
+        name: 'Generate Backup',
+        description: "Generate the backup for selected types: ".concat(types.join(', ')),
+        action: 'generate_backup',
+        payload: {
+          types: types
+        }
+      }];
+      set(function (state) {
+        state.backupProcess = process;
+      });
+    },
+    getBackupProcess: function getBackupProcess() {
+      return get().backupProcess;
     }
   };
 }));

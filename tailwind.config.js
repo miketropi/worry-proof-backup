@@ -1,10 +1,11 @@
 module.exports = {
+  prefix: 'tw-',
   content: [
     "./*.php",
     "./templates/**/*.php",
     "./src/**/*.js",
     "./src/**/*.css"
-  ],
+  ], 
   purge: [],
   darkMode: false, // or 'media' or 'class'
   theme: {

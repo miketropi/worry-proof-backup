@@ -33,15 +33,19 @@ const BackupTableTools = ({ onFilterChange, selectedBackups, onDeleteBackups }) 
     console.log('Upload backup clicked');
   };
 
+  const handleSaveBackup = async (config) => {
+    console.log('Save backup:', config);
+  };
+
   return (
-    <div className="flex flex-wrap items-center justify-between gap-4 p-4 bg-white border-b border-gray-200">
-      <div className="flex items-center gap-4">
+    <div className="tw-flex tw-flex-wrap tw-items-center tw-justify-between tw-gap-4 tw-p-4 tw-bg-white tw-border-b tw-border-gray-200">
+      <div className="tw-flex tw-items-center tw-gap-4">
         <button
           onClick={handleCreateBackup}
-          className="inline-flex items-center px-4 py-2 border border-transparent shadow-sm text-sm font-medium rounded-md text-white bg-blue-600 hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500"
+          className="tw-inline-flex tw-items-center tw-px-4 tw-py-2 tw-border tw-border-transparent tw-shadow-sm tw-text-sm tw-font-medium tw-rounded-md tw-text-white tw-bg-blue-600 hover:tw-bg-blue-700 focus:tw-outline-none focus:tw-ring-2 focus:tw-ring-offset-2 focus:tw-ring-blue-500"
         >
           <svg
-            className="-ml-1 mr-2 h-5 w-5"
+            className="tw--ml-1 tw-mr-2 tw-h-5 tw-w-5"
             fill="none"
             stroke="currentColor"
             viewBox="0 0 24 24"
@@ -56,19 +60,23 @@ const BackupTableTools = ({ onFilterChange, selectedBackups, onDeleteBackups }) 
           Create Backup
         </button>
 
-        <BackupConfigModal isOpen={isConfigModalOpen} onClose={() => setIsConfigModalOpen(false)} />
+        <BackupConfigModal 
+          isOpen={isConfigModalOpen} 
+          onClose={() => setIsConfigModalOpen(false)}
+          onSave={handleSaveBackup}
+        />
 
         <button
           onClick={handleDeleteBackups}
           disabled={selectedBackups.length === 0}
-          className={`inline-flex items-center px-4 py-2 border border-transparent shadow-sm text-sm font-medium rounded-md text-white ${
+          className={`tw-inline-flex tw-items-center tw-px-4 tw-py-2 tw-border tw-border-transparent tw-shadow-sm tw-text-sm tw-font-medium tw-rounded-md tw-text-white ${
             selectedBackups.length === 0
-              ? 'bg-gray-400 cursor-not-allowed'
-              : 'bg-red-600 hover:bg-red-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-red-500'
+              ? 'tw-bg-gray-400 tw-cursor-not-allowed'
+              : 'tw-bg-red-600 hover:tw-bg-red-700 focus:tw-outline-none focus:tw-ring-2 focus:tw-ring-offset-2 focus:tw-ring-red-500'
           }`}
         >
           <svg
-            className="-ml-1 mr-2 h-5 w-5"
+            className="tw--ml-1 tw-mr-2 tw-h-5 tw-w-5"
             fill="none"
             stroke="currentColor"
             viewBox="0 0 24 24"
@@ -85,10 +93,10 @@ const BackupTableTools = ({ onFilterChange, selectedBackups, onDeleteBackups }) 
 
         <button
           onClick={handleUploadBackup}
-          className="inline-flex items-center px-4 py-2 border border-transparent shadow-sm text-sm font-medium rounded-md text-white bg-green-600 hover:bg-green-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-green-500"
+          className="tw-inline-flex tw-items-center tw-px-4 tw-py-2 tw-border tw-border-transparent tw-shadow-sm tw-text-sm tw-font-medium tw-rounded-md tw-text-white tw-bg-green-600 hover:tw-bg-green-700 focus:tw-outline-none focus:tw-ring-2 focus:tw-ring-offset-2 focus:tw-ring-green-500"
         >
           <svg
-            className="-ml-1 mr-2 h-5 w-5"
+            className="tw--ml-1 tw-mr-2 tw-h-5 tw-w-5"
             fill="none"
             stroke="currentColor"
             viewBox="0 0 24 24"
@@ -104,13 +112,13 @@ const BackupTableTools = ({ onFilterChange, selectedBackups, onDeleteBackups }) 
         </button>
       </div>
 
-      <div className="flex items-center gap-4">
-        <div className="relative">
+      <div className="tw-flex tw-items-center tw-gap-4">
+        <div className="tw-relative">
           <input
             type="date"
             value={dateFilter}
             onChange={handleDateFilterChange}
-            className="block w-full rounded-md border-gray-300 shadow-sm focus:border-blue-500 focus:ring-blue-500 sm:text-sm"
+            className="tw-block tw-w-full tw-rounded-md tw-border-gray-300 tw-shadow-sm focus:tw-border-blue-500 focus:tw-ring-blue-500 sm:tw-text-sm"
           />
         </div>
       </div>
