@@ -426,42 +426,40 @@ function wp_backup_update_config_file($backup_folder, $fields) {
 }
 
 /**
- * Calculate the size of a folder (bytes)
+ * Calculate the size of a folder (optimized, supports >2GB)
  *
  * @param string $folder Absolute path to folder
- * @return int Folder size (bytes)
+ * @return float Folder size (bytes)
  */
 function wp_backup_calc_folder_size($folder) {
-  $size = 0;
+  $size = 0.0;
 
   if (!is_dir($folder)) {
       return 0;
   }
 
-  $files = scandir($folder);
+  try {
+      $iterator = new RecursiveIteratorIterator(
+          new RecursiveDirectoryIterator($folder, FilesystemIterator::SKIP_DOTS | FilesystemIterator::FOLLOW_SYMLINKS),
+          RecursiveIteratorIterator::SELF_FIRST
+      );
 
-  if (!$files) {
-      return 0;
-  }
+      foreach ($iterator as $file) {
+          // Skip symlinks (to avoid loop)
+          if ($file->isLink()) {
+              continue;
+          }
 
-  foreach ($files as $file) {
-      if ($file === '.' || $file === '..') {
-          continue;
-      }
-
-      $file_path = $folder . DIRECTORY_SEPARATOR . $file;
-
-      // If is file
-      if (is_file($file_path)) {
-          $file_size = filesize($file_path);
-          if ($file_size !== false) {
-              $size += $file_size;
+          if ($file->isFile()) {
+              $file_size = $file->getSize();
+              if ($file_size !== false) {
+                  $size += (float) $file_size;
+              }
           }
       }
-      // If is folder => recursive
-      elseif (is_dir($file_path)) {
-          $size += wp_backup_calc_folder_size($file_path);
-      }
+  } catch (Exception $e) {
+      // Optionally log error: $e->getMessage()
+      return 0;
   }
 
   return $size;

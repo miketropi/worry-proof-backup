@@ -13,9 +13,9 @@ const BackupProcess = () => {
   const [error, setError] = useState(null);
 
   const backupProcessHandler = async (process) => {
-    // console.log(process);
+    console.log('process', process);
     const response = await doBackupProcess(process);
-
+    console.log('response', response);
     // check if response is error
     if (response.success != true) {
       // console.error(response);
@@ -24,14 +24,25 @@ const BackupProcess = () => {
     }
 
     if (response.data.backup_process_status == 'done') {
-      setInProgressStep(backupProcess.length + 1);
-      await fetchBackups_Fn();
+      setInProgressStep(backupProcess.length + 1); // passed all steps
+      setResponseOldStep({}); // reset response old step
+      await fetchBackups_Fn(); // fetch backups
       return;
     }
 
-    setResponseOldStep({ ...responseOldStep, ...response.data });
-    // console.log(response);
-    setInProgressStep(process.step + 1);
+    let response_data = { ...responseOldStep, ...response.data };
+    setResponseOldStep(response_data);
+
+    if (response.data.next_step == true) {
+      setInProgressStep(process.step + 1);
+      return;
+    } else {
+      // re-run process
+      backupProcessHandler({
+        ...process,
+        payload: { ...response_data }
+      });
+    }
   };
 
   useEffect(() => {

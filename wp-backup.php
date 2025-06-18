@@ -41,6 +41,9 @@
    * Include files
    */
 
+  # include libs file
+  require_once WP_BACKUP_PLUGIN_PATH . 'inc/libs/backup-database.php';
+
   # include static file
   require_once WP_BACKUP_PLUGIN_PATH . 'inc/static.php';
 

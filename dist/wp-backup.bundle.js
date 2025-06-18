@@ -29369,16 +29369,19 @@ var BackupProcess = function BackupProcess() {
     _useState4 = _slicedToArray(_useState3, 2),
     error = _useState4[0],
     setError = _useState4[1];
-  var backupProcessHandler = /*#__PURE__*/function () {
+  var _backupProcessHandler = /*#__PURE__*/function () {
     var _ref = _asyncToGenerator(/*#__PURE__*/_regenerator().m(function _callee(process) {
-      var response;
+      var response, response_data;
       return _regenerator().w(function (_context) {
         while (1) switch (_context.n) {
           case 0:
+            console.log('process', process);
             _context.n = 1;
             return (0,_util_lib__WEBPACK_IMPORTED_MODULE_2__.doBackupProcess)(process);
           case 1:
             response = _context.v;
+            console.log('response', response);
+            // check if response is error
             if (!(response.success != true)) {
               _context.n = 2;
               break;
@@ -29391,16 +29394,27 @@ var BackupProcess = function BackupProcess() {
               _context.n = 4;
               break;
             }
-            setInProgressStep(backupProcess.length + 1);
+            setInProgressStep(backupProcess.length + 1); // passed all steps
+            setResponseOldStep({}); // reset response old step
             _context.n = 3;
             return fetchBackups_Fn();
           case 3:
             return _context.a(2);
           case 4:
-            setResponseOldStep(_objectSpread(_objectSpread({}, responseOldStep), response.data));
-            // console.log(response);
+            response_data = _objectSpread(_objectSpread({}, responseOldStep), response.data);
+            setResponseOldStep(response_data);
+            if (!(response.data.next_step == true)) {
+              _context.n = 5;
+              break;
+            }
             setInProgressStep(process.step + 1);
+            return _context.a(2);
           case 5:
+            // re-run process
+            _backupProcessHandler(_objectSpread(_objectSpread({}, process), {}, {
+              payload: _objectSpread({}, response_data)
+            }));
+          case 6:
             return _context.a(2);
         }
       }, _callee);
@@ -29426,7 +29440,7 @@ var BackupProcess = function BackupProcess() {
         payload: _objectSpread(_objectSpread({}, process.payload), responseOldStep)
       });
       // console.log(process, responseOldStep);
-      backupProcessHandler(process);
+      _backupProcessHandler(process);
 
       // console.log(inProgress, inProgressStep);
     }
@@ -29646,7 +29660,7 @@ var BackupTable = function BackupTable() {
     return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("div", {
       className: "tw-text-center",
       children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsxs)("div", {
-        className: "tw-bg-gray-50 tw-p-8 tw-border tw-border-gray-200",
+        className: "tw-bg-gray-50 tw-p-12 tw-border tw-border-gray-200",
         children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("svg", {
           className: "tw-mx-auto tw-h-12 tw-w-12 tw-text-gray-400",
           fill: "none",

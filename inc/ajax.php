@@ -34,7 +34,10 @@ function wp_backup_ajax_create_backup_config_file() {
     wp_send_json_error($config_file->get_error_message());
   }
 
-  wp_send_json_success($config_file); 
+  wp_send_json_success(array_merge(
+    $config_file,
+    array('next_step' => true)
+  ));
 }
 
 // wp_backup_ajax_generate_backup_database
@@ -51,24 +54,59 @@ function wp_backup_ajax_generate_backup_database() {
     wp_send_json_error('Backup folder is empty');
   }
 
-  $sql_dump = wp_backup_database();
+  // create backup database
+  $backup_ssid = $payload['name_folder'];
+  $backup = new WP_Backup_Database(1000, $backup_ssid);
 
-  // check error $sql_dump
-  if (is_wp_error($sql_dump)) {
-    wp_send_json_error($sql_dump->get_error_message());
+  // check error $backup
+  if (is_wp_error($backup)) {
+    wp_send_json_error($backup->get_error_message());
   }
 
-  $file_path = $payload['backup_folder'] . '/database.sql';
-  $result = wp_backup_save_data_to_file($file_path, $sql_dump);
+  // if payload not backup_ssid, create new backup_ssid
+  if (!isset($payload['backup_ssid']) || empty($payload['backup_ssid'])) {
+    $result = $backup->startBackup();
 
-  // check error $result
-  if (is_wp_error($result)) {
-    wp_send_json_error($result->get_error_message());
+    // check error $result
+    if (is_wp_error($result)) {
+      wp_send_json_error($result->get_error_message());
+    }
+
+    wp_send_json_success([
+      'backup_ssid' => $backup_ssid,
+      'backup_database_status' => 'is_running',
+      'next_step' => false,
+    ]);
+  } else {
+    $progress = $backup->processStep();
+
+    // check error $progress
+    if (is_wp_error($progress)) {
+      wp_send_json_error($progress->get_error_message());
+    }
+    
+    if ($progress['done']) {
+      $result = $backup->finishBackup();
+
+      // check error $result
+      if (is_wp_error($result)) {
+        wp_send_json_error($result->get_error_message());
+      }
+
+      wp_send_json_success([
+        'backup_ssid' => $backup_ssid,
+        'backup_database_status' => 'is_done',
+        'next_step' => true,
+      ]);
+    } else {
+      wp_send_json_success([
+        'backup_ssid' => $backup_ssid,
+        'backup_database_status' => 'is_running',
+        'progress' => $progress,
+        'next_step' => false,
+      ]);
+    }
   }
-
-  wp_send_json_success([
-    'sql_dump' => $file_path,
-  ]);
 }
 
 // wp_backup_ajax_generate_backup_done

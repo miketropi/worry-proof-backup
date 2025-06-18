@@ -53,7 +53,7 @@ const BackupTable = () => {
   if (!backups || backups.length === 0) {
     return (
       <div className="tw-text-center">
-        <div className="tw-bg-gray-50 tw-p-8 tw-border tw-border-gray-200">
+        <div className="tw-bg-gray-50 tw-p-12 tw-border tw-border-gray-200">
           <svg
             className="tw-mx-auto tw-h-12 tw-w-12 tw-text-gray-400"
             fill="none"
