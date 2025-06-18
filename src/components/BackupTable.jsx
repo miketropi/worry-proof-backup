@@ -1,6 +1,5 @@
 import React from 'react';
 import useBackupStore from '../util/store';
-import { getBackups } from '../util/lib';
 import BackupTableTools, { NewBackupButton } from './BackupTableTools';
 
 const BackupTable = () => {
