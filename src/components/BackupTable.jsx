@@ -190,7 +190,7 @@ const BackupTable = () => {
                 <td className="tw-px-6 tw-py-4">
                   <div className="tw-text-sm tw-font-medium tw-text-gray-900">
                     {backup.name} 
-                    <span className="tw-ml-2 tw-inline-block tw-px-2 tw-py-0.5 tw-text-xs tw-rounded tw-bg-gray-200 tw-text-gray-700 tw-align-middle">
+                    <span className="tw-ml-2 tw-inline-block tw-px-2 tw-py-0.5 tw-text-xs tw-rounded tw-bg-gray-200 tw-text-gray-700 tw-align-middle" title={backup.date}>
                       { friendlyDateTime(backup.date, wp_backup_php_data.current_datetime) }
                     </span>
                   </div>

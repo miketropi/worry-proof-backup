@@ -29834,6 +29834,7 @@ var BackupTable = function BackupTable() {
                   className: "tw-text-sm tw-font-medium tw-text-gray-900",
                   children: [backup.name, /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)("span", {
                     className: "tw-ml-2 tw-inline-block tw-px-2 tw-py-0.5 tw-text-xs tw-rounded tw-bg-gray-200 tw-text-gray-700 tw-align-middle",
+                    title: backup.date,
                     children: (0,_util_lib__WEBPACK_IMPORTED_MODULE_3__.friendlyDateTime)(backup.date, wp_backup_php_data.current_datetime)
                   })]
                 }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)("div", {
