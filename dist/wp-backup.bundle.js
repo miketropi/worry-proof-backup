@@ -29324,10 +29324,26 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _util_store__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../util/store */ "./src/util/store.js");
 /* harmony import */ var _util_lib__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../util/lib */ "./src/util/lib.js");
 /* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! react/jsx-runtime */ "./node_modules/react/jsx-runtime.js");
+function _typeof(o) { "@babel/helpers - typeof"; return _typeof = "function" == typeof Symbol && "symbol" == typeof Symbol.iterator ? function (o) { return typeof o; } : function (o) { return o && "function" == typeof Symbol && o.constructor === Symbol && o !== Symbol.prototype ? "symbol" : typeof o; }, _typeof(o); }
+function _toConsumableArray(r) { return _arrayWithoutHoles(r) || _iterableToArray(r) || _unsupportedIterableToArray(r) || _nonIterableSpread(); }
+function _nonIterableSpread() { throw new TypeError("Invalid attempt to spread non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method."); }
+function _iterableToArray(r) { if ("undefined" != typeof Symbol && null != r[Symbol.iterator] || null != r["@@iterator"]) return Array.from(r); }
+function _arrayWithoutHoles(r) { if (Array.isArray(r)) return _arrayLikeToArray(r); }
 function _regenerator() { /*! regenerator-runtime -- Copyright (c) 2014-present, Facebook, Inc. -- license (MIT): https://github.com/babel/babel/blob/main/packages/babel-helpers/LICENSE */ var e, t, r = "function" == typeof Symbol ? Symbol : {}, n = r.iterator || "@@iterator", o = r.toStringTag || "@@toStringTag"; function i(r, n, o, i) { var c = n && n.prototype instanceof Generator ? n : Generator, u = Object.create(c.prototype); return _regeneratorDefine2(u, "_invoke", function (r, n, o) { var i, c, u, f = 0, p = o || [], y = !1, G = { p: 0, n: 0, v: e, a: d, f: d.bind(e, 4), d: function d(t, r) { return i = t, c = 0, u = e, G.n = r, a; } }; function d(r, n) { for (c = r, u = n, t = 0; !y && f && !o && t < p.length; t++) { var o, i = p[t], d = G.p, l = i[2]; r > 3 ? (o = l === n) && (u = i[(c = i[4]) ? 5 : (c = 3, 3)], i[4] = i[5] = e) : i[0] <= d && ((o = r < 2 && d < i[1]) ? (c = 0, G.v = n, G.n = i[1]) : d < l && (o = r < 3 || i[0] > n || n > l) && (i[4] = r, i[5] = n, G.n = l, c = 0)); } if (o || r > 1) return a; throw y = !0, n; } return function (o, p, l) { if (f > 1) throw TypeError("Generator is already running"); for (y && 1 === p && d(p, l), c = p, u = l; (t = c < 2 ? e : u) || !y;) { i || (c ? c < 3 ? (c > 1 && (G.n = -1), d(c, u)) : G.n = u : G.v = u); try { if (f = 2, i) { if (c || (o = "next"), t = i[o]) { if (!(t = t.call(i, u))) throw TypeError("iterator result is not an object"); if (!t.done) return t; u = t.value, c < 2 && (c = 0); } else 1 === c && (t = i["return"]) && t.call(i), c < 2 && (u = TypeError("The iterator does not provide a '" + o + "' method"), c = 1); i = e; } else if ((t = (y = G.n < 0) ? u : r.call(n, G)) !== a) break; } catch (t) { i = e, c = 1, u = t; } finally { f = 1; } } return { value: t, done: y }; }; }(r, o, i), !0), u; } var a = {}; function Generator() {} function GeneratorFunction() {} function GeneratorFunctionPrototype() {} t = Object.getPrototypeOf; var c = [][n] ? t(t([][n]())) : (_regeneratorDefine2(t = {}, n, function () { return this; }), t), u = GeneratorFunctionPrototype.prototype = Generator.prototype = Object.create(c); function f(e) { return Object.setPrototypeOf ? Object.setPrototypeOf(e, GeneratorFunctionPrototype) : (e.__proto__ = GeneratorFunctionPrototype, _regeneratorDefine2(e, o, "GeneratorFunction")), e.prototype = Object.create(u), e; } return GeneratorFunction.prototype = GeneratorFunctionPrototype, _regeneratorDefine2(u, "constructor", GeneratorFunctionPrototype), _regeneratorDefine2(GeneratorFunctionPrototype, "constructor", GeneratorFunction), GeneratorFunction.displayName = "GeneratorFunction", _regeneratorDefine2(GeneratorFunctionPrototype, o, "GeneratorFunction"), _regeneratorDefine2(u), _regeneratorDefine2(u, o, "Generator"), _regeneratorDefine2(u, n, function () { return this; }), _regeneratorDefine2(u, "toString", function () { return "[object Generator]"; }), (_regenerator = function _regenerator() { return { w: i, m: f }; })(); }
 function _regeneratorDefine2(e, r, n, t) { var i = Object.defineProperty; try { i({}, "", {}); } catch (e) { i = 0; } _regeneratorDefine2 = function _regeneratorDefine(e, r, n, t) { if (r) i ? i(e, r, { value: n, enumerable: !t, configurable: !t, writable: !t }) : e[r] = n;else { var o = function o(r, n) { _regeneratorDefine2(e, r, function (e) { return this._invoke(r, n, e); }); }; o("next", 0), o("throw", 1), o("return", 2); } }, _regeneratorDefine2(e, r, n, t); }
+function ownKeys(e, r) { var t = Object.keys(e); if (Object.getOwnPropertySymbols) { var o = Object.getOwnPropertySymbols(e); r && (o = o.filter(function (r) { return Object.getOwnPropertyDescriptor(e, r).enumerable; })), t.push.apply(t, o); } return t; }
+function _objectSpread(e) { for (var r = 1; r < arguments.length; r++) { var t = null != arguments[r] ? arguments[r] : {}; r % 2 ? ownKeys(Object(t), !0).forEach(function (r) { _defineProperty(e, r, t[r]); }) : Object.getOwnPropertyDescriptors ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t)) : ownKeys(Object(t)).forEach(function (r) { Object.defineProperty(e, r, Object.getOwnPropertyDescriptor(t, r)); }); } return e; }
+function _defineProperty(e, r, t) { return (r = _toPropertyKey(r)) in e ? Object.defineProperty(e, r, { value: t, enumerable: !0, configurable: !0, writable: !0 }) : e[r] = t, e; }
+function _toPropertyKey(t) { var i = _toPrimitive(t, "string"); return "symbol" == _typeof(i) ? i : i + ""; }
+function _toPrimitive(t, r) { if ("object" != _typeof(t) || !t) return t; var e = t[Symbol.toPrimitive]; if (void 0 !== e) { var i = e.call(t, r || "default"); if ("object" != _typeof(i)) return i; throw new TypeError("@@toPrimitive must return a primitive value."); } return ("string" === r ? String : Number)(t); }
 function asyncGeneratorStep(n, t, e, r, o, a, c) { try { var i = n[a](c), u = i.value; } catch (n) { return void e(n); } i.done ? t(u) : Promise.resolve(u).then(r, o); }
 function _asyncToGenerator(n) { return function () { var t = this, e = arguments; return new Promise(function (r, o) { var a = n.apply(t, e); function _next(n) { asyncGeneratorStep(a, r, o, _next, _throw, "next", n); } function _throw(n) { asyncGeneratorStep(a, r, o, _next, _throw, "throw", n); } _next(void 0); }); }; }
+function _slicedToArray(r, e) { return _arrayWithHoles(r) || _iterableToArrayLimit(r, e) || _unsupportedIterableToArray(r, e) || _nonIterableRest(); }
+function _nonIterableRest() { throw new TypeError("Invalid attempt to destructure non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method."); }
+function _unsupportedIterableToArray(r, a) { if (r) { if ("string" == typeof r) return _arrayLikeToArray(r, a); var t = {}.toString.call(r).slice(8, -1); return "Object" === t && r.constructor && (t = r.constructor.name), "Map" === t || "Set" === t ? Array.from(r) : "Arguments" === t || /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(t) ? _arrayLikeToArray(r, a) : void 0; } }
+function _arrayLikeToArray(r, a) { (null == a || a > r.length) && (a = r.length); for (var e = 0, n = Array(a); e < a; e++) n[e] = r[e]; return n; }
+function _iterableToArrayLimit(r, l) { var t = null == r ? null : "undefined" != typeof Symbol && r[Symbol.iterator] || r["@@iterator"]; if (null != t) { var e, n, i, u, a = [], f = !0, o = !1; try { if (i = (t = t.call(r)).next, 0 === l) { if (Object(t) !== t) return; f = !1; } else for (; !(f = (e = i.call(t)).done) && (a.push(e.value), a.length !== l); f = !0); } catch (r) { o = !0, n = r; } finally { try { if (!f && null != t["return"] && (u = t["return"](), Object(u) !== u)) return; } finally { if (o) throw n; } } return a; } }
+function _arrayWithHoles(r) { if (Array.isArray(r)) return r; }
 
 
 
@@ -29343,25 +29359,48 @@ var BackupProcess = function BackupProcess() {
     backupProcess = _useBackupStore.backupProcess,
     inProgress = _useBackupStore.inProgress,
     inProgressStep = _useBackupStore.inProgressStep,
-    setInProgressStep = _useBackupStore.setInProgressStep;
+    setInProgressStep = _useBackupStore.setInProgressStep,
+    fetchBackups_Fn = _useBackupStore.fetchBackups_Fn;
+  var _useState = (0,react__WEBPACK_IMPORTED_MODULE_0__.useState)({}),
+    _useState2 = _slicedToArray(_useState, 2),
+    responseOldStep = _useState2[0],
+    setResponseOldStep = _useState2[1];
+  var _useState3 = (0,react__WEBPACK_IMPORTED_MODULE_0__.useState)(null),
+    _useState4 = _slicedToArray(_useState3, 2),
+    error = _useState4[0],
+    setError = _useState4[1];
   var backupProcessHandler = /*#__PURE__*/function () {
     var _ref = _asyncToGenerator(/*#__PURE__*/_regenerator().m(function _callee(process) {
       var response;
       return _regenerator().w(function (_context) {
         while (1) switch (_context.n) {
           case 0:
-            console.log(process);
             _context.n = 1;
             return (0,_util_lib__WEBPACK_IMPORTED_MODULE_2__.doBackupProcess)(process);
           case 1:
             response = _context.v;
-            console.log(response);
-
-            // setTimeout(() => {
-            //   console.log(process);
-            //   setInProgressStep(process.step + 1);
-            // }, 1000);
+            if (!(response.success != true)) {
+              _context.n = 2;
+              break;
+            }
+            // console.error(response);
+            setError(response.data);
+            return _context.a(2);
           case 2:
+            if (!(response.data.backup_process_status == 'done')) {
+              _context.n = 4;
+              break;
+            }
+            setInProgressStep(backupProcess.length + 1);
+            _context.n = 3;
+            return fetchBackups_Fn();
+          case 3:
+            return _context.a(2);
+          case 4:
+            setResponseOldStep(_objectSpread(_objectSpread({}, responseOldStep), response.data));
+            // console.log(response);
+            setInProgressStep(process.step + 1);
+          case 5:
             return _context.a(2);
         }
       }, _callee);
@@ -29373,9 +29412,20 @@ var BackupProcess = function BackupProcess() {
   (0,react__WEBPACK_IMPORTED_MODULE_0__.useEffect)(function () {
     if (inProgress == true) {
       // get process by step
-      var process = backupProcess.find(function (step) {
+      var process = _toConsumableArray(backupProcess).find(function (step) {
         return step.step === inProgressStep;
       });
+
+      // check if process is exists
+      if (!process) {
+        // passed all steps
+
+        return;
+      }
+      process = _objectSpread(_objectSpread({}, process), {}, {
+        payload: _objectSpread(_objectSpread({}, process.payload), responseOldStep)
+      });
+      // console.log(process, responseOldStep);
       backupProcessHandler(process);
 
       // console.log(inProgress, inProgressStep);
@@ -29430,7 +29480,27 @@ var BackupProcess = function BackupProcess() {
             }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("p", {
               className: "tw-mt-1 tw-text-sm tw-text-gray-500",
               children: step.description
-            }), isCurrent && /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsxs)("div", {
+            }), error && inProgressStep === step.step && /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("div", {
+              className: "tw-mt-3 tw-p-3 tw-bg-red-50 tw-border tw-border-red-200 tw-rounded-md",
+              children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsxs)("div", {
+                className: "tw-flex tw-items-start tw-gap-2",
+                children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("svg", {
+                  className: "tw-w-4 tw-h-4 tw-text-red-500 tw-mt-0.5 tw-flex-shrink-0",
+                  fill: "none",
+                  stroke: "currentColor",
+                  viewBox: "0 0 24 24",
+                  children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("path", {
+                    strokeLinecap: "round",
+                    strokeLinejoin: "round",
+                    strokeWidth: 2,
+                    d: "M12 8v4m0 4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"
+                  })
+                }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("p", {
+                  className: "tw-text-sm tw-text-red-700 tw-leading-relaxed",
+                  children: error
+                })]
+              })
+            }), isCurrent && !error && /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsxs)("div", {
               className: "tw-mt-2 tw-flex tw-items-center tw-gap-2",
               children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsxs)("svg", {
                 className: "tw-w-4 tw-h-4 tw-text-blue-400 tw-animate-spin",
@@ -29506,7 +29576,8 @@ function _arrayWithHoles(r) { if (Array.isArray(r)) return r; }
 var BackupTable = function BackupTable() {
   var _useBackupStore = (0,_util_store__WEBPACK_IMPORTED_MODULE_1__["default"])(),
     backups = _useBackupStore.backups,
-    setBackups = _useBackupStore.setBackups;
+    setBackups = _useBackupStore.setBackups,
+    fetchBackups_Fn = _useBackupStore.fetchBackups_Fn;
   var _React$useState = react__WEBPACK_IMPORTED_MODULE_0___default().useState(true),
     _React$useState2 = _slicedToArray(_React$useState, 2),
     isLoading = _React$useState2[0],
@@ -29522,40 +29593,30 @@ var BackupTable = function BackupTable() {
     selectedBackups = _React$useState6[0],
     setSelectedBackups = _React$useState6[1];
   react__WEBPACK_IMPORTED_MODULE_0___default().useEffect(function () {
-    var fetchBackups = /*#__PURE__*/function () {
-      var _ref = _asyncToGenerator(/*#__PURE__*/_regenerator().m(function _callee() {
-        var response, _t;
+    function fetchBackups() {
+      return _fetchBackups.apply(this, arguments);
+    }
+    function _fetchBackups() {
+      _fetchBackups = _asyncToGenerator(/*#__PURE__*/_regenerator().m(function _callee() {
         return _regenerator().w(function (_context) {
           while (1) switch (_context.n) {
             case 0:
-              _context.p = 0;
               _context.n = 1;
-              return (0,_util_lib__WEBPACK_IMPORTED_MODULE_2__.getBackups)();
+              return fetchBackups_Fn();
             case 1:
-              response = _context.v;
-              setBackups(response.data);
-              setFilteredBackups(response.data);
-              _context.n = 3;
-              break;
-            case 2:
-              _context.p = 2;
-              _t = _context.v;
-              console.error('Error fetching backups:', _t);
-            case 3:
-              _context.p = 3;
               setIsLoading(false);
-              return _context.f(3);
-            case 4:
+            case 2:
               return _context.a(2);
           }
-        }, _callee, null, [[0, 2, 3, 4]]);
+        }, _callee);
       }));
-      return function fetchBackups() {
-        return _ref.apply(this, arguments);
-      };
-    }();
+      return _fetchBackups.apply(this, arguments);
+    }
     fetchBackups();
-  }, [setBackups]);
+  }, [fetchBackups_Fn]);
+  react__WEBPACK_IMPORTED_MODULE_0___default().useEffect(function () {
+    setFilteredBackups(backups);
+  }, [backups]);
   var handleFilterChange = function handleFilterChange(date) {
     if (!date) {
       setFilteredBackups(backups);
@@ -29585,9 +29646,9 @@ var BackupTable = function BackupTable() {
   }
   if (!backups || backups.length === 0) {
     return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)("div", {
-      className: "tw-text-center tw-py-12",
+      className: "tw-text-center",
       children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsxs)("div", {
-        className: "tw-bg-gray-50 tw-rounded-lg tw-p-8",
+        className: "tw-bg-gray-50 tw-p-8 tw-border tw-border-gray-200",
         children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)("svg", {
           className: "tw-mx-auto tw-h-12 tw-w-12 tw-text-gray-400",
           fill: "none",
@@ -29607,22 +29668,7 @@ var BackupTable = function BackupTable() {
           children: "Get started by creating a new backup."
         }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)("div", {
           className: "tw-mt-6",
-          children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsxs)("button", {
-            type: "button",
-            className: "tw-inline-flex tw-items-center tw-px-4 tw-py-2 tw-border tw-border-transparent tw-shadow-sm tw-text-sm tw-font-medium tw-rounded-md tw-text-white tw-bg-blue-600 hover:tw-bg-blue-700 focus:tw-outline-none focus:tw-ring-2 focus:tw-ring-offset-2 focus:tw-ring-blue-500",
-            children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)("svg", {
-              className: "tw--ml-1 tw-mr-2 tw-h-5 tw-w-5",
-              fill: "none",
-              stroke: "currentColor",
-              viewBox: "0 0 24 24",
-              children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)("path", {
-                strokeLinecap: "round",
-                strokeLinejoin: "round",
-                strokeWidth: 2,
-                d: "M12 6v6m0 0v6m0-6h6m-6 0H6"
-              })
-            }), "Create Backup"]
-          })
+          children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)(_BackupTableTools__WEBPACK_IMPORTED_MODULE_3__.NewBackupButton, {})
         })]
       })
     });
@@ -29814,12 +29860,21 @@ var BackupTable = function BackupTable() {
               }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)("td", {
                 className: "tw-px-6 tw-py-4 tw-whitespace-nowrap tw-text-sm tw-text-gray-500",
                 children: backup.size
-              }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)("td", {
+              }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsxs)("td", {
                 className: "tw-px-6 tw-py-4 tw-whitespace-nowrap",
-                children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)("span", {
+                children: [backup.status === "pending" && /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)("span", {
+                  className: "tw-px-2 tw-inline-flex tw-text-xs tw-leading-5 tw-font-semibold tw-rounded-full tw-bg-yellow-100 tw-text-yellow-800",
+                  children: "Pending"
+                }), backup.status === "completed" && /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)("span", {
                   className: "tw-px-2 tw-inline-flex tw-text-xs tw-leading-5 tw-font-semibold tw-rounded-full tw-bg-green-100 tw-text-green-800",
+                  children: "Completed"
+                }), backup.status === "fail" && /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)("span", {
+                  className: "tw-px-2 tw-inline-flex tw-text-xs tw-leading-5 tw-font-semibold tw-rounded-full tw-bg-red-100 tw-text-red-800",
+                  children: "Failed"
+                }), ["pending", "completed", "fail"].indexOf(backup.status) === -1 && /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)("span", {
+                  className: "tw-px-2 tw-inline-flex tw-text-xs tw-leading-5 tw-font-semibold tw-rounded-full tw-bg-gray-100 tw-text-gray-800",
                   children: backup.status
-                })
+                })]
               }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsxs)("td", {
                 className: "tw-px-6 tw-py-4 tw-whitespace-nowrap tw-text-right tw-text-sm tw-font-medium",
                 children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)("button", {
@@ -29876,6 +29931,7 @@ var BackupTable = function BackupTable() {
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   NewBackupButton: () => (/* binding */ NewBackupButton),
 /* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
 /* harmony export */ });
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
@@ -29897,27 +29953,15 @@ function _arrayWithHoles(r) { if (Array.isArray(r)) return r; }
 
 
 
-var BackupTableTools = function BackupTableTools(_ref) {
-  var onFilterChange = _ref.onFilterChange,
-    selectedBackups = _ref.selectedBackups,
-    onDeleteBackups = _ref.onDeleteBackups;
+var NewBackupButton = function NewBackupButton() {
   var _useBackupStore = (0,_util_store__WEBPACK_IMPORTED_MODULE_1__["default"])(),
     buildBackupProcess = _useBackupStore.buildBackupProcess;
-  var _React$useState = react__WEBPACK_IMPORTED_MODULE_0___default().useState(''),
+  var _React$useState = react__WEBPACK_IMPORTED_MODULE_0___default().useState(false),
     _React$useState2 = _slicedToArray(_React$useState, 2),
-    dateFilter = _React$useState2[0],
-    setDateFilter = _React$useState2[1];
-  var _React$useState3 = react__WEBPACK_IMPORTED_MODULE_0___default().useState(false),
-    _React$useState4 = _slicedToArray(_React$useState3, 2),
-    isConfigModalOpen = _React$useState4[0],
-    setIsConfigModalOpen = _React$useState4[1];
-  var handleDateFilterChange = function handleDateFilterChange(e) {
-    var value = e.target.value;
-    setDateFilter(value);
-    onFilterChange(value);
-  };
+    isConfigModalOpen = _React$useState2[0],
+    setIsConfigModalOpen = _React$useState2[1];
   var handleCreateBackup = /*#__PURE__*/function () {
-    var _ref2 = _asyncToGenerator(/*#__PURE__*/_regenerator().m(function _callee() {
+    var _ref = _asyncToGenerator(/*#__PURE__*/_regenerator().m(function _callee() {
       return _regenerator().w(function (_context) {
         while (1) switch (_context.n) {
           case 0:
@@ -29930,63 +29974,140 @@ var BackupTableTools = function BackupTableTools(_ref) {
       }, _callee);
     }));
     return function handleCreateBackup() {
-      return _ref2.apply(this, arguments);
+      return _ref.apply(this, arguments);
     };
   }();
-  var handleDeleteBackups = /*#__PURE__*/function () {
-    var _ref3 = _asyncToGenerator(/*#__PURE__*/_regenerator().m(function _callee2() {
+  var handleSaveBackup = /*#__PURE__*/function () {
+    var _ref2 = _asyncToGenerator(/*#__PURE__*/_regenerator().m(function _callee2(config) {
       return _regenerator().w(function (_context2) {
         while (1) switch (_context2.n) {
           case 0:
-            if (!(selectedBackups.length === 0)) {
-              _context2.n = 1;
-              break;
-            }
-            alert('Please select backups to delete');
-            return _context2.a(2);
+            console.log('Save backup:', config);
+            buildBackupProcess(config);
           case 1:
-            // TODO: Implement delete backup functionality
-            console.log('Delete backups:', selectedBackups);
-            onDeleteBackups(selectedBackups);
-          case 2:
             return _context2.a(2);
         }
       }, _callee2);
     }));
-    return function handleDeleteBackups() {
-      return _ref3.apply(this, arguments);
+    return function handleSaveBackup(_x) {
+      return _ref2.apply(this, arguments);
     };
   }();
-  var handleUploadBackup = /*#__PURE__*/function () {
+  return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsxs)(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.Fragment, {
+    children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsxs)("button", {
+      onClick: handleCreateBackup,
+      className: "tw-inline-flex tw-items-center tw-px-4 tw-py-2 tw-border tw-border-transparent tw-shadow-sm tw-text-sm tw-font-medium tw-rounded-md tw-text-white tw-bg-blue-600 hover:tw-bg-blue-700 focus:tw-outline-none focus:tw-ring-2 focus:tw-ring-offset-2 focus:tw-ring-blue-500",
+      children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("svg", {
+        className: "tw--ml-1 tw-mr-2 tw-h-5 tw-w-5",
+        fill: "none",
+        stroke: "currentColor",
+        viewBox: "0 0 24 24",
+        children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("path", {
+          strokeLinecap: "round",
+          strokeLinejoin: "round",
+          strokeWidth: 2,
+          d: "M12 6v6m0 0v6m0-6h6m-6 0H6"
+        })
+      }), "Create Backup"]
+    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)(_BackupConfigModal__WEBPACK_IMPORTED_MODULE_2__["default"], {
+      isOpen: isConfigModalOpen,
+      onClose: function onClose() {
+        return setIsConfigModalOpen(false);
+      },
+      onSave: handleSaveBackup
+    })]
+  });
+};
+var BackupTableTools = function BackupTableTools(_ref3) {
+  var onFilterChange = _ref3.onFilterChange,
+    selectedBackups = _ref3.selectedBackups,
+    onDeleteBackups = _ref3.onDeleteBackups;
+  var _useBackupStore2 = (0,_util_store__WEBPACK_IMPORTED_MODULE_1__["default"])(),
+    buildBackupProcess = _useBackupStore2.buildBackupProcess;
+  var _React$useState3 = react__WEBPACK_IMPORTED_MODULE_0___default().useState(''),
+    _React$useState4 = _slicedToArray(_React$useState3, 2),
+    dateFilter = _React$useState4[0],
+    setDateFilter = _React$useState4[1];
+  var _React$useState5 = react__WEBPACK_IMPORTED_MODULE_0___default().useState(false),
+    _React$useState6 = _slicedToArray(_React$useState5, 2),
+    isConfigModalOpen = _React$useState6[0],
+    setIsConfigModalOpen = _React$useState6[1];
+  var handleDateFilterChange = function handleDateFilterChange(e) {
+    var value = e.target.value;
+    setDateFilter(value);
+    onFilterChange(value);
+  };
+  var handleCreateBackup = /*#__PURE__*/function () {
     var _ref4 = _asyncToGenerator(/*#__PURE__*/_regenerator().m(function _callee3() {
       return _regenerator().w(function (_context3) {
         while (1) switch (_context3.n) {
           case 0:
-            // TODO: Implement upload backup functionality
-            console.log('Upload backup clicked');
+            // TODO: Implement create backup functionality
+            console.log('Create backup clicked');
+            setIsConfigModalOpen(true);
           case 1:
             return _context3.a(2);
         }
       }, _callee3);
     }));
-    return function handleUploadBackup() {
+    return function handleCreateBackup() {
       return _ref4.apply(this, arguments);
     };
   }();
-  var handleSaveBackup = /*#__PURE__*/function () {
-    var _ref5 = _asyncToGenerator(/*#__PURE__*/_regenerator().m(function _callee4(config) {
+  var handleDeleteBackups = /*#__PURE__*/function () {
+    var _ref5 = _asyncToGenerator(/*#__PURE__*/_regenerator().m(function _callee4() {
       return _regenerator().w(function (_context4) {
         while (1) switch (_context4.n) {
           case 0:
-            console.log('Save backup:', config);
-            buildBackupProcess(config);
+            if (!(selectedBackups.length === 0)) {
+              _context4.n = 1;
+              break;
+            }
+            alert('Please select backups to delete');
+            return _context4.a(2);
           case 1:
+            // TODO: Implement delete backup functionality
+            console.log('Delete backups:', selectedBackups);
+            onDeleteBackups(selectedBackups);
+          case 2:
             return _context4.a(2);
         }
       }, _callee4);
     }));
-    return function handleSaveBackup(_x) {
+    return function handleDeleteBackups() {
       return _ref5.apply(this, arguments);
+    };
+  }();
+  var handleUploadBackup = /*#__PURE__*/function () {
+    var _ref6 = _asyncToGenerator(/*#__PURE__*/_regenerator().m(function _callee5() {
+      return _regenerator().w(function (_context5) {
+        while (1) switch (_context5.n) {
+          case 0:
+            // TODO: Implement upload backup functionality
+            console.log('Upload backup clicked');
+          case 1:
+            return _context5.a(2);
+        }
+      }, _callee5);
+    }));
+    return function handleUploadBackup() {
+      return _ref6.apply(this, arguments);
+    };
+  }();
+  var handleSaveBackup = /*#__PURE__*/function () {
+    var _ref7 = _asyncToGenerator(/*#__PURE__*/_regenerator().m(function _callee6(config) {
+      return _regenerator().w(function (_context6) {
+        while (1) switch (_context6.n) {
+          case 0:
+            console.log('Save backup:', config);
+            buildBackupProcess(config);
+          case 1:
+            return _context6.a(2);
+        }
+      }, _callee6);
+    }));
+    return function handleSaveBackup(_x2) {
+      return _ref7.apply(this, arguments);
     };
   }();
   return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsxs)("div", {
@@ -30471,7 +30592,7 @@ var ServerMetrics = function ServerMetrics(_ref) {
           format = _ref2.format,
           icon = _ref2.icon;
         return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)("li", {
-          className: "tw-flex tw-flex-col sm:tw-flex-row sm:tw-items-center sm:tw-justify-between tw-px-2 tw-py-2 tw-rounded hover:tw-bg-gray-50 tw-transition",
+          className: "tw-flex tw-flex-col sm:tw-flex-row sm:tw-items-center sm:tw-justify-between tw-py-2 tw-rounded hover:tw-bg-gray-50 tw-transition",
           children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)("div", {
             className: "tw-flex tw-items-center tw-gap-2 tw-mb-1 sm:tw-mb-0",
             children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("span", {
@@ -30619,11 +30740,17 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
 /* harmony export */ });
-/* harmony import */ var zustand__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! zustand */ "./node_modules/zustand/esm/react.mjs");
-/* harmony import */ var zustand_middleware_immer__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! zustand/middleware/immer */ "./node_modules/zustand/esm/middleware/immer.mjs");
+/* harmony import */ var zustand__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! zustand */ "./node_modules/zustand/esm/react.mjs");
+/* harmony import */ var zustand_middleware_immer__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! zustand/middleware/immer */ "./node_modules/zustand/esm/middleware/immer.mjs");
+/* harmony import */ var _lib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./lib */ "./src/util/lib.js");
+function _regenerator() { /*! regenerator-runtime -- Copyright (c) 2014-present, Facebook, Inc. -- license (MIT): https://github.com/babel/babel/blob/main/packages/babel-helpers/LICENSE */ var e, t, r = "function" == typeof Symbol ? Symbol : {}, n = r.iterator || "@@iterator", o = r.toStringTag || "@@toStringTag"; function i(r, n, o, i) { var c = n && n.prototype instanceof Generator ? n : Generator, u = Object.create(c.prototype); return _regeneratorDefine2(u, "_invoke", function (r, n, o) { var i, c, u, f = 0, p = o || [], y = !1, G = { p: 0, n: 0, v: e, a: d, f: d.bind(e, 4), d: function d(t, r) { return i = t, c = 0, u = e, G.n = r, a; } }; function d(r, n) { for (c = r, u = n, t = 0; !y && f && !o && t < p.length; t++) { var o, i = p[t], d = G.p, l = i[2]; r > 3 ? (o = l === n) && (u = i[(c = i[4]) ? 5 : (c = 3, 3)], i[4] = i[5] = e) : i[0] <= d && ((o = r < 2 && d < i[1]) ? (c = 0, G.v = n, G.n = i[1]) : d < l && (o = r < 3 || i[0] > n || n > l) && (i[4] = r, i[5] = n, G.n = l, c = 0)); } if (o || r > 1) return a; throw y = !0, n; } return function (o, p, l) { if (f > 1) throw TypeError("Generator is already running"); for (y && 1 === p && d(p, l), c = p, u = l; (t = c < 2 ? e : u) || !y;) { i || (c ? c < 3 ? (c > 1 && (G.n = -1), d(c, u)) : G.n = u : G.v = u); try { if (f = 2, i) { if (c || (o = "next"), t = i[o]) { if (!(t = t.call(i, u))) throw TypeError("iterator result is not an object"); if (!t.done) return t; u = t.value, c < 2 && (c = 0); } else 1 === c && (t = i["return"]) && t.call(i), c < 2 && (u = TypeError("The iterator does not provide a '" + o + "' method"), c = 1); i = e; } else if ((t = (y = G.n < 0) ? u : r.call(n, G)) !== a) break; } catch (t) { i = e, c = 1, u = t; } finally { f = 1; } } return { value: t, done: y }; }; }(r, o, i), !0), u; } var a = {}; function Generator() {} function GeneratorFunction() {} function GeneratorFunctionPrototype() {} t = Object.getPrototypeOf; var c = [][n] ? t(t([][n]())) : (_regeneratorDefine2(t = {}, n, function () { return this; }), t), u = GeneratorFunctionPrototype.prototype = Generator.prototype = Object.create(c); function f(e) { return Object.setPrototypeOf ? Object.setPrototypeOf(e, GeneratorFunctionPrototype) : (e.__proto__ = GeneratorFunctionPrototype, _regeneratorDefine2(e, o, "GeneratorFunction")), e.prototype = Object.create(u), e; } return GeneratorFunction.prototype = GeneratorFunctionPrototype, _regeneratorDefine2(u, "constructor", GeneratorFunctionPrototype), _regeneratorDefine2(GeneratorFunctionPrototype, "constructor", GeneratorFunction), GeneratorFunction.displayName = "GeneratorFunction", _regeneratorDefine2(GeneratorFunctionPrototype, o, "GeneratorFunction"), _regeneratorDefine2(u), _regeneratorDefine2(u, o, "Generator"), _regeneratorDefine2(u, n, function () { return this; }), _regeneratorDefine2(u, "toString", function () { return "[object Generator]"; }), (_regenerator = function _regenerator() { return { w: i, m: f }; })(); }
+function _regeneratorDefine2(e, r, n, t) { var i = Object.defineProperty; try { i({}, "", {}); } catch (e) { i = 0; } _regeneratorDefine2 = function _regeneratorDefine(e, r, n, t) { if (r) i ? i(e, r, { value: n, enumerable: !t, configurable: !t, writable: !t }) : e[r] = n;else { var o = function o(r, n) { _regeneratorDefine2(e, r, function (e) { return this._invoke(r, n, e); }); }; o("next", 0), o("throw", 1), o("return", 2); } }, _regeneratorDefine2(e, r, n, t); }
+function asyncGeneratorStep(n, t, e, r, o, a, c) { try { var i = n[a](c), u = i.value; } catch (n) { return void e(n); } i.done ? t(u) : Promise.resolve(u).then(r, o); }
+function _asyncToGenerator(n) { return function () { var t = this, e = arguments; return new Promise(function (r, o) { var a = n.apply(t, e); function _next(n) { asyncGeneratorStep(a, r, o, _next, _throw, "next", n); } function _throw(n) { asyncGeneratorStep(a, r, o, _next, _throw, "throw", n); } _next(void 0); }); }; }
 
 
-var useBackupStore = (0,zustand__WEBPACK_IMPORTED_MODULE_0__.create)((0,zustand_middleware_immer__WEBPACK_IMPORTED_MODULE_1__.immer)(function (set, get) {
+
+var useBackupStore = (0,zustand__WEBPACK_IMPORTED_MODULE_1__.create)((0,zustand_middleware_immer__WEBPACK_IMPORTED_MODULE_2__.immer)(function (set, get) {
   return {
     // State
     backups: [],
@@ -30666,25 +30793,36 @@ var useBackupStore = (0,zustand__WEBPACK_IMPORTED_MODULE_0__.create)((0,zustand_
           name: name,
           types: types
         }
-      }, {
-        step: 2,
-        name: 'Generate Backup',
-        description: "\uD83E\uDE84\u2728 The vault opens! Initiating backup for your chosen treasures: ".concat(types.map(function (type) {
-          return "\xAB".concat(type, "\xBB");
-        }).join(', '), ". Our digital guardians are on watch\u2014your data is about to be wrapped in a cloak of safety and stardust. \uD83D\uDE80\uD83D\uDD12"),
-        action: 'generate_backup',
-        payload: {
-          types: types
-        }
-      },
-      // step 3 complete
-      {
-        step: 3,
+      }];
+      var typeMessages = {
+        database: "\uD83D\uDDC4\uFE0F Safeguarding your precious database records! \uD83D\uDCCA Our data guardians are carefully preserving every table and relationship. Your information is in good hands! \uD83D\uDD12\u2728",
+        plugin: "\uD83D\uDD0C Securing your powerful plugins! \uD83D\uDEE0\uFE0F Each extension is being carefully wrapped and preserved. Your site's functionality is our top priority! \uD83D\uDE80\uD83D\uDCAB",
+        theme: "\uD83C\uDFA8 Preserving your beautiful theme! \uD83C\uDFAD Every design element and customization is being carefully archived. Your site's look and feel is safe with us! \uD83C\uDFAA\u2728",
+        'folder-uploads': "\uD83D\uDCC1 Backing up your uploads folder! \uD83D\uDDBC\uFE0F Every image, document, and media file is being carefully preserved. Your content is our treasure! \uD83D\uDC8E\uD83C\uDF1F"
+      };
+
+      // for each types, add a step to the process
+      types.forEach(function (type) {
+        process.push({
+          step: process.length + 1,
+          name: "Generating ".concat(type, " backup"),
+          description: typeMessages[type],
+          action: "wp_backup_ajax_generate_backup_".concat(type),
+          payload: {
+            name: name,
+            type: type
+          }
+        });
+      });
+
+      // add done step
+      process.push({
+        step: process.length + 1,
         name: 'Done',
         description: '🎉 All done! Your backup is complete and safe. Time to celebrate! 🥳',
-        action: 'done',
+        action: 'wp_backup_ajax_generate_backup_done',
         payload: {}
-      }];
+      });
       set(function (state) {
         state.backupProcess = process;
       });
@@ -30698,6 +30836,34 @@ var useBackupStore = (0,zustand__WEBPACK_IMPORTED_MODULE_0__.create)((0,zustand_
       set(function (state) {
         state.inProgressStep = 1;
       });
+    },
+    fetchBackups_Fn: function fetchBackups_Fn() {
+      return _asyncToGenerator(/*#__PURE__*/_regenerator().m(function _callee() {
+        var response, _t;
+        return _regenerator().w(function (_context) {
+          while (1) switch (_context.n) {
+            case 0:
+              _context.p = 0;
+              _context.n = 1;
+              return (0,_lib__WEBPACK_IMPORTED_MODULE_0__.getBackups)();
+            case 1:
+              response = _context.v;
+              if (response.success == true) {
+                set(function (state) {
+                  state.backups = response.data;
+                });
+              }
+              _context.n = 3;
+              break;
+            case 2:
+              _context.p = 2;
+              _t = _context.v;
+              console.error('Error fetching backups:', _t);
+            case 3:
+              return _context.a(2);
+          }
+        }, _callee, null, [[0, 2]]);
+      }))();
     }
   };
 }));

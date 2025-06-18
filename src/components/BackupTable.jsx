@@ -1,10 +1,10 @@
 import React from 'react';
 import useBackupStore from '../util/store';
 import { getBackups } from '../util/lib';
-import BackupTableTools from './BackupTableTools';
+import BackupTableTools, { NewBackupButton } from './BackupTableTools';
 
 const BackupTable = () => {
-  const { backups, setBackups } = useBackupStore();
+  const { backups, setBackups, fetchBackups_Fn } = useBackupStore();
   const [isLoading, setIsLoading] = React.useState(true);
   const [filteredBackups, setFilteredBackups] = React.useState([]);
   
@@ -12,20 +12,16 @@ const BackupTable = () => {
   const [selectedBackups, setSelectedBackups] = React.useState([]);
 
   React.useEffect(() => {
-    const fetchBackups = async () => {
-      try {
-        const response = await getBackups();
-        setBackups(response.data);
-        setFilteredBackups(response.data);
-      } catch (error) {
-        console.error('Error fetching backups:', error);
-      } finally {
-        setIsLoading(false);
-      }
-    };
-
+    async function fetchBackups() {
+      await fetchBackups_Fn();
+      setIsLoading(false);
+    }
     fetchBackups();
-  }, [setBackups]);
+  }, [fetchBackups_Fn]);
+
+  React.useEffect(() => {
+    setFilteredBackups(backups);
+  }, [backups]);
 
   const handleFilterChange = (date) => {
     if (!date) {
@@ -57,8 +53,8 @@ const BackupTable = () => {
 
   if (!backups || backups.length === 0) {
     return (
-      <div className="tw-text-center tw-py-12">
-        <div className="tw-bg-gray-50 tw-rounded-lg tw-p-8">
+      <div className="tw-text-center">
+        <div className="tw-bg-gray-50 tw-p-8 tw-border tw-border-gray-200">
           <svg
             className="tw-mx-auto tw-h-12 tw-w-12 tw-text-gray-400"
             fill="none"
@@ -77,25 +73,7 @@ const BackupTable = () => {
             Get started by creating a new backup.
           </p>
           <div className="tw-mt-6">
-            <button
-              type="button"
-              className="tw-inline-flex tw-items-center tw-px-4 tw-py-2 tw-border tw-border-transparent tw-shadow-sm tw-text-sm tw-font-medium tw-rounded-md tw-text-white tw-bg-blue-600 hover:tw-bg-blue-700 focus:tw-outline-none focus:tw-ring-2 focus:tw-ring-offset-2 focus:tw-ring-blue-500"
-            >
-              <svg
-                className="tw--ml-1 tw-mr-2 tw-h-5 tw-w-5"
-                fill="none"
-                stroke="currentColor"
-                viewBox="0 0 24 24"
-              >
-                <path
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  strokeWidth={2}
-                  d="M12 6v6m0 0v6m0-6h6m-6 0H6"
-                />
-              </svg>
-              Create Backup
-            </button>
+            <NewBackupButton />
           </div>
         </div>
       </div>
@@ -258,9 +236,27 @@ const BackupTable = () => {
                   {backup.size}
                 </td>
                 <td className="tw-px-6 tw-py-4 tw-whitespace-nowrap">
-                  <span className="tw-px-2 tw-inline-flex tw-text-xs tw-leading-5 tw-font-semibold tw-rounded-full tw-bg-green-100 tw-text-green-800">
-                    {backup.status}
-                  </span>
+                  {backup.status === "pending" && (
+                    <span className="tw-px-2 tw-inline-flex tw-text-xs tw-leading-5 tw-font-semibold tw-rounded-full tw-bg-yellow-100 tw-text-yellow-800">
+                      Pending
+                    </span>
+                  )}
+                  {backup.status === "completed" && (
+                    <span className="tw-px-2 tw-inline-flex tw-text-xs tw-leading-5 tw-font-semibold tw-rounded-full tw-bg-green-100 tw-text-green-800">
+                      Completed
+                    </span>
+                  )}
+                  {backup.status === "fail" && (
+                    <span className="tw-px-2 tw-inline-flex tw-text-xs tw-leading-5 tw-font-semibold tw-rounded-full tw-bg-red-100 tw-text-red-800">
+                      Failed
+                    </span>
+                  )}
+                  {/* fallback for unknown status */}
+                  {["pending", "completed", "fail"].indexOf(backup.status) === -1 && (
+                    <span className="tw-px-2 tw-inline-flex tw-text-xs tw-leading-5 tw-font-semibold tw-rounded-full tw-bg-gray-100 tw-text-gray-800">
+                      {backup.status}
+                    </span>
+                  )}
                 </td>
                 <td className="tw-px-6 tw-py-4 tw-whitespace-nowrap tw-text-right tw-text-sm tw-font-medium">
                   <button className="tw-text-blue-600 hover:tw-text-blue-900 tw-mr-4" title="Download">

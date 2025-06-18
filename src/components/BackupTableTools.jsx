@@ -2,6 +2,50 @@ import React from 'react';
 import useBackupStore from '../util/store';
 import BackupConfigModal from './BackupConfigModal';
 
+export const NewBackupButton = () => {
+  const { buildBackupProcess } = useBackupStore();
+  const [isConfigModalOpen, setIsConfigModalOpen] = React.useState(false);
+
+  const handleCreateBackup = async () => {
+    // TODO: Implement create backup functionality
+    console.log('Create backup clicked');
+    setIsConfigModalOpen(true);
+  };
+
+  const handleSaveBackup = async (config) => {
+    console.log('Save backup:', config);
+    buildBackupProcess(config);
+  };
+
+  return <>
+    <button
+      onClick={handleCreateBackup}
+      className="tw-inline-flex tw-items-center tw-px-4 tw-py-2 tw-border tw-border-transparent tw-shadow-sm tw-text-sm tw-font-medium tw-rounded-md tw-text-white tw-bg-blue-600 hover:tw-bg-blue-700 focus:tw-outline-none focus:tw-ring-2 focus:tw-ring-offset-2 focus:tw-ring-blue-500"
+    >
+      <svg
+        className="tw--ml-1 tw-mr-2 tw-h-5 tw-w-5"
+        fill="none"
+        stroke="currentColor"
+        viewBox="0 0 24 24"
+      >
+        <path
+          strokeLinecap="round"
+          strokeLinejoin="round"
+          strokeWidth={2}
+          d="M12 6v6m0 0v6m0-6h6m-6 0H6"
+        />
+      </svg>
+      Create Backup
+    </button>
+
+    <BackupConfigModal 
+      isOpen={isConfigModalOpen} 
+      onClose={() => setIsConfigModalOpen(false)}
+      onSave={handleSaveBackup}
+    />
+  </>;
+};
+
 const BackupTableTools = ({ onFilterChange, selectedBackups, onDeleteBackups }) => {
   const { buildBackupProcess } = useBackupStore();
   const [dateFilter, setDateFilter] = React.useState('');

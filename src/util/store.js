@@ -1,5 +1,6 @@
 import { create } from 'zustand';
 import { immer } from 'zustand/middleware/immer';
+import { getBackups } from './lib';
 
 const useBackupStore = create(
   immer((set, get) => ({
@@ -43,25 +44,39 @@ const useBackupStore = create(
             name,
             types,
           },
-        },
-        {
-          step: 2,
-          name: 'Generate Backup',
-          description: `🪄✨ The vault opens! Initiating backup for your chosen treasures: ${types.map(type => `«${type}»`).join(', ')}. Our digital guardians are on watch—your data is about to be wrapped in a cloak of safety and stardust. 🚀🔒`,
-          action: 'generate_backup',
-          payload: {
-            types,
-          },
-        },
-        // step 3 complete
-        {
-          step: 3,
-          name: 'Done',
-          description: '🎉 All done! Your backup is complete and safe. Time to celebrate! 🥳',
-          action: 'done',
-          payload: {},
-        },
+        }
       ];
+      
+      const typeMessages = {
+        database: `🗄️ Safeguarding your precious database records! 📊 Our data guardians are carefully preserving every table and relationship. Your information is in good hands! 🔒✨`,
+        plugin: `🔌 Securing your powerful plugins! 🛠️ Each extension is being carefully wrapped and preserved. Your site's functionality is our top priority! 🚀💫`,
+        theme: `🎨 Preserving your beautiful theme! 🎭 Every design element and customization is being carefully archived. Your site's look and feel is safe with us! 🎪✨`,
+        'folder-uploads': `📁 Backing up your uploads folder! 🖼️ Every image, document, and media file is being carefully preserved. Your content is our treasure! 💎🌟`
+      };
+
+      // for each types, add a step to the process
+      types.forEach((type) => {
+        process.push({
+          step: process.length + 1,
+          name: `Generating ${type} backup`,
+          description: typeMessages[type],
+          action: `wp_backup_ajax_generate_backup_${type}`,
+          payload: {
+            name,
+            type,
+          },
+        });
+      });
+
+      // add done step
+      process.push({
+        step: process.length + 1,
+        name: 'Done',
+        description: '🎉 All done! Your backup is complete and safe. Time to celebrate! 🥳',
+        action: 'wp_backup_ajax_generate_backup_done',
+        payload: {},
+      });
+
       set((state) => {
         state.backupProcess = process;
       });
@@ -77,6 +92,18 @@ const useBackupStore = create(
       });
     },
     
+    async fetchBackups_Fn() {
+      try {
+        const response = await getBackups();
+        if (response.success == true) {
+          set((state) => {
+            state.backups = response.data;
+          });
+        }
+      } catch (error) {
+        console.error('Error fetching backups:', error);
+      }
+    }
   }))
 );
 

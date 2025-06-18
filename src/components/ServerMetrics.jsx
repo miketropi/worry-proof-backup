@@ -117,7 +117,7 @@ const ServerMetrics = ({ metrics }) => {
         {metricsConfig.map(({ key, label, format, icon }) => (
           <li
             key={key}
-            className="tw-flex tw-flex-col sm:tw-flex-row sm:tw-items-center sm:tw-justify-between tw-px-2 tw-py-2 tw-rounded hover:tw-bg-gray-50 tw-transition"
+            className="tw-flex tw-flex-col sm:tw-flex-row sm:tw-items-center sm:tw-justify-between tw-py-2 tw-rounded hover:tw-bg-gray-50 tw-transition"
           >
             <div className="tw-flex tw-items-center tw-gap-2 tw-mb-1 sm:tw-mb-0">
               <span className="tw-w-4 tw-h-4 tw-flex tw-items-center tw-justify-center">{icon}</span>

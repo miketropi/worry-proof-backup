@@ -54,7 +54,7 @@ function wp_backup_register_admin_page() {
     'manage_options', // Capability required
     'wp-backup', // Menu slug
     'wp_backup_admin_page', // Function to display the page
-    'dashicons-archive', // Icon
+    'dashicons-backup', // Icon
     30 // Position
   );
 }
@@ -71,41 +71,69 @@ function wp_backup_admin_page() {
 }
 
 function wp_backup_get_backups() {
-  $backups = array(
-    array(
-      'id' => 'backup_20240315_123456',
-      'name' => 'Full Site Backup',
-      'status' => 'completed',
-      'date' => '2024-03-15 12:34:56',
-      'size' => '1.2 MB',
-      'type' => array('database', 'plugin', 'theme', 'folder-uploads')
-    ),
-    array(
-      'id' => 'backup_20240315_123457',
-      'name' => 'Content Backup',
-      'status' => 'completed',
-      'date' => '2024-03-15 12:34:57',
-      'size' => '0.8 MB',
-      'type' => array('database', 'folder-uploads')
-    ),
-    array(
-      'id' => 'backup_20240315_123458',
-      'name' => 'Core Backup',
-      'status' => 'completed',
-      'date' => '2024-03-15 12:34:58',
-      'size' => '1.5 MB',
-      'type' => array('plugin', 'theme')
-    ),
-    array(
-      'id' => 'backup_20240315_123459',
-      'name' => 'Database Only Backup',
-      'status' => 'completed',
-      'date' => '2024-03-15 12:34:59',
-      'size' => '3.7 MB',
-      'type' => array('database')
-    )
-  );
 
+  // scan folder: wp-content/uploads/wp-backup/
+  $upload_dir = wp_upload_dir();
+  $backup_folder = $upload_dir['basedir'] . '/wp-backup/';
+
+  // check if $backup_folder is exists
+  if (!file_exists($backup_folder)) {
+    return array();
+  }
+
+  // get all folders in $backup_folder
+  $folders = glob($backup_folder . '/*', GLOB_ONLYDIR);
+
+  // check if $folders is not empty
+  if (empty($folders)) {
+    return array();
+  }
+
+  $backups = array();
+
+  // loop through $folders
+  foreach ($folders as $folder) {
+    // get config file
+    $config_file = $folder . '/config.json';
+
+    // check if $config_file is exists
+    if (!file_exists($config_file)) {
+      continue;
+    }
+
+    // get config file content
+    $config_file_content = file_get_contents($config_file);
+
+    // check if $config_file_content is not empty
+    if (empty($config_file_content)) {
+      continue;
+    }
+
+    // decode config file content
+    $config_file_content = json_decode($config_file_content, true);
+
+    // check if $config_file_content is not empty
+    if (empty($config_file_content)) {
+      continue;
+    }
+
+    $config_file_content['type'] = explode(',', $config_file_content['backup_types']);
+    $backups[] = [
+      'id' => $config_file_content['backup_id'],
+      'name' => $config_file_content['backup_name'],
+      'status' => $config_file_content['backup_status'],
+      'date' => date('Y-m-d H:i:s', strtotime($config_file_content['backup_date'])),
+      'size' => $config_file_content['backup_size'],
+      'type' => $config_file_content['type'],
+    ];
+  }
+
+  // sort $backups by date
+  usort($backups, function($a, $b) {
+    return strtotime($b['date']) - strtotime($a['date']);
+  });
+
+  // return $backups
   return $backups;
 }
 
@@ -199,54 +227,95 @@ function wp_backup_return_bytes($val) {
 function wp_backup_database($exclude_tables = array()) {
   global $wpdb;
 
-  // Get all tables in the database
   $all_tables = $wpdb->get_col('SHOW TABLES');
+  if ($wpdb->last_error) {
+    return new WP_Error('db_error', 'Oops! 😅 Database tables are playing hide and seek: ' . $wpdb->last_error . '. Double-check your database connection and give it another shot. If this keeps happening, reach out to your admin - we\'ve got your back! 🛡️💫');
+  }
+
   if (!$all_tables) {
-    return false;
+    return new WP_Error('no_tables', 'Oops! 😱 Database is looking a bit empty today. No tables found - might want to check your database connection or give it a little pep talk! If this keeps happening, reach out to your admin - we\'ve got your back! 🚀💫');
   }
 
   $prefix = $wpdb->prefix;
   $exclude_full_tables = array();
   foreach ($exclude_tables as $table) {
-    // Support both with and without prefix
-    if (strpos($table, $prefix) === 0) {
-      $exclude_full_tables[] = $table;
-    } else {
-      $exclude_full_tables[] = $prefix . $table;
-    }
+    $exclude_full_tables[] = (strpos($table, $prefix) === 0) ? $table : $prefix . $table;
   }
 
   $tables_to_backup = array_diff($all_tables, $exclude_full_tables);
-
   $sql_dump = '';
+
   foreach ($tables_to_backup as $table) {
-    // Get CREATE TABLE statement
-    $create_table = $wpdb->get_row("SHOW CREATE TABLE `$table`", ARRAY_N);
+    $table_escaped = esc_sql($table);
+
+    // Dump CREATE TABLE
+    $create_table = $wpdb->get_row("SHOW CREATE TABLE `$table_escaped`", ARRAY_N);
     if ($create_table && isset($create_table[1])) {
       $sql_dump .= "\n--\n-- Table structure for table `$table`\n--\n\n";
       $sql_dump .= "DROP TABLE IF EXISTS `$table`;\n";
       $sql_dump .= $create_table[1] . ";\n";
     }
 
-    // Get table data
-    $rows = $wpdb->get_results("SELECT * FROM `$table`", ARRAY_A);
-    if ($rows && count($rows) > 0) {
-      $sql_dump .= "\n--\n-- Dumping data for table `$table`\n--\n\n";
-      foreach ($rows as $row) {
-        $values = array();
-        foreach ($row as $value) {
-          if ($value === null) {
-            $values[] = 'NULL';
-          } else {
-            $values[] = "'" . esc_sql(stripslashes($value)) . "'";
-          }
+    // Dump data in chunks
+    $limit = 1000;
+    $offset = 0;
+
+    do {
+      $rows = $wpdb->get_results(
+        $wpdb->prepare("SELECT * FROM `$table_escaped` LIMIT %d OFFSET %d", $limit, $offset),
+        ARRAY_A
+      );
+
+      if ($rows && count($rows) > 0) {
+        if ($offset === 0) {
+          $sql_dump .= "\n--\n-- Dumping data for table `$table`\n--\n\n";
         }
-        $sql_dump .= "INSERT INTO `$table` VALUES (" . implode(', ', $values) . ");\n";
+
+        foreach ($rows as $row) {
+          $values = array();
+          foreach ($row as $value) {
+            if ($value === null) {
+              $values[] = 'NULL';
+            } else {
+              $escaped_value = addslashes($value);
+              $values[] = "'$escaped_value'";
+            }
+          }
+          $sql_dump .= "INSERT INTO `$table` VALUES (" . implode(', ', $values) . ");\n";
+        }
+
+        $offset += $limit;
       }
-    }
+    } while (count($rows) > 0);
   }
 
   return $sql_dump;
+}
+
+/**
+ * Save data to file
+ * 
+ * @param string $file_path
+ * @param string $data
+ * @return bool
+ */
+function wp_backup_save_data_to_file($file_path, $data) {
+  // Ensure the directory exists
+  $directory = dirname($file_path);
+  if (!file_exists($directory)) {
+    if (!mkdir($directory, 0755, true)) {
+      return new WP_Error('mkdir_failed', 'Could not create directory for file: ' . $directory);
+    }
+  }
+
+  // Write data to file
+  $result = file_put_contents($file_path, $data);
+
+  if ($result === false) {
+    return new WP_Error('write_failed', 'Could not write data to file: ' . $file_path);
+  }
+
+  return true;
 }
 
 /**
@@ -264,8 +333,10 @@ function wp_backup_database($exclude_tables = array()) {
  * - backup_size
  */
 function wp_backup_generate_config_file($args = array()) {
+  global $wpdb;
+  
   $defaults = array(
-    'backup_id' => wp_generate_password(12, false),
+    'backup_id' => wp_generate_uuid4(),
     'backup_name' => '',
     'backup_types' => '',
     'backup_date' => date('c'),
@@ -274,20 +345,32 @@ function wp_backup_generate_config_file($args = array()) {
     'backup_status' => 'pending',
     'backup_size' => '???',
     'site_url' => home_url(),
+    'table_prefix' => $wpdb->prefix,
   );
   $args = wp_parse_args($args, $defaults);
 
+  // Sanitize
+  $args['backup_name'] = sanitize_text_field($args['backup_name']);
+  $args['backup_description'] = sanitize_textarea_field($args['backup_description']);
+  $args['site_url'] = esc_url_raw($args['site_url']);
+  $args['backup_author_email'] = sanitize_email($args['backup_author_email']);
 
   $upload_dir = wp_upload_dir();
   $name_folder = 'backup_' . $args['backup_id'] . '_' . date('Y-m-d_H-i-s');
   $backup_folder = $upload_dir['basedir'] . '/wp-backup/' . $name_folder;
+
   if (!file_exists($backup_folder)) {
-    mkdir($backup_folder, 0755, true);
+    if (!mkdir($backup_folder, 0755, true)) {
+      return new WP_Error('mkdir_failed', 'Oops! 🤦‍♂️ Could not create backup folder. Please check folder permissions or try again. If the problem persists, contact your administrator. We\'re rooting for you! 💪✨');
+    }
   }
 
   $config_file = $backup_folder . '/config.json';
+  $result = file_put_contents($config_file, json_encode($args, JSON_PRETTY_PRINT));
 
-  file_put_contents($config_file, json_encode($args));
+  if ($result === false) {
+    return new WP_Error('write_failed', 'Oops! 🤦‍♂️ Could not write config file. Please check folder permissions or try again. If the problem persists, contact your administrator. We\'re rooting for you! 💪✨');
+  }
 
   return [
     'backup_folder' => $backup_folder,
@@ -295,6 +378,114 @@ function wp_backup_generate_config_file($args = array()) {
     'name_folder' => $name_folder,
   ];
 }
+
+/**
+ * Update any field(s) in the config file.
+ * 
+ * @param string $backup_folder
+ * @param array $fields Associative array of fields to update, e.g. ['backup_status' => 'completed']
+ * @return bool|WP_Error
+ */
+function wp_backup_update_config_file($backup_folder, $fields) {
+  $config_file = $backup_folder . '/config.json';
+
+  // Check if config file exists
+  if (!file_exists($config_file)) {
+    return new WP_Error('config_file_not_found', 'Config file not found');
+  }
+
+  // Get config file content
+  $config_file_content = file_get_contents($config_file);
+
+  // Check if config file content is not empty
+  if (empty($config_file_content)) {
+    return new WP_Error('config_file_empty', 'Config file is empty');
+  }
+
+  // Decode config file content
+  $config_data = json_decode($config_file_content, true);
+
+  if (!is_array($config_data)) {
+    return new WP_Error('config_file_invalid', 'Config file is not valid JSON');
+  }
+
+  // Update fields
+  foreach ($fields as $key => $value) {
+    $config_data[$key] = $value;
+  }
+
+  // Save config file
+  $result = file_put_contents($config_file, json_encode($config_data, JSON_PRETTY_PRINT));
+
+  // Check if $result is false
+  if ($result === false) {
+    return new WP_Error('write_failed', 'Could not write config file: ' . $config_file);
+  }
+
+  return true;
+}
+
+/**
+ * Calculate the size of a folder (bytes)
+ *
+ * @param string $folder Absolute path to folder
+ * @return int Folder size (bytes)
+ */
+function wp_backup_calc_folder_size($folder) {
+  $size = 0;
+
+  if (!is_dir($folder)) {
+      return 0;
+  }
+
+  $files = scandir($folder);
+
+  if (!$files) {
+      return 0;
+  }
+
+  foreach ($files as $file) {
+      if ($file === '.' || $file === '..') {
+          continue;
+      }
+
+      $file_path = $folder . DIRECTORY_SEPARATOR . $file;
+
+      // If is file
+      if (is_file($file_path)) {
+          $file_size = filesize($file_path);
+          if ($file_size !== false) {
+              $size += $file_size;
+          }
+      }
+      // If is folder => recursive
+      elseif (is_dir($file_path)) {
+          $size += wp_backup_calc_folder_size($file_path);
+      }
+  }
+
+  return $size;
+}
+
+/**
+ * Format bytes to MB, GB...
+ *
+ * @param int $bytes
+ * @param int $precision
+ * @return string
+ */
+function wp_backup_format_bytes($bytes, $precision = 2) {
+  $units = array('B', 'KB', 'MB', 'GB', 'TB');
+
+  $bytes = max($bytes, 0);
+  $pow = floor(($bytes ? log($bytes) : 0) / log(1024));
+  $pow = min($pow, count($units) - 1);
+
+  $bytes /= pow(1024, $pow);
+
+  return round($bytes, $precision) . ' ' . $units[$pow];
+}
+
 
 function __test() {
   # check GET parameter not test = true return

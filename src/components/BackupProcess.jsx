@@ -8,25 +8,49 @@ import { doBackupProcess } from '../util/lib';
  * Uses Tailwind CSS with 'tw-' prefix for all classes
  */
 const BackupProcess = () => {
-  const { backupProcess, inProgress, inProgressStep, setInProgressStep } = useBackupStore();
+  const { backupProcess, inProgress, inProgressStep, setInProgressStep, fetchBackups_Fn } = useBackupStore();
+  const [responseOldStep, setResponseOldStep] = useState({});
+  const [error, setError] = useState(null);
 
   const backupProcessHandler = async (process) => {
-    console.log(process);
+    // console.log(process);
     const response = await doBackupProcess(process);
-    console.log(response);
-    
-    // setTimeout(() => {
-    //   console.log(process);
-    //   setInProgressStep(process.step + 1);
-    // }, 1000);
 
+    // check if response is error
+    if (response.success != true) {
+      // console.error(response);
+      setError(response.data);
+      return;
+    }
 
+    if (response.data.backup_process_status == 'done') {
+      setInProgressStep(backupProcess.length + 1);
+      await fetchBackups_Fn();
+      return;
+    }
+
+    setResponseOldStep({ ...responseOldStep, ...response.data });
+    // console.log(response);
+    setInProgressStep(process.step + 1);
   };
 
   useEffect(() => {
     if (inProgress == true) {
       // get process by step
-      const process = backupProcess.find((step) => step.step === inProgressStep);
+      let process = [...backupProcess].find((step) => step.step === inProgressStep);
+
+      // check if process is exists
+      if (!process) {
+        // passed all steps
+
+        return;
+      }
+
+      process = {
+        ...process,
+        payload: { ...process.payload, ...responseOldStep }
+      };
+      // console.log(process, responseOldStep);
       backupProcessHandler(process);
 
       // console.log(inProgress, inProgressStep);
@@ -75,7 +99,17 @@ const BackupProcess = () => {
                   {step.name}
                 </h3>
                 <p className="tw-mt-1 tw-text-sm tw-text-gray-500">{step.description}</p>
-                {isCurrent && (
+                {error && inProgressStep === step.step && (
+                  <div className="tw-mt-3 tw-p-3 tw-bg-red-50 tw-border tw-border-red-200 tw-rounded-md">
+                    <div className="tw-flex tw-items-start tw-gap-2">
+                      <svg className="tw-w-4 tw-h-4 tw-text-red-500 tw-mt-0.5 tw-flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8v4m0 4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+                      </svg>
+                      <p className="tw-text-sm tw-text-red-700 tw-leading-relaxed">{error}</p>
+                    </div>
+                  </div>
+                )}
+                {isCurrent && !error && (
                   <div className="tw-mt-2 tw-flex tw-items-center tw-gap-2">
                     <svg className="tw-w-4 tw-h-4 tw-text-blue-400 tw-animate-spin" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                       <circle className="tw-opacity-25" cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="4"></circle>
