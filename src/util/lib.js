@@ -36,3 +36,43 @@ export const doBackupProcess = async (process) => {
 
   return response;
 }
+
+/**
+ * Returns a human-friendly relative time string for a given date, using the provided server current datetime.
+ * Examples: "just now", "1m ago", "5h ago", "yesterday", "3d ago", "2w ago", "Mar 5", "Mar 5, 2023"
+ * @param {string|Date|number} inputDatetime - The date to format.
+ * @param {string|Date|number} serverCurrentDatetime - The current datetime from the server.
+ * @returns {string}
+ */
+export function friendlyDateTime(inputDatetime, serverCurrentDatetime) {
+  const now = serverCurrentDatetime instanceof Date
+    ? serverCurrentDatetime
+    : new Date(serverCurrentDatetime);
+  const date = inputDatetime instanceof Date
+    ? inputDatetime
+    : new Date(inputDatetime);
+
+  if (isNaN(date.getTime()) || isNaN(now.getTime())) return "";
+
+  const diffMs = now - date;
+  const diffSec = Math.floor(diffMs / 1000);
+  const diffMin = Math.floor(diffSec / 60);
+  const diffHr = Math.floor(diffMin / 60);
+  const diffDay = Math.floor(diffHr / 24);
+  const diffWk = Math.floor(diffDay / 7);
+
+  if (diffSec < 60) return "just now";
+  if (diffMin < 60) return `${diffMin}m ago`;
+  if (diffHr < 24) return `${diffHr}h ago`;
+  if (diffDay === 1) return "yesterday";
+  if (diffDay < 7) return `${diffDay}d ago`;
+  if (diffWk < 4) return `${diffWk}w ago`;
+
+  // If this year, show "Mar 5"
+  const options = { month: "short", day: "numeric" };
+  if (date.getFullYear() === now.getFullYear()) {
+    return date.toLocaleDateString(undefined, options);
+  }
+  // Else, show "Mar 5, 2023"
+  return date.toLocaleDateString(undefined, { ...options, year: "numeric" });
+}

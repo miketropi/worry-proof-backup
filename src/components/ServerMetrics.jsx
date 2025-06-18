@@ -102,6 +102,28 @@ const metricsConfig = [
       <svg className="tw-w-5 tw-h-5 tw-text-fuchsia-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><ellipse cx="12" cy="12" rx="10" ry="6" /><text x="12" y="16" textAnchor="middle" fontSize="8" fill="currentColor">PHP</text></svg>
     ),
   },
+  {
+    key: "ZipArchive",
+    label: "ZipArchive",
+    format: (v) => (v ? "On" : "Off"),
+    icon: (
+      <svg className="tw-w-5 tw-h-5 tw-text-gray-500" fill="none" viewBox="0 0 24 24">
+        <rect x="5" y="3" width="14" height="18" rx="2" stroke="currentColor" strokeWidth="2" />
+        <rect x="9" y="7" width="6" height="2" rx="1" fill="currentColor" />
+        <rect x="9" y="11" width="6" height="2" rx="1" fill="currentColor" />
+        <rect x="9" y="15" width="6" height="2" rx="1" fill="currentColor" />
+        <path d="M7 3v18" stroke="currentColor" strokeWidth="2" />
+      </svg>
+    ),
+  },
+  {
+    key: "WP_Debug",
+    label: "WP Debug",
+    format: (v) => (v ? "On" : "Off"),
+    icon: (
+      <svg className="tw-w-5 tw-h-5 tw-text-gray-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M12 11c0-1.104-.896-2-2-2s-2 .896-2 2 .896 2 2 2 2-.896 2-2zm0 0c0-1.104.896-2 2-2s2 .896 2 2-.896 2-2 2-2-.896-2-2z" /></svg>
+    ),
+  },
 ];
 
 const ServerMetrics = ({ metrics }) => {

@@ -48,14 +48,12 @@ function wp_backup_load_template($template_name, $args = array(), $echo = true) 
 
  
 function wp_backup_register_admin_page() {
-  add_menu_page(
+  add_management_page(
     __('WP Backup', 'wp-backup'), // Page title
-    __('WP Backup', 'wp-backup'), // Menu title
+    __('Backup', 'wp-backup'), // Menu title
     'manage_options', // Capability required
     'wp-backup', // Menu slug
-    'wp_backup_admin_page', // Function to display the page
-    'dashicons-backup', // Icon
-    30 // Position
+    'wp_backup_admin_page' // Function to display the page
   );
 }
 
@@ -151,6 +149,9 @@ function wp_backup_get_backups() {
  * - safe_mode: Whether PHP safe mode is enabled (legacy, for old PHP)
  * - server_software: Server software string
  * - php_version: PHP version string
+ * - wp_version: WordPress version string
+ * - ZipArchive: Whether ZipArchive is available
+ * - WP Debug: Whether WP debug is enabled
  *
  * @return array
  */
@@ -181,6 +182,9 @@ function wp_backup_get_server_metrics() {
   $server_software = isset($_SERVER['SERVER_SOFTWARE']) ? $_SERVER['SERVER_SOFTWARE'] : '';
   $php_version = phpversion();
 
+  // WordPress version
+  $wp_version = get_bloginfo('version');
+
   return array(
     'disk_free_space'    => $disk_free_space,
     'disk_total_space'   => $disk_total_space,
@@ -192,6 +196,9 @@ function wp_backup_get_server_metrics() {
     'safe_mode'          => $safe_mode,
     'server_software'    => $server_software,
     'php_version'        => $php_version,
+    'wp_version'         => $wp_version,
+    'ZipArchive'         => class_exists('ZipArchive'),
+    'WP_Debug'            => defined('WP_DEBUG') && WP_DEBUG,
   );
 }
 

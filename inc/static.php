@@ -23,6 +23,10 @@ function wp_backup_wp_enqueue_scripts() {
     'ajax_url' => admin_url( 'admin-ajax.php' ),
     'language' => array(),
     'server_metrics' => wp_backup_get_server_metrics(),
+    
+    # current datetime of server
+    'current_datetime' => date('Y-m-d H:i:s'),
+    
     'nonce' => array(
       'wp_backup_nonce' => wp_create_nonce( 'wp_backup_nonce_' . $current_user_id ),
     ),

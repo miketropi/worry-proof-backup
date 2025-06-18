@@ -1,6 +1,7 @@
 import React from 'react';
 import useBackupStore from '../util/store';
 import BackupTableTools, { NewBackupButton } from './BackupTableTools';
+import { friendlyDateTime } from '../util/lib';
 
 const BackupTable = () => {
   const { backups, setBackups, fetchBackups_Fn } = useBackupStore();
@@ -136,7 +137,7 @@ const BackupTable = () => {
                 ))}
               </div>
               <div className="tw-flex tw-justify-between tw-text-sm tw-text-gray-500">
-                <span>{backup.date}</span>
+                <span>{ friendlyDateTime(backup.date, wp_backup_php_data.current_datetime) }</span>
                 <span>{backup.size}</span>
               </div>
               <div className="tw-flex tw-items-center tw-justify-between">
@@ -190,7 +191,7 @@ const BackupTable = () => {
                   <div className="tw-text-sm tw-font-medium tw-text-gray-900">
                     {backup.name} 
                     <span className="tw-ml-2 tw-inline-block tw-px-2 tw-py-0.5 tw-text-xs tw-rounded tw-bg-gray-200 tw-text-gray-700 tw-align-middle">
-                      {backup.date}
+                      { friendlyDateTime(backup.date, wp_backup_php_data.current_datetime) }
                     </span>
                   </div>
                   <div className="tw-flex tw-flex-wrap tw-gap-1 tw-mt-2">
