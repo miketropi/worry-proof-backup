@@ -4,6 +4,8 @@ import BackupTableTools, { NewBackupButton } from './BackupTableTools';
 import { friendlyDateTime, deleteBackupFolder } from '../util/lib';
 import { useConfirm } from './Confirm';
 import { useToast } from './Toast';
+import DropdownActions from './DropdownActions';
+import { FileDown, Trash2, RotateCcw } from 'lucide-react';
 
 const BackupTable = () => {
   const { backups, setBackups, fetchBackups_Fn } = useBackupStore();
@@ -256,7 +258,7 @@ const BackupTable = () => {
                           style = "tw-bg-yellow-100 tw-text-yellow-800 tw-border tw-border-yellow-200";
                           label = "Themes";
                           break;
-                        case "folder-uploads":
+                        case "uploads":
                           style = "tw-bg-green-100 tw-text-green-800 tw-border tw-border-green-200";
                           label = "Uploads";
                           break;
@@ -319,11 +321,33 @@ const BackupTable = () => {
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 16v2a2 2 0 002 2h12a2 2 0 002-2v-2M7 10l5 5 5-5M12 15V3" />
                     </svg>
                   </button> */}
-                  <button className="tw-text-red-600 hover:tw-text-red-900" title="Delete" onClick={() => handleDeleteBackup(backup.id)}>
+                  {/* <button className="tw-text-red-600 hover:tw-text-red-900" title="Delete" onClick={() => handleDeleteBackup(backup.id)}>
                     <svg xmlns="http://www.w3.org/2000/svg" className="tw-h-5 tw-w-5 tw-inline" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
                     </svg>
-                  </button>
+                  </button> */}
+                  <DropdownActions 
+                    items={[
+                      // restore backup
+                      {
+                        label: 'Restore',
+                        icon: <RotateCcw />,
+                        onClick: () => handleRestoreBackup(backup.id),
+                      },
+
+                      {
+                        label: 'Download',
+                        icon: <FileDown />,
+                        action: () => handleDownloadBackup(backup.id),
+                      },
+                      {
+                        label: 'Delete',
+                        icon: <Trash2 />,
+                        danger: true,
+                        onClick: () => handleDeleteBackup(backup.id),
+                      }
+                  ]}
+                  />
                 </td>
               </tr>
             ))}

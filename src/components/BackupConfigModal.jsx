@@ -18,7 +18,7 @@ const BACKUP_TYPES = [
   { id: 'database', label: 'Database' },
   { id: 'plugin', label: 'Plugins' },
   { id: 'theme', label: 'Themes' },
-  { id: 'folder-uploads', label: 'Uploads Folder' },
+  { id: 'uploads', label: 'Uploads Folder' },
 ];
 
 const BackupConfigModal = ({ isOpen, onClose, onSave }) => {
@@ -56,6 +56,26 @@ const BackupConfigModal = ({ isOpen, onClose, onSave }) => {
       title="Backup Configuration"
       size="md"
     >
+      <div className="tw-mb-6 tw-p-4 tw-bg-gradient-to-r tw-from-purple-50 tw-to-pink-50 tw-border tw-border-purple-200 tw-rounded-md tw-shadow-sm">
+        <div className="tw-flex tw-items-start tw-gap-3">
+          <div className="tw-flex-shrink-0 tw-p-2 tw-bg-purple-100 tw-rounded-full">
+            <span className="tw-text-lg">⚡</span>
+          </div>
+          <div className="tw-flex-1">
+            <h3 className="tw-text-sm tw-font-bold tw-text-purple-900 tw-mb-1">
+              Let's Set Up Your Backup! 🚀
+            </h3>
+            <div className="tw-text-sm tw-text-purple-700 tw-leading-relaxed">
+              <p>
+                Give your backup a name and choose what to include! 
+                You can select from database, plugins, themes, and uploads folder. 
+                Pick any combination you need! ✨
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+
       <form onSubmit={handleSubmit} className="tw-space-y-8">
         {/* Backup Name Input */}
         <div className="tw-space-y-2">

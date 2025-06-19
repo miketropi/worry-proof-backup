@@ -1459,6 +1459,42 @@ const CircleX = (0,_createLucideIcon_js__WEBPACK_IMPORTED_MODULE_0__["default"])
 
 /***/ }),
 
+/***/ "./node_modules/lucide-react/dist/esm/icons/file-down.js":
+/*!***************************************************************!*\
+  !*** ./node_modules/lucide-react/dist/esm/icons/file-down.js ***!
+  \***************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   __iconNode: () => (/* binding */ __iconNode),
+/* harmony export */   "default": () => (/* binding */ FileDown)
+/* harmony export */ });
+/* harmony import */ var _createLucideIcon_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../createLucideIcon.js */ "./node_modules/lucide-react/dist/esm/createLucideIcon.js");
+/**
+ * @license lucide-react v0.518.0 - ISC
+ *
+ * This source code is licensed under the ISC license.
+ * See the LICENSE file in the root directory of this source tree.
+ */
+
+
+
+const __iconNode = [
+  ["path", { d: "M15 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7Z", key: "1rqfz7" }],
+  ["path", { d: "M14 2v4a2 2 0 0 0 2 2h4", key: "tnqrlb" }],
+  ["path", { d: "M12 18v-6", key: "17g6i2" }],
+  ["path", { d: "m9 15 3 3 3-3", key: "1npd3o" }]
+];
+const FileDown = (0,_createLucideIcon_js__WEBPACK_IMPORTED_MODULE_0__["default"])("file-down", __iconNode);
+
+
+//# sourceMappingURL=file-down.js.map
+
+
+/***/ }),
+
 /***/ "./node_modules/lucide-react/dist/esm/icons/info.js":
 /*!**********************************************************!*\
   !*** ./node_modules/lucide-react/dist/esm/icons/info.js ***!
@@ -1490,6 +1526,77 @@ const Info = (0,_createLucideIcon_js__WEBPACK_IMPORTED_MODULE_0__["default"])("i
 
 
 //# sourceMappingURL=info.js.map
+
+
+/***/ }),
+
+/***/ "./node_modules/lucide-react/dist/esm/icons/rotate-ccw.js":
+/*!****************************************************************!*\
+  !*** ./node_modules/lucide-react/dist/esm/icons/rotate-ccw.js ***!
+  \****************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   __iconNode: () => (/* binding */ __iconNode),
+/* harmony export */   "default": () => (/* binding */ RotateCcw)
+/* harmony export */ });
+/* harmony import */ var _createLucideIcon_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../createLucideIcon.js */ "./node_modules/lucide-react/dist/esm/createLucideIcon.js");
+/**
+ * @license lucide-react v0.518.0 - ISC
+ *
+ * This source code is licensed under the ISC license.
+ * See the LICENSE file in the root directory of this source tree.
+ */
+
+
+
+const __iconNode = [
+  ["path", { d: "M3 12a9 9 0 1 0 9-9 9.75 9.75 0 0 0-6.74 2.74L3 8", key: "1357e3" }],
+  ["path", { d: "M3 3v5h5", key: "1xhq8a" }]
+];
+const RotateCcw = (0,_createLucideIcon_js__WEBPACK_IMPORTED_MODULE_0__["default"])("rotate-ccw", __iconNode);
+
+
+//# sourceMappingURL=rotate-ccw.js.map
+
+
+/***/ }),
+
+/***/ "./node_modules/lucide-react/dist/esm/icons/trash-2.js":
+/*!*************************************************************!*\
+  !*** ./node_modules/lucide-react/dist/esm/icons/trash-2.js ***!
+  \*************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   __iconNode: () => (/* binding */ __iconNode),
+/* harmony export */   "default": () => (/* binding */ Trash2)
+/* harmony export */ });
+/* harmony import */ var _createLucideIcon_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../createLucideIcon.js */ "./node_modules/lucide-react/dist/esm/createLucideIcon.js");
+/**
+ * @license lucide-react v0.518.0 - ISC
+ *
+ * This source code is licensed under the ISC license.
+ * See the LICENSE file in the root directory of this source tree.
+ */
+
+
+
+const __iconNode = [
+  ["path", { d: "M3 6h18", key: "d0wm0j" }],
+  ["path", { d: "M19 6v14c0 1-1 2-2 2H7c-1 0-2-1-2-2V6", key: "4alrt4" }],
+  ["path", { d: "M8 6V4c0-1 1-2 2-2h4c1 0 2 1 2 2v2", key: "v07s0e" }],
+  ["line", { x1: "10", x2: "10", y1: "11", y2: "17", key: "1uufr5" }],
+  ["line", { x1: "14", x2: "14", y1: "11", y2: "17", key: "xtxkd" }]
+];
+const Trash2 = (0,_createLucideIcon_js__WEBPACK_IMPORTED_MODULE_0__["default"])("trash-2", __iconNode);
+
+
+//# sourceMappingURL=trash-2.js.map
 
 
 /***/ }),
@@ -29591,7 +29698,7 @@ var BACKUP_TYPES = [{
   id: 'theme',
   label: 'Themes'
 }, {
-  id: 'folder-uploads',
+  id: 'uploads',
   label: 'Uploads Folder'
 }];
 var BackupConfigModal = function BackupConfigModal(_ref) {
@@ -29626,12 +29733,35 @@ var BackupConfigModal = function BackupConfigModal(_ref) {
     onSave(config);
     onClose();
   };
-  return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)(_Modal__WEBPACK_IMPORTED_MODULE_1__["default"], {
+  return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsxs)(_Modal__WEBPACK_IMPORTED_MODULE_1__["default"], {
     isOpen: isOpen,
     onClose: onClose,
     title: "Backup Configuration",
     size: "md",
-    children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsxs)("form", {
+    children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("div", {
+      className: "tw-mb-6 tw-p-4 tw-bg-gradient-to-r tw-from-purple-50 tw-to-pink-50 tw-border tw-border-purple-200 tw-rounded-md tw-shadow-sm",
+      children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsxs)("div", {
+        className: "tw-flex tw-items-start tw-gap-3",
+        children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("div", {
+          className: "tw-flex-shrink-0 tw-p-2 tw-bg-purple-100 tw-rounded-full",
+          children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("span", {
+            className: "tw-text-lg",
+            children: "\u26A1"
+          })
+        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsxs)("div", {
+          className: "tw-flex-1",
+          children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("h3", {
+            className: "tw-text-sm tw-font-bold tw-text-purple-900 tw-mb-1",
+            children: "Let's Set Up Your Backup! \uD83D\uDE80"
+          }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("div", {
+            className: "tw-text-sm tw-text-purple-700 tw-leading-relaxed",
+            children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("p", {
+              children: "Give your backup a name and choose what to include! You can select from database, plugins, themes, and uploads folder. Pick any combination you need! \u2728"
+            })
+          })]
+        })]
+      })
+    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsxs)("form", {
       onSubmit: handleSubmit,
       className: "tw-space-y-8",
       children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsxs)("div", {
@@ -29687,7 +29817,7 @@ var BackupConfigModal = function BackupConfigModal(_ref) {
           children: "Start Backup"
         })]
       })]
-    })
+    })]
   });
 };
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (BackupConfigModal);
@@ -29965,7 +30095,11 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _util_lib__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../util/lib */ "./src/util/lib.js");
 /* harmony import */ var _Confirm__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./Confirm */ "./src/components/Confirm.jsx");
 /* harmony import */ var _Toast__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./Toast */ "./src/components/Toast.jsx");
-/* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! react/jsx-runtime */ "./node_modules/react/jsx-runtime.js");
+/* harmony import */ var _DropdownActions__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./DropdownActions */ "./src/components/DropdownActions.jsx");
+/* harmony import */ var lucide_react__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! lucide-react */ "./node_modules/lucide-react/dist/esm/icons/rotate-ccw.js");
+/* harmony import */ var lucide_react__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! lucide-react */ "./node_modules/lucide-react/dist/esm/icons/file-down.js");
+/* harmony import */ var lucide_react__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! lucide-react */ "./node_modules/lucide-react/dist/esm/icons/trash-2.js");
+/* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! react/jsx-runtime */ "./node_modules/react/jsx-runtime.js");
 function _toConsumableArray(r) { return _arrayWithoutHoles(r) || _iterableToArray(r) || _unsupportedIterableToArray(r) || _nonIterableSpread(); }
 function _nonIterableSpread() { throw new TypeError("Invalid attempt to spread non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method."); }
 function _iterableToArray(r) { if ("undefined" != typeof Symbol && null != r[Symbol.iterator] || null != r["@@iterator"]) return Array.from(r); }
@@ -29980,6 +30114,8 @@ function _unsupportedIterableToArray(r, a) { if (r) { if ("string" == typeof r) 
 function _arrayLikeToArray(r, a) { (null == a || a > r.length) && (a = r.length); for (var e = 0, n = Array(a); e < a; e++) n[e] = r[e]; return n; }
 function _iterableToArrayLimit(r, l) { var t = null == r ? null : "undefined" != typeof Symbol && r[Symbol.iterator] || r["@@iterator"]; if (null != t) { var e, n, i, u, a = [], f = !0, o = !1; try { if (i = (t = t.call(r)).next, 0 === l) { if (Object(t) !== t) return; f = !1; } else for (; !(f = (e = i.call(t)).done) && (a.push(e.value), a.length !== l); f = !0); } catch (r) { o = !0, n = r; } finally { try { if (!f && null != t["return"] && (u = t["return"](), Object(u) !== u)) return; } finally { if (o) throw n; } } return a; } }
 function _arrayWithHoles(r) { if (Array.isArray(r)) return r; }
+
+
 
 
 
@@ -30102,14 +30238,14 @@ var BackupTable = function BackupTable() {
     setFilteredBackups(filtered);
   };
   if (isLoading) {
-    return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsxs)("div", {
+    return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_7__.jsxs)("div", {
       className: "tw-animate-pulse",
-      children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsx)("div", {
+      children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_7__.jsx)("div", {
         className: "tw-h-8 tw-bg-gray-200 tw-rounded tw-mb-4"
-      }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsx)("div", {
+      }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_7__.jsx)("div", {
         className: "tw-space-y-3",
         children: [1, 2, 3].map(function (i) {
-          return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsx)("div", {
+          return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_7__.jsx)("div", {
             className: "tw-h-16 tw-bg-gray-200 tw-rounded"
           }, i);
         })
@@ -30117,30 +30253,30 @@ var BackupTable = function BackupTable() {
     });
   }
   if (!backups || backups.length === 0) {
-    return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsx)("div", {
+    return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_7__.jsx)("div", {
       className: "tw-text-center",
-      children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsxs)("div", {
+      children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_7__.jsxs)("div", {
         className: "tw-bg-gray-50 tw-p-12 tw-border tw-border-gray-200",
-        children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsx)("svg", {
+        children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_7__.jsx)("svg", {
           className: "tw-mx-auto tw-h-12 tw-w-12 tw-text-gray-400",
           fill: "none",
           stroke: "currentColor",
           viewBox: "0 0 24 24",
-          children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsx)("path", {
+          children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_7__.jsx)("path", {
             strokeLinecap: "round",
             strokeLinejoin: "round",
             strokeWidth: 2,
             d: "M20 13V6a2 2 0 00-2-2H6a2 2 0 00-2 2v7m16 0v5a2 2 0 01-2 2H6a2 2 0 01-2-2v-5m16 0h-2.586a1 1 0 00-.707.293l-2.414 2.414a1 1 0 01-.707.293h-3.172a1 1 0 01-.707-.293l-2.414-2.414A1 1 0 006.586 13H4"
           })
-        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsx)("h3", {
+        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_7__.jsx)("h3", {
           className: "tw-mt-2 tw-text-sm tw-font-medium tw-text-gray-900",
           children: "No backups"
-        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsx)("p", {
+        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_7__.jsx)("p", {
           className: "tw-mt-1 tw-text-sm tw-text-gray-500",
           children: "Get started by creating a new backup."
-        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsx)("div", {
+        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_7__.jsx)("div", {
           className: "tw-mt-6",
-          children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsx)(_BackupTableTools__WEBPACK_IMPORTED_MODULE_2__.NewBackupButton, {})
+          children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_7__.jsx)(_BackupTableTools__WEBPACK_IMPORTED_MODULE_2__.NewBackupButton, {})
         })]
       })
     });
@@ -30173,58 +30309,58 @@ var BackupTable = function BackupTable() {
       setSelectedBackups([]);
     }
   };
-  return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsxs)("div", {
+  return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_7__.jsxs)("div", {
     className: "tw-bg-white tw-border tw-border-gray-200 tw-rounded-lg",
-    children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsx)(_BackupTableTools__WEBPACK_IMPORTED_MODULE_2__["default"], {
+    children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_7__.jsx)(_BackupTableTools__WEBPACK_IMPORTED_MODULE_2__["default"], {
       onFilterChange: handleFilterChange,
       onDeleteBackups: handleDeleteBackups,
       selectedBackups: selectedBackups
-    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsx)("div", {
+    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_7__.jsx)("div", {
       className: "tw-block md:tw-hidden",
       children: filteredBackups.map(function (backup) {
-        return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsxs)("div", {
+        return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_7__.jsxs)("div", {
           className: "tw-p-4 tw-border-b tw-border-gray-200",
-          children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsxs)("div", {
+          children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_7__.jsxs)("div", {
             className: "tw-flex tw-items-center tw-justify-between tw-mb-2",
-            children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsx)("input", {
+            children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_7__.jsx)("input", {
               type: "checkbox",
               className: "tw-form-checkbox tw-h-4 tw-w-4 tw-text-blue-600",
               checked: selectedBackups.includes(backup.id),
               onChange: function onChange(e) {
                 return handleSelectBackup(e, backup.id);
               }
-            }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsx)("div", {
+            }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_7__.jsx)("div", {
               className: "tw-text-sm tw-font-medium tw-text-gray-900",
               children: backup.name
             })]
-          }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsxs)("div", {
+          }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_7__.jsxs)("div", {
             className: "tw-space-y-2",
-            children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsx)("div", {
+            children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_7__.jsx)("div", {
               className: "tw-flex tw-flex-wrap tw-gap-1",
               children: backup.type.map(function (type, index) {
-                return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsx)("span", {
+                return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_7__.jsx)("span", {
                   className: "tw-inline-flex tw-items-center tw-px-2 tw-py-0.5 tw-text-xs tw-font-medium tw-rounded-md tw-bg-gray-100 tw-text-gray-800",
                   children: type
                 }, index);
               })
-            }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsxs)("div", {
+            }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_7__.jsxs)("div", {
               className: "tw-flex tw-justify-between tw-text-sm tw-text-gray-500",
-              children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsx)("span", {
+              children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_7__.jsx)("span", {
                 children: (0,_util_lib__WEBPACK_IMPORTED_MODULE_3__.friendlyDateTime)(backup.date, wp_backup_php_data.current_datetime)
-              }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsx)("span", {
+              }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_7__.jsx)("span", {
                 children: backup.size
               })]
-            }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsxs)("div", {
+            }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_7__.jsxs)("div", {
               className: "tw-flex tw-items-center tw-justify-between",
-              children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsx)("span", {
+              children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_7__.jsx)("span", {
                 className: "tw-px-2 tw-inline-flex tw-text-xs tw-leading-5 tw-font-semibold tw-rounded-full tw-bg-green-100 tw-text-green-800",
                 children: backup.status
-              }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsxs)("div", {
+              }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_7__.jsxs)("div", {
                 className: "tw-space-x-2",
-                children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsx)("button", {
+                children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_7__.jsx)("button", {
                   className: "tw-text-blue-600 hover:tw-text-blue-900",
                   children: "Download"
-                }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsx)("button", {
+                }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_7__.jsx)("button", {
                   className: "tw-text-red-600 hover:tw-text-red-900",
                   children: "Delete"
                 })]
@@ -30233,56 +30369,56 @@ var BackupTable = function BackupTable() {
           })]
         }, backup.id);
       })
-    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsx)("div", {
+    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_7__.jsx)("div", {
       className: "tw-hidden md:tw-block tw-overflow-x-auto",
-      children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsxs)("table", {
+      children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_7__.jsxs)("table", {
         className: "tw-min-w-full tw-divide-y tw-divide-gray-200",
-        children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsx)("thead", {
+        children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_7__.jsx)("thead", {
           className: "tw-bg-gray-50",
-          children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsxs)("tr", {
-            children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsx)("th", {
+          children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_7__.jsxs)("tr", {
+            children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_7__.jsx)("th", {
               scope: "col",
               className: "tw-px-6 tw-py-3 tw-text-left tw-text-xs tw-font-medium tw-text-gray-500",
               width: "3%",
-              children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsx)("input", {
+              children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_7__.jsx)("input", {
                 type: "checkbox",
                 className: "tw-form-checkbox tw-h-4 tw-w-4 tw-text-blue-600",
                 checked: selectedBackups.length === filteredBackups.length,
                 onChange: handleSelectAllBackups
               })
-            }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsx)("th", {
+            }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_7__.jsx)("th", {
               scope: "col",
               className: "tw-px-6 tw-py-3 tw-text-left tw-text-xs tw-font-medium tw-text-gray-500 tw-uppercase",
               children: "Name"
-            }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsx)("th", {
+            }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_7__.jsx)("th", {
               scope: "col",
               className: "tw-px-6 tw-py-3 tw-text-left tw-text-xs tw-font-medium tw-text-gray-500 tw-uppercase tw-tracking-wider",
               children: "Date"
-            }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsx)("th", {
+            }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_7__.jsx)("th", {
               scope: "col",
               className: "tw-px-6 tw-py-3 tw-text-left tw-text-xs tw-font-medium tw-text-gray-500 tw-uppercase tw-tracking-wider",
               children: "Size"
-            }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsx)("th", {
+            }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_7__.jsx)("th", {
               scope: "col",
               className: "tw-px-6 tw-py-3 tw-text-left tw-text-xs tw-font-medium tw-text-gray-500 tw-uppercase tw-tracking-wider",
               children: "Status"
-            }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsx)("th", {
+            }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_7__.jsx)("th", {
               scope: "col",
               className: "tw-relative tw-px-6 tw-py-3",
-              children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsx)("span", {
+              children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_7__.jsx)("span", {
                 className: "tw-sr-only",
                 children: "Actions"
               })
             })]
           })
-        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsx)("tbody", {
+        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_7__.jsx)("tbody", {
           className: "tw-bg-white tw-divide-y tw-divide-gray-200",
           children: filteredBackups.map(function (backup) {
-            return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsxs)("tr", {
-              children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsx)("td", {
+            return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_7__.jsxs)("tr", {
+              children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_7__.jsx)("td", {
                 className: "tw-px-6 tw-py-4",
                 width: "3%",
-                children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsx)("input", {
+                children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_7__.jsx)("input", {
                   type: "checkbox",
                   className: "tw-form-checkbox tw-h-4 tw-w-4 tw-text-blue-600",
                   checked: selectedBackups.includes(backup.id),
@@ -30290,12 +30426,12 @@ var BackupTable = function BackupTable() {
                     return handleSelectBackup(e, backup.id);
                   }
                 })
-              }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsxs)("td", {
+              }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_7__.jsxs)("td", {
                 className: "tw-px-6 tw-py-4",
-                children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsx)("div", {
+                children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_7__.jsx)("div", {
                   className: "tw-text-sm tw-font-medium tw-text-gray-900",
                   children: backup.name
-                }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsx)("div", {
+                }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_7__.jsx)("div", {
                   className: "tw-flex tw-flex-wrap tw-gap-1 tw-mt-2",
                   children: backup.type.map(function (type, index) {
                     var style = "";
@@ -30313,7 +30449,7 @@ var BackupTable = function BackupTable() {
                         style = "tw-bg-yellow-100 tw-text-yellow-800 tw-border tw-border-yellow-200";
                         label = "Themes";
                         break;
-                      case "folder-uploads":
+                      case "uploads":
                         style = "tw-bg-green-100 tw-text-green-800 tw-border tw-border-green-200";
                         label = "Uploads";
                         break;
@@ -30321,7 +30457,7 @@ var BackupTable = function BackupTable() {
                         style = "tw-bg-gray-100 tw-text-gray-800 tw-border tw-border-gray-200";
                         label = type;
                     }
-                    return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsx)("span", {
+                    return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_7__.jsx)("span", {
                       className: "tw-inline-flex tw-items-center tw-gap-1 tw-px-2 tw-py-0.5 tw-text-xs tw-font-medium tw-rounded-full ".concat(style, " tw-transition-colors tw-duration-200"),
                       style: {
                         letterSpacing: "0.01em"
@@ -30330,19 +30466,19 @@ var BackupTable = function BackupTable() {
                     }, index);
                   })
                 })]
-              }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsx)("td", {
+              }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_7__.jsx)("td", {
                 className: "tw-px-6 tw-py-4 tw-whitespace-nowrap tw-text-sm tw-text-gray-500",
-                children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsx)("div", {
+                children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_7__.jsx)("div", {
                   className: "tw-text-sm tw-text-gray-500",
-                  children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsxs)("span", {
+                  children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_7__.jsxs)("span", {
                     className: "tw-inline-flex tw-items-center tw-gap-1 tw-px-2.5 tw-py-1 tw-text-xs tw-font-medium tw-rounded-md tw-bg-slate-100 tw-text-slate-700 tw-border tw-border-slate-200/60 tw-shadow-sm",
                     title: backup.date,
-                    children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsx)("svg", {
+                    children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_7__.jsx)("svg", {
                       className: "tw-w-3 tw-h-3 tw-text-slate-400",
                       fill: "none",
                       stroke: "currentColor",
                       viewBox: "0 0 24 24",
-                      children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsx)("path", {
+                      children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_7__.jsx)("path", {
                         strokeLinecap: "round",
                         strokeLinejoin: "round",
                         strokeWidth: 2,
@@ -30351,45 +30487,49 @@ var BackupTable = function BackupTable() {
                     }), (0,_util_lib__WEBPACK_IMPORTED_MODULE_3__.friendlyDateTime)(backup.date, wp_backup_php_data.current_datetime)]
                   })
                 })
-              }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsx)("td", {
+              }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_7__.jsx)("td", {
                 className: "tw-px-6 tw-py-4 tw-whitespace-nowrap tw-text-sm tw-text-gray-500",
                 children: backup.size
-              }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsxs)("td", {
+              }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_7__.jsxs)("td", {
                 className: "tw-px-6 tw-py-4 tw-whitespace-nowrap",
-                children: [backup.status === "pending" && /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsx)("span", {
+                children: [backup.status === "pending" && /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_7__.jsx)("span", {
                   className: "tw-px-2 tw-inline-flex tw-text-xs tw-leading-5 tw-font-semibold tw-rounded-full tw-bg-yellow-100 tw-text-yellow-800",
                   children: "Pending"
-                }), backup.status === "completed" && /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsx)("span", {
+                }), backup.status === "completed" && /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_7__.jsx)("span", {
                   className: "tw-px-2 tw-inline-flex tw-text-xs tw-leading-5 tw-font-semibold tw-rounded-full tw-bg-green-100 tw-text-green-800",
                   children: "Completed"
-                }), backup.status === "fail" && /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsx)("span", {
+                }), backup.status === "fail" && /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_7__.jsx)("span", {
                   className: "tw-px-2 tw-inline-flex tw-text-xs tw-leading-5 tw-font-semibold tw-rounded-full tw-bg-red-100 tw-text-red-800",
                   children: "Failed"
-                }), ["pending", "completed", "fail"].indexOf(backup.status) === -1 && /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsx)("span", {
+                }), ["pending", "completed", "fail"].indexOf(backup.status) === -1 && /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_7__.jsx)("span", {
                   className: "tw-px-2 tw-inline-flex tw-text-xs tw-leading-5 tw-font-semibold tw-rounded-full tw-bg-gray-100 tw-text-gray-800",
                   children: backup.status
                 })]
-              }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsx)("td", {
+              }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_7__.jsx)("td", {
                 className: "tw-px-6 tw-py-4 tw-whitespace-nowrap tw-text-right tw-text-sm tw-font-medium",
-                children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsx)("button", {
-                  className: "tw-text-red-600 hover:tw-text-red-900",
-                  title: "Delete",
-                  onClick: function onClick() {
-                    return handleDeleteBackup(backup.id);
-                  },
-                  children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsx)("svg", {
-                    xmlns: "http://www.w3.org/2000/svg",
-                    className: "tw-h-5 tw-w-5 tw-inline",
-                    fill: "none",
-                    viewBox: "0 0 24 24",
-                    stroke: "currentColor",
-                    children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsx)("path", {
-                      strokeLinecap: "round",
-                      strokeLinejoin: "round",
-                      strokeWidth: 2,
-                      d: "M6 18L18 6M6 6l12 12"
-                    })
-                  })
+                children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_7__.jsx)(_DropdownActions__WEBPACK_IMPORTED_MODULE_6__["default"], {
+                  items: [
+                  // restore backup
+                  {
+                    label: 'Restore',
+                    icon: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_7__.jsx)(lucide_react__WEBPACK_IMPORTED_MODULE_8__["default"], {}),
+                    onClick: function onClick() {
+                      return handleRestoreBackup(backup.id);
+                    }
+                  }, {
+                    label: 'Download',
+                    icon: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_7__.jsx)(lucide_react__WEBPACK_IMPORTED_MODULE_9__["default"], {}),
+                    action: function action() {
+                      return handleDownloadBackup(backup.id);
+                    }
+                  }, {
+                    label: 'Delete',
+                    icon: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_7__.jsx)(lucide_react__WEBPACK_IMPORTED_MODULE_10__["default"], {}),
+                    danger: true,
+                    onClick: function onClick() {
+                      return handleDeleteBackup(backup.id);
+                    }
+                  }]
                 })
               })]
             }, backup.id);
@@ -30854,6 +30994,234 @@ var useConfirm = function useConfirm() {
   return openConfirm;
 };
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (Confirm);
+
+/***/ }),
+
+/***/ "./src/components/DropdownActions.jsx":
+/*!********************************************!*\
+  !*** ./src/components/DropdownActions.jsx ***!
+  \********************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var react_dom__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react-dom */ "./node_modules/react-dom/index.js");
+/* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! react/jsx-runtime */ "./node_modules/react/jsx-runtime.js");
+function _slicedToArray(r, e) { return _arrayWithHoles(r) || _iterableToArrayLimit(r, e) || _unsupportedIterableToArray(r, e) || _nonIterableRest(); }
+function _nonIterableRest() { throw new TypeError("Invalid attempt to destructure non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method."); }
+function _unsupportedIterableToArray(r, a) { if (r) { if ("string" == typeof r) return _arrayLikeToArray(r, a); var t = {}.toString.call(r).slice(8, -1); return "Object" === t && r.constructor && (t = r.constructor.name), "Map" === t || "Set" === t ? Array.from(r) : "Arguments" === t || /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(t) ? _arrayLikeToArray(r, a) : void 0; } }
+function _arrayLikeToArray(r, a) { (null == a || a > r.length) && (a = r.length); for (var e = 0, n = Array(a); e < a; e++) n[e] = r[e]; return n; }
+function _iterableToArrayLimit(r, l) { var t = null == r ? null : "undefined" != typeof Symbol && r[Symbol.iterator] || r["@@iterator"]; if (null != t) { var e, n, i, u, a = [], f = !0, o = !1; try { if (i = (t = t.call(r)).next, 0 === l) { if (Object(t) !== t) return; f = !1; } else for (; !(f = (e = i.call(t)).done) && (a.push(e.value), a.length !== l); f = !0); } catch (r) { o = !0, n = r; } finally { try { if (!f && null != t["return"] && (u = t["return"](), Object(u) !== u)) return; } finally { if (o) throw n; } } return a; } }
+function _arrayWithHoles(r) { if (Array.isArray(r)) return r; }
+
+
+
+/**
+ * @typedef {Object} DropdownActionItem
+ * @property {string} label - The label for the action
+ * @property {React.ReactNode} [icon] - Optional icon
+ * @property {() => void} onClick - Click handler
+ * @property {boolean} [danger] - Optional: style as dangerous action
+ */
+
+/**
+ * DropdownActions Props
+ * @param {Object} props
+ * @param {DropdownActionItem[]} props.items - Array of action items
+ * @param {React.ReactNode} [props.trigger] - Optional custom trigger
+ * @param {string} [props.className] - Optional extra classes for dropdown
+ */
+
+var DropdownActions = function DropdownActions(_ref) {
+  var items = _ref.items,
+    trigger = _ref.trigger,
+    _ref$className = _ref.className,
+    className = _ref$className === void 0 ? '' : _ref$className;
+  var _useState = (0,react__WEBPACK_IMPORTED_MODULE_0__.useState)(false),
+    _useState2 = _slicedToArray(_useState, 2),
+    open = _useState2[0],
+    setOpen = _useState2[1];
+  var menuRef = (0,react__WEBPACK_IMPORTED_MODULE_0__.useRef)(null);
+  var buttonRef = (0,react__WEBPACK_IMPORTED_MODULE_0__.useRef)(null);
+  var _useState3 = (0,react__WEBPACK_IMPORTED_MODULE_0__.useState)(-1),
+    _useState4 = _slicedToArray(_useState3, 2),
+    focusedIndex = _useState4[0],
+    setFocusedIndex = _useState4[1];
+  var _useState5 = (0,react__WEBPACK_IMPORTED_MODULE_0__.useState)({}),
+    _useState6 = _slicedToArray(_useState5, 2),
+    menuStyle = _useState6[0],
+    setMenuStyle = _useState6[1];
+
+  // Close dropdown on outside click
+  (0,react__WEBPACK_IMPORTED_MODULE_0__.useEffect)(function () {
+    if (!open) return;
+    function handleClick(e) {
+      if (menuRef.current && !menuRef.current.contains(e.target) && buttonRef.current && !buttonRef.current.contains(e.target)) {
+        setOpen(false);
+      }
+    }
+    function handleEscape(e) {
+      if (e.key === 'Escape') setOpen(false);
+    }
+    document.addEventListener('mousedown', handleClick);
+    document.addEventListener('keydown', handleEscape);
+    return function () {
+      document.removeEventListener('mousedown', handleClick);
+      document.removeEventListener('keydown', handleEscape);
+    };
+  }, [open]);
+
+  // Keyboard navigation
+  (0,react__WEBPACK_IMPORTED_MODULE_0__.useEffect)(function () {
+    if (!open) return;
+    function handleKey(e) {
+      if (e.key === 'ArrowDown') {
+        setFocusedIndex(function (i) {
+          return (i + 1) % items.length;
+        });
+        e.preventDefault();
+      } else if (e.key === 'ArrowUp') {
+        setFocusedIndex(function (i) {
+          return (i - 1 + items.length) % items.length;
+        });
+        e.preventDefault();
+      } else if (e.key === 'Enter' && focusedIndex >= 0) {
+        items[focusedIndex].onClick();
+        setOpen(false);
+      }
+    }
+    document.addEventListener('keydown', handleKey);
+    return function () {
+      return document.removeEventListener('keydown', handleKey);
+    };
+  }, [open, focusedIndex, items]);
+
+  // Focus first item when opened
+  (0,react__WEBPACK_IMPORTED_MODULE_0__.useEffect)(function () {
+    if (open) setFocusedIndex(0);else setFocusedIndex(-1);
+  }, [open]);
+
+  // Calculate menu position for portal
+  (0,react__WEBPACK_IMPORTED_MODULE_0__.useEffect)(function () {
+    if (open && buttonRef.current) {
+      var rect = buttonRef.current.getBoundingClientRect();
+      var isMobile = window.innerWidth < 640;
+      if (isMobile) {
+        setMenuStyle({
+          position: 'fixed',
+          left: 0,
+          right: 0,
+          top: rect.bottom + 8,
+          zIndex: 9999
+        });
+      } else {
+        setMenuStyle({
+          position: 'fixed',
+          left: rect.right - 176,
+          // 44*4 = 176px (w-44)
+          top: rect.bottom + 8,
+          zIndex: 9999
+        });
+      }
+    }
+  }, [open]);
+
+  // Default trigger: 3 dots
+  var defaultTrigger = /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsxs)("button", {
+    ref: buttonRef,
+    type: "button",
+    "aria-haspopup": "menu",
+    "aria-expanded": open,
+    onClick: function onClick() {
+      return setOpen(function (v) {
+        return !v;
+      });
+    },
+    className: "tw-inline-flex tw-items-center tw-justify-center tw-rounded-md tw-p-2 tw-text-gray-500 hover:tw-bg-gray-100 hover:tw-text-gray-700 focus:tw-outline-none focus:tw-ring-2 focus:tw-ring-blue-500",
+    children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsxs)("svg", {
+      className: "tw-w-5 tw-h-5",
+      fill: "none",
+      stroke: "currentColor",
+      viewBox: "0 0 24 24",
+      children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("circle", {
+        cx: "12",
+        cy: "6",
+        r: "1.5",
+        fill: "currentColor"
+      }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("circle", {
+        cx: "12",
+        cy: "12",
+        r: "1.5",
+        fill: "currentColor"
+      }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("circle", {
+        cx: "12",
+        cy: "18",
+        r: "1.5",
+        fill: "currentColor"
+      })]
+    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("span", {
+      className: "tw-sr-only",
+      children: "Open actions"
+    })]
+  });
+  var menu = open ? /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("div", {
+    ref: menuRef,
+    className: "tw-bg-white tw-border tw-border-gray-200 tw-rounded-md tw-shadow-lg tw-z-50 tw-py-1 tw-font-space-mono ".concat(className, "\n        sm:tw-w-44\n        tw-w-screen tw-left-0 tw-right-0 tw-mx-2 tw-max-w-xs tw-rounded-b-lg tw-pb-2 tw-pt-2 tw-bottom-auto\n        md:tw-w-56 md:tw-mx-0 md:tw-max-w-none md:tw-left-auto md:tw-right-0 md:tw-rounded-md md:tw-py-1\n      "),
+    style: menuStyle,
+    role: "menu",
+    tabIndex: "-1",
+    children: items.map(function (item, idx) {
+      return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsxs)("button", {
+        type: "button",
+        className: "tw-flex tw-items-center tw-w-full tw-px-5 tw-py-3 tw-text-base tw-text-left tw-gap-3 tw-transition-colors tw-duration-150 focus:tw-bg-gray-100 hover:tw-bg-gray-50 focus:tw-outline-none\n            ".concat(item.danger ? 'tw-text-red-600 hover:tw-bg-red-50 focus:tw-bg-red-50' : 'tw-text-gray-700', "\n            ").concat(focusedIndex === idx ? 'tw-bg-gray-100' : '', "\n            tw-rounded-none tw-font-medium\n            sm:tw-px-4 sm:tw-py-2 sm:tw-text-sm sm:tw-gap-2\n          "),
+        onClick: function onClick() {
+          item.onClick();
+          setOpen(false);
+        },
+        role: "menuitem",
+        tabIndex: focusedIndex === idx ? 0 : -1,
+        onMouseEnter: function onMouseEnter() {
+          return setFocusedIndex(idx);
+        },
+        style: {
+          touchAction: 'manipulation'
+        },
+        children: [item.icon && /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("span", {
+          className: "tw-w-5 tw-h-5 tw-flex tw-items-center",
+          children: item.icon
+        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("span", {
+          children: item.label
+        })]
+      }, item.label);
+    })
+  }) : null;
+  return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsxs)("div", {
+    className: "tw-relative tw-inline-block",
+    children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("span", {
+      onClick: function onClick(e) {
+        return e.stopPropagation();
+      },
+      children: trigger ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().cloneElement(trigger, {
+        ref: buttonRef,
+        onClick: function onClick(e) {
+          e.stopPropagation();
+          setOpen(function (v) {
+            return !v;
+          });
+          trigger.props.onClick && trigger.props.onClick(e);
+        },
+        'aria-haspopup': 'menu',
+        'aria-expanded': open
+      }) : defaultTrigger
+    }), open && /*#__PURE__*/(0,react_dom__WEBPACK_IMPORTED_MODULE_1__.createPortal)(menu, document.body)]
+  });
+};
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (DropdownActions);
 
 /***/ }),
 
@@ -31893,7 +32261,7 @@ var useBackupStore = (0,zustand__WEBPACK_IMPORTED_MODULE_1__.create)((0,zustand_
         database: "\uD83D\uDDC4\uFE0F Safeguarding your precious database records! \uD83D\uDCCA Our data guardians are carefully preserving every table and relationship. Your information is in good hands! \uD83D\uDD12\u2728",
         plugin: "\uD83D\uDD0C Securing your powerful plugins! \uD83D\uDEE0\uFE0F Each extension is being carefully wrapped and preserved. Your site's functionality is our top priority! \uD83D\uDE80\uD83D\uDCAB",
         theme: "\uD83C\uDFA8 Preserving your beautiful theme! \uD83C\uDFAD Every design element and customization is being carefully archived. Your site's look and feel is safe with us! \uD83C\uDFAA\u2728",
-        'folder-uploads': "\uD83D\uDCC1 Backing up your uploads folder! \uD83D\uDDBC\uFE0F Every image, document, and media file is being carefully preserved. Your content is our treasure! \uD83D\uDC8E\uD83C\uDF1F"
+        uploads: "\uD83D\uDCC1 Backing up your uploads folder! \uD83D\uDDBC\uFE0F Every image, document, and media file is being carefully preserved. Your content is our treasure! \uD83D\uDC8E\uD83C\uDF1F"
       };
 
       // for each types, add a step to the process

@@ -51,7 +51,7 @@ const useBackupStore = create(
         database: `🗄️ Safeguarding your precious database records! 📊 Our data guardians are carefully preserving every table and relationship. Your information is in good hands! 🔒✨`,
         plugin: `🔌 Securing your powerful plugins! 🛠️ Each extension is being carefully wrapped and preserved. Your site's functionality is our top priority! 🚀💫`,
         theme: `🎨 Preserving your beautiful theme! 🎭 Every design element and customization is being carefully archived. Your site's look and feel is safe with us! 🎪✨`,
-        'folder-uploads': `📁 Backing up your uploads folder! 🖼️ Every image, document, and media file is being carefully preserved. Your content is our treasure! 💎🌟`
+        uploads: `📁 Backing up your uploads folder! 🖼️ Every image, document, and media file is being carefully preserved. Your content is our treasure! 💎🌟`
       };
 
       // for each types, add a step to the process
