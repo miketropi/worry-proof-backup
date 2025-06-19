@@ -109,6 +109,48 @@ function wp_backup_ajax_generate_backup_database() {
   }
 }
 
+// backup plugins
+add_action('wp_ajax_wp_backup_ajax_generate_backup_plugin', 'wp_backup_ajax_generate_backup_plugin');
+function wp_backup_ajax_generate_backup_plugin() {
+  # check nonce
+  check_ajax_referer('wp_backup_nonce_' . get_current_user_id(), 'nonce');
+
+  # get payload
+  $payload = isset($_POST['payload']) ? $_POST['payload'] : array();
+
+  // check $payload['backup_folder'] is exists
+  if (!isset($payload['backup_folder']) || empty($payload['backup_folder'])) {
+    wp_send_json_error('Backup folder is empty');
+  }
+  
+  // create backup plugin
+  $backup = new WP_Backup_File_System([
+    'source_folder' => WP_PLUGIN_DIR,
+    'destination_folder' => $payload['name_folder'],
+    'zip_name' => 'plugins.zip',
+    'exclude' => ['wp-backup'],
+  ]);
+
+  // check error $backup
+  if (is_wp_error($backup)) {
+    wp_send_json_error($backup->get_error_message());
+  }
+
+  // run backup
+  $zip_file = $backup->runBackup();
+
+  // check error $zip_file
+  if (is_wp_error($zip_file)) {
+    wp_send_json_error($zip_file->get_error_message());
+  }
+
+  wp_send_json_success([
+    'backup_plugin_status' => 'done',
+    'plugin_zip_file' => $zip_file,
+    'next_step' => true,
+  ]);
+}
+
 // wp_backup_ajax_generate_backup_done
 add_action('wp_ajax_wp_backup_ajax_generate_backup_done', 'wp_backup_ajax_generate_backup_done');
 function wp_backup_ajax_generate_backup_done() {
@@ -134,5 +176,35 @@ function wp_backup_ajax_generate_backup_done() {
 
   wp_send_json_success([
     'backup_process_status' => 'done',
+  ]);
+}
+
+// wp_backup_ajax_delete_backup_folder
+add_action('wp_ajax_wp_backup_ajax_delete_backup_folder', 'wp_backup_ajax_delete_backup_folder');
+function wp_backup_ajax_delete_backup_folder() {
+  // wp_send_json($_POST);
+  // die();
+  # check nonce
+  check_ajax_referer('wp_backup_nonce_' . get_current_user_id(), 'nonce');
+
+  # get payload
+  $payload = isset($_POST['payload']) ? $_POST['payload'] : array();
+
+  // name_folder backup folder
+  $name_folder = $payload['name_folder'];
+
+  // backup folder  get wp uploads + /wp-backup/name_folder
+  $backup_folder_dir = WP_CONTENT_DIR . '/uploads/wp-backup/' . $name_folder;
+  
+  // delete backup folder
+  $result = wp_backup_remove_folder($backup_folder_dir);
+  
+  // check error $result
+  if (is_wp_error($result)) {
+    wp_send_json_error($result->get_error_message());
+  }
+
+  wp_send_json_success([
+    'message' => 'Backup folder deleted successfully',
   ]);
 }

@@ -1,21 +1,66 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import useBackupStore from '../util/store';
 import BackupTableTools, { NewBackupButton } from './BackupTableTools';
-import { friendlyDateTime } from '../util/lib';
+import { friendlyDateTime, deleteBackupFolder } from '../util/lib';
+import { useConfirm } from './Confirm';
+import { useToast } from './Toast';
 
 const BackupTable = () => {
   const { backups, setBackups, fetchBackups_Fn } = useBackupStore();
   const [isLoading, setIsLoading] = React.useState(true);
   const [filteredBackups, setFilteredBackups] = React.useState([]);
-  
+  const confirm = useConfirm();
+  const toast = useToast();
+
   // selected backups
   const [selectedBackups, setSelectedBackups] = React.useState([]);
 
-  React.useEffect(() => {
-    async function fetchBackups() {
-      await fetchBackups_Fn();
-      setIsLoading(false);
+  const fetchBackups = async () => {
+    await fetchBackups_Fn();
+    setIsLoading(false);
+  }
+
+  const handleDeleteBackup = async (backupId) => {
+    // confirm
+    try {
+      await confirm({
+        title: 'Delete item?',
+        description: '⚠️ This action cannot be undone, so make sure you really want to do this! 🗑️',
+        confirmText: 'Yes, delete',
+        danger: true,
+      });
+
+      // get folder name
+      const folderName = backups.find(backup => backup.id === backupId).folder_name;
+
+      // delete backup folder
+      const response = await deleteBackupFolder(folderName);
+      
+      // if response is success, fetch backups
+      if (response.success != true) {
+        // error message
+        toast({
+          message: 'Failed to delete backup',
+          type: 'error',
+        });
+        return;
+      }
+
+      // success message
+      toast({
+        message: 'Backup yeeted into oblivion 🗑️✨',
+        type: 'success',
+      });
+
+      // fetch backups
+      fetchBackups();
+    } catch {
+      // user cancelled
+      return;
     }
+  }
+
+  React.useEffect(() => {
     fetchBackups();
   }, [fetchBackups_Fn]);
 
@@ -166,6 +211,9 @@ const BackupTable = () => {
                 Name
               </th>
               <th scope="col" className="tw-px-6 tw-py-3 tw-text-left tw-text-xs tw-font-medium tw-text-gray-500 tw-uppercase tw-tracking-wider">
+                Date
+              </th>
+              <th scope="col" className="tw-px-6 tw-py-3 tw-text-left tw-text-xs tw-font-medium tw-text-gray-500 tw-uppercase tw-tracking-wider">
                 Size
               </th>
               <th scope="col" className="tw-px-6 tw-py-3 tw-text-left tw-text-xs tw-font-medium tw-text-gray-500 tw-uppercase tw-tracking-wider">
@@ -190,9 +238,6 @@ const BackupTable = () => {
                 <td className="tw-px-6 tw-py-4">
                   <div className="tw-text-sm tw-font-medium tw-text-gray-900">
                     {backup.name} 
-                    <span className="tw-ml-2 tw-inline-block tw-px-2 tw-py-0.5 tw-text-xs tw-rounded tw-bg-gray-200 tw-text-gray-700 tw-align-middle" title={backup.date}>
-                      { friendlyDateTime(backup.date, wp_backup_php_data.current_datetime) }
-                    </span>
                   </div>
                   <div className="tw-flex tw-flex-wrap tw-gap-1 tw-mt-2">
                     {backup.type.map((type, index) => {
@@ -233,6 +278,16 @@ const BackupTable = () => {
                   
                 </td>
                 <td className="tw-px-6 tw-py-4 tw-whitespace-nowrap tw-text-sm tw-text-gray-500">
+                  <div className="tw-text-sm tw-text-gray-500">
+                    <span className="tw-inline-flex tw-items-center tw-gap-1 tw-px-2.5 tw-py-1 tw-text-xs tw-font-medium tw-rounded-md tw-bg-slate-100 tw-text-slate-700 tw-border tw-border-slate-200/60 tw-shadow-sm" title={backup.date}>
+                      <svg className="tw-w-3 tw-h-3 tw-text-slate-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
+                      </svg>
+                      { friendlyDateTime(backup.date, wp_backup_php_data.current_datetime) }  
+                    </span>
+                  </div>
+                </td>
+                <td className="tw-px-6 tw-py-4 tw-whitespace-nowrap tw-text-sm tw-text-gray-500">
                   {backup.size}
                 </td>
                 <td className="tw-px-6 tw-py-4 tw-whitespace-nowrap">
@@ -259,12 +314,12 @@ const BackupTable = () => {
                   )}
                 </td>
                 <td className="tw-px-6 tw-py-4 tw-whitespace-nowrap tw-text-right tw-text-sm tw-font-medium">
-                  <button className="tw-text-blue-600 hover:tw-text-blue-900 tw-mr-4" title="Download">
+                  {/* <button className="tw-text-blue-600 hover:tw-text-blue-900 tw-mr-4" title="Download">
                     <svg xmlns="http://www.w3.org/2000/svg" className="tw-h-5 tw-w-5 tw-inline" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 16v2a2 2 0 002 2h12a2 2 0 002-2v-2M7 10l5 5 5-5M12 15V3" />
                     </svg>
-                  </button>
-                  <button className="tw-text-red-600 hover:tw-text-red-900" title="Delete">
+                  </button> */}
+                  <button className="tw-text-red-600 hover:tw-text-red-900" title="Delete" onClick={() => handleDeleteBackup(backup.id)}>
                     <svg xmlns="http://www.w3.org/2000/svg" className="tw-h-5 tw-w-5 tw-inline" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
                     </svg>

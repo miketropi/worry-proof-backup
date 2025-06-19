@@ -38,6 +38,27 @@ export const doBackupProcess = async (process) => {
 }
 
 /**
+ * Delete backup folder
+ * @param {string} name_folder
+ * @returns {Promise<boolean>}
+ */
+export const deleteBackupFolder = async (name_folder) => {
+  const response = await __request(ajax_url, {
+    method: 'POST',
+    headers: {
+      'Content-Type': 'application/x-www-form-urlencoded',
+    },
+    body: new URLSearchParams({
+      action: 'wp_backup_ajax_delete_backup_folder',
+      ...Object.fromEntries(Object.entries({ name_folder }).map(([key, value]) => [`payload[${key}]`, value])),
+      nonce: nonce.wp_backup_nonce,
+    }),
+  });
+
+  return response;
+}
+
+/**
  * Returns a human-friendly relative time string for a given date, using the provided server current datetime.
  * Examples: "just now", "1m ago", "5h ago", "yesterday", "3d ago", "2w ago", "Mar 5", "Mar 5, 2023"
  * @param {string|Date|number} inputDatetime - The date to format.

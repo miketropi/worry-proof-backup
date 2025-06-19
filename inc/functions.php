@@ -45,12 +45,18 @@ function wp_backup_load_template($template_name, $args = array(), $echo = true) 
   }
 }
 
-
- 
+/**
+ * Register admin page
+ */
 function wp_backup_register_admin_page() {
+  // check if user is admin role
+  if (!current_user_can('manage_options')) {
+    return;
+  }
+
   add_management_page(
     __('WP Backup', 'wp-backup'), // Page title
-    __('Backup', 'wp-backup'), // Menu title
+    __('Backup Tools', 'wp-backup'), // Menu title
     'manage_options', // Capability required
     'wp-backup', // Menu slug
     'wp_backup_admin_page' // Function to display the page
@@ -91,6 +97,10 @@ function wp_backup_get_backups() {
 
   // loop through $folders
   foreach ($folders as $folder) {
+
+    // get folder name
+    $folder_name = basename($folder);
+
     // get config file
     $config_file = $folder . '/config.json';
 
@@ -123,6 +133,7 @@ function wp_backup_get_backups() {
       'date' => date('Y-m-d H:i:s', strtotime($config_file_content['backup_date'])),
       'size' => $config_file_content['backup_size'],
       'type' => $config_file_content['type'],
+      'folder_name' => $folder_name,
     ];
   }
 
@@ -491,25 +502,46 @@ function wp_backup_format_bytes($bytes, $precision = 2) {
   return round($bytes, $precision) . ' ' . $units[$pow];
 }
 
-
-function __test() {
-  # check GET parameter not test = true return
-  if (!isset($_GET['test']) || $_GET['test'] != 'true') {
-    return;
+/**
+ * Remove a folder and its contents (WordPress safe, with WP_Error)
+ *
+ * @param string $folder Absolute path to folder
+ * @return true|WP_Error True if removed, WP_Error on failure
+ */
+function wp_backup_remove_folder($folder) {
+  if (!is_dir($folder)) {
+    // Nothing to do
+    return true;
   }
 
+  try {
+    $iterator = new RecursiveIteratorIterator(
+      new RecursiveDirectoryIterator($folder, FilesystemIterator::SKIP_DOTS),
+      RecursiveIteratorIterator::CHILD_FIRST
+    );
 
-  # get all tables
-  $sql_dump = wp_backup_database();
-  // echo $sql_dump;
+    foreach ($iterator as $file) {
+      /** @var SplFileInfo $file */
+      $path = $file->getPathname();
 
-  # save to file: uploads/wp-backup/wp-backup-database.sql
-  $upload_dir = wp_upload_dir();
-  $file_path = $upload_dir['basedir'] . '/wp-backup/wp-backup-database.sql';
-  file_put_contents($file_path, $sql_dump);
+      if ($file->isDir()) {
+        if (!rmdir($path)) {
+          return new WP_Error('remove_folder_failed', "Failed to remove directory: {$path}");
+        }
+      } else {
+        if (!unlink($path)) {
+          return new WP_Error('remove_file_failed', "Failed to remove file: {$path}");
+        }
+      }
+    }
 
-  # return the file path
-  return $file_path;
+    // Finally remove the folder itself
+    if (!rmdir($folder)) {
+      return new WP_Error('remove_folder_failed', "Failed to remove directory: {$folder}");
+    }
+
+    return true;
+  } catch (Exception $e) {
+    return new WP_Error('exception', $e->getMessage());
+  }
 }
-
-add_action('init', '__test');

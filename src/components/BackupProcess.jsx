@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import useBackupStore from '../util/store';
 import { doBackupProcess } from '../util/lib';
+import { useToast } from './Toast';
 
 /**
  * BackupProcess - Stepper UI for backup process
@@ -11,6 +12,7 @@ const BackupProcess = () => {
   const { backupProcess, inProgress, inProgressStep, setInProgressStep, fetchBackups_Fn } = useBackupStore();
   const [responseOldStep, setResponseOldStep] = useState({});
   const [error, setError] = useState(null);
+  const toast = useToast();
 
   const backupProcessHandler = async (process) => {
     console.log('process', process);
@@ -27,6 +29,13 @@ const BackupProcess = () => {
       setInProgressStep(backupProcess.length + 1); // passed all steps
       setResponseOldStep({}); // reset response old step
       await fetchBackups_Fn(); // fetch backups
+
+      // show toast
+      toast({
+        message: '🎉 Yasss! Full backup done, everything’s safe & sound 🛡️. You’re good to go, keep slaying! 😎✨',
+        type: 'success',
+      });
+
       return;
     }
 
