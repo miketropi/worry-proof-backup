@@ -132,7 +132,7 @@ function wp_backup_get_backups() {
       'status' => $config_file_content['backup_status'],
       'date' => date('Y-m-d H:i:s', strtotime($config_file_content['backup_date'])),
       'size' => $config_file_content['backup_size'],
-      'type' => $config_file_content['type'],
+      'type' => explode(',', $config_file_content['backup_types']),
       'folder_name' => $folder_name,
     ];
   }

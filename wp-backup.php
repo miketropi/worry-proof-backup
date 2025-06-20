@@ -3,7 +3,7 @@
  * Plugin Name: WordPress Backup
  * Plugin URI: #
  * Description: WordPress backup plugin that allows you to backup your database and files.
- * Version: 1.0.0
+ * Version: 0.1.1
  * Author: @Mike
  * Author URI: #
  * Text Domain: wp-backup
@@ -33,7 +33,10 @@
   define( 'WP_BACKUP_PLUGIN_URL', plugin_dir_url( __FILE__ ) );
 
   # define plugin version
-  define( 'WP_BACKUP_PLUGIN_VERSION', '1.0.0' );
+  define( 'WP_BACKUP_PLUGIN_VERSION', '0.1.1' );
+
+  # beta version
+  define( 'WP_BACKUP_PLUGIN_BETA', true );
 }
 
 {

@@ -6,6 +6,7 @@ import { useConfirm } from './Confirm';
 import { useToast } from './Toast';
 import DropdownActions from './DropdownActions';
 import { FileDown, Trash2, RotateCcw } from 'lucide-react';
+import { useModal } from './Modal';
 
 const BackupTable = () => {
   const { backups, setBackups, fetchBackups_Fn } = useBackupStore();
@@ -13,6 +14,7 @@ const BackupTable = () => {
   const [filteredBackups, setFilteredBackups] = React.useState([]);
   const confirm = useConfirm();
   const toast = useToast();
+  const { openModal, closeModal } = useModal();
 
   // selected backups
   const [selectedBackups, setSelectedBackups] = React.useState([]);
@@ -152,13 +154,17 @@ const BackupTable = () => {
     }
   };
 
+  const handleRestoreBackup = (backupId) => {
+    console.log('restore backup', backupId);
+  }
+
   return (
     <div className="tw-bg-white tw-border tw-border-gray-200">
       <BackupTableTools 
         onFilterChange={handleFilterChange} 
         onDeleteBackups={handleDeleteBackups}
         selectedBackups={selectedBackups} />
-      
+
       {/* Mobile/Tablet View */}
       <div className="tw-block md:tw-hidden">
         {filteredBackups.map((backup) => (
@@ -323,7 +329,18 @@ const BackupTable = () => {
                       {
                         label: 'Restore',
                         icon: <RotateCcw />,
-                        onClick: () => handleRestoreBackup(backup.id),
+                        onClick: () => {
+                          // setSelectedBackupRestore(backup);
+                          // setIsRestoreModalOpen(true);
+                          openModal({
+                            title: 'Restore Backup',
+                            children: <div>
+                              <h1>Restore Backup</h1>
+                              <p>Restore backup { JSON.stringify(backup) }</p>
+                              <button onClick={closeModal}>Close</button>
+                            </div>,
+                          });
+                        },
                       },
 
                       {

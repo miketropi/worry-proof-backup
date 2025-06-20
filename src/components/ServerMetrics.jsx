@@ -11,7 +11,8 @@ import {
   FileArchive,
   Bug,
   Terminal,
-  Lock
+  Lock,
+  ServerCrash,
 } from "lucide-react";
 
 // Helper functions for formatting
@@ -90,11 +91,19 @@ const metricsConfig = [
     format: (v) => v || "-",
     icon: <Code className="tw-w-5 tw-h-5 tw-text-fuchsia-500" />,
   },
+  
   {
     key: "ZipArchive",
     label: "ZipArchive",
     format: (v) => (v ? "On" : "Off"),
     icon: <FileArchive className="tw-w-5 tw-h-5 tw-text-gray-500" />,
+  },
+  // wp version
+  {
+    key: "wp_version",
+    label: "WP Version",
+    format: (v) => v || "-",
+    icon: <Code className="tw-w-5 tw-h-5 tw-text-fuchsia-500" />,
   },
   {
     key: "WP_Debug",

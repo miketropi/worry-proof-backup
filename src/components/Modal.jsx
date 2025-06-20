@@ -1,4 +1,4 @@
-import React, { useEffect, useRef } from 'react';
+import React, { createContext, useContext, useCallback, useState, useEffect, useRef } from 'react';
 import { createPortal } from 'react-dom';
 
 /**
@@ -131,3 +131,59 @@ const Modal = ({
 };
 
 export default Modal;
+
+const ModalContext = createContext(null);
+
+const ModalProvider = ({ children }) => {
+  const [state, setState] = useState({
+    isOpen: false,
+    onClose: () => {},
+    options: {},
+  });
+
+  // const resolveRef = useRef(null);
+  // const rejectRef = useRef(null);
+
+  const openModal = useCallback((opts) => {
+    setState({
+      isOpen: true,
+      onClose: () => {
+        setState({
+          isOpen: false,
+          onClose: () => {},
+          options: {},
+        });
+      },
+      options: opts,
+    });
+  }, []);
+
+  const closeModal = useCallback(() => {
+    setState({
+      isOpen: false,
+      onClose: () => {},
+      options: {},
+    });
+  }, []);
+
+  return (
+    <ModalContext.Provider value={ { openModal, closeModal } }>
+      {children}
+      <Modal
+        isOpen={state.isOpen}
+        onClose={state.onClose}
+        {...state.options}
+      />
+    </ModalContext.Provider>
+  );
+};
+
+const useModal = () => {
+  const { openModal, closeModal } = useContext(ModalContext);
+  if (!openModal) {
+    throw new Error('useModal must be used within a ModalProvider');
+  }
+  return { openModal, closeModal };
+};
+
+export { ModalProvider, useModal };

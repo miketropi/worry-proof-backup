@@ -6,12 +6,15 @@ import { ConfirmProvider } from './components/Confirm';
 import { ToastProvider } from './components/Toast';
 import Tab from './components/Tab';
 import { Package, Book, Bug } from 'lucide-react';
+import { ModalProvider } from './components/Modal';
 
 const AppProvider = ({ children }) => {
   return (
     <ConfirmProvider>
       <ToastProvider>
-        {children}
+        <ModalProvider>
+          {children}
+        </ModalProvider>
       </ToastProvider>
     </ConfirmProvider>
   );
