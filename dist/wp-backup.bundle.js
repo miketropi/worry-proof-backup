@@ -1390,6 +1390,94 @@ var defaultAttributes = {
 
 /***/ }),
 
+/***/ "./node_modules/lucide-react/dist/esm/icons/book.js":
+/*!**********************************************************!*\
+  !*** ./node_modules/lucide-react/dist/esm/icons/book.js ***!
+  \**********************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   __iconNode: () => (/* binding */ __iconNode),
+/* harmony export */   "default": () => (/* binding */ Book)
+/* harmony export */ });
+/* harmony import */ var _createLucideIcon_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../createLucideIcon.js */ "./node_modules/lucide-react/dist/esm/createLucideIcon.js");
+/**
+ * @license lucide-react v0.518.0 - ISC
+ *
+ * This source code is licensed under the ISC license.
+ * See the LICENSE file in the root directory of this source tree.
+ */
+
+
+
+const __iconNode = [
+  [
+    "path",
+    {
+      d: "M4 19.5v-15A2.5 2.5 0 0 1 6.5 2H19a1 1 0 0 1 1 1v18a1 1 0 0 1-1 1H6.5a1 1 0 0 1 0-5H20",
+      key: "k3hazp"
+    }
+  ]
+];
+const Book = (0,_createLucideIcon_js__WEBPACK_IMPORTED_MODULE_0__["default"])("book", __iconNode);
+
+
+//# sourceMappingURL=book.js.map
+
+
+/***/ }),
+
+/***/ "./node_modules/lucide-react/dist/esm/icons/bug.js":
+/*!*********************************************************!*\
+  !*** ./node_modules/lucide-react/dist/esm/icons/bug.js ***!
+  \*********************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   __iconNode: () => (/* binding */ __iconNode),
+/* harmony export */   "default": () => (/* binding */ Bug)
+/* harmony export */ });
+/* harmony import */ var _createLucideIcon_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../createLucideIcon.js */ "./node_modules/lucide-react/dist/esm/createLucideIcon.js");
+/**
+ * @license lucide-react v0.518.0 - ISC
+ *
+ * This source code is licensed under the ISC license.
+ * See the LICENSE file in the root directory of this source tree.
+ */
+
+
+
+const __iconNode = [
+  ["path", { d: "m8 2 1.88 1.88", key: "fmnt4t" }],
+  ["path", { d: "M14.12 3.88 16 2", key: "qol33r" }],
+  ["path", { d: "M9 7.13v-1a3.003 3.003 0 1 1 6 0v1", key: "d7y7pr" }],
+  [
+    "path",
+    {
+      d: "M12 20c-3.3 0-6-2.7-6-6v-3a4 4 0 0 1 4-4h4a4 4 0 0 1 4 4v3c0 3.3-2.7 6-6 6",
+      key: "xs1cw7"
+    }
+  ],
+  ["path", { d: "M12 20v-9", key: "1qisl0" }],
+  ["path", { d: "M6.53 9C4.6 8.8 3 7.1 3 5", key: "32zzws" }],
+  ["path", { d: "M6 13H2", key: "82j7cp" }],
+  ["path", { d: "M3 21c0-2.1 1.7-3.9 3.8-4", key: "4p0ekp" }],
+  ["path", { d: "M20.97 5c0 2.1-1.6 3.8-3.5 4", key: "18gb23" }],
+  ["path", { d: "M22 13h-4", key: "1jl80f" }],
+  ["path", { d: "M17.2 17c2.1.1 3.8 1.9 3.8 4", key: "k3fwyw" }]
+];
+const Bug = (0,_createLucideIcon_js__WEBPACK_IMPORTED_MODULE_0__["default"])("bug", __iconNode);
+
+
+//# sourceMappingURL=bug.js.map
+
+
+/***/ }),
+
 /***/ "./node_modules/lucide-react/dist/esm/icons/circle-check.js":
 /*!******************************************************************!*\
   !*** ./node_modules/lucide-react/dist/esm/icons/circle-check.js ***!
@@ -1459,6 +1547,150 @@ const CircleX = (0,_createLucideIcon_js__WEBPACK_IMPORTED_MODULE_0__["default"])
 
 /***/ }),
 
+/***/ "./node_modules/lucide-react/dist/esm/icons/clock.js":
+/*!***********************************************************!*\
+  !*** ./node_modules/lucide-react/dist/esm/icons/clock.js ***!
+  \***********************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   __iconNode: () => (/* binding */ __iconNode),
+/* harmony export */   "default": () => (/* binding */ Clock)
+/* harmony export */ });
+/* harmony import */ var _createLucideIcon_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../createLucideIcon.js */ "./node_modules/lucide-react/dist/esm/createLucideIcon.js");
+/**
+ * @license lucide-react v0.518.0 - ISC
+ *
+ * This source code is licensed under the ISC license.
+ * See the LICENSE file in the root directory of this source tree.
+ */
+
+
+
+const __iconNode = [
+  ["circle", { cx: "12", cy: "12", r: "10", key: "1mglay" }],
+  ["polyline", { points: "12 6 12 12 16 14", key: "68esgv" }]
+];
+const Clock = (0,_createLucideIcon_js__WEBPACK_IMPORTED_MODULE_0__["default"])("clock", __iconNode);
+
+
+//# sourceMappingURL=clock.js.map
+
+
+/***/ }),
+
+/***/ "./node_modules/lucide-react/dist/esm/icons/code.js":
+/*!**********************************************************!*\
+  !*** ./node_modules/lucide-react/dist/esm/icons/code.js ***!
+  \**********************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   __iconNode: () => (/* binding */ __iconNode),
+/* harmony export */   "default": () => (/* binding */ Code)
+/* harmony export */ });
+/* harmony import */ var _createLucideIcon_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../createLucideIcon.js */ "./node_modules/lucide-react/dist/esm/createLucideIcon.js");
+/**
+ * @license lucide-react v0.518.0 - ISC
+ *
+ * This source code is licensed under the ISC license.
+ * See the LICENSE file in the root directory of this source tree.
+ */
+
+
+
+const __iconNode = [
+  ["path", { d: "m16 18 6-6-6-6", key: "eg8j8" }],
+  ["path", { d: "m8 6-6 6 6 6", key: "ppft3o" }]
+];
+const Code = (0,_createLucideIcon_js__WEBPACK_IMPORTED_MODULE_0__["default"])("code", __iconNode);
+
+
+//# sourceMappingURL=code.js.map
+
+
+/***/ }),
+
+/***/ "./node_modules/lucide-react/dist/esm/icons/database.js":
+/*!**************************************************************!*\
+  !*** ./node_modules/lucide-react/dist/esm/icons/database.js ***!
+  \**************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   __iconNode: () => (/* binding */ __iconNode),
+/* harmony export */   "default": () => (/* binding */ Database)
+/* harmony export */ });
+/* harmony import */ var _createLucideIcon_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../createLucideIcon.js */ "./node_modules/lucide-react/dist/esm/createLucideIcon.js");
+/**
+ * @license lucide-react v0.518.0 - ISC
+ *
+ * This source code is licensed under the ISC license.
+ * See the LICENSE file in the root directory of this source tree.
+ */
+
+
+
+const __iconNode = [
+  ["ellipse", { cx: "12", cy: "5", rx: "9", ry: "3", key: "msslwz" }],
+  ["path", { d: "M3 5V19A9 3 0 0 0 21 19V5", key: "1wlel7" }],
+  ["path", { d: "M3 12A9 3 0 0 0 21 12", key: "mv7ke4" }]
+];
+const Database = (0,_createLucideIcon_js__WEBPACK_IMPORTED_MODULE_0__["default"])("database", __iconNode);
+
+
+//# sourceMappingURL=database.js.map
+
+
+/***/ }),
+
+/***/ "./node_modules/lucide-react/dist/esm/icons/file-archive.js":
+/*!******************************************************************!*\
+  !*** ./node_modules/lucide-react/dist/esm/icons/file-archive.js ***!
+  \******************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   __iconNode: () => (/* binding */ __iconNode),
+/* harmony export */   "default": () => (/* binding */ FileArchive)
+/* harmony export */ });
+/* harmony import */ var _createLucideIcon_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../createLucideIcon.js */ "./node_modules/lucide-react/dist/esm/createLucideIcon.js");
+/**
+ * @license lucide-react v0.518.0 - ISC
+ *
+ * This source code is licensed under the ISC license.
+ * See the LICENSE file in the root directory of this source tree.
+ */
+
+
+
+const __iconNode = [
+  ["path", { d: "M10 12v-1", key: "v7bkov" }],
+  ["path", { d: "M10 18v-2", key: "1cjy8d" }],
+  ["path", { d: "M10 7V6", key: "dljcrl" }],
+  ["path", { d: "M14 2v4a2 2 0 0 0 2 2h4", key: "tnqrlb" }],
+  [
+    "path",
+    { d: "M15.5 22H18a2 2 0 0 0 2-2V7l-5-5H6a2 2 0 0 0-2 2v16a2 2 0 0 0 .274 1.01", key: "gkbcor" }
+  ],
+  ["circle", { cx: "10", cy: "20", r: "2", key: "1xzdoj" }]
+];
+const FileArchive = (0,_createLucideIcon_js__WEBPACK_IMPORTED_MODULE_0__["default"])("file-archive", __iconNode);
+
+
+//# sourceMappingURL=file-archive.js.map
+
+
+/***/ }),
+
 /***/ "./node_modules/lucide-react/dist/esm/icons/file-down.js":
 /*!***************************************************************!*\
   !*** ./node_modules/lucide-react/dist/esm/icons/file-down.js ***!
@@ -1491,6 +1723,48 @@ const FileDown = (0,_createLucideIcon_js__WEBPACK_IMPORTED_MODULE_0__["default"]
 
 
 //# sourceMappingURL=file-down.js.map
+
+
+/***/ }),
+
+/***/ "./node_modules/lucide-react/dist/esm/icons/hard-drive.js":
+/*!****************************************************************!*\
+  !*** ./node_modules/lucide-react/dist/esm/icons/hard-drive.js ***!
+  \****************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   __iconNode: () => (/* binding */ __iconNode),
+/* harmony export */   "default": () => (/* binding */ HardDrive)
+/* harmony export */ });
+/* harmony import */ var _createLucideIcon_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../createLucideIcon.js */ "./node_modules/lucide-react/dist/esm/createLucideIcon.js");
+/**
+ * @license lucide-react v0.518.0 - ISC
+ *
+ * This source code is licensed under the ISC license.
+ * See the LICENSE file in the root directory of this source tree.
+ */
+
+
+
+const __iconNode = [
+  ["line", { x1: "22", x2: "2", y1: "12", y2: "12", key: "1y58io" }],
+  [
+    "path",
+    {
+      d: "M5.45 5.11 2 12v6a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2v-6l-3.45-6.89A2 2 0 0 0 16.76 4H7.24a2 2 0 0 0-1.79 1.11z",
+      key: "oot6mr"
+    }
+  ],
+  ["line", { x1: "6", x2: "6.01", y1: "16", y2: "16", key: "sgf278" }],
+  ["line", { x1: "10", x2: "10.01", y1: "16", y2: "16", key: "1l4acy" }]
+];
+const HardDrive = (0,_createLucideIcon_js__WEBPACK_IMPORTED_MODULE_0__["default"])("hard-drive", __iconNode);
+
+
+//# sourceMappingURL=hard-drive.js.map
 
 
 /***/ }),
@@ -1530,6 +1804,149 @@ const Info = (0,_createLucideIcon_js__WEBPACK_IMPORTED_MODULE_0__["default"])("i
 
 /***/ }),
 
+/***/ "./node_modules/lucide-react/dist/esm/icons/lock.js":
+/*!**********************************************************!*\
+  !*** ./node_modules/lucide-react/dist/esm/icons/lock.js ***!
+  \**********************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   __iconNode: () => (/* binding */ __iconNode),
+/* harmony export */   "default": () => (/* binding */ Lock)
+/* harmony export */ });
+/* harmony import */ var _createLucideIcon_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../createLucideIcon.js */ "./node_modules/lucide-react/dist/esm/createLucideIcon.js");
+/**
+ * @license lucide-react v0.518.0 - ISC
+ *
+ * This source code is licensed under the ISC license.
+ * See the LICENSE file in the root directory of this source tree.
+ */
+
+
+
+const __iconNode = [
+  ["rect", { width: "18", height: "11", x: "3", y: "11", rx: "2", ry: "2", key: "1w4ew1" }],
+  ["path", { d: "M7 11V7a5 5 0 0 1 10 0v4", key: "fwvmzm" }]
+];
+const Lock = (0,_createLucideIcon_js__WEBPACK_IMPORTED_MODULE_0__["default"])("lock", __iconNode);
+
+
+//# sourceMappingURL=lock.js.map
+
+
+/***/ }),
+
+/***/ "./node_modules/lucide-react/dist/esm/icons/message-circle.js":
+/*!********************************************************************!*\
+  !*** ./node_modules/lucide-react/dist/esm/icons/message-circle.js ***!
+  \********************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   __iconNode: () => (/* binding */ __iconNode),
+/* harmony export */   "default": () => (/* binding */ MessageCircle)
+/* harmony export */ });
+/* harmony import */ var _createLucideIcon_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../createLucideIcon.js */ "./node_modules/lucide-react/dist/esm/createLucideIcon.js");
+/**
+ * @license lucide-react v0.518.0 - ISC
+ *
+ * This source code is licensed under the ISC license.
+ * See the LICENSE file in the root directory of this source tree.
+ */
+
+
+
+const __iconNode = [
+  ["path", { d: "M7.9 20A9 9 0 1 0 4 16.1L2 22Z", key: "vv11sd" }]
+];
+const MessageCircle = (0,_createLucideIcon_js__WEBPACK_IMPORTED_MODULE_0__["default"])("message-circle", __iconNode);
+
+
+//# sourceMappingURL=message-circle.js.map
+
+
+/***/ }),
+
+/***/ "./node_modules/lucide-react/dist/esm/icons/package.js":
+/*!*************************************************************!*\
+  !*** ./node_modules/lucide-react/dist/esm/icons/package.js ***!
+  \*************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   __iconNode: () => (/* binding */ __iconNode),
+/* harmony export */   "default": () => (/* binding */ Package)
+/* harmony export */ });
+/* harmony import */ var _createLucideIcon_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../createLucideIcon.js */ "./node_modules/lucide-react/dist/esm/createLucideIcon.js");
+/**
+ * @license lucide-react v0.518.0 - ISC
+ *
+ * This source code is licensed under the ISC license.
+ * See the LICENSE file in the root directory of this source tree.
+ */
+
+
+
+const __iconNode = [
+  [
+    "path",
+    {
+      d: "M11 21.73a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73z",
+      key: "1a0edw"
+    }
+  ],
+  ["path", { d: "M12 22V12", key: "d0xqtd" }],
+  ["polyline", { points: "3.29 7 12 12 20.71 7", key: "ousv84" }],
+  ["path", { d: "m7.5 4.27 9 5.15", key: "1c824w" }]
+];
+const Package = (0,_createLucideIcon_js__WEBPACK_IMPORTED_MODULE_0__["default"])("package", __iconNode);
+
+
+//# sourceMappingURL=package.js.map
+
+
+/***/ }),
+
+/***/ "./node_modules/lucide-react/dist/esm/icons/plus.js":
+/*!**********************************************************!*\
+  !*** ./node_modules/lucide-react/dist/esm/icons/plus.js ***!
+  \**********************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   __iconNode: () => (/* binding */ __iconNode),
+/* harmony export */   "default": () => (/* binding */ Plus)
+/* harmony export */ });
+/* harmony import */ var _createLucideIcon_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../createLucideIcon.js */ "./node_modules/lucide-react/dist/esm/createLucideIcon.js");
+/**
+ * @license lucide-react v0.518.0 - ISC
+ *
+ * This source code is licensed under the ISC license.
+ * See the LICENSE file in the root directory of this source tree.
+ */
+
+
+
+const __iconNode = [
+  ["path", { d: "M5 12h14", key: "1ays0h" }],
+  ["path", { d: "M12 5v14", key: "s699le" }]
+];
+const Plus = (0,_createLucideIcon_js__WEBPACK_IMPORTED_MODULE_0__["default"])("plus", __iconNode);
+
+
+//# sourceMappingURL=plus.js.map
+
+
+/***/ }),
+
 /***/ "./node_modules/lucide-react/dist/esm/icons/rotate-ccw.js":
 /*!****************************************************************!*\
   !*** ./node_modules/lucide-react/dist/esm/icons/rotate-ccw.js ***!
@@ -1560,6 +1977,115 @@ const RotateCcw = (0,_createLucideIcon_js__WEBPACK_IMPORTED_MODULE_0__["default"
 
 
 //# sourceMappingURL=rotate-ccw.js.map
+
+
+/***/ }),
+
+/***/ "./node_modules/lucide-react/dist/esm/icons/server.js":
+/*!************************************************************!*\
+  !*** ./node_modules/lucide-react/dist/esm/icons/server.js ***!
+  \************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   __iconNode: () => (/* binding */ __iconNode),
+/* harmony export */   "default": () => (/* binding */ Server)
+/* harmony export */ });
+/* harmony import */ var _createLucideIcon_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../createLucideIcon.js */ "./node_modules/lucide-react/dist/esm/createLucideIcon.js");
+/**
+ * @license lucide-react v0.518.0 - ISC
+ *
+ * This source code is licensed under the ISC license.
+ * See the LICENSE file in the root directory of this source tree.
+ */
+
+
+
+const __iconNode = [
+  ["rect", { width: "20", height: "8", x: "2", y: "2", rx: "2", ry: "2", key: "ngkwjq" }],
+  ["rect", { width: "20", height: "8", x: "2", y: "14", rx: "2", ry: "2", key: "iecqi9" }],
+  ["line", { x1: "6", x2: "6.01", y1: "6", y2: "6", key: "16zg32" }],
+  ["line", { x1: "6", x2: "6.01", y1: "18", y2: "18", key: "nzw8ys" }]
+];
+const Server = (0,_createLucideIcon_js__WEBPACK_IMPORTED_MODULE_0__["default"])("server", __iconNode);
+
+
+//# sourceMappingURL=server.js.map
+
+
+/***/ }),
+
+/***/ "./node_modules/lucide-react/dist/esm/icons/shield.js":
+/*!************************************************************!*\
+  !*** ./node_modules/lucide-react/dist/esm/icons/shield.js ***!
+  \************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   __iconNode: () => (/* binding */ __iconNode),
+/* harmony export */   "default": () => (/* binding */ Shield)
+/* harmony export */ });
+/* harmony import */ var _createLucideIcon_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../createLucideIcon.js */ "./node_modules/lucide-react/dist/esm/createLucideIcon.js");
+/**
+ * @license lucide-react v0.518.0 - ISC
+ *
+ * This source code is licensed under the ISC license.
+ * See the LICENSE file in the root directory of this source tree.
+ */
+
+
+
+const __iconNode = [
+  [
+    "path",
+    {
+      d: "M20 13c0 5-3.5 7.5-7.66 8.95a1 1 0 0 1-.67-.01C7.5 20.5 4 18 4 13V6a1 1 0 0 1 1-1c2 0 4.5-1.2 6.24-2.72a1.17 1.17 0 0 1 1.52 0C14.51 3.81 17 5 19 5a1 1 0 0 1 1 1z",
+      key: "oel41y"
+    }
+  ]
+];
+const Shield = (0,_createLucideIcon_js__WEBPACK_IMPORTED_MODULE_0__["default"])("shield", __iconNode);
+
+
+//# sourceMappingURL=shield.js.map
+
+
+/***/ }),
+
+/***/ "./node_modules/lucide-react/dist/esm/icons/terminal.js":
+/*!**************************************************************!*\
+  !*** ./node_modules/lucide-react/dist/esm/icons/terminal.js ***!
+  \**************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   __iconNode: () => (/* binding */ __iconNode),
+/* harmony export */   "default": () => (/* binding */ Terminal)
+/* harmony export */ });
+/* harmony import */ var _createLucideIcon_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../createLucideIcon.js */ "./node_modules/lucide-react/dist/esm/createLucideIcon.js");
+/**
+ * @license lucide-react v0.518.0 - ISC
+ *
+ * This source code is licensed under the ISC license.
+ * See the LICENSE file in the root directory of this source tree.
+ */
+
+
+
+const __iconNode = [
+  ["path", { d: "M12 19h8", key: "baeox8" }],
+  ["path", { d: "m4 17 6-6-6-6", key: "1yngyt" }]
+];
+const Terminal = (0,_createLucideIcon_js__WEBPACK_IMPORTED_MODULE_0__["default"])("terminal", __iconNode);
+
+
+//# sourceMappingURL=terminal.js.map
 
 
 /***/ }),
@@ -1638,6 +2164,41 @@ const TriangleAlert = (0,_createLucideIcon_js__WEBPACK_IMPORTED_MODULE_0__["defa
 
 
 //# sourceMappingURL=triangle-alert.js.map
+
+
+/***/ }),
+
+/***/ "./node_modules/lucide-react/dist/esm/icons/upload.js":
+/*!************************************************************!*\
+  !*** ./node_modules/lucide-react/dist/esm/icons/upload.js ***!
+  \************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   __iconNode: () => (/* binding */ __iconNode),
+/* harmony export */   "default": () => (/* binding */ Upload)
+/* harmony export */ });
+/* harmony import */ var _createLucideIcon_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../createLucideIcon.js */ "./node_modules/lucide-react/dist/esm/createLucideIcon.js");
+/**
+ * @license lucide-react v0.518.0 - ISC
+ *
+ * This source code is licensed under the ISC license.
+ * See the LICENSE file in the root directory of this source tree.
+ */
+
+
+
+const __iconNode = [
+  ["path", { d: "M12 3v12", key: "1x0j5s" }],
+  ["path", { d: "m17 8-5-5-5 5", key: "7q97r8" }],
+  ["path", { d: "M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4", key: "ih7n3h" }]
+];
+const Upload = (0,_createLucideIcon_js__WEBPACK_IMPORTED_MODULE_0__["default"])("upload", __iconNode);
+
+
+//# sourceMappingURL=upload.js.map
 
 
 /***/ }),
@@ -29606,7 +30167,13 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _components_BackupProcess__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./components/BackupProcess */ "./src/components/BackupProcess.jsx");
 /* harmony import */ var _components_Confirm__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./components/Confirm */ "./src/components/Confirm.jsx");
 /* harmony import */ var _components_Toast__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./components/Toast */ "./src/components/Toast.jsx");
-/* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! react/jsx-runtime */ "./node_modules/react/jsx-runtime.js");
+/* harmony import */ var _components_Tab__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./components/Tab */ "./src/components/Tab.jsx");
+/* harmony import */ var lucide_react__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! lucide-react */ "./node_modules/lucide-react/dist/esm/icons/package.js");
+/* harmony import */ var lucide_react__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! lucide-react */ "./node_modules/lucide-react/dist/esm/icons/book.js");
+/* harmony import */ var lucide_react__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! lucide-react */ "./node_modules/lucide-react/dist/esm/icons/message-circle.js");
+/* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! react/jsx-runtime */ "./node_modules/react/jsx-runtime.js");
+
+
 
 
 
@@ -29616,26 +30183,81 @@ __webpack_require__.r(__webpack_exports__);
 
 var AppProvider = function AppProvider(_ref) {
   var children = _ref.children;
-  return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsx)(_components_Confirm__WEBPACK_IMPORTED_MODULE_4__.ConfirmProvider, {
-    children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsx)(_components_Toast__WEBPACK_IMPORTED_MODULE_5__.ToastProvider, {
+  return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_7__.jsx)(_components_Confirm__WEBPACK_IMPORTED_MODULE_4__.ConfirmProvider, {
+    children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_7__.jsx)(_components_Toast__WEBPACK_IMPORTED_MODULE_5__.ToastProvider, {
       children: children
     })
   });
 };
+var tabs = [{
+  label: 'Your Backups',
+  icon: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_7__.jsx)(lucide_react__WEBPACK_IMPORTED_MODULE_8__["default"], {
+    size: 14
+  }),
+  content: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_7__.jsxs)(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_7__.Fragment, {
+    children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_7__.jsx)(_components_BackupProcess__WEBPACK_IMPORTED_MODULE_3__["default"], {}), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_7__.jsx)(_components_BackupTable__WEBPACK_IMPORTED_MODULE_0__["default"], {})]
+  })
+}, {
+  label: 'Documentation',
+  icon: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_7__.jsx)(lucide_react__WEBPACK_IMPORTED_MODULE_9__["default"], {
+    size: 14
+  }),
+  content: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_7__.jsxs)("div", {
+    className: "tw-text-center tw-py-12",
+    children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_7__.jsx)("div", {
+      className: "tw-text-6xl tw-mb-4",
+      children: "\uD83D\uDE80"
+    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_7__.jsx)("h3", {
+      className: "tw-text-xl tw-font-semibold tw-text-gray-900 tw-mb-2",
+      children: "Documentation is cooking! \uD83D\uDC68\u200D\uD83C\uDF73"
+    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_7__.jsx)("p", {
+      className: "tw-text-gray-600 tw-mb-4",
+      children: "We're whipping up some amazing docs for you! \uD83D\uDCDA\u2728"
+    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_7__.jsx)("div", {
+      className: "tw-text-sm tw-text-gray-500",
+      children: "Stay tuned for the full guide on how to master your backups! \uD83D\uDCAA"
+    })]
+  })
+},
+// feedback
+{
+  label: 'Feedback',
+  icon: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_7__.jsx)(lucide_react__WEBPACK_IMPORTED_MODULE_10__["default"], {
+    size: 14
+  }),
+  content: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_7__.jsxs)("div", {
+    className: "tw-text-center tw-py-12",
+    children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_7__.jsx)("div", {
+      className: "tw-text-6xl tw-mb-4",
+      children: "\uD83D\uDCAC\u2728"
+    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_7__.jsx)("h3", {
+      className: "tw-text-xl tw-font-semibold tw-text-gray-900 tw-mb-2",
+      children: "Spill the tea! \u2615\uFE0F"
+    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_7__.jsx)("p", {
+      className: "tw-text-gray-600 tw-mb-4",
+      children: "We're all ears for your thoughts! Drop us some feedback and let's make this backup thing absolutely fire! \uD83D\uDD25"
+    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_7__.jsx)("div", {
+      className: "tw-text-sm tw-text-gray-500",
+      children: "Your feedback helps us level up this plugin to the next level! \uD83D\uDE80\uD83D\uDCAA"
+    })]
+  })
+}];
 function App() {
-  return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsxs)(AppProvider, {
-    children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsx)(_components_BackupProcess__WEBPACK_IMPORTED_MODULE_3__["default"], {}), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsxs)("div", {
+  return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_7__.jsxs)(AppProvider, {
+    children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_7__.jsxs)("div", {
       className: "tw-grid tw-grid-cols-1 md:tw-grid-cols-12 tw-gap-8",
-      children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsx)("div", {
+      children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_7__.jsx)("div", {
         className: "md:tw-col-span-9",
-        children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsx)(_components_BackupTable__WEBPACK_IMPORTED_MODULE_0__["default"], {})
-      }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsx)("div", {
+        children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_7__.jsx)(_components_Tab__WEBPACK_IMPORTED_MODULE_6__["default"], {
+          tabs: tabs
+        })
+      }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_7__.jsx)("div", {
         className: "md:tw-col-span-3",
-        children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsx)(_components_ServerMetrics__WEBPACK_IMPORTED_MODULE_2__["default"], {
+        children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_7__.jsx)(_components_ServerMetrics__WEBPACK_IMPORTED_MODULE_2__["default"], {
           metrics: wp_backup_php_data.server_metrics
         })
       })]
-    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsx)(_components_Footer__WEBPACK_IMPORTED_MODULE_1__["default"], {})]
+    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_7__.jsx)(_components_Footer__WEBPACK_IMPORTED_MODULE_1__["default"], {})]
   });
 }
 
@@ -30310,7 +30932,7 @@ var BackupTable = function BackupTable() {
     }
   };
   return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_7__.jsxs)("div", {
-    className: "tw-bg-white tw-border tw-border-gray-200 tw-rounded-lg",
+    className: "tw-bg-white tw-border tw-border-gray-200",
     children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_7__.jsx)(_BackupTableTools__WEBPACK_IMPORTED_MODULE_2__["default"], {
       onFilterChange: handleFilterChange,
       onDeleteBackups: handleDeleteBackups,
@@ -31409,7 +32031,20 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ });
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var lucide_react__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! lucide-react */ "./node_modules/lucide-react/dist/esm/icons/hard-drive.js");
+/* harmony import */ var lucide_react__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! lucide-react */ "./node_modules/lucide-react/dist/esm/icons/database.js");
+/* harmony import */ var lucide_react__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! lucide-react */ "./node_modules/lucide-react/dist/esm/icons/shield.js");
+/* harmony import */ var lucide_react__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! lucide-react */ "./node_modules/lucide-react/dist/esm/icons/clock.js");
+/* harmony import */ var lucide_react__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! lucide-react */ "./node_modules/lucide-react/dist/esm/icons/upload.js");
+/* harmony import */ var lucide_react__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! lucide-react */ "./node_modules/lucide-react/dist/esm/icons/plus.js");
+/* harmony import */ var lucide_react__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! lucide-react */ "./node_modules/lucide-react/dist/esm/icons/server.js");
+/* harmony import */ var lucide_react__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! lucide-react */ "./node_modules/lucide-react/dist/esm/icons/code.js");
+/* harmony import */ var lucide_react__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! lucide-react */ "./node_modules/lucide-react/dist/esm/icons/file-archive.js");
+/* harmony import */ var lucide_react__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! lucide-react */ "./node_modules/lucide-react/dist/esm/icons/bug.js");
+/* harmony import */ var lucide_react__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! lucide-react */ "./node_modules/lucide-react/dist/esm/icons/terminal.js");
+/* harmony import */ var lucide_react__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! lucide-react */ "./node_modules/lucide-react/dist/esm/icons/lock.js");
 /* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react/jsx-runtime */ "./node_modules/react/jsx-runtime.js");
+
 
 
 // Helper functions for formatting
@@ -31436,131 +32071,50 @@ var metricsConfig = [{
   key: "disk_free_space",
   label: "Disk Free Space",
   format: formatBytes,
-  icon: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("svg", {
-    className: "tw-w-5 tw-h-5 tw-text-blue-500",
-    fill: "none",
-    stroke: "currentColor",
-    viewBox: "0 0 24 24",
-    children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("path", {
-      strokeLinecap: "round",
-      strokeLinejoin: "round",
-      strokeWidth: "2",
-      d: "M3 7v10a2 2 0 002 2h14a2 2 0 002-2V7M3 7l9 6 9-6"
-    })
+  icon: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)(lucide_react__WEBPACK_IMPORTED_MODULE_2__["default"], {
+    className: "tw-w-5 tw-h-5 tw-text-blue-500"
   })
 }, {
   key: "disk_total_space",
   label: "Disk Total Space",
   format: formatBytes,
-  icon: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("svg", {
-    className: "tw-w-5 tw-h-5 tw-text-indigo-500",
-    fill: "none",
-    stroke: "currentColor",
-    viewBox: "0 0 24 24",
-    children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("path", {
-      strokeLinecap: "round",
-      strokeLinejoin: "round",
-      strokeWidth: "2",
-      d: "M4 6h16M4 10h16M4 14h16M4 18h16"
-    })
+  icon: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)(lucide_react__WEBPACK_IMPORTED_MODULE_3__["default"], {
+    className: "tw-w-5 tw-h-5 tw-text-indigo-500"
   })
 }, {
   key: "memory_limit",
   label: "Memory Limit",
   format: formatBytes,
-  icon: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("svg", {
-    className: "tw-w-5 tw-h-5 tw-text-green-500",
-    fill: "none",
-    stroke: "currentColor",
-    viewBox: "0 0 24 24",
-    children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("path", {
-      strokeLinecap: "round",
-      strokeLinejoin: "round",
-      strokeWidth: "2",
-      d: "M17 9V7a5 5 0 00-10 0v2a2 2 0 00-2 2v6a2 2 0 002 2h10a2 2 0 002-2v-6a2 2 0 00-2-2z"
-    })
+  icon: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)(lucide_react__WEBPACK_IMPORTED_MODULE_4__["default"], {
+    className: "tw-w-5 tw-h-5 tw-text-green-500"
   })
 }, {
   key: "memory_usage",
   label: "Memory Usage",
   format: formatBytes,
-  icon: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("svg", {
-    className: "tw-w-5 tw-h-5 tw-text-yellow-500",
-    fill: "none",
-    stroke: "currentColor",
-    viewBox: "0 0 24 24",
-    children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("path", {
-      strokeLinecap: "round",
-      strokeLinejoin: "round",
-      strokeWidth: "2",
-      d: "M12 8v4l3 3"
-    })
+  icon: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)(lucide_react__WEBPACK_IMPORTED_MODULE_5__["default"], {
+    className: "tw-w-5 tw-h-5 tw-text-yellow-500"
   })
 }, {
   key: "max_execution_time",
   label: "Max Execution Time",
   format: formatSeconds,
-  icon: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("svg", {
-    className: "tw-w-5 tw-h-5 tw-text-pink-500",
-    fill: "none",
-    stroke: "currentColor",
-    viewBox: "0 0 24 24",
-    children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("path", {
-      strokeLinecap: "round",
-      strokeLinejoin: "round",
-      strokeWidth: "2",
-      d: "M12 8v4l3 3M12 6a9 9 0 100 18 9 9 0 000-18z"
-    })
+  icon: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)(lucide_react__WEBPACK_IMPORTED_MODULE_5__["default"], {
+    className: "tw-w-5 tw-h-5 tw-text-pink-500"
   })
 }, {
   key: "upload_max_filesize",
   label: "Upload Max Filesize",
   format: formatBytes,
-  icon: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("svg", {
-    className: "tw-w-5 tw-h-5 tw-text-purple-500",
-    fill: "none",
-    stroke: "currentColor",
-    viewBox: "0 0 24 24",
-    children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("path", {
-      strokeLinecap: "round",
-      strokeLinejoin: "round",
-      strokeWidth: "2",
-      d: "M4 16v2a2 2 0 002 2h12a2 2 0 002-2v-2M4 12l8-8 8 8"
-    })
+  icon: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)(lucide_react__WEBPACK_IMPORTED_MODULE_6__["default"], {
+    className: "tw-w-5 tw-h-5 tw-text-purple-500"
   })
 }, {
   key: "post_max_size",
   label: "Post Max Size",
   format: formatBytes,
-  icon: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("svg", {
-    className: "tw-w-5 tw-h-5 tw-text-red-500",
-    fill: "none",
-    stroke: "currentColor",
-    viewBox: "0 0 24 24",
-    children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("path", {
-      strokeLinecap: "round",
-      strokeLinejoin: "round",
-      strokeWidth: "2",
-      d: "M12 4v16m8-8H4"
-    })
-  })
-}, {
-  key: "safe_mode",
-  label: "Safe Mode",
-  format: function format(v) {
-    return v ? "On" : "Off";
-  },
-  icon: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("svg", {
-    className: "tw-w-5 tw-h-5 tw-text-gray-500",
-    fill: "none",
-    stroke: "currentColor",
-    viewBox: "0 0 24 24",
-    children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("path", {
-      strokeLinecap: "round",
-      strokeLinejoin: "round",
-      strokeWidth: "2",
-      d: "M12 11c0-1.104-.896-2-2-2s-2 .896-2 2 .896 2 2 2 2-.896 2-2zm0 0c0-1.104.896-2 2-2s2 .896 2 2-.896 2-2 2-2-.896-2-2z"
-    })
+  icon: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)(lucide_react__WEBPACK_IMPORTED_MODULE_7__["default"], {
+    className: "tw-w-5 tw-h-5 tw-text-red-500"
   })
 }, {
   key: "server_software",
@@ -31568,17 +32122,8 @@ var metricsConfig = [{
   format: function format(v) {
     return v || "-";
   },
-  icon: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("svg", {
-    className: "tw-w-5 tw-h-5 tw-text-cyan-500",
-    fill: "none",
-    stroke: "currentColor",
-    viewBox: "0 0 24 24",
-    children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("path", {
-      strokeLinecap: "round",
-      strokeLinejoin: "round",
-      strokeWidth: "2",
-      d: "M9.75 17L9 21m5.25-4l.75 4m-7.5-4h10.5a2.25 2.25 0 002.25-2.25V6.75A2.25 2.25 0 0017.25 4.5H6.75A2.25 2.25 0 004.5 6.75v8A2.25 2.25 0 006.75 17z"
-    })
+  icon: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)(lucide_react__WEBPACK_IMPORTED_MODULE_8__["default"], {
+    className: "tw-w-5 tw-h-5 tw-text-cyan-500"
   })
 }, {
   key: "php_version",
@@ -31586,24 +32131,8 @@ var metricsConfig = [{
   format: function format(v) {
     return v || "-";
   },
-  icon: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)("svg", {
-    className: "tw-w-5 tw-h-5 tw-text-fuchsia-500",
-    fill: "none",
-    stroke: "currentColor",
-    viewBox: "0 0 24 24",
-    children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("ellipse", {
-      cx: "12",
-      cy: "12",
-      rx: "10",
-      ry: "6"
-    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("text", {
-      x: "12",
-      y: "16",
-      textAnchor: "middle",
-      fontSize: "8",
-      fill: "currentColor",
-      children: "PHP"
-    })]
+  icon: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)(lucide_react__WEBPACK_IMPORTED_MODULE_9__["default"], {
+    className: "tw-w-5 tw-h-5 tw-text-fuchsia-500"
   })
 }, {
   key: "ZipArchive",
@@ -31611,44 +32140,8 @@ var metricsConfig = [{
   format: function format(v) {
     return v ? "On" : "Off";
   },
-  icon: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)("svg", {
-    className: "tw-w-5 tw-h-5 tw-text-gray-500",
-    fill: "none",
-    viewBox: "0 0 24 24",
-    children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("rect", {
-      x: "5",
-      y: "3",
-      width: "14",
-      height: "18",
-      rx: "2",
-      stroke: "currentColor",
-      strokeWidth: "2"
-    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("rect", {
-      x: "9",
-      y: "7",
-      width: "6",
-      height: "2",
-      rx: "1",
-      fill: "currentColor"
-    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("rect", {
-      x: "9",
-      y: "11",
-      width: "6",
-      height: "2",
-      rx: "1",
-      fill: "currentColor"
-    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("rect", {
-      x: "9",
-      y: "15",
-      width: "6",
-      height: "2",
-      rx: "1",
-      fill: "currentColor"
-    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("path", {
-      d: "M7 3v18",
-      stroke: "currentColor",
-      strokeWidth: "2"
-    })]
+  icon: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)(lucide_react__WEBPACK_IMPORTED_MODULE_10__["default"], {
+    className: "tw-w-5 tw-h-5 tw-text-gray-500"
   })
 }, {
   key: "WP_Debug",
@@ -31656,17 +32149,26 @@ var metricsConfig = [{
   format: function format(v) {
     return v ? "On" : "Off";
   },
-  icon: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("svg", {
-    className: "tw-w-5 tw-h-5 tw-text-gray-500",
-    fill: "none",
-    stroke: "currentColor",
-    viewBox: "0 0 24 24",
-    children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("path", {
-      strokeLinecap: "round",
-      strokeLinejoin: "round",
-      strokeWidth: "2",
-      d: "M12 11c0-1.104-.896-2-2-2s-2 .896-2 2 .896 2 2 2 2-.896 2-2zm0 0c0-1.104.896-2 2-2s2 .896 2 2-.896 2-2 2-2-.896-2-2z"
-    })
+  icon: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)(lucide_react__WEBPACK_IMPORTED_MODULE_11__["default"], {
+    className: "tw-w-5 tw-h-5 tw-text-gray-500"
+  })
+}, {
+  key: "WP_CLI",
+  label: "WP CLI",
+  format: function format(v) {
+    return v ? "On" : "Off";
+  },
+  icon: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)(lucide_react__WEBPACK_IMPORTED_MODULE_12__["default"], {
+    className: "tw-w-5 tw-h-5 tw-text-gray-500"
+  })
+}, {
+  key: "safe_mode",
+  label: "Safe Mode",
+  format: function format(v) {
+    return v ? "On" : "Off";
+  },
+  icon: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)(lucide_react__WEBPACK_IMPORTED_MODULE_13__["default"], {
+    className: "tw-w-5 tw-h-5 tw-text-gray-500"
   })
 }];
 var ServerMetrics = function ServerMetrics(_ref) {
@@ -31675,17 +32177,8 @@ var ServerMetrics = function ServerMetrics(_ref) {
     className: "tw-bg-white tw-border tw-border-gray-200 tw-p-4",
     children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)("h2", {
       className: "tw-text-base tw-font-semibold tw-text-gray-800 tw-mb-3 tw-flex tw-items-center tw-gap-2",
-      children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("svg", {
-        className: "tw-w-5 tw-h-5 tw-text-blue-500",
-        fill: "none",
-        stroke: "currentColor",
-        viewBox: "0 0 24 24",
-        children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("path", {
-          strokeLinecap: "round",
-          strokeLinejoin: "round",
-          strokeWidth: "2",
-          d: "M8 7v8a2 2 0 002 2h6M8 7V5a2 2 0 012-2h4.586a1 1 0 01.707.293l4.414 4.414a1 1 0 01.293.707V15a2 2 0 01-2 2h-2M8 7H6a2 2 0 00-2 2v10a2 2 0 002 2h8a2 2 0 002-2v-2"
-        })
+      children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)(lucide_react__WEBPACK_IMPORTED_MODULE_8__["default"], {
+        className: "tw-w-5 tw-h-5 tw-text-blue-500"
       }), "Server Metrics"]
     }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("ul", {
       className: "tw-space-y-2",
@@ -31715,6 +32208,325 @@ var ServerMetrics = function ServerMetrics(_ref) {
   });
 };
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (ServerMetrics);
+
+/***/ }),
+
+/***/ "./src/components/Tab.jsx":
+/*!********************************!*\
+  !*** ./src/components/Tab.jsx ***!
+  \********************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react/jsx-runtime */ "./node_modules/react/jsx-runtime.js");
+function _slicedToArray(r, e) { return _arrayWithHoles(r) || _iterableToArrayLimit(r, e) || _unsupportedIterableToArray(r, e) || _nonIterableRest(); }
+function _nonIterableRest() { throw new TypeError("Invalid attempt to destructure non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method."); }
+function _unsupportedIterableToArray(r, a) { if (r) { if ("string" == typeof r) return _arrayLikeToArray(r, a); var t = {}.toString.call(r).slice(8, -1); return "Object" === t && r.constructor && (t = r.constructor.name), "Map" === t || "Set" === t ? Array.from(r) : "Arguments" === t || /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(t) ? _arrayLikeToArray(r, a) : void 0; } }
+function _arrayLikeToArray(r, a) { (null == a || a > r.length) && (a = r.length); for (var e = 0, n = Array(a); e < a; e++) n[e] = r[e]; return n; }
+function _iterableToArrayLimit(r, l) { var t = null == r ? null : "undefined" != typeof Symbol && r[Symbol.iterator] || r["@@iterator"]; if (null != t) { var e, n, i, u, a = [], f = !0, o = !1; try { if (i = (t = t.call(r)).next, 0 === l) { if (Object(t) !== t) return; f = !1; } else for (; !(f = (e = i.call(t)).done) && (a.push(e.value), a.length !== l); f = !0); } catch (r) { o = !0, n = r; } finally { try { if (!f && null != t["return"] && (u = t["return"](), Object(u) !== u)) return; } finally { if (o) throw n; } } return a; } }
+function _arrayWithHoles(r) { if (Array.isArray(r)) return r; }
+
+
+/**
+ * Modern Tab Component
+ * 
+ * A responsive, accessible tab component with multiple design variants and mobile optimization.
+ * 
+ * FEATURES:
+ * - Responsive design for mobile, tablet, and desktop
+ * - Smooth animations and transitions
+ * - Accessible with proper ARIA attributes
+ * - Touch-friendly for mobile devices
+ * - Clean, modern UI with Tailwind CSS
+ * - Multiple design variants (default, pills, underline)
+ * - Different sizes (sm, md, lg)
+ * - Icon and badge support
+ * - Keyboard navigation
+ * 
+ * USAGE:
+ * 
+ * Basic Usage:
+ * ```jsx
+ * const tabs = [
+ *   {
+ *     label: 'Overview',
+ *     content: <div>Overview content here</div>
+ *   },
+ *   {
+ *     label: 'Settings',
+ *     content: <div>Settings content here</div>
+ *   }
+ * ];
+ * 
+ * <Tab tabs={tabs} />
+ * ```
+ * 
+ * With Icons and Badges:
+ * ```jsx
+ * const tabs = [
+ *   {
+ *     label: 'Overview',
+ *     icon: <svg>...</svg>,
+ *     content: <div>Content</div>
+ *   },
+ *   {
+ *     label: 'Analytics',
+ *     icon: <svg>...</svg>,
+ *     badge: 'New',
+ *     content: <div>Content</div>
+ *   }
+ * ];
+ * ```
+ * 
+ * Different Variants:
+ * ```jsx
+ * <Tab tabs={tabs} variant="default" />    // Default rounded style
+ * <Tab tabs={tabs} variant="pills" />      // Pill-shaped tabs
+ * <Tab tabs={tabs} variant="underline" />  // Underline style
+ * ```
+ * 
+ * Different Sizes:
+ * ```jsx
+ * <Tab tabs={tabs} size="sm" />  // Small
+ * <Tab tabs={tabs} size="md" />  // Medium (default)
+ * <Tab tabs={tabs} size="lg" />  // Large
+ * ```
+ * 
+ * Full Width:
+ * ```jsx
+ * <Tab tabs={tabs} fullWidth />
+ * ```
+ * 
+ * With Callback:
+ * ```jsx
+ * <Tab 
+ *   tabs={tabs} 
+ *   onTabChange={(index, tab) => {
+ *     console.log('Tab changed to:', index, tab.label);
+ *   }}
+ * />
+ * ```
+ * 
+ * PROPS:
+ * @param {Array} tabs - Array of tab objects
+ *   @param {string} tabs[].label - Tab label text
+ *   @param {ReactNode} tabs[].content - Tab content (JSX or function)
+ *   @param {ReactNode} [tabs[].icon] - Optional icon (SVG recommended)
+ *   @param {string} [tabs[].badge] - Optional badge text
+ *   @param {boolean} [tabs[].disabled] - Disable tab if true
+ * @param {number} [defaultActiveTab=0] - Index of initially active tab
+ * @param {string} [className] - Additional CSS classes
+ * @param {string} [variant='default'] - Design variant: 'default', 'pills', 'underline'
+ * @param {string} [size='md'] - Size: 'sm', 'md', 'lg'
+ * @param {boolean} [fullWidth=false] - Expand tabs to full width
+ * @param {function} [onTabChange] - Callback when tab changes (index, tab) => void
+ * 
+ * TAB OBJECT STRUCTURE:
+ * {
+ *   label: string,           // Required: Tab label
+ *   content: ReactNode,      // Required: Tab content (JSX or function)
+ *   icon?: ReactNode,        // Optional: Icon element
+ *   badge?: string,          // Optional: Badge text
+ *   disabled?: boolean       // Optional: Disable tab
+ * }
+ * 
+ * KEYBOARD NAVIGATION:
+ * - Tab/Shift+Tab: Navigate between tabs
+ * - Enter/Space: Activate tab
+ * - Arrow Left/Right: Navigate between tabs
+ * 
+ * ACCESSIBILITY:
+ * - Proper ARIA attributes (role, aria-selected, aria-controls)
+ * - Keyboard navigation support
+ * - Screen reader friendly
+ * - Focus management
+ * - High contrast support
+ */
+
+var Tab = function Tab(_ref) {
+  var _ref$tabs = _ref.tabs,
+    tabs = _ref$tabs === void 0 ? [] : _ref$tabs,
+    _ref$defaultActiveTab = _ref.defaultActiveTab,
+    defaultActiveTab = _ref$defaultActiveTab === void 0 ? 0 : _ref$defaultActiveTab,
+    _ref$className = _ref.className,
+    className = _ref$className === void 0 ? '' : _ref$className,
+    _ref$variant = _ref.variant,
+    variant = _ref$variant === void 0 ? 'default' : _ref$variant,
+    _ref$size = _ref.size,
+    size = _ref$size === void 0 ? 'md' : _ref$size,
+    _ref$fullWidth = _ref.fullWidth,
+    fullWidth = _ref$fullWidth === void 0 ? false : _ref$fullWidth,
+    _ref$onTabChange = _ref.onTabChange,
+    onTabChange = _ref$onTabChange === void 0 ? null : _ref$onTabChange;
+  var _useState = (0,react__WEBPACK_IMPORTED_MODULE_0__.useState)(defaultActiveTab),
+    _useState2 = _slicedToArray(_useState, 2),
+    activeTab = _useState2[0],
+    setActiveTab = _useState2[1];
+  var _useState3 = (0,react__WEBPACK_IMPORTED_MODULE_0__.useState)(false),
+    _useState4 = _slicedToArray(_useState3, 2),
+    isMobile = _useState4[0],
+    setIsMobile = _useState4[1];
+  var tabRefs = (0,react__WEBPACK_IMPORTED_MODULE_0__.useRef)([]);
+  var indicatorRef = (0,react__WEBPACK_IMPORTED_MODULE_0__.useRef)(null);
+
+  // Check if device is mobile
+  (0,react__WEBPACK_IMPORTED_MODULE_0__.useEffect)(function () {
+    var checkMobile = function checkMobile() {
+      setIsMobile(window.innerWidth < 768);
+    };
+    checkMobile();
+    window.addEventListener('resize', checkMobile);
+    return function () {
+      return window.removeEventListener('resize', checkMobile);
+    };
+  }, []);
+
+  // Update active tab indicator position
+  (0,react__WEBPACK_IMPORTED_MODULE_0__.useEffect)(function () {
+    if (indicatorRef.current && tabRefs.current[activeTab]) {
+      var activeTabElement = tabRefs.current[activeTab];
+      var indicator = indicatorRef.current;
+      indicator.style.left = "".concat(activeTabElement.offsetLeft, "px");
+      indicator.style.width = "".concat(activeTabElement.offsetWidth, "px");
+    }
+  }, [activeTab, isMobile]);
+  var handleTabClick = function handleTabClick(index) {
+    setActiveTab(index);
+    if (onTabChange) {
+      onTabChange(index, tabs[index]);
+    }
+  };
+  var handleKeyDown = function handleKeyDown(event, index) {
+    if (event.key === 'Enter' || event.key === ' ') {
+      event.preventDefault();
+      handleTabClick(index);
+    } else if (event.key === 'ArrowRight') {
+      var _tabRefs$current$next;
+      event.preventDefault();
+      var nextIndex = (index + 1) % tabs.length;
+      handleTabClick(nextIndex);
+      (_tabRefs$current$next = tabRefs.current[nextIndex]) === null || _tabRefs$current$next === void 0 || _tabRefs$current$next.focus();
+    } else if (event.key === 'ArrowLeft') {
+      var _tabRefs$current$prev;
+      event.preventDefault();
+      var prevIndex = index === 0 ? tabs.length - 1 : index - 1;
+      handleTabClick(prevIndex);
+      (_tabRefs$current$prev = tabRefs.current[prevIndex]) === null || _tabRefs$current$prev === void 0 || _tabRefs$current$prev.focus();
+    }
+  };
+
+  // Size classes
+  var sizeClasses = {
+    sm: {
+      tab: 'tw-px-3 tw-py-2 tw-text-sm',
+      content: 'tw-p-4',
+      icon: 'tw-w-4 tw-h-4',
+      badge: 'tw-text-xs tw-px-1.5 tw-py-0.5'
+    },
+    md: {
+      tab: 'tw-px-4 tw-py-2 tw-text-sm',
+      content: 'tw-p-4',
+      icon: 'tw-w-5 tw-h-5',
+      badge: 'tw-text-xs tw-px-2 tw-py-0.5'
+    },
+    lg: {
+      tab: 'tw-px-6 tw-py-3 tw-text-base',
+      content: 'tw-p-6',
+      icon: 'tw-w-6 tw-h-6',
+      badge: 'tw-text-sm tw-px-2.5 tw-py-1'
+    }
+  };
+
+  // Variant classes
+  var getVariantClasses = function getVariantClasses(isActive) {
+    var baseClasses = 'tw-transition-all tw-duration-200 tw-ease-in-out tw-font-medium tw-relative';
+    switch (variant) {
+      case 'pills':
+        return "".concat(baseClasses, " tw-rounded-md ").concat(isActive ? 'tw-bg-blue-600 tw-text-white' : 'tw-bg-gray-100 tw-text-gray-700 hover:tw-bg-gray-200');
+      case 'underline':
+        return "".concat(baseClasses, " tw-border-b-2 ").concat(isActive ? 'tw-border-blue-600 tw-text-blue-600' : 'tw-border-transparent tw-text-gray-600 hover:tw-text-gray-800 hover:tw-border-gray-300');
+      default:
+        return "".concat(baseClasses, " tw-border tw-border-b-0 ").concat(isActive ? 'tw-bg-white tw-text-gray-900 tw-border-gray-200 tw-z-10 tw-relative' : 'tw-bg-gray-100 tw-text-gray-600 hover:tw-bg-gray-50 hover:tw-text-gray-800 tw-border-gray-200 tw-border-b-gray-200');
+    }
+  };
+  if (!tabs || tabs.length === 0) {
+    return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("div", {
+      className: "tw-text-center tw-text-gray-500 tw-py-8",
+      children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("div", {
+        className: "tw-text-sm tw-font-medium",
+        children: "No tabs available"
+      })
+    });
+  }
+  return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)("div", {
+    className: "tw-w-full ".concat(className),
+    children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("div", {
+      className: "tw-relative",
+      children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)("div", {
+        className: "\n            tw-flex tw-gap-0 tw-bg-gray-100 tw-border tw-border-gray-200 tw-border-b-0 tw-p-1 tw-pb-0\n            ".concat(fullWidth ? 'tw-w-full' : 'tw-w-fit', "\n            ").concat(variant === 'underline' ? 'tw-bg-transparent tw-p-0 tw-border-b tw-border-gray-200' : '', "\n            ").concat(variant === 'pills' ? 'tw-bg-gray-100 tw-p-1 tw-rounded-lg tw-border' : '', "\n          "),
+        role: "tablist",
+        "aria-label": "Tab navigation",
+        children: [tabs.map(function (tab, index) {
+          return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)("button", {
+            ref: function ref(el) {
+              return tabRefs.current[index] = el;
+            },
+            className: "\n                ".concat(sizeClasses[size].tab, "\n                ").concat(getVariantClasses(activeTab === index), "\n                ").concat(fullWidth ? 'tw-flex-1' : '', "\n                tw-flex tw-items-center tw-justify-center tw-gap-2\n                focus:tw-outline-none focus:tw-ring-2 focus:tw-ring-blue-500 focus:tw-ring-offset-2\n                disabled:tw-opacity-50 disabled:tw-cursor-not-allowed\n                ").concat(variant === 'default' ? 'tw-mr-1 last:tw-mr-0' : '', "\n              "),
+            role: "tab",
+            "aria-selected": activeTab === index,
+            "aria-controls": "tabpanel-".concat(index),
+            id: "tab-".concat(index),
+            onClick: function onClick() {
+              return handleTabClick(index);
+            },
+            onKeyDown: function onKeyDown(e) {
+              return handleKeyDown(e, index);
+            },
+            disabled: tab.disabled,
+            children: [tab.icon && /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("span", {
+              className: "".concat(sizeClasses[size].icon, " tw-flex-shrink-0 tw-flex tw-items-center tw-justify-center"),
+              children: tab.icon
+            }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("span", {
+              className: "tw-truncate",
+              children: tab.label
+            }), tab.badge && /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("span", {
+              className: "\n                  tw-bg-red-100 tw-text-red-800 tw-font-medium tw-rounded-full\n                  ".concat(sizeClasses[size].badge, " tw-ml-1\n                "),
+              children: tab.badge
+            })]
+          }, index);
+        }), variant === 'underline' && /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("div", {
+          ref: indicatorRef,
+          className: "tw-absolute tw-bottom-0 tw-h-0.5 tw-bg-blue-600 tw-transition-all tw-duration-200 tw-ease-in-out"
+        })]
+      })
+    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("div", {
+      className: "tw-mt-0",
+      children: tabs.map(function (tab, index) {
+        return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("div", {
+          role: "tabpanel",
+          id: "tabpanel-".concat(index),
+          "aria-labelledby": "tab-".concat(index),
+          className: "\n              ".concat(activeTab === index ? 'tw-block' : 'tw-hidden', "\n              ").concat(sizeClasses[size].content, "\n              tw-bg-white tw-border tw-border-gray-200\n              ").concat(variant === 'default' ? 'tw-border-t-0' : 'tw-rounded-lg', "\n            "),
+          children: typeof tab.content === 'function' ? tab.content() : tab.content
+        }, index);
+      })
+    }), isMobile && tabs.length > 1 && /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("div", {
+      className: "tw-flex tw-justify-center tw-mt-4 tw-gap-1",
+      children: tabs.map(function (_, index) {
+        return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("div", {
+          className: "tw-w-2 tw-h-2 tw-rounded-full tw-transition-all tw-duration-200 ".concat(activeTab === index ? 'tw-bg-blue-600' : 'tw-bg-gray-300')
+        }, index);
+      })
+    })]
+  });
+};
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (Tab);
 
 /***/ }),
 

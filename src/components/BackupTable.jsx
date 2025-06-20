@@ -153,7 +153,7 @@ const BackupTable = () => {
   };
 
   return (
-    <div className="tw-bg-white tw-border tw-border-gray-200 tw-rounded-lg">
+    <div className="tw-bg-white tw-border tw-border-gray-200">
       <BackupTableTools 
         onFilterChange={handleFilterChange} 
         onDeleteBackups={handleDeleteBackups}
@@ -316,16 +316,7 @@ const BackupTable = () => {
                   )}
                 </td>
                 <td className="tw-px-6 tw-py-4 tw-whitespace-nowrap tw-text-right tw-text-sm tw-font-medium">
-                  {/* <button className="tw-text-blue-600 hover:tw-text-blue-900 tw-mr-4" title="Download">
-                    <svg xmlns="http://www.w3.org/2000/svg" className="tw-h-5 tw-w-5 tw-inline" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 16v2a2 2 0 002 2h12a2 2 0 002-2v-2M7 10l5 5 5-5M12 15V3" />
-                    </svg>
-                  </button> */}
-                  {/* <button className="tw-text-red-600 hover:tw-text-red-900" title="Delete" onClick={() => handleDeleteBackup(backup.id)}>
-                    <svg xmlns="http://www.w3.org/2000/svg" className="tw-h-5 tw-w-5 tw-inline" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
-                    </svg>
-                  </button> */}
+                  
                   <DropdownActions 
                     items={[
                       // restore backup

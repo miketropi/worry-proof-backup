@@ -16,7 +16,7 @@ class WP_Restore_Database {
   private $progress_file;
   private $session_id;
   private $restore_dir;
-  private $chunk_lines = 500;
+  private $chunk_lines = 1000;
   private $exclude_tables = [];
   private $new_prefix = null; // new prefix is $wpdb->prefix
   private $old_prefix = null; // old prefix is $backup_prefix

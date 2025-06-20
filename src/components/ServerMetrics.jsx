@@ -1,4 +1,18 @@
 import React from "react";
+import {
+  HardDrive,
+  Database,
+  Shield,
+  Clock,
+  Upload,
+  Plus,
+  Server,
+  Code,
+  FileArchive,
+  Bug,
+  Terminal,
+  Lock
+} from "lucide-react";
 
 // Helper functions for formatting
 const formatBytes = (bytes) => {
@@ -26,103 +40,79 @@ const metricsConfig = [
     key: "disk_free_space",
     label: "Disk Free Space",
     format: formatBytes,
-    icon: (
-      <svg className="tw-w-5 tw-h-5 tw-text-blue-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M3 7v10a2 2 0 002 2h14a2 2 0 002-2V7M3 7l9 6 9-6" /></svg>
-    ),
+    icon: <HardDrive className="tw-w-5 tw-h-5 tw-text-blue-500" />,
   },
   {
     key: "disk_total_space",
     label: "Disk Total Space",
     format: formatBytes,
-    icon: (
-      <svg className="tw-w-5 tw-h-5 tw-text-indigo-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4 6h16M4 10h16M4 14h16M4 18h16" /></svg>
-    ),
+    icon: <Database className="tw-w-5 tw-h-5 tw-text-indigo-500" />,
   },
   {
     key: "memory_limit",
     label: "Memory Limit",
     format: formatBytes,
-    icon: (
-      <svg className="tw-w-5 tw-h-5 tw-text-green-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M17 9V7a5 5 0 00-10 0v2a2 2 0 00-2 2v6a2 2 0 002 2h10a2 2 0 002-2v-6a2 2 0 00-2-2z" /></svg>
-    ),
+    icon: <Shield className="tw-w-5 tw-h-5 tw-text-green-500" />,
   },
   {
     key: "memory_usage",
     label: "Memory Usage",
     format: formatBytes,
-    icon: (
-      <svg className="tw-w-5 tw-h-5 tw-text-yellow-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M12 8v4l3 3" /></svg>
-    ),
+    icon: <Clock className="tw-w-5 tw-h-5 tw-text-yellow-500" />,
   },
   {
     key: "max_execution_time",
     label: "Max Execution Time",
     format: formatSeconds,
-    icon: (
-      <svg className="tw-w-5 tw-h-5 tw-text-pink-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M12 8v4l3 3M12 6a9 9 0 100 18 9 9 0 000-18z" /></svg>
-    ),
+    icon: <Clock className="tw-w-5 tw-h-5 tw-text-pink-500" />,
   },
   {
     key: "upload_max_filesize",
     label: "Upload Max Filesize",
     format: formatBytes,
-    icon: (
-      <svg className="tw-w-5 tw-h-5 tw-text-purple-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4 16v2a2 2 0 002 2h12a2 2 0 002-2v-2M4 12l8-8 8 8" /></svg>
-    ),
+    icon: <Upload className="tw-w-5 tw-h-5 tw-text-purple-500" />,
   },
   {
     key: "post_max_size",
     label: "Post Max Size",
     format: formatBytes,
-    icon: (
-      <svg className="tw-w-5 tw-h-5 tw-text-red-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M12 4v16m8-8H4" /></svg>
-    ),
-  },
-  {
-    key: "safe_mode",
-    label: "Safe Mode",
-    format: (v) => (v ? "On" : "Off"),
-    icon: (
-      <svg className="tw-w-5 tw-h-5 tw-text-gray-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M12 11c0-1.104-.896-2-2-2s-2 .896-2 2 .896 2 2 2 2-.896 2-2zm0 0c0-1.104.896-2 2-2s2 .896 2 2-.896 2-2 2-2-.896-2-2z" /></svg>
-    ),
+    icon: <Plus className="tw-w-5 tw-h-5 tw-text-red-500" />,
   },
   {
     key: "server_software",
     label: "Server Software",
     format: (v) => v || "-",
-    icon: (
-      <svg className="tw-w-5 tw-h-5 tw-text-cyan-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9.75 17L9 21m5.25-4l.75 4m-7.5-4h10.5a2.25 2.25 0 002.25-2.25V6.75A2.25 2.25 0 0017.25 4.5H6.75A2.25 2.25 0 004.5 6.75v8A2.25 2.25 0 006.75 17z" /></svg>
-    ),
+    icon: <Server className="tw-w-5 tw-h-5 tw-text-cyan-500" />,
   },
   {
     key: "php_version",
     label: "PHP Version",
     format: (v) => v || "-",
-    icon: (
-      <svg className="tw-w-5 tw-h-5 tw-text-fuchsia-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><ellipse cx="12" cy="12" rx="10" ry="6" /><text x="12" y="16" textAnchor="middle" fontSize="8" fill="currentColor">PHP</text></svg>
-    ),
+    icon: <Code className="tw-w-5 tw-h-5 tw-text-fuchsia-500" />,
   },
   {
     key: "ZipArchive",
     label: "ZipArchive",
     format: (v) => (v ? "On" : "Off"),
-    icon: (
-      <svg className="tw-w-5 tw-h-5 tw-text-gray-500" fill="none" viewBox="0 0 24 24">
-        <rect x="5" y="3" width="14" height="18" rx="2" stroke="currentColor" strokeWidth="2" />
-        <rect x="9" y="7" width="6" height="2" rx="1" fill="currentColor" />
-        <rect x="9" y="11" width="6" height="2" rx="1" fill="currentColor" />
-        <rect x="9" y="15" width="6" height="2" rx="1" fill="currentColor" />
-        <path d="M7 3v18" stroke="currentColor" strokeWidth="2" />
-      </svg>
-    ),
+    icon: <FileArchive className="tw-w-5 tw-h-5 tw-text-gray-500" />,
   },
   {
     key: "WP_Debug",
     label: "WP Debug",
     format: (v) => (v ? "On" : "Off"),
-    icon: (
-      <svg className="tw-w-5 tw-h-5 tw-text-gray-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M12 11c0-1.104-.896-2-2-2s-2 .896-2 2 .896 2 2 2 2-.896 2-2zm0 0c0-1.104.896-2 2-2s2 .896 2 2-.896 2-2 2-2-.896-2-2z" /></svg>
-    ),
+    icon: <Bug className="tw-w-5 tw-h-5 tw-text-gray-500" />,
+  },
+  {
+    key: "WP_CLI",
+    label: "WP CLI",
+    format: (v) => (v ? "On" : "Off"),
+    icon: <Terminal className="tw-w-5 tw-h-5 tw-text-gray-500" />,
+  },
+  {
+    key: "safe_mode",
+    label: "Safe Mode",
+    format: (v) => (v ? "On" : "Off"),
+    icon: <Lock className="tw-w-5 tw-h-5 tw-text-gray-500" />,
   },
 ];
 
@@ -130,9 +120,7 @@ const ServerMetrics = ({ metrics }) => {
   return (
     <aside className="tw-bg-white tw-border tw-border-gray-200 tw-p-4">
       <h2 className="tw-text-base tw-font-semibold tw-text-gray-800 tw-mb-3 tw-flex tw-items-center tw-gap-2">
-        <svg className="tw-w-5 tw-h-5 tw-text-blue-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M8 7v8a2 2 0 002 2h6M8 7V5a2 2 0 012-2h4.586a1 1 0 01.707.293l4.414 4.414a1 1 0 01.293.707V15a2 2 0 01-2 2h-2M8 7H6a2 2 0 00-2 2v10a2 2 0 002 2h8a2 2 0 002-2v-2" />
-        </svg>
+        <Server className="tw-w-5 tw-h-5 tw-text-blue-500" />
         Server Metrics
       </h2>
       <ul className="tw-space-y-2">

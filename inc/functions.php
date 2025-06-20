@@ -147,6 +147,20 @@ function wp_backup_get_backups() {
 }
 
 /**
+ * Check if WP-CLI is available
+ * 
+ * @return bool
+ */
+function wp_backup_is_wp_cli_available() {
+  if ( defined( 'WP_CLI' ) && WP_CLI ) {
+      return true; // WP-CLI is running
+  }
+
+  $cli_path = shell_exec( 'which wp' );
+  return ! empty( $cli_path );
+}
+
+/**
  * Get server metrics relevant for backup configuration.
  *
  * Returns an array with:
@@ -209,7 +223,8 @@ function wp_backup_get_server_metrics() {
     'php_version'        => $php_version,
     'wp_version'         => $wp_version,
     'ZipArchive'         => class_exists('ZipArchive'),
-    'WP_Debug'            => defined('WP_DEBUG') && WP_DEBUG,
+    'WP_Debug'           => defined('WP_DEBUG') && WP_DEBUG,
+    'WP_CLI'             => wp_backup_is_wp_cli_available(),
   );
 }
 
