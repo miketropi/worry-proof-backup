@@ -5,7 +5,7 @@ import BackupProcess from './components/BackupProcess';
 import { ConfirmProvider } from './components/Confirm';
 import { ToastProvider } from './components/Toast';
 import Tab from './components/Tab';
-import { Package, Book, MessageCircle } from 'lucide-react';
+import { Package, Book, Bug } from 'lucide-react';
 
 const AppProvider = ({ children }) => {
   return (
@@ -42,20 +42,55 @@ const tabs = [
       </div>
     </div>
   },
-  // feedback
+  // report issue
   {
-    label: 'Feedback',
-    icon: <MessageCircle size={14} />,
+    label: 'Report Issue',
+    icon: <Bug size={14} />,
     content: <div className="tw-text-center tw-py-12">
-      <div className="tw-text-6xl tw-mb-4">💬✨</div>
+      <div className="tw-text-6xl tw-mb-4">🐛</div>
       <h3 className="tw-text-xl tw-font-semibold tw-text-gray-900 tw-mb-2">
-        Spill the tea! ☕️
+        Found a bug? Let's squash it! 🥾
       </h3>
-      <p className="tw-text-gray-600 tw-mb-4">
-        We're all ears for your thoughts! Drop us some feedback and let's make this backup thing absolutely fire! 🔥
+      <p className="tw-text-gray-600 tw-mb-6">
+        Help us make WP Backup even better by reporting any issues you encounter.
       </p>
-      <div className="tw-text-sm tw-text-gray-500">
-        Your feedback helps us level up this plugin to the next level! 🚀💪
+      
+      <div className="tw-max-w-6xl tw-mx-auto">
+        <div className="tw-grid tw-grid-cols-1 md:tw-grid-cols-3 tw-gap-4">
+          <div className="tw-bg-blue-50 tw-border tw-border-blue-200 tw-rounded-lg tw-p-4">
+            <div className="tw-flex tw-items-center tw-gap-2 tw-mb-2 tw-justify-center">
+              <span className="tw-text-blue-600">📧</span>
+              <span className="tw-font-medium tw-text-blue-900">Email Support</span>
+            </div>
+            <p className="tw-text-sm tw-text-blue-700">
+              Send us a detailed email with screenshots and steps to reproduce.
+            </p>
+          </div>
+          
+          <div className="tw-bg-green-50 tw-border tw-border-green-200 tw-rounded-lg tw-p-4">
+            <div className="tw-flex tw-items-center tw-gap-2 tw-mb-2 tw-justify-center">
+              <span className="tw-text-green-600">🔗</span>
+              <span className="tw-font-medium tw-text-green-900">GitHub Issues</span>
+            </div>
+            <p className="tw-text-sm tw-text-green-700">
+              Create an issue on our GitHub repository for public tracking.
+            </p>
+          </div>
+          
+          <div className="tw-bg-purple-50 tw-border tw-border-purple-200 tw-rounded-lg tw-p-4">
+            <div className="tw-flex tw-items-center tw-gap-2 tw-mb-2 tw-justify-center">
+              <span className="tw-text-purple-600">💬</span>
+              <span className="tw-font-medium tw-text-purple-900">Community Forum</span>
+            </div>
+            <p className="tw-text-sm tw-text-purple-700">
+              Join our community discussions and get help from other users.
+            </p>
+          </div>
+        </div>
+      </div>
+      
+      <div className="tw-mt-8 tw-text-sm tw-text-gray-500">
+        <p>💡 <strong>Pro tip:</strong> Include your WordPress version, PHP version, and plugin version for faster resolution!</p>
       </div>
     </div>
   },

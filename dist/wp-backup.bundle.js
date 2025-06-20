@@ -1838,39 +1838,6 @@ const Lock = (0,_createLucideIcon_js__WEBPACK_IMPORTED_MODULE_0__["default"])("l
 
 /***/ }),
 
-/***/ "./node_modules/lucide-react/dist/esm/icons/message-circle.js":
-/*!********************************************************************!*\
-  !*** ./node_modules/lucide-react/dist/esm/icons/message-circle.js ***!
-  \********************************************************************/
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   __iconNode: () => (/* binding */ __iconNode),
-/* harmony export */   "default": () => (/* binding */ MessageCircle)
-/* harmony export */ });
-/* harmony import */ var _createLucideIcon_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../createLucideIcon.js */ "./node_modules/lucide-react/dist/esm/createLucideIcon.js");
-/**
- * @license lucide-react v0.518.0 - ISC
- *
- * This source code is licensed under the ISC license.
- * See the LICENSE file in the root directory of this source tree.
- */
-
-
-
-const __iconNode = [
-  ["path", { d: "M7.9 20A9 9 0 1 0 4 16.1L2 22Z", key: "vv11sd" }]
-];
-const MessageCircle = (0,_createLucideIcon_js__WEBPACK_IMPORTED_MODULE_0__["default"])("message-circle", __iconNode);
-
-
-//# sourceMappingURL=message-circle.js.map
-
-
-/***/ }),
-
 /***/ "./node_modules/lucide-react/dist/esm/icons/package.js":
 /*!*************************************************************!*\
   !*** ./node_modules/lucide-react/dist/esm/icons/package.js ***!
@@ -30170,7 +30137,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _components_Tab__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./components/Tab */ "./src/components/Tab.jsx");
 /* harmony import */ var lucide_react__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! lucide-react */ "./node_modules/lucide-react/dist/esm/icons/package.js");
 /* harmony import */ var lucide_react__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! lucide-react */ "./node_modules/lucide-react/dist/esm/icons/book.js");
-/* harmony import */ var lucide_react__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! lucide-react */ "./node_modules/lucide-react/dist/esm/icons/message-circle.js");
+/* harmony import */ var lucide_react__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! lucide-react */ "./node_modules/lucide-react/dist/esm/icons/bug.js");
 /* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! react/jsx-runtime */ "./node_modules/react/jsx-runtime.js");
 
 
@@ -30219,9 +30186,9 @@ var tabs = [{
     })]
   })
 },
-// feedback
+// report issue
 {
-  label: 'Feedback',
+  label: 'Report Issue',
   icon: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_7__.jsx)(lucide_react__WEBPACK_IMPORTED_MODULE_10__["default"], {
     size: 14
   }),
@@ -30229,16 +30196,71 @@ var tabs = [{
     className: "tw-text-center tw-py-12",
     children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_7__.jsx)("div", {
       className: "tw-text-6xl tw-mb-4",
-      children: "\uD83D\uDCAC\u2728"
+      children: "\uD83D\uDC1B"
     }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_7__.jsx)("h3", {
       className: "tw-text-xl tw-font-semibold tw-text-gray-900 tw-mb-2",
-      children: "Spill the tea! \u2615\uFE0F"
+      children: "Found a bug? Let's squash it! \uD83E\uDD7E"
     }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_7__.jsx)("p", {
-      className: "tw-text-gray-600 tw-mb-4",
-      children: "We're all ears for your thoughts! Drop us some feedback and let's make this backup thing absolutely fire! \uD83D\uDD25"
+      className: "tw-text-gray-600 tw-mb-6",
+      children: "Help us make WP Backup even better by reporting any issues you encounter."
     }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_7__.jsx)("div", {
-      className: "tw-text-sm tw-text-gray-500",
-      children: "Your feedback helps us level up this plugin to the next level! \uD83D\uDE80\uD83D\uDCAA"
+      className: "tw-max-w-6xl tw-mx-auto",
+      children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_7__.jsxs)("div", {
+        className: "tw-grid tw-grid-cols-1 md:tw-grid-cols-3 tw-gap-4",
+        children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_7__.jsxs)("div", {
+          className: "tw-bg-blue-50 tw-border tw-border-blue-200 tw-rounded-lg tw-p-4",
+          children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_7__.jsxs)("div", {
+            className: "tw-flex tw-items-center tw-gap-2 tw-mb-2 tw-justify-center",
+            children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_7__.jsx)("span", {
+              className: "tw-text-blue-600",
+              children: "\uD83D\uDCE7"
+            }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_7__.jsx)("span", {
+              className: "tw-font-medium tw-text-blue-900",
+              children: "Email Support"
+            })]
+          }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_7__.jsx)("p", {
+            className: "tw-text-sm tw-text-blue-700",
+            children: "Send us a detailed email with screenshots and steps to reproduce."
+          })]
+        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_7__.jsxs)("div", {
+          className: "tw-bg-green-50 tw-border tw-border-green-200 tw-rounded-lg tw-p-4",
+          children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_7__.jsxs)("div", {
+            className: "tw-flex tw-items-center tw-gap-2 tw-mb-2 tw-justify-center",
+            children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_7__.jsx)("span", {
+              className: "tw-text-green-600",
+              children: "\uD83D\uDD17"
+            }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_7__.jsx)("span", {
+              className: "tw-font-medium tw-text-green-900",
+              children: "GitHub Issues"
+            })]
+          }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_7__.jsx)("p", {
+            className: "tw-text-sm tw-text-green-700",
+            children: "Create an issue on our GitHub repository for public tracking."
+          })]
+        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_7__.jsxs)("div", {
+          className: "tw-bg-purple-50 tw-border tw-border-purple-200 tw-rounded-lg tw-p-4",
+          children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_7__.jsxs)("div", {
+            className: "tw-flex tw-items-center tw-gap-2 tw-mb-2 tw-justify-center",
+            children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_7__.jsx)("span", {
+              className: "tw-text-purple-600",
+              children: "\uD83D\uDCAC"
+            }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_7__.jsx)("span", {
+              className: "tw-font-medium tw-text-purple-900",
+              children: "Community Forum"
+            })]
+          }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_7__.jsx)("p", {
+            className: "tw-text-sm tw-text-purple-700",
+            children: "Join our community discussions and get help from other users."
+          })]
+        })]
+      })
+    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_7__.jsx)("div", {
+      className: "tw-mt-8 tw-text-sm tw-text-gray-500",
+      children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_7__.jsxs)("p", {
+        children: ["\uD83D\uDCA1 ", /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_7__.jsx)("strong", {
+          children: "Pro tip:"
+        }), " Include your WordPress version, PHP version, and plugin version for faster resolution!"]
+      })
     })]
   })
 }];
