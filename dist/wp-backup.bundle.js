@@ -30128,18 +30128,19 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "default": () => (/* binding */ App)
 /* harmony export */ });
-/* harmony import */ var _components_BackupTable__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./components/BackupTable */ "./src/components/BackupTable.jsx");
-/* harmony import */ var _components_Footer__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./components/Footer */ "./src/components/Footer.jsx");
-/* harmony import */ var _components_ServerMetrics__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./components/ServerMetrics */ "./src/components/ServerMetrics.jsx");
-/* harmony import */ var _components_BackupProcess__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./components/BackupProcess */ "./src/components/BackupProcess.jsx");
-/* harmony import */ var _components_Confirm__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./components/Confirm */ "./src/components/Confirm.jsx");
-/* harmony import */ var _components_Toast__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./components/Toast */ "./src/components/Toast.jsx");
-/* harmony import */ var _components_Tab__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./components/Tab */ "./src/components/Tab.jsx");
+/* harmony import */ var _components_Footer__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./components/Footer */ "./src/components/Footer.jsx");
+/* harmony import */ var _components_ServerMetrics__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./components/ServerMetrics */ "./src/components/ServerMetrics.jsx");
+/* harmony import */ var _components_BackupProcess__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./components/BackupProcess */ "./src/components/BackupProcess.jsx");
+/* harmony import */ var _components_Confirm__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./components/Confirm */ "./src/components/Confirm.jsx");
+/* harmony import */ var _components_Toast__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./components/Toast */ "./src/components/Toast.jsx");
+/* harmony import */ var _components_Tab__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./components/Tab */ "./src/components/Tab.jsx");
 /* harmony import */ var lucide_react__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! lucide-react */ "./node_modules/lucide-react/dist/esm/icons/package.js");
 /* harmony import */ var lucide_react__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! lucide-react */ "./node_modules/lucide-react/dist/esm/icons/book.js");
 /* harmony import */ var lucide_react__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! lucide-react */ "./node_modules/lucide-react/dist/esm/icons/bug.js");
-/* harmony import */ var _components_Modal__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./components/Modal */ "./src/components/Modal.jsx");
+/* harmony import */ var _components_Modal__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./components/Modal */ "./src/components/Modal.jsx");
+/* harmony import */ var _components_BackupTable_refactored__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./components/BackupTable.refactored */ "./src/components/BackupTable.refactored.jsx");
 /* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! react/jsx-runtime */ "./node_modules/react/jsx-runtime.js");
+// import BackupTable from './components/BackupTable';
 
 
 
@@ -30152,9 +30153,9 @@ __webpack_require__.r(__webpack_exports__);
 
 var AppProvider = function AppProvider(_ref) {
   var children = _ref.children;
-  return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsx)(_components_Confirm__WEBPACK_IMPORTED_MODULE_4__.ConfirmProvider, {
-    children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsx)(_components_Toast__WEBPACK_IMPORTED_MODULE_5__.ToastProvider, {
-      children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsx)(_components_Modal__WEBPACK_IMPORTED_MODULE_7__.ModalProvider, {
+  return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsx)(_components_Confirm__WEBPACK_IMPORTED_MODULE_3__.ConfirmProvider, {
+    children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsx)(_components_Toast__WEBPACK_IMPORTED_MODULE_4__.ToastProvider, {
+      children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsx)(_components_Modal__WEBPACK_IMPORTED_MODULE_6__.ModalProvider, {
         children: children
       })
     })
@@ -30166,7 +30167,7 @@ var tabs = [{
     size: 14
   }),
   content: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsxs)(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.Fragment, {
-    children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsx)(_components_BackupProcess__WEBPACK_IMPORTED_MODULE_3__["default"], {}), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsx)(_components_BackupTable__WEBPACK_IMPORTED_MODULE_0__["default"], {})]
+    children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsx)(_components_BackupProcess__WEBPACK_IMPORTED_MODULE_2__["default"], {}), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsx)(_components_BackupTable_refactored__WEBPACK_IMPORTED_MODULE_7__["default"], {})]
   })
 }, {
   label: 'Documentation',
@@ -30274,16 +30275,16 @@ function App() {
       className: "tw-grid tw-grid-cols-1 md:tw-grid-cols-12 tw-gap-8",
       children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsx)("div", {
         className: "md:tw-col-span-9",
-        children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsx)(_components_Tab__WEBPACK_IMPORTED_MODULE_6__["default"], {
+        children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsx)(_components_Tab__WEBPACK_IMPORTED_MODULE_5__["default"], {
           tabs: tabs
         })
       }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsx)("div", {
         className: "md:tw-col-span-3",
-        children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsx)(_components_ServerMetrics__WEBPACK_IMPORTED_MODULE_2__["default"], {
+        children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsx)(_components_ServerMetrics__WEBPACK_IMPORTED_MODULE_1__["default"], {
           metrics: wp_backup_php_data.server_metrics
         })
       })]
-    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsx)(_components_Footer__WEBPACK_IMPORTED_MODULE_1__["default"], {})]
+    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsx)(_components_Footer__WEBPACK_IMPORTED_MODULE_0__["default"], {})]
   });
 }
 
@@ -30425,13 +30426,42 @@ var BackupConfigModal = function BackupConfigModal(_ref) {
           onChange: handleNameChange,
           className: "tw-block tw-w-full tw-p-4 tw-rounded-lg tw-border tw-border-gray-200 tw-bg-gray-50 tw-text-gray-900 tw-placeholder-gray-400 tw-transition-colors focus:tw-border-blue-500 focus:tw-ring-2 focus:tw-ring-blue-200 focus:tw-bg-white",
           placeholder: "Enter backup name",
+          autoComplete: "off",
           required: true
+        }), !config.name && /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsxs)("div", {
+          className: "tw-mt-2 tw-text-sm tw-text-red-600 tw-flex tw-items-center tw-gap-1",
+          children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("svg", {
+            className: "tw-w-4 tw-h-4",
+            fill: "none",
+            stroke: "currentColor",
+            viewBox: "0 0 24 24",
+            children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("path", {
+              strokeLinecap: "round",
+              strokeLinejoin: "round",
+              strokeWidth: 2,
+              d: "M12 8v4m0 4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"
+            })
+          }), "Backup name is required"]
         })]
       }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsxs)("div", {
         className: "tw-space-y-3",
         children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("label", {
           className: "tw-block tw-text-sm tw-font-semibold tw-text-gray-800",
           children: "Backup Types"
+        }), config.types.length === 0 && /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsxs)("div", {
+          className: "tw-mt-2 tw-text-sm tw-text-red-600 tw-flex tw-items-center tw-gap-1",
+          children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("svg", {
+            className: "tw-w-4 tw-h-4",
+            fill: "none",
+            stroke: "currentColor",
+            viewBox: "0 0 24 24",
+            children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("path", {
+              strokeLinecap: "round",
+              strokeLinejoin: "round",
+              strokeWidth: 2,
+              d: "M12 8v4m0 4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"
+            })
+          }), "Please select at least one backup type"]
         }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("div", {
           className: "tw-grid tw-gap-3 tw-p-4 tw-bg-gray-50 tw-rounded-lg tw-border tw-border-gray-200",
           children: BACKUP_TYPES.map(function (type) {
@@ -30488,7 +30518,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _util_store__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../util/store */ "./src/util/store.js");
 /* harmony import */ var _util_lib__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../util/lib */ "./src/util/lib.js");
 /* harmony import */ var _Toast__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./Toast */ "./src/components/Toast.jsx");
-/* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! react/jsx-runtime */ "./node_modules/react/jsx-runtime.js");
+/* harmony import */ var _Modal__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./Modal */ "./src/components/Modal.jsx");
+/* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! react/jsx-runtime */ "./node_modules/react/jsx-runtime.js");
 function _typeof(o) { "@babel/helpers - typeof"; return _typeof = "function" == typeof Symbol && "symbol" == typeof Symbol.iterator ? function (o) { return typeof o; } : function (o) { return o && "function" == typeof Symbol && o.constructor === Symbol && o !== Symbol.prototype ? "symbol" : typeof o; }, _typeof(o); }
 function _toConsumableArray(r) { return _arrayWithoutHoles(r) || _iterableToArray(r) || _unsupportedIterableToArray(r) || _nonIterableSpread(); }
 function _nonIterableSpread() { throw new TypeError("Invalid attempt to spread non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method."); }
@@ -30514,6 +30545,7 @@ function _arrayWithHoles(r) { if (Array.isArray(r)) return r; }
 
 
 
+
 /**
  * BackupProcess - Stepper UI for backup process
  * Shows each step, highlights current, marks completed, and disables future steps
@@ -30524,6 +30556,7 @@ var BackupProcess = function BackupProcess() {
   var _useBackupStore = (0,_util_store__WEBPACK_IMPORTED_MODULE_1__["default"])(),
     backupProcess = _useBackupStore.backupProcess,
     inProgress = _useBackupStore.inProgress,
+    setInProgress = _useBackupStore.setInProgress,
     inProgressStep = _useBackupStore.inProgressStep,
     setInProgressStep = _useBackupStore.setInProgressStep,
     fetchBackups_Fn = _useBackupStore.fetchBackups_Fn;
@@ -30570,7 +30603,7 @@ var BackupProcess = function BackupProcess() {
 
             // show toast
             toast({
-              message: '🎉 Yasss! Full backup done, everything’s safe & sound 🛡️. You’re good to go, keep slaying! 😎✨',
+              message: "🎉 Yasss! Full backup done, everything's safe & sound 🛡️. You're good to go, keep slaying! 😎✨",
               type: 'success'
             });
             return _context.a(2);
@@ -30598,6 +30631,13 @@ var BackupProcess = function BackupProcess() {
     };
   }();
   (0,react__WEBPACK_IMPORTED_MODULE_0__.useEffect)(function () {
+    if (inProgressStep > backupProcess.length) {
+      setTimeout(function () {
+        setInProgress(false);
+      }, 3000);
+    }
+  }, [inProgressStep]);
+  (0,react__WEBPACK_IMPORTED_MODULE_0__.useEffect)(function () {
     if (inProgress == true) {
       // get process by step
       var process = _toConsumableArray(backupProcess).find(function (step) {
@@ -30619,116 +30659,106 @@ var BackupProcess = function BackupProcess() {
       // console.log(inProgress, inProgressStep);
     }
   }, [inProgress, inProgressStep]);
-  if (!inProgress || !backupProcess.length) return null;
-  return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsxs)("div", {
-    className: "tw-bg-white tw-border tw-border-gray-200 tw-p-6 tw-mb-6",
-    children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsxs)("h2", {
-      className: "tw-text-lg tw-font-semibold tw-text-gray-800 tw-mb-6 tw-flex tw-items-center tw-gap-2",
-      children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)("svg", {
-        className: "tw-w-6 tw-h-6 tw-text-blue-500",
-        fill: "none",
-        stroke: "currentColor",
-        viewBox: "0 0 24 24",
-        children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)("path", {
-          strokeLinecap: "round",
-          strokeLinejoin: "round",
-          strokeWidth: 2,
-          d: "M12 8v4l3 3M12 6a9 9 0 100 18 9 9 0 000-18z"
-        })
-      }), "Backup Progress"]
-    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)("ol", {
+  return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)(_Modal__WEBPACK_IMPORTED_MODULE_4__["default"], {
+    isOpen: inProgress && backupProcess.length > 0,
+    onClose: function onClose() {
+      return setInProgress(false);
+    },
+    title: "Backup Progress",
+    size: "lg",
+    children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)("ol", {
       className: "tw-relative tw-border-l-2 tw-border-blue-200 tw-ml-4",
       children: backupProcess.map(function (step, idx) {
         var isCompleted = inProgressStep > step.step;
         var isCurrent = inProgressStep === step.step;
-        return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsxs)("li", {
+        return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsxs)("li", {
           className: "tw-mb-8 tw-ml-6 tw-last:mb-0",
-          children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)("span", {
+          children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)("span", {
             className: "tw-absolute tw--left-4 tw-flex tw-items-center tw-justify-center tw-w-8 tw-h-8 tw-rounded-full tw-border-2 ".concat(isCompleted ? 'tw-bg-blue-500 tw-border-blue-500' : isCurrent ? 'tw-bg-white tw-border-blue-500 tw-animate-pulse' : 'tw-bg-gray-100 tw-border-gray-300'),
-            children: isCompleted ? /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)("svg", {
+            children: isCompleted ? /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)("svg", {
               className: "tw-w-5 tw-h-5 tw-text-white",
               fill: "none",
               stroke: "currentColor",
               viewBox: "0 0 24 24",
-              children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)("path", {
+              children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)("path", {
                 strokeLinecap: "round",
                 strokeLinejoin: "round",
                 strokeWidth: 2,
                 d: "M5 13l4 4L19 7"
               })
-            }) : /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)("span", {
+            }) : /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)("span", {
               className: "tw-text-base ".concat(isCurrent ? 'tw-text-blue-600' : 'tw-text-gray-400'),
               children: step.step
             })
-          }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsxs)("div", {
+          }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsxs)("div", {
             className: "tw-pl-4",
-            children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)("h3", {
+            children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)("h3", {
               className: "tw-text-base tw-font-semibold ".concat(isCompleted ? 'tw-text-blue-600' : isCurrent ? 'tw-text-blue-700' : 'tw-text-gray-500'),
               children: step.name
-            }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)("p", {
+            }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)("p", {
               className: "tw-mt-1 tw-text-sm tw-text-gray-500",
               children: step.description
-            }), error && inProgressStep === step.step && /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)("div", {
+            }), error && inProgressStep === step.step && /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)("div", {
               className: "tw-mt-3 tw-p-3 tw-bg-red-50 tw-border tw-border-red-200 tw-rounded-md",
-              children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsxs)("div", {
+              children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsxs)("div", {
                 className: "tw-flex tw-items-start tw-gap-2",
-                children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)("svg", {
+                children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)("svg", {
                   className: "tw-w-4 tw-h-4 tw-text-red-500 tw-mt-0.5 tw-flex-shrink-0",
                   fill: "none",
                   stroke: "currentColor",
                   viewBox: "0 0 24 24",
-                  children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)("path", {
+                  children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)("path", {
                     strokeLinecap: "round",
                     strokeLinejoin: "round",
                     strokeWidth: 2,
                     d: "M12 8v4m0 4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"
                   })
-                }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)("p", {
+                }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)("p", {
                   className: "tw-text-sm tw-text-red-700 tw-leading-relaxed",
                   children: error
                 })]
               })
-            }), isCurrent && !error && /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsxs)("div", {
+            }), isCurrent && !error && /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsxs)("div", {
               className: "tw-mt-2 tw-flex tw-items-center tw-gap-2",
-              children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsxs)("svg", {
+              children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsxs)("svg", {
                 className: "tw-w-4 tw-h-4 tw-text-blue-400 tw-animate-spin",
                 fill: "none",
                 stroke: "currentColor",
                 viewBox: "0 0 24 24",
-                children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)("circle", {
+                children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)("circle", {
                   className: "tw-opacity-25",
                   cx: "12",
                   cy: "12",
                   r: "10",
                   stroke: "currentColor",
                   strokeWidth: "4"
-                }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)("path", {
+                }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)("path", {
                   className: "tw-opacity-75",
                   fill: "currentColor",
                   d: "M4 12a8 8 0 018-8v8z"
                 })]
-              }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)("span", {
+              }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)("span", {
                 className: "tw-text-xs tw-text-blue-500 tw-font-medium",
                 children: "In progress..."
               })]
-            }), isCompleted && /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)("span", {
+            }), isCompleted && /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)("span", {
               className: "tw-mt-2 tw-inline-block tw-text-xs tw-text-green-600 tw-font-medium",
               children: "Completed"
             })]
           })]
         }, step.step);
       })
-    })]
+    })
   });
 };
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (BackupProcess);
 
 /***/ }),
 
-/***/ "./src/components/BackupTable.jsx":
-/*!****************************************!*\
-  !*** ./src/components/BackupTable.jsx ***!
-  \****************************************/
+/***/ "./src/components/BackupTable.refactored.jsx":
+/*!***************************************************!*\
+  !*** ./src/components/BackupTable.refactored.jsx ***!
+  \***************************************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
@@ -30773,51 +30803,311 @@ function _arrayWithHoles(r) { if (Array.isArray(r)) return r; }
 
 
 
+var LoadingSkeleton = function LoadingSkeleton() {
+  return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsxs)("div", {
+    className: "tw-animate-pulse",
+    children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsx)("div", {
+      className: "tw-h-8 tw-bg-gray-200 tw-rounded tw-mb-4"
+    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsx)("div", {
+      className: "tw-space-y-3",
+      children: [1, 2, 3].map(function (i) {
+        return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsx)("div", {
+          className: "tw-h-16 tw-bg-gray-200 tw-rounded"
+        }, i);
+      })
+    })]
+  });
+};
+var EmptyState = function EmptyState() {
+  return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsx)("div", {
+    className: "tw-text-center",
+    children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsxs)("div", {
+      className: "tw-bg-gray-50 tw-p-12 tw-border tw-border-gray-200",
+      children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsx)("svg", {
+        className: "tw-mx-auto tw-h-12 tw-w-12 tw-text-gray-400",
+        fill: "none",
+        stroke: "currentColor",
+        viewBox: "0 0 24 24",
+        children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsx)("path", {
+          strokeLinecap: "round",
+          strokeLinejoin: "round",
+          strokeWidth: 2,
+          d: "M20 13V6a2 2 0 00-2-2H6a2 2 0 00-2 2v7m16 0v5a2 2 0 01-2 2H6a2 2 0 01-2-2v-5m16 0h-2.586a1 1 0 00-.707.293l-2.414 2.414a1 1 0 01-.707.293h-3.172a1 1 0 01-.707-.293l-2.414-2.414A1 1 0 006.586 13H4"
+        })
+      }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsx)("h3", {
+        className: "tw-mt-2 tw-text-sm tw-font-medium tw-text-gray-900",
+        children: "No backups"
+      }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsx)("p", {
+        className: "tw-mt-1 tw-text-sm tw-text-gray-500",
+        children: "Get started by creating a new backup."
+      }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsx)("div", {
+        className: "tw-mt-6",
+        children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsx)(_BackupTableTools__WEBPACK_IMPORTED_MODULE_2__.NewBackupButton, {})
+      })]
+    })
+  });
+};
+var BackupTypeBadge = function BackupTypeBadge(_ref) {
+  var type = _ref.type;
+  var style = "";
+  var label = "";
+  switch (type) {
+    case "database":
+      style = "tw-bg-blue-100 tw-text-blue-800 tw-border tw-border-blue-200";
+      label = "Database";
+      break;
+    case "plugin":
+      style = "tw-bg-purple-100 tw-text-purple-800 tw-border tw-border-purple-200";
+      label = "Plugins";
+      break;
+    case "theme":
+      style = "tw-bg-yellow-100 tw-text-yellow-800 tw-border tw-border-yellow-200";
+      label = "Themes";
+      break;
+    case "uploads":
+      style = "tw-bg-green-100 tw-text-green-800 tw-border tw-border-green-200";
+      label = "Uploads";
+      break;
+    default:
+      style = "tw-bg-gray-100 tw-text-gray-800 tw-border tw-border-gray-200";
+      label = type;
+  }
+  return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsx)("span", {
+    className: "tw-inline-flex tw-items-center tw-gap-1 tw-px-2 tw-py-0.5 tw-text-xs tw-font-medium tw-rounded-full ".concat(style, " tw-transition-colors tw-duration-200"),
+    style: {
+      letterSpacing: "0.01em"
+    },
+    children: label
+  });
+};
+var BackupStatusBadge = function BackupStatusBadge(_ref2) {
+  var status = _ref2.status;
+  switch (status) {
+    case "pending":
+      return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsx)("span", {
+        className: "tw-px-2 tw-inline-flex tw-text-xs tw-leading-5 tw-font-semibold tw-rounded-full tw-bg-yellow-100 tw-text-yellow-800",
+        children: "Pending"
+      });
+    case "completed":
+      return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsx)("span", {
+        className: "tw-px-2 tw-inline-flex tw-text-xs tw-leading-5 tw-font-semibold tw-rounded-full tw-bg-green-100 tw-text-green-800",
+        children: "Completed"
+      });
+    case "fail":
+      return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsx)("span", {
+        className: "tw-px-2 tw-inline-flex tw-text-xs tw-leading-5 tw-font-semibold tw-rounded-full tw-bg-red-100 tw-text-red-800",
+        children: "Failed"
+      });
+    default:
+      return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsx)("span", {
+        className: "tw-px-2 tw-inline-flex tw-text-xs tw-leading-5 tw-font-semibold tw-rounded-full tw-bg-gray-100 tw-text-gray-800",
+        children: status
+      });
+  }
+};
+var BackupTableRow = function BackupTableRow(_ref3) {
+  var backup = _ref3.backup,
+    isSelected = _ref3.isSelected,
+    onSelect = _ref3.onSelect,
+    onDelete = _ref3.onDelete,
+    onDownload = _ref3.onDownload,
+    onRestore = _ref3.onRestore;
+  return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsxs)("tr", {
+    children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsx)("td", {
+      className: "tw-px-6 tw-py-4",
+      width: "3%",
+      children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsx)("input", {
+        type: "checkbox",
+        className: "tw-form-checkbox tw-h-4 tw-w-4 tw-text-blue-600",
+        checked: isSelected,
+        onChange: function onChange(e) {
+          return onSelect(e, backup.id);
+        }
+      })
+    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsxs)("td", {
+      className: "tw-px-6 tw-py-4",
+      children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsx)("div", {
+        className: "tw-text-sm tw-font-medium tw-text-gray-900",
+        children: backup.name
+      }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsx)("div", {
+        className: "tw-flex tw-flex-wrap tw-gap-1 tw-mt-2",
+        children: backup.type.map(function (type) {
+          return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsx)(BackupTypeBadge, {
+            type: type
+          }, type);
+        })
+      })]
+    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsx)("td", {
+      className: "tw-px-6 tw-py-4 tw-whitespace-nowrap tw-text-sm tw-text-gray-500",
+      children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsx)("div", {
+        className: "tw-text-sm tw-text-gray-500",
+        children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsxs)("span", {
+          className: "tw-inline-flex tw-items-center tw-gap-1 tw-px-2.5 tw-py-1 tw-text-xs tw-font-medium tw-rounded-md tw-bg-slate-100 tw-text-slate-700 tw-border tw-border-slate-200/60 tw-shadow-sm",
+          title: backup.date,
+          children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsx)("svg", {
+            className: "tw-w-3 tw-h-3 tw-text-slate-400",
+            fill: "none",
+            stroke: "currentColor",
+            viewBox: "0 0 24 24",
+            children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsx)("path", {
+              strokeLinecap: "round",
+              strokeLinejoin: "round",
+              strokeWidth: 2,
+              d: "M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"
+            })
+          }), (0,_util_lib__WEBPACK_IMPORTED_MODULE_3__.friendlyDateTime)(backup.date, wp_backup_php_data.current_datetime)]
+        })
+      })
+    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsx)("td", {
+      className: "tw-px-6 tw-py-4 tw-whitespace-nowrap tw-text-sm tw-text-gray-500",
+      children: backup.size
+    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsx)("td", {
+      className: "tw-px-6 tw-py-4 tw-whitespace-nowrap",
+      children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsx)(BackupStatusBadge, {
+        status: backup.status
+      })
+    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsx)("td", {
+      className: "tw-px-6 tw-py-4 tw-whitespace-nowrap tw-text-right tw-text-sm tw-font-medium",
+      children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsx)(_DropdownActions__WEBPACK_IMPORTED_MODULE_6__["default"], {
+        items: [{
+          label: 'Restore',
+          icon: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsx)(lucide_react__WEBPACK_IMPORTED_MODULE_9__["default"], {}),
+          onClick: function onClick() {
+            return onRestore(backup);
+          }
+        }, {
+          label: 'Download',
+          icon: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsx)(lucide_react__WEBPACK_IMPORTED_MODULE_10__["default"], {}),
+          onClick: function onClick() {
+            return onDownload(backup.id);
+          }
+        }, {
+          label: 'Delete',
+          icon: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsx)(lucide_react__WEBPACK_IMPORTED_MODULE_11__["default"], {}),
+          danger: true,
+          onClick: function onClick() {
+            return onDelete(backup.id);
+          }
+        }]
+      })
+    })]
+  }, backup.id);
+};
+var BackupMobileCard = function BackupMobileCard(_ref4) {
+  var backup = _ref4.backup,
+    isSelected = _ref4.isSelected,
+    onSelect = _ref4.onSelect,
+    onDelete = _ref4.onDelete,
+    onDownload = _ref4.onDownload;
+  return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsxs)("div", {
+    className: "tw-p-4 tw-border-b tw-border-gray-200",
+    children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsxs)("div", {
+      className: "tw-flex tw-items-center tw-justify-between tw-mb-2",
+      children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsx)("input", {
+        type: "checkbox",
+        className: "tw-form-checkbox tw-h-4 tw-w-4 tw-text-blue-600",
+        checked: isSelected,
+        onChange: function onChange(e) {
+          return onSelect(e, backup.id);
+        }
+      }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsx)("div", {
+        className: "tw-text-sm tw-font-medium tw-text-gray-900",
+        children: backup.name
+      })]
+    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsxs)("div", {
+      className: "tw-space-y-2",
+      children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsx)("div", {
+        className: "tw-flex tw-flex-wrap tw-gap-1",
+        children: backup.type.map(function (type, index) {
+          return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsx)("span", {
+            className: "tw-inline-flex tw-items-center tw-px-2 tw-py-0.5 tw-text-xs tw-font-medium tw-rounded-md tw-bg-gray-100 tw-text-gray-800",
+            children: type
+          }, index);
+        })
+      }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsxs)("div", {
+        className: "tw-flex tw-justify-between tw-text-sm tw-text-gray-500",
+        children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsx)("span", {
+          children: (0,_util_lib__WEBPACK_IMPORTED_MODULE_3__.friendlyDateTime)(backup.date, wp_backup_php_data.current_datetime)
+        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsx)("span", {
+          children: backup.size
+        })]
+      }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsxs)("div", {
+        className: "tw-flex tw-items-center tw-justify-between",
+        children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsx)(BackupStatusBadge, {
+          status: backup.status
+        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsxs)("div", {
+          className: "tw-space-x-2",
+          children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsx)("button", {
+            onClick: function onClick() {
+              return onDownload(backup.id);
+            },
+            className: "tw-text-blue-600 hover:tw-text-blue-900",
+            children: "Download"
+          }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsx)("button", {
+            onClick: function onClick() {
+              return onDelete(backup.id);
+            },
+            className: "tw-text-red-600 hover:tw-text-red-900",
+            children: "Delete"
+          })]
+        })]
+      })]
+    })]
+  }, backup.id);
+};
 var BackupTable = function BackupTable() {
   var _useBackupStore = (0,_util_store__WEBPACK_IMPORTED_MODULE_1__["default"])(),
     backups = _useBackupStore.backups,
-    setBackups = _useBackupStore.setBackups,
     fetchBackups_Fn = _useBackupStore.fetchBackups_Fn;
-  var _React$useState = react__WEBPACK_IMPORTED_MODULE_0___default().useState(true),
-    _React$useState2 = _slicedToArray(_React$useState, 2),
-    isLoading = _React$useState2[0],
-    setIsLoading = _React$useState2[1];
-  var _React$useState3 = react__WEBPACK_IMPORTED_MODULE_0___default().useState([]),
-    _React$useState4 = _slicedToArray(_React$useState3, 2),
-    filteredBackups = _React$useState4[0],
-    setFilteredBackups = _React$useState4[1];
+  var _useState = (0,react__WEBPACK_IMPORTED_MODULE_0__.useState)(true),
+    _useState2 = _slicedToArray(_useState, 2),
+    isLoading = _useState2[0],
+    setIsLoading = _useState2[1];
+  var _useState3 = (0,react__WEBPACK_IMPORTED_MODULE_0__.useState)(null),
+    _useState4 = _slicedToArray(_useState3, 2),
+    filterDate = _useState4[0],
+    setFilterDate = _useState4[1];
+  var _useState5 = (0,react__WEBPACK_IMPORTED_MODULE_0__.useState)([]),
+    _useState6 = _slicedToArray(_useState5, 2),
+    selectedBackups = _useState6[0],
+    setSelectedBackups = _useState6[1];
   var confirm = (0,_Confirm__WEBPACK_IMPORTED_MODULE_4__.useConfirm)();
   var toast = (0,_Toast__WEBPACK_IMPORTED_MODULE_5__.useToast)();
   var _useModal = (0,_Modal__WEBPACK_IMPORTED_MODULE_7__.useModal)(),
     openModal = _useModal.openModal,
     closeModal = _useModal.closeModal;
-
-  // selected backups
-  var _React$useState5 = react__WEBPACK_IMPORTED_MODULE_0___default().useState([]),
-    _React$useState6 = _slicedToArray(_React$useState5, 2),
-    selectedBackups = _React$useState6[0],
-    setSelectedBackups = _React$useState6[1];
-  var fetchBackups = /*#__PURE__*/function () {
-    var _ref = _asyncToGenerator(/*#__PURE__*/_regenerator().m(function _callee() {
-      return _regenerator().w(function (_context) {
-        while (1) switch (_context.n) {
-          case 0:
-            _context.n = 1;
-            return fetchBackups_Fn();
-          case 1:
-            setIsLoading(false);
-          case 2:
-            return _context.a(2);
-        }
-      }, _callee);
-    }));
-    return function fetchBackups() {
-      return _ref.apply(this, arguments);
-    };
-  }();
-  var handleDeleteBackup = /*#__PURE__*/function () {
-    var _ref2 = _asyncToGenerator(/*#__PURE__*/_regenerator().m(function _callee2(backupId) {
-      var folderName, response, _t;
+  var fetchBackups = (0,react__WEBPACK_IMPORTED_MODULE_0__.useCallback)(/*#__PURE__*/_asyncToGenerator(/*#__PURE__*/_regenerator().m(function _callee() {
+    return _regenerator().w(function (_context) {
+      while (1) switch (_context.n) {
+        case 0:
+          _context.n = 1;
+          return fetchBackups_Fn();
+        case 1:
+          setIsLoading(false);
+        case 2:
+          return _context.a(2);
+      }
+    }, _callee);
+  })), [fetchBackups_Fn]);
+  (0,react__WEBPACK_IMPORTED_MODULE_0__.useEffect)(function () {
+    fetchBackups();
+  }, [fetchBackups]);
+  var filteredBackups = (0,react__WEBPACK_IMPORTED_MODULE_0__.useMemo)(function () {
+    if (!filterDate) {
+      return backups;
+    }
+    var filterDateStr = filterDate.toDateString();
+    return backups.filter(function (backup) {
+      var backupDate = new Date(backup.date);
+      return backupDate.toDateString() === filterDateStr;
+    });
+  }, [backups, filterDate]);
+  var handleFilterChange = function handleFilterChange(date) {
+    setFilterDate(date ? new Date(date) : null);
+  };
+  var handleDeleteBackup = (0,react__WEBPACK_IMPORTED_MODULE_0__.useCallback)(/*#__PURE__*/function () {
+    var _ref6 = _asyncToGenerator(/*#__PURE__*/_regenerator().m(function _callee2(backupId) {
+      var backupToDelete, response, _t;
       return _regenerator().w(function (_context2) {
         while (1) switch (_context2.n) {
           case 0:
@@ -30830,128 +31120,252 @@ var BackupTable = function BackupTable() {
               danger: true
             });
           case 1:
-            // get folder name
-            folderName = backups.find(function (backup) {
+            backupToDelete = backups.find(function (backup) {
               return backup.id === backupId;
-            }).folder_name; // delete backup folder
-            _context2.n = 2;
-            return (0,_util_lib__WEBPACK_IMPORTED_MODULE_3__.deleteBackupFolder)(folderName);
-          case 2:
-            response = _context2.v;
-            if (!(response.success != true)) {
-              _context2.n = 3;
+            });
+            if (backupToDelete) {
+              _context2.n = 2;
               break;
             }
-            // error message
             toast({
-              message: 'Failed to delete backup',
+              message: 'Backup not found',
               type: 'error'
             });
             return _context2.a(2);
+          case 2:
+            _context2.n = 3;
+            return (0,_util_lib__WEBPACK_IMPORTED_MODULE_3__.deleteBackupFolder)(backupToDelete.folder_name);
           case 3:
-            // success message
+            response = _context2.v;
+            if (response.success) {
+              _context2.n = 4;
+              break;
+            }
+            toast({
+              message: response.data.message || 'Failed to delete backup',
+              type: 'error'
+            });
+            return _context2.a(2);
+          case 4:
             toast({
               message: 'Backup yeeted into oblivion 🗑️✨',
               type: 'success'
             });
-
-            // fetch backups
             fetchBackups();
-            _context2.n = 5;
+            _context2.n = 6;
             break;
-          case 4:
-            _context2.p = 4;
-            _t = _context2.v;
-            return _context2.a(2);
           case 5:
+            _context2.p = 5;
+            _t = _context2.v;
+          case 6:
             return _context2.a(2);
         }
-      }, _callee2, null, [[0, 4]]);
+      }, _callee2, null, [[0, 5]]);
     }));
-    return function handleDeleteBackup(_x) {
-      return _ref2.apply(this, arguments);
+    return function (_x) {
+      return _ref6.apply(this, arguments);
     };
-  }();
-  react__WEBPACK_IMPORTED_MODULE_0___default().useEffect(function () {
-    fetchBackups();
-  }, [fetchBackups_Fn]);
-  react__WEBPACK_IMPORTED_MODULE_0___default().useEffect(function () {
-    setFilteredBackups(backups);
-  }, [backups]);
-  var handleFilterChange = function handleFilterChange(date) {
-    if (!date) {
-      setFilteredBackups(backups);
-      return;
-    }
-    var filtered = backups.filter(function (backup) {
-      var backupDate = new Date(backup.date);
-      var filterDate = new Date(date);
-      return backupDate.toDateString() === filterDate.toDateString();
+  }(), [backups, confirm, toast, fetchBackups]);
+  var handleDeleteSelectedBackups = (0,react__WEBPACK_IMPORTED_MODULE_0__.useCallback)(/*#__PURE__*/_asyncToGenerator(/*#__PURE__*/_regenerator().m(function _callee3() {
+    var results, successfulDeletes, failedDeletes, _t2;
+    return _regenerator().w(function (_context3) {
+      while (1) switch (_context3.n) {
+        case 0:
+          if (!(selectedBackups.length === 0)) {
+            _context3.n = 1;
+            break;
+          }
+          return _context3.a(2);
+        case 1:
+          _context3.p = 1;
+          _context3.n = 2;
+          return confirm({
+            title: "Delete ".concat(selectedBackups.length, " items?"),
+            description: '⚠️ This action cannot be undone. Are you sure?',
+            confirmText: "Yes, delete ".concat(selectedBackups.length, " items"),
+            danger: true
+          });
+        case 2:
+          _context3.n = 3;
+          return Promise.all(selectedBackups.map(function (id) {
+            var backup = backups.find(function (b) {
+              return b.id === id;
+            });
+            if (backup !== null && backup !== void 0 && backup.folder_name) {
+              return (0,_util_lib__WEBPACK_IMPORTED_MODULE_3__.deleteBackupFolder)(backup.folder_name);
+            }
+            return Promise.resolve({
+              success: false,
+              data: {
+                message: "Backup with ID ".concat(id, " not found.")
+              }
+            });
+          }));
+        case 3:
+          results = _context3.v;
+          successfulDeletes = results.filter(function (r) {
+            return r.success;
+          }).length;
+          failedDeletes = results.length - successfulDeletes;
+          if (successfulDeletes > 0) {
+            toast({
+              message: "".concat(successfulDeletes, " backup(s) deleted successfully."),
+              type: 'success'
+            });
+          }
+          if (failedDeletes > 0) {
+            toast({
+              message: "Failed to delete ".concat(failedDeletes, " backup(s)."),
+              type: 'error'
+            });
+          }
+          setSelectedBackups([]);
+          fetchBackups();
+          _context3.n = 5;
+          break;
+        case 4:
+          _context3.p = 4;
+          _t2 = _context3.v;
+        case 5:
+          return _context3.a(2);
+      }
+    }, _callee3, null, [[1, 4]]);
+  })), [selectedBackups, backups, confirm, toast, fetchBackups]);
+  var handleDownloadBackup = function handleDownloadBackup(backupId) {
+    console.log('Download backup:', backupId);
+    toast({
+      message: 'Download functionality is not yet implemented.',
+      type: 'info'
     });
-    setFilteredBackups(filtered);
   };
-  if (isLoading) {
-    return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsxs)("div", {
-      className: "tw-animate-pulse",
-      children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsx)("div", {
-        className: "tw-h-8 tw-bg-gray-200 tw-rounded tw-mb-4"
-      }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsx)("div", {
-        className: "tw-space-y-3",
-        children: [1, 2, 3].map(function (i) {
-          return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsx)("div", {
-            className: "tw-h-16 tw-bg-gray-200 tw-rounded"
-          }, i);
+  var handleRestoreBackup = (0,react__WEBPACK_IMPORTED_MODULE_0__.useCallback)(function (backup) {
+    openModal({
+      title: 'Restore Backup',
+      children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsx)("div", {
+        children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsxs)("div", {
+          className: "tw-space-y-4",
+          children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsx)("div", {
+            children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsx)("p", {
+              className: "tw-text-sm tw-text-gray-600 tw-mt-1",
+              children: "Select which components you want to restore from this backup."
+            })
+          }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsxs)("div", {
+            className: "tw-bg-gray-50 tw-p-4 tw-rounded-lg tw-border tw-border-gray-200",
+            children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsxs)("div", {
+              className: "tw-flex tw-items-center tw-justify-between tw-mb-3",
+              children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsx)("span", {
+                className: "tw-text-sm tw-font-medium tw-text-gray-700",
+                children: "Backup Details"
+              }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsx)("span", {
+                className: "tw-text-xs tw-text-gray-500",
+                children: backup.name
+              })]
+            }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsxs)("div", {
+              className: "tw-space-y-2 tw-text-xs tw-text-gray-600",
+              children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsxs)("div", {
+                className: "tw-flex tw-items-center tw-justify-between tw-py-1 tw-border-b tw-border-gray-100",
+                children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsx)("span", {
+                  className: "tw-font-medium",
+                  children: "Full Size:"
+                }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsx)("span", {
+                  children: backup.size
+                })]
+              }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsxs)("div", {
+                className: "tw-flex tw-items-center tw-justify-between tw-py-1 tw-border-b tw-border-gray-100",
+                children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsx)("span", {
+                  className: "tw-font-medium",
+                  children: "Date:"
+                }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsx)("span", {
+                  children: backup.date
+                })]
+              })]
+            })]
+          }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsxs)("div", {
+            children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsx)("label", {
+              className: "tw-text-sm tw-font-medium tw-text-gray-700 tw-block tw-mb-3",
+              children: "Select components to restore:"
+            }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsx)("div", {
+              className: "tw-space-y-2",
+              children: backup.type.map(function (type) {
+                return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsxs)("label", {
+                  className: "tw-flex tw-items-center tw-space-x-3 tw-p-3 tw-border tw-border-gray-200 tw-rounded-lg tw-cursor-pointer hover:tw-bg-gray-50",
+                  children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsx)("input", {
+                    type: "checkbox",
+                    defaultChecked: true,
+                    className: "tw-h-4 tw-w-4 tw-text-blue-600 tw-border-gray-300 tw-rounded focus:tw-ring-blue-500"
+                  }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsxs)("div", {
+                    className: "tw-flex tw-items-center tw-space-x-2",
+                    children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsx)(BackupTypeBadge, {
+                      type: type
+                    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsxs)("span", {
+                      className: "tw-text-sm tw-text-gray-700",
+                      children: [type === 'database' && 'Database tables and content', type === 'plugin' && 'Plugin files and settings', type === 'theme' && 'Theme files and customizations', type === 'uploads' && 'Media files and uploads']
+                    })]
+                  })]
+                }, type);
+              })
+            })]
+          }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsx)("div", {
+            className: "tw-bg-yellow-50 tw-border tw-border-yellow-200 tw-rounded-lg tw-p-3",
+            children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsxs)("div", {
+              className: "tw-flex tw-items-start tw-space-x-2",
+              children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsx)("svg", {
+                className: "tw-w-4 tw-h-4 tw-text-yellow-600 tw-mt-0.5 tw-flex-shrink-0",
+                fill: "none",
+                stroke: "currentColor",
+                viewBox: "0 0 24 24",
+                children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsx)("path", {
+                  strokeLinecap: "round",
+                  strokeLinejoin: "round",
+                  strokeWidth: 2,
+                  d: "M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-2.5L13.732 4c-.77-.833-1.964-.833-2.732 0L3.732 16.5c-.77.833.192 2.5 1.732 2.5z"
+                })
+              }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsxs)("div", {
+                className: "tw-text-sm tw-text-yellow-800",
+                children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsx)("p", {
+                  className: "tw-font-medium",
+                  children: "Warning"
+                }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsx)("p", {
+                  className: "tw-mt-1",
+                  children: "This will overwrite your current data. Make sure you have a recent backup before proceeding."
+                })]
+              })]
+            })
+          }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsxs)("div", {
+            className: "tw-flex tw-justify-end tw-gap-3 tw-pt-4",
+            children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsx)("button", {
+              onClick: closeModal,
+              className: "tw-px-4 tw-py-2 tw-text-sm tw-font-medium tw-text-gray-700 tw-bg-white tw-border tw-border-gray-300 tw-rounded-md hover:tw-bg-gray-50 focus:tw-outline-none focus:tw-ring-2 focus:tw-ring-offset-2 focus:tw-ring-blue-500",
+              children: "Cancel"
+            }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsx)("button", {
+              onClick: function onClick() {
+                console.log('Restoring backup:', backup.id);
+                toast({
+                  message: 'Restore functionality is not yet implemented.',
+                  type: 'info'
+                });
+                closeModal();
+              },
+              className: "tw-px-4 tw-py-2 tw-text-sm tw-font-medium tw-text-white tw-bg-blue-600 tw-border tw-border-transparent tw-rounded-md hover:tw-bg-blue-700 focus:tw-outline-none focus:tw-ring-2 focus:tw-ring-offset-2 focus:tw-ring-blue-500",
+              children: "Yes, Restore Backup! \uD83D\uDE80"
+            })]
+          })]
         })
-      })]
-    });
-  }
-  if (!backups || backups.length === 0) {
-    return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsx)("div", {
-      className: "tw-text-center",
-      children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsxs)("div", {
-        className: "tw-bg-gray-50 tw-p-12 tw-border tw-border-gray-200",
-        children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsx)("svg", {
-          className: "tw-mx-auto tw-h-12 tw-w-12 tw-text-gray-400",
-          fill: "none",
-          stroke: "currentColor",
-          viewBox: "0 0 24 24",
-          children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsx)("path", {
-            strokeLinecap: "round",
-            strokeLinejoin: "round",
-            strokeWidth: 2,
-            d: "M20 13V6a2 2 0 00-2-2H6a2 2 0 00-2 2v7m16 0v5a2 2 0 01-2 2H6a2 2 0 01-2-2v-5m16 0h-2.586a1 1 0 00-.707.293l-2.414 2.414a1 1 0 01-.707.293h-3.172a1 1 0 01-.707-.293l-2.414-2.414A1 1 0 006.586 13H4"
-          })
-        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsx)("h3", {
-          className: "tw-mt-2 tw-text-sm tw-font-medium tw-text-gray-900",
-          children: "No backups"
-        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsx)("p", {
-          className: "tw-mt-1 tw-text-sm tw-text-gray-500",
-          children: "Get started by creating a new backup."
-        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsx)("div", {
-          className: "tw-mt-6",
-          children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsx)(_BackupTableTools__WEBPACK_IMPORTED_MODULE_2__.NewBackupButton, {})
-        })]
       })
     });
-  }
+  }, [openModal, closeModal, toast]);
   var handleSelectBackup = function handleSelectBackup(e, backupId) {
     if (e.target.checked) {
-      setSelectedBackups([].concat(_toConsumableArray(selectedBackups), [backupId]));
-    } else {
-      setSelectedBackups(selectedBackups.filter(function (id) {
-        return id !== backupId;
-      }));
-    }
-  };
-  var handleDeleteBackups = function handleDeleteBackups(backupsSelected) {
-    var __filteredBackups = _toConsumableArray(filteredBackups);
-    backupsSelected.forEach(function (backupId) {
-      __filteredBackups = __filteredBackups.filter(function (backup) {
-        return backup.id !== backupId;
+      setSelectedBackups(function (prev) {
+        return [].concat(_toConsumableArray(prev), [backupId]);
       });
-    });
-    setFilteredBackups(__filteredBackups);
-    setSelectedBackups([]);
+    } else {
+      setSelectedBackups(function (prev) {
+        return prev.filter(function (id) {
+          return id !== backupId;
+        });
+      });
+    }
   };
   var handleSelectAllBackups = function handleSelectAllBackups(e) {
     if (e.target.checked) {
@@ -30962,67 +31376,27 @@ var BackupTable = function BackupTable() {
       setSelectedBackups([]);
     }
   };
-  var handleRestoreBackup = function handleRestoreBackup(backupId) {
-    console.log('restore backup', backupId);
-  };
+  if (isLoading) {
+    return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsx)(LoadingSkeleton, {});
+  }
+  if (!backups || backups.length === 0) {
+    return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsx)(EmptyState, {});
+  }
   return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsxs)("div", {
     className: "tw-bg-white tw-border tw-border-gray-200",
     children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsx)(_BackupTableTools__WEBPACK_IMPORTED_MODULE_2__["default"], {
       onFilterChange: handleFilterChange,
-      onDeleteBackups: handleDeleteBackups,
+      onDeleteBackups: handleDeleteSelectedBackups,
       selectedBackups: selectedBackups
     }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsx)("div", {
       className: "tw-block md:tw-hidden",
       children: filteredBackups.map(function (backup) {
-        return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsxs)("div", {
-          className: "tw-p-4 tw-border-b tw-border-gray-200",
-          children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsxs)("div", {
-            className: "tw-flex tw-items-center tw-justify-between tw-mb-2",
-            children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsx)("input", {
-              type: "checkbox",
-              className: "tw-form-checkbox tw-h-4 tw-w-4 tw-text-blue-600",
-              checked: selectedBackups.includes(backup.id),
-              onChange: function onChange(e) {
-                return handleSelectBackup(e, backup.id);
-              }
-            }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsx)("div", {
-              className: "tw-text-sm tw-font-medium tw-text-gray-900",
-              children: backup.name
-            })]
-          }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsxs)("div", {
-            className: "tw-space-y-2",
-            children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsx)("div", {
-              className: "tw-flex tw-flex-wrap tw-gap-1",
-              children: backup.type.map(function (type, index) {
-                return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsx)("span", {
-                  className: "tw-inline-flex tw-items-center tw-px-2 tw-py-0.5 tw-text-xs tw-font-medium tw-rounded-md tw-bg-gray-100 tw-text-gray-800",
-                  children: type
-                }, index);
-              })
-            }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsxs)("div", {
-              className: "tw-flex tw-justify-between tw-text-sm tw-text-gray-500",
-              children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsx)("span", {
-                children: (0,_util_lib__WEBPACK_IMPORTED_MODULE_3__.friendlyDateTime)(backup.date, wp_backup_php_data.current_datetime)
-              }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsx)("span", {
-                children: backup.size
-              })]
-            }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsxs)("div", {
-              className: "tw-flex tw-items-center tw-justify-between",
-              children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsx)("span", {
-                className: "tw-px-2 tw-inline-flex tw-text-xs tw-leading-5 tw-font-semibold tw-rounded-full tw-bg-green-100 tw-text-green-800",
-                children: backup.status
-              }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsxs)("div", {
-                className: "tw-space-x-2",
-                children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsx)("button", {
-                  className: "tw-text-blue-600 hover:tw-text-blue-900",
-                  children: "Download"
-                }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsx)("button", {
-                  className: "tw-text-red-600 hover:tw-text-red-900",
-                  children: "Delete"
-                })]
-              })]
-            })]
-          })]
+        return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsx)(BackupMobileCard, {
+          backup: backup,
+          isSelected: selectedBackups.includes(backup.id),
+          onSelect: handleSelectBackup,
+          onDelete: handleDeleteBackup,
+          onDownload: handleDownloadBackup
         }, backup.id);
       })
     }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsx)("div", {
@@ -31039,8 +31413,9 @@ var BackupTable = function BackupTable() {
               children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsx)("input", {
                 type: "checkbox",
                 className: "tw-form-checkbox tw-h-4 tw-w-4 tw-text-blue-600",
-                checked: selectedBackups.length === filteredBackups.length,
-                onChange: handleSelectAllBackups
+                checked: filteredBackups.length > 0 && selectedBackups.length === filteredBackups.length,
+                onChange: handleSelectAllBackups,
+                disabled: filteredBackups.length === 0
               })
             }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsx)("th", {
               scope: "col",
@@ -31070,138 +31445,13 @@ var BackupTable = function BackupTable() {
         }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsx)("tbody", {
           className: "tw-bg-white tw-divide-y tw-divide-gray-200",
           children: filteredBackups.map(function (backup) {
-            return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsxs)("tr", {
-              children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsx)("td", {
-                className: "tw-px-6 tw-py-4",
-                width: "3%",
-                children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsx)("input", {
-                  type: "checkbox",
-                  className: "tw-form-checkbox tw-h-4 tw-w-4 tw-text-blue-600",
-                  checked: selectedBackups.includes(backup.id),
-                  onChange: function onChange(e) {
-                    return handleSelectBackup(e, backup.id);
-                  }
-                })
-              }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsxs)("td", {
-                className: "tw-px-6 tw-py-4",
-                children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsx)("div", {
-                  className: "tw-text-sm tw-font-medium tw-text-gray-900",
-                  children: backup.name
-                }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsx)("div", {
-                  className: "tw-flex tw-flex-wrap tw-gap-1 tw-mt-2",
-                  children: backup.type.map(function (type, index) {
-                    var style = "";
-                    var label = "";
-                    switch (type) {
-                      case "database":
-                        style = "tw-bg-blue-100 tw-text-blue-800 tw-border tw-border-blue-200";
-                        label = "Database";
-                        break;
-                      case "plugin":
-                        style = "tw-bg-purple-100 tw-text-purple-800 tw-border tw-border-purple-200";
-                        label = "Plugins";
-                        break;
-                      case "theme":
-                        style = "tw-bg-yellow-100 tw-text-yellow-800 tw-border tw-border-yellow-200";
-                        label = "Themes";
-                        break;
-                      case "uploads":
-                        style = "tw-bg-green-100 tw-text-green-800 tw-border tw-border-green-200";
-                        label = "Uploads";
-                        break;
-                      default:
-                        style = "tw-bg-gray-100 tw-text-gray-800 tw-border tw-border-gray-200";
-                        label = type;
-                    }
-                    return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsx)("span", {
-                      className: "tw-inline-flex tw-items-center tw-gap-1 tw-px-2 tw-py-0.5 tw-text-xs tw-font-medium tw-rounded-full ".concat(style, " tw-transition-colors tw-duration-200"),
-                      style: {
-                        letterSpacing: "0.01em"
-                      },
-                      children: label
-                    }, index);
-                  })
-                })]
-              }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsx)("td", {
-                className: "tw-px-6 tw-py-4 tw-whitespace-nowrap tw-text-sm tw-text-gray-500",
-                children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsx)("div", {
-                  className: "tw-text-sm tw-text-gray-500",
-                  children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsxs)("span", {
-                    className: "tw-inline-flex tw-items-center tw-gap-1 tw-px-2.5 tw-py-1 tw-text-xs tw-font-medium tw-rounded-md tw-bg-slate-100 tw-text-slate-700 tw-border tw-border-slate-200/60 tw-shadow-sm",
-                    title: backup.date,
-                    children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsx)("svg", {
-                      className: "tw-w-3 tw-h-3 tw-text-slate-400",
-                      fill: "none",
-                      stroke: "currentColor",
-                      viewBox: "0 0 24 24",
-                      children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsx)("path", {
-                        strokeLinecap: "round",
-                        strokeLinejoin: "round",
-                        strokeWidth: 2,
-                        d: "M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"
-                      })
-                    }), (0,_util_lib__WEBPACK_IMPORTED_MODULE_3__.friendlyDateTime)(backup.date, wp_backup_php_data.current_datetime)]
-                  })
-                })
-              }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsx)("td", {
-                className: "tw-px-6 tw-py-4 tw-whitespace-nowrap tw-text-sm tw-text-gray-500",
-                children: backup.size
-              }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsxs)("td", {
-                className: "tw-px-6 tw-py-4 tw-whitespace-nowrap",
-                children: [backup.status === "pending" && /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsx)("span", {
-                  className: "tw-px-2 tw-inline-flex tw-text-xs tw-leading-5 tw-font-semibold tw-rounded-full tw-bg-yellow-100 tw-text-yellow-800",
-                  children: "Pending"
-                }), backup.status === "completed" && /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsx)("span", {
-                  className: "tw-px-2 tw-inline-flex tw-text-xs tw-leading-5 tw-font-semibold tw-rounded-full tw-bg-green-100 tw-text-green-800",
-                  children: "Completed"
-                }), backup.status === "fail" && /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsx)("span", {
-                  className: "tw-px-2 tw-inline-flex tw-text-xs tw-leading-5 tw-font-semibold tw-rounded-full tw-bg-red-100 tw-text-red-800",
-                  children: "Failed"
-                }), ["pending", "completed", "fail"].indexOf(backup.status) === -1 && /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsx)("span", {
-                  className: "tw-px-2 tw-inline-flex tw-text-xs tw-leading-5 tw-font-semibold tw-rounded-full tw-bg-gray-100 tw-text-gray-800",
-                  children: backup.status
-                })]
-              }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsx)("td", {
-                className: "tw-px-6 tw-py-4 tw-whitespace-nowrap tw-text-right tw-text-sm tw-font-medium",
-                children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsx)(_DropdownActions__WEBPACK_IMPORTED_MODULE_6__["default"], {
-                  items: [
-                  // restore backup
-                  {
-                    label: 'Restore',
-                    icon: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsx)(lucide_react__WEBPACK_IMPORTED_MODULE_9__["default"], {}),
-                    onClick: function onClick() {
-                      // setSelectedBackupRestore(backup);
-                      // setIsRestoreModalOpen(true);
-                      openModal({
-                        title: 'Restore Backup',
-                        children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsxs)("div", {
-                          children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsx)("h1", {
-                            children: "Restore Backup"
-                          }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsxs)("p", {
-                            children: ["Restore backup ", JSON.stringify(backup)]
-                          }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsx)("button", {
-                            onClick: closeModal,
-                            children: "Close"
-                          })]
-                        })
-                      });
-                    }
-                  }, {
-                    label: 'Download',
-                    icon: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsx)(lucide_react__WEBPACK_IMPORTED_MODULE_10__["default"], {}),
-                    action: function action() {
-                      return handleDownloadBackup(backup.id);
-                    }
-                  }, {
-                    label: 'Delete',
-                    icon: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsx)(lucide_react__WEBPACK_IMPORTED_MODULE_11__["default"], {}),
-                    danger: true,
-                    onClick: function onClick() {
-                      return handleDeleteBackup(backup.id);
-                    }
-                  }]
-                })
-              })]
+            return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsx)(BackupTableRow, {
+              backup: backup,
+              isSelected: selectedBackups.includes(backup.id),
+              onSelect: handleSelectBackup,
+              onDelete: handleDeleteBackup,
+              onDownload: handleDownloadBackup,
+              onRestore: handleRestoreBackup
             }, backup.id);
           })
         })]
@@ -32088,10 +32338,6 @@ var ModalProvider = function ModalProvider(_ref2) {
     _useState2 = _slicedToArray(_useState, 2),
     state = _useState2[0],
     setState = _useState2[1];
-
-  // const resolveRef = useRef(null);
-  // const rejectRef = useRef(null);
-
   var openModal = (0,react__WEBPACK_IMPORTED_MODULE_0__.useCallback)(function (opts) {
     setState({
       isOpen: true,

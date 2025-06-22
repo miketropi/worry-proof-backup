@@ -1,4 +1,4 @@
-import BackupTable from './components/BackupTable';
+// import BackupTable from './components/BackupTable';
 import Footer from './components/Footer';
 import ServerMetrics from './components/ServerMetrics';
 import BackupProcess from './components/BackupProcess';
@@ -7,6 +7,7 @@ import { ToastProvider } from './components/Toast';
 import Tab from './components/Tab';
 import { Package, Book, Bug } from 'lucide-react';
 import { ModalProvider } from './components/Modal';
+import BackupTable from './components/BackupTable.refactored';
 
 const AppProvider = ({ children }) => {
   return (

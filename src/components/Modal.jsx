@@ -141,9 +141,6 @@ const ModalProvider = ({ children }) => {
     options: {},
   });
 
-  // const resolveRef = useRef(null);
-  // const rejectRef = useRef(null);
-
   const openModal = useCallback((opts) => {
     setState({
       isOpen: true,

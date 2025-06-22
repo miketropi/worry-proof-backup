@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react';
 import useBackupStore from '../util/store';
 import { doBackupProcess } from '../util/lib';
 import { useToast } from './Toast';
+import Modal from './Modal';
 
 /**
  * BackupProcess - Stepper UI for backup process
@@ -9,7 +10,7 @@ import { useToast } from './Toast';
  * Uses Tailwind CSS with 'tw-' prefix for all classes
  */
 const BackupProcess = () => {
-  const { backupProcess, inProgress, inProgressStep, setInProgressStep, fetchBackups_Fn } = useBackupStore();
+  const { backupProcess, inProgress, setInProgress, inProgressStep, setInProgressStep, fetchBackups_Fn } = useBackupStore();
   const [responseOldStep, setResponseOldStep] = useState({});
   const [error, setError] = useState(null);
   const toast = useToast();
@@ -32,7 +33,7 @@ const BackupProcess = () => {
 
       // show toast
       toast({
-        message: '🎉 Yasss! Full backup done, everything’s safe & sound 🛡️. You’re good to go, keep slaying! 😎✨',
+        message: "🎉 Yasss! Full backup done, everything's safe & sound 🛡️. You're good to go, keep slaying! 😎✨",
         type: 'success',
       });
 
@@ -53,6 +54,14 @@ const BackupProcess = () => {
       });
     }
   };
+
+  useEffect(() => {
+    if (inProgressStep > backupProcess.length) {
+      setTimeout(() => {
+        setInProgress(false);
+      }, 3000);
+    }
+  }, [inProgressStep]);
 
   useEffect(() => {
     if (inProgress == true) {
@@ -77,16 +86,13 @@ const BackupProcess = () => {
     }
   }, [inProgress, inProgressStep]);
 
-  if (!inProgress || !backupProcess.length) return null;
-
   return (
-    <div className="tw-bg-white tw-border tw-border-gray-200 tw-p-6 tw-mb-6">
-      <h2 className="tw-text-lg tw-font-semibold tw-text-gray-800 tw-mb-6 tw-flex tw-items-center tw-gap-2">
-        <svg className="tw-w-6 tw-h-6 tw-text-blue-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8v4l3 3M12 6a9 9 0 100 18 9 9 0 000-18z" />
-        </svg>
-        Backup Progress
-      </h2>
+    <Modal
+      isOpen={inProgress && backupProcess.length > 0}
+      onClose={() => setInProgress(false)}
+      title="Backup Progress"
+      size='lg'
+    >
       <ol className="tw-relative tw-border-l-2 tw-border-blue-200 tw-ml-4">
         {backupProcess.map((step, idx) => {
           const isCompleted = inProgressStep > step.step;
@@ -146,7 +152,7 @@ const BackupProcess = () => {
           );
         })}
       </ol>
-    </div>
+    </Modal>
   );
 };
 

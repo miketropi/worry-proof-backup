@@ -92,8 +92,17 @@ const BackupConfigModal = ({ isOpen, onClose, onSave }) => {
             onChange={handleNameChange}
             className="tw-block tw-w-full tw-p-4 tw-rounded-lg tw-border tw-border-gray-200 tw-bg-gray-50 tw-text-gray-900 tw-placeholder-gray-400 tw-transition-colors focus:tw-border-blue-500 focus:tw-ring-2 focus:tw-ring-blue-200 focus:tw-bg-white"
             placeholder="Enter backup name"
+            autoComplete='off'
             required
           />
+        {!config.name && (
+          <div className="tw-mt-2 tw-text-sm tw-text-red-600 tw-flex tw-items-center tw-gap-1">
+            <svg className="tw-w-4 tw-h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8v4m0 4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+            </svg>
+            Backup name is required
+          </div>
+        )}
         </div>
 
         {/* Backup Types Selection */}
@@ -101,6 +110,14 @@ const BackupConfigModal = ({ isOpen, onClose, onSave }) => {
           <label className="tw-block tw-text-sm tw-font-semibold tw-text-gray-800">
             Backup Types
           </label>
+          {config.types.length === 0 && (
+            <div className="tw-mt-2 tw-text-sm tw-text-red-600 tw-flex tw-items-center tw-gap-1">
+              <svg className="tw-w-4 tw-h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8v4m0 4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+              </svg>
+              Please select at least one backup type
+            </div>
+          )}
           <div className="tw-grid tw-gap-3 tw-p-4 tw-bg-gray-50 tw-rounded-lg tw-border tw-border-gray-200">
             {BACKUP_TYPES.map((type) => (
               <label
