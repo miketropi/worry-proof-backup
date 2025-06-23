@@ -16,9 +16,9 @@ const BackupProcess = () => {
   const toast = useToast();
 
   const backupProcessHandler = async (process) => {
-    console.log('process', process);
+    // console.log('process', process);
     const response = await doBackupProcess(process);
-    console.log('response', response);
+    // console.log('response', response);
     // check if response is error
     if (response.success != true) {
       // console.error(response);
@@ -37,7 +37,7 @@ const BackupProcess = () => {
         type: 'success',
       });
 
-      return;
+      return; 
     }
 
     let response_data = { ...responseOldStep, ...response.data };

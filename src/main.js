@@ -13,6 +13,12 @@ import App from './App';
   const WpBackup_Init = () => {
     // root id "WP-BACKUP-ADMIN"
     const el = document.getElementById('WP-BACKUP-ADMIN');
+
+    // check if el is exists
+    if (!el) {
+      return;
+    }
+
     const root = createRoot(el); 
     root.render(<App />);
   };
