@@ -1,8 +1,9 @@
 import { useState, useCallback, useEffect } from 'react';
 import BackupTypeBadge from './BackupTypeBadge';
+import useBackupStore from '../util/store';
 
 export default function RestoreConfigModal({ backup, closeModal, toast }) {
-
+  const { buildRestoreProcess } = useBackupStore();
   const [selectedBackupRestoreTypes, setSelectedBackupRestoreTypes] = useState(backup.type);
 
   return (
@@ -90,8 +91,12 @@ export default function RestoreConfigModal({ backup, closeModal, toast }) {
           </button>
           <button
             onClick={() => {
-              console.log('Restoring backup:', backup.folder_name, selectedBackupRestoreTypes);
-              toast({ message: 'Restore functionality is not yet implemented.', type: 'info' });
+              // console.log('Restoring backup:', backup.folder_name, selectedBackupRestoreTypes);
+              // toast({ message: 'Restore functionality is not yet implemented.', type: 'info' });
+              buildRestoreProcess({
+                folder_name: backup.folder_name,
+                types: selectedBackupRestoreTypes,
+              });
               closeModal();
             }}
             className="tw-px-4 tw-py-2 tw-text-sm tw-font-medium tw-text-white tw-bg-blue-600 tw-border tw-border-transparent tw-rounded-md hover:tw-bg-blue-700 focus:tw-outline-none focus:tw-ring-2 focus:tw-ring-offset-2 focus:tw-ring-blue-500"

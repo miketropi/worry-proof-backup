@@ -9,6 +9,11 @@ const useBackupStore = create(
     backupProcess: [],
     inProgress: false,
     inProgressStep: 0,
+    restoreProcess: {
+      process: [],
+      inProgress: false,
+      inProgressStep: 0,
+    },
 
     // Actions
     setInProgress: (inProgress) =>
@@ -19,6 +24,16 @@ const useBackupStore = create(
     setInProgressStep: (inProgressStep) =>
       set((state) => {
         state.inProgressStep = inProgressStep;
+      }),
+
+    setRestoreInProgress: (inProgress) =>
+      set((state) => {
+        state.restoreProcess.inProgress = inProgress;
+      }),
+    
+    setRestoreInProgressStep: (inProgressStep) =>
+      set((state) => {
+        state.restoreProcess.inProgressStep = inProgressStep;
       }),
 
     setBackups: (backups) =>
@@ -38,7 +53,7 @@ const useBackupStore = create(
         {
           step: 1,
           name: 'Generate Config File',
-          description: '📝 Let’s set the stage! Creating a shiny new config file with your backup preferences. Almost like writing a recipe for your perfect backup. 🍰',
+          description: '📝 Let\'s set the stage! Creating a shiny new config file with your backup preferences. Almost like writing a recipe for your perfect backup. 🍰',
           action: 'wp_backup_ajax_create_backup_config_file',
           payload: {
             name,
@@ -103,6 +118,61 @@ const useBackupStore = create(
       } catch (error) {
         console.error('Error fetching backups:', error);
       }
+    },
+
+    buildRestoreProcess: (backup) => {
+      const { folder_name, types } = backup;
+      const typeMessages = {
+        database: `🗄️ Restoring your precious database records! 📊 Our data wizards are carefully bringing back every table and relationship. Your information is coming back to life! 🔄✨`,
+        plugin: `🔌 Restoring your powerful plugins! 🛠️ Each extension is being carefully unwrapped and brought back online. Your site's functionality is getting its groove back! 🚀💫`,
+        theme: `🎨 Restoring your beautiful theme! 🎭 Every design element and customization is being carefully revived. Your site's look and feel is getting its glow back! 🎪✨`,
+        uploads: `📁 Restoring your uploads folder! 🖼️ Every image, document, and media file is being carefully brought back. Your content is getting its sparkle back! 💎🌟`
+      };
+      
+      const process = [
+        {
+          step: 1,
+          name: 'Read Config File',
+          description: '📖 Oop, let me check what you wanted restored! Reading your backup config like a pro detective 🔍✨',
+          action: 'wp_backup_ajax_restore_read_backup_config_file',
+          payload: {
+            name: folder_name,
+            types: types,
+          },
+        }
+      ];
+
+      // for each type, add a step to the process
+      types.forEach((type) => {
+        process.push({
+          step: process.length + 1,
+          name: `Restoring ${type}`,
+          description: typeMessages[type],
+          action: `wp_backup_ajax_restore_${type}`,
+          payload: {
+            name: folder_name,
+            type, 
+          },
+        });
+      });
+
+      // add done step
+      process.push({
+        step: process.length + 1,
+        name: 'Done',
+        description: '🎉 All done! Your restore is complete and everything is back to normal. Time to celebrate! 🥳',
+        action: 'wp_backup_ajax_restore_done',
+        payload: {},
+      });
+      console.log('process', process);
+
+      set((state) => {
+        state.restoreProcess.process = process;
+        // set inProgress to true
+        state.restoreProcess.inProgress = true;
+        // set inProgressStep to 1
+        state.restoreProcess.inProgressStep = 1;
+      });
     }
   }))
 );

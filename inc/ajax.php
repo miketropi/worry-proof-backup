@@ -291,3 +291,19 @@ function wp_backup_ajax_delete_backup_folder() {
     'message' => 'Backup folder deleted successfully',
   ]);
 }
+
+// wp_backup_ajax_restore_read_backup_config_file
+add_action('wp_ajax_wp_backup_ajax_restore_read_backup_config_file', 'wp_backup_ajax_restore_read_backup_config_file');
+function wp_backup_ajax_restore_read_backup_config_file() {
+  # check nonce
+  check_ajax_referer('wp_backup_nonce_' . get_current_user_id(), 'nonce');
+
+  # get payload
+  $payload = isset($_POST['payload']) ? $_POST['payload'] : array();
+
+  wp_send_json_success([
+    'read_backup_config_file_status' => 'done',
+    'backup_config_file' => [],
+    'next_step' => true,
+  ]);
+}

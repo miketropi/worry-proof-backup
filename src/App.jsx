@@ -8,6 +8,7 @@ import Tab from './components/Tab';
 import { Package, Book, Bug } from 'lucide-react';
 import { ModalProvider } from './components/Modal';
 import BackupTable from './components/BackupTable.refactored';
+import RestoreProcess from './components/RestoreProcess';
 
 const AppProvider = ({ children }) => {
   return (
@@ -27,6 +28,7 @@ const tabs = [
     icon: <Package size={14} />,
     content: <>
       <BackupProcess />
+      <RestoreProcess />
       <BackupTable />
     </>
   },
