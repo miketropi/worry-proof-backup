@@ -48,7 +48,7 @@ const RestoreProcess = () => {
     } else {
       restoreProcessHandler({
         ...process,
-        payload: { ...response_data }
+        payload: { ...process.payload, ...response_data }
       });
     }
   };

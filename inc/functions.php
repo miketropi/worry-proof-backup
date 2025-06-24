@@ -560,3 +560,31 @@ function wp_backup_remove_folder($folder) {
     return new WP_Error('exception', $e->getMessage());
   }
 }
+
+function wp_backup_get_config_file($folder_name) {
+  $upload_dir = wp_upload_dir();
+  $backup_folder = $upload_dir['basedir'] . '/wp-backup/' . $folder_name . '/config.json';
+
+  // check if $backup_folder is exists
+  if (!file_exists($backup_folder)) {
+    return new WP_Error('config_file_not_found', 'Config file not found');
+  }
+
+  // get config file content
+  $config_file_content = file_get_contents($backup_folder);
+
+  // check if $config_file_content is not empty
+  if (empty($config_file_content)) {
+    return new WP_Error('config_file_empty', 'Config file is empty');
+  }
+
+  // decode config file content
+  $config_data = json_decode($config_file_content, true);
+
+  // check if $config_data is not empty
+  if (empty($config_data)) {
+    return new WP_Error('config_data_empty', 'Config data is empty');
+  }
+
+  return $config_data;
+}

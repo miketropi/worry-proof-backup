@@ -32691,7 +32691,7 @@ var RestoreProcess = function RestoreProcess() {
             return _context.a(2);
           case 5:
             _restoreProcessHandler(_objectSpread(_objectSpread({}, process), {}, {
-              payload: _objectSpread({}, response_data)
+              payload: _objectSpread(_objectSpread({}, process.payload), response_data)
             }));
           case 6:
             return _context.a(2);
@@ -34017,8 +34017,8 @@ var useBackupStore = (0,zustand__WEBPACK_IMPORTED_MODULE_1__.create)((0,zustand_
         description: '📖 Oop, let me check what you wanted restored! Reading your backup config like a pro detective 🔍✨',
         action: 'wp_backup_ajax_restore_read_backup_config_file',
         payload: {
-          name: folder_name,
-          types: types
+          folder_name: folder_name,
+          types: types.join(',')
         }
       }];
 
@@ -34030,7 +34030,7 @@ var useBackupStore = (0,zustand__WEBPACK_IMPORTED_MODULE_1__.create)((0,zustand_
           description: typeMessages[type],
           action: "wp_backup_ajax_restore_".concat(type),
           payload: {
-            name: folder_name,
+            folder_name: folder_name,
             type: type
           }
         });

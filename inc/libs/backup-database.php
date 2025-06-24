@@ -164,7 +164,7 @@ SQL;
         $sql = '';
 
         if ($offset === 0) {
-            // First time of the table → add CREATE TABLE command
+            // First time of the table → add DROP TABLE IF EXISTS and CREATE TABLE command
             $create = $this->wpdb->get_row("SHOW CREATE TABLE `$table`", ARRAY_N);
             if ($this->wpdb->last_error) {
                 return new WP_Error('db_error', "Oh no! 🐘 Database error: {$this->wpdb->last_error}. Please check your database connection and try again! 🔌");
@@ -172,7 +172,8 @@ SQL;
             if (!$create || !isset($create[1])) {
                 return new WP_Error('create_table_error', "Whoops! 🏗️ Couldn't get CREATE TABLE statement for: $table. Please check your database structure! 🛠️");
             }
-            $sql .= "\n\n" . $create[1] . ";\n\n";
+            $sql .= "\n\nDROP TABLE IF EXISTS `$table`;\n";
+            $sql .= $create[1] . ";\n\n";
         }
 
         foreach ($rows as $row) {

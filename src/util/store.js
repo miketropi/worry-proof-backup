@@ -136,8 +136,8 @@ const useBackupStore = create(
           description: '📖 Oop, let me check what you wanted restored! Reading your backup config like a pro detective 🔍✨',
           action: 'wp_backup_ajax_restore_read_backup_config_file',
           payload: {
-            name: folder_name,
-            types: types,
+            folder_name,
+            types: types.join(','),
           },
         }
       ];
@@ -150,7 +150,7 @@ const useBackupStore = create(
           description: typeMessages[type],
           action: `wp_backup_ajax_restore_${type}`,
           payload: {
-            name: folder_name,
+            folder_name,
             type, 
           },
         });

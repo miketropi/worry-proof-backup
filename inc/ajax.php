@@ -301,9 +301,106 @@ function wp_backup_ajax_restore_read_backup_config_file() {
   # get payload
   $payload = isset($_POST['payload']) ? $_POST['payload'] : array();
 
-  wp_send_json_success([
+  $folder_name = $payload['folder_name'];
+  $types = $payload['types'];
+
+  // get backup config file
+  $backup_config = wp_backup_get_config_file($folder_name);
+
+  // check error $backup_config
+  if (is_wp_error($backup_config)) {
+    wp_send_json_error($backup_config->get_error_message());
+  }
+
+  wp_send_json_success(array_merge([
     'read_backup_config_file_status' => 'done',
-    'backup_config_file' => [],
     'next_step' => true,
+  ], $backup_config));
+}
+
+// wp_backup_ajax_restore_database
+add_action('wp_ajax_wp_backup_ajax_restore_database', 'wp_backup_ajax_restore_database');
+function wp_backup_ajax_restore_database() {
+  # check nonce
+  check_ajax_referer('wp_backup_nonce_' . get_current_user_id(), 'nonce');
+
+  # get payload
+  $payload = isset($_POST['payload']) ? $_POST['payload'] : array();
+
+  $folder_name = $payload['folder_name'];
+  $backup_prefix = $payload['table_prefix'];
+
+  $exclude_tables = isset($payload['exclude_tables']) ? $payload['exclude_tables'] : [];
+  $exclude_tables = apply_filters('wp_backup:restore_database_exclude_tables', $exclude_tables, $payload);
+
+  $restore_database = new WP_Restore_Database($folder_name, $exclude_tables, $backup_prefix);
+
+  // check error $restore_database
+  if (is_wp_error($restore_database)) {
+    wp_send_json_error($restore_database->get_error_message());
+  }
+
+  if(!isset($payload['restore_database_ssid']) || empty($payload['restore_database_ssid'])) {
+    $progress = $restore_database->startRestore();
+
+    // check error $progress
+    if (is_wp_error($progress)) {
+      wp_send_json_error($progress->get_error_message());
+    }
+
+    wp_send_json_success([
+      'restore_database_ssid' => $folder_name,
+      'next_step' => false,
+    ]);
+  } else {
+    $progress = $restore_database->processStep();
+    
+    // check error $progress
+    if (is_wp_error($progress)) {
+      wp_send_json_error($progress->get_error_message());
+    }
+
+    if($progress['done']) {
+      $result = $restore_database->finishRestore();
+
+      // check error $result
+      if (is_wp_error($result)) {
+        wp_send_json_error($result->get_error_message());
+      }
+
+      // create hook after restore database successfully
+      do_action('wp_backup:after_restore_database_success', $payload);
+
+      wp_send_json_success([
+        'restore_database_ssid' => $folder_name,
+        'restore_database_status' => 'done',
+        'next_step' => true,
+      ]);
+    } else {
+      
+      wp_send_json_success([
+        'restore_database_ssid' => $folder_name,
+        'restore_database_status' => 'is_running',
+        'next_step' => false,
+        'progress' => $progress,
+      ]);
+    }
+  }
+}
+
+// wp_backup_ajax_restore_done
+add_action('wp_ajax_wp_backup_ajax_restore_done', 'wp_backup_ajax_restore_done');
+function wp_backup_ajax_restore_done() {
+  # check nonce
+  check_ajax_referer('wp_backup_nonce_' . get_current_user_id(), 'nonce');
+
+  # get payload
+  $payload = isset($_POST['payload']) ? $_POST['payload'] : array();
+
+  // create hook after restore process successfully
+  do_action('wp_backup:after_restore_process_success', $payload);
+
+  wp_send_json_success([
+    'restore_process_status' => 'done',
   ]);
 }
