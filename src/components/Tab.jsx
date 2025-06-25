@@ -245,9 +245,12 @@ const Tab = ({
             ${fullWidth ? 'tw-w-full' : 'tw-w-fit'}
             ${variant === 'underline' ? 'tw-bg-transparent tw-p-0 tw-border-b tw-border-gray-200' : ''}
             ${variant === 'pills' ? 'tw-bg-gray-100 tw-p-1 tw-rounded-lg tw-border' : ''}
+            tw-overflow-x-auto tw-scrollbar-hide tw-whitespace-nowrap md:tw-flex-wrap md:tw-overflow-visible
           `}
           role="tablist"
           aria-label="Tab navigation"
+          // Mobile: horizontal scroll, hide scrollbar
+          style={{ WebkitOverflowScrolling: 'touch' }}
         >
           {tabs.map((tab, index) => (
             <button
@@ -261,6 +264,7 @@ const Tab = ({
                 focus:tw-outline-none focus:tw-ring-2 focus:tw-ring-blue-500 focus:tw-ring-offset-2
                 disabled:tw-opacity-50 disabled:tw-cursor-not-allowed
                 ${variant === 'default' ? 'tw-mr-1 last:tw-mr-0' : ''}
+                tw-min-w-[3.5rem] sm:tw-min-w-[5rem] tw-py-3 sm:tw-py-2 tw-px-4
               `}
               role="tab"
               aria-selected={activeTab === index}
@@ -269,6 +273,9 @@ const Tab = ({
               onClick={() => handleTabClick(index)}
               onKeyDown={(e) => handleKeyDown(e, index)}
               disabled={tab.disabled}
+              tabIndex={activeTab === index ? 0 : -1}
+              // Mobile: increase touch target
+              style={{ touchAction: 'manipulation' }}
             >
               {tab.icon && (
                 <span className={`${sizeClasses[size].icon} tw-flex-shrink-0 tw-flex tw-items-center tw-justify-center`}>
@@ -291,7 +298,8 @@ const Tab = ({
           {variant === 'underline' && (
             <div
               ref={indicatorRef}
-              className="tw-absolute tw-bottom-0 tw-h-0.5 tw-bg-blue-600 tw-transition-all tw-duration-200 tw-ease-in-out"
+              className="tw-absolute tw-bottom-0 tw-h-1 md:tw-h-0.5 tw-bg-blue-600 tw-transition-all tw-duration-200 tw-ease-in-out"
+              // Mobile: thicker indicator
             />
           )}
         </div>

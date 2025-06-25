@@ -30211,16 +30211,18 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _components_Confirm__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./components/Confirm */ "./src/components/Confirm.jsx");
 /* harmony import */ var _components_Toast__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./components/Toast */ "./src/components/Toast.jsx");
 /* harmony import */ var _components_Tab__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./components/Tab */ "./src/components/Tab.jsx");
-/* harmony import */ var lucide_react__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! lucide-react */ "./node_modules/lucide-react/dist/esm/icons/package.js");
-/* harmony import */ var lucide_react__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! lucide-react */ "./node_modules/lucide-react/dist/esm/icons/server.js");
-/* harmony import */ var lucide_react__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! lucide-react */ "./node_modules/lucide-react/dist/esm/icons/bug.js");
-/* harmony import */ var lucide_react__WEBPACK_IMPORTED_MODULE_14__ = __webpack_require__(/*! lucide-react */ "./node_modules/lucide-react/dist/esm/icons/heart.js");
+/* harmony import */ var lucide_react__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! lucide-react */ "./node_modules/lucide-react/dist/esm/icons/package.js");
+/* harmony import */ var lucide_react__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! lucide-react */ "./node_modules/lucide-react/dist/esm/icons/server.js");
+/* harmony import */ var lucide_react__WEBPACK_IMPORTED_MODULE_14__ = __webpack_require__(/*! lucide-react */ "./node_modules/lucide-react/dist/esm/icons/bug.js");
+/* harmony import */ var lucide_react__WEBPACK_IMPORTED_MODULE_15__ = __webpack_require__(/*! lucide-react */ "./node_modules/lucide-react/dist/esm/icons/heart.js");
 /* harmony import */ var _components_Modal__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./components/Modal */ "./src/components/Modal.jsx");
 /* harmony import */ var _components_BackupTable_refactored__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./components/BackupTable.refactored */ "./src/components/BackupTable.refactored.jsx");
 /* harmony import */ var _components_RestoreProcess__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./components/RestoreProcess */ "./src/components/RestoreProcess.jsx");
 /* harmony import */ var _components_DonationInfomation__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ./components/DonationInfomation */ "./src/components/DonationInfomation.jsx");
-/* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! react/jsx-runtime */ "./node_modules/react/jsx-runtime.js");
+/* harmony import */ var _components_ReportIssue__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ./components/ReportIssue */ "./src/components/ReportIssue.jsx");
+/* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! react/jsx-runtime */ "./node_modules/react/jsx-runtime.js");
 // import BackupTable from './components/BackupTable';
+
 
 
 
@@ -30235,9 +30237,9 @@ __webpack_require__.r(__webpack_exports__);
 
 var AppProvider = function AppProvider(_ref) {
   var children = _ref.children;
-  return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_10__.jsx)(_components_Confirm__WEBPACK_IMPORTED_MODULE_3__.ConfirmProvider, {
-    children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_10__.jsx)(_components_Toast__WEBPACK_IMPORTED_MODULE_4__.ToastProvider, {
-      children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_10__.jsx)(_components_Modal__WEBPACK_IMPORTED_MODULE_6__.ModalProvider, {
+  return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_11__.jsx)(_components_Confirm__WEBPACK_IMPORTED_MODULE_3__.ConfirmProvider, {
+    children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_11__.jsx)(_components_Toast__WEBPACK_IMPORTED_MODULE_4__.ToastProvider, {
+      children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_11__.jsx)(_components_Modal__WEBPACK_IMPORTED_MODULE_6__.ModalProvider, {
         children: children
       })
     })
@@ -30245,20 +30247,20 @@ var AppProvider = function AppProvider(_ref) {
 };
 var tabs = [{
   label: 'Your Backups',
-  icon: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_10__.jsx)(lucide_react__WEBPACK_IMPORTED_MODULE_11__["default"], {
+  icon: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_11__.jsx)(lucide_react__WEBPACK_IMPORTED_MODULE_12__["default"], {
     size: 14
   }),
-  content: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_10__.jsxs)(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_10__.Fragment, {
-    children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_10__.jsx)(_components_BackupProcess__WEBPACK_IMPORTED_MODULE_2__["default"], {}), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_10__.jsx)(_components_RestoreProcess__WEBPACK_IMPORTED_MODULE_8__["default"], {}), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_10__.jsx)(_components_BackupTable_refactored__WEBPACK_IMPORTED_MODULE_7__["default"], {})]
+  content: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_11__.jsxs)(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_11__.Fragment, {
+    children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_11__.jsx)(_components_BackupProcess__WEBPACK_IMPORTED_MODULE_2__["default"], {}), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_11__.jsx)(_components_RestoreProcess__WEBPACK_IMPORTED_MODULE_8__["default"], {}), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_11__.jsx)(_components_BackupTable_refactored__WEBPACK_IMPORTED_MODULE_7__["default"], {})]
   })
 },
 // server metrics
 {
   label: 'Server Metrics',
-  icon: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_10__.jsx)(lucide_react__WEBPACK_IMPORTED_MODULE_12__["default"], {
+  icon: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_11__.jsx)(lucide_react__WEBPACK_IMPORTED_MODULE_13__["default"], {
     size: 14
   }),
-  content: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_10__.jsx)(_components_ServerMetrics__WEBPACK_IMPORTED_MODULE_1__["default"], {
+  content: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_11__.jsx)(_components_ServerMetrics__WEBPACK_IMPORTED_MODULE_1__["default"], {
     metrics: wp_backup_php_data.server_metrics
   })
 },
@@ -30281,95 +30283,25 @@ var tabs = [{
 // report issue
 {
   label: 'Report Issue',
-  icon: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_10__.jsx)(lucide_react__WEBPACK_IMPORTED_MODULE_13__["default"], {
+  icon: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_11__.jsx)(lucide_react__WEBPACK_IMPORTED_MODULE_14__["default"], {
     size: 14
   }),
-  content: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_10__.jsxs)("div", {
-    className: "tw-text-center tw-py-12",
-    children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_10__.jsx)("div", {
-      className: "tw-text-6xl tw-mb-4",
-      children: "\uD83D\uDC1B"
-    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_10__.jsx)("h3", {
-      className: "tw-text-xl tw-font-semibold tw-text-gray-900 tw-mb-2",
-      children: "Found a bug? Let's squash it! \uD83E\uDD7E"
-    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_10__.jsx)("p", {
-      className: "tw-text-gray-600 tw-mb-6",
-      children: "Help us make WP Backup even better by reporting any issues you encounter."
-    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_10__.jsx)("div", {
-      className: "tw-max-w-6xl tw-mx-auto",
-      children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_10__.jsxs)("div", {
-        className: "tw-grid tw-grid-cols-1 md:tw-grid-cols-3 tw-gap-4",
-        children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_10__.jsxs)("div", {
-          className: "tw-bg-blue-50 tw-border tw-border-blue-200 tw-rounded-lg tw-p-4",
-          children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_10__.jsxs)("div", {
-            className: "tw-flex tw-items-center tw-gap-2 tw-mb-2 tw-justify-center",
-            children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_10__.jsx)("span", {
-              className: "tw-text-blue-600",
-              children: "\uD83D\uDCE7"
-            }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_10__.jsx)("span", {
-              className: "tw-font-medium tw-text-blue-900",
-              children: "Email Support"
-            })]
-          }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_10__.jsx)("p", {
-            className: "tw-text-sm tw-text-blue-700",
-            children: "Send us a detailed email with screenshots and steps to reproduce."
-          })]
-        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_10__.jsxs)("div", {
-          className: "tw-bg-green-50 tw-border tw-border-green-200 tw-rounded-lg tw-p-4",
-          children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_10__.jsxs)("div", {
-            className: "tw-flex tw-items-center tw-gap-2 tw-mb-2 tw-justify-center",
-            children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_10__.jsx)("span", {
-              className: "tw-text-green-600",
-              children: "\uD83D\uDD17"
-            }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_10__.jsx)("span", {
-              className: "tw-font-medium tw-text-green-900",
-              children: "GitHub Issues"
-            })]
-          }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_10__.jsx)("p", {
-            className: "tw-text-sm tw-text-green-700",
-            children: "Create an issue on our GitHub repository for public tracking."
-          })]
-        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_10__.jsxs)("div", {
-          className: "tw-bg-purple-50 tw-border tw-border-purple-200 tw-rounded-lg tw-p-4",
-          children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_10__.jsxs)("div", {
-            className: "tw-flex tw-items-center tw-gap-2 tw-mb-2 tw-justify-center",
-            children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_10__.jsx)("span", {
-              className: "tw-text-purple-600",
-              children: "\uD83D\uDCAC"
-            }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_10__.jsx)("span", {
-              className: "tw-font-medium tw-text-purple-900",
-              children: "Community Forum"
-            })]
-          }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_10__.jsx)("p", {
-            className: "tw-text-sm tw-text-purple-700",
-            children: "Join our community discussions and get help from other users."
-          })]
-        })]
-      })
-    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_10__.jsx)("div", {
-      className: "tw-mt-8 tw-text-sm tw-text-gray-500",
-      children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_10__.jsxs)("p", {
-        children: ["\uD83D\uDCA1 ", /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_10__.jsx)("strong", {
-          children: "Pro tip:"
-        }), " Include your WordPress version, PHP version, and plugin version for faster resolution!"]
-      })
-    })]
-  })
+  content: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_11__.jsx)(_components_ReportIssue__WEBPACK_IMPORTED_MODULE_10__["default"], {})
 }, {
   label: 'Support the author',
-  icon: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_10__.jsx)(lucide_react__WEBPACK_IMPORTED_MODULE_14__["default"], {
+  icon: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_11__.jsx)(lucide_react__WEBPACK_IMPORTED_MODULE_15__["default"], {
     size: 14
   }),
-  content: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_10__.jsx)(_components_DonationInfomation__WEBPACK_IMPORTED_MODULE_9__["default"], {})
+  content: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_11__.jsx)(_components_DonationInfomation__WEBPACK_IMPORTED_MODULE_9__["default"], {})
 }];
 function App() {
-  return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_10__.jsxs)(AppProvider, {
-    children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_10__.jsx)("div", {
+  return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_11__.jsxs)(AppProvider, {
+    children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_11__.jsx)("div", {
       className: "tw-w-full",
-      children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_10__.jsx)(_components_Tab__WEBPACK_IMPORTED_MODULE_5__["default"], {
+      children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_11__.jsx)(_components_Tab__WEBPACK_IMPORTED_MODULE_5__["default"], {
         tabs: tabs
       })
-    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_10__.jsx)(_components_Footer__WEBPACK_IMPORTED_MODULE_0__["default"], {})]
+    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_11__.jsx)(_components_Footer__WEBPACK_IMPORTED_MODULE_0__["default"], {})]
   });
 }
 
@@ -30602,7 +30534,15 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var _BackupStatusBadge__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./BackupStatusBadge */ "./src/components/BackupStatusBadge.jsx");
 /* harmony import */ var _util_lib__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../util/lib */ "./src/util/lib.js");
-/* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! react/jsx-runtime */ "./node_modules/react/jsx-runtime.js");
+/* harmony import */ var _DropdownActions__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./DropdownActions */ "./src/components/DropdownActions.jsx");
+/* harmony import */ var lucide_react__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! lucide-react */ "./node_modules/lucide-react/dist/esm/icons/rotate-ccw.js");
+/* harmony import */ var lucide_react__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! lucide-react */ "./node_modules/lucide-react/dist/esm/icons/file-down.js");
+/* harmony import */ var lucide_react__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! lucide-react */ "./node_modules/lucide-react/dist/esm/icons/trash-2.js");
+/* harmony import */ var _BackupTypeBadge__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./BackupTypeBadge */ "./src/components/BackupTypeBadge.jsx");
+/* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! react/jsx-runtime */ "./node_modules/react/jsx-runtime.js");
+
+
+
 
 
 
@@ -30612,58 +30552,83 @@ var BackupMobileCard = function BackupMobileCard(_ref) {
     isSelected = _ref.isSelected,
     onSelect = _ref.onSelect,
     onDelete = _ref.onDelete,
-    onDownload = _ref.onDownload;
-  return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsxs)("div", {
+    onDownload = _ref.onDownload,
+    onRestore = _ref.onRestore;
+  return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsxs)("div", {
     className: "tw-p-4 tw-border-b tw-border-gray-200",
-    children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsxs)("div", {
+    children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsxs)("div", {
       className: "tw-flex tw-items-center tw-justify-between tw-mb-2",
-      children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("input", {
+      children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)("input", {
         type: "checkbox",
         className: "tw-form-checkbox tw-h-4 tw-w-4 tw-text-blue-600",
         checked: isSelected,
         onChange: function onChange(e) {
           return onSelect(e, backup.id);
         }
-      }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("div", {
+      }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)("div", {
         className: "tw-text-sm tw-font-medium tw-text-gray-900",
         children: backup.name
       })]
-    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsxs)("div", {
+    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsxs)("div", {
       className: "tw-space-y-2",
-      children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("div", {
+      children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)("div", {
         className: "tw-flex tw-flex-wrap tw-gap-1",
-        children: backup.type.map(function (type, index) {
-          return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("span", {
-            className: "tw-inline-flex tw-items-center tw-px-2 tw-py-0.5 tw-text-xs tw-font-medium tw-rounded-md tw-bg-gray-100 tw-text-gray-800",
-            children: type
-          }, index);
+        children: backup.type.map(function (type) {
+          return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)(_BackupTypeBadge__WEBPACK_IMPORTED_MODULE_4__["default"], {
+            type: type
+          }, type);
         })
-      }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsxs)("div", {
+      }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsxs)("div", {
         className: "tw-flex tw-justify-between tw-text-sm tw-text-gray-500",
-        children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("span", {
-          children: (0,_util_lib__WEBPACK_IMPORTED_MODULE_2__.friendlyDateTime)(backup.date, wp_backup_php_data.current_datetime)
-        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("span", {
+        children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsxs)("span", {
+          className: "tw-inline-flex tw-items-center tw-gap-1 tw-px-2.5 tw-py-1 tw-text-xs tw-font-medium tw-rounded-md tw-bg-slate-100 tw-text-slate-700 tw-border tw-border-slate-200/60 tw-shadow-sm",
+          title: backup.date,
+          children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)("svg", {
+            className: "tw-w-3 tw-h-3 tw-text-slate-400",
+            fill: "none",
+            stroke: "currentColor",
+            viewBox: "0 0 24 24",
+            children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)("path", {
+              strokeLinecap: "round",
+              strokeLinejoin: "round",
+              strokeWidth: 2,
+              d: "M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"
+            })
+          }), (0,_util_lib__WEBPACK_IMPORTED_MODULE_2__.friendlyDateTime)(backup.date, wp_backup_php_data.current_datetime)]
+        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)("span", {
           children: backup.size
         })]
-      }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsxs)("div", {
+      }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsxs)("div", {
         className: "tw-flex tw-items-center tw-justify-between",
-        children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)(_BackupStatusBadge__WEBPACK_IMPORTED_MODULE_1__["default"], {
+        children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)(_BackupStatusBadge__WEBPACK_IMPORTED_MODULE_1__["default"], {
           status: backup.status
-        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsxs)("div", {
-          className: "tw-space-x-2",
-          children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("button", {
+        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)(_DropdownActions__WEBPACK_IMPORTED_MODULE_3__["default"], {
+          items: [{
+            label: 'Restore',
+            icon: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)(lucide_react__WEBPACK_IMPORTED_MODULE_6__["default"], {
+              size: 16
+            }),
+            onClick: function onClick() {
+              return onRestore(backup);
+            }
+          }, {
+            label: 'Download',
+            icon: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)(lucide_react__WEBPACK_IMPORTED_MODULE_7__["default"], {
+              size: 16
+            }),
             onClick: function onClick() {
               return onDownload(backup.id);
-            },
-            className: "tw-text-blue-600 hover:tw-text-blue-900",
-            children: "Download"
-          }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("button", {
+            }
+          }, {
+            label: 'Delete',
+            icon: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)(lucide_react__WEBPACK_IMPORTED_MODULE_8__["default"], {
+              size: 16
+            }),
+            danger: true,
             onClick: function onClick() {
               return onDelete(backup.id);
-            },
-            className: "tw-text-red-600 hover:tw-text-red-900",
-            children: "Delete"
-          })]
+            }
+          }]
         })]
       })]
     })]
@@ -31250,14 +31215,15 @@ var BackupTable = function BackupTable() {
       onDeleteBackups: handleDeleteSelectedBackups,
       selectedBackups: selectedBackups
     }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_13__.jsx)("div", {
-      className: "tw-block md:tw-hidden",
+      className: "tw-block md:tw-hidden tw-bg-white tw-border-t tw-border-gray-200",
       children: filteredBackups.map(function (backup) {
         return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_13__.jsx)(_BackupMobileCard__WEBPACK_IMPORTED_MODULE_11__["default"], {
           backup: backup,
           isSelected: selectedBackups.includes(backup.id),
           onSelect: handleSelectBackup,
           onDelete: handleDeleteBackup,
-          onDownload: handleDownloadBackup
+          onDownload: handleDownloadBackup,
+          onRestore: handleRestoreBackup
         }, backup.id);
       })
     }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_13__.jsx)("div", {
@@ -31418,19 +31384,25 @@ var BackupTableRow = function BackupTableRow(_ref) {
       children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)(_DropdownActions__WEBPACK_IMPORTED_MODULE_4__["default"], {
         items: [{
           label: 'Restore',
-          icon: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)(lucide_react__WEBPACK_IMPORTED_MODULE_6__["default"], {}),
+          icon: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)(lucide_react__WEBPACK_IMPORTED_MODULE_6__["default"], {
+            size: 16
+          }),
           onClick: function onClick() {
             return onRestore(backup);
           }
         }, {
           label: 'Download',
-          icon: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)(lucide_react__WEBPACK_IMPORTED_MODULE_7__["default"], {}),
+          icon: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)(lucide_react__WEBPACK_IMPORTED_MODULE_7__["default"], {
+            size: 16
+          }),
           onClick: function onClick() {
             return onDownload(backup.id);
           }
         }, {
           label: 'Delete',
-          icon: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)(lucide_react__WEBPACK_IMPORTED_MODULE_8__["default"], {}),
+          icon: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)(lucide_react__WEBPACK_IMPORTED_MODULE_8__["default"], {
+            size: 16
+          }),
           danger: true,
           onClick: function onClick() {
             return onDelete(backup.id);
@@ -31982,8 +31954,31 @@ var DonationInfomation = function DonationInfomation() {
   var handleDonateClick = function handleDonateClick() {
     window.open(config.buyMeACoffeeUrl, '_blank', 'noopener,noreferrer');
   };
+
+  // convert items of What Your Coffee Money Does to data
+  var whatYourCoffeeMoneyDoes = [{
+    icon: '🚀',
+    title: 'Speed Demon Mode',
+    description: 'Your coffee fuels lightning-fast updates & new features! ⚡'
+  }, {
+    icon: '🛡️',
+    title: 'Security-First',
+    description: 'Every function built with enterprise-grade security as the top priority! 🔐'
+  }, {
+    icon: '💎',
+    title: 'Forever Free Gang',
+    description: 'This plugin stays 100% free forever - no hidden fees! ✨'
+  }, {
+    icon: '🎨',
+    title: 'UI/UX Glow Up',
+    description: 'Making the interface so smooth it feels like butter! 🧈'
+  }, {
+    icon: '🤝',
+    title: 'Community Built',
+    description: 'Built by the community, for the community - that\'s the vibe! 💪'
+  }];
   return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)("div", {
-    className: "tw-max-w-2xl tw-mx-auto tw-p-6",
+    className: "tw-max-w-3xl tw-mx-auto tw-px-2 sm:tw-px-0 tw-py-10 tw-bg-white",
     children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)("div", {
       className: "tw-text-center tw-mb-8",
       children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)("h2", {
@@ -32049,37 +32044,28 @@ var DonationInfomation = function DonationInfomation() {
       children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("h3", {
         className: "tw-text-lg tw-font-semibold tw-text-gray-900 tw-mb-4 tw-text-center",
         children: "What Your Coffee Money Does \uD83D\uDCB8"
-      }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)("div", {
-        className: "tw-space-y-2",
-        children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)("div", {
-          className: "tw-flex tw-items-center tw-gap-2 tw-text-gray-700",
-          children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("div", {
-            className: "tw-w-2 tw-h-2 tw-bg-blue-500 tw-rounded-full"
-          }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("span", {
-            children: "Makes new features come out faster \u26A1"
-          })]
-        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)("div", {
-          className: "tw-flex tw-items-center tw-gap-2 tw-text-gray-700",
-          children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("div", {
-            className: "tw-w-2 tw-h-2 tw-bg-blue-500 tw-rounded-full"
-          }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("span", {
-            children: "Keeps everything super secure \uD83D\uDD12"
-          })]
-        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)("div", {
-          className: "tw-flex tw-items-center tw-gap-2 tw-text-gray-700",
-          children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("div", {
-            className: "tw-w-2 tw-h-2 tw-bg-blue-500 tw-rounded-full"
-          }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("span", {
-            children: "Better help when you need it \uD83C\uDD98"
-          })]
-        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)("div", {
-          className: "tw-flex tw-items-center tw-gap-2 tw-text-gray-700",
-          children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("div", {
-            className: "tw-w-2 tw-h-2 tw-bg-blue-500 tw-rounded-full"
-          }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("span", {
-            children: "Keeps it free for everyone forever \uD83C\uDF89"
-          })]
-        })]
+      }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("div", {
+        className: "tw-grid tw-grid-cols-1 md:tw-grid-cols-2 lg:tw-grid-cols-3 tw-gap-4",
+        children: whatYourCoffeeMoneyDoes.map(function (item, index) {
+          return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("div", {
+            className: "tw-bg-white tw-border tw-border-gray-200 tw-rounded-lg tw-p-4 tw-shadow-sm hover:tw-shadow-md tw-transition-shadow",
+            children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)("div", {
+              className: "tw-flex tw-items-start tw-gap-3",
+              children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("div", {
+                className: "tw-text-2xl tw-flex-shrink-0",
+                children: item.icon
+              }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)("div", {
+                children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("h4", {
+                  className: "tw-font-semibold tw-text-gray-900 tw-mb-1 tw-text-sm",
+                  children: item.title
+                }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("p", {
+                  className: "tw-text-xs tw-text-gray-600 tw-leading-relaxed",
+                  children: item.description
+                })]
+              })]
+            })
+          }, index);
+        })
       })]
     }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)("div", {
       className: "tw-text-center tw-mb-6",
@@ -32685,6 +32671,322 @@ var useModal = function useModal() {
 
 /***/ }),
 
+/***/ "./src/components/ReportIssue.jsx":
+/*!****************************************!*\
+  !*** ./src/components/ReportIssue.jsx ***!
+  \****************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _Toast__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./Toast */ "./src/components/Toast.jsx");
+/* harmony import */ var _util_lib__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../util/lib */ "./src/util/lib.js");
+/* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! react/jsx-runtime */ "./node_modules/react/jsx-runtime.js");
+function _typeof(o) { "@babel/helpers - typeof"; return _typeof = "function" == typeof Symbol && "symbol" == typeof Symbol.iterator ? function (o) { return typeof o; } : function (o) { return o && "function" == typeof Symbol && o.constructor === Symbol && o !== Symbol.prototype ? "symbol" : typeof o; }, _typeof(o); }
+function _regenerator() { /*! regenerator-runtime -- Copyright (c) 2014-present, Facebook, Inc. -- license (MIT): https://github.com/babel/babel/blob/main/packages/babel-helpers/LICENSE */ var e, t, r = "function" == typeof Symbol ? Symbol : {}, n = r.iterator || "@@iterator", o = r.toStringTag || "@@toStringTag"; function i(r, n, o, i) { var c = n && n.prototype instanceof Generator ? n : Generator, u = Object.create(c.prototype); return _regeneratorDefine2(u, "_invoke", function (r, n, o) { var i, c, u, f = 0, p = o || [], y = !1, G = { p: 0, n: 0, v: e, a: d, f: d.bind(e, 4), d: function d(t, r) { return i = t, c = 0, u = e, G.n = r, a; } }; function d(r, n) { for (c = r, u = n, t = 0; !y && f && !o && t < p.length; t++) { var o, i = p[t], d = G.p, l = i[2]; r > 3 ? (o = l === n) && (u = i[(c = i[4]) ? 5 : (c = 3, 3)], i[4] = i[5] = e) : i[0] <= d && ((o = r < 2 && d < i[1]) ? (c = 0, G.v = n, G.n = i[1]) : d < l && (o = r < 3 || i[0] > n || n > l) && (i[4] = r, i[5] = n, G.n = l, c = 0)); } if (o || r > 1) return a; throw y = !0, n; } return function (o, p, l) { if (f > 1) throw TypeError("Generator is already running"); for (y && 1 === p && d(p, l), c = p, u = l; (t = c < 2 ? e : u) || !y;) { i || (c ? c < 3 ? (c > 1 && (G.n = -1), d(c, u)) : G.n = u : G.v = u); try { if (f = 2, i) { if (c || (o = "next"), t = i[o]) { if (!(t = t.call(i, u))) throw TypeError("iterator result is not an object"); if (!t.done) return t; u = t.value, c < 2 && (c = 0); } else 1 === c && (t = i["return"]) && t.call(i), c < 2 && (u = TypeError("The iterator does not provide a '" + o + "' method"), c = 1); i = e; } else if ((t = (y = G.n < 0) ? u : r.call(n, G)) !== a) break; } catch (t) { i = e, c = 1, u = t; } finally { f = 1; } } return { value: t, done: y }; }; }(r, o, i), !0), u; } var a = {}; function Generator() {} function GeneratorFunction() {} function GeneratorFunctionPrototype() {} t = Object.getPrototypeOf; var c = [][n] ? t(t([][n]())) : (_regeneratorDefine2(t = {}, n, function () { return this; }), t), u = GeneratorFunctionPrototype.prototype = Generator.prototype = Object.create(c); function f(e) { return Object.setPrototypeOf ? Object.setPrototypeOf(e, GeneratorFunctionPrototype) : (e.__proto__ = GeneratorFunctionPrototype, _regeneratorDefine2(e, o, "GeneratorFunction")), e.prototype = Object.create(u), e; } return GeneratorFunction.prototype = GeneratorFunctionPrototype, _regeneratorDefine2(u, "constructor", GeneratorFunctionPrototype), _regeneratorDefine2(GeneratorFunctionPrototype, "constructor", GeneratorFunction), GeneratorFunction.displayName = "GeneratorFunction", _regeneratorDefine2(GeneratorFunctionPrototype, o, "GeneratorFunction"), _regeneratorDefine2(u), _regeneratorDefine2(u, o, "Generator"), _regeneratorDefine2(u, n, function () { return this; }), _regeneratorDefine2(u, "toString", function () { return "[object Generator]"; }), (_regenerator = function _regenerator() { return { w: i, m: f }; })(); }
+function _regeneratorDefine2(e, r, n, t) { var i = Object.defineProperty; try { i({}, "", {}); } catch (e) { i = 0; } _regeneratorDefine2 = function _regeneratorDefine(e, r, n, t) { if (r) i ? i(e, r, { value: n, enumerable: !t, configurable: !t, writable: !t }) : e[r] = n;else { var o = function o(r, n) { _regeneratorDefine2(e, r, function (e) { return this._invoke(r, n, e); }); }; o("next", 0), o("throw", 1), o("return", 2); } }, _regeneratorDefine2(e, r, n, t); }
+function asyncGeneratorStep(n, t, e, r, o, a, c) { try { var i = n[a](c), u = i.value; } catch (n) { return void e(n); } i.done ? t(u) : Promise.resolve(u).then(r, o); }
+function _asyncToGenerator(n) { return function () { var t = this, e = arguments; return new Promise(function (r, o) { var a = n.apply(t, e); function _next(n) { asyncGeneratorStep(a, r, o, _next, _throw, "next", n); } function _throw(n) { asyncGeneratorStep(a, r, o, _next, _throw, "throw", n); } _next(void 0); }); }; }
+function ownKeys(e, r) { var t = Object.keys(e); if (Object.getOwnPropertySymbols) { var o = Object.getOwnPropertySymbols(e); r && (o = o.filter(function (r) { return Object.getOwnPropertyDescriptor(e, r).enumerable; })), t.push.apply(t, o); } return t; }
+function _objectSpread(e) { for (var r = 1; r < arguments.length; r++) { var t = null != arguments[r] ? arguments[r] : {}; r % 2 ? ownKeys(Object(t), !0).forEach(function (r) { _defineProperty(e, r, t[r]); }) : Object.getOwnPropertyDescriptors ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t)) : ownKeys(Object(t)).forEach(function (r) { Object.defineProperty(e, r, Object.getOwnPropertyDescriptor(t, r)); }); } return e; }
+function _defineProperty(e, r, t) { return (r = _toPropertyKey(r)) in e ? Object.defineProperty(e, r, { value: t, enumerable: !0, configurable: !0, writable: !0 }) : e[r] = t, e; }
+function _toPropertyKey(t) { var i = _toPrimitive(t, "string"); return "symbol" == _typeof(i) ? i : i + ""; }
+function _toPrimitive(t, r) { if ("object" != _typeof(t) || !t) return t; var e = t[Symbol.toPrimitive]; if (void 0 !== e) { var i = e.call(t, r || "default"); if ("object" != _typeof(i)) return i; throw new TypeError("@@toPrimitive must return a primitive value."); } return ("string" === r ? String : Number)(t); }
+function _slicedToArray(r, e) { return _arrayWithHoles(r) || _iterableToArrayLimit(r, e) || _unsupportedIterableToArray(r, e) || _nonIterableRest(); }
+function _nonIterableRest() { throw new TypeError("Invalid attempt to destructure non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method."); }
+function _unsupportedIterableToArray(r, a) { if (r) { if ("string" == typeof r) return _arrayLikeToArray(r, a); var t = {}.toString.call(r).slice(8, -1); return "Object" === t && r.constructor && (t = r.constructor.name), "Map" === t || "Set" === t ? Array.from(r) : "Arguments" === t || /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(t) ? _arrayLikeToArray(r, a) : void 0; } }
+function _arrayLikeToArray(r, a) { (null == a || a > r.length) && (a = r.length); for (var e = 0, n = Array(a); e < a; e++) n[e] = r[e]; return n; }
+function _iterableToArrayLimit(r, l) { var t = null == r ? null : "undefined" != typeof Symbol && r[Symbol.iterator] || r["@@iterator"]; if (null != t) { var e, n, i, u, a = [], f = !0, o = !1; try { if (i = (t = t.call(r)).next, 0 === l) { if (Object(t) !== t) return; f = !1; } else for (; !(f = (e = i.call(t)).done) && (a.push(e.value), a.length !== l); f = !0); } catch (r) { o = !0, n = r; } finally { try { if (!f && null != t["return"] && (u = t["return"](), Object(u) !== u)) return; } finally { if (o) throw n; } } return a; } }
+function _arrayWithHoles(r) { if (Array.isArray(r)) return r; }
+
+
+
+
+var getSystemInfo = function getSystemInfo() {
+  if (typeof window !== 'undefined' && window.wp_backup_php_data) {
+    var _d$server_metrics, _d$server_metrics2, _d$server_metrics3;
+    var d = window.wp_backup_php_data;
+    return {
+      wp_version: ((_d$server_metrics = d.server_metrics) === null || _d$server_metrics === void 0 ? void 0 : _d$server_metrics.wp_version) || '',
+      php_version: ((_d$server_metrics2 = d.server_metrics) === null || _d$server_metrics2 === void 0 ? void 0 : _d$server_metrics2.php_version) || '',
+      plugin_version: ((_d$server_metrics3 = d.server_metrics) === null || _d$server_metrics3 === void 0 ? void 0 : _d$server_metrics3.plugin_version) || ''
+    };
+  }
+  return {
+    wp_version: '',
+    php_version: '',
+    plugin_version: ''
+  };
+};
+var ISSUE_TYPES = [{
+  value: 'bug',
+  label: 'Bug'
+}, {
+  value: 'feature',
+  label: 'Feature Request'
+}, {
+  value: 'question',
+  label: 'Question'
+}];
+var ReportIssue = function ReportIssue() {
+  var toast = (0,_Toast__WEBPACK_IMPORTED_MODULE_1__.useToast)();
+  var _useState = (0,react__WEBPACK_IMPORTED_MODULE_0__.useState)(_objectSpread({
+      name: '',
+      email: '',
+      type: 'bug',
+      description: '',
+      screenshot: null
+    }, getSystemInfo())),
+    _useState2 = _slicedToArray(_useState, 2),
+    form = _useState2[0],
+    setForm = _useState2[1];
+  var _useState3 = (0,react__WEBPACK_IMPORTED_MODULE_0__.useState)(false),
+    _useState4 = _slicedToArray(_useState3, 2),
+    submitting = _useState4[0],
+    setSubmitting = _useState4[1];
+  var _useState5 = (0,react__WEBPACK_IMPORTED_MODULE_0__.useState)(''),
+    _useState6 = _slicedToArray(_useState5, 2),
+    error = _useState6[0],
+    setError = _useState6[1];
+  var handleChange = function handleChange(e) {
+    var _e$target = e.target,
+      name = _e$target.name,
+      value = _e$target.value,
+      files = _e$target.files;
+    if (name === 'screenshot') {
+      setForm(function (f) {
+        return _objectSpread(_objectSpread({}, f), {}, {
+          screenshot: files[0]
+        });
+      });
+    } else {
+      setForm(function (f) {
+        return _objectSpread(_objectSpread({}, f), {}, _defineProperty({}, name, value));
+      });
+    }
+  };
+  var handleTypeChange = function handleTypeChange(value) {
+    setForm(function (f) {
+      return _objectSpread(_objectSpread({}, f), {}, {
+        type: value
+      });
+    });
+  };
+  var handleSubmit = /*#__PURE__*/function () {
+    var _ref = _asyncToGenerator(/*#__PURE__*/_regenerator().m(function _callee(e) {
+      var result;
+      return _regenerator().w(function (_context) {
+        while (1) switch (_context.n) {
+          case 0:
+            e.preventDefault();
+            setError('');
+            if (!(!form.name || !form.email || !form.description)) {
+              _context.n = 1;
+              break;
+            }
+            setError('Please fill in all required fields.');
+            return _context.a(2);
+          case 1:
+            setSubmitting(true);
+            _context.n = 2;
+            return (0,_util_lib__WEBPACK_IMPORTED_MODULE_2__.sendReportEmail)(form);
+          case 2:
+            result = _context.v;
+            if (result.success == true) {
+              setSubmitting(false);
+              toast({
+                message: 'Thank you for your report! We appreciate your feedback.',
+                type: 'success'
+              });
+              // reset form
+              setForm({
+                name: '',
+                email: '',
+                type: 'bug',
+                description: ''
+              });
+            } else {
+              setError('Failed to send report. Please try again.');
+            }
+          case 3:
+            return _context.a(2);
+        }
+      }, _callee);
+    }));
+    return function handleSubmit(_x) {
+      return _ref.apply(this, arguments);
+    };
+  }();
+  return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsxs)("form", {
+    className: "tw-max-w-3xl tw-mx-auto tw-px-2 sm:tw-px-0 tw-py-10 tw-bg-white",
+    onSubmit: handleSubmit,
+    style: {
+      fontFamily: 'inherit'
+    },
+    children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("h2", {
+      className: "tw-text-2xl tw-font-semibold tw-text-gray-900 tw-mb-2 tw-text-center tw-col-span-2",
+      children: "Report an Issue"
+    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("p", {
+      className: "tw-text-gray-600 tw-text-sm tw-text-center tw-mb-6 tw-col-span-2",
+      children: "Please use this template to help us resolve your issue faster. The more details you provide, the better we can help!"
+    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsxs)("div", {
+      className: "tw-grid tw-grid-cols-1 md:tw-grid-cols-2 tw-gap-8 tw-items-start",
+      children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsxs)("div", {
+        className: "tw-bg-gradient-to-br tw-from-blue-50 tw-to-indigo-50 tw-rounded-lg tw-p-6 tw-border tw-border-blue-100 tw-mb-6 md:tw-mb-0 tw-shadow-sm",
+        children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsxs)("div", {
+          className: "tw-text-lg tw-font-bold tw-text-gray-800 tw-mb-3 tw-flex tw-items-center tw-gap-2",
+          children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("span", {
+            children: "\uD83D\uDCDD"
+          }), "Pro Tips for the Perfect Bug Report"]
+        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsxs)("div", {
+          className: "tw-text-sm tw-text-gray-700 tw-space-y-3",
+          children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsxs)("div", {
+            className: "tw-flex tw-items-start tw-gap-2",
+            children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("span", {
+              className: "tw-text-blue-500 tw-font-bold",
+              children: "1."
+            }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsxs)("span", {
+              children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("strong", {
+                children: "What's broken?"
+              }), " Keep calm and make a cup of coffee \u2615 - describe exactly what went wrong"]
+            })]
+          }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsxs)("div", {
+            className: "tw-flex tw-items-start tw-gap-2",
+            children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("span", {
+              className: "tw-text-blue-500 tw-font-bold",
+              children: "2."
+            }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsxs)("span", {
+              children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("strong", {
+                children: "Steps to recreate:"
+              }), " Walk us through it like we're 5 \uD83D\uDC76 - what buttons did you click?"]
+            })]
+          }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsxs)("div", {
+            className: "tw-flex tw-items-start tw-gap-2",
+            children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("span", {
+              className: "tw-text-blue-500 tw-font-bold",
+              children: "3."
+            }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsxs)("span", {
+              children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("strong", {
+                children: "Expected vs Reality:"
+              }), " What should've happened vs what actually happened \uD83E\uDD14"]
+            })]
+          }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsxs)("div", {
+            className: "tw-flex tw-items-start tw-gap-2",
+            children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("span", {
+              className: "tw-text-blue-500 tw-font-bold",
+              children: "4."
+            }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsxs)("span", {
+              children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("strong", {
+                children: "Visual proof:"
+              }), " Screenshots are worth 1000 words \uD83D\uDCF8 - attach ", /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("b", {
+                children: "image or video url"
+              }), " to describe the issue if you can!"]
+            })]
+          }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsxs)("div", {
+            className: "tw-mt-4 tw-p-3 tw-bg-blue-100 tw-rounded-md tw-text-xs tw-text-blue-800",
+            children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("strong", {
+              children: "\uD83D\uDCA1 Pro tip:"
+            }), " The more details you give us, the faster we can fix it and get you back to your day! \uD83D\uDE80"]
+          })]
+        })]
+      }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsxs)("div", {
+        className: "tw-space-y-5",
+        children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsxs)("div", {
+          children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("label", {
+            htmlFor: "name",
+            className: "tw-block tw-text-sm tw-font-medium tw-text-gray-800 tw-mb-1",
+            children: "Name"
+          }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("input", {
+            id: "name",
+            name: "name",
+            type: "text",
+            autoComplete: "off",
+            className: "tw-block tw-w-full tw-py-2 tw-px-3 tw-rounded-md tw-border tw-border-gray-300 tw-bg-white tw-text-gray-900 tw-placeholder-gray-400 focus:tw-border-blue-500 focus:tw-ring-1 focus:tw-ring-blue-200 focus:tw-outline-none tw-transition",
+            placeholder: "Your name",
+            value: form.name,
+            onChange: handleChange,
+            required: true
+          })]
+        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsxs)("div", {
+          children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("label", {
+            htmlFor: "email",
+            className: "tw-block tw-text-sm tw-font-medium tw-text-gray-800 tw-mb-1",
+            children: "Email"
+          }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("input", {
+            id: "email",
+            name: "email",
+            type: "email",
+            autoComplete: "off",
+            className: "tw-block tw-w-full tw-py-2 tw-px-3 tw-rounded-md tw-border tw-border-gray-300 tw-bg-white tw-text-gray-900 tw-placeholder-gray-400 focus:tw-border-blue-500 focus:tw-ring-1 focus:tw-ring-blue-200 focus:tw-outline-none tw-transition",
+            placeholder: "you@email.com",
+            value: form.email,
+            onChange: handleChange,
+            required: true
+          })]
+        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsxs)("div", {
+          children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("label", {
+            className: "tw-block tw-text-sm tw-font-medium tw-text-gray-800 tw-mb-1",
+            children: "Issue Type"
+          }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("div", {
+            className: "tw-flex tw-gap-2",
+            children: ISSUE_TYPES.map(function (t) {
+              return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("button", {
+                type: "button",
+                className: "tw-px-4 tw-py-2 tw-rounded-md tw-text-sm tw-font-medium tw-border tw-transition-colors focus:tw-outline-none focus:tw-ring-1 focus:tw-ring-blue-200 ".concat(form.type === t.value ? 'tw-bg-blue-600 tw-text-white tw-border-blue-600' : 'tw-bg-white tw-text-gray-700 tw-border-gray-300 hover:tw-bg-blue-50'),
+                onClick: function onClick() {
+                  return handleTypeChange(t.value);
+                },
+                "aria-pressed": form.type === t.value,
+                children: t.label
+              }, t.value);
+            })
+          })]
+        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsxs)("div", {
+          children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("label", {
+            htmlFor: "description",
+            className: "tw-block tw-text-sm tw-font-medium tw-text-gray-800 tw-mb-1",
+            children: "Description"
+          }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("textarea", {
+            id: "description",
+            name: "description",
+            rows: 8,
+            className: "tw-block tw-w-full tw-py-2 tw-px-3 tw-rounded-md tw-border tw-border-gray-300 tw-bg-white tw-text-gray-900 tw-placeholder-gray-400 focus:tw-border-blue-500 focus:tw-ring-1 focus:tw-ring-blue-200 focus:tw-outline-none tw-transition",
+            placeholder: "Describe the issue, steps to reproduce, expected behavior, etc.",
+            value: form.description,
+            onChange: handleChange,
+            required: true
+          })]
+        }), error && /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("div", {
+          className: "tw-text-red-600 tw-text-sm tw-mt-2",
+          children: error
+        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("button", {
+          type: "submit",
+          disabled: submitting,
+          className: "tw-w-full tw-py-2 tw-rounded-md tw-bg-blue-600 tw-text-white tw-font-medium tw-text-base tw-transition-colors hover:tw-bg-blue-700 focus:tw-outline-none focus:tw-ring-2 focus:tw-ring-blue-200 disabled:tw-opacity-50 disabled:tw-cursor-not-allowed",
+          children: submitting ? 'Submitting...' : 'Submit Report'
+        })]
+      })]
+    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsxs)("div", {
+      className: "tw-mt-10 tw-text-xs tw-text-gray-500 tw-text-center tw-space-x-3",
+      children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsxs)("span", {
+        children: ["WP: ", form.wp_version || 'N/A']
+      }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsxs)("span", {
+        children: ["PHP: ", form.php_version || 'N/A']
+      }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsxs)("span", {
+        children: ["Plugin: ", form.plugin_version || 'N/A']
+      })]
+    })]
+  });
+};
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (ReportIssue);
+
+/***/ }),
+
 /***/ "./src/components/RestoreConfigModal.jsx":
 /*!***********************************************!*\
   !*** ./src/components/RestoreConfigModal.jsx ***!
@@ -32733,7 +33035,7 @@ function RestoreConfigModal(_ref) {
           className: "tw-text-sm tw-text-gray-600 tw-mt-1",
           children: "Select which components you want to restore from this backup."
         })
-      }), JSON.stringify(selectedBackupRestoreTypes), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsxs)("div", {
+      }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsxs)("div", {
         className: "tw-bg-gray-50 tw-p-4 tw-rounded-lg tw-border tw-border-gray-200",
         children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsxs)("div", {
           className: "tw-flex tw-items-center tw-justify-between tw-mb-3",
@@ -32832,15 +33134,21 @@ function RestoreConfigModal(_ref) {
           children: "Cancel"
         }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("button", {
           onClick: function onClick() {
-            // console.log('Restoring backup:', backup.folder_name, selectedBackupRestoreTypes);
-            // toast({ message: 'Restore functionality is not yet implemented.', type: 'info' });
+            if (selectedBackupRestoreTypes.length === 0) {
+              toast({
+                message: 'Please select at least one backup type to restore.',
+                type: 'warning'
+              });
+              return;
+            }
             buildRestoreProcess({
               folder_name: backup.folder_name,
               types: selectedBackupRestoreTypes
             });
             closeModal();
           },
-          className: "tw-px-4 tw-py-2 tw-text-sm tw-font-medium tw-text-white tw-bg-blue-600 tw-border tw-border-transparent tw-rounded-md hover:tw-bg-blue-700 focus:tw-outline-none focus:tw-ring-2 focus:tw-ring-offset-2 focus:tw-ring-blue-500",
+          className: "tw-px-4 tw-py-2 tw-text-sm tw-font-medium tw-border tw-rounded-md focus:tw-outline-none focus:tw-ring-2 focus:tw-ring-offset-2 focus:tw-ring-blue-500 ".concat(selectedBackupRestoreTypes.length === 0 ? 'tw-text-gray-400 tw-bg-gray-200 tw-border-gray-200 tw-cursor-not-allowed' : 'tw-text-white tw-bg-blue-600 tw-border-transparent hover:tw-bg-blue-700'),
+          disabled: selectedBackupRestoreTypes.length === 0,
           children: "Yes, Restore Backup! \uD83D\uDE80"
         })]
       })]
@@ -33347,92 +33655,95 @@ var ServerMetrics = function ServerMetrics(_ref2) {
   var metrics = _ref2.metrics,
     _ref2$showWarnings = _ref2.showWarnings,
     showWarnings = _ref2$showWarnings === void 0 ? true : _ref2$showWarnings;
-  return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)("aside", {
-    className: "tw-p-4 tw-mx-auto tw-mb-6 tw-w-full sm:tw-max-w-full",
-    children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)("h2", {
-      className: "tw-text-base tw-font-semibold tw-text-gray-800 tw-mb-4 tw-flex tw-items-center tw-gap-2",
-      children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)(lucide_react__WEBPACK_IMPORTED_MODULE_8__["default"], {
-        className: "tw-w-5 tw-h-5 tw-text-gray-400"
-      }), "Server Metrics"]
-    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("div", {
-      className: "tw-bg-gradient-to-r tw-from-indigo-50 tw-to-purple-50 tw-border tw-border-indigo-200 tw-rounded-md tw-p-6 tw-mb-6 tw-shadow-sm",
-      children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)("div", {
-        className: "tw-flex tw-items-start tw-gap-4",
-        children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("div", {
-          className: "tw-flex-shrink-0 tw-mt-1",
-          children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("div", {
-            className: "tw-w-8 tw-h-8 tw-bg-gradient-to-r tw-from-indigo-500 tw-to-purple-600 tw-rounded-lg tw-flex tw-items-center tw-justify-center",
-            children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("span", {
-              className: "tw-text-white tw-text-sm",
-              children: "\u26A1"
+  return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("div", {
+    className: "tw-max-w-3xl tw-mx-auto tw-px-2 sm:tw-px-0 tw-py-10 tw-bg-white",
+    children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)("aside", {
+      className: "tw-py-4 tw-mx-auto tw-mb-6 tw-w-full sm:tw-max-w-full",
+      children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)("h2", {
+        className: "tw-text-base tw-font-semibold tw-text-gray-800 tw-mb-4 tw-flex tw-items-center tw-gap-2",
+        children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)(lucide_react__WEBPACK_IMPORTED_MODULE_8__["default"], {
+          className: "tw-w-5 tw-h-5 tw-text-gray-400"
+        }), "Server Metrics"]
+      }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("div", {
+        className: "tw-bg-gradient-to-r tw-from-indigo-50 tw-to-purple-50 tw-border tw-border-indigo-200 tw-rounded-md tw-p-6 tw-mb-6 tw-shadow-sm",
+        children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)("div", {
+          className: "tw-flex tw-items-start tw-gap-4",
+          children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("div", {
+            className: "tw-flex-shrink-0 tw-mt-1",
+            children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("div", {
+              className: "tw-w-8 tw-h-8 tw-bg-gradient-to-r tw-from-indigo-500 tw-to-purple-600 tw-rounded-lg tw-flex tw-items-center tw-justify-center",
+              children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("span", {
+                className: "tw-text-white tw-text-sm",
+                children: "\u26A1"
+              })
             })
-          })
-        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)("div", {
-          children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("h3", {
-            className: "tw-text-base tw-font-semibold tw-text-indigo-900 tw-mb-2 tw-flex tw-items-center tw-gap-2",
-            children: "Pro Tips for Your Server Setup \uD83D\uDCA1"
-          }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("p", {
-            className: "tw-text-sm tw-leading-relaxed tw-text-indigo-700",
-            children: "Hey there! \uD83D\uDC4B Your server setup is like choosing the right gear for a mission - it totally depends on your site's vibe! Small sites? You're good with the basics! But if you're running a massive site with tons of plugins, themes, or getting that sweet traffic flow, maybe consider leveling up your server resources. It's like upgrading from a bicycle to a rocket ship! \uD83D\uDE80\u2728"
-          })]
-        })]
-      })
-    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("div", {
-      className: "tw-overflow-x-auto",
-      children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)("table", {
-        className: "tw-w-full tw-bg-white tw-text-sm tw-border-collapse tw-shadow-sm tw-border tw-border-gray-200",
-        children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("thead", {
-          className: "tw-bg-gray-50",
-          children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)("tr", {
-            children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("th", {
-              className: "tw-px-4 tw-py-3 tw-text-left tw-text-xs tw-font-medium tw-text-gray-500 ",
-              children: " "
-            }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("th", {
-              className: "tw-px-4 tw-py-3 tw-text-left tw-text-xs tw-font-medium tw-text-gray-500 ",
-              children: "METRIC"
-            }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("th", {
-              className: "tw-px-4 tw-py-3 tw-text-left tw-text-xs tw-font-medium tw-text-gray-500 ",
-              children: "VALUE"
-            }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("th", {
-              className: "tw-px-4 tw-py-3 tw-text-left tw-text-xs tw-font-medium tw-text-gray-500 ",
-              children: " "
+          }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)("div", {
+            children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("h3", {
+              className: "tw-text-base tw-font-semibold tw-text-indigo-900 tw-mb-2 tw-flex tw-items-center tw-gap-2",
+              children: "Pro Tips for Your Server Setup \uD83D\uDCA1"
+            }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("p", {
+              className: "tw-text-sm tw-leading-relaxed tw-text-indigo-700",
+              children: "Hey there! \uD83D\uDC4B Your server setup is like choosing the right gear for a mission - it totally depends on your site's vibe! Small sites? You're good with the basics! But if you're running a massive site with tons of plugins, themes, or getting that sweet traffic flow, maybe consider leveling up your server resources. It's like upgrading from a bicycle to a rocket ship! \uD83D\uDE80\u2728"
             })]
-          })
-        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("tbody", {
-          children: metricsConfig.map(function (_ref3) {
-            var key = _ref3.key,
-              label = _ref3.label,
-              format = _ref3.format,
-              icon = _ref3.icon;
-            var value = metrics === null || metrics === void 0 ? void 0 : metrics[key];
-            var warning = showWarnings && minimums[key] && minimums[key].compare(value) ? minimums[key].message : null;
-            return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)("tr", {
-              className: "tw-border-t tw-border-gray-100 hover:tw-bg-gray-50 tw-transition-colors",
-              children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("td", {
-                className: "tw-px-4 tw-py-3 tw-align-middle",
-                children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("span", {
-                  className: "tw-w-5 tw-h-5 tw-flex tw-items-center tw-justify-center tw-text-gray-400",
-                  children: /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().cloneElement(icon, {
-                    className: "tw-w-4 tw-h-4 tw-text-gray-400"
-                  })
-                })
-              }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("td", {
-                className: "tw-px-4 tw-py-3 tw-align-middle tw-text-gray-700 tw-whitespace-nowrap",
-                children: label
-              }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("td", {
-                className: "tw-px-4 tw-py-3 tw-align-middle tw-font-mono tw-text-gray-900 tw-break-all",
-                children: format(value)
-              }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("td", {
-                className: "tw-px-4 tw-py-3 tw-align-middle",
-                children: warning && /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)(Warning, {
-                  message: warning
-                })
+          })]
+        })
+      }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("div", {
+        className: "tw-overflow-x-auto",
+        children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)("table", {
+          className: "tw-w-full tw-bg-white tw-text-sm tw-border-collapse tw-shadow-sm tw-border tw-border-gray-200",
+          children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("thead", {
+            className: "tw-bg-gray-50",
+            children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)("tr", {
+              children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("th", {
+                className: "tw-px-4 tw-py-3 tw-text-left tw-text-xs tw-font-medium tw-text-gray-500 ",
+                children: " "
+              }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("th", {
+                className: "tw-px-4 tw-py-3 tw-text-left tw-text-xs tw-font-medium tw-text-gray-500 ",
+                children: "METRIC"
+              }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("th", {
+                className: "tw-px-4 tw-py-3 tw-text-left tw-text-xs tw-font-medium tw-text-gray-500 ",
+                children: "VALUE"
+              }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("th", {
+                className: "tw-px-4 tw-py-3 tw-text-left tw-text-xs tw-font-medium tw-text-gray-500 ",
+                children: " "
               })]
-            }, key);
-          })
-        })]
-      })
-    })]
+            })
+          }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("tbody", {
+            children: metricsConfig.map(function (_ref3) {
+              var key = _ref3.key,
+                label = _ref3.label,
+                format = _ref3.format,
+                icon = _ref3.icon;
+              var value = metrics === null || metrics === void 0 ? void 0 : metrics[key];
+              var warning = showWarnings && minimums[key] && minimums[key].compare(value) ? minimums[key].message : null;
+              return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)("tr", {
+                className: "tw-border-t tw-border-gray-100 hover:tw-bg-gray-50 tw-transition-colors",
+                children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("td", {
+                  className: "tw-px-4 tw-py-3 tw-align-middle",
+                  children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("span", {
+                    className: "tw-w-5 tw-h-5 tw-flex tw-items-center tw-justify-center tw-text-gray-400",
+                    children: /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().cloneElement(icon, {
+                      className: "tw-w-4 tw-h-4 tw-text-gray-400"
+                    })
+                  })
+                }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("td", {
+                  className: "tw-px-4 tw-py-3 tw-align-middle tw-text-gray-700 tw-whitespace-nowrap",
+                  children: label
+                }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("td", {
+                  className: "tw-px-4 tw-py-3 tw-align-middle tw-font-mono tw-text-gray-900 tw-break-all",
+                  children: format(value)
+                }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("td", {
+                  className: "tw-px-4 tw-py-3 tw-align-middle",
+                  children: warning && /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)(Warning, {
+                    message: warning
+                  })
+                })]
+              }, key);
+            })
+          })]
+        })
+      })]
+    })
   });
 };
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (ServerMetrics);
@@ -33697,15 +34008,20 @@ var Tab = function Tab(_ref) {
     children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("div", {
       className: "tw-relative",
       children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)("div", {
-        className: "\n            tw-flex tw-gap-0 tw-bg-gray-100 tw-border tw-border-gray-200 tw-border-b-0 tw-p-1 tw-pb-0\n            ".concat(fullWidth ? 'tw-w-full' : 'tw-w-fit', "\n            ").concat(variant === 'underline' ? 'tw-bg-transparent tw-p-0 tw-border-b tw-border-gray-200' : '', "\n            ").concat(variant === 'pills' ? 'tw-bg-gray-100 tw-p-1 tw-rounded-lg tw-border' : '', "\n          "),
+        className: "\n            tw-flex tw-gap-0 tw-bg-gray-100 tw-border tw-border-gray-200 tw-border-b-0 tw-p-1 tw-pb-0\n            ".concat(fullWidth ? 'tw-w-full' : 'tw-w-fit', "\n            ").concat(variant === 'underline' ? 'tw-bg-transparent tw-p-0 tw-border-b tw-border-gray-200' : '', "\n            ").concat(variant === 'pills' ? 'tw-bg-gray-100 tw-p-1 tw-rounded-lg tw-border' : '', "\n            tw-overflow-x-auto tw-scrollbar-hide tw-whitespace-nowrap md:tw-flex-wrap md:tw-overflow-visible\n          "),
         role: "tablist",
-        "aria-label": "Tab navigation",
+        "aria-label": "Tab navigation"
+        // Mobile: horizontal scroll, hide scrollbar
+        ,
+        style: {
+          WebkitOverflowScrolling: 'touch'
+        },
         children: [tabs.map(function (tab, index) {
           return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)("button", {
             ref: function ref(el) {
               return tabRefs.current[index] = el;
             },
-            className: "\n                ".concat(sizeClasses[size].tab, "\n                ").concat(getVariantClasses(activeTab === index), "\n                ").concat(fullWidth ? 'tw-flex-1' : '', "\n                tw-flex tw-items-center tw-justify-center tw-gap-2\n                focus:tw-outline-none focus:tw-ring-2 focus:tw-ring-blue-500 focus:tw-ring-offset-2\n                disabled:tw-opacity-50 disabled:tw-cursor-not-allowed\n                ").concat(variant === 'default' ? 'tw-mr-1 last:tw-mr-0' : '', "\n              "),
+            className: "\n                ".concat(sizeClasses[size].tab, "\n                ").concat(getVariantClasses(activeTab === index), "\n                ").concat(fullWidth ? 'tw-flex-1' : '', "\n                tw-flex tw-items-center tw-justify-center tw-gap-2\n                focus:tw-outline-none focus:tw-ring-2 focus:tw-ring-blue-500 focus:tw-ring-offset-2\n                disabled:tw-opacity-50 disabled:tw-cursor-not-allowed\n                ").concat(variant === 'default' ? 'tw-mr-1 last:tw-mr-0' : '', "\n                tw-min-w-[3.5rem] sm:tw-min-w-[5rem] tw-py-3 sm:tw-py-2 tw-px-4\n              "),
             role: "tab",
             "aria-selected": activeTab === index,
             "aria-controls": "tabpanel-".concat(index),
@@ -33717,6 +34033,12 @@ var Tab = function Tab(_ref) {
               return handleKeyDown(e, index);
             },
             disabled: tab.disabled,
+            tabIndex: activeTab === index ? 0 : -1
+            // Mobile: increase touch target
+            ,
+            style: {
+              touchAction: 'manipulation'
+            },
             children: [tab.icon && /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("span", {
               className: "".concat(sizeClasses[size].icon, " tw-flex-shrink-0 tw-flex tw-items-center tw-justify-center"),
               children: tab.icon
@@ -33730,7 +34052,8 @@ var Tab = function Tab(_ref) {
           }, index);
         }), variant === 'underline' && /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("div", {
           ref: indicatorRef,
-          className: "tw-absolute tw-bottom-0 tw-h-0.5 tw-bg-blue-600 tw-transition-all tw-duration-200 tw-ease-in-out"
+          className: "tw-absolute tw-bottom-0 tw-h-1 md:tw-h-0.5 tw-bg-blue-600 tw-transition-all tw-duration-200 tw-ease-in-out"
+          // Mobile: thicker indicator
         })]
       })
     }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("div", {
@@ -34051,7 +34374,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */   doBackupProcess: () => (/* binding */ doBackupProcess),
 /* harmony export */   doRestoreProcess: () => (/* binding */ doRestoreProcess),
 /* harmony export */   friendlyDateTime: () => (/* binding */ friendlyDateTime),
-/* harmony export */   getBackups: () => (/* binding */ getBackups)
+/* harmony export */   getBackups: () => (/* binding */ getBackups),
+/* harmony export */   sendReportEmail: () => (/* binding */ sendReportEmail)
 /* harmony export */ });
 function _typeof(o) { "@babel/helpers - typeof"; return _typeof = "function" == typeof Symbol && "symbol" == typeof Symbol.iterator ? function (o) { return typeof o; } : function (o) { return o && "function" == typeof Symbol && o.constructor === Symbol && o !== Symbol.prototype ? "symbol" : typeof o; }, _typeof(o); }
 function _slicedToArray(r, e) { return _arrayWithHoles(r) || _iterableToArrayLimit(r, e) || _unsupportedIterableToArray(r, e) || _nonIterableRest(); }
@@ -34262,6 +34586,39 @@ var doRestoreProcess = /*#__PURE__*/function () {
   }));
   return function doRestoreProcess(_x5) {
     return _ref9.apply(this, arguments);
+  };
+}();
+var sendReportEmail = /*#__PURE__*/function () {
+  var _ref10 = _asyncToGenerator(/*#__PURE__*/_regenerator().m(function _callee6(payload) {
+    var response;
+    return _regenerator().w(function (_context6) {
+      while (1) switch (_context6.n) {
+        case 0:
+          _context6.n = 1;
+          return __request(ajax_url, {
+            method: 'POST',
+            headers: {
+              'Content-Type': 'application/x-www-form-urlencoded'
+            },
+            body: new URLSearchParams(_objectSpread(_objectSpread({
+              action: 'wp_backup_ajax_send_report_email'
+            }, Object.fromEntries(Object.entries(payload).map(function (_ref11) {
+              var _ref12 = _slicedToArray(_ref11, 2),
+                key = _ref12[0],
+                value = _ref12[1];
+              return ["payload[".concat(key, "]"), value];
+            }))), {}, {
+              nonce: nonce.wp_backup_nonce
+            }))
+          });
+        case 1:
+          response = _context6.v;
+          return _context6.a(2, response);
+      }
+    }, _callee6);
+  }));
+  return function sendReportEmail(_x6) {
+    return _ref10.apply(this, arguments);
   };
 }();
 

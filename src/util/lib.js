@@ -115,3 +115,19 @@ export const doRestoreProcess = async (process) => {
 
   return response;
 }
+
+export const sendReportEmail = async (payload) => {
+  const response = await __request(ajax_url, {
+    method: 'POST',
+    headers: {
+      'Content-Type': 'application/x-www-form-urlencoded',
+    },
+    body: new URLSearchParams({
+      action: 'wp_backup_ajax_send_report_email',
+      ...Object.fromEntries(Object.entries(payload).map(([key, value]) => [`payload[${key}]`, value])),
+      nonce: nonce.wp_backup_nonce,
+    }),
+  });
+
+  return response;
+};

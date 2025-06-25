@@ -156,7 +156,7 @@ const BackupTable = () => {
       />
 
       {/* Mobile/Tablet View */}
-      <div className="tw-block md:tw-hidden">
+      <div className="tw-block md:tw-hidden tw-bg-white tw-border-t tw-border-gray-200">
         {filteredBackups.map((backup) => (
           <BackupMobileCard
             key={backup.id}
@@ -165,6 +165,7 @@ const BackupTable = () => {
             onSelect={handleSelectBackup}
             onDelete={handleDeleteBackup}
             onDownload={handleDownloadBackup}
+            onRestore={handleRestoreBackup}
           />
         ))}
       </div>

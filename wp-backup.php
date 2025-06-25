@@ -2,8 +2,10 @@
 /**
  * Plugin Name: WordPress Backup
  * Plugin URI: https://github.com/miketropi/wp-backup
- * Description: WordPress backup plugin that allows you to backup your database and files.
+ * Description: 🛡️ Professional WordPress backup solution with comprehensive database and file system protection. Features automated backups, secure storage, and one-click restoration capabilities. Built for reliability and ease of use in production environments. **100% FREE FOREVER** - No hidden costs, no premium tiers, no limitations.
  * Version: 0.1.1
+ * Requires at least: 6.0
+ * Requires PHP: 8.0
  * Author: @Mike
  * Author URI: https://github.com/miketropi
  * Text Domain: wp-backup
@@ -61,4 +63,12 @@
 
   # include hooks file
   require_once WP_BACKUP_PLUGIN_PATH . 'inc/hooks.php';
+}
+
+// add link go to backup page in plugin page
+add_filter('plugin_action_links_' . plugin_basename(__FILE__), 'wp_backup_plugin_action_links');
+function wp_backup_plugin_action_links($links) {
+  $backup_link = '<a href="' . admin_url('admin.php?page=wp-backup') . '">' . __('Backup Now', 'wp-backup') . '</a>';
+  array_unshift($links, $backup_link);
+  return $links;
 }

@@ -128,7 +128,7 @@ function wp_backup_ajax_generate_backup_plugin() {
     'source_folder' => WP_PLUGIN_DIR,
     'destination_folder' => $payload['name_folder'],
     'zip_name' => 'plugins.zip',
-    'exclude' => ['wp-backup'],
+    'exclude' => ['wp-backup', 'wp-backup-zip'],
   ]);
 
   // check error $backup
@@ -388,6 +388,131 @@ function wp_backup_ajax_restore_database() {
   }
 }
 
+// wp_backup_ajax_restore_plugin 
+add_action('wp_ajax_wp_backup_ajax_restore_plugin', 'wp_backup_ajax_restore_plugin');
+function wp_backup_ajax_restore_plugin() {
+  # check nonce
+  check_ajax_referer('wp_backup_nonce_' . get_current_user_id(), 'nonce');
+
+  # get payload
+  $payload = isset($_POST['payload']) ? $_POST['payload'] : array();
+
+  $folder_name = $payload['folder_name'];
+  $path_zip_file = WP_CONTENT_DIR . '/uploads/wp-backup/' . $folder_name . '/plugins.zip';
+  
+  // validate $path_zip_file
+  if (!file_exists($path_zip_file)) {
+    wp_send_json_error('Zip file not found');
+  }
+
+  $restore_plugin = new WP_Restore_File_System([
+    'zip_file' => $path_zip_file,
+    'destination_folder' => WP_PLUGIN_DIR,
+    'overwrite_existing' => true,
+    'exclude' => ['wp-backup'],
+  ]);
+
+  // check error $restore_plugin
+  if (is_wp_error($restore_plugin)) {
+    wp_send_json_error($restore_plugin->get_error_message());
+  }
+
+  $result = $restore_plugin->runRestore();
+
+  // check error $result
+  if (is_wp_error($result)) {
+    wp_send_json_error($result->get_error_message());
+  }
+
+  wp_send_json_success([
+    'restore_plugin_status' => 'done',
+    'next_step' => true,
+  ]);
+}
+
+// wp_backup_ajax_restore_theme
+add_action('wp_ajax_wp_backup_ajax_restore_theme', 'wp_backup_ajax_restore_theme');
+function wp_backup_ajax_restore_theme() {
+  # check nonce
+  check_ajax_referer('wp_backup_nonce_' . get_current_user_id(), 'nonce');
+  
+  # get payload
+  $payload = isset($_POST['payload']) ? $_POST['payload'] : array();
+
+  $folder_name = $payload['folder_name'];
+  $path_zip_file = WP_CONTENT_DIR . '/uploads/wp-backup/' . $folder_name . '/themes.zip';
+  
+  // validate $path_zip_file
+  if (!file_exists($path_zip_file)) {
+    wp_send_json_error('Zip file not found');
+  }
+
+  $restore_theme = new WP_Restore_File_System([
+    'zip_file' => $path_zip_file,
+    'destination_folder' => WP_CONTENT_DIR . '/themes/',
+    'overwrite_existing' => true,
+  ]);
+
+  // check error $restore_theme
+  if (is_wp_error($restore_theme)) {
+    wp_send_json_error($restore_theme->get_error_message());
+  }
+
+  $result = $restore_theme->runRestore();
+
+  // check error $result
+  if (is_wp_error($result)) {
+    wp_send_json_error($result->get_error_message());
+  }
+
+  wp_send_json_success([
+    'restore_theme_status' => 'done',
+    'next_step' => true,
+  ]);
+}
+
+// wp_backup_ajax_restore_uploads
+add_action('wp_ajax_wp_backup_ajax_restore_uploads', 'wp_backup_ajax_restore_uploads');
+function wp_backup_ajax_restore_uploads() {
+  # check nonce
+  check_ajax_referer('wp_backup_nonce_' . get_current_user_id(), 'nonce');
+  
+  # get payload
+  $payload = isset($_POST['payload']) ? $_POST['payload'] : array();
+
+  $folder_name = $payload['folder_name'];
+  $path_zip_file = WP_CONTENT_DIR . '/uploads/wp-backup/' . $folder_name . '/uploads.zip';
+  
+  // validate $path_zip_file
+  if (!file_exists($path_zip_file)) {
+    wp_send_json_error('Zip file not found');
+  }
+
+  $restore_uploads = new WP_Restore_File_System([
+    'zip_file' => $path_zip_file,
+    'destination_folder' => WP_CONTENT_DIR . '/uploads/',
+    'overwrite_existing' => true,
+    'exclude' => ['wp-backup', 'wp-backup-zip'],
+  ]);
+
+  // check error $restore_uploads
+  if (is_wp_error($restore_uploads)) {
+    wp_send_json_error($restore_uploads->get_error_message());
+  }
+
+  $result = $restore_uploads->runRestore();
+
+  // check error $result
+  if (is_wp_error($result)) {
+    wp_send_json_error($result->get_error_message());
+  }
+
+  wp_send_json_success([
+    'restore_uploads_status' => 'done',
+    'next_step' => true,
+  ]);
+}
+
 // wp_backup_ajax_restore_done
 add_action('wp_ajax_wp_backup_ajax_restore_done', 'wp_backup_ajax_restore_done');
 function wp_backup_ajax_restore_done() {
@@ -403,4 +528,24 @@ function wp_backup_ajax_restore_done() {
   wp_send_json_success([
     'restore_process_status' => 'done',
   ]);
+}
+
+// wp_backup_ajax_send_report_email
+add_action('wp_ajax_wp_backup_ajax_send_report_email', 'wp_backup_ajax_send_report_email');
+function wp_backup_ajax_send_report_email() {
+  # check nonce
+  check_ajax_referer('wp_backup_nonce_' . get_current_user_id(), 'nonce');
+
+  # get payload
+  $payload = isset($_POST['payload']) ? $_POST['payload'] : array();
+
+  // send report email
+  $result = wp_backup_send_report_email($payload);
+
+  // check error $result
+  if (is_wp_error($result)) {
+    wp_send_json_error($result->get_error_message());
+  }
+
+  wp_send_json_success(true);
 }

@@ -151,70 +151,72 @@ const Warning = ({ message }) => (
 
 const ServerMetrics = ({ metrics, showWarnings = true }) => {
   return (
-    <aside className="tw-p-4 tw-mx-auto tw-mb-6 tw-w-full sm:tw-max-w-full">
-      <h2 className="tw-text-base tw-font-semibold tw-text-gray-800 tw-mb-4 tw-flex tw-items-center tw-gap-2">
-        <Server className="tw-w-5 tw-h-5 tw-text-gray-400" />
-        Server Metrics
-      </h2>
+    <div className="tw-max-w-3xl tw-mx-auto tw-px-2 sm:tw-px-0 tw-py-10 tw-bg-white">
+      <aside className="tw-py-4 tw-mx-auto tw-mb-6 tw-w-full sm:tw-max-w-full">
+        <h2 className="tw-text-base tw-font-semibold tw-text-gray-800 tw-mb-4 tw-flex tw-items-center tw-gap-2">
+          <Server className="tw-w-5 tw-h-5 tw-text-gray-400" />
+          Server Metrics
+        </h2>
 
-      <div className="tw-bg-gradient-to-r tw-from-indigo-50 tw-to-purple-50 tw-border tw-border-indigo-200 tw-rounded-md tw-p-6 tw-mb-6 tw-shadow-sm">
-        <div className="tw-flex tw-items-start tw-gap-4">
-          <div className="tw-flex-shrink-0 tw-mt-1">
-            <div className="tw-w-8 tw-h-8 tw-bg-gradient-to-r tw-from-indigo-500 tw-to-purple-600 tw-rounded-lg tw-flex tw-items-center tw-justify-center">
-              <span className="tw-text-white tw-text-sm">⚡</span>
+        <div className="tw-bg-gradient-to-r tw-from-indigo-50 tw-to-purple-50 tw-border tw-border-indigo-200 tw-rounded-md tw-p-6 tw-mb-6 tw-shadow-sm">
+          <div className="tw-flex tw-items-start tw-gap-4">
+            <div className="tw-flex-shrink-0 tw-mt-1">
+              <div className="tw-w-8 tw-h-8 tw-bg-gradient-to-r tw-from-indigo-500 tw-to-purple-600 tw-rounded-lg tw-flex tw-items-center tw-justify-center">
+                <span className="tw-text-white tw-text-sm">⚡</span>
+              </div>
+            </div>
+            <div>
+              <h3 className="tw-text-base tw-font-semibold tw-text-indigo-900 tw-mb-2 tw-flex tw-items-center tw-gap-2">
+                Pro Tips for Your Server Setup 💡
+              </h3>
+              <p className="tw-text-sm tw-leading-relaxed tw-text-indigo-700">
+                Hey there! 👋 Your server setup is like choosing the right gear for a mission - 
+                it totally depends on your site's vibe! Small sites? You're good with the basics! 
+                But if you're running a massive site with tons of plugins, themes, or getting that 
+                sweet traffic flow, maybe consider leveling up your server resources. 
+                It's like upgrading from a bicycle to a rocket ship! 🚀✨
+              </p>
             </div>
           </div>
-          <div>
-            <h3 className="tw-text-base tw-font-semibold tw-text-indigo-900 tw-mb-2 tw-flex tw-items-center tw-gap-2">
-              Pro Tips for Your Server Setup 💡
-            </h3>
-            <p className="tw-text-sm tw-leading-relaxed tw-text-indigo-700">
-              Hey there! 👋 Your server setup is like choosing the right gear for a mission - 
-              it totally depends on your site's vibe! Small sites? You're good with the basics! 
-              But if you're running a massive site with tons of plugins, themes, or getting that 
-              sweet traffic flow, maybe consider leveling up your server resources. 
-              It's like upgrading from a bicycle to a rocket ship! 🚀✨
-            </p>
-          </div>
         </div>
-      </div>
 
-      <div className="tw-overflow-x-auto">
-        <table className="tw-w-full tw-bg-white tw-text-sm tw-border-collapse tw-shadow-sm tw-border tw-border-gray-200">
-          <thead className="tw-bg-gray-50">
-            <tr>
-              <th className="tw-px-4 tw-py-3 tw-text-left tw-text-xs tw-font-medium tw-text-gray-500 "> </th>
-              <th className="tw-px-4 tw-py-3 tw-text-left tw-text-xs tw-font-medium tw-text-gray-500 ">METRIC</th>
-              <th className="tw-px-4 tw-py-3 tw-text-left tw-text-xs tw-font-medium tw-text-gray-500 ">VALUE</th>
-              <th className="tw-px-4 tw-py-3 tw-text-left tw-text-xs tw-font-medium tw-text-gray-500 "> </th>
-            </tr>
-          </thead>
-          <tbody>
-            {metricsConfig.map(({ key, label, format, icon }) => {
-              const value = metrics?.[key];
-              const warning =
-                showWarnings && minimums[key] && minimums[key].compare(value)
-                  ? minimums[key].message
-                  : null;
-              return (
-                <tr key={key} className="tw-border-t tw-border-gray-100 hover:tw-bg-gray-50 tw-transition-colors">
-                  <td className="tw-px-4 tw-py-3 tw-align-middle">
-                    <span className="tw-w-5 tw-h-5 tw-flex tw-items-center tw-justify-center tw-text-gray-400">
-                      {React.cloneElement(icon, { className: "tw-w-4 tw-h-4 tw-text-gray-400" })}
-                    </span>
-                  </td>
-                  <td className="tw-px-4 tw-py-3 tw-align-middle tw-text-gray-700 tw-whitespace-nowrap">{label}</td>
-                  <td className="tw-px-4 tw-py-3 tw-align-middle tw-font-mono tw-text-gray-900 tw-break-all">{format(value)}</td>
-                  <td className="tw-px-4 tw-py-3 tw-align-middle">
-                    {warning && <Warning message={warning} />}
-                  </td>
-                </tr>
-              );
-            })}
-          </tbody>
-        </table>
-      </div>
-    </aside>
+        <div className="tw-overflow-x-auto">
+          <table className="tw-w-full tw-bg-white tw-text-sm tw-border-collapse tw-shadow-sm tw-border tw-border-gray-200">
+            <thead className="tw-bg-gray-50">
+              <tr>
+                <th className="tw-px-4 tw-py-3 tw-text-left tw-text-xs tw-font-medium tw-text-gray-500 "> </th>
+                <th className="tw-px-4 tw-py-3 tw-text-left tw-text-xs tw-font-medium tw-text-gray-500 ">METRIC</th>
+                <th className="tw-px-4 tw-py-3 tw-text-left tw-text-xs tw-font-medium tw-text-gray-500 ">VALUE</th>
+                <th className="tw-px-4 tw-py-3 tw-text-left tw-text-xs tw-font-medium tw-text-gray-500 "> </th>
+              </tr>
+            </thead>
+            <tbody>
+              {metricsConfig.map(({ key, label, format, icon }) => {
+                const value = metrics?.[key];
+                const warning =
+                  showWarnings && minimums[key] && minimums[key].compare(value)
+                    ? minimums[key].message
+                    : null;
+                return (
+                  <tr key={key} className="tw-border-t tw-border-gray-100 hover:tw-bg-gray-50 tw-transition-colors">
+                    <td className="tw-px-4 tw-py-3 tw-align-middle">
+                      <span className="tw-w-5 tw-h-5 tw-flex tw-items-center tw-justify-center tw-text-gray-400">
+                        {React.cloneElement(icon, { className: "tw-w-4 tw-h-4 tw-text-gray-400" })}
+                      </span>
+                    </td>
+                    <td className="tw-px-4 tw-py-3 tw-align-middle tw-text-gray-700 tw-whitespace-nowrap">{label}</td>
+                    <td className="tw-px-4 tw-py-3 tw-align-middle tw-font-mono tw-text-gray-900 tw-break-all">{format(value)}</td>
+                    <td className="tw-px-4 tw-py-3 tw-align-middle">
+                      {warning && <Warning message={warning} />}
+                    </td>
+                  </tr>
+                );
+              })}
+            </tbody>
+          </table>
+        </div>
+      </aside>
+    </div>
   );
 };
 

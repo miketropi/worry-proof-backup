@@ -44,17 +44,17 @@ const BackupTableRow = ({ backup, isSelected, onSelect, onDelete, onDownload, on
             items={[
               {
                 label: 'Restore',
-                icon: <RotateCcw />,
+                icon: <RotateCcw size={16} />,
                 onClick: () => onRestore(backup),
               },
               {
                 label: 'Download',
-                icon: <FileDown />,
+                icon: <FileDown size={16} />,
                 onClick: () => onDownload(backup.id),
               },
               {
                 label: 'Delete',
-                icon: <Trash2 />,
+                icon: <Trash2 size={16} />,
                 danger: true,
                 onClick: () => onDelete(backup.id),
               }

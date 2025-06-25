@@ -13,8 +13,37 @@ const DonationInfomation = () => {
     window.open(config.buyMeACoffeeUrl, '_blank', 'noopener,noreferrer');
   };
 
+  // convert items of What Your Coffee Money Does to data
+  const whatYourCoffeeMoneyDoes = [
+    {
+      icon: '🚀',
+      title: 'Speed Demon Mode',
+      description: 'Your coffee fuels lightning-fast updates & new features! ⚡',
+    },
+    {
+      icon: '🛡️',
+      title: 'Security-First',
+      description: 'Every function built with enterprise-grade security as the top priority! 🔐',
+    },
+    {
+      icon: '💎',
+      title: 'Forever Free Gang',
+      description: 'This plugin stays 100% free forever - no hidden fees! ✨',
+    },
+    {
+      icon: '🎨',
+      title: 'UI/UX Glow Up',
+      description: 'Making the interface so smooth it feels like butter! 🧈',
+    },
+    {
+      icon: '🤝',
+      title: 'Community Built',
+      description: 'Built by the community, for the community - that\'s the vibe! 💪',
+    },
+  ];
+
   return (
-    <div className="tw-max-w-2xl tw-mx-auto tw-p-6">
+    <div className="tw-max-w-3xl tw-mx-auto tw-px-2 sm:tw-px-0 tw-py-10 tw-bg-white">
       {/* Fun Header */}
       <div className="tw-text-center tw-mb-8">
         <h2 className="tw-text-2xl tw-font-bold tw-text-gray-900 tw-mb-4">
@@ -67,23 +96,22 @@ const DonationInfomation = () => {
         <h3 className="tw-text-lg tw-font-semibold tw-text-gray-900 tw-mb-4 tw-text-center">
           What Your Coffee Money Does 💸
         </h3>
-        <div className="tw-space-y-2">
-          <div className="tw-flex tw-items-center tw-gap-2 tw-text-gray-700">
-            <div className="tw-w-2 tw-h-2 tw-bg-blue-500 tw-rounded-full"></div>
-            <span>Makes new features come out faster ⚡</span>
-          </div>
-          <div className="tw-flex tw-items-center tw-gap-2 tw-text-gray-700">
-            <div className="tw-w-2 tw-h-2 tw-bg-blue-500 tw-rounded-full"></div>
-            <span>Keeps everything super secure 🔒</span>
-          </div>
-          <div className="tw-flex tw-items-center tw-gap-2 tw-text-gray-700">
-            <div className="tw-w-2 tw-h-2 tw-bg-blue-500 tw-rounded-full"></div>
-            <span>Better help when you need it 🆘</span>
-          </div>
-          <div className="tw-flex tw-items-center tw-gap-2 tw-text-gray-700">
-            <div className="tw-w-2 tw-h-2 tw-bg-blue-500 tw-rounded-full"></div>
-            <span>Keeps it free for everyone forever 🎉</span>
-          </div>
+        <div className="tw-grid tw-grid-cols-1 md:tw-grid-cols-2 lg:tw-grid-cols-3 tw-gap-4">
+          {whatYourCoffeeMoneyDoes.map((item, index) => (
+            <div key={index} className="tw-bg-white tw-border tw-border-gray-200 tw-rounded-lg tw-p-4 tw-shadow-sm hover:tw-shadow-md tw-transition-shadow">
+              <div className="tw-flex tw-items-start tw-gap-3">
+                <div className="tw-text-2xl tw-flex-shrink-0">{item.icon}</div>
+                <div>
+                  <h4 className="tw-font-semibold tw-text-gray-900 tw-mb-1 tw-text-sm">
+                    {item.title}
+                  </h4>
+                  <p className="tw-text-xs tw-text-gray-600 tw-leading-relaxed">
+                    {item.description}
+                  </p>
+                </div>
+              </div>
+            </div>
+          ))}
         </div>
       </div>
 

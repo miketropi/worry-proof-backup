@@ -15,7 +15,7 @@ export default function RestoreConfigModal({ backup, closeModal, toast }) {
             Select which components you want to restore from this backup.
           </p>
         </div>
-        { JSON.stringify(selectedBackupRestoreTypes) }
+        {/* { JSON.stringify(selectedBackupRestoreTypes) } */}
         <div className="tw-bg-gray-50 tw-p-4 tw-rounded-lg tw-border tw-border-gray-200">
           <div className="tw-flex tw-items-center tw-justify-between tw-mb-3">
             <span className="tw-text-sm tw-font-medium tw-text-gray-700">Backup Details</span>
@@ -91,15 +91,23 @@ export default function RestoreConfigModal({ backup, closeModal, toast }) {
           </button>
           <button
             onClick={() => {
-              // console.log('Restoring backup:', backup.folder_name, selectedBackupRestoreTypes);
-              // toast({ message: 'Restore functionality is not yet implemented.', type: 'info' });
+              if (selectedBackupRestoreTypes.length === 0) {
+                toast({ message: 'Please select at least one backup type to restore.', type: 'warning' });
+                return;
+              }
+              
               buildRestoreProcess({
                 folder_name: backup.folder_name,
                 types: selectedBackupRestoreTypes,
               });
               closeModal();
             }}
-            className="tw-px-4 tw-py-2 tw-text-sm tw-font-medium tw-text-white tw-bg-blue-600 tw-border tw-border-transparent tw-rounded-md hover:tw-bg-blue-700 focus:tw-outline-none focus:tw-ring-2 focus:tw-ring-offset-2 focus:tw-ring-blue-500"
+            className={`tw-px-4 tw-py-2 tw-text-sm tw-font-medium tw-border tw-rounded-md focus:tw-outline-none focus:tw-ring-2 focus:tw-ring-offset-2 focus:tw-ring-blue-500 ${
+              selectedBackupRestoreTypes.length === 0
+                ? 'tw-text-gray-400 tw-bg-gray-200 tw-border-gray-200 tw-cursor-not-allowed'
+                : 'tw-text-white tw-bg-blue-600 tw-border-transparent hover:tw-bg-blue-700'
+            }`}
+            disabled={selectedBackupRestoreTypes.length === 0}
           >
             Yes, Restore Backup! 🚀
           </button>
