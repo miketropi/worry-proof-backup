@@ -1,11 +1,11 @@
 <?php 
 /**
  * Plugin Name: WordPress Backup
- * Plugin URI: #
+ * Plugin URI: https://github.com/miketropi/wp-backup
  * Description: WordPress backup plugin that allows you to backup your database and files.
  * Version: 0.1.1
  * Author: @Mike
- * Author URI: #
+ * Author URI: https://github.com/miketropi
  * Text Domain: wp-backup
  * Domain Path: /languages
  * License: GPL v2 or later
@@ -48,6 +48,7 @@
   require_once WP_BACKUP_PLUGIN_PATH . 'inc/libs/backup-database.php';
   require_once WP_BACKUP_PLUGIN_PATH . 'inc/libs/backup-file-system.php';
   require_once WP_BACKUP_PLUGIN_PATH . 'inc/libs/restore-database.php';
+  require_once WP_BACKUP_PLUGIN_PATH . 'inc/libs/restore-file-system.php';
 
   # include static file
   require_once WP_BACKUP_PLUGIN_PATH . 'inc/static.php';
