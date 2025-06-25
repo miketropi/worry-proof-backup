@@ -210,6 +210,10 @@ function wp_backup_get_server_metrics() {
   // WordPress version
   $wp_version = get_bloginfo('version');
 
+  // MySQL version
+  global $wpdb;
+  $mysql_version = $wpdb->db_version();
+
   return array(
     'disk_free_space'    => $disk_free_space,
     'disk_total_space'   => $disk_total_space,
@@ -222,6 +226,7 @@ function wp_backup_get_server_metrics() {
     'server_software'    => $server_software,
     'php_version'        => $php_version,
     'wp_version'         => $wp_version,
+    'mysql_version'      => $mysql_version,
     'ZipArchive'         => class_exists('ZipArchive'),
     'WP_Debug'           => defined('WP_DEBUG') && WP_DEBUG,
     'WP_CLI'             => wp_backup_is_wp_cli_available(),

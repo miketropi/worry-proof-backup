@@ -30212,8 +30212,9 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _components_Toast__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./components/Toast */ "./src/components/Toast.jsx");
 /* harmony import */ var _components_Tab__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./components/Tab */ "./src/components/Tab.jsx");
 /* harmony import */ var lucide_react__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! lucide-react */ "./node_modules/lucide-react/dist/esm/icons/package.js");
-/* harmony import */ var lucide_react__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! lucide-react */ "./node_modules/lucide-react/dist/esm/icons/bug.js");
-/* harmony import */ var lucide_react__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! lucide-react */ "./node_modules/lucide-react/dist/esm/icons/heart.js");
+/* harmony import */ var lucide_react__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! lucide-react */ "./node_modules/lucide-react/dist/esm/icons/server.js");
+/* harmony import */ var lucide_react__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! lucide-react */ "./node_modules/lucide-react/dist/esm/icons/bug.js");
+/* harmony import */ var lucide_react__WEBPACK_IMPORTED_MODULE_14__ = __webpack_require__(/*! lucide-react */ "./node_modules/lucide-react/dist/esm/icons/heart.js");
 /* harmony import */ var _components_Modal__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./components/Modal */ "./src/components/Modal.jsx");
 /* harmony import */ var _components_BackupTable_refactored__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./components/BackupTable.refactored */ "./src/components/BackupTable.refactored.jsx");
 /* harmony import */ var _components_RestoreProcess__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./components/RestoreProcess */ "./src/components/RestoreProcess.jsx");
@@ -30251,6 +30252,16 @@ var tabs = [{
     children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_10__.jsx)(_components_BackupProcess__WEBPACK_IMPORTED_MODULE_2__["default"], {}), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_10__.jsx)(_components_RestoreProcess__WEBPACK_IMPORTED_MODULE_8__["default"], {}), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_10__.jsx)(_components_BackupTable_refactored__WEBPACK_IMPORTED_MODULE_7__["default"], {})]
   })
 },
+// server metrics
+{
+  label: 'Server Metrics',
+  icon: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_10__.jsx)(lucide_react__WEBPACK_IMPORTED_MODULE_12__["default"], {
+    size: 14
+  }),
+  content: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_10__.jsx)(_components_ServerMetrics__WEBPACK_IMPORTED_MODULE_1__["default"], {
+    metrics: wp_backup_php_data.server_metrics
+  })
+},
 // {
 //   label: 'Documentation',
 //   icon: <Book size={14} />,
@@ -30270,7 +30281,7 @@ var tabs = [{
 // report issue
 {
   label: 'Report Issue',
-  icon: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_10__.jsx)(lucide_react__WEBPACK_IMPORTED_MODULE_12__["default"], {
+  icon: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_10__.jsx)(lucide_react__WEBPACK_IMPORTED_MODULE_13__["default"], {
     size: 14
   }),
   content: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_10__.jsxs)("div", {
@@ -30346,26 +30357,18 @@ var tabs = [{
   })
 }, {
   label: 'Support the author',
-  icon: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_10__.jsx)(lucide_react__WEBPACK_IMPORTED_MODULE_13__["default"], {
+  icon: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_10__.jsx)(lucide_react__WEBPACK_IMPORTED_MODULE_14__["default"], {
     size: 14
   }),
   content: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_10__.jsx)(_components_DonationInfomation__WEBPACK_IMPORTED_MODULE_9__["default"], {})
 }];
 function App() {
   return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_10__.jsxs)(AppProvider, {
-    children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_10__.jsxs)("div", {
-      className: "tw-grid tw-grid-cols-1 md:tw-grid-cols-12 tw-gap-8",
-      children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_10__.jsx)("div", {
-        className: "md:tw-col-span-9",
-        children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_10__.jsx)(_components_Tab__WEBPACK_IMPORTED_MODULE_5__["default"], {
-          tabs: tabs
-        })
-      }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_10__.jsx)("div", {
-        className: "md:tw-col-span-3",
-        children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_10__.jsx)(_components_ServerMetrics__WEBPACK_IMPORTED_MODULE_1__["default"], {
-          metrics: wp_backup_php_data.server_metrics
-        })
-      })]
+    children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_10__.jsx)("div", {
+      className: "tw-w-full",
+      children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_10__.jsx)(_components_Tab__WEBPACK_IMPORTED_MODULE_5__["default"], {
+        tabs: tabs
+      })
     }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_10__.jsx)(_components_Footer__WEBPACK_IMPORTED_MODULE_0__["default"], {})]
   });
 }
@@ -33128,54 +33131,128 @@ var formatSeconds = function formatSeconds(seconds) {
   var h = Math.floor(m / 60);
   return "".concat(h, "h ").concat(m % 60, "m ").concat(s, "s");
 };
+
+// Minimum recommended values for warnings
+var minimums = {
+  php_version: {
+    value: "8.0",
+    compare: function compare(v) {
+      return v && parseFloat(v) < 8.0;
+    },
+    message: "Recommended PHP >= 8.0"
+  },
+  memory_limit: {
+    value: 256 * 1024 * 1024,
+    compare: function compare(v) {
+      return v && v < 256 * 1024 * 1024;
+    },
+    message: "Recommended Memory >= 256MB"
+  },
+  disk_free_space: {
+    value: 1 * 1024 * 1024 * 1024,
+    compare: function compare(v) {
+      return v && v < 1 * 1024 * 1024 * 1024;
+    },
+    message: "Recommended Free Space >= 1GB"
+  },
+  max_execution_time: {
+    value: 60,
+    compare: function compare(v) {
+      return v && v < 60;
+    },
+    message: "Recommended Execution Time >= 60s"
+  },
+  ZipArchive: {
+    value: true,
+    compare: function compare(v) {
+      return !v;
+    },
+    message: "ZipArchive should be enabled"
+  },
+  WP_Debug: {
+    value: false,
+    compare: function compare(v) {
+      return !!v;
+    },
+    message: "WP Debug should be Off"
+  },
+  WP_CLI: {
+    value: true,
+    compare: function compare(v) {
+      return !v;
+    },
+    message: "WP CLI should be enabled"
+  },
+  safe_mode: {
+    value: false,
+    compare: function compare(v) {
+      return !!v;
+    },
+    message: "Safe Mode should be Off"
+  },
+  mysql_version: {
+    value: "5.7",
+    compare: function compare(v) {
+      return v && parseFloat(v) < 5.7;
+    },
+    message: "Recommended MySQL >= 5.7"
+  }
+};
 var metricsConfig = [{
   key: "disk_free_space",
   label: "Disk Free Space",
   format: formatBytes,
   icon: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)(lucide_react__WEBPACK_IMPORTED_MODULE_2__["default"], {
-    className: "tw-w-5 tw-h-5 tw-text-blue-500"
+    className: "tw-w-5 tw-h-5",
+    color: "#3B82F6"
   })
 }, {
   key: "disk_total_space",
   label: "Disk Total Space",
   format: formatBytes,
   icon: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)(lucide_react__WEBPACK_IMPORTED_MODULE_3__["default"], {
-    className: "tw-w-5 tw-h-5 tw-text-indigo-500"
+    className: "tw-w-5 tw-h-5",
+    color: "#6366F1"
   })
 }, {
   key: "memory_limit",
   label: "Memory Limit",
   format: formatBytes,
   icon: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)(lucide_react__WEBPACK_IMPORTED_MODULE_4__["default"], {
-    className: "tw-w-5 tw-h-5 tw-text-green-500"
+    className: "tw-w-5 tw-h-5",
+    color: "#10B981"
   })
 }, {
   key: "memory_usage",
   label: "Memory Usage",
   format: formatBytes,
   icon: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)(lucide_react__WEBPACK_IMPORTED_MODULE_5__["default"], {
-    className: "tw-w-5 tw-h-5 tw-text-yellow-500"
+    className: "tw-w-5 tw-h-5",
+    color: "#EAB308"
   })
 }, {
   key: "max_execution_time",
   label: "Max Execution Time",
   format: formatSeconds,
   icon: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)(lucide_react__WEBPACK_IMPORTED_MODULE_5__["default"], {
-    className: "tw-w-5 tw-h-5 tw-text-pink-500"
+    className: "tw-w-5 tw-h-5",
+    color: "#EC4899"
   })
 }, {
   key: "upload_max_filesize",
   label: "Upload Max Filesize",
   format: formatBytes,
   icon: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)(lucide_react__WEBPACK_IMPORTED_MODULE_6__["default"], {
-    className: "tw-w-5 tw-h-5 tw-text-purple-500"
+    className: "tw-w-5 tw-h-5",
+    color: "#8B5CF6"
   })
 }, {
   key: "post_max_size",
   label: "Post Max Size",
   format: formatBytes,
   icon: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)(lucide_react__WEBPACK_IMPORTED_MODULE_7__["default"], {
-    className: "tw-w-5 tw-h-5 tw-text-red-500"
+    className: "tw-w-5 tw-h-5",
+    color: "#EF4444"
   })
 }, {
   key: "server_software",
@@ -33184,7 +33261,8 @@ var metricsConfig = [{
     return v || "-";
   },
   icon: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)(lucide_react__WEBPACK_IMPORTED_MODULE_8__["default"], {
-    className: "tw-w-5 tw-h-5 tw-text-cyan-500"
+    className: "tw-w-5 tw-h-5",
+    color: "#06B6D4"
   })
 }, {
   key: "php_version",
@@ -33193,7 +33271,8 @@ var metricsConfig = [{
     return v || "-";
   },
   icon: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)(lucide_react__WEBPACK_IMPORTED_MODULE_9__["default"], {
-    className: "tw-w-5 tw-h-5 tw-text-fuchsia-500"
+    className: "tw-w-5 tw-h-5",
+    color: "#D946EF"
   })
 }, {
   key: "ZipArchive",
@@ -33202,18 +33281,28 @@ var metricsConfig = [{
     return v ? "On" : "Off";
   },
   icon: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)(lucide_react__WEBPACK_IMPORTED_MODULE_10__["default"], {
-    className: "tw-w-5 tw-h-5 tw-text-gray-500"
+    className: "tw-w-5 tw-h-5",
+    color: "#F97316"
   })
-},
-// wp version
-{
+}, {
   key: "wp_version",
   label: "WP Version",
   format: function format(v) {
     return v || "-";
   },
   icon: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)(lucide_react__WEBPACK_IMPORTED_MODULE_9__["default"], {
-    className: "tw-w-5 tw-h-5 tw-text-fuchsia-500"
+    className: "tw-w-5 tw-h-5",
+    color: "#10B981"
+  })
+}, {
+  key: "mysql_version",
+  label: "MySQL Version",
+  format: function format(v) {
+    return v || "-";
+  },
+  icon: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)(lucide_react__WEBPACK_IMPORTED_MODULE_3__["default"], {
+    className: "tw-w-5 tw-h-5",
+    color: "#14B8A6"
   })
 }, {
   key: "WP_Debug",
@@ -33222,7 +33311,8 @@ var metricsConfig = [{
     return v ? "On" : "Off";
   },
   icon: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)(lucide_react__WEBPACK_IMPORTED_MODULE_11__["default"], {
-    className: "tw-w-5 tw-h-5 tw-text-gray-500"
+    className: "tw-w-5 tw-h-5",
+    color: "#F59E0B"
   })
 }, {
   key: "WP_CLI",
@@ -33231,7 +33321,8 @@ var metricsConfig = [{
     return v ? "On" : "Off";
   },
   icon: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)(lucide_react__WEBPACK_IMPORTED_MODULE_12__["default"], {
-    className: "tw-w-5 tw-h-5 tw-text-gray-500"
+    className: "tw-w-5 tw-h-5",
+    color: "#64748B"
   })
 }, {
   key: "safe_mode",
@@ -33240,41 +33331,106 @@ var metricsConfig = [{
     return v ? "On" : "Off";
   },
   icon: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)(lucide_react__WEBPACK_IMPORTED_MODULE_13__["default"], {
-    className: "tw-w-5 tw-h-5 tw-text-gray-500"
+    className: "tw-w-5 tw-h-5",
+    color: "#F43F5E"
   })
 }];
-var ServerMetrics = function ServerMetrics(_ref) {
-  var metrics = _ref.metrics;
+var Warning = function Warning(_ref) {
+  var message = _ref.message;
+  return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("span", {
+    className: "tw-text-xs tw-text-gray-400",
+    title: message,
+    children: message
+  });
+};
+var ServerMetrics = function ServerMetrics(_ref2) {
+  var metrics = _ref2.metrics,
+    _ref2$showWarnings = _ref2.showWarnings,
+    showWarnings = _ref2$showWarnings === void 0 ? true : _ref2$showWarnings;
   return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)("aside", {
-    className: "tw-bg-white tw-border tw-border-gray-200 tw-p-4",
+    className: "tw-p-4 tw-mx-auto tw-mb-6 tw-w-full sm:tw-max-w-full",
     children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)("h2", {
-      className: "tw-text-base tw-font-semibold tw-text-gray-800 tw-mb-3 tw-flex tw-items-center tw-gap-2",
+      className: "tw-text-base tw-font-semibold tw-text-gray-800 tw-mb-4 tw-flex tw-items-center tw-gap-2",
       children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)(lucide_react__WEBPACK_IMPORTED_MODULE_8__["default"], {
-        className: "tw-w-5 tw-h-5 tw-text-blue-500"
+        className: "tw-w-5 tw-h-5 tw-text-gray-400"
       }), "Server Metrics"]
-    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("ul", {
-      className: "tw-space-y-2",
-      children: metricsConfig.map(function (_ref2) {
-        var key = _ref2.key,
-          label = _ref2.label,
-          format = _ref2.format,
-          icon = _ref2.icon;
-        return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)("li", {
-          className: "tw-flex tw-flex-col sm:tw-flex-row sm:tw-items-center sm:tw-justify-between tw-py-2 tw-rounded hover:tw-bg-gray-50 tw-transition",
-          children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)("div", {
-            className: "tw-flex tw-items-center tw-gap-2 tw-mb-1 sm:tw-mb-0",
-            children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("span", {
-              className: "tw-w-4 tw-h-4 tw-flex tw-items-center tw-justify-center",
-              children: icon
-            }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("span", {
-              className: "tw-text-xs tw-text-gray-600",
-              children: label
-            })]
-          }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("span", {
-            className: "tw-text-xs tw-font-mono tw-text-gray-900 sm:tw-text-right",
-            children: format(metrics === null || metrics === void 0 ? void 0 : metrics[key])
+    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("div", {
+      className: "tw-bg-gradient-to-r tw-from-indigo-50 tw-to-purple-50 tw-border tw-border-indigo-200 tw-rounded-md tw-p-6 tw-mb-6 tw-shadow-sm",
+      children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)("div", {
+        className: "tw-flex tw-items-start tw-gap-4",
+        children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("div", {
+          className: "tw-flex-shrink-0 tw-mt-1",
+          children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("div", {
+            className: "tw-w-8 tw-h-8 tw-bg-gradient-to-r tw-from-indigo-500 tw-to-purple-600 tw-rounded-lg tw-flex tw-items-center tw-justify-center",
+            children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("span", {
+              className: "tw-text-white tw-text-sm",
+              children: "\u26A1"
+            })
+          })
+        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)("div", {
+          children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("h3", {
+            className: "tw-text-base tw-font-semibold tw-text-indigo-900 tw-mb-2 tw-flex tw-items-center tw-gap-2",
+            children: "Pro Tips for Your Server Setup \uD83D\uDCA1"
+          }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("p", {
+            className: "tw-text-sm tw-leading-relaxed tw-text-indigo-700",
+            children: "Hey there! \uD83D\uDC4B Your server setup is like choosing the right gear for a mission - it totally depends on your site's vibe! Small sites? You're good with the basics! But if you're running a massive site with tons of plugins, themes, or getting that sweet traffic flow, maybe consider leveling up your server resources. It's like upgrading from a bicycle to a rocket ship! \uD83D\uDE80\u2728"
           })]
-        }, key);
+        })]
+      })
+    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("div", {
+      className: "tw-overflow-x-auto",
+      children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)("table", {
+        className: "tw-w-full tw-bg-white tw-text-sm tw-border-collapse tw-shadow-sm tw-border tw-border-gray-200",
+        children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("thead", {
+          className: "tw-bg-gray-50",
+          children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)("tr", {
+            children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("th", {
+              className: "tw-px-4 tw-py-3 tw-text-left tw-text-xs tw-font-medium tw-text-gray-500 ",
+              children: " "
+            }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("th", {
+              className: "tw-px-4 tw-py-3 tw-text-left tw-text-xs tw-font-medium tw-text-gray-500 ",
+              children: "METRIC"
+            }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("th", {
+              className: "tw-px-4 tw-py-3 tw-text-left tw-text-xs tw-font-medium tw-text-gray-500 ",
+              children: "VALUE"
+            }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("th", {
+              className: "tw-px-4 tw-py-3 tw-text-left tw-text-xs tw-font-medium tw-text-gray-500 ",
+              children: " "
+            })]
+          })
+        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("tbody", {
+          children: metricsConfig.map(function (_ref3) {
+            var key = _ref3.key,
+              label = _ref3.label,
+              format = _ref3.format,
+              icon = _ref3.icon;
+            var value = metrics === null || metrics === void 0 ? void 0 : metrics[key];
+            var warning = showWarnings && minimums[key] && minimums[key].compare(value) ? minimums[key].message : null;
+            return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)("tr", {
+              className: "tw-border-t tw-border-gray-100 hover:tw-bg-gray-50 tw-transition-colors",
+              children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("td", {
+                className: "tw-px-4 tw-py-3 tw-align-middle",
+                children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("span", {
+                  className: "tw-w-5 tw-h-5 tw-flex tw-items-center tw-justify-center tw-text-gray-400",
+                  children: /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().cloneElement(icon, {
+                    className: "tw-w-4 tw-h-4 tw-text-gray-400"
+                  })
+                })
+              }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("td", {
+                className: "tw-px-4 tw-py-3 tw-align-middle tw-text-gray-700 tw-whitespace-nowrap",
+                children: label
+              }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("td", {
+                className: "tw-px-4 tw-py-3 tw-align-middle tw-font-mono tw-text-gray-900 tw-break-all",
+                children: format(value)
+              }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("td", {
+                className: "tw-px-4 tw-py-3 tw-align-middle",
+                children: warning && /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)(Warning, {
+                  message: warning
+                })
+              })]
+            }, key);
+          })
+        })]
       })
     })]
   });

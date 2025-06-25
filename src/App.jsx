@@ -5,7 +5,7 @@ import BackupProcess from './components/BackupProcess';
 import { ConfirmProvider } from './components/Confirm';
 import { ToastProvider } from './components/Toast';
 import Tab from './components/Tab';
-import { Package, Book, Bug, Heart } from 'lucide-react';
+import { Package, Book, Bug, Heart, Server } from 'lucide-react';
 import { ModalProvider } from './components/Modal';
 import BackupTable from './components/BackupTable.refactored';
 import RestoreProcess from './components/RestoreProcess';
@@ -32,6 +32,12 @@ const tabs = [
       <RestoreProcess />
       <BackupTable />
     </>
+  },
+  // server metrics
+  {
+    label: 'Server Metrics',
+    icon: <Server size={14} />,
+    content: <ServerMetrics metrics={wp_backup_php_data.server_metrics} />
   },
   // {
   //   label: 'Documentation',
@@ -111,15 +117,9 @@ const tabs = [
 export default function App() {
   return (
     <AppProvider>
-      
-      <div className="tw-grid tw-grid-cols-1 md:tw-grid-cols-12 tw-gap-8"> 
-        <div className="md:tw-col-span-9">
-          <Tab tabs={tabs} />
-          {/* <BackupTable /> */}
-        </div>
-        <div className="md:tw-col-span-3">
-          <ServerMetrics metrics={wp_backup_php_data.server_metrics} />
-        </div>
+      <div className="tw-w-full">
+        <Tab tabs={tabs} />
+        {/* <BackupTable /> */}
       </div>
       <Footer />
     </AppProvider>
