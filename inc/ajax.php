@@ -22,7 +22,7 @@ function wp_backup_ajax_create_backup_config_file() {
   check_ajax_referer('wp_backup_nonce_' . get_current_user_id(), 'nonce');
 
   # get payload
-  $payload = isset($_POST['payload']) ? $_POST['payload'] : array();
+  $payload = isset($_POST['payload']) ? wp_unslash($_POST['payload']) : array();
 
   $config_file = wp_backup_generate_config_file([
     'backup_name' => isset($payload['name']) ? $payload['name'] : '',
@@ -47,7 +47,7 @@ function wp_backup_ajax_generate_backup_database() {
   check_ajax_referer('wp_backup_nonce_' . get_current_user_id(), 'nonce');
 
   # get payload
-  $payload = isset($_POST['payload']) ? $_POST['payload'] : array();
+  $payload = isset($_POST['payload']) ? wp_unslash($_POST['payload']) : array();
 
   // check $payload['backup_folder'] is exists
   if (!isset($payload['backup_folder']) || empty($payload['backup_folder'])) {
@@ -116,7 +116,7 @@ function wp_backup_ajax_generate_backup_plugin() {
   check_ajax_referer('wp_backup_nonce_' . get_current_user_id(), 'nonce');
 
   # get payload
-  $payload = isset($_POST['payload']) ? $_POST['payload'] : array();
+  $payload = isset($_POST['payload']) ? wp_unslash($_POST['payload']) : array();
 
   // check $payload['backup_folder'] is exists
   if (!isset($payload['backup_folder']) || empty($payload['backup_folder'])) {
@@ -158,7 +158,7 @@ function wp_backup_ajax_generate_backup_theme() {
   check_ajax_referer('wp_backup_nonce_' . get_current_user_id(), 'nonce');
 
   # get payload
-  $payload = isset($_POST['payload']) ? $_POST['payload'] : array();
+  $payload = isset($_POST['payload']) ? wp_unslash($_POST['payload']) : array();
 
   // check $payload['backup_folder'] is exists
   if (!isset($payload['backup_folder']) || empty($payload['backup_folder'])) {
@@ -199,7 +199,7 @@ function wp_backup_ajax_generate_backup_uploads() {
   check_ajax_referer('wp_backup_nonce_' . get_current_user_id(), 'nonce');
   
   # get payload
-  $payload = isset($_POST['payload']) ? $_POST['payload'] : array();
+  $payload = isset($_POST['payload']) ? wp_unslash($_POST['payload']) : array();
 
   // check $payload['backup_folder'] is exists
   if (!isset($payload['backup_folder']) || empty($payload['backup_folder'])) {
@@ -241,7 +241,7 @@ function wp_backup_ajax_generate_backup_done() {
   check_ajax_referer('wp_backup_nonce_' . get_current_user_id(), 'nonce');
 
   # get payload
-  $payload = isset($_POST['payload']) ? $_POST['payload'] : array();
+  $payload = isset($_POST['payload']) ? wp_unslash($_POST['payload']) : array();
 
   // get backup size
   $backup_size = wp_backup_calc_folder_size($payload['backup_folder']);
@@ -271,7 +271,7 @@ function wp_backup_ajax_delete_backup_folder() {
   check_ajax_referer('wp_backup_nonce_' . get_current_user_id(), 'nonce');
 
   # get payload
-  $payload = isset($_POST['payload']) ? $_POST['payload'] : array();
+  $payload = isset($_POST['payload']) ? wp_unslash($_POST['payload']) : array();
 
   // name_folder backup folder
   $name_folder = $payload['name_folder'];
@@ -299,7 +299,7 @@ function wp_backup_ajax_restore_read_backup_config_file() {
   check_ajax_referer('wp_backup_nonce_' . get_current_user_id(), 'nonce');
 
   # get payload
-  $payload = isset($_POST['payload']) ? $_POST['payload'] : array();
+  $payload = isset($_POST['payload']) ? wp_unslash($_POST['payload']) : array();
 
   $folder_name = $payload['folder_name'];
   $types = $payload['types'];
@@ -325,7 +325,7 @@ function wp_backup_ajax_restore_database() {
   check_ajax_referer('wp_backup_nonce_' . get_current_user_id(), 'nonce');
 
   # get payload
-  $payload = isset($_POST['payload']) ? $_POST['payload'] : array();
+  $payload = isset($_POST['payload']) ? wp_unslash($_POST['payload']) : array();
 
   $folder_name = $payload['folder_name'];
   $backup_prefix = $payload['table_prefix'];
@@ -395,7 +395,7 @@ function wp_backup_ajax_restore_plugin() {
   check_ajax_referer('wp_backup_nonce_' . get_current_user_id(), 'nonce');
 
   # get payload
-  $payload = isset($_POST['payload']) ? $_POST['payload'] : array();
+  $payload = isset($_POST['payload']) ? wp_unslash($_POST['payload']) : array();
 
   $folder_name = $payload['folder_name'];
   $path_zip_file = WP_CONTENT_DIR . '/uploads/wp-backup/' . $folder_name . '/plugins.zip';
@@ -437,7 +437,7 @@ function wp_backup_ajax_restore_theme() {
   check_ajax_referer('wp_backup_nonce_' . get_current_user_id(), 'nonce');
   
   # get payload
-  $payload = isset($_POST['payload']) ? $_POST['payload'] : array();
+  $payload = isset($_POST['payload']) ? wp_unslash($_POST['payload']) : array();
 
   $folder_name = $payload['folder_name'];
   $path_zip_file = WP_CONTENT_DIR . '/uploads/wp-backup/' . $folder_name . '/themes.zip';
@@ -478,7 +478,7 @@ function wp_backup_ajax_restore_uploads() {
   check_ajax_referer('wp_backup_nonce_' . get_current_user_id(), 'nonce');
   
   # get payload
-  $payload = isset($_POST['payload']) ? $_POST['payload'] : array();
+  $payload = isset($_POST['payload']) ? wp_unslash($_POST['payload']) : array();
 
   $folder_name = $payload['folder_name'];
   $path_zip_file = WP_CONTENT_DIR . '/uploads/wp-backup/' . $folder_name . '/uploads.zip';
@@ -520,7 +520,7 @@ function wp_backup_ajax_restore_done() {
   check_ajax_referer('wp_backup_nonce_' . get_current_user_id(), 'nonce');
 
   # get payload
-  $payload = isset($_POST['payload']) ? $_POST['payload'] : array();
+  $payload = isset($_POST['payload']) ? wp_unslash($_POST['payload']) : array();
 
   // create hook after restore process successfully
   do_action('wp_backup:after_restore_process_success', $payload);
@@ -537,7 +537,7 @@ function wp_backup_ajax_send_report_email() {
   check_ajax_referer('wp_backup_nonce_' . get_current_user_id(), 'nonce');
 
   # get payload
-  $payload = isset($_POST['payload']) ? $_POST['payload'] : array();
+  $payload = isset($_POST['payload']) ? wp_unslash($_POST['payload']) : array();
 
   // send report email
   $result = wp_backup_send_report_email($payload);
@@ -608,7 +608,7 @@ function wp_backup_ajax_get_backup_download_zip_path() {
   check_ajax_referer('wp_backup_nonce_' . get_current_user_id(), 'nonce');
 
   # get payload
-  $payload = isset($_POST['payload']) ? $_POST['payload'] : array();
+  $payload = isset($_POST['payload']) ? wp_unslash($_POST['payload']) : array();
 
   $backup_folder_name = $payload['folder_name'];
 
@@ -624,7 +624,7 @@ function wp_backup_ajax_create_backup_zip() {
   check_ajax_referer('wp_backup_nonce_' . get_current_user_id(), 'nonce');
 
   # get payload
-  $payload = isset($_POST['payload']) ? $_POST['payload'] : array();
+  $payload = isset($_POST['payload']) ? wp_unslash($_POST['payload']) : array();
 
   $backup_folder_name = $payload['folder_name'];
 

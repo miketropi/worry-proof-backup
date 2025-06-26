@@ -39,9 +39,9 @@ function wp_backup_load_template($template_name, $args = array(), $echo = true) 
 
   // Echo or return template content
   if ($echo) {
-    echo $template_content;
+    echo wp_kses_post($template_content);
   } else {
-    return $template_content;
+    return wp_kses_post($template_content);
   }
 }
 
@@ -130,7 +130,7 @@ function wp_backup_get_backups() {
       'id' => $config_file_content['backup_id'],
       'name' => $config_file_content['backup_name'],
       'status' => $config_file_content['backup_status'],
-      'date' => date('Y-m-d H:i:s', strtotime($config_file_content['backup_date'])),
+      'date' => gmdate('Y-m-d H:i:s', strtotime($config_file_content['backup_date'])),
       'size' => $config_file_content['backup_size'],
       'type' => explode(',', $config_file_content['backup_types']),
       'folder_name' => $folder_name,
@@ -158,6 +158,20 @@ function wp_backup_is_wp_cli_available() {
 
   $cli_path = shell_exec( 'which wp' );
   return ! empty( $cli_path );
+}
+
+function wp_backup_is_current_admin_page( $screen_id_check = '' ) {
+  if ( ! is_admin() ) {
+      return false;
+  }
+
+  $screen = get_current_screen();
+  
+  if ( ! $screen || ! isset( $screen->id ) ) {
+      return false;
+  }
+
+  return $screen->id === $screen_id_check;
 }
 
 /**
@@ -204,7 +218,7 @@ function wp_backup_get_server_metrics() {
   }
 
   // Server info
-  $server_software = isset($_SERVER['SERVER_SOFTWARE']) ? $_SERVER['SERVER_SOFTWARE'] : '';
+  $server_software = isset($_SERVER['SERVER_SOFTWARE']) ? wp_unslash($_SERVER['SERVER_SOFTWARE']) : '';
   $php_version = phpversion();
 
   // WordPress version
@@ -343,8 +357,15 @@ function wp_backup_save_data_to_file($file_path, $data) {
   // Ensure the directory exists
   $directory = dirname($file_path);
   if (!file_exists($directory)) {
-    if (!mkdir($directory, 0755, true)) {
-      return new WP_Error('mkdir_failed', 'Could not create directory for file: ' . $directory);
+    global $wp_filesystem;
+    
+    if (empty($wp_filesystem)) {
+      require_once(ABSPATH . 'wp-admin/includes/file.php');
+      WP_Filesystem();
+    }
+    
+    if (!$wp_filesystem->mkdir($directory, 0755)) {
+      return new WP_Error('mkdir_failed', esc_html__('Could not create directory for file: ', 'wp-backup') . $directory);
     }
   }
 
@@ -352,11 +373,78 @@ function wp_backup_save_data_to_file($file_path, $data) {
   $result = file_put_contents($file_path, $data);
 
   if ($result === false) {
-    return new WP_Error('write_failed', 'Could not write data to file: ' . $file_path);
+    return new WP_Error('write_failed', esc_html__('Could not write data to file: ', 'wp-backup') . $file_path);
   }
 
   return true;
 }
+
+/**
+ * Check if file exists and create directory if needed using WP_Filesystem
+ * 
+ * @param string $file_path Full path to the file
+ * @param int $permissions Directory permissions (default: 0755)
+ * @return bool|WP_Error True on success, WP_Error on failure
+ */
+function wp_backup_ensure_file_directory($file_path, $permissions = 0755) {
+  global $wp_filesystem;
+  
+  // Initialize WP_Filesystem if not already done
+  if (empty($wp_filesystem)) {
+    require_once(ABSPATH . 'wp-admin/includes/file.php');
+    WP_Filesystem();
+  }
+  
+  // Get directory path
+  $directory = dirname($file_path);
+  
+  // Check if directory exists
+  if (!$wp_filesystem->exists($directory)) {
+    // Create directory recursively
+    if (!$wp_filesystem->mkdir($directory, $permissions)) {
+      return new WP_Error(
+        'mkdir_failed', 
+        esc_html__('Could not create directory: ', 'wp-backup') . $directory
+      );
+    }
+  }
+  
+  return true;
+}
+
+/**
+ * Create directory using WP_Filesystem (replacement for mkdir)
+ * 
+ * @param string $path Directory path to create
+ * @param int $permissions Directory permissions (default: 0755)
+ * @param bool $recursive Whether to create parent directories (default: true)
+ * @return bool|WP_Error True on success, WP_Error on failure
+ */
+function wp_backup_mkdir($path, $permissions = 0755, $recursive = true) {
+  global $wp_filesystem;
+  
+  // Initialize WP_Filesystem if not already done
+  if (empty($wp_filesystem)) {
+    require_once(ABSPATH . 'wp-admin/includes/file.php');
+    WP_Filesystem();
+  }
+  
+  // Check if directory already exists
+  if ($wp_filesystem->exists($path)) {
+    return true;
+  }
+  
+  // Create directory
+  if (!$wp_filesystem->mkdir($path, $permissions)) {
+    return new WP_Error(
+      'mkdir_failed', 
+      esc_html__('Could not create directory: ', 'wp-backup') . $path
+    );
+  }
+  
+  return true;
+}
+
 
 /**
  * generate config file 
@@ -379,7 +467,7 @@ function wp_backup_generate_config_file($args = array()) {
     'backup_id' => wp_generate_uuid4(),
     'backup_name' => '',
     'backup_types' => '',
-    'backup_date' => date('c'),
+    'backup_date' => gmdate('c'),
     'backup_description' => '',
     'backup_author_email' => is_user_logged_in() ? wp_get_current_user()->user_email : '',
     'backup_status' => 'pending',
@@ -396,14 +484,19 @@ function wp_backup_generate_config_file($args = array()) {
   $args['backup_author_email'] = sanitize_email($args['backup_author_email']);
 
   $upload_dir = wp_upload_dir();
-  $name_folder = 'backup_' . $args['backup_id'] . '_' . date('Y-m-d_H-i-s');
+  $name_folder = 'backup_' . $args['backup_id'] . '_' . gmdate('Y-m-d_H-i-s');
   $backup_folder = $upload_dir['basedir'] . '/wp-backup/' . $name_folder;
 
-  if (!file_exists($backup_folder)) {
-    if (!mkdir($backup_folder, 0755, true)) {
-      return new WP_Error('mkdir_failed', 'Oops! 🤦‍♂️ Could not create backup folder. Please check folder permissions or try again. If the problem persists, contact your administrator. We\'re rooting for you! 💪✨');
-    }
+  // check if $backup_folder is exists via wp_backup_ensure_file_directory
+  if(wp_backup_mkdir($backup_folder) != true) {
+    return new WP_Error('mkdir_failed', 'Oops! 🤦‍♂️ Could not create backup folder. Please check folder permissions or try again. If the problem persists, contact your administrator. We\'re rooting for you! 💪✨');
   }
+  
+  // if (!file_exists($backup_folder)) {
+  //   if (!mkdir($backup_folder, 0755, true)) {
+  //     return new WP_Error('mkdir_failed', 'Oops! 🤦‍♂️ Could not create backup folder. Please check folder permissions or try again. If the problem persists, contact your administrator. We\'re rooting for you! 💪✨');
+  //   }
+  // }
 
   $config_file = $backup_folder . '/config.json';
   $result = file_put_contents($config_file, json_encode($args, JSON_PRETTY_PRINT));
@@ -524,6 +617,32 @@ function wp_backup_format_bytes($bytes, $precision = 2) {
   return round($bytes, $precision) . ' ' . $units[$pow];
 }
 
+
+function wp_backup_rmdir( $dir_path ) {
+  if ( ! function_exists( 'WP_Filesystem' ) ) {
+      require_once ABSPATH . 'wp-admin/includes/file.php';
+  }
+
+  global $wp_filesystem;
+
+  if ( ! WP_Filesystem() ) {
+      return new WP_Error( 'filesystem_init_failed', 'Unable to initialize WP_Filesystem.' );
+  }
+
+  // Normalize path
+  $dir_path = trailingslashit( $dir_path );
+
+  if ( ! $wp_filesystem->is_dir( $dir_path ) ) {
+      return new WP_Error( 'not_a_directory', 'Path is not a directory.' );
+  }
+
+  if ( ! $wp_filesystem->delete( $dir_path, true, 'd' ) ) {
+      return new WP_Error( 'delete_failed', 'Failed to delete the directory.' );
+  }
+
+  return true;
+}
+
 /**
  * Remove a folder and its contents (WordPress safe, with WP_Error)
  *
@@ -550,12 +669,12 @@ function wp_backup_remove_folder($folder) {
       $path = $file->getPathname();
 
       if ($file->isDir()) {
-        if (!rmdir($path)) {
-          return new WP_Error('remove_folder_failed', "Failed to remove directory: {$path}");
+        if (!wp_backup_rmdir($path)) {
+          return new WP_Error('remove_folder_failed', esc_html__('Failed to remove directory: ', 'wp-backup') . $path);
         }
       } else {
-        if (!unlink($path)) {
-          return new WP_Error('remove_file_failed', "Failed to remove file: {$path}");
+        if (!wp_delete_file($path)) {
+          return new WP_Error('remove_file_failed', esc_html__('Failed to remove file: ', 'wp-backup') . $path);
         }
       }
     }
@@ -564,12 +683,12 @@ function wp_backup_remove_folder($folder) {
     $upload_dir = wp_upload_dir();
     $backup_zip_path = $upload_dir['basedir'] . '/wp-backup-zip/' . $name_folder . '.zip';
     if (file_exists($backup_zip_path)) {
-      unlink($backup_zip_path);
+      wp_delete_file($backup_zip_path);
     }
 
     // Finally remove the folder itself
-    if (!rmdir($folder)) {
-      return new WP_Error('remove_folder_failed', "Failed to remove directory: {$folder}");
+    if (!wp_backup_rmdir($folder)) {
+      return new WP_Error('remove_folder_failed', esc_html__('Failed to remove directory: ', 'wp-backup') . $folder);
     }
 
     return true;
@@ -584,7 +703,7 @@ function wp_backup_get_config_file($folder_name) {
 
   // check if $backup_folder is exists
   if (!file_exists($backup_folder)) {
-    return new WP_Error('config_file_not_found', 'Config file not found');
+    return new WP_Error('config_file_not_found', esc_html__('Config file not found', 'wp-backup'));
   }
 
   // get config file content
@@ -592,7 +711,7 @@ function wp_backup_get_config_file($folder_name) {
 
   // check if $config_file_content is not empty
   if (empty($config_file_content)) {
-    return new WP_Error('config_file_empty', 'Config file is empty');
+    return new WP_Error('config_file_empty', esc_html__('Config file is empty', 'wp-backup'));
   }
 
   // decode config file content
@@ -600,7 +719,7 @@ function wp_backup_get_config_file($folder_name) {
 
   // check if $config_data is not empty
   if (empty($config_data)) {
-    return new WP_Error('config_data_empty', 'Config data is empty');
+    return new WP_Error('config_data_empty', esc_html__('Config data is empty', 'wp-backup'));
   }
 
   return $config_data;
@@ -617,7 +736,7 @@ function wp_backup_send_report_email($args = array()) {
 
   // validate $args
   if (empty($args['name']) || empty($args['email']) || empty($args['type']) || empty($args['description'])) {
-    return new WP_Error('invalid_args', 'Invalid arguments');
+    return new WP_Error('invalid_args', esc_html__('Invalid arguments', 'wp-backup'));
   }
 
   $args = wp_parse_args($args, $defaults);
@@ -629,7 +748,7 @@ function wp_backup_send_report_email($args = array()) {
   $wordpress_domain = get_bloginfo('url');
 
   $to = 'mike.beplus@gmail.com';
-  $subject = 'WP Backup Report';
+  $subject = esc_html__('WP Backup Report', 'wp-backup');
   $body = '<!DOCTYPE html>
 <html>
 <head>
@@ -740,7 +859,7 @@ function wp_backup_send_report_email($args = array()) {
     
     <div class="footer">
         <p>This report was automatically generated by the WP Backup plugin.</p>
-        <p>Report submitted on: ' . date('Y-m-d H:i:s') . '</p>
+        <p>Report submitted on: ' . gmdate('Y-m-d H:i:s') . '</p>
     </div>
 </body>
 </html>';

@@ -105,15 +105,13 @@ class WP_Backup_Database {
         ];
 
         // Reset file and add SQL header
-        $header = <<<SQL
-SET NAMES utf8;
-SET time_zone = '+00:00';
-SET foreign_key_checks = 0;
-SET sql_mode = 'NO_AUTO_VALUE_ON_ZERO';
-
-SET NAMES utf8mb4;
-
-SQL;
+        $header = "SET NAMES utf8;\n" .
+"SET time_zone = '+00:00';\n" .
+"SET foreign_key_checks = 0;\n" .
+"SET sql_mode = 'NO_AUTO_VALUE_ON_ZERO';\n" .
+"\n" .
+"SET NAMES utf8mb4;\n" .
+"\n";
 
         // Reset file
         if (file_put_contents($this->backup_file, $header . "\n\n") === false) {
@@ -153,10 +151,7 @@ SQL;
         $table = $tables[$table_index];
 
         // Get 1 chunk data
-        $rows = $this->wpdb->get_results(
-            "SELECT * FROM `$table` LIMIT $offset, $this->chunk_size",
-            ARRAY_A
-        );
+        $rows = $this->wpdb->get_results( "SELECT * FROM `$table` LIMIT $offset, $this->chunk_size", ARRAY_A ); // phpcs:ignore WordPress.DB.PreparedSQL.InterpolatedNotPrepared 
         if ($this->wpdb->last_error) {
             return new WP_Error('db_error', "Oh no! 🐘 Database error: {$this->wpdb->last_error}. Please check your database connection and try again! 🔌");
         }
@@ -165,7 +160,7 @@ SQL;
 
         if ($offset === 0) {
             // First time of the table → add DROP TABLE IF EXISTS and CREATE TABLE command
-            $create = $this->wpdb->get_row("SHOW CREATE TABLE `$table`", ARRAY_N);
+            $create = $this->wpdb->get_row("SHOW CREATE TABLE `$table`", ARRAY_N); // phpcs:ignore WordPress.DB.PreparedSQL.InterpolatedNotPrepared
             if ($this->wpdb->last_error) {
                 return new WP_Error('db_error', "Oh no! 🐘 Database error: {$this->wpdb->last_error}. Please check your database connection and try again! 🔌");
             }
@@ -229,7 +224,7 @@ SQL;
      */
     public function finishBackup() {
         if (file_exists($this->progress_file)) {
-            if (!unlink($this->progress_file)) {
+            if (!wp_delete_file($this->progress_file)) {
                 return new WP_Error('unlink_failed', "Oops! 🧹 Couldn't delete the progress file: $this->progress_file. Please check your file permissions! 🔒");
             }
         }

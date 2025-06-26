@@ -62,18 +62,19 @@ class WP_Restore_Database {
         ];
 
         file_put_contents($this->progress_file, json_encode($progress, JSON_PRETTY_PRINT));
-        file_put_contents($this->log_file, "== Restore started at " . date('Y-m-d H:i:s') . " ==\n", FILE_APPEND);
+        file_put_contents($this->log_file, "== Restore started at " . gmdate('Y-m-d H:i:s') . " ==\n", FILE_APPEND);
 
         return $progress;
     }
 
     public function processStep() {
-        @set_time_limit(300);
+        @set_time_limit(300); // phpcs:ignore Squiz.PHP.DiscouragedFunctions.Discouraged
 
         $progress = $this->getProgress();
         if (is_wp_error($progress) || $progress['done']) return $progress;
 
-        $handle = fopen($this->restore_file, 'r');
+        // fopen() is used here because WP_Filesystem does not support reading line-by-line from large SQL files.
+        $handle = fopen($this->restore_file, 'r'); // phpcs:ignore WordPress.WP.AlternativeFunctions.file_system_operations_fopen
         if (!$handle) {
             return new WP_Error('file_open_failed', "Can't open file: $this->restore_file.");
         }
@@ -106,7 +107,9 @@ class WP_Restore_Database {
                     continue;
                 }
 
-                $result = $this->wpdb->query($query);
+                // No need to prepare() because there are no volatile parameters
+                $result = $this->wpdb->query($query); // phpcs:ignore WordPress.DB.PreparedSQL.NotPrepared
+
                 if ($result === false) {
                     $error = $this->wpdb->last_error;
 
@@ -120,7 +123,10 @@ class WP_Restore_Database {
                     if ($this->use_transaction) {
                         $this->wpdb->query('ROLLBACK;');
                     }
-                    fclose($handle);
+
+                    // fclose() is necessary for proper stream cleanup; no WP_Filesystem alternative exists for open file handles.
+                    fclose($handle); // phpcs:ignore WordPress.WP.AlternativeFunctions.file_system_operations_fclose
+
                     return new WP_Error('query_failed', "Failed at line $current_line: $error | Query: $query");
                 }
 
@@ -139,11 +145,13 @@ class WP_Restore_Database {
 
         if (feof($handle)) {
             $progress['done'] = true;
-            file_put_contents($this->log_file, "== Restore finished at " . date('Y-m-d H:i:s') . " ==\n", FILE_APPEND);
+            file_put_contents($this->log_file, esc_html__("== Restore finished at ", 'wp-backup') . gmdate('Y-m-d H:i:s') . " ==\n", FILE_APPEND);
         }
 
         $progress['line'] = $current_line;
-        fclose($handle);
+
+        // fclose() is necessary for proper stream cleanup; no WP_Filesystem alternative exists for open file handles.
+        fclose($handle); // phpcs:ignore WordPress.WP.AlternativeFunctions.file_system_operations_fclose
 
         file_put_contents($this->progress_file, json_encode($progress, JSON_PRETTY_PRINT));
         return $progress;
@@ -182,19 +190,19 @@ class WP_Restore_Database {
 
     public function getProgress() {
         if (!file_exists($this->progress_file)) {
-            return new WP_Error('progress_missing', "Progress file not found: $this->progress_file.");
+            return new WP_Error('progress_missing', esc_html__("Progress file not found", 'wp-backup') . ": " . $this->progress_file);
         }
 
         $progress = json_decode(file_get_contents($this->progress_file), true);
-        return $progress ?: new WP_Error('progress_corrupt', "Invalid progress file.");
+        return $progress ?: new WP_Error('progress_corrupt', esc_html__("Invalid progress file", 'wp-backup'));
     }
 
     public function finishRestore() {
         if (file_exists($this->progress_file)) {
-            unlink($this->progress_file);
+            wp_delete_file($this->progress_file);
         }
         if (file_exists($this->log_file)) {
-            file_put_contents($this->log_file, "== Restore manually finished at " . date('Y-m-d H:i:s') . " ==\n", FILE_APPEND);
+            file_put_contents($this->log_file, esc_html__("== Restore manually finished at ", 'wp-backup') . gmdate('Y-m-d H:i:s') . " ==\n", FILE_APPEND);
         }
     }
 
