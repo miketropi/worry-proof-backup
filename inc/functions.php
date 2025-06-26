@@ -55,7 +55,7 @@ function wp_backup_register_admin_page() {
   }
 
   add_management_page(
-    __('WP Backup', 'wp-backup'), // Page title
+    __('Worry Proof Backup', 'wp-backup'), // Page title
     __('Backup Tools', 'wp-backup'), // Menu title
     'manage_options', // Capability required
     'wp-backup', // Menu slug

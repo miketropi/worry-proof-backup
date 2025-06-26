@@ -1,10 +1,10 @@
 <?php 
 /**
- * Plugin Name: WordPress Backup
+ * Plugin Name: Worry Proof Backup
  * Plugin URI: https://github.com/miketropi/wp-backup
  * Description: 🛡️ Professional WordPress backup solution with comprehensive database and file system protection. Features automated backups, secure storage, and one-click restoration capabilities. Built for reliability and ease of use in production environments. **100% FREE FOREVER** - No hidden costs, no premium tiers, no limitations.
  * Version: 0.1.1
- * Requires at least: 6.0
+ * Requires at least: 6.5
  * Requires PHP: 8.0
  * Author: @Mike
  * Author URI: https://github.com/miketropi
@@ -13,18 +13,18 @@
  * License: GPL v2 or later
  * License URI: https://www.gnu.org/licenses/gpl-2.0.html
  * 
- * WordPress Backup is free software: you can redistribute it and/or modify
+ * Worry Proof Backup is free software: you can redistribute it and/or modify
  * it under the terms of the GNU General Public License as published by
  * the Free Software Foundation, either version 2 of the License, or
  * any later version.
  * 
- * WordPress Backup is distributed in the hope that it will be useful,
+ * Worry Proof Backup is distributed in the hope that it will be useful,
  * but WITHOUT ANY WARRANTY; without even the implied warranty of
  * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
  * GNU General Public License for more details.
  * 
  * You should have received a copy of the GNU General Public License
- * along with WordPress Backup. If not, see https://www.gnu.org/licenses/gpl-2.0.html.
+ * along with Worry Proof Backup. If not, see https://www.gnu.org/licenses/gpl-2.0.html.
  */
 
 {
