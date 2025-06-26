@@ -8,6 +8,7 @@ function wp_backup_wp_enqueue_scripts() {
   // Only enqueue style if on the WP Backup admin page
   if ( wp_backup_is_current_admin_page( 'tools_page_wp-backup' ) ) {
     # Google fonts
+    // Google Fonts URLs are dynamic and don't have version parameters
     wp_enqueue_style( 'wp-backup-google-fonts', 'https://fonts.googleapis.com/css2?family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap', array(), null ); // phpcs:ignore WordPress.WP.EnqueuedResourceParameters.MissingVersion
     
     # enqueue style
