@@ -36,7 +36,7 @@ WP Backup provides a developer-friendly way to package and import demo content, 
 
 ## Requirements
 
-- WordPress 6.0 or higher
+- WordPress 6.5 or higher
 - PHP 8.0 or higher
 
 ## License
