@@ -128,7 +128,7 @@ function wp_backup_ajax_generate_backup_plugin() {
     'source_folder' => WP_PLUGIN_DIR,
     'destination_folder' => $payload['name_folder'],
     'zip_name' => 'plugins.zip',
-    'exclude' => ['wp-backup', 'wp-backup-zip'],
+    'exclude' => ['wp-backup'],
   ]);
 
   // check error $backup
@@ -211,7 +211,7 @@ function wp_backup_ajax_generate_backup_uploads() {
     'source_folder' => WP_CONTENT_DIR . '/uploads/',
     'destination_folder' => $payload['name_folder'],
     'zip_name' => 'uploads.zip',
-    'exclude' => ['wp-backup'],
+    'exclude' => ['wp-backup', 'wp-backup-zip'],
   ]);
 
   // check error $backup
@@ -548,4 +548,87 @@ function wp_backup_ajax_send_report_email() {
   }
 
   wp_send_json_success(true);
+}
+
+
+// wp_backup_ajax_upload_backup_file
+add_action('wp_ajax_wp_backup_ajax_upload_backup_file', 'wp_backup_ajax_upload_backup_file');
+function wp_backup_ajax_upload_backup_file() {
+  // check nonce
+  check_ajax_referer('wp_backup_nonce_' . get_current_user_id(), 'nonce');
+
+  if (!isset($_FILES['file'])) {
+    wp_send_json_error('No file uploaded');
+  }
+
+  $file = $_FILES['file'];
+
+  // Check file size
+  $max_size = wp_max_upload_size();
+  if ($file['size'] > $max_size) {
+      wp_send_json_error('File too large');
+  }
+
+  // Allow only specific extensions
+  $allowed = ['zip'];
+  $ext = pathinfo($file['name'], PATHINFO_EXTENSION);
+  if (!in_array(strtolower($ext), $allowed)) {
+      wp_send_json_error('Invalid file type');
+  }
+
+  // require libs/upload-backup.php
+  require_once(WP_BACKUP_PLUGIN_PATH . 'inc/libs/upload-backup.php');
+
+  // wp_send_json_success($file);
+  // die();
+
+  // upload backup file
+  $uploader = new WP_Upload_Backup_File([
+    'file' => $file,
+    'session_id' => 'backup_upload_' . uniqid(),
+    'overwrite' => true,
+  ]);
+
+  // handle upload
+  $result = $uploader->handle();
+
+  // check error $result
+  if (is_wp_error($result)) {
+    wp_send_json_error($result->get_error_message());
+  }
+
+  wp_send_json_success($result);
+}
+
+
+// wp_backup_ajax_get_backup_download_zip_path 
+add_action('wp_ajax_wp_backup_ajax_get_backup_download_zip_path', 'wp_backup_ajax_get_backup_download_zip_path');
+function wp_backup_ajax_get_backup_download_zip_path() {
+  # check nonce
+  check_ajax_referer('wp_backup_nonce_' . get_current_user_id(), 'nonce');
+
+  # get payload
+  $payload = isset($_POST['payload']) ? $_POST['payload'] : array();
+
+  $backup_folder_name = $payload['folder_name'];
+
+  $backup_download_zip_path = wp_backup_get_backup_download_zip_path($backup_folder_name);
+
+  wp_send_json_success($backup_download_zip_path);
+}
+
+// wp_backup_ajax_create_backup_zip
+add_action('wp_ajax_wp_backup_ajax_create_backup_zip', 'wp_backup_ajax_create_backup_zip');
+function wp_backup_ajax_create_backup_zip() {
+  # check nonce
+  check_ajax_referer('wp_backup_nonce_' . get_current_user_id(), 'nonce');
+
+  # get payload
+  $payload = isset($_POST['payload']) ? $_POST['payload'] : array();
+
+  $backup_folder_name = $payload['folder_name'];
+
+  $backup_create_zip = wp_backup_create_backup_zip($backup_folder_name);
+
+  wp_send_json_success($backup_create_zip);
 }

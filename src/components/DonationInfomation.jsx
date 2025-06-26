@@ -17,8 +17,8 @@ const DonationInfomation = () => {
   const whatYourCoffeeMoneyDoes = [
     {
       icon: '🚀',
-      title: 'Speed Demon Mode',
-      description: 'Your coffee fuels lightning-fast updates & new features! ⚡',
+      title: 'One-Click Magic',
+      description: 'Your coffee powers instant backup & restore with just one click! 🚀',
     },
     {
       icon: '🛡️',
@@ -119,10 +119,19 @@ const DonationInfomation = () => {
       <div className="tw-text-center tw-mb-6">
         <button
           onClick={handleDonateClick}
-          className="tw-bg-blue-600 tw-text-white tw-px-6 tw-py-3 tw-rounded-lg tw-font-medium tw-flex tw-items-center tw-gap-2 tw-mx-auto hover:tw-bg-blue-700 tw-transition-colors"
+          className="tw-group tw-relative tw-bg-gradient-to-r tw-from-blue-500 tw-to-purple-600 tw-text-white tw-px-8 tw-py-4 tw-rounded-full tw-font-semibold tw-flex tw-items-center tw-gap-3 tw-mx-auto tw-shadow-lg hover:tw-shadow-2xl tw-transition-all tw-duration-300 tw-ease-out tw-transform hover:tw-scale-105 tw-overflow-hidden tw-border-0"
         >
-          <Coffee className="tw-w-5 tw-h-5" />
-          <span>Buy Me a Coffee ☕</span>
+          {/* Shimmer effect */}
+          <div className="tw-absolute tw-inset-0 tw-bg-gradient-to-r tw-from-transparent tw-via-white/20 tw-to-transparent tw-translate-x-[-100%] group-hover:tw-translate-x-[100%] tw-transition-transform tw-duration-700 tw-ease-out"></div>
+          
+          {/* Icon with smooth animation */}
+          <Coffee className="tw-w-5 tw-h-5 tw-relative tw-z-10 group-hover:tw-rotate-12 group-hover:tw-scale-110 tw-transition-all tw-duration-300 tw-ease-out" />
+          
+          {/* Text */}
+          <span className="tw-relative tw-z-10 tw-text-base tw-tracking-wide">Buy Me a Coffee</span>
+          
+          {/* Subtle glow effect */}
+          <div className="tw-absolute tw-inset-0 tw-bg-gradient-to-r tw-from-blue-400/30 tw-to-purple-400/30 tw-opacity-0 group-hover:tw-opacity-100 tw-transition-opacity tw-duration-300 tw-rounded-2xl"></div>
         </button>
         <p className="tw-text-sm tw-text-gray-500 tw-mt-3">
           Every coffee helps keep {config.pluginName} awesome! 🙏

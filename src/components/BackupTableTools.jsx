@@ -1,6 +1,7 @@
 import React from 'react';
 import useBackupStore from '../util/store';
 import BackupConfigModal from './BackupConfigModal';
+import { FileUp, Trash2 } from 'lucide-react';
 
 export const NewBackupButton = () => {
   const { buildBackupProcess } = useBackupStore();
@@ -46,7 +47,7 @@ export const NewBackupButton = () => {
   </>;
 };
 
-const BackupTableTools = ({ onFilterChange, selectedBackups, onDeleteBackups }) => {
+const BackupTableTools = ({ onFilterChange, selectedBackups, onDeleteBackups, onUploadBackup }) => {
   const { buildBackupProcess } = useBackupStore();
   const [dateFilter, setDateFilter] = React.useState('');
   const [isConfigModalOpen, setIsConfigModalOpen] = React.useState(false);
@@ -75,7 +76,8 @@ const BackupTableTools = ({ onFilterChange, selectedBackups, onDeleteBackups }) 
 
   const handleUploadBackup = async () => {
     // TODO: Implement upload backup functionality
-    console.log('Upload backup clicked');
+    // console.log('Upload backup clicked');
+    onUploadBackup();
   };
 
   const handleSaveBackup = async (config) => {
@@ -121,19 +123,7 @@ const BackupTableTools = ({ onFilterChange, selectedBackups, onDeleteBackups }) 
               : 'tw-bg-red-600 hover:tw-bg-red-700 focus:tw-outline-none focus:tw-ring-2 focus:tw-ring-offset-2 focus:tw-ring-red-500'
           }`}
         >
-          <svg
-            className="tw--ml-1 tw-mr-2 tw-h-5 tw-w-5"
-            fill="none"
-            stroke="currentColor"
-            viewBox="0 0 24 24"
-          >
-            <path
-              strokeLinecap="round"
-              strokeLinejoin="round"
-              strokeWidth={2}
-              d="M19 7l-.867 12.142A2 2 0 0116.138 21H7.862a2 2 0 01-1.995-1.858L5 7m5 4v6m4-6v6m1-10V4a1 1 0 00-1-1h-4a1 1 0 00-1 1v3M4 7h16"
-            />
-          </svg>
+          <Trash2 className="tw-w-4 tw-h-4 tw-mr-2" />
           Delete Selected
         </button>
 
@@ -141,19 +131,7 @@ const BackupTableTools = ({ onFilterChange, selectedBackups, onDeleteBackups }) 
           onClick={handleUploadBackup}
           className="tw-inline-flex tw-items-center tw-px-4 tw-py-2 tw-border tw-border-transparent tw-shadow-sm tw-text-sm tw-font-medium tw-rounded-md tw-text-white tw-bg-green-600 hover:tw-bg-green-700 focus:tw-outline-none focus:tw-ring-2 focus:tw-ring-offset-2 focus:tw-ring-green-500"
         >
-          <svg
-            className="tw--ml-1 tw-mr-2 tw-h-5 tw-w-5"
-            fill="none"
-            stroke="currentColor"
-            viewBox="0 0 24 24"
-          >
-            <path
-              strokeLinecap="round"
-              strokeLinejoin="round"
-              strokeWidth={2}
-              d="M4 16v2a2 2 0 002 2h12a2 2 0 002-2v-2M12 12v6m0 0l-3-3m3 3l3-3M12 4v8"
-            />
-          </svg>
+          <FileUp className="tw-w-4 tw-h-4 tw-mr-2" />
           Upload Backup
         </button>
       </div>

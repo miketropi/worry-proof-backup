@@ -1653,6 +1653,41 @@ const Database = (0,_createLucideIcon_js__WEBPACK_IMPORTED_MODULE_0__["default"]
 
 /***/ }),
 
+/***/ "./node_modules/lucide-react/dist/esm/icons/download.js":
+/*!**************************************************************!*\
+  !*** ./node_modules/lucide-react/dist/esm/icons/download.js ***!
+  \**************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   __iconNode: () => (/* binding */ __iconNode),
+/* harmony export */   "default": () => (/* binding */ Download)
+/* harmony export */ });
+/* harmony import */ var _createLucideIcon_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../createLucideIcon.js */ "./node_modules/lucide-react/dist/esm/createLucideIcon.js");
+/**
+ * @license lucide-react v0.518.0 - ISC
+ *
+ * This source code is licensed under the ISC license.
+ * See the LICENSE file in the root directory of this source tree.
+ */
+
+
+
+const __iconNode = [
+  ["path", { d: "M12 15V3", key: "m9g1x1" }],
+  ["path", { d: "M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4", key: "ih7n3h" }],
+  ["path", { d: "m7 10 5 5 5-5", key: "brsn70" }]
+];
+const Download = (0,_createLucideIcon_js__WEBPACK_IMPORTED_MODULE_0__["default"])("download", __iconNode);
+
+
+//# sourceMappingURL=download.js.map
+
+
+/***/ }),
+
 /***/ "./node_modules/lucide-react/dist/esm/icons/file-archive.js":
 /*!******************************************************************!*\
   !*** ./node_modules/lucide-react/dist/esm/icons/file-archive.js ***!
@@ -1726,6 +1761,84 @@ const FileDown = (0,_createLucideIcon_js__WEBPACK_IMPORTED_MODULE_0__["default"]
 
 
 //# sourceMappingURL=file-down.js.map
+
+
+/***/ }),
+
+/***/ "./node_modules/lucide-react/dist/esm/icons/file-up.js":
+/*!*************************************************************!*\
+  !*** ./node_modules/lucide-react/dist/esm/icons/file-up.js ***!
+  \*************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   __iconNode: () => (/* binding */ __iconNode),
+/* harmony export */   "default": () => (/* binding */ FileUp)
+/* harmony export */ });
+/* harmony import */ var _createLucideIcon_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../createLucideIcon.js */ "./node_modules/lucide-react/dist/esm/createLucideIcon.js");
+/**
+ * @license lucide-react v0.518.0 - ISC
+ *
+ * This source code is licensed under the ISC license.
+ * See the LICENSE file in the root directory of this source tree.
+ */
+
+
+
+const __iconNode = [
+  ["path", { d: "M15 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7Z", key: "1rqfz7" }],
+  ["path", { d: "M14 2v4a2 2 0 0 0 2 2h4", key: "tnqrlb" }],
+  ["path", { d: "M12 12v6", key: "3ahymv" }],
+  ["path", { d: "m15 15-3-3-3 3", key: "15xj92" }]
+];
+const FileUp = (0,_createLucideIcon_js__WEBPACK_IMPORTED_MODULE_0__["default"])("file-up", __iconNode);
+
+
+//# sourceMappingURL=file-up.js.map
+
+
+/***/ }),
+
+/***/ "./node_modules/lucide-react/dist/esm/icons/folder-archive.js":
+/*!********************************************************************!*\
+  !*** ./node_modules/lucide-react/dist/esm/icons/folder-archive.js ***!
+  \********************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   __iconNode: () => (/* binding */ __iconNode),
+/* harmony export */   "default": () => (/* binding */ FolderArchive)
+/* harmony export */ });
+/* harmony import */ var _createLucideIcon_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../createLucideIcon.js */ "./node_modules/lucide-react/dist/esm/createLucideIcon.js");
+/**
+ * @license lucide-react v0.518.0 - ISC
+ *
+ * This source code is licensed under the ISC license.
+ * See the LICENSE file in the root directory of this source tree.
+ */
+
+
+
+const __iconNode = [
+  ["circle", { cx: "15", cy: "19", r: "2", key: "u2pros" }],
+  [
+    "path",
+    {
+      d: "M20.9 19.8A2 2 0 0 0 22 18V8a2 2 0 0 0-2-2h-7.9a2 2 0 0 1-1.69-.9L9.6 3.9A2 2 0 0 0 7.93 3H4a2 2 0 0 0-2 2v13a2 2 0 0 0 2 2h5.1",
+      key: "1jj40k"
+    }
+  ],
+  ["path", { d: "M15 11v-1", key: "cntcp" }],
+  ["path", { d: "M15 17v-2", key: "1279jj" }]
+];
+const FolderArchive = (0,_createLucideIcon_js__WEBPACK_IMPORTED_MODULE_0__["default"])("folder-archive", __iconNode);
+
+
+//# sourceMappingURL=folder-archive.js.map
 
 
 /***/ }),
@@ -1842,6 +1955,37 @@ const Info = (0,_createLucideIcon_js__WEBPACK_IMPORTED_MODULE_0__["default"])("i
 
 
 //# sourceMappingURL=info.js.map
+
+
+/***/ }),
+
+/***/ "./node_modules/lucide-react/dist/esm/icons/loader-circle.js":
+/*!*******************************************************************!*\
+  !*** ./node_modules/lucide-react/dist/esm/icons/loader-circle.js ***!
+  \*******************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   __iconNode: () => (/* binding */ __iconNode),
+/* harmony export */   "default": () => (/* binding */ LoaderCircle)
+/* harmony export */ });
+/* harmony import */ var _createLucideIcon_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../createLucideIcon.js */ "./node_modules/lucide-react/dist/esm/createLucideIcon.js");
+/**
+ * @license lucide-react v0.518.0 - ISC
+ *
+ * This source code is licensed under the ISC license.
+ * See the LICENSE file in the root directory of this source tree.
+ */
+
+
+
+const __iconNode = [["path", { d: "M21 12a9 9 0 1 1-6.219-8.56", key: "13zald" }]];
+const LoaderCircle = (0,_createLucideIcon_js__WEBPACK_IMPORTED_MODULE_0__["default"])("loader-circle", __iconNode);
+
+
+//# sourceMappingURL=loader-circle.js.map
 
 
 /***/ }),
@@ -30958,7 +31102,9 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _BackupTableRow__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ./BackupTableRow */ "./src/components/BackupTableRow.jsx");
 /* harmony import */ var _BackupMobileCard__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! ./BackupMobileCard */ "./src/components/BackupMobileCard.jsx");
 /* harmony import */ var _RestoreConfigModal__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! ./RestoreConfigModal */ "./src/components/RestoreConfigModal.jsx");
-/* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! react/jsx-runtime */ "./node_modules/react/jsx-runtime.js");
+/* harmony import */ var _UploadBackup__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! ./UploadBackup */ "./src/components/UploadBackup.jsx");
+/* harmony import */ var _DownloadBackup__WEBPACK_IMPORTED_MODULE_14__ = __webpack_require__(/*! ./DownloadBackup */ "./src/components/DownloadBackup.jsx");
+/* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_15__ = __webpack_require__(/*! react/jsx-runtime */ "./node_modules/react/jsx-runtime.js");
 function _toConsumableArray(r) { return _arrayWithoutHoles(r) || _iterableToArray(r) || _unsupportedIterableToArray(r) || _nonIterableSpread(); }
 function _nonIterableSpread() { throw new TypeError("Invalid attempt to spread non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method."); }
 function _iterableToArray(r) { if ("undefined" != typeof Symbol && null != r[Symbol.iterator] || null != r["@@iterator"]) return Array.from(r); }
@@ -30973,6 +31119,8 @@ function _unsupportedIterableToArray(r, a) { if (r) { if ("string" == typeof r) 
 function _arrayLikeToArray(r, a) { (null == a || a > r.length) && (a = r.length); for (var e = 0, n = Array(a); e < a; e++) n[e] = r[e]; return n; }
 function _iterableToArrayLimit(r, l) { var t = null == r ? null : "undefined" != typeof Symbol && r[Symbol.iterator] || r["@@iterator"]; if (null != t) { var e, n, i, u, a = [], f = !0, o = !1; try { if (i = (t = t.call(r)).next, 0 === l) { if (Object(t) !== t) return; f = !1; } else for (; !(f = (e = i.call(t)).done) && (a.push(e.value), a.length !== l); f = !0); } catch (r) { o = !0, n = r; } finally { try { if (!f && null != t["return"] && (u = t["return"](), Object(u) !== u)) return; } finally { if (o) throw n; } } return a; } }
 function _arrayWithHoles(r) { if (Array.isArray(r)) return r; }
+
+
 
 
 
@@ -31003,6 +31151,7 @@ var BackupTable = function BackupTable() {
     _useState6 = _slicedToArray(_useState5, 2),
     selectedBackups = _useState6[0],
     setSelectedBackups = _useState6[1];
+  var uploadRef = (0,react__WEBPACK_IMPORTED_MODULE_0__.useRef)();
   var confirm = (0,_Confirm__WEBPACK_IMPORTED_MODULE_4__.useConfirm)();
   var toast = (0,_Toast__WEBPACK_IMPORTED_MODULE_5__.useToast)();
   var _useModal = (0,_Modal__WEBPACK_IMPORTED_MODULE_6__.useModal)(),
@@ -31163,17 +31312,21 @@ var BackupTable = function BackupTable() {
       }
     }, _callee3, null, [[1, 4]]);
   })), [selectedBackups, backups, confirm, toast, fetchBackups]);
-  var handleDownloadBackup = function handleDownloadBackup(backupId) {
-    console.log('Download backup:', backupId);
-    toast({
-      message: 'Download functionality is not yet implemented.',
-      type: 'info'
+  var handleDownloadBackup = function handleDownloadBackup(backup) {
+    // console.log('Download backup:', backupId);
+    // toast({ message: 'Download functionality is not yet implemented.', type: 'info' });
+    openModal({
+      title: 'Download Backup',
+      size: 'lg',
+      children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_15__.jsx)(_DownloadBackup__WEBPACK_IMPORTED_MODULE_14__["default"], {
+        backup: backup
+      })
     });
   };
   var handleRestoreBackup = (0,react__WEBPACK_IMPORTED_MODULE_0__.useCallback)(function (backup) {
     openModal({
       title: 'Restore Backup',
-      children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_13__.jsx)(_RestoreConfigModal__WEBPACK_IMPORTED_MODULE_12__["default"], {
+      children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_15__.jsx)(_RestoreConfigModal__WEBPACK_IMPORTED_MODULE_12__["default"], {
         backup: backup,
         closeModal: closeModal,
         toast: toast
@@ -31202,22 +31355,84 @@ var BackupTable = function BackupTable() {
       setSelectedBackups([]);
     }
   };
+  var handleUploadBackupFiles = /*#__PURE__*/function () {
+    var _ref4 = _asyncToGenerator(/*#__PURE__*/_regenerator().m(function _callee4(files) {
+      var file, _uploadRef$current2, res, _uploadRef$current3, _t3;
+      return _regenerator().w(function (_context4) {
+        while (1) switch (_context4.n) {
+          case 0:
+            file = files[0];
+            _context4.p = 1;
+            toast({
+              message: 'Uploading...',
+              type: 'info'
+            });
+            _context4.n = 2;
+            return (0,_util_lib__WEBPACK_IMPORTED_MODULE_3__.uploadFileWithProgress)(file, function (percent) {
+              var _uploadRef$current;
+              console.log('Upload progress', percent);
+              (_uploadRef$current = uploadRef.current) === null || _uploadRef$current === void 0 || _uploadRef$current.setUploadProgress(percent);
+            });
+          case 2:
+            res = _context4.v;
+            console.log('Upload res', res);
+            toast({
+              message: 'Upload success!',
+              type: 'success'
+            });
+            (_uploadRef$current2 = uploadRef.current) === null || _uploadRef$current2 === void 0 || _uploadRef$current2.setUploadProgress(100);
+            fetchBackups();
+            closeModal();
+            _context4.n = 4;
+            break;
+          case 3:
+            _context4.p = 3;
+            _t3 = _context4.v;
+            toast({
+              message: "Upload error: ".concat(_t3),
+              type: 'error'
+            });
+            (_uploadRef$current3 = uploadRef.current) === null || _uploadRef$current3 === void 0 || _uploadRef$current3.resetProgress();
+          case 4:
+            return _context4.a(2);
+        }
+      }, _callee4, null, [[1, 3]]);
+    }));
+    return function handleUploadBackupFiles(_x2) {
+      return _ref4.apply(this, arguments);
+    };
+  }();
+  var handleUploadBackup = function handleUploadBackup() {
+    console.log('Upload backup clicked');
+    openModal({
+      title: 'Upload Backup',
+      size: 'lg',
+      children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_15__.jsx)(_UploadBackup__WEBPACK_IMPORTED_MODULE_13__["default"], {
+        ref: uploadRef,
+        accept: ".zip",
+        maxSize: wp_backup_php_data.server_metrics.WP_Max_Upload_Size,
+        maxFiles: 1,
+        onUpload: handleUploadBackupFiles
+      })
+    });
+  };
   if (isLoading) {
-    return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_13__.jsx)(_LoadingSkeleton__WEBPACK_IMPORTED_MODULE_7__["default"], {});
+    return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_15__.jsx)(_LoadingSkeleton__WEBPACK_IMPORTED_MODULE_7__["default"], {});
   }
   if (!backups || backups.length === 0) {
-    return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_13__.jsx)(_EmptyState__WEBPACK_IMPORTED_MODULE_8__["default"], {});
+    return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_15__.jsx)(_EmptyState__WEBPACK_IMPORTED_MODULE_8__["default"], {});
   }
-  return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_13__.jsxs)("div", {
+  return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_15__.jsxs)("div", {
     className: "tw-bg-white tw-border tw-border-gray-200",
-    children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_13__.jsx)(_BackupTableTools__WEBPACK_IMPORTED_MODULE_2__["default"], {
+    children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_15__.jsx)(_BackupTableTools__WEBPACK_IMPORTED_MODULE_2__["default"], {
       onFilterChange: handleFilterChange,
       onDeleteBackups: handleDeleteSelectedBackups,
-      selectedBackups: selectedBackups
-    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_13__.jsx)("div", {
+      selectedBackups: selectedBackups,
+      onUploadBackup: handleUploadBackup
+    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_15__.jsx)("div", {
       className: "tw-block md:tw-hidden tw-bg-white tw-border-t tw-border-gray-200",
       children: filteredBackups.map(function (backup) {
-        return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_13__.jsx)(_BackupMobileCard__WEBPACK_IMPORTED_MODULE_11__["default"], {
+        return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_15__.jsx)(_BackupMobileCard__WEBPACK_IMPORTED_MODULE_11__["default"], {
           backup: backup,
           isSelected: selectedBackups.includes(backup.id),
           onSelect: handleSelectBackup,
@@ -31226,53 +31441,53 @@ var BackupTable = function BackupTable() {
           onRestore: handleRestoreBackup
         }, backup.id);
       })
-    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_13__.jsx)("div", {
+    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_15__.jsx)("div", {
       className: "tw-hidden md:tw-block tw-overflow-x-auto",
-      children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_13__.jsxs)("table", {
+      children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_15__.jsxs)("table", {
         className: "tw-min-w-full tw-divide-y tw-divide-gray-200",
-        children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_13__.jsx)("thead", {
+        children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_15__.jsx)("thead", {
           className: "tw-bg-gray-50",
-          children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_13__.jsxs)("tr", {
-            children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_13__.jsx)("th", {
+          children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_15__.jsxs)("tr", {
+            children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_15__.jsx)("th", {
               scope: "col",
               className: "tw-px-6 tw-py-3 tw-text-left tw-text-xs tw-font-medium tw-text-gray-500",
               width: "3%",
-              children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_13__.jsx)("input", {
+              children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_15__.jsx)("input", {
                 type: "checkbox",
                 className: "tw-form-checkbox tw-h-4 tw-w-4 tw-text-blue-600",
                 checked: filteredBackups.length > 0 && selectedBackups.length === filteredBackups.length,
                 onChange: handleSelectAllBackups,
                 disabled: filteredBackups.length === 0
               })
-            }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_13__.jsx)("th", {
+            }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_15__.jsx)("th", {
               scope: "col",
               className: "tw-px-6 tw-py-3 tw-text-left tw-text-xs tw-font-medium tw-text-gray-500 tw-uppercase",
               children: "Name"
-            }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_13__.jsx)("th", {
+            }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_15__.jsx)("th", {
               scope: "col",
               className: "tw-px-6 tw-py-3 tw-text-left tw-text-xs tw-font-medium tw-text-gray-500 tw-uppercase tw-tracking-wider",
               children: "Date"
-            }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_13__.jsx)("th", {
+            }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_15__.jsx)("th", {
               scope: "col",
               className: "tw-px-6 tw-py-3 tw-text-left tw-text-xs tw-font-medium tw-text-gray-500 tw-uppercase tw-tracking-wider",
               children: "Size"
-            }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_13__.jsx)("th", {
+            }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_15__.jsx)("th", {
               scope: "col",
               className: "tw-px-6 tw-py-3 tw-text-left tw-text-xs tw-font-medium tw-text-gray-500 tw-uppercase tw-tracking-wider",
               children: "Status"
-            }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_13__.jsx)("th", {
+            }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_15__.jsx)("th", {
               scope: "col",
               className: "tw-relative tw-px-6 tw-py-3",
-              children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_13__.jsx)("span", {
+              children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_15__.jsx)("span", {
                 className: "tw-sr-only",
                 children: "Actions"
               })
             })]
           })
-        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_13__.jsx)("tbody", {
+        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_15__.jsx)("tbody", {
           className: "tw-bg-white tw-divide-y tw-divide-gray-200",
           children: filteredBackups.map(function (backup) {
-            return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_13__.jsx)(_BackupTableRow__WEBPACK_IMPORTED_MODULE_10__["default"], {
+            return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_15__.jsx)(_BackupTableRow__WEBPACK_IMPORTED_MODULE_10__["default"], {
               backup: backup,
               isSelected: selectedBackups.includes(backup.id),
               onSelect: handleSelectBackup,
@@ -31396,7 +31611,7 @@ var BackupTableRow = function BackupTableRow(_ref) {
             size: 16
           }),
           onClick: function onClick() {
-            return onDownload(backup.id);
+            return onDownload(backup);
           }
         }, {
           label: 'Delete',
@@ -31432,6 +31647,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var _util_store__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../util/store */ "./src/util/store.js");
 /* harmony import */ var _BackupConfigModal__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./BackupConfigModal */ "./src/components/BackupConfigModal.jsx");
+/* harmony import */ var lucide_react__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! lucide-react */ "./node_modules/lucide-react/dist/esm/icons/trash-2.js");
+/* harmony import */ var lucide_react__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! lucide-react */ "./node_modules/lucide-react/dist/esm/icons/file-up.js");
 /* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! react/jsx-runtime */ "./node_modules/react/jsx-runtime.js");
 function _regenerator() { /*! regenerator-runtime -- Copyright (c) 2014-present, Facebook, Inc. -- license (MIT): https://github.com/babel/babel/blob/main/packages/babel-helpers/LICENSE */ var e, t, r = "function" == typeof Symbol ? Symbol : {}, n = r.iterator || "@@iterator", o = r.toStringTag || "@@toStringTag"; function i(r, n, o, i) { var c = n && n.prototype instanceof Generator ? n : Generator, u = Object.create(c.prototype); return _regeneratorDefine2(u, "_invoke", function (r, n, o) { var i, c, u, f = 0, p = o || [], y = !1, G = { p: 0, n: 0, v: e, a: d, f: d.bind(e, 4), d: function d(t, r) { return i = t, c = 0, u = e, G.n = r, a; } }; function d(r, n) { for (c = r, u = n, t = 0; !y && f && !o && t < p.length; t++) { var o, i = p[t], d = G.p, l = i[2]; r > 3 ? (o = l === n) && (u = i[(c = i[4]) ? 5 : (c = 3, 3)], i[4] = i[5] = e) : i[0] <= d && ((o = r < 2 && d < i[1]) ? (c = 0, G.v = n, G.n = i[1]) : d < l && (o = r < 3 || i[0] > n || n > l) && (i[4] = r, i[5] = n, G.n = l, c = 0)); } if (o || r > 1) return a; throw y = !0, n; } return function (o, p, l) { if (f > 1) throw TypeError("Generator is already running"); for (y && 1 === p && d(p, l), c = p, u = l; (t = c < 2 ? e : u) || !y;) { i || (c ? c < 3 ? (c > 1 && (G.n = -1), d(c, u)) : G.n = u : G.v = u); try { if (f = 2, i) { if (c || (o = "next"), t = i[o]) { if (!(t = t.call(i, u))) throw TypeError("iterator result is not an object"); if (!t.done) return t; u = t.value, c < 2 && (c = 0); } else 1 === c && (t = i["return"]) && t.call(i), c < 2 && (u = TypeError("The iterator does not provide a '" + o + "' method"), c = 1); i = e; } else if ((t = (y = G.n < 0) ? u : r.call(n, G)) !== a) break; } catch (t) { i = e, c = 1, u = t; } finally { f = 1; } } return { value: t, done: y }; }; }(r, o, i), !0), u; } var a = {}; function Generator() {} function GeneratorFunction() {} function GeneratorFunctionPrototype() {} t = Object.getPrototypeOf; var c = [][n] ? t(t([][n]())) : (_regeneratorDefine2(t = {}, n, function () { return this; }), t), u = GeneratorFunctionPrototype.prototype = Generator.prototype = Object.create(c); function f(e) { return Object.setPrototypeOf ? Object.setPrototypeOf(e, GeneratorFunctionPrototype) : (e.__proto__ = GeneratorFunctionPrototype, _regeneratorDefine2(e, o, "GeneratorFunction")), e.prototype = Object.create(u), e; } return GeneratorFunction.prototype = GeneratorFunctionPrototype, _regeneratorDefine2(u, "constructor", GeneratorFunctionPrototype), _regeneratorDefine2(GeneratorFunctionPrototype, "constructor", GeneratorFunction), GeneratorFunction.displayName = "GeneratorFunction", _regeneratorDefine2(GeneratorFunctionPrototype, o, "GeneratorFunction"), _regeneratorDefine2(u), _regeneratorDefine2(u, o, "Generator"), _regeneratorDefine2(u, n, function () { return this; }), _regeneratorDefine2(u, "toString", function () { return "[object Generator]"; }), (_regenerator = function _regenerator() { return { w: i, m: f }; })(); }
 function _regeneratorDefine2(e, r, n, t) { var i = Object.defineProperty; try { i({}, "", {}); } catch (e) { i = 0; } _regeneratorDefine2 = function _regeneratorDefine(e, r, n, t) { if (r) i ? i(e, r, { value: n, enumerable: !t, configurable: !t, writable: !t }) : e[r] = n;else { var o = function o(r, n) { _regeneratorDefine2(e, r, function (e) { return this._invoke(r, n, e); }); }; o("next", 0), o("throw", 1), o("return", 2); } }, _regeneratorDefine2(e, r, n, t); }
@@ -31443,6 +31660,7 @@ function _unsupportedIterableToArray(r, a) { if (r) { if ("string" == typeof r) 
 function _arrayLikeToArray(r, a) { (null == a || a > r.length) && (a = r.length); for (var e = 0, n = Array(a); e < a; e++) n[e] = r[e]; return n; }
 function _iterableToArrayLimit(r, l) { var t = null == r ? null : "undefined" != typeof Symbol && r[Symbol.iterator] || r["@@iterator"]; if (null != t) { var e, n, i, u, a = [], f = !0, o = !1; try { if (i = (t = t.call(r)).next, 0 === l) { if (Object(t) !== t) return; f = !1; } else for (; !(f = (e = i.call(t)).done) && (a.push(e.value), a.length !== l); f = !0); } catch (r) { o = !0, n = r; } finally { try { if (!f && null != t["return"] && (u = t["return"](), Object(u) !== u)) return; } finally { if (o) throw n; } } return a; } }
 function _arrayWithHoles(r) { if (Array.isArray(r)) return r; }
+
 
 
 
@@ -31515,7 +31733,8 @@ var NewBackupButton = function NewBackupButton() {
 var BackupTableTools = function BackupTableTools(_ref3) {
   var onFilterChange = _ref3.onFilterChange,
     selectedBackups = _ref3.selectedBackups,
-    onDeleteBackups = _ref3.onDeleteBackups;
+    onDeleteBackups = _ref3.onDeleteBackups,
+    onUploadBackup = _ref3.onUploadBackup;
   var _useBackupStore2 = (0,_util_store__WEBPACK_IMPORTED_MODULE_1__["default"])(),
     buildBackupProcess = _useBackupStore2.buildBackupProcess;
   var _React$useState3 = react__WEBPACK_IMPORTED_MODULE_0___default().useState(''),
@@ -31578,7 +31797,8 @@ var BackupTableTools = function BackupTableTools(_ref3) {
         while (1) switch (_context5.n) {
           case 0:
             // TODO: Implement upload backup functionality
-            console.log('Upload backup clicked');
+            // console.log('Upload backup clicked');
+            onUploadBackup();
           case 1:
             return _context5.a(2);
         }
@@ -31633,32 +31853,14 @@ var BackupTableTools = function BackupTableTools(_ref3) {
         onClick: handleDeleteBackups,
         disabled: selectedBackups.length === 0,
         className: "tw-inline-flex tw-items-center tw-px-4 tw-py-2 tw-border tw-border-transparent tw-shadow-sm tw-text-sm tw-font-medium tw-rounded-md tw-text-white ".concat(selectedBackups.length === 0 ? 'tw-bg-gray-400 tw-cursor-not-allowed' : 'tw-bg-red-600 hover:tw-bg-red-700 focus:tw-outline-none focus:tw-ring-2 focus:tw-ring-offset-2 focus:tw-ring-red-500'),
-        children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("svg", {
-          className: "tw--ml-1 tw-mr-2 tw-h-5 tw-w-5",
-          fill: "none",
-          stroke: "currentColor",
-          viewBox: "0 0 24 24",
-          children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("path", {
-            strokeLinecap: "round",
-            strokeLinejoin: "round",
-            strokeWidth: 2,
-            d: "M19 7l-.867 12.142A2 2 0 0116.138 21H7.862a2 2 0 01-1.995-1.858L5 7m5 4v6m4-6v6m1-10V4a1 1 0 00-1-1h-4a1 1 0 00-1 1v3M4 7h16"
-          })
+        children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)(lucide_react__WEBPACK_IMPORTED_MODULE_4__["default"], {
+          className: "tw-w-4 tw-h-4 tw-mr-2"
         }), "Delete Selected"]
       }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsxs)("button", {
         onClick: handleUploadBackup,
         className: "tw-inline-flex tw-items-center tw-px-4 tw-py-2 tw-border tw-border-transparent tw-shadow-sm tw-text-sm tw-font-medium tw-rounded-md tw-text-white tw-bg-green-600 hover:tw-bg-green-700 focus:tw-outline-none focus:tw-ring-2 focus:tw-ring-offset-2 focus:tw-ring-green-500",
-        children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("svg", {
-          className: "tw--ml-1 tw-mr-2 tw-h-5 tw-w-5",
-          fill: "none",
-          stroke: "currentColor",
-          viewBox: "0 0 24 24",
-          children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("path", {
-            strokeLinecap: "round",
-            strokeLinejoin: "round",
-            strokeWidth: 2,
-            d: "M4 16v2a2 2 0 002 2h12a2 2 0 002-2v-2M12 12v6m0 0l-3-3m3 3l3-3M12 4v8"
-          })
+        children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)(lucide_react__WEBPACK_IMPORTED_MODULE_5__["default"], {
+          className: "tw-w-4 tw-h-4 tw-mr-2"
         }), "Upload Backup"]
       })]
     }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("div", {
@@ -31958,8 +32160,8 @@ var DonationInfomation = function DonationInfomation() {
   // convert items of What Your Coffee Money Does to data
   var whatYourCoffeeMoneyDoes = [{
     icon: '🚀',
-    title: 'Speed Demon Mode',
-    description: 'Your coffee fuels lightning-fast updates & new features! ⚡'
+    title: 'One-Click Magic',
+    description: 'Your coffee powers instant backup & restore with just one click! 🚀'
   }, {
     icon: '🛡️',
     title: 'Security-First',
@@ -32071,11 +32273,16 @@ var DonationInfomation = function DonationInfomation() {
       className: "tw-text-center tw-mb-6",
       children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)("button", {
         onClick: handleDonateClick,
-        className: "tw-bg-blue-600 tw-text-white tw-px-6 tw-py-3 tw-rounded-lg tw-font-medium tw-flex tw-items-center tw-gap-2 tw-mx-auto hover:tw-bg-blue-700 tw-transition-colors",
-        children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)(lucide_react__WEBPACK_IMPORTED_MODULE_3__["default"], {
-          className: "tw-w-5 tw-h-5"
+        className: "tw-group tw-relative tw-bg-gradient-to-r tw-from-blue-500 tw-to-purple-600 tw-text-white tw-px-8 tw-py-4 tw-rounded-full tw-font-semibold tw-flex tw-items-center tw-gap-3 tw-mx-auto tw-shadow-lg hover:tw-shadow-2xl tw-transition-all tw-duration-300 tw-ease-out tw-transform hover:tw-scale-105 tw-overflow-hidden tw-border-0",
+        children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("div", {
+          className: "tw-absolute tw-inset-0 tw-bg-gradient-to-r tw-from-transparent tw-via-white/20 tw-to-transparent tw-translate-x-[-100%] group-hover:tw-translate-x-[100%] tw-transition-transform tw-duration-700 tw-ease-out"
+        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)(lucide_react__WEBPACK_IMPORTED_MODULE_3__["default"], {
+          className: "tw-w-5 tw-h-5 tw-relative tw-z-10 group-hover:tw-rotate-12 group-hover:tw-scale-110 tw-transition-all tw-duration-300 tw-ease-out"
         }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("span", {
-          children: "Buy Me a Coffee \u2615"
+          className: "tw-relative tw-z-10 tw-text-base tw-tracking-wide",
+          children: "Buy Me a Coffee"
+        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("div", {
+          className: "tw-absolute tw-inset-0 tw-bg-gradient-to-r tw-from-blue-400/30 tw-to-purple-400/30 tw-opacity-0 group-hover:tw-opacity-100 tw-transition-opacity tw-duration-300 tw-rounded-2xl"
         })]
       }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)("p", {
         className: "tw-text-sm tw-text-gray-500 tw-mt-3",
@@ -32114,6 +32321,227 @@ var DonationInfomation = function DonationInfomation() {
   });
 };
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (DonationInfomation);
+
+/***/ }),
+
+/***/ "./src/components/DownloadBackup.jsx":
+/*!*******************************************!*\
+  !*** ./src/components/DownloadBackup.jsx ***!
+  \*******************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var lucide_react__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! lucide-react */ "./node_modules/lucide-react/dist/esm/icons/loader-circle.js");
+/* harmony import */ var lucide_react__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! lucide-react */ "./node_modules/lucide-react/dist/esm/icons/folder-archive.js");
+/* harmony import */ var lucide_react__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! lucide-react */ "./node_modules/lucide-react/dist/esm/icons/package.js");
+/* harmony import */ var lucide_react__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! lucide-react */ "./node_modules/lucide-react/dist/esm/icons/download.js");
+/* harmony import */ var _util_lib__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../util/lib */ "./src/util/lib.js");
+/* harmony import */ var _Toast__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./Toast */ "./src/components/Toast.jsx");
+/* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! react/jsx-runtime */ "./node_modules/react/jsx-runtime.js");
+function _regenerator() { /*! regenerator-runtime -- Copyright (c) 2014-present, Facebook, Inc. -- license (MIT): https://github.com/babel/babel/blob/main/packages/babel-helpers/LICENSE */ var e, t, r = "function" == typeof Symbol ? Symbol : {}, n = r.iterator || "@@iterator", o = r.toStringTag || "@@toStringTag"; function i(r, n, o, i) { var c = n && n.prototype instanceof Generator ? n : Generator, u = Object.create(c.prototype); return _regeneratorDefine2(u, "_invoke", function (r, n, o) { var i, c, u, f = 0, p = o || [], y = !1, G = { p: 0, n: 0, v: e, a: d, f: d.bind(e, 4), d: function d(t, r) { return i = t, c = 0, u = e, G.n = r, a; } }; function d(r, n) { for (c = r, u = n, t = 0; !y && f && !o && t < p.length; t++) { var o, i = p[t], d = G.p, l = i[2]; r > 3 ? (o = l === n) && (u = i[(c = i[4]) ? 5 : (c = 3, 3)], i[4] = i[5] = e) : i[0] <= d && ((o = r < 2 && d < i[1]) ? (c = 0, G.v = n, G.n = i[1]) : d < l && (o = r < 3 || i[0] > n || n > l) && (i[4] = r, i[5] = n, G.n = l, c = 0)); } if (o || r > 1) return a; throw y = !0, n; } return function (o, p, l) { if (f > 1) throw TypeError("Generator is already running"); for (y && 1 === p && d(p, l), c = p, u = l; (t = c < 2 ? e : u) || !y;) { i || (c ? c < 3 ? (c > 1 && (G.n = -1), d(c, u)) : G.n = u : G.v = u); try { if (f = 2, i) { if (c || (o = "next"), t = i[o]) { if (!(t = t.call(i, u))) throw TypeError("iterator result is not an object"); if (!t.done) return t; u = t.value, c < 2 && (c = 0); } else 1 === c && (t = i["return"]) && t.call(i), c < 2 && (u = TypeError("The iterator does not provide a '" + o + "' method"), c = 1); i = e; } else if ((t = (y = G.n < 0) ? u : r.call(n, G)) !== a) break; } catch (t) { i = e, c = 1, u = t; } finally { f = 1; } } return { value: t, done: y }; }; }(r, o, i), !0), u; } var a = {}; function Generator() {} function GeneratorFunction() {} function GeneratorFunctionPrototype() {} t = Object.getPrototypeOf; var c = [][n] ? t(t([][n]())) : (_regeneratorDefine2(t = {}, n, function () { return this; }), t), u = GeneratorFunctionPrototype.prototype = Generator.prototype = Object.create(c); function f(e) { return Object.setPrototypeOf ? Object.setPrototypeOf(e, GeneratorFunctionPrototype) : (e.__proto__ = GeneratorFunctionPrototype, _regeneratorDefine2(e, o, "GeneratorFunction")), e.prototype = Object.create(u), e; } return GeneratorFunction.prototype = GeneratorFunctionPrototype, _regeneratorDefine2(u, "constructor", GeneratorFunctionPrototype), _regeneratorDefine2(GeneratorFunctionPrototype, "constructor", GeneratorFunction), GeneratorFunction.displayName = "GeneratorFunction", _regeneratorDefine2(GeneratorFunctionPrototype, o, "GeneratorFunction"), _regeneratorDefine2(u), _regeneratorDefine2(u, o, "Generator"), _regeneratorDefine2(u, n, function () { return this; }), _regeneratorDefine2(u, "toString", function () { return "[object Generator]"; }), (_regenerator = function _regenerator() { return { w: i, m: f }; })(); }
+function _regeneratorDefine2(e, r, n, t) { var i = Object.defineProperty; try { i({}, "", {}); } catch (e) { i = 0; } _regeneratorDefine2 = function _regeneratorDefine(e, r, n, t) { if (r) i ? i(e, r, { value: n, enumerable: !t, configurable: !t, writable: !t }) : e[r] = n;else { var o = function o(r, n) { _regeneratorDefine2(e, r, function (e) { return this._invoke(r, n, e); }); }; o("next", 0), o("throw", 1), o("return", 2); } }, _regeneratorDefine2(e, r, n, t); }
+function asyncGeneratorStep(n, t, e, r, o, a, c) { try { var i = n[a](c), u = i.value; } catch (n) { return void e(n); } i.done ? t(u) : Promise.resolve(u).then(r, o); }
+function _asyncToGenerator(n) { return function () { var t = this, e = arguments; return new Promise(function (r, o) { var a = n.apply(t, e); function _next(n) { asyncGeneratorStep(a, r, o, _next, _throw, "next", n); } function _throw(n) { asyncGeneratorStep(a, r, o, _next, _throw, "throw", n); } _next(void 0); }); }; }
+function _slicedToArray(r, e) { return _arrayWithHoles(r) || _iterableToArrayLimit(r, e) || _unsupportedIterableToArray(r, e) || _nonIterableRest(); }
+function _nonIterableRest() { throw new TypeError("Invalid attempt to destructure non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method."); }
+function _unsupportedIterableToArray(r, a) { if (r) { if ("string" == typeof r) return _arrayLikeToArray(r, a); var t = {}.toString.call(r).slice(8, -1); return "Object" === t && r.constructor && (t = r.constructor.name), "Map" === t || "Set" === t ? Array.from(r) : "Arguments" === t || /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(t) ? _arrayLikeToArray(r, a) : void 0; } }
+function _arrayLikeToArray(r, a) { (null == a || a > r.length) && (a = r.length); for (var e = 0, n = Array(a); e < a; e++) n[e] = r[e]; return n; }
+function _iterableToArrayLimit(r, l) { var t = null == r ? null : "undefined" != typeof Symbol && r[Symbol.iterator] || r["@@iterator"]; if (null != t) { var e, n, i, u, a = [], f = !0, o = !1; try { if (i = (t = t.call(r)).next, 0 === l) { if (Object(t) !== t) return; f = !1; } else for (; !(f = (e = i.call(t)).done) && (a.push(e.value), a.length !== l); f = !0); } catch (r) { o = !0, n = r; } finally { try { if (!f && null != t["return"] && (u = t["return"](), Object(u) !== u)) return; } finally { if (o) throw n; } } return a; } }
+function _arrayWithHoles(r) { if (Array.isArray(r)) return r; }
+
+
+
+
+
+/**
+ * DownloadBackup component
+ * @param {Object} props
+ * @param {Object} props.backup - The backup item
+ * @param {Function} [props.onDownload] - Called when download is requested
+ * @param {Function} [props.onCreateZip] - Called when create zip is requested
+ */
+
+var DownloadBackup = function DownloadBackup(_ref) {
+  var backup = _ref.backup;
+  var _useToast = (0,_Toast__WEBPACK_IMPORTED_MODULE_2__.useToast)(),
+    toast = _useToast.toast;
+  var _useState = (0,react__WEBPACK_IMPORTED_MODULE_0__.useState)(false),
+    _useState2 = _slicedToArray(_useState, 2),
+    isLoading = _useState2[0],
+    setIsLoading = _useState2[1];
+  var _useState3 = (0,react__WEBPACK_IMPORTED_MODULE_0__.useState)(false),
+    _useState4 = _slicedToArray(_useState3, 2),
+    isCreatingZip = _useState4[0],
+    setIsCreatingZip = _useState4[1];
+  var _useState5 = (0,react__WEBPACK_IMPORTED_MODULE_0__.useState)(null),
+    _useState6 = _slicedToArray(_useState5, 2),
+    backupDownloadZipPath = _useState6[0],
+    setBackupDownloadZipPath = _useState6[1];
+  var handleDownload = /*#__PURE__*/function () {
+    var _ref2 = _asyncToGenerator(/*#__PURE__*/_regenerator().m(function _callee() {
+      var backup_download_zip_path;
+      return _regenerator().w(function (_context) {
+        while (1) switch (_context.n) {
+          case 0:
+            setIsLoading(true);
+            _context.n = 1;
+            return (0,_util_lib__WEBPACK_IMPORTED_MODULE_1__.getBackupDownloadZipPath)(backup.folder_name);
+          case 1:
+            backup_download_zip_path = _context.v;
+            if (!(backup_download_zip_path.success != true)) {
+              _context.n = 2;
+              break;
+            }
+            toast({
+              message: backup_download_zip_path.data,
+              type: 'error'
+            });
+            return _context.a(2);
+          case 2:
+            setBackupDownloadZipPath(backup_download_zip_path.data);
+            setIsLoading(false);
+          case 3:
+            return _context.a(2);
+        }
+      }, _callee);
+    }));
+    return function handleDownload() {
+      return _ref2.apply(this, arguments);
+    };
+  }();
+  (0,react__WEBPACK_IMPORTED_MODULE_0__.useEffect)(function () {
+    handleDownload();
+  }, []);
+  var handleCreateZip = /*#__PURE__*/function () {
+    var _ref3 = _asyncToGenerator(/*#__PURE__*/_regenerator().m(function _callee2() {
+      var backup_create_zip;
+      return _regenerator().w(function (_context2) {
+        while (1) switch (_context2.n) {
+          case 0:
+            setIsCreatingZip(true);
+            _context2.n = 1;
+            return (0,_util_lib__WEBPACK_IMPORTED_MODULE_1__.createBackupZip)(backup.folder_name);
+          case 1:
+            backup_create_zip = _context2.v;
+            console.log(backup_create_zip);
+            // validate
+            if (!(backup_create_zip.success != true)) {
+              _context2.n = 2;
+              break;
+            }
+            toast({
+              message: backup_create_zip.data,
+              type: 'error'
+            });
+            return _context2.a(2);
+          case 2:
+            setBackupDownloadZipPath(backup_create_zip.data);
+            setIsCreatingZip(false);
+          case 3:
+            return _context2.a(2);
+        }
+      }, _callee2);
+    }));
+    return function handleCreateZip() {
+      return _ref3.apply(this, arguments);
+    };
+  }();
+  if (isLoading) {
+    return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("div", {
+      className: "tw-flex tw-items-center tw-justify-center tw-h-full",
+      children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)(lucide_react__WEBPACK_IMPORTED_MODULE_4__["default"], {
+        className: "tw-w-4 tw-h-4 tw-animate-spin"
+      })
+    });
+  }
+  if (backupDownloadZipPath == false) {
+    return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsxs)(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.Fragment, {
+      children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("div", {
+        className: "tw-flex tw-flex-col tw-items-center tw-justify-center tw-h-full",
+        children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("div", {
+          className: "tw-bg-blue-50 tw-border tw-border-blue-200 tw-rounded-md tw-p-4",
+          children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsxs)("div", {
+            className: "tw-flex tw-items-start tw-space-x-3",
+            children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("div", {
+              className: "tw-flex-shrink-0",
+              children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)(lucide_react__WEBPACK_IMPORTED_MODULE_5__["default"], {
+                className: "tw-w-5 tw-h-5",
+                color: "#007bff"
+              })
+            }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("div", {
+              className: "tw-flex-1",
+              children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("p", {
+                className: "tw-text-sm tw-text-blue-800 tw-leading-relaxed",
+                children: "Backups are created on-demand to save storage \uD83D\uDCBE. Click below to generate one when needed, and don\u2019t forget to delete it once you\u2019re finished \u2014 keep things clean and efficient. \uD83E\uDDF9\u2728"
+              })
+            })]
+          })
+        })
+      }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("div", {
+        className: "tw-mt-4 tw-flex tw-justify-end",
+        children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("button", {
+          onClick: handleCreateZip,
+          disabled: isCreatingZip,
+          className: "tw-inline-flex tw-items-center tw-px-4 tw-py-2 tw-bg-blue-600 tw-text-white tw-text-sm tw-font-medium tw-rounded-md tw-shadow-sm hover:tw-bg-blue-700 focus:tw-outline-none focus:tw-ring-2 focus:tw-ring-blue-500 focus:tw-ring-offset-2 disabled:tw-opacity-50 disabled:tw-cursor-not-allowed tw-transition-colors ".concat(isCreatingZip ? 'tw-opacity-50 tw-cursor-not-allowed' : ''),
+          children: isCreatingZip ? /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsxs)(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.Fragment, {
+            children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)(lucide_react__WEBPACK_IMPORTED_MODULE_4__["default"], {
+              className: "tw-w-4 tw-h-4 tw-mr-2 tw-animate-spin"
+            }), "Creating Backup..."]
+          }) : /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsxs)(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.Fragment, {
+            children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)(lucide_react__WEBPACK_IMPORTED_MODULE_6__["default"], {
+              className: "tw-w-4 tw-h-4 tw-mr-2"
+            }), "Create Backup Zip"]
+          })
+        })
+      })]
+    });
+  }
+  return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsxs)(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.Fragment, {
+    children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("div", {
+      className: "tw-flex tw-flex-col tw-items-center tw-justify-center tw-h-full",
+      children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("div", {
+        className: "tw-bg-green-50 tw-border tw-border-green-200 tw-rounded-md tw-p-4",
+        children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsxs)("div", {
+          className: "tw-flex tw-items-start tw-space-x-3",
+          children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("div", {
+            className: "tw-flex-shrink-0",
+            children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)(lucide_react__WEBPACK_IMPORTED_MODULE_6__["default"], {
+              className: "tw-w-5 tw-h-5",
+              color: "#16a34a"
+            })
+          }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsxs)("div", {
+            className: "tw-flex-1",
+            children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("h3", {
+              className: "tw-text-sm tw-font-medium tw-text-green-800 tw-mb-2",
+              children: "Backup Ready for Download"
+            }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("p", {
+              className: "tw-text-sm tw-text-green-700 tw-leading-relaxed",
+              children: "Your backup zip file has been created successfully. Click the download button below to save it to your computer."
+            })]
+          })]
+        })
+      })
+    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("div", {
+      className: "tw-mt-4 tw-flex tw-justify-end",
+      children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsxs)("button", {
+        onClick: function onClick() {
+          return window.open(backupDownloadZipPath, '_blank');
+        },
+        className: "tw-inline-flex tw-items-center tw-px-4 tw-py-2 tw-bg-green-600 tw-text-white tw-text-sm tw-font-medium tw-rounded-md tw-shadow-sm hover:tw-bg-green-700 focus:tw-outline-none focus:tw-ring-2 focus:tw-ring-green-500 focus:tw-ring-offset-2 tw-transition-colors",
+        children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)(lucide_react__WEBPACK_IMPORTED_MODULE_7__["default"], {
+          className: "tw-w-4 tw-h-4 tw-mr-2"
+        }), "Download Backup"]
+      })
+    })]
+  });
+};
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (DownloadBackup);
 
 /***/ }),
 
@@ -33633,6 +34061,14 @@ var metricsConfig = [{
     color: "#64748B"
   })
 }, {
+  key: "WP_Max_Upload_Size",
+  label: "WP Max Upload Size",
+  format: formatBytes,
+  icon: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)(lucide_react__WEBPACK_IMPORTED_MODULE_6__["default"], {
+    className: "tw-w-5 tw-h-5",
+    color: "#8B5CF6"
+  })
+}, {
   key: "safe_mode",
   label: "Safe Mode",
   format: function format(v) {
@@ -34360,6 +34796,319 @@ var useToast = function useToast() {
 
 /***/ }),
 
+/***/ "./src/components/UploadBackup.jsx":
+/*!*****************************************!*\
+  !*** ./src/components/UploadBackup.jsx ***!
+  \*****************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _Toast__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./Toast */ "./src/components/Toast.jsx");
+/* harmony import */ var lucide_react__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! lucide-react */ "./node_modules/lucide-react/dist/esm/icons/file-up.js");
+/* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! react/jsx-runtime */ "./node_modules/react/jsx-runtime.js");
+function _createForOfIteratorHelper(r, e) { var t = "undefined" != typeof Symbol && r[Symbol.iterator] || r["@@iterator"]; if (!t) { if (Array.isArray(r) || (t = _unsupportedIterableToArray(r)) || e && r && "number" == typeof r.length) { t && (r = t); var _n = 0, F = function F() {}; return { s: F, n: function n() { return _n >= r.length ? { done: !0 } : { done: !1, value: r[_n++] }; }, e: function e(r) { throw r; }, f: F }; } throw new TypeError("Invalid attempt to iterate non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method."); } var o, a = !0, u = !1; return { s: function s() { t = t.call(r); }, n: function n() { var r = t.next(); return a = r.done, r; }, e: function e(r) { u = !0, o = r; }, f: function f() { try { a || null == t["return"] || t["return"](); } finally { if (u) throw o; } } }; }
+function _slicedToArray(r, e) { return _arrayWithHoles(r) || _iterableToArrayLimit(r, e) || _unsupportedIterableToArray(r, e) || _nonIterableRest(); }
+function _nonIterableRest() { throw new TypeError("Invalid attempt to destructure non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method."); }
+function _unsupportedIterableToArray(r, a) { if (r) { if ("string" == typeof r) return _arrayLikeToArray(r, a); var t = {}.toString.call(r).slice(8, -1); return "Object" === t && r.constructor && (t = r.constructor.name), "Map" === t || "Set" === t ? Array.from(r) : "Arguments" === t || /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(t) ? _arrayLikeToArray(r, a) : void 0; } }
+function _arrayLikeToArray(r, a) { (null == a || a > r.length) && (a = r.length); for (var e = 0, n = Array(a); e < a; e++) n[e] = r[e]; return n; }
+function _iterableToArrayLimit(r, l) { var t = null == r ? null : "undefined" != typeof Symbol && r[Symbol.iterator] || r["@@iterator"]; if (null != t) { var e, n, i, u, a = [], f = !0, o = !1; try { if (i = (t = t.call(r)).next, 0 === l) { if (Object(t) !== t) return; f = !1; } else for (; !(f = (e = i.call(t)).done) && (a.push(e.value), a.length !== l); f = !0); } catch (r) { o = !0, n = r; } finally { try { if (!f && null != t["return"] && (u = t["return"](), Object(u) !== u)) return; } finally { if (o) throw n; } } return a; } }
+function _arrayWithHoles(r) { if (Array.isArray(r)) return r; }
+
+
+
+
+/**
+ * UploadBackup Usage Example:
+ *
+ * import React, { useRef } from 'react';
+ * import UploadBackup from './UploadBackup';
+ *
+ * function MyComponent() {
+ *   const uploadRef = useRef();
+ *
+ *   const handleUpload = (files) => {
+ *     // Start your upload logic here
+ *     // To update progress:
+ *     uploadRef.current?.setUploadProgress(30); // 30%
+ *     // To reset progress:
+ *     uploadRef.current?.resetProgress();
+ *   };
+ *
+ *   return (
+ *     <UploadBackup
+ *       ref={uploadRef}
+ *       onUpload={handleUpload}
+ *       accept=".zip,.tar,.gz,.sql"
+ *       maxFiles={1}
+ *       maxSize={1024 * 1024 * 512} // 512MB
+ *     />
+ *   );
+ * }
+ */
+
+/**
+ * UploadBackup - Modern, dependency-free file upload component
+ * - Drag & drop or click to select
+ * - Shows selected files
+ * - Calls onUpload(files) prop when files are selected or uploaded
+ * - Uses toast for feedback
+ * - Clean, modern, accessible UI
+ * - Supports upload progress (parent can update via ref)
+ */
+
+var UploadBackup = /*#__PURE__*/(0,react__WEBPACK_IMPORTED_MODULE_0__.forwardRef)(function (_ref, ref) {
+  var onUpload = _ref.onUpload,
+    _ref$accept = _ref.accept,
+    accept = _ref$accept === void 0 ? '.zip,.tar,.gz,.sql' : _ref$accept,
+    _ref$maxFiles = _ref.maxFiles,
+    maxFiles = _ref$maxFiles === void 0 ? 1 : _ref$maxFiles,
+    _ref$maxSize = _ref.maxSize,
+    maxSize = _ref$maxSize === void 0 ? 1024 * 1024 * 512 : _ref$maxSize;
+  var toast = (0,_Toast__WEBPACK_IMPORTED_MODULE_1__.useToast)();
+  var inputRef = (0,react__WEBPACK_IMPORTED_MODULE_0__.useRef)();
+  var _useState = (0,react__WEBPACK_IMPORTED_MODULE_0__.useState)([]),
+    _useState2 = _slicedToArray(_useState, 2),
+    files = _useState2[0],
+    setFiles = _useState2[1];
+  var _useState3 = (0,react__WEBPACK_IMPORTED_MODULE_0__.useState)(false),
+    _useState4 = _slicedToArray(_useState3, 2),
+    dragActive = _useState4[0],
+    setDragActive = _useState4[1];
+  var _useState5 = (0,react__WEBPACK_IMPORTED_MODULE_0__.useState)(''),
+    _useState6 = _slicedToArray(_useState5, 2),
+    error = _useState6[0],
+    setError = _useState6[1];
+  var _useState7 = (0,react__WEBPACK_IMPORTED_MODULE_0__.useState)(0),
+    _useState8 = _slicedToArray(_useState7, 2),
+    uploadProgress = _useState8[0],
+    _setUploadProgress = _useState8[1]; // 0-100
+
+  // Expose setUploadProgress to parent via ref
+  (0,react__WEBPACK_IMPORTED_MODULE_0__.useImperativeHandle)(ref, function () {
+    return {
+      setUploadProgress: function setUploadProgress(progress) {
+        _setUploadProgress(progress);
+      },
+      resetProgress: function resetProgress() {
+        return _setUploadProgress(0);
+      }
+    };
+  }, []);
+
+  // Validate file type and size
+  var validateFiles = function validateFiles(fileList) {
+    var acceptedTypes = accept.split(',').map(function (ext) {
+      return ext.trim().replace(/^\./, '');
+    });
+    var validFiles = [];
+    var _iterator = _createForOfIteratorHelper(fileList),
+      _step;
+    try {
+      for (_iterator.s(); !(_step = _iterator.n()).done;) {
+        var file = _step.value;
+        var ext = file.name.split('.').pop().toLowerCase();
+        if (!acceptedTypes.includes(ext)) {
+          setError("File type .".concat(ext, " not accepted."));
+          toast({
+            message: "File type .".concat(ext, " not accepted."),
+            type: 'error'
+          });
+          return [];
+        }
+        if (file.size > maxSize) {
+          setError("File ".concat(file.name, " is too large (max ").concat(Math.round(maxSize / (1024 * 1024)), "MB)."));
+          toast({
+            message: "File ".concat(file.name, " is too large."),
+            type: 'error'
+          });
+          return [];
+        }
+        validFiles.push(file);
+      }
+    } catch (err) {
+      _iterator.e(err);
+    } finally {
+      _iterator.f();
+    }
+    setError('');
+    return validFiles;
+  };
+  var handleFiles = function handleFiles(fileList) {
+    var valid = validateFiles(Array.from(fileList));
+    if (valid.length > 0) {
+      if (maxFiles === 1) valid = [valid[0]];
+      setFiles(valid);
+      // if (onUpload) onUpload(valid);
+      toast({
+        message: 'File ready to upload!',
+        type: 'success'
+      });
+    }
+  };
+  var handleInputChange = function handleInputChange(e) {
+    handleFiles(e.target.files);
+  };
+  var handleDrop = function handleDrop(e) {
+    e.preventDefault();
+    setDragActive(false);
+    if (e.dataTransfer.files && e.dataTransfer.files.length > 0) {
+      handleFiles(e.dataTransfer.files);
+    }
+  };
+  var handleDragOver = function handleDragOver(e) {
+    e.preventDefault();
+    setDragActive(true);
+  };
+  var handleDragLeave = function handleDragLeave(e) {
+    e.preventDefault();
+    setDragActive(false);
+  };
+  var removeFile = function removeFile(file) {
+    setFiles(function (prev) {
+      return prev.filter(function (f) {
+        return f !== file;
+      });
+    });
+
+    // update inputRef when remove file
+    inputRef.current.value = '';
+    toast({
+      message: 'File removed',
+      type: 'info'
+    });
+  };
+  return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsxs)("div", {
+    className: "tw-w-full tw-max-w-lg tw-mx-auto tw-p-6 tw-bg-white tw-rounded-md tw-border tw-border-gray-200 tw-space-y-4",
+    children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsxs)("div", {
+      className: 'tw-flex tw-flex-col tw-items-center tw-justify-center tw-py-12 tw-px-4 tw-border-2 tw-border-dashed tw-rounded-lg tw-cursor-pointer ' + (dragActive ? 'tw-border-blue-500 tw-bg-blue-50' : 'tw-border-gray-300 tw-bg-gray-50'),
+      tabIndex: 0,
+      "aria-label": "File upload dropzone",
+      onClick: function onClick() {
+        return inputRef.current.click();
+      },
+      onDrop: handleDrop,
+      onDragOver: handleDragOver,
+      onDragLeave: handleDragLeave,
+      onDragEnd: handleDragLeave,
+      children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("input", {
+        ref: inputRef,
+        type: "file",
+        accept: accept,
+        multiple: maxFiles > 1,
+        className: "tw-hidden",
+        onChange: handleInputChange
+      }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)(lucide_react__WEBPACK_IMPORTED_MODULE_3__["default"], {
+        className: "tw-w-10 tw-h-10 tw-text-gray-400"
+      }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("p", {
+        className: "tw-mt-4 tw-text-base tw-font-medium tw-text-gray-700 tw-text-center",
+        children: dragActive ? 'Drop the file here...' : 'Drag & drop a backup file here, or click to select'
+      }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsxs)("p", {
+        className: "tw-mt-2 tw-text-xs tw-text-gray-500",
+        children: ["Accepted: ", accept.replace(/\./g, '').replace(/,/g, ', ')]
+      }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsxs)("p", {
+        className: "tw-mt-1 tw-text-xs tw-text-gray-400",
+        children: ["Max size: ", Math.round(maxSize / (1024 * 1024)), "MB"]
+      })]
+    }), uploadProgress > 0 && uploadProgress < 100 && /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsxs)("div", {
+      className: "tw-w-full tw-bg-gray-200 tw-rounded tw-h-3 tw-mt-2",
+      children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("div", {
+        className: "tw-bg-blue-500 tw-h-3 tw-rounded tw-transition-all tw-duration-300",
+        style: {
+          width: "".concat(uploadProgress, "%")
+        }
+      }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsxs)("div", {
+        className: "tw-text-xs tw-text-gray-600 tw-mt-1 tw-text-right",
+        children: ["Uploading... ", uploadProgress, "%"]
+      })]
+    }), error && /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("div", {
+      className: "tw-text-red-600 tw-text-sm tw-mt-2",
+      children: error
+    }), files.length > 0 && /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsxs)("div", {
+      className: "tw-mt-4 tw-space-y-2",
+      children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsxs)("div", {
+        className: "tw-text-sm tw-font-semibold tw-text-gray-800",
+        children: ["Selected file", files.length > 1 ? 's' : '', ":"]
+      }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("ul", {
+        className: "tw-space-y-1",
+        children: files.map(function (file, idx) {
+          return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsxs)("li", {
+            className: "tw-flex tw-items-center tw-justify-between tw-bg-gray-100 tw-p-2 tw-rounded tw-text-gray-700",
+            children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsxs)("span", {
+              className: "tw-flex tw-items-center tw-gap-2",
+              children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsxs)("svg", {
+                className: "tw-w-4 tw-h-4 tw-text-gray-400",
+                fill: "none",
+                stroke: "currentColor",
+                viewBox: "0 0 24 24",
+                children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("path", {
+                  strokeLinecap: "round",
+                  strokeLinejoin: "round",
+                  strokeWidth: 2,
+                  d: "M4 16V4a2 2 0 012-2h8a2 2 0 012 2v12"
+                }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("path", {
+                  strokeLinecap: "round",
+                  strokeLinejoin: "round",
+                  strokeWidth: 2,
+                  d: "M4 16l4-4 4 4m0 0V4m0 12l-4-4-4 4"
+                })]
+              }), file.name, " ", /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsxs)("span", {
+                className: "tw-text-xs tw-text-gray-400",
+                children: ["(", (file.size / 1024 / 1024).toFixed(2), " MB)"]
+              })]
+            }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("button", {
+              type: "button",
+              className: "tw-ml-2 tw-p-1 tw-rounded hover:tw-bg-red-100",
+              onClick: function onClick() {
+                return removeFile(file);
+              },
+              "aria-label": "Remove ".concat(file.name),
+              children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("svg", {
+                className: "tw-w-4 tw-h-4 tw-text-red-500",
+                fill: "none",
+                stroke: "currentColor",
+                viewBox: "0 0 24 24",
+                children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("path", {
+                  strokeLinecap: "round",
+                  strokeLinejoin: "round",
+                  strokeWidth: 2,
+                  d: "M6 18L18 6M6 6l12 12"
+                })
+              })
+            })]
+          }, file.name + idx);
+        })
+      })]
+    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsxs)("div", {
+      className: "tw-flex tw-justify-end tw-gap-2",
+      children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("button", {
+        type: "button",
+        onClick: function onClick() {
+          return inputRef.current.click();
+        },
+        className: "tw-px-4 tw-py-2 tw-bg-blue-600 tw-text-white tw-rounded-md tw-font-medium tw-shadow-sm hover:tw-bg-blue-700 focus:tw-outline-none focus:tw-ring-2 focus:tw-ring-blue-200",
+        children: "Choose File"
+      }), files.length > 0 && /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("button", {
+        type: "button",
+        onClick: function onClick() {
+          if (onUpload) onUpload(files);
+          // toast({ message: 'Uploading file...', type: 'info' });
+        },
+        className: "tw-px-4 tw-py-2 tw-bg-green-600 tw-text-white tw-rounded-md tw-font-medium tw-shadow-sm hover:tw-bg-green-700 focus:tw-outline-none focus:tw-ring-2 focus:tw-ring-green-200",
+        children: "Upload"
+      })]
+    })]
+  });
+});
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (UploadBackup);
+
+/***/ }),
+
 /***/ "./src/util/lib.js":
 /*!*************************!*\
   !*** ./src/util/lib.js ***!
@@ -34370,12 +35119,15 @@ var useToast = function useToast() {
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   __request: () => (/* binding */ __request),
+/* harmony export */   createBackupZip: () => (/* binding */ createBackupZip),
 /* harmony export */   deleteBackupFolder: () => (/* binding */ deleteBackupFolder),
 /* harmony export */   doBackupProcess: () => (/* binding */ doBackupProcess),
 /* harmony export */   doRestoreProcess: () => (/* binding */ doRestoreProcess),
 /* harmony export */   friendlyDateTime: () => (/* binding */ friendlyDateTime),
+/* harmony export */   getBackupDownloadZipPath: () => (/* binding */ getBackupDownloadZipPath),
 /* harmony export */   getBackups: () => (/* binding */ getBackups),
-/* harmony export */   sendReportEmail: () => (/* binding */ sendReportEmail)
+/* harmony export */   sendReportEmail: () => (/* binding */ sendReportEmail),
+/* harmony export */   uploadFileWithProgress: () => (/* binding */ uploadFileWithProgress)
 /* harmony export */ });
 function _typeof(o) { "@babel/helpers - typeof"; return _typeof = "function" == typeof Symbol && "symbol" == typeof Symbol.iterator ? function (o) { return typeof o; } : function (o) { return o && "function" == typeof Symbol && o.constructor === Symbol && o !== Symbol.prototype ? "symbol" : typeof o; }, _typeof(o); }
 function _slicedToArray(r, e) { return _arrayWithHoles(r) || _iterableToArrayLimit(r, e) || _unsupportedIterableToArray(r, e) || _nonIterableRest(); }
@@ -34619,6 +35371,106 @@ var sendReportEmail = /*#__PURE__*/function () {
   }));
   return function sendReportEmail(_x6) {
     return _ref10.apply(this, arguments);
+  };
+}();
+var uploadFileWithProgress = function uploadFileWithProgress(file, onProgress) {
+  return new Promise(function (resolve, reject) {
+    var xhr = new XMLHttpRequest();
+    var formData = new FormData();
+    formData.append('action', 'wp_backup_ajax_upload_backup_file');
+    formData.append('nonce', nonce.wp_backup_nonce);
+    formData.append('file', file);
+    xhr.open('POST', ajax_url);
+
+    // Handle upload progress
+    xhr.upload.onprogress = function (event) {
+      if (event.lengthComputable) {
+        var percent = Math.round(event.loaded / event.total * 100);
+        onProgress(percent);
+      }
+    };
+    xhr.onload = function () {
+      if (xhr.status === 200) {
+        var res = JSON.parse(xhr.responseText);
+        if (res.success) resolve(res);else reject(res.data || 'Unknown error');
+      } else {
+        reject('Upload failed');
+      }
+    };
+    xhr.onerror = function () {
+      return reject('Upload error');
+    };
+    xhr.send(formData);
+  });
+};
+var getBackupDownloadZipPath = /*#__PURE__*/function () {
+  var _ref13 = _asyncToGenerator(/*#__PURE__*/_regenerator().m(function _callee7(folder_name) {
+    var response;
+    return _regenerator().w(function (_context7) {
+      while (1) switch (_context7.n) {
+        case 0:
+          _context7.n = 1;
+          return __request(ajax_url, {
+            method: 'POST',
+            headers: {
+              'Content-Type': 'application/x-www-form-urlencoded'
+            },
+            body: new URLSearchParams(_objectSpread(_objectSpread({
+              action: 'wp_backup_ajax_get_backup_download_zip_path'
+            }, Object.fromEntries(Object.entries({
+              folder_name: folder_name
+            }).map(function (_ref14) {
+              var _ref15 = _slicedToArray(_ref14, 2),
+                key = _ref15[0],
+                value = _ref15[1];
+              return ["payload[".concat(key, "]"), value];
+            }))), {}, {
+              nonce: nonce.wp_backup_nonce
+            }))
+          });
+        case 1:
+          response = _context7.v;
+          return _context7.a(2, response);
+      }
+    }, _callee7);
+  }));
+  return function getBackupDownloadZipPath(_x7) {
+    return _ref13.apply(this, arguments);
+  };
+}();
+var createBackupZip = /*#__PURE__*/function () {
+  var _ref16 = _asyncToGenerator(/*#__PURE__*/_regenerator().m(function _callee8(folder_name) {
+    var response;
+    return _regenerator().w(function (_context8) {
+      while (1) switch (_context8.n) {
+        case 0:
+          _context8.n = 1;
+          return __request(ajax_url, {
+            method: 'POST',
+            headers: {
+              'Content-Type': 'application/x-www-form-urlencoded'
+            },
+            body: new URLSearchParams(_objectSpread(_objectSpread({
+              action: 'wp_backup_ajax_create_backup_zip'
+            }, Object.fromEntries(Object.entries({
+              folder_name: folder_name
+            }).map(function (_ref17) {
+              var _ref18 = _slicedToArray(_ref17, 2),
+                key = _ref18[0],
+                value = _ref18[1];
+              return ["payload[".concat(key, "]"), value];
+            }))), {}, {
+              nonce: nonce.wp_backup_nonce
+            }))
+          });
+        case 1:
+          response = _context8.v;
+          return _context8.a(2, response);
+      }
+    }, _callee8);
+  }));
+  return function createBackupZip(_x8) {
+    return _ref16.apply(this, arguments);
   };
 }();
 

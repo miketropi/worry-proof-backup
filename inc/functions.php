@@ -87,7 +87,7 @@ function wp_backup_get_backups() {
 
   // get all folders in $backup_folder
   $folders = glob($backup_folder . '/*', GLOB_ONLYDIR);
-
+  
   // check if $folders is not empty
   if (empty($folders)) {
     return array();
@@ -230,6 +230,7 @@ function wp_backup_get_server_metrics() {
     'ZipArchive'         => class_exists('ZipArchive'),
     'WP_Debug'           => defined('WP_DEBUG') && WP_DEBUG,
     'WP_CLI'             => wp_backup_is_wp_cli_available(),
+    'WP_Max_Upload_Size' => wp_max_upload_size(),
     'plugin_version'     => WP_BACKUP_PLUGIN_VERSION,
   );
 }
@@ -535,6 +536,9 @@ function wp_backup_remove_folder($folder) {
     return true;
   }
 
+  // get last path of $folder
+  $name_folder = basename($folder);
+
   try {
     $iterator = new RecursiveIteratorIterator(
       new RecursiveDirectoryIterator($folder, FilesystemIterator::SKIP_DOTS),
@@ -554,6 +558,13 @@ function wp_backup_remove_folder($folder) {
           return new WP_Error('remove_file_failed', "Failed to remove file: {$path}");
         }
       }
+    }
+
+    // check and delete zip file in uploads > wp-backup-zip > $folder .zip
+    $upload_dir = wp_upload_dir();
+    $backup_zip_path = $upload_dir['basedir'] . '/wp-backup-zip/' . $name_folder . '.zip';
+    if (file_exists($backup_zip_path)) {
+      unlink($backup_zip_path);
     }
 
     // Finally remove the folder itself
@@ -746,4 +757,86 @@ function wp_backup_send_report_email($args = array()) {
   }
 
   return true;
+}
+
+// check backup download available
+function wp_backup_get_backup_download_zip_path($backup_folder_name = '') {
+  // find backup download zip in uploads > wp-backup-zip > $backup_folder_name .zip
+  $upload_dir = wp_upload_dir();
+  $backup_zip_path = $upload_dir['basedir'] . '/wp-backup-zip/' . $backup_folder_name . '.zip';
+
+  // check if file exists
+  if (file_exists($backup_zip_path)) {
+    // return uri of file
+    return $upload_dir['baseurl'] . '/wp-backup-zip/' . $backup_folder_name . '.zip';
+  }
+
+  return false;
+}
+
+// wp_backup_create_backup_zip
+function wp_backup_create_backup_zip($backup_folder_name = '') {
+  // create backup zip in uploads > wp-backup-zip > $backup_folder_name .zip
+  $upload_dir = wp_upload_dir();
+  $backup_zip_path = $upload_dir['basedir'] . '/wp-backup-zip/' . $backup_folder_name . '.zip';
+
+  // check if file exists
+  if (file_exists($backup_zip_path)) {
+
+    // return uri of file 
+    return $upload_dir['baseurl'] . '/wp-backup-zip/' . $backup_folder_name . '.zip';
+  }
+
+  $backup_folder_path = $upload_dir['basedir'] . '/wp-backup/' . $backup_folder_name;
+
+  // create folder "wp-backup-zip" if not exists
+  if (!file_exists($upload_dir['basedir'] . '/wp-backup-zip/')) {
+    $result = wp_mkdir_p($upload_dir['basedir'] . '/wp-backup-zip/');
+    if (is_wp_error($result)) {
+      return new WP_Error('create_backup_zip_failed', $result->get_error_message());
+    }
+  }
+
+  // create zip file backup
+  $backup_zip_path = $upload_dir['basedir'] . '/wp-backup-zip/' . $backup_folder_name . '.zip';
+
+  // create zip file
+  $zip = new ZipArchive();
+  $zip->open($backup_zip_path, ZipArchive::CREATE | ZipArchive::OVERWRITE);
+
+  $folderPath = realpath($backup_folder_path);
+
+  if (!is_dir($folderPath)) {
+    return new WP_Error('create_backup_zip_failed', 'Backup folder not found');
+  }
+
+  $files = new RecursiveIteratorIterator(
+      new RecursiveDirectoryIterator($folderPath),
+      RecursiveIteratorIterator::LEAVES_ONLY
+  );
+
+  $exclude_files = ['restore.log'];
+
+  foreach ($files as $name => $file) {
+    if (!$file->isDir()) {
+      $filePath = $file->getRealPath();
+      $relativePath = substr($filePath, strlen($folderPath) + 1);
+
+      // check if file is in $exclude_files
+      if (in_array($relativePath, $exclude_files)) {
+        continue;
+      }
+
+      $zip->addFile($filePath, $relativePath);
+    }
+  }
+
+  $zip->close();
+
+  // check if file exists
+  if (!file_exists($backup_zip_path)) {
+    return new WP_Error('create_backup_zip_failed', 'Backup zip file failed, please try again!');
+  }
+
+  return $upload_dir['baseurl'] . '/wp-backup-zip/' . $backup_folder_name . '.zip';
 }

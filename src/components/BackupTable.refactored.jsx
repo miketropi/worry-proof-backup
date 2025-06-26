@@ -1,7 +1,7 @@
-import React, { useEffect, useMemo, useState, useCallback } from 'react';
+import React, { useEffect, useMemo, useState, useCallback, useRef } from 'react';
 import useBackupStore from '../util/store';
 import BackupTableTools from './BackupTableTools';
-import { deleteBackupFolder } from '../util/lib';
+import { deleteBackupFolder, uploadFileWithProgress } from '../util/lib';
 import { useConfirm } from './Confirm';
 import { useToast } from './Toast';
 import { useModal } from './Modal';
@@ -11,12 +11,15 @@ import BackupTypeBadge from './BackupTypeBadge';
 import BackupTableRow from './BackupTableRow';
 import BackupMobileCard from './BackupMobileCard';
 import RestoreConfigModal from './RestoreConfigModal';
+import UploadBackup from './UploadBackup';
+import DownloadBackup from './DownloadBackup';
 
 const BackupTable = () => {
   const { backups, fetchBackups_Fn } = useBackupStore();
   const [isLoading, setIsLoading] = useState(true);
   const [filterDate, setFilterDate] = useState(null);
   const [selectedBackups, setSelectedBackups] = useState([]);
+  const uploadRef = useRef();
 
   const confirm = useConfirm();
   const toast = useToast();
@@ -111,9 +114,14 @@ const BackupTable = () => {
     }
   }, [selectedBackups, backups, confirm, toast, fetchBackups]);
 
-  const handleDownloadBackup = (backupId) => {
-    console.log('Download backup:', backupId);
-    toast({ message: 'Download functionality is not yet implemented.', type: 'info' });
+  const handleDownloadBackup = (backup) => {
+    // console.log('Download backup:', backupId);
+    // toast({ message: 'Download functionality is not yet implemented.', type: 'info' });
+    openModal({
+      title: 'Download Backup',
+      size: 'lg',
+      children: <DownloadBackup backup={backup} />,
+    });
   };
   
   const handleRestoreBackup = useCallback((backup) => {
@@ -139,6 +147,43 @@ const BackupTable = () => {
     }
   };
 
+  const handleUploadBackupFiles = async (files) => {
+    const file = files[0];
+    try {
+      toast({ message: 'Uploading...', type: 'info' });
+
+      const res = await uploadFileWithProgress(file, (percent) => {
+        console.log('Upload progress', percent);
+        uploadRef.current?.setUploadProgress(percent);
+      });
+
+      console.log('Upload res', res);
+
+      toast({ message: 'Upload success!', type: 'success' });
+      uploadRef.current?.setUploadProgress(100);
+      fetchBackups();
+      closeModal();
+    } catch (err) {
+      toast({ message: `Upload error: ${err}`, type: 'error' });
+      uploadRef.current?.resetProgress();
+    }
+  };
+
+  const handleUploadBackup = () => {
+    console.log('Upload backup clicked');
+    openModal({
+      title: 'Upload Backup',
+      size: 'lg',
+      children: <UploadBackup 
+        ref={uploadRef}
+        accept=".zip" 
+        maxSize={ wp_backup_php_data.server_metrics.WP_Max_Upload_Size } 
+        maxFiles={ 1 }
+        onUpload={handleUploadBackupFiles}
+        />,
+    });
+  };
+
   if (isLoading) {
     return <LoadingSkeleton />;
   }
@@ -153,6 +198,7 @@ const BackupTable = () => {
         onFilterChange={handleFilterChange} 
         onDeleteBackups={handleDeleteSelectedBackups}
         selectedBackups={selectedBackups}
+        onUploadBackup={handleUploadBackup}
       />
 
       {/* Mobile/Tablet View */}

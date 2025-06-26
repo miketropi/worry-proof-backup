@@ -50,7 +50,7 @@ const BackupTableRow = ({ backup, isSelected, onSelect, onDelete, onDownload, on
               {
                 label: 'Download',
                 icon: <FileDown size={16} />,
-                onClick: () => onDownload(backup.id),
+                onClick: () => onDownload(backup),
               },
               {
                 label: 'Delete',

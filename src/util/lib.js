@@ -131,3 +131,69 @@ export const sendReportEmail = async (payload) => {
 
   return response;
 };
+
+export const uploadFileWithProgress = (file, onProgress) => {
+  return new Promise((resolve, reject) => {
+    const xhr = new XMLHttpRequest();
+    const formData = new FormData();
+
+    formData.append('action', 'wp_backup_ajax_upload_backup_file');
+    formData.append('nonce', nonce.wp_backup_nonce);
+    formData.append('file', file);
+
+    xhr.open('POST', ajax_url);
+
+    // Handle upload progress
+    xhr.upload.onprogress = (event) => {
+      if (event.lengthComputable) {
+        const percent = Math.round((event.loaded / event.total) * 100);
+        onProgress(percent);
+      }
+    };
+
+    xhr.onload = () => {
+      if (xhr.status === 200) {
+        const res = JSON.parse(xhr.responseText);
+        if (res.success) resolve(res);
+        else reject(res.data || 'Unknown error');
+      } else {
+        reject('Upload failed');
+      }
+    };
+
+    xhr.onerror = () => reject('Upload error');
+    xhr.send(formData);
+  });
+};
+
+export const getBackupDownloadZipPath = async (folder_name) => {
+  const response = await __request(ajax_url, {
+    method: 'POST',
+    headers: {
+      'Content-Type': 'application/x-www-form-urlencoded',
+    },
+    body: new URLSearchParams({
+      action: 'wp_backup_ajax_get_backup_download_zip_path',
+      ...Object.fromEntries(Object.entries({ folder_name }).map(([key, value]) => [`payload[${key}]`, value])),
+      nonce: nonce.wp_backup_nonce,
+    }),
+  });
+
+  return response;
+};
+
+export const createBackupZip = async (folder_name) => {
+  const response = await __request(ajax_url, {
+    method: 'POST',
+    headers: {
+      'Content-Type': 'application/x-www-form-urlencoded',
+    },
+    body: new URLSearchParams({
+      action: 'wp_backup_ajax_create_backup_zip',
+      ...Object.fromEntries(Object.entries({ folder_name }).map(([key, value]) => [`payload[${key}]`, value])),
+      nonce: nonce.wp_backup_nonce,
+    }),
+  });
+
+  return response;
+};

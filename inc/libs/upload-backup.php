@@ -1,0 +1,168 @@
+<?php
+/**
+ * WP_Upload_Backup_File Class
+ *
+ * Upload and extract a backup zip file to wp-content/uploads/wp-backup
+ *
+ * Usage:
+ * $uploader = new WP_Upload_Backup_File([
+ *     'file' => $_FILES['backup_zip'], // required, $_FILES array for the zip file
+ *     'session_id' => null,            // optional, unique session/folder name (default: generated)
+ *     'overwrite' => false,            // optional, overwrite files if exist (default: false)
+ * ]);
+ * $result = $uploader->handle();
+ *
+ * $result = [
+ *     'success' => true/false,
+ *     'session_id' => '...',
+ *     'upload_path' => '...',
+ *     'extracted_files' => [...],
+ *     'errors' => [...],
+ * ];
+ *
+ * @author: @Mike
+ * @version: 1.0.0
+ * @date: 2025-06-25
+ * @license: GPL-2.0+
+ */
+
+class WP_Upload_Backup_File {
+    private $file;
+    private $session_id;
+    private $upload_dir;
+    private $backup_dir;
+    private $zip_path;
+    private $overwrite;
+    private $errors = [];
+    private $extracted_files = [];
+
+    public function __construct($opts = []) {
+        if (empty($opts['file'])) {
+            throw new Exception('No file provided for upload.');
+        }
+        $this->file = $opts['file'];
+        $this->session_id = !empty($opts['session_id']) ? sanitize_file_name($opts['session_id']) : uniqid('upload_', true);
+        $this->overwrite = !empty($opts['overwrite']);
+
+        $upload_dir = wp_upload_dir();
+        if (empty($upload_dir['basedir'])) {
+            throw new Exception('Could not get WordPress upload directory.');
+        }
+        $this->upload_dir = $upload_dir['basedir'];
+        $this->backup_dir = $this->upload_dir . '/wp-backup/' . $this->session_id;
+    }
+
+    /**
+     * Handle the upload and extraction process
+     */
+    public function handle() {
+        // 1. Create backup dir
+        if (!file_exists($this->backup_dir)) {
+            if (!wp_mkdir_p($this->backup_dir)) {
+                return $this->error_result('Failed to create backup directory: ' . $this->backup_dir);
+            }
+        }
+
+        // 2. Upload file using WordPress API
+        require_once ABSPATH . 'wp-admin/includes/file.php';
+        $overrides = [
+            'test_form' => false,
+            'mimes' => ['zip' => 'application/zip'],
+        ];
+        $upload = wp_handle_upload($this->file, $overrides);
+        if (isset($upload['error'])) {
+            return $this->error_result('Upload error: ' . $upload['error']);
+        }
+        $this->zip_path = $upload['file'];
+
+        // 3. Move uploaded file to backup dir
+        $dest_path = $this->backup_dir . '/' . basename($this->zip_path);
+        if (!rename($this->zip_path, $dest_path)) {
+            return $this->error_result('Failed to move uploaded file to backup directory.');
+        }
+        $this->zip_path = $dest_path;
+
+        // 4. Extract zip file
+        $extract_result = $this->extract_zip();
+        if (is_wp_error($extract_result)) {
+            // Delete the uploaded zip file even if extraction fails
+            @unlink($this->zip_path);
+            return $this->error_result($extract_result->get_error_message());
+        }
+
+        // Delete the uploaded zip file after extraction
+        @unlink($this->zip_path);
+
+        return [
+            'success' => true,
+            'session_id' => $this->session_id,
+            'upload_path' => $this->zip_path,
+            'extracted_files' => $this->extracted_files,
+            'errors' => $this->errors,
+        ];
+    }
+
+    /**
+     * Extract the uploaded zip file
+     */
+    private function extract_zip() {
+        if (!class_exists('ZipArchive')) {
+            return new WP_Error('missing_ziparchive', 'PHP ZipArchive extension is not enabled.');
+        }
+        $zip = new ZipArchive();
+        if ($zip->open($this->zip_path) !== true) {
+            return new WP_Error('zip_open_failed', 'Failed to open zip file: ' . $this->zip_path);
+        }
+        for ($i = 0; $i < $zip->numFiles; $i++) {
+            $file_info = $zip->statIndex($i);
+            $file_path = $file_info['name'];
+            $dest_path = $this->backup_dir . '/' . $file_path;
+            if (substr($file_path, -1) === '/') {
+                // Directory
+                if (!is_dir($dest_path) && !wp_mkdir_p($dest_path)) {
+                    $this->errors[] = 'Failed to create directory: ' . $dest_path;
+                    continue;
+                }
+            } else {
+                // File
+                $dest_dir = dirname($dest_path);
+                if (!is_dir($dest_dir) && !wp_mkdir_p($dest_dir)) {
+                    $this->errors[] = 'Failed to create directory: ' . $dest_dir;
+                    continue;
+                }
+                if (file_exists($dest_path) && !$this->overwrite) {
+                    $this->errors[] = 'File exists and overwrite is disabled: ' . $dest_path;
+                    continue;
+                }
+                $stream = $zip->getStream($file_path);
+                if (!$stream) {
+                    $this->errors[] = 'Failed to extract file: ' . $file_path;
+                    continue;
+                }
+                $file_handle = fopen($dest_path, 'wb');
+                if (!$file_handle) {
+                    fclose($stream);
+                    $this->errors[] = 'Failed to write file: ' . $dest_path;
+                    continue;
+                }
+                stream_copy_to_stream($stream, $file_handle);
+                fclose($stream);
+                fclose($file_handle);
+                $this->extracted_files[] = $file_path;
+            }
+        }
+        $zip->close();
+        return true;
+    }
+
+    private function error_result($msg) {
+        $this->errors[] = $msg;
+        return [
+            'success' => false,
+            'session_id' => $this->session_id,
+            'upload_path' => $this->zip_path,
+            'extracted_files' => $this->extracted_files,
+            'errors' => $this->errors,
+        ];
+    }
+}
