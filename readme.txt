@@ -1,15 +1,15 @@
-=== WP Backup ===
+=== Worry Proof Backup ===
 Contributors: miketropi
 Donate link: https://github.com/miketropi/wp-backup
-Tags: backup, restore, import, export, database, plugins, themes, uploads, demo content
+Tags: backup, restore, import, export, database
 Requires at least: 5.0
 Tested up to: 6.5
 Requires PHP: 8.0
-Stable tag: trunk
+Stable tag: 0.1.1
 License: GPLv2 or later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
 
-A powerful, user-friendly WordPress plugin to backup, restore, import, and export your entire site—including database, plugins, themes, uploads, and demo content. Built for reliability, speed, and ease of use.
+Effortless, reliable WordPress backups and restores—database, plugins, themes, uploads, and more.
 
 == Description ==
 WP Backup is a comprehensive backup solution for WordPress. Effortlessly create and restore backups of your entire site, including database, plugins, themes, uploads, and demo content. Designed for reliability, speed, and ease of use, with a modern React-powered admin interface.
@@ -19,7 +19,7 @@ WP Backup is a comprehensive backup solution for WordPress. Effortlessly create 
 * Database Import/Export
 * Plugin & Theme Backup
 * Uploads & Folder Backup
-* Demo Content Import (for theme/plugin developers)
+* Demo Content Import (for theme/plugin developers - coming soon)
 * Modern Admin UI (React-powered)
 * AJAX & Nonce Security
 
@@ -45,7 +45,7 @@ Yes, you can use the import/export tools to move your site or demo content betwe
 1. Admin dashboard with backup options
 2. Backup list and restore options
 3. Import/export tools
-4. Demo content import interface
+4. Admin dashboard interface
 
 == Changelog ==
 = 0.1.1 =
