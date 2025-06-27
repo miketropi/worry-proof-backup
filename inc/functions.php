@@ -126,6 +126,7 @@ function wp_backup_get_backups() {
     }
 
     $config_file_content['type'] = explode(',', $config_file_content['backup_types']);
+
     $backups[] = [
       'id' => $config_file_content['backup_id'],
       'name' => $config_file_content['backup_name'],
@@ -134,6 +135,7 @@ function wp_backup_get_backups() {
       'size' => $config_file_content['backup_size'],
       'type' => explode(',', $config_file_content['backup_types']),
       'folder_name' => $folder_name,
+      'site_url' => $config_file_content['site_url'],
     ];
   }
 

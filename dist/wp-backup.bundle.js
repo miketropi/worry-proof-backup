@@ -33600,11 +33600,11 @@ function RestoreConfigModal(_ref) {
           })
         })]
       }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("div", {
-        className: "tw-bg-yellow-50 tw-border tw-border-yellow-200 tw-rounded-lg tw-p-3",
+        className: "tw-bg-yellow-50 tw-border tw-border-yellow-200 tw-rounded-lg tw-p-4",
         children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsxs)("div", {
-          className: "tw-flex tw-items-start tw-space-x-2",
+          className: "tw-flex tw-items-start tw-space-x-3",
           children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("svg", {
-            className: "tw-w-4 tw-h-4 tw-text-yellow-600 tw-mt-0.5 tw-flex-shrink-0",
+            className: "tw-w-5 tw-h-5 tw-text-yellow-600 tw-mt-0.5 tw-flex-shrink-0",
             fill: "none",
             stroke: "currentColor",
             viewBox: "0 0 24 24",
@@ -33617,11 +33617,44 @@ function RestoreConfigModal(_ref) {
           }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsxs)("div", {
             className: "tw-text-sm tw-text-yellow-800",
             children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("p", {
-              className: "tw-font-medium",
+              className: "tw-font-semibold tw-mb-1",
               children: "Warning"
             }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("p", {
-              className: "tw-mt-1",
+              className: "tw-leading-relaxed",
               children: "This will overwrite your current data. Make sure you have a recent backup before proceeding."
+            })]
+          })]
+        })
+      }), wp_backup_php_data.current_domain != backup.site_url && selectedBackupRestoreTypes.includes('database') && /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("div", {
+        className: "tw-bg-yellow-50 tw-border tw-border-yellow-200 tw-rounded-lg tw-p-4",
+        children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsxs)("div", {
+          className: "tw-flex tw-items-start tw-space-x-3",
+          children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("svg", {
+            className: "tw-w-5 tw-h-5 tw-text-yellow-600 tw-mt-0.5 tw-flex-shrink-0",
+            fill: "none",
+            stroke: "currentColor",
+            viewBox: "0 0 24 24",
+            children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("path", {
+              strokeLinecap: "round",
+              strokeLinejoin: "round",
+              strokeWidth: 2,
+              d: "M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-2.5L13.732 4c-.77-.833-1.964-.833-2.732 0L3.732 16.5c-.77.833.192 2.5 1.732 2.5z"
+            })
+          }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsxs)("div", {
+            className: "tw-text-sm tw-text-yellow-800",
+            children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("p", {
+              className: "tw-font-semibold tw-mb-1",
+              children: "Domain Mismatch Warning"
+            }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsxs)("p", {
+              className: "tw-leading-relaxed",
+              children: ["This restore package was created for a different domain than your current WordPress site. After restoring the database, you may be ", /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("b", {
+                children: "logged out"
+              }), " and might need to ", /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("b", {
+                children: "manually update the site URL"
+              }), "."]
+            }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("p", {
+              className: "tw-font-medium tw-mt-2 tw-text-yellow-700",
+              children: "\u26A0\uFE0F Please ensure you really want to proceed with this restore."
             })]
           })]
         })

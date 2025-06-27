@@ -70,17 +70,39 @@ export default function RestoreConfigModal({ backup, closeModal, toast }) {
           </div>
         </div>
 
-        <div className="tw-bg-yellow-50 tw-border tw-border-yellow-200 tw-rounded-lg tw-p-3">
-          <div className="tw-flex tw-items-start tw-space-x-2">
-            <svg className="tw-w-4 tw-h-4 tw-text-yellow-600 tw-mt-0.5 tw-flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <div className="tw-bg-yellow-50 tw-border tw-border-yellow-200 tw-rounded-lg tw-p-4">
+          <div className="tw-flex tw-items-start tw-space-x-3">
+            <svg className="tw-w-5 tw-h-5 tw-text-yellow-600 tw-mt-0.5 tw-flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-2.5L13.732 4c-.77-.833-1.964-.833-2.732 0L3.732 16.5c-.77.833.192 2.5 1.732 2.5z" />
             </svg>
             <div className="tw-text-sm tw-text-yellow-800">
-              <p className="tw-font-medium">Warning</p>
-              <p className="tw-mt-1">This will overwrite your current data. Make sure you have a recent backup before proceeding.</p>
+              <p className="tw-font-semibold tw-mb-1">Warning</p>
+              <p className="tw-leading-relaxed">This will overwrite your current data. Make sure you have a recent backup before proceeding.</p>
             </div>
           </div>
         </div>
+        
+        {
+          wp_backup_php_data.current_domain != backup.site_url && selectedBackupRestoreTypes.includes('database') && (
+            <div className="tw-bg-yellow-50 tw-border tw-border-yellow-200 tw-rounded-lg tw-p-4">
+              <div className="tw-flex tw-items-start tw-space-x-3">
+                <svg className="tw-w-5 tw-h-5 tw-text-yellow-600 tw-mt-0.5 tw-flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-2.5L13.732 4c-.77-.833-1.964-.833-2.732 0L3.732 16.5c-.77.833.192 2.5 1.732 2.5z" />
+                </svg>
+                <div className="tw-text-sm tw-text-yellow-800">
+                  <p className="tw-font-semibold tw-mb-1">Domain Mismatch Warning</p>
+                  <p className="tw-leading-relaxed">
+                    This restore package was created for a different domain than your current WordPress site. 
+                    After restoring the database, you may be <b>logged out</b> and might need to <b>manually update the site URL</b>.
+                  </p>
+                  <p className="tw-font-medium tw-mt-2 tw-text-yellow-700">
+                    ⚠️ Please ensure you really want to proceed with this restore.
+                  </p>
+                </div>
+              </div>
+            </div>
+          )
+        }
 
         <div className="tw-flex tw-justify-end tw-gap-3 tw-pt-4">
           <button
