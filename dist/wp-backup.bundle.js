@@ -33622,6 +33622,9 @@ function RestoreConfigModal(_ref) {
             }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("p", {
               className: "tw-leading-relaxed",
               children: "This will overwrite your current data. Make sure you have a recent backup before proceeding."
+            }), selectedBackupRestoreTypes.includes('database') && /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("p", {
+              className: "tw-font-medium tw-mt-2 tw-text-yellow-700",
+              children: "\uD83D\uDD04 Heads up! After we restore your database, you'll probably get logged out automatically. Don't freak out - this is totally normal! Your login session gets reset when we bring back your old data, so you'll just need to log back in. No biggie! \uD83D\uDE0A"
             })]
           })]
         })
@@ -33649,7 +33652,11 @@ function RestoreConfigModal(_ref) {
               className: "tw-leading-relaxed",
               children: ["This restore package was created for a different domain than your current WordPress site. After restoring the database, you may be ", /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("b", {
                 children: "logged out"
-              }), " and might need to ", /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("b", {
+              }), " and might need to ", /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("a", {
+                href: "https://github.com/miketropi/wp-backup/blob/master/doc/manually-update-the-site-url.md",
+                target: "_blank",
+                rel: "noopener noreferrer",
+                className: "tw-text-blue-600 tw-font-semibold hover:tw-text-blue-800 tw-underline",
                 children: "manually update the site URL"
               }), "."]
             }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("p", {
@@ -35430,7 +35437,8 @@ var doRestoreProcess = /*#__PURE__*/function () {
                 value = _ref1[1];
               return ["payload[".concat(key, "]"), value];
             }))), {}, {
-              nonce: nonce.wp_backup_nonce
+              nonce: nonce.wp_backup_nonce,
+              wp_restore_nonce: nonce.wp_restore_nonce
             }))
           });
         case 1:
@@ -35593,6 +35601,12 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var zustand__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! zustand */ "./node_modules/zustand/esm/react.mjs");
 /* harmony import */ var zustand_middleware_immer__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! zustand/middleware/immer */ "./node_modules/zustand/esm/middleware/immer.mjs");
 /* harmony import */ var _lib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./lib */ "./src/util/lib.js");
+function _toConsumableArray(r) { return _arrayWithoutHoles(r) || _iterableToArray(r) || _unsupportedIterableToArray(r) || _nonIterableSpread(); }
+function _nonIterableSpread() { throw new TypeError("Invalid attempt to spread non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method."); }
+function _unsupportedIterableToArray(r, a) { if (r) { if ("string" == typeof r) return _arrayLikeToArray(r, a); var t = {}.toString.call(r).slice(8, -1); return "Object" === t && r.constructor && (t = r.constructor.name), "Map" === t || "Set" === t ? Array.from(r) : "Arguments" === t || /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(t) ? _arrayLikeToArray(r, a) : void 0; } }
+function _iterableToArray(r) { if ("undefined" != typeof Symbol && null != r[Symbol.iterator] || null != r["@@iterator"]) return Array.from(r); }
+function _arrayWithoutHoles(r) { if (Array.isArray(r)) return _arrayLikeToArray(r); }
+function _arrayLikeToArray(r, a) { (null == a || a > r.length) && (a = r.length); for (var e = 0, n = Array(a); e < a; e++) n[e] = r[e]; return n; }
 function _regenerator() { /*! regenerator-runtime -- Copyright (c) 2014-present, Facebook, Inc. -- license (MIT): https://github.com/babel/babel/blob/main/packages/babel-helpers/LICENSE */ var e, t, r = "function" == typeof Symbol ? Symbol : {}, n = r.iterator || "@@iterator", o = r.toStringTag || "@@toStringTag"; function i(r, n, o, i) { var c = n && n.prototype instanceof Generator ? n : Generator, u = Object.create(c.prototype); return _regeneratorDefine2(u, "_invoke", function (r, n, o) { var i, c, u, f = 0, p = o || [], y = !1, G = { p: 0, n: 0, v: e, a: d, f: d.bind(e, 4), d: function d(t, r) { return i = t, c = 0, u = e, G.n = r, a; } }; function d(r, n) { for (c = r, u = n, t = 0; !y && f && !o && t < p.length; t++) { var o, i = p[t], d = G.p, l = i[2]; r > 3 ? (o = l === n) && (u = i[(c = i[4]) ? 5 : (c = 3, 3)], i[4] = i[5] = e) : i[0] <= d && ((o = r < 2 && d < i[1]) ? (c = 0, G.v = n, G.n = i[1]) : d < l && (o = r < 3 || i[0] > n || n > l) && (i[4] = r, i[5] = n, G.n = l, c = 0)); } if (o || r > 1) return a; throw y = !0, n; } return function (o, p, l) { if (f > 1) throw TypeError("Generator is already running"); for (y && 1 === p && d(p, l), c = p, u = l; (t = c < 2 ? e : u) || !y;) { i || (c ? c < 3 ? (c > 1 && (G.n = -1), d(c, u)) : G.n = u : G.v = u); try { if (f = 2, i) { if (c || (o = "next"), t = i[o]) { if (!(t = t.call(i, u))) throw TypeError("iterator result is not an object"); if (!t.done) return t; u = t.value, c < 2 && (c = 0); } else 1 === c && (t = i["return"]) && t.call(i), c < 2 && (u = TypeError("The iterator does not provide a '" + o + "' method"), c = 1); i = e; } else if ((t = (y = G.n < 0) ? u : r.call(n, G)) !== a) break; } catch (t) { i = e, c = 1, u = t; } finally { f = 1; } } return { value: t, done: y }; }; }(r, o, i), !0), u; } var a = {}; function Generator() {} function GeneratorFunction() {} function GeneratorFunctionPrototype() {} t = Object.getPrototypeOf; var c = [][n] ? t(t([][n]())) : (_regeneratorDefine2(t = {}, n, function () { return this; }), t), u = GeneratorFunctionPrototype.prototype = Generator.prototype = Object.create(c); function f(e) { return Object.setPrototypeOf ? Object.setPrototypeOf(e, GeneratorFunctionPrototype) : (e.__proto__ = GeneratorFunctionPrototype, _regeneratorDefine2(e, o, "GeneratorFunction")), e.prototype = Object.create(u), e; } return GeneratorFunction.prototype = GeneratorFunctionPrototype, _regeneratorDefine2(u, "constructor", GeneratorFunctionPrototype), _regeneratorDefine2(GeneratorFunctionPrototype, "constructor", GeneratorFunction), GeneratorFunction.displayName = "GeneratorFunction", _regeneratorDefine2(GeneratorFunctionPrototype, o, "GeneratorFunction"), _regeneratorDefine2(u), _regeneratorDefine2(u, o, "Generator"), _regeneratorDefine2(u, n, function () { return this; }), _regeneratorDefine2(u, "toString", function () { return "[object Generator]"; }), (_regenerator = function _regenerator() { return { w: i, m: f }; })(); }
 function _regeneratorDefine2(e, r, n, t) { var i = Object.defineProperty; try { i({}, "", {}); } catch (e) { i = 0; } _regeneratorDefine2 = function _regeneratorDefine(e, r, n, t) { if (r) i ? i(e, r, { value: n, enumerable: !t, configurable: !t, writable: !t }) : e[r] = n;else { var o = function o(r, n) { _regeneratorDefine2(e, r, function (e) { return this._invoke(r, n, e); }); }; o("next", 0), o("throw", 1), o("return", 2); } }, _regeneratorDefine2(e, r, n, t); }
 function asyncGeneratorStep(n, t, e, r, o, a, c) { try { var i = n[a](c), u = i.value; } catch (n) { return void e(n); } i.done ? t(u) : Promise.resolve(u).then(r, o); }
@@ -35731,8 +35745,8 @@ var useBackupStore = (0,zustand__WEBPACK_IMPORTED_MODULE_1__.create)((0,zustand_
       }))();
     },
     buildRestoreProcess: function buildRestoreProcess(backup) {
-      var folder_name = backup.folder_name,
-        types = backup.types;
+      var folder_name = backup.folder_name;
+      var types = _toConsumableArray(backup.types);
       var typeMessages = {
         database: "\uD83D\uDDC4\uFE0F Restoring your precious database records! \uD83D\uDCCA Our data wizards are carefully bringing back every table and relationship. Your information is coming back to life! \uD83D\uDD04\u2728",
         plugin: "\uD83D\uDD0C Restoring your powerful plugins! \uD83D\uDEE0\uFE0F Each extension is being carefully unwrapped and brought back online. Your site's functionality is getting its groove back! \uD83D\uDE80\uD83D\uDCAB",
@@ -35749,6 +35763,12 @@ var useBackupStore = (0,zustand__WEBPACK_IMPORTED_MODULE_1__.create)((0,zustand_
           types: types.join(',')
         }
       }];
+
+      // check types include database, and move it to the end of the array
+      if (types.includes('database')) {
+        types.push(types.splice(types.indexOf('database'), 1)[0]);
+        console.log('types', types);
+      }
 
       // for each type, add a step to the process
       types.forEach(function (type) {

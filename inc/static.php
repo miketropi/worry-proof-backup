@@ -31,10 +31,11 @@ function wp_backup_wp_enqueue_scripts() {
     'current_datetime' => gmdate('Y-m-d H:i:s'),
 
     # current wordpress domain
-    'current_domain' => home_url() . '--',
+    'current_domain' => get_home_url(),
     
     'nonce' => array(
       'wp_backup_nonce' => wp_create_nonce( 'wp_backup_nonce_' . $current_user_id ),
+      'wp_restore_nonce' => wp_create_nonce( 'wp-backup-restore' ),
     ),
   ) );
 }

@@ -121,7 +121,8 @@ const useBackupStore = create(
     },
 
     buildRestoreProcess: (backup) => {
-      const { folder_name, types } = backup;
+      const { folder_name } = backup;
+      let types = [...backup.types];
       const typeMessages = {
         database: `🗄️ Restoring your precious database records! 📊 Our data wizards are carefully bringing back every table and relationship. Your information is coming back to life! 🔄✨`,
         plugin: `🔌 Restoring your powerful plugins! 🛠️ Each extension is being carefully unwrapped and brought back online. Your site's functionality is getting its groove back! 🚀💫`,
@@ -141,6 +142,12 @@ const useBackupStore = create(
           },
         }
       ];
+
+      // check types include database, and move it to the end of the array
+      if (types.includes('database')) {
+        types.push(types.splice(types.indexOf('database'), 1)[0]);
+        console.log('types', types);
+      }
 
       // for each type, add a step to the process
       types.forEach((type) => {

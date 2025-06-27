@@ -315,6 +315,7 @@ function wp_backup_ajax_restore_read_backup_config_file() {
   wp_send_json_success(array_merge([
     'read_backup_config_file_status' => 'done',
     'next_step' => true,
+    'current_domain' => get_home_url(),
   ], $backup_config));
 }
 
@@ -323,10 +324,10 @@ add_action('wp_ajax_wp_backup_ajax_restore_database', 'wp_backup_ajax_restore_da
 add_action('wp_ajax_nopriv_wp_backup_ajax_restore_database', 'wp_backup_ajax_restore_database');
 function wp_backup_ajax_restore_database() {
   # check nonce
-  // check_ajax_referer('wp_backup_nonce_' . get_current_user_id(), 'nonce');
+  // check_ajax_referer('wp-backup-restore', 'wp_restore_nonce');
 
   # get payload
-  $payload = isset($_POST['payload']) ? wp_unslash($_POST['payload']) : array(); // phpcs:ignore WordPress.Security.ValidatedSanitizedInput.InputNotSanitized
+  $payload = isset($_POST['payload']) ? wp_unslash($_POST['payload']) : array(); // phpcs:ignore WordPress.Security.ValidatedSanitizedInput.InputNotSanitized,WordPress.Security.NonceVerification.Missing
 
   $folder_name = $payload['folder_name'];
   $backup_prefix = $payload['table_prefix'];
@@ -369,6 +370,10 @@ function wp_backup_ajax_restore_database() {
         wp_send_json_error($result->get_error_message());
       }
 
+      // update site url
+      // update_option('siteurl', $payload['current_domain']);
+      // update_option('home', $payload['current_domain']);
+
       // create hook after restore database successfully
       do_action('wp_backup:after_restore_database_success', $payload);
 
@@ -394,7 +399,7 @@ add_action('wp_ajax_wp_backup_ajax_restore_plugin', 'wp_backup_ajax_restore_plug
 add_action('wp_ajax_nopriv_wp_backup_ajax_restore_plugin', 'wp_backup_ajax_restore_plugin');
 function wp_backup_ajax_restore_plugin() {
   # check nonce
-  // check_ajax_referer('wp_backup_nonce_' . get_current_user_id(), 'nonce');
+  check_ajax_referer('wp-backup-restore', 'wp_restore_nonce');
 
   # get payload
   $payload = isset($_POST['payload']) ? wp_unslash($_POST['payload']) : array(); // phpcs:ignore WordPress.Security.ValidatedSanitizedInput.InputNotSanitized
@@ -437,7 +442,7 @@ add_action('wp_ajax_wp_backup_ajax_restore_theme', 'wp_backup_ajax_restore_theme
 add_action('wp_ajax_nopriv_wp_backup_ajax_restore_theme', 'wp_backup_ajax_restore_theme');
 function wp_backup_ajax_restore_theme() {
   # check nonce
-  // check_ajax_referer('wp_backup_nonce_' . get_current_user_id(), 'nonce');
+  check_ajax_referer('wp-backup-restore', 'wp_restore_nonce');
   
   # get payload
   $payload = isset($_POST['payload']) ? wp_unslash($_POST['payload']) : array(); // phpcs:ignore WordPress.Security.ValidatedSanitizedInput.InputNotSanitized
@@ -479,7 +484,7 @@ add_action('wp_ajax_wp_backup_ajax_restore_uploads', 'wp_backup_ajax_restore_upl
 add_action('wp_ajax_nopriv_wp_backup_ajax_restore_uploads', 'wp_backup_ajax_restore_uploads');
 function wp_backup_ajax_restore_uploads() {
   # check nonce
-  // check_ajax_referer('wp_backup_nonce_' . get_current_user_id(), 'nonce');
+  check_ajax_referer('wp-backup-restore', 'wp_restore_nonce');
   
   # get payload
   $payload = isset($_POST['payload']) ? wp_unslash($_POST['payload']) : array(); // phpcs:ignore WordPress.Security.ValidatedSanitizedInput.InputNotSanitized
@@ -522,10 +527,10 @@ add_action('wp_ajax_wp_backup_ajax_restore_done', 'wp_backup_ajax_restore_done')
 add_action('wp_ajax_nopriv_wp_backup_ajax_restore_done', 'wp_backup_ajax_restore_done');
 function wp_backup_ajax_restore_done() {
   # check nonce
-  // check_ajax_referer('wp_backup_nonce_' . get_current_user_id(), 'nonce');
+  // check_ajax_referer('wp-backup-restore', 'wp_restore_nonce');
 
   # get payload
-  $payload = isset($_POST['payload']) ? wp_unslash($_POST['payload']) : array(); // phpcs:ignore WordPress.Security.ValidatedSanitizedInput.InputNotSanitized
+  $payload = isset($_POST['payload']) ? wp_unslash($_POST['payload']) : array(); // phpcs:ignore WordPress.Security.ValidatedSanitizedInput.InputNotSanitized,WordPress.Security.NonceVerification.Missing
 
   // create hook after restore process successfully
   do_action('wp_backup:after_restore_process_success', $payload);

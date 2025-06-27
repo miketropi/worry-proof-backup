@@ -78,6 +78,13 @@ export default function RestoreConfigModal({ backup, closeModal, toast }) {
             <div className="tw-text-sm tw-text-yellow-800">
               <p className="tw-font-semibold tw-mb-1">Warning</p>
               <p className="tw-leading-relaxed">This will overwrite your current data. Make sure you have a recent backup before proceeding.</p>
+              {
+                selectedBackupRestoreTypes.includes('database') && (
+                  <p className="tw-font-medium tw-mt-2 tw-text-yellow-700">
+                    🔄 Heads up! After we restore your database, you'll probably get logged out automatically. Don't freak out - this is totally normal! Your login session gets reset when we bring back your old data, so you'll just need to log back in. No biggie! 😊
+                  </p>
+                )
+              }
             </div>
           </div>
         </div>
@@ -93,7 +100,12 @@ export default function RestoreConfigModal({ backup, closeModal, toast }) {
                   <p className="tw-font-semibold tw-mb-1">Domain Mismatch Warning</p>
                   <p className="tw-leading-relaxed">
                     This restore package was created for a different domain than your current WordPress site. 
-                    After restoring the database, you may be <b>logged out</b> and might need to <b>manually update the site URL</b>.
+                    After restoring the database, you may be <b>logged out</b> and might need to <a href="https://github.com/miketropi/wp-backup/blob/master/doc/manually-update-the-site-url.md" 
+                      target="_blank" 
+                      rel="noopener noreferrer" 
+                      className="tw-text-blue-600 tw-font-semibold hover:tw-text-blue-800 tw-underline">
+                      manually update the site URL
+                    </a>.
                   </p>
                   <p className="tw-font-medium tw-mt-2 tw-text-yellow-700">
                     ⚠️ Please ensure you really want to proceed with this restore.

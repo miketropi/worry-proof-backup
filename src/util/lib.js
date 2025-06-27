@@ -110,6 +110,7 @@ export const doRestoreProcess = async (process) => {
       action,
       ...Object.fromEntries(Object.entries(payload).map(([key, value]) => [`payload[${key}]`, value])),
       nonce: nonce.wp_backup_nonce,
+      wp_restore_nonce: nonce.wp_restore_nonce,
     }),
   });
 
