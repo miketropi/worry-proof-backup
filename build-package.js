@@ -22,7 +22,8 @@ const excludeList = [
   "postcss.config.js",
   "tailwind.config.js",
   "webpack.mix.js",
-  "build-package.js"
+  "build-package.js",
+  "wp-backup.zip"
 ];
 // ========================
 
@@ -34,7 +35,7 @@ function getPluginVersion(filePath) {
 }
 
 const version = getPluginVersion(pluginFile);
-const zipFileName = `${pluginSlug}-v${version}.zip`;
+const zipFileName = `${pluginSlug}.zip`;
 
 // 2. Setup zip
 const output = fs.createWriteStream(zipFileName);

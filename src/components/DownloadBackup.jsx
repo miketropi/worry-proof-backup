@@ -1,5 +1,5 @@
-import React, { useState, useEffect } from 'react';
-import { Package, DownloadCloud, CheckCircle2, FolderArchive, Loader2, Download } from 'lucide-react';
+import React, { useState, useEffect, useCallback } from 'react';
+import { Package, DownloadCloud, CheckCircle2, FolderArchive, Loader2, Download, Copy } from 'lucide-react';
 import { getBackupDownloadZipPath, createBackupZip } from '../util/lib';
 import { useToast } from './Toast';
 
@@ -11,7 +11,7 @@ import { useToast } from './Toast';
  * @param {Function} [props.onCreateZip] - Called when create zip is requested
  */
 const DownloadBackup = ({ backup }) => {
-  const { toast } = useToast();
+  const toast = useToast();
   const [isLoading, setIsLoading] = useState(false);
   const [isCreatingZip, setIsCreatingZip] = useState(false);
   const [backupDownloadZipPath, setBackupDownloadZipPath] = useState(null);
@@ -29,6 +29,37 @@ const DownloadBackup = ({ backup }) => {
     setBackupDownloadZipPath(backup_download_zip_path.data);
     setIsLoading(false);
   };
+
+  const copyToClipboard = (text) => {
+    if (navigator.clipboard && typeof navigator.clipboard.writeText === 'function') {
+      navigator.clipboard.writeText(text).then(() => {
+        console.log('Copied to clipboard!');
+      }).catch(err => {
+        console.error('Failed to copy: ', err);
+      });
+    } else {
+      // Fallback cho trình duyệt cũ
+      const textarea = document.createElement('textarea');
+      textarea.value = text;
+      textarea.style.position = 'fixed';  // tránh cuộn trang
+      document.body.appendChild(textarea);
+      textarea.focus();
+      textarea.select();
+      try {
+        document.execCommand('copy');
+        console.log('Copied with fallback!');
+      } catch (err) {
+        console.error('Fallback failed: ', err);
+      }
+      document.body.removeChild(textarea);
+    }
+  }
+
+  const onHandleCopyLink = useCallback(() => {
+    copyToClipboard(backupDownloadZipPath);
+    toast({ message: 'Link copied to clipboard', type: 'success' });
+  }, [backupDownloadZipPath]);
+  
 
   useEffect(() => {
     handleDownload();
@@ -116,7 +147,14 @@ const DownloadBackup = ({ backup }) => {
           </div>
         </div>
       </div>
-      <div className="tw-mt-4 tw-flex tw-justify-end">
+      <div className="tw-mt-4 tw-flex tw-justify-end tw-space-x-3">
+        <button
+          onClick={onHandleCopyLink}
+          className="tw-inline-flex tw-items-center tw-px-4 tw-py-2 tw-bg-gray-600 tw-text-white tw-text-sm tw-font-medium tw-rounded-md tw-shadow-sm hover:tw-bg-gray-700 focus:tw-outline-none focus:tw-ring-2 focus:tw-ring-gray-500 focus:tw-ring-offset-2 tw-transition-colors"
+        >
+          <Copy className="tw-w-4 tw-h-4 tw-mr-2" />
+          Copy Link
+        </button>
         <button
           onClick={() => window.open(backupDownloadZipPath, '_blank')}
           className="tw-inline-flex tw-items-center tw-px-4 tw-py-2 tw-bg-green-600 tw-text-white tw-text-sm tw-font-medium tw-rounded-md tw-shadow-sm hover:tw-bg-green-700 focus:tw-outline-none focus:tw-ring-2 focus:tw-ring-green-500 focus:tw-ring-offset-2 tw-transition-colors"
