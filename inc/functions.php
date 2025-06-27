@@ -874,7 +874,7 @@ function wp_backup_create_backup_zip($backup_folder_name = '') {
       RecursiveIteratorIterator::LEAVES_ONLY
   );
 
-  $exclude_files = ['restore.log'];
+  $exclude_files = ['restore.log', '__process_restore.log'];
 
   foreach ($files as $name => $file) {
     if (!$file->isDir()) {
@@ -898,4 +898,116 @@ function wp_backup_create_backup_zip($backup_folder_name = '') {
   }
 
   return $upload_dir['baseurl'] . '/wp-backup-zip/' . $backup_folder_name . '.zip';
+}
+
+// func create process restore id, includes params backup filename
+function wp_backup_create_process_restore_id($backup_folder = '') {
+  // check $backup_folder is not empty
+  if (empty($backup_folder)) {
+    return new WP_Error('backup_folder_empty', esc_html__('backup folder is empty', 'wp-backup'));
+  }
+
+  $__id = 'backup_restore.' . uniqid() . '.process';
+
+  // create process restore id in uploads > wp-backup-process-restore > $backup_folder .json
+  $upload_dir = wp_upload_dir();
+  $backup_restore_path = $upload_dir['basedir'] . '/wp-backup/' . $backup_folder;
+
+  global $wp_filesystem;
+    
+  if (empty($wp_filesystem)) {
+    require_once(ABSPATH . 'wp-admin/includes/file.php');
+    WP_Filesystem();
+  }
+  
+  if (!$wp_filesystem->exists($backup_restore_path)) {
+    return new WP_Error('backup_folder_not_found', esc_html__('backup folder not found: ', 'wp-backup') . $backup_restore_path);
+  }
+
+  // create a new file to $backup_restore_path + __process_restore.log
+  $process_restore_log_path = $backup_restore_path . '/__process_restore.log';
+
+  // create file
+  $result = $wp_filesystem->put_contents($process_restore_log_path, $__id);
+  if (is_wp_error($result)) {
+    return new WP_Error('create_process_restore_id_failed', $result->get_error_message());
+  }
+
+  return $__id;
+}
+
+// validate process restore id, params process_restore_id, backup_folder
+function wp_backup_validate_process_restore_id($process_restore_id = '', $backup_folder = '') {
+  // check $process_restore_id is not empty
+  if (empty($process_restore_id)) {
+    return new WP_Error('process_restore_id_empty', esc_html__('process restore id is empty', 'wp-backup'));
+  }
+
+  // check $backup_folder is not empty
+  if (empty($backup_folder)) {
+    return new WP_Error('backup_folder_empty', esc_html__('backup folder is empty', 'wp-backup'));
+  }
+
+  $upload_dir = wp_upload_dir();
+  $backup_restore_path = $upload_dir['basedir'] . '/wp-backup/' . $backup_folder;
+  $process_restore_log_path = $backup_restore_path . '/__process_restore.log';
+
+  global $wp_filesystem;
+    
+  if (empty($wp_filesystem)) {
+    require_once(ABSPATH . 'wp-admin/includes/file.php');
+    WP_Filesystem();
+  }
+
+  // check if file exists
+  if (!$wp_filesystem->exists($process_restore_log_path)) {
+    return new WP_Error('process_restore_log_not_found', esc_html__('process restore log not found', 'wp-backup'));
+  }
+
+  // get process restore log content
+  $process_restore_log_content = $wp_filesystem->get_contents($process_restore_log_path);
+
+  // check if $process_restore_log_content is not empty
+  if (empty($process_restore_log_content)) {
+    return new WP_Error('process_restore_log_empty', esc_html__('process restore log is empty', 'wp-backup'));
+  }
+
+  // check if $process_restore_log_content is equal to $process_restore_id
+  if ($process_restore_log_content !== $process_restore_id) {
+    return new WP_Error('process_restore_id_invalid', esc_html__('process restore id is invalid', 'wp-backup'));
+  }
+
+  return true;
+}
+
+// delete process restore id, params backup_folder
+function wp_backup_delete_process_restore_id($backup_folder = '') {
+  // check $backup_folder is not empty
+  if (empty($backup_folder)) {
+    return new WP_Error('backup_folder_empty', esc_html__('backup folder is empty', 'wp-backup'));
+  }
+
+  $upload_dir = wp_upload_dir();
+  $backup_restore_path = $upload_dir['basedir'] . '/wp-backup/' . $backup_folder;
+  $process_restore_log_path = $backup_restore_path . '/__process_restore.log';
+
+  global $wp_filesystem;
+    
+  if (empty($wp_filesystem)) {
+    require_once(ABSPATH . 'wp-admin/includes/file.php');
+    WP_Filesystem();
+  }
+
+  // check if file exists
+  if (!$wp_filesystem->exists($process_restore_log_path)) {
+    return new WP_Error('process_restore_log_not_found', esc_html__('process restore log not found', 'wp-backup'));
+  }
+
+  // delete file
+  $result = $wp_filesystem->delete($process_restore_log_path);
+  if (is_wp_error($result)) {
+    return new WP_Error('delete_process_restore_log_failed', $result->get_error_message());
+  }
+
+  return true;
 }

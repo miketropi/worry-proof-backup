@@ -169,7 +169,9 @@ const useBackupStore = create(
         name: 'Done',
         description: '🎉 All done! Your restore is complete and everything is back to normal. Time to celebrate! 🥳',
         action: 'wp_backup_ajax_restore_done',
-        payload: {},
+        payload: {
+          folder_name,
+        },
       });
       console.log('process', process);
 

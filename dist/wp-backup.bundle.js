@@ -35790,7 +35790,9 @@ var useBackupStore = (0,zustand__WEBPACK_IMPORTED_MODULE_1__.create)((0,zustand_
         name: 'Done',
         description: '🎉 All done! Your restore is complete and everything is back to normal. Time to celebrate! 🥳',
         action: 'wp_backup_ajax_restore_done',
-        payload: {}
+        payload: {
+          folder_name: folder_name
+        }
       });
       console.log('process', process);
       set(function (state) {

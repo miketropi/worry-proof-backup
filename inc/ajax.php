@@ -312,14 +312,27 @@ function wp_backup_ajax_restore_read_backup_config_file() {
     wp_send_json_error($backup_config->get_error_message());
   }
 
+  $process_restore_id = wp_backup_create_process_restore_id($folder_name);
+  if (is_wp_error($process_restore_id)) {
+    wp_send_json_error($process_restore_id->get_error_message());
+  }
+
   wp_send_json_success(array_merge([
     'read_backup_config_file_status' => 'done',
     'next_step' => true,
     'current_domain' => get_home_url(),
+    'process_restore_id' => $process_restore_id,
   ], $backup_config));
 }
 
-// wp_backup_ajax_restore_database
+/**
+ * wp_backup_ajax_restore_database
+ * 
+ * @description: Restore database, this function is called after the user has read the backup config file and has clicked the restore database button.
+ * Can't be called independently, and is strictly checked based on the randomly generated process id each time the user requests a restore.
+ * During the database restore, your current login session might be lost. This affects WordPress's security check mechanism using nonces. Since we can't verify the usual nonce after a restore, we generate a unique process_restore_id to securely continue the process.
+ * 
+ */
 add_action('wp_ajax_wp_backup_ajax_restore_database', 'wp_backup_ajax_restore_database');
 add_action('wp_ajax_nopriv_wp_backup_ajax_restore_database', 'wp_backup_ajax_restore_database');
 function wp_backup_ajax_restore_database() {
@@ -329,8 +342,18 @@ function wp_backup_ajax_restore_database() {
   # get payload
   $payload = isset($_POST['payload']) ? wp_unslash($_POST['payload']) : array(); // phpcs:ignore WordPress.Security.ValidatedSanitizedInput.InputNotSanitized,WordPress.Security.NonceVerification.Missing
 
+  $process_restore_id = $payload['process_restore_id'];
   $folder_name = $payload['folder_name'];
   $backup_prefix = $payload['table_prefix'];
+
+  // During the database restore, your current login session might be lost. This affects WordPress's security check mechanism using nonces. Since we can't verify the usual nonce after a restore, we generate a unique process_restore_id to securely continue the process.
+  $validate_process_restore_id = wp_backup_validate_process_restore_id($process_restore_id, $folder_name);
+  if (is_wp_error($validate_process_restore_id)) {
+
+    // error delete process restore id
+    $delete_process_restore = wp_backup_delete_process_restore_id($folder_name);
+    wp_send_json_error($validate_process_restore_id->get_error_message());
+  }
 
   $exclude_tables = isset($payload['exclude_tables']) ? $payload['exclude_tables'] : [];
   $exclude_tables = apply_filters('wp_backup:restore_database_exclude_tables', $exclude_tables, $payload);
@@ -370,10 +393,6 @@ function wp_backup_ajax_restore_database() {
         wp_send_json_error($result->get_error_message());
       }
 
-      // update site url
-      // update_option('siteurl', $payload['current_domain']);
-      // update_option('home', $payload['current_domain']);
-
       // create hook after restore database successfully
       do_action('wp_backup:after_restore_database_success', $payload);
 
@@ -396,7 +415,7 @@ function wp_backup_ajax_restore_database() {
 
 // wp_backup_ajax_restore_plugin 
 add_action('wp_ajax_wp_backup_ajax_restore_plugin', 'wp_backup_ajax_restore_plugin');
-add_action('wp_ajax_nopriv_wp_backup_ajax_restore_plugin', 'wp_backup_ajax_restore_plugin');
+// add_action('wp_ajax_nopriv_wp_backup_ajax_restore_plugin', 'wp_backup_ajax_restore_plugin');
 function wp_backup_ajax_restore_plugin() {
   # check nonce
   check_ajax_referer('wp-backup-restore', 'wp_restore_nonce');
@@ -439,7 +458,7 @@ function wp_backup_ajax_restore_plugin() {
 
 // wp_backup_ajax_restore_theme
 add_action('wp_ajax_wp_backup_ajax_restore_theme', 'wp_backup_ajax_restore_theme');
-add_action('wp_ajax_nopriv_wp_backup_ajax_restore_theme', 'wp_backup_ajax_restore_theme');
+// add_action('wp_ajax_nopriv_wp_backup_ajax_restore_theme', 'wp_backup_ajax_restore_theme');
 function wp_backup_ajax_restore_theme() {
   # check nonce
   check_ajax_referer('wp-backup-restore', 'wp_restore_nonce');
@@ -481,7 +500,7 @@ function wp_backup_ajax_restore_theme() {
 
 // wp_backup_ajax_restore_uploads
 add_action('wp_ajax_wp_backup_ajax_restore_uploads', 'wp_backup_ajax_restore_uploads');
-add_action('wp_ajax_nopriv_wp_backup_ajax_restore_uploads', 'wp_backup_ajax_restore_uploads');
+// add_action('wp_ajax_nopriv_wp_backup_ajax_restore_uploads', 'wp_backup_ajax_restore_uploads');
 function wp_backup_ajax_restore_uploads() {
   # check nonce
   check_ajax_referer('wp-backup-restore', 'wp_restore_nonce');
@@ -531,6 +550,14 @@ function wp_backup_ajax_restore_done() {
 
   # get payload
   $payload = isset($_POST['payload']) ? wp_unslash($_POST['payload']) : array(); // phpcs:ignore WordPress.Security.ValidatedSanitizedInput.InputNotSanitized,WordPress.Security.NonceVerification.Missing
+
+  $folder_name = $payload['folder_name'];
+
+  // delete process restore id
+  $delete_process_restore = wp_backup_delete_process_restore_id($folder_name);
+  if (is_wp_error($delete_process_restore)) {
+    wp_send_json_error($delete_process_restore->get_error_message());
+  }
 
   // create hook after restore process successfully
   do_action('wp_backup:after_restore_process_success', $payload);
