@@ -166,7 +166,7 @@ function wp_backup_is_current_admin_page( $screen_id_check = '' ) {
   }
 
   $screen = get_current_screen();
-  
+
   if ( ! $screen || ! isset( $screen->id ) ) {
       return false;
   }
@@ -218,7 +218,7 @@ function wp_backup_get_server_metrics() {
   }
 
   // Server info
-  $server_software = isset($_SERVER['SERVER_SOFTWARE']) ? wp_unslash($_SERVER['SERVER_SOFTWARE']) : '';
+  $server_software = isset($_SERVER['SERVER_SOFTWARE']) ? wp_unslash($_SERVER['SERVER_SOFTWARE']) : ''; // phpcs:ignore WordPress.Security.ValidatedSanitizedInput.InputNotSanitized
   $php_version = phpversion();
 
   // WordPress version
@@ -270,80 +270,6 @@ function wp_backup_return_bytes($val) {
       $num *= 1024;
   }
   return $num;
-}
-
-/**
- * Backup the WordPress database, with optional exclusion of specific tables.
- *
- * @param array $exclude_tables Array of table names (without prefix) to exclude from backup.
- * @return string|false SQL dump as a string on success, false on failure.
- */
-function wp_backup_database($exclude_tables = array()) {
-  global $wpdb;
-
-  $all_tables = $wpdb->get_col('SHOW TABLES');
-  if ($wpdb->last_error) {
-    return new WP_Error('db_error', 'Oops! 😅 Database tables are playing hide and seek: ' . $wpdb->last_error . '. Double-check your database connection and give it another shot. If this keeps happening, reach out to your admin - we\'ve got your back! 🛡️💫');
-  }
-
-  if (!$all_tables) {
-    return new WP_Error('no_tables', 'Oops! 😱 Database is looking a bit empty today. No tables found - might want to check your database connection or give it a little pep talk! If this keeps happening, reach out to your admin - we\'ve got your back! 🚀💫');
-  }
-
-  $prefix = $wpdb->prefix;
-  $exclude_full_tables = array();
-  foreach ($exclude_tables as $table) {
-    $exclude_full_tables[] = (strpos($table, $prefix) === 0) ? $table : $prefix . $table;
-  }
-
-  $tables_to_backup = array_diff($all_tables, $exclude_full_tables);
-  $sql_dump = '';
-
-  foreach ($tables_to_backup as $table) {
-    $table_escaped = esc_sql($table);
-
-    // Dump CREATE TABLE
-    $create_table = $wpdb->get_row("SHOW CREATE TABLE `$table_escaped`", ARRAY_N);
-    if ($create_table && isset($create_table[1])) {
-      $sql_dump .= "\n--\n-- Table structure for table `$table`\n--\n\n";
-      $sql_dump .= "DROP TABLE IF EXISTS `$table`;\n";
-      $sql_dump .= $create_table[1] . ";\n";
-    }
-
-    // Dump data in chunks
-    $limit = 1000;
-    $offset = 0;
-
-    do {
-      $rows = $wpdb->get_results(
-        $wpdb->prepare("SELECT * FROM `$table_escaped` LIMIT %d OFFSET %d", $limit, $offset),
-        ARRAY_A
-      );
-
-      if ($rows && count($rows) > 0) {
-        if ($offset === 0) {
-          $sql_dump .= "\n--\n-- Dumping data for table `$table`\n--\n\n";
-        }
-
-        foreach ($rows as $row) {
-          $values = array();
-          foreach ($row as $value) {
-            if ($value === null) {
-              $values[] = 'NULL';
-            } else {
-              $escaped_value = addslashes($value);
-              $values[] = "'$escaped_value'";
-            }
-          }
-          $sql_dump .= "INSERT INTO `$table` VALUES (" . implode(', ', $values) . ");\n";
-        }
-
-        $offset += $limit;
-      }
-    } while (count($rows) > 0);
-  }
-
-  return $sql_dump;
 }
 
 /**

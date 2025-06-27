@@ -34060,15 +34060,14 @@ var metricsConfig = [{
     className: "tw-w-5 tw-h-5",
     color: "#64748B"
   })
-}, {
-  key: "WP_Max_Upload_Size",
-  label: "WP Max Upload Size",
-  format: formatBytes,
-  icon: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)(lucide_react__WEBPACK_IMPORTED_MODULE_6__["default"], {
-    className: "tw-w-5 tw-h-5",
-    color: "#8B5CF6"
-  })
-}, {
+},
+// {
+//   key: "WP_Max_Upload_Size",
+//   label: "WP Max Upload Size",
+//   format: formatBytes,
+//   icon: <Upload className="tw-w-5 tw-h-5" color="#8B5CF6" />,
+// },
+{
   key: "safe_mode",
   label: "Safe Mode",
   format: function format(v) {

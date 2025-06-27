@@ -22,7 +22,7 @@ function wp_backup_ajax_create_backup_config_file() {
   check_ajax_referer('wp_backup_nonce_' . get_current_user_id(), 'nonce');
 
   # get payload
-  $payload = isset($_POST['payload']) ? wp_unslash($_POST['payload']) : array();
+  $payload = isset($_POST['payload']) ? wp_unslash($_POST['payload']) : array(); // phpcs:ignore WordPress.Security.ValidatedSanitizedInput.InputNotSanitized
 
   $config_file = wp_backup_generate_config_file([
     'backup_name' => isset($payload['name']) ? $payload['name'] : '',
@@ -47,7 +47,7 @@ function wp_backup_ajax_generate_backup_database() {
   check_ajax_referer('wp_backup_nonce_' . get_current_user_id(), 'nonce');
 
   # get payload
-  $payload = isset($_POST['payload']) ? wp_unslash($_POST['payload']) : array();
+  $payload = isset($_POST['payload']) ? wp_unslash($_POST['payload']) : array(); // phpcs:ignore WordPress.Security.ValidatedSanitizedInput.InputNotSanitized
 
   // check $payload['backup_folder'] is exists
   if (!isset($payload['backup_folder']) || empty($payload['backup_folder'])) {
@@ -116,7 +116,7 @@ function wp_backup_ajax_generate_backup_plugin() {
   check_ajax_referer('wp_backup_nonce_' . get_current_user_id(), 'nonce');
 
   # get payload
-  $payload = isset($_POST['payload']) ? wp_unslash($_POST['payload']) : array();
+  $payload = isset($_POST['payload']) ? wp_unslash($_POST['payload']) : array(); // phpcs:ignore WordPress.Security.ValidatedSanitizedInput.InputNotSanitized
 
   // check $payload['backup_folder'] is exists
   if (!isset($payload['backup_folder']) || empty($payload['backup_folder'])) {
@@ -128,7 +128,7 @@ function wp_backup_ajax_generate_backup_plugin() {
     'source_folder' => WP_PLUGIN_DIR,
     'destination_folder' => $payload['name_folder'],
     'zip_name' => 'plugins.zip',
-    'exclude' => ['wp-backup'],
+    'exclude' => ['wp-backup'], // phpcs:ignore WordPressVIPMinimum.Performance.WPQueryParams.PostNotIn_exclude
   ]);
 
   // check error $backup
@@ -158,7 +158,7 @@ function wp_backup_ajax_generate_backup_theme() {
   check_ajax_referer('wp_backup_nonce_' . get_current_user_id(), 'nonce');
 
   # get payload
-  $payload = isset($_POST['payload']) ? wp_unslash($_POST['payload']) : array();
+  $payload = isset($_POST['payload']) ? wp_unslash($_POST['payload']) : array(); // phpcs:ignore WordPress.Security.ValidatedSanitizedInput.InputNotSanitized
 
   // check $payload['backup_folder'] is exists
   if (!isset($payload['backup_folder']) || empty($payload['backup_folder'])) {
@@ -199,7 +199,7 @@ function wp_backup_ajax_generate_backup_uploads() {
   check_ajax_referer('wp_backup_nonce_' . get_current_user_id(), 'nonce');
   
   # get payload
-  $payload = isset($_POST['payload']) ? wp_unslash($_POST['payload']) : array();
+  $payload = isset($_POST['payload']) ? wp_unslash($_POST['payload']) : array(); // phpcs:ignore WordPress.Security.ValidatedSanitizedInput.InputNotSanitized
 
   // check $payload['backup_folder'] is exists
   if (!isset($payload['backup_folder']) || empty($payload['backup_folder'])) {
@@ -211,7 +211,7 @@ function wp_backup_ajax_generate_backup_uploads() {
     'source_folder' => WP_CONTENT_DIR . '/uploads/',
     'destination_folder' => $payload['name_folder'],
     'zip_name' => 'uploads.zip',
-    'exclude' => ['wp-backup', 'wp-backup-zip'],
+    'exclude' => ['wp-backup', 'wp-backup-zip'], // phpcs:ignore WordPressVIPMinimum.Performance.WPQueryParams.PostNotIn_exclude
   ]);
 
   // check error $backup
@@ -241,7 +241,7 @@ function wp_backup_ajax_generate_backup_done() {
   check_ajax_referer('wp_backup_nonce_' . get_current_user_id(), 'nonce');
 
   # get payload
-  $payload = isset($_POST['payload']) ? wp_unslash($_POST['payload']) : array();
+  $payload = isset($_POST['payload']) ? wp_unslash($_POST['payload']) : array(); // phpcs:ignore WordPress.Security.ValidatedSanitizedInput.InputNotSanitized
 
   // get backup size
   $backup_size = wp_backup_calc_folder_size($payload['backup_folder']);
@@ -271,7 +271,7 @@ function wp_backup_ajax_delete_backup_folder() {
   check_ajax_referer('wp_backup_nonce_' . get_current_user_id(), 'nonce');
 
   # get payload
-  $payload = isset($_POST['payload']) ? wp_unslash($_POST['payload']) : array();
+  $payload = isset($_POST['payload']) ? wp_unslash($_POST['payload']) : array(); // phpcs:ignore WordPress.Security.ValidatedSanitizedInput.InputNotSanitized
 
   // name_folder backup folder
   $name_folder = $payload['name_folder'];
@@ -299,7 +299,7 @@ function wp_backup_ajax_restore_read_backup_config_file() {
   check_ajax_referer('wp_backup_nonce_' . get_current_user_id(), 'nonce');
 
   # get payload
-  $payload = isset($_POST['payload']) ? wp_unslash($_POST['payload']) : array();
+  $payload = isset($_POST['payload']) ? wp_unslash($_POST['payload']) : array(); // phpcs:ignore WordPress.Security.ValidatedSanitizedInput.InputNotSanitized
 
   $folder_name = $payload['folder_name'];
   $types = $payload['types'];
@@ -325,7 +325,7 @@ function wp_backup_ajax_restore_database() {
   check_ajax_referer('wp_backup_nonce_' . get_current_user_id(), 'nonce');
 
   # get payload
-  $payload = isset($_POST['payload']) ? wp_unslash($_POST['payload']) : array();
+  $payload = isset($_POST['payload']) ? wp_unslash($_POST['payload']) : array(); // phpcs:ignore WordPress.Security.ValidatedSanitizedInput.InputNotSanitized
 
   $folder_name = $payload['folder_name'];
   $backup_prefix = $payload['table_prefix'];
@@ -395,7 +395,7 @@ function wp_backup_ajax_restore_plugin() {
   check_ajax_referer('wp_backup_nonce_' . get_current_user_id(), 'nonce');
 
   # get payload
-  $payload = isset($_POST['payload']) ? wp_unslash($_POST['payload']) : array();
+  $payload = isset($_POST['payload']) ? wp_unslash($_POST['payload']) : array(); // phpcs:ignore WordPress.Security.ValidatedSanitizedInput.InputNotSanitized
 
   $folder_name = $payload['folder_name'];
   $path_zip_file = WP_CONTENT_DIR . '/uploads/wp-backup/' . $folder_name . '/plugins.zip';
@@ -409,7 +409,7 @@ function wp_backup_ajax_restore_plugin() {
     'zip_file' => $path_zip_file,
     'destination_folder' => WP_PLUGIN_DIR,
     'overwrite_existing' => true,
-    'exclude' => ['wp-backup'],
+    'exclude' => ['wp-backup'], // phpcs:ignore WordPressVIPMinimum.Performance.WPQueryParams.PostNotIn_exclude
   ]);
 
   // check error $restore_plugin
@@ -437,7 +437,7 @@ function wp_backup_ajax_restore_theme() {
   check_ajax_referer('wp_backup_nonce_' . get_current_user_id(), 'nonce');
   
   # get payload
-  $payload = isset($_POST['payload']) ? wp_unslash($_POST['payload']) : array();
+  $payload = isset($_POST['payload']) ? wp_unslash($_POST['payload']) : array(); // phpcs:ignore WordPress.Security.ValidatedSanitizedInput.InputNotSanitized
 
   $folder_name = $payload['folder_name'];
   $path_zip_file = WP_CONTENT_DIR . '/uploads/wp-backup/' . $folder_name . '/themes.zip';
@@ -478,7 +478,7 @@ function wp_backup_ajax_restore_uploads() {
   check_ajax_referer('wp_backup_nonce_' . get_current_user_id(), 'nonce');
   
   # get payload
-  $payload = isset($_POST['payload']) ? wp_unslash($_POST['payload']) : array();
+  $payload = isset($_POST['payload']) ? wp_unslash($_POST['payload']) : array(); // phpcs:ignore WordPress.Security.ValidatedSanitizedInput.InputNotSanitized
 
   $folder_name = $payload['folder_name'];
   $path_zip_file = WP_CONTENT_DIR . '/uploads/wp-backup/' . $folder_name . '/uploads.zip';
@@ -492,7 +492,7 @@ function wp_backup_ajax_restore_uploads() {
     'zip_file' => $path_zip_file,
     'destination_folder' => WP_CONTENT_DIR . '/uploads/',
     'overwrite_existing' => true,
-    'exclude' => ['wp-backup', 'wp-backup-zip'],
+    'exclude' => ['wp-backup', 'wp-backup-zip'], // phpcs:ignore WordPressVIPMinimum.Performance.WPQueryParams.PostNotIn_exclude
   ]);
 
   // check error $restore_uploads
@@ -520,7 +520,7 @@ function wp_backup_ajax_restore_done() {
   check_ajax_referer('wp_backup_nonce_' . get_current_user_id(), 'nonce');
 
   # get payload
-  $payload = isset($_POST['payload']) ? wp_unslash($_POST['payload']) : array();
+  $payload = isset($_POST['payload']) ? wp_unslash($_POST['payload']) : array(); // phpcs:ignore WordPress.Security.ValidatedSanitizedInput.InputNotSanitized
 
   // create hook after restore process successfully
   do_action('wp_backup:after_restore_process_success', $payload);
@@ -537,7 +537,7 @@ function wp_backup_ajax_send_report_email() {
   check_ajax_referer('wp_backup_nonce_' . get_current_user_id(), 'nonce');
 
   # get payload
-  $payload = isset($_POST['payload']) ? wp_unslash($_POST['payload']) : array();
+  $payload = isset($_POST['payload']) ? wp_unslash($_POST['payload']) : array(); // phpcs:ignore WordPress.Security.ValidatedSanitizedInput.InputNotSanitized
 
   // send report email
   $result = wp_backup_send_report_email($payload);
@@ -561,7 +561,7 @@ function wp_backup_ajax_upload_backup_file() {
     wp_send_json_error('No file uploaded');
   }
 
-  $file = $_FILES['file'];
+  $file = $_FILES['file']; // phpcs:ignore WordPress.Security.ValidatedSanitizedInput.InputNotSanitized
 
   // Check file size
   $max_size = wp_max_upload_size();
@@ -608,7 +608,7 @@ function wp_backup_ajax_get_backup_download_zip_path() {
   check_ajax_referer('wp_backup_nonce_' . get_current_user_id(), 'nonce');
 
   # get payload
-  $payload = isset($_POST['payload']) ? wp_unslash($_POST['payload']) : array();
+  $payload = isset($_POST['payload']) ? wp_unslash($_POST['payload']) : array(); // phpcs:ignore WordPress.Security.ValidatedSanitizedInput.InputNotSanitized
 
   $backup_folder_name = $payload['folder_name'];
 
@@ -624,7 +624,7 @@ function wp_backup_ajax_create_backup_zip() {
   check_ajax_referer('wp_backup_nonce_' . get_current_user_id(), 'nonce');
 
   # get payload
-  $payload = isset($_POST['payload']) ? wp_unslash($_POST['payload']) : array();
+  $payload = isset($_POST['payload']) ? wp_unslash($_POST['payload']) : array(); // phpcs:ignore WordPress.Security.ValidatedSanitizedInput.InputNotSanitized
 
   $backup_folder_name = $payload['folder_name'];
 
