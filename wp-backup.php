@@ -4,7 +4,7 @@
  * Plugin URI: https://github.com/miketropi/wp-backup
  * Description: 🛡️ Professional WordPress backup solution with comprehensive database and file system protection. Features automated backups, secure storage, and one-click restoration capabilities. Built for reliability and ease of use in production environments. **100% FREE FOREVER** - No hidden costs, no premium tiers, no limitations.
  * Version: 0.1.1
- * Requires at least: 6.5
+ * Requires at least: 6.0
  * Requires PHP: 8.0
  * Author: @Mike
  * Author URI: https://github.com/miketropi
