@@ -411,11 +411,23 @@ function wp_backup_generate_config_file($args = array()) {
 
   $upload_dir = wp_upload_dir();
   $name_folder = 'backup_' . $args['backup_id'] . '_' . gmdate('Y-m-d_H-i-s');
-  $backup_folder = $upload_dir['basedir'] . '/wp-backup/' . $name_folder;
+  $root_backup_folder = $upload_dir['basedir'] . '/wp-backup/';
+  $backup_folder = $root_backup_folder . $name_folder;
+
+  // check if $root_backup_folder is exists
+  if (!file_exists($root_backup_folder)) {
+    $check_root_folder = wp_backup_mkdir($root_backup_folder);
+
+    if(is_wp_error($check_root_folder)) {
+      return new WP_Error('mkdir_failed', $check_root_folder->get_error_message());
+    }
+  }
 
   // check if $backup_folder is exists via wp_backup_ensure_file_directory
-  if(wp_backup_mkdir($backup_folder) != true) {
-    return new WP_Error('mkdir_failed', 'Oops! 🤦‍♂️ Could not create backup folder. Please check folder permissions or try again. If the problem persists, contact your administrator. We\'re rooting for you! 💪✨');
+  $check_folder = wp_backup_mkdir($backup_folder);
+
+  if(is_wp_error($check_folder)) {
+    return new WP_Error('mkdir_failed', $check_folder->get_error_message());
   }
   
   // if (!file_exists($backup_folder)) {
