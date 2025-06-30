@@ -31,7 +31,14 @@ class WP_Backup_Cron_Manager {
         }
 
         $this->base_path = $upload_dir['basedir'] . '/wp-backup-cron-manager/';
-        $this->fs->mkdir($this->base_path);
+
+        // check if folder exists
+        if (!$this->fs->exists($this->base_path)) {
+            $check_folder = $this->fs->mkdir($this->base_path, 0755);
+            if (is_wp_error($check_folder)) {
+                return new WP_Error('mkdir_failed', $check_folder->get_error_message());
+            }
+        }
 
         $this->lock_file = $this->base_path . $task_id . '.lock';
         $this->history_file = $this->base_path . $task_id . '.json';
