@@ -51,6 +51,7 @@
   require_once WP_BACKUP_PLUGIN_PATH . 'inc/libs/backup-file-system.php';
   require_once WP_BACKUP_PLUGIN_PATH . 'inc/libs/restore-database.php';
   require_once WP_BACKUP_PLUGIN_PATH . 'inc/libs/restore-file-system.php';
+  require_once WP_BACKUP_PLUGIN_PATH . 'inc/libs/backup-cron-manager.php';
 
   # include static file
   require_once WP_BACKUP_PLUGIN_PATH . 'inc/static.php';

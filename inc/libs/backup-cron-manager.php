@@ -24,7 +24,13 @@ class WP_Backup_Cron_Manager {
         global $wp_filesystem;
         $this->fs = $wp_filesystem;
 
-        $this->base_path = WP_CONTENT_DIR . '/wp-backup-cron-manager/';
+        // folder uploads
+        $upload_dir = wp_upload_dir();
+        if (empty($upload_dir['basedir'])) {
+            return new WP_Error('upload_dir_error', "Uh-oh! 📂 Couldn't get the upload directory. Please check your WordPress upload settings and try again! 🙏");
+        }
+
+        $this->base_path = $upload_dir['basedir'] . '/wp-backup-cron-manager/';
         $this->fs->mkdir($this->base_path);
 
         $this->lock_file = $this->base_path . $task_id . '.lock';

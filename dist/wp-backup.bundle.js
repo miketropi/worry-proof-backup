@@ -31152,34 +31152,15 @@ __webpack_require__.r(__webpack_exports__);
 
 function BackupScheduleConfig() {
   return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("div", {
-    children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)(_Notification__WEBPACK_IMPORTED_MODULE_0__["default"], {
-      type: "info",
-      title: "WordPress Cron & Backup Scheduling",
-      children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)("p", {
-        className: "tw-text-xs",
-        children: ["We use ", /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("strong", {
-          children: "WordPress cron"
-        }), " to schedule automatic backups. This is WordPress's built-in scheduling system that manages when your backups run."]
-      }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)("p", {
+    children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)(_Notification__WEBPACK_IMPORTED_MODULE_0__["default"], {
+      type: "warning",
+      title: "Backup Scheduling",
+      children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)("p", {
         className: "tw-text-xs",
         children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("strong", {
-          children: "How WordPress cron works:"
-        }), " Unlike traditional server cron jobs, WordPress cron is \"virtual\" - it only runs when someone visits your site. When a visitor loads a page, WordPress checks if any scheduled tasks (like backups) are due and executes them."]
-      }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("p", {
-        className: "tw-text-xs",
-        children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("strong", {
-          children: "Potential risks:"
-        })
-      }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)("ul", {
-        className: "tw-list-disc tw-list-inside tw-ml-2 tw-space-y-1 tw-text-xs",
-        children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("li", {
-          children: "Backups may be delayed if your site has low traffic"
-        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("li", {
-          children: "Long-running backups could timeout if visitors leave the page"
-        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("li", {
-          children: "Server resources may be limited during peak traffic times"
-        })]
-      })]
+          children: "Heads up! \uD83D\uDEA8 "
+        }), " This feature only works effectively when your website has stable traffic. If your data is too large it can take hours or even days for the process to complete. \u23F0 \uD83D\uDCCA"]
+      })
     })
   });
 }
