@@ -4,6 +4,15 @@
  * @since 1.0.0
  * @package WP-BACKUP
  */
+
+// wp remove "\"
+$bk_folder = wp_unslash("\/Users\/mike\/Local Sites\/recheck-theme\/app\/public\/wp-content\/uploads\/wp-backup\/backup_a94842da-61d4-4702-b239-ddfd42211e9d_2025-07-01_07-37-47");
+
+$bk_size = wp_backup_calc_folder_size($bk_folder);
+
+echo '<pre>';
+print_r($bk_size);
+echo '</pre>';
 ?>
 
 <div id="WP-BACKUP-ADMIN-PAGE" class="wrap tw-font-space-mono">

@@ -1011,3 +1011,163 @@ function wp_backup_delete_process_restore_id($backup_folder = '') {
 
   return true;
 }
+
+function wp_backup_get_period_key($type = 'weekly') {
+  switch ($type) {
+      case 'daily': return date('Y-m-d');
+      case 'monthly': return date('Y-m');
+      case 'weekly': return date('o-W');
+      case 'yearly': return date('Y');
+      case 'hourly': return date('Y-m-d-H');
+      default: return 'custom-' . date('U');
+  }
+}
+
+
+/**
+ * Cron functions helper
+ * @since 1.0.0
+ * 
+ * wp_backup_cron_step__create_config_file: Create config file
+ * wp_backup_cron_step__database: Backup database
+ * wp_backup_cron_step__plugin: Backup plugin
+ * wp_backup_cron_step__theme: Backup theme
+ * wp_backup_cron_step__uploads: Backup uploads
+ * wp_backup_cron_step__finish: Finish backup
+ */
+
+function wp_backup_cron_step__create_config_file($context) {
+  $backup_name = $context['backup_name'] ?? 'Backup Schedule (' . gmdate('F j, Y \a\t g:i A') . ')';
+  $backup_types = $context['backup_types'] ?? [];
+  $step = $context['step'] ?? 0;
+
+  $config_file = wp_backup_generate_config_file([
+    'backup_name' => $backup_name,
+    'backup_types' => implode(',', $backup_types),
+  ]);
+
+  // check if $config_file is a WP_Error
+  if (is_wp_error($config_file)) {
+    return $config_file;
+  }
+
+  // get name folder from $config_file
+  $name_folder = $config_file['name_folder'] ?? '';
+
+  // backup folder
+  $backup_folder = $config_file['backup_folder'] ?? '';
+
+  // check if $name_folder is not empty
+  if (empty($name_folder)) {
+    return new WP_Error('name_folder_empty', esc_html__('name folder is empty', 'wp-backup'));
+  }
+
+  return [
+    'completed' => false,
+    'start_time' => time(),
+    'name_folder' => $name_folder,
+    'backup_folder' => $backup_folder,
+    'step' => (int) $step + 1,
+  ];
+}
+
+function wp_backup_cron_step__database($context) {
+  ignore_user_abort(true); 
+  $step = $context['step'] ?? 0;
+
+  // create backup database
+  $backup_ssid = $context['name_folder'] ?? '';
+
+  // check if $backup_ssid is not empty
+  if (empty($backup_ssid)) {
+    return new WP_Error('backup_ssid_empty', esc_html__('backup ssid is empty', 'wp-backup'));
+  }
+
+  $backup = new WP_Backup_Database(5000, $backup_ssid);
+
+  // check if $backup is a WP_Error
+
+  // check error $backup
+  if (is_wp_error($backup)) {
+    return new WP_Error('backup_database_failed', $backup->get_error_message());
+  }
+
+  if (!isset($context['backup_ssid']) || empty($context['backup_ssid'])) {
+    $result = $backup->startBackup();
+
+    // check error $result
+    if (is_wp_error($result)) {
+      return new WP_Error('backup_database_failed', $result->get_error_message());
+    }
+
+    return [
+      'backup_ssid' => $backup_ssid,
+    ];
+  } else {
+    $done = false;
+
+    try {
+      while (!$done) {
+        $progress = $backup->processStep();
+  
+        // check error $progress
+        if (is_wp_error($progress)) {
+          return new WP_Error('backup_database_failed', $progress->get_error_message());
+        }
+  
+        if ($progress['done'] == true) {
+          $done = true;
+        }
+      } 
+    } catch (Exception $e) {
+      // if error, skip step
+      return [
+        'backup_database_error_message' => $e->getMessage(),
+        'step' => (int) $step + 1,
+      ];
+    }
+
+    // if($done !== true) {
+    //   return [];
+    // }
+
+    $result = $backup->finishBackup();
+
+    // check error $result
+    if (is_wp_error($result)) {
+      return new WP_Error('backup_database_failed', $result->get_error_message());
+    }
+
+    return [
+      'step' => (int) $step + 1,
+    ];
+  }
+}
+
+function wp_backup_cron_step__finish($context) {
+  $name_folder = $context['name_folder'] ?? '';
+
+  // get backup size
+  $backup_folder = $context['backup_folder'] ?? '';
+  $backup_size = wp_backup_calc_folder_size($backup_folder);
+
+  // update status in config file
+  $result = wp_backup_update_config_file($backup_folder, [
+    'backup_status' => 'completed',
+    'backup_size' => wp_backup_format_bytes($backup_size),
+  ]);
+
+  // check error $result
+  if (is_wp_error($result)) {
+    return new WP_Error('update_config_file_failed', $result->get_error_message());
+  }
+
+  return [
+    'completed' => true,
+    'end_time' => time(),
+  ];
+}
+
+/**
+ * End Cron functions helper
+ */
