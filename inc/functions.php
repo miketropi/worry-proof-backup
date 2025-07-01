@@ -1037,7 +1037,7 @@ function wp_backup_get_period_key($type = 'weekly') {
  */
 
 function wp_backup_cron_step__create_config_file($context) {
-  $backup_name = $context['backup_name'] ?? 'Backup Schedule (' . gmdate('F j, Y \a\t g:i A') . ')';
+  $backup_name = 'Backup Schedule (' . gmdate('F j, Y \a\t g:i A') . ')';
   $backup_types = $context['backup_types'] ?? [];
   $step = $context['step'] ?? 0;
 
