@@ -1127,8 +1127,10 @@ function wp_backup_cron_step__database($context) {
         'backup_status' => 'fail',
       ]);
 
+      error_log('😵 BACKUP DATABASE FAILED: ' . $e->getMessage());
+
       return [
-        'backup_database_error_message' => $e->getMessage(),
+        // 'backup_database_error_message' => $e->getMessage(),
         // 'step' => (int) $step + 1,
         'completed' => true,
         'end_time' => time(),
@@ -1151,6 +1153,168 @@ function wp_backup_cron_step__database($context) {
     ];
   }
 }
+
+function wp_backup_cron_step__plugin($context) {
+  ignore_user_abort(true); 
+  $step = $context['step'] ?? 0;
+
+  // create backup database
+  $name_folder = isset($context['name_folder']) ? $context['name_folder'] : '';
+  $backup_folder = isset($context['backup_folder']) ? $context['backup_folder'] : '';
+
+  // create backup plugin
+  $backup = new WP_Backup_File_System([
+    'source_folder' => WP_PLUGIN_DIR,
+    'destination_folder' => $name_folder,
+    'zip_name' => 'plugins.zip',
+    'exclude' => ['wp-backup'], // phpcs:ignore WordPressVIPMinimum.Performance.WPQueryParams.PostNotIn_exclude
+  ]);
+
+  // check error $backup
+  if (is_wp_error($backup)) {
+    error_log('😵 BACKUP PLUGIN FAILED: ' . $backup->get_error_message());
+
+    // update status in config file
+    $result = wp_backup_update_config_file($backup_folder, [
+      'backup_status' => 'fail',
+    ]);
+
+    return [
+      'completed' => true,
+      'end_time' => time(),
+    ];
+  }
+
+  // run backup
+  $zip_file = $backup->runBackup();
+
+  // check error $zip_file
+  if (is_wp_error($zip_file)) {
+    error_log('😵 BACKUP PLUGIN FAILED: ' . $zip_file->get_error_message());
+
+    // update status in config file
+    $result = wp_backup_update_config_file($backup_folder, [
+      'backup_status' => 'fail',
+    ]);
+
+    return [
+      'completed' => true,
+      'end_time' => time(),
+    ];
+  }
+
+  return [
+    'step' => (int) $step + 1,
+  ];
+}
+
+function wp_backup_cron_step__theme($context) {
+  ignore_user_abort(true); 
+  $step = $context['step'] ?? 0;
+
+  // create backup database
+  $name_folder = isset($context['name_folder']) ? $context['name_folder'] : '';
+  $backup_folder = isset($context['backup_folder']) ? $context['backup_folder'] : '';
+
+  // create backup theme
+  $backup = new WP_Backup_File_System([
+    'source_folder' => WP_CONTENT_DIR . '/themes/',
+    'destination_folder' => $name_folder,
+    'zip_name' => 'themes.zip',
+  ]);
+
+  // check error $backup
+  if (is_wp_error($backup)) {
+    error_log('😵 BACKUP THEME FAILED: ' . $backup->get_error_message());
+
+    // update status in config file
+    $result = wp_backup_update_config_file($backup_folder, [
+      'backup_status' => 'fail',
+    ]);
+
+    return [
+      'completed' => true,
+      'end_time' => time(),
+    ];
+  }
+
+  // run backup
+  $zip_file = $backup->runBackup();
+
+  // check error $zip_file
+  if (is_wp_error($zip_file)) {
+    error_log('😵 BACKUP THEME FAILED: ' . $zip_file->get_error_message());
+
+    // update status in config file
+    $result = wp_backup_update_config_file($backup_folder, [
+      'backup_status' => 'fail',
+    ]);
+
+    return [
+      'completed' => true,
+      'end_time' => time(),
+    ];
+  }
+
+  return [
+    'step' => (int) $step + 1,
+  ];
+}
+
+function wp_backup_cron_step__uploads($context) {
+  ignore_user_abort(true); 
+  $step = $context['step'] ?? 0;
+
+  // create backup database
+  $name_folder = isset($context['name_folder']) ? $context['name_folder'] : '';
+  $backup_folder = isset($context['backup_folder']) ? $context['backup_folder'] : '';
+
+  // create backup uploads
+  $backup = new WP_Backup_File_System([
+    'source_folder' => WP_CONTENT_DIR . '/uploads/',
+    'destination_folder' => $name_folder,
+    'zip_name' => 'uploads.zip',
+    'exclude' => ['wp-backup', 'wp-backup-zip', 'wp-backup-cron-manager'], // phpcs:ignore WordPressVIPMinimum.Performance.WPQueryParams.PostNotIn_exclude
+  ]);
+
+  // check error $backup
+  if (is_wp_error($backup)) {
+    error_log('😵 BACKUP UPLOADS FAILED: ' . $backup->get_error_message());
+
+    // update status in config file
+    $result = wp_backup_update_config_file($backup_folder, [
+      'backup_status' => 'fail',
+    ]);
+
+    return [
+      'completed' => true,
+      'end_time' => time(),
+    ];
+  }
+
+  // run backup
+  $zip_file = $backup->runBackup();
+
+  // check error $zip_file
+  if (is_wp_error($zip_file)) {
+    error_log('😵 BACKUP UPLOADS FAILED: ' . $zip_file->get_error_message());
+
+    // update status in config file
+    $result = wp_backup_update_config_file($backup_folder, [
+      'backup_status' => 'fail',
+    ]);
+
+    return [
+      'completed' => true,
+      'end_time' => time(),
+    ];
+  }
+
+  return [
+    'step' => (int) $step + 1,
+  ];
+}
+
 
 function wp_backup_cron_step__finish($context) {
   $name_folder = $context['name_folder'] ?? '';

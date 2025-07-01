@@ -211,7 +211,7 @@ function wp_backup_ajax_generate_backup_uploads() {
     'source_folder' => WP_CONTENT_DIR . '/uploads/',
     'destination_folder' => $payload['name_folder'],
     'zip_name' => 'uploads.zip',
-    'exclude' => ['wp-backup', 'wp-backup-zip'], // phpcs:ignore WordPressVIPMinimum.Performance.WPQueryParams.PostNotIn_exclude
+    'exclude' => ['wp-backup', 'wp-backup-zip', 'wp-backup-cron-manager'], // phpcs:ignore WordPressVIPMinimum.Performance.WPQueryParams.PostNotIn_exclude
   ]);
 
   // check error $backup

@@ -22,7 +22,7 @@ add_action('init', 'wp_backup_cron_handler', 20);
 
 function wp_backup_cron_handler() {
   $init_step = 0;
-  $wp_backup_cron_types = ['database']; // ['database', 'plugin', 'theme', 'uploads'];
+  $wp_backup_cron_types = ['database', 'plugin', 'theme', 'uploads'];
   $backup_steps = [
     'step__' . $init_step => [
       'name' => 'Create config file',
