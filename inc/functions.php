@@ -1077,6 +1077,7 @@ function wp_backup_cron_step__database($context) {
 
   // create backup database
   $backup_ssid = $context['name_folder'] ?? '';
+  $backup_folder = $context['backup_folder'] ?? '';
 
   // check if $backup_ssid is not empty
   if (empty($backup_ssid)) {
@@ -1121,9 +1122,16 @@ function wp_backup_cron_step__database($context) {
       } 
     } catch (Exception $e) {
       // if error, skip step
+
+      $result = wp_backup_update_config_file($backup_folder, [
+        'backup_status' => 'fail',
+      ]);
+
       return [
         'backup_database_error_message' => $e->getMessage(),
-        'step' => (int) $step + 1,
+        // 'step' => (int) $step + 1,
+        'completed' => true,
+        'end_time' => time(),
       ];
     }
 
