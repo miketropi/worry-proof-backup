@@ -28,3 +28,16 @@ function wp_backup_after_save_backup_schedule_config($config) {
 
   $cron_manager->delete_history_file();
 }
+
+// wp_backup:after_backup_cron_completed
+add_action('wp_backup:after_backup_cron_completed', 'wp_backup_after_backup_cron_completed', 10, 2);
+function wp_backup_after_backup_cron_completed($config, $context) {
+  // delete older backups
+  if(isset($config['versionLimit']) && $config['versionLimit'] > 0) {
+    $keep_last_n_backup = $config['versionLimit'];
+    wp_backup_delete_older_backups($keep_last_n_backup);
+  }
+
+  // send mail to admin when backup cron completed
+  wp_backup_send_mail_to_admin_when_backup_cron_completed($config, $context);
+}

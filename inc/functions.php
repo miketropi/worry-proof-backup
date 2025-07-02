@@ -693,105 +693,193 @@ function wp_backup_send_report_email($args = array()) {
 <html>
 <head>
     <meta charset="UTF-8">
+    <link href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
     <style>
-        body { font-family: Arial, sans-serif; line-height: 1.6; color: #333; max-width: 600px; margin: 0 auto; padding: 20px; }
-        .header { background: #f8f9fa; padding: 20px; border-radius: 8px; margin-bottom: 20px; }
-        .section { margin-bottom: 20px; }
-        .label { font-weight: bold; color: #495057; }
-        .value { margin-left: 10px; }
-        .system-info { background: #f8f9fa; padding: 15px; border-radius: 5px; font-family: monospace; font-size: 12px; }
-        .footer { margin-top: 30px; padding-top: 20px; border-top: 1px solid #dee2e6; font-size: 12px; color: #6c757d; }
+        body { 
+            font-family: "Space Mono", monospace; 
+            line-height: 1.5; 
+            color: #2c3e50; 
+            max-width: 700px; 
+            margin: 0 auto; 
+            padding: 30px; 
+            background-color: #fafafa;
+        }
+        .header { 
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); 
+            color: white; 
+            padding: 30px; 
+            border-radius: 12px; 
+            margin-bottom: 30px; 
+            text-align: center;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        }
+        .header h2 { 
+            margin: 0 0 10px 0; 
+            font-size: 24px; 
+            font-weight: 700;
+        }
+        .header p { 
+            margin: 0; 
+            opacity: 0.9; 
+            font-size: 14px;
+        }
+        .section { 
+            background: white; 
+            padding: 25px; 
+            border-radius: 8px; 
+            margin-bottom: 20px; 
+            box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+            border-left: 4px solid #667eea;
+        }
+        .label { 
+            font-weight: 700; 
+            color: #34495e; 
+            font-size: 13px;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+        .value { 
+            margin-left: 15px; 
+            color: #2c3e50;
+            font-size: 14px;
+        }
+        .system-info { 
+            background: #f8f9fa; 
+            padding: 20px; 
+            border-radius: 6px; 
+            font-family: "Space Mono", monospace; 
+            font-size: 12px;
+            border: 1px solid #e9ecef;
+        }
+        .system-info table {
+            width: 100%; 
+            border-collapse: collapse; 
+            font-family: "Space Mono", monospace; 
+            font-size: 11px;
+        }
+        .system-info td {
+            padding: 8px 12px; 
+            border-bottom: 1px solid #e9ecef; 
+            vertical-align: top;
+        }
+        .system-info td:first-child {
+            font-weight: 700; 
+            width: 35%; 
+            color: #495057;
+        }
+        .system-info td:last-child {
+            color: #6c757d;
+        }
+        .footer { 
+            margin-top: 40px; 
+            padding-top: 25px; 
+            border-top: 2px solid #e9ecef; 
+            font-size: 11px; 
+            color: #6c757d; 
+            text-align: center;
+            font-family: "Space Mono", monospace;
+        }
+        .description {
+            background: #f8f9fa;
+            padding: 15px;
+            border-radius: 6px;
+            border-left: 3px solid #28a745;
+            margin-top: 10px;
+            white-space: pre-wrap;
+            font-size: 13px;
+            line-height: 1.6;
+        }
     </style>
 </head>
 <body>
     <div class="header">
-        <h2>🚨 WP Backup Issue Report</h2>
+        <h2>WP Backup Issue Report</h2>
         <p>New issue report submitted via WP Backup plugin</p>
     </div>
     
     <div class="section">
-        <div><span class="label">👤 Name:</span><span class="value">' . esc_html($args['name']) . '</span></div>
-        <div><span class="label">📧 Email:</span><span class="value">' . esc_html($args['email']) . '</span></div>
-        <div><span class="label">🏷️ Type:</span><span class="value">' . esc_html($args['type']) . '</span></div>
+        <div><span class="label">Name:</span><span class="value">' . esc_html($args['name']) . '</span></div>
+        <div><span class="label">Email:</span><span class="value">' . esc_html($args['email']) . '</span></div>
+        <div><span class="label">Type:</span><span class="value">' . esc_html($args['type']) . '</span></div>
     </div>
     
     <div class="section">
-        <div class="label">📝 Description:</div>
-        <div class="value" style="white-space: pre-wrap;">' . esc_html($args['description']) . '</div>
+        <div class="label">Description:</div>
+        <div class="description">' . esc_html($args['description']) . '</div>
     </div>
     
     <div class="section">
-        <div class="label">🌐 WordPress Domain:</div>
+        <div class="label">WordPress Domain:</div>
         <div class="value">' . esc_html($wordpress_domain) . '</div>
     </div>
     
     <div class="section">
-        <div class="label">💻 System Information:</div>
+        <div class="label">System Information:</div>
         <div class="system-info">
-            <table style="width: 100%; border-collapse: collapse; font-family: monospace; font-size: 12px;">
+            <table>
                 <tr>
-                    <td style="padding: 4px 8px; border-bottom: 1px solid #dee2e6; font-weight: bold; width: 40%;">Disk Free Space:</td>
-                    <td style="padding: 4px 8px; border-bottom: 1px solid #dee2e6;">' . esc_html(wp_backup_format_bytes($system_info['disk_free_space'])) . '</td>
+                    <td>Disk Free Space:</td>
+                    <td>' . esc_html(wp_backup_format_bytes($system_info['disk_free_space'])) . '</td>
                 </tr>
                 <tr>
-                    <td style="padding: 4px 8px; border-bottom: 1px solid #dee2e6; font-weight: bold;">Disk Total Space:</td>
-                    <td style="padding: 4px 8px; border-bottom: 1px solid #dee2e6;">' . esc_html(wp_backup_format_bytes($system_info['disk_total_space'])) . '</td>
+                    <td>Disk Total Space:</td>
+                    <td>' . esc_html(wp_backup_format_bytes($system_info['disk_total_space'])) . '</td>
                 </tr>
                 <tr>
-                    <td style="padding: 4px 8px; border-bottom: 1px solid #dee2e6; font-weight: bold;">Memory Limit:</td>
-                    <td style="padding: 4px 8px; border-bottom: 1px solid #dee2e6;">' . esc_html(wp_backup_format_bytes($system_info['memory_limit'])) . '</td>
+                    <td>Memory Limit:</td>
+                    <td>' . esc_html(wp_backup_format_bytes($system_info['memory_limit'])) . '</td>
                 </tr>
                 <tr>
-                    <td style="padding: 4px 8px; border-bottom: 1px solid #dee2e6; font-weight: bold;">Memory Usage:</td>
-                    <td style="padding: 4px 8px; border-bottom: 1px solid #dee2e6;">' . esc_html(wp_backup_format_bytes($system_info['memory_usage'])) . '</td>
+                    <td>Memory Usage:</td>
+                    <td>' . esc_html(wp_backup_format_bytes($system_info['memory_usage'])) . '</td>
                 </tr>
                 <tr>
-                    <td style="padding: 4px 8px; border-bottom: 1px solid #dee2e6; font-weight: bold;">Max Execution Time:</td>
-                    <td style="padding: 4px 8px; border-bottom: 1px solid #dee2e6;">' . esc_html($system_info['max_execution_time']) . ' seconds</td>
+                    <td>Max Execution Time:</td>
+                    <td>' . esc_html($system_info['max_execution_time']) . ' seconds</td>
                 </tr>
                 <tr>
-                    <td style="padding: 4px 8px; border-bottom: 1px solid #dee2e6; font-weight: bold;">Upload Max Filesize:</td>
-                    <td style="padding: 4px 8px; border-bottom: 1px solid #dee2e6;">' . esc_html(wp_backup_format_bytes($system_info['upload_max_filesize'])) . '</td>
+                    <td>Upload Max Filesize:</td>
+                    <td>' . esc_html(wp_backup_format_bytes($system_info['upload_max_filesize'])) . '</td>
                 </tr>
                 <tr>
-                    <td style="padding: 4px 8px; border-bottom: 1px solid #dee2e6; font-weight: bold;">Post Max Size:</td>
-                    <td style="padding: 4px 8px; border-bottom: 1px solid #dee2e6;">' . esc_html(wp_backup_format_bytes($system_info['post_max_size'])) . '</td>
+                    <td>Post Max Size:</td>
+                    <td>' . esc_html(wp_backup_format_bytes($system_info['post_max_size'])) . '</td>
                 </tr>
                 <tr>
-                    <td style="padding: 4px 8px; border-bottom: 1px solid #dee2e6; font-weight: bold;">Safe Mode:</td>
-                    <td style="padding: 4px 8px; border-bottom: 1px solid #dee2e6;">' . esc_html($system_info['safe_mode'] ? 'Enabled' : 'Disabled') . '</td>
+                    <td>Safe Mode:</td>
+                    <td>' . esc_html($system_info['safe_mode'] ? 'Enabled' : 'Disabled') . '</td>
                 </tr>
                 <tr>
-                    <td style="padding: 4px 8px; border-bottom: 1px solid #dee2e6; font-weight: bold;">Server Software:</td>
-                    <td style="padding: 4px 8px; border-bottom: 1px solid #dee2e6;">' . esc_html($system_info['server_software']) . '</td>
+                    <td>Server Software:</td>
+                    <td>' . esc_html($system_info['server_software']) . '</td>
                 </tr>
                 <tr>
-                    <td style="padding: 4px 8px; border-bottom: 1px solid #dee2e6; font-weight: bold;">PHP Version:</td>
-                    <td style="padding: 4px 8px; border-bottom: 1px solid #dee2e6;">' . esc_html($system_info['php_version']) . '</td>
+                    <td>PHP Version:</td>
+                    <td>' . esc_html($system_info['php_version']) . '</td>
                 </tr>
                 <tr>
-                    <td style="padding: 4px 8px; border-bottom: 1px solid #dee2e6; font-weight: bold;">WordPress Version:</td>
-                    <td style="padding: 4px 8px; border-bottom: 1px solid #dee2e6;">' . esc_html($system_info['wp_version']) . '</td>
+                    <td>WordPress Version:</td>
+                    <td>' . esc_html($system_info['wp_version']) . '</td>
                 </tr>
                 <tr>
-                    <td style="padding: 4px 8px; border-bottom: 1px solid #dee2e6; font-weight: bold;">MySQL Version:</td>
-                    <td style="padding: 4px 8px; border-bottom: 1px solid #dee2e6;">' . esc_html($system_info['mysql_version']) . '</td>
+                    <td>MySQL Version:</td>
+                    <td>' . esc_html($system_info['mysql_version']) . '</td>
                 </tr>
                 <tr>
-                    <td style="padding: 4px 8px; border-bottom: 1px solid #dee2e6; font-weight: bold;">ZipArchive:</td>
-                    <td style="padding: 4px 8px; border-bottom: 1px solid #dee2e6;">' . esc_html($system_info['ZipArchive'] ? 'Available' : 'Not Available') . '</td>
+                    <td>ZipArchive:</td>
+                    <td>' . esc_html($system_info['ZipArchive'] ? 'Available' : 'Not Available') . '</td>
                 </tr>
                 <tr>
-                    <td style="padding: 4px 8px; border-bottom: 1px solid #dee2e6; font-weight: bold;">WP Debug:</td>
-                    <td style="padding: 4px 8px; border-bottom: 1px solid #dee2e6;">' . esc_html($system_info['WP_Debug'] ? 'Enabled' : 'Disabled') . '</td>
+                    <td>WP Debug:</td>
+                    <td>' . esc_html($system_info['WP_Debug'] ? 'Enabled' : 'Disabled') . '</td>
                 </tr>
                 <tr>
-                    <td style="padding: 4px 8px; border-bottom: 1px solid #dee2e6; font-weight: bold;">WP CLI:</td>
-                    <td style="padding: 4px 8px; border-bottom: 1px solid #dee2e6;">' . esc_html($system_info['WP_CLI'] ? 'Available' : 'Not Available') . '</td>
+                    <td>WP CLI:</td>
+                    <td>' . esc_html($system_info['WP_CLI'] ? 'Available' : 'Not Available') . '</td>
                 </tr>
                 <tr>
-                    <td style="padding: 4px 8px; border-bottom: 1px solid #dee2e6; font-weight: bold;">WP Backup Version:</td>
-                    <td style="padding: 4px 8px; border-bottom: 1px solid #dee2e6;">' . esc_html($system_info['plugin_version']) . '</td>
+                    <td>WP Backup Version:</td>
+                    <td>' . esc_html($system_info['plugin_version']) . '</td>
                 </tr>
             </table>
         </div>
@@ -1090,4 +1178,219 @@ function wp_backup_get_backup_schedule_config() {
   }
 
   return json_decode($config, true);
+}
+
+/**
+ * Delete older "Backup Schedule ..." backups, keeping only the latest N backups.
+ *
+ * @param int $keep_last_n_backup Number of most recent backups to keep.
+ * @return bool True if completed, false if skipped.
+ */
+function wp_backup_delete_older_backups($keep_last_n_backup = 2) {
+  // get all backups
+  $all_backups = wp_backup_get_backups();
+
+  // filter backups with name start with "Backup Schedule ..."
+  $scheduled_backups = array_filter($all_backups, function($backup) {
+    return isset($backup['name']) && strpos($backup['name'], 'Backup Schedule') === 0;
+  });
+
+  // if count of backups <= keep last n backup, skip
+  if (count($scheduled_backups) <= $keep_last_n_backup) {
+    return false;
+  }
+
+  // sort backups by created_at
+  usort($scheduled_backups, function($a, $b) {
+    return strtotime($b['date']) <=> strtotime($a['date']);
+  });
+
+  // get backups to delete
+  $backups_to_delete = array_slice($scheduled_backups, $keep_last_n_backup);
+
+  // delete backups
+  foreach ($backups_to_delete as $backup) {
+    if (empty($backup['folder_name'])) {
+      continue;
+    }
+
+    $backup_folder = WP_CONTENT_DIR . '/uploads/wp-backup/' . $backup['folder_name'];
+    $result = wp_backup_remove_folder($backup_folder);
+
+    if (is_wp_error($result)) {
+      error_log(sprintf(
+        "🙁 DELETE BACKUP FOLDER FAILED: %s - %s",
+        esc_html($backup_folder),
+        $result->get_error_message()
+      ));
+    }
+  }
+
+  return true;
+}
+
+// send mail to admin when backup cron completed
+function wp_backup_send_mail_to_admin_when_backup_cron_completed($config, $context) {
+  // get admin email
+  $admin_email = get_option('admin_email');
+
+  // subject "Create Backup Successfully" + site name 
+  $subject = sprintf(esc_html__('Create Backup Successfully - %s', 'wp-backup'), get_bloginfo('name'));
+
+  // body is a message to admin 
+  $site_name = get_bloginfo('name');
+  $current_time = current_time('Y-m-d H:i:s');
+  $backup_types = isset($config['types']) ? implode(', ', $config['types']) : 'All types';
+
+  $body = '<!DOCTYPE html>
+    <html lang="en">
+    <head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>Backup Completed</title>
+      <link rel="preconnect" href="https://fonts.googleapis.com">
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+      <link href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+    </head>
+    <body style="margin: 0; padding: 20px; background-color: #f8f9fa; font-family: \'Space Mono\', monospace; color: #333333;">
+      <div style="max-width: 600px; margin: 0 auto; background-color: #ffffff; border: 1px solid #e9ecef; border-radius: 8px; overflow: hidden; box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);">
+        
+        <!-- Header -->
+        <div style="background-color: #f8f9fa; padding: 40px 30px; text-align: center; border-bottom: 1px solid #e9ecef;">
+          <div style="background-color: #28a745; border-radius: 50%; width: 60px; height: 60px; margin: 0 auto 20px; display: flex; align-items: center; justify-content: center;">
+            <span style="font-size: 24px; color: #ffffff;">✓</span>
+          </div>
+          <h1 style="color: #28a745; margin: 0; font-size: 24px; font-weight: 700; letter-spacing: 1px; text-transform: uppercase;">Backup Complete</h1>
+          <p style="color: #6c757d; margin: 10px 0 0; font-size: 14px; font-weight: 400;">Data successfully backed up</p>
+        </div>
+        
+        <!-- Content -->
+        <div style="padding: 40px 30px;">
+          <p style="font-size: 16px; line-height: 1.6; color: #333333; margin: 0 0 30px; font-weight: 400;">
+            Scheduled backup for <strong style="color: #28a745;">' . esc_html($site_name) . '</strong> completed successfully.
+          </p>
+          
+          <!-- Backup Details -->
+          <div style="background-color: #f8f9fa; border: 1px solid #e9ecef; border-radius: 6px; padding: 25px; margin: 30px 0;">
+            <h3 style="color: #28a745; margin: 0 0 20px; font-size: 18px; font-weight: 700; text-transform: uppercase; letter-spacing: 1px;">
+              Backup Details
+            </h3>
+            
+            <div style="display: grid; gap: 12px;">
+              <div style="display: flex; align-items: center; padding: 12px 16px; background-color: #ffffff; border: 1px solid #e9ecef; border-radius: 4px;">
+                <span style="font-weight: 700; color: #28a745; min-width: 80px; font-size: 14px;">SITE:</span>
+                <span style="color: #333333; margin-left: 10px; font-size: 14px;">' . esc_html($site_name) . '</span>
+              </div>
+              
+              <div style="display: flex; align-items: center; padding: 12px 16px; background-color: #ffffff; border: 1px solid #e9ecef; border-radius: 4px;">
+                <span style="font-weight: 700; color: #28a745; min-width: 80px; font-size: 14px;">DATE:</span>
+                <span style="color: #333333; margin-left: 10px; font-size: 14px;">' . esc_html($current_time) . '</span>
+              </div>
+              
+              <div style="display: flex; align-items: center; padding: 12px 16px; background-color: #ffffff; border: 1px solid #e9ecef; border-radius: 4px;">
+                <span style="font-weight: 700; color: #28a745; min-width: 80px; font-size: 14px;">STATUS:</span>
+                <span style="color: #28a745; margin-left: 10px; font-size: 14px; font-weight: 700;">COMPLETED</span>
+              </div>
+              
+              <div style="display: flex; align-items: center; padding: 12px 16px; background-color: #ffffff; border: 1px solid #e9ecef; border-radius: 4px;">
+                <span style="font-weight: 700; color: #28a745; min-width: 80px; font-size: 14px;">TYPES:</span>
+                <span style="color: #333333; margin-left: 10px; font-size: 14px;">' . esc_html($backup_types) . '</span>
+              </div>
+            </div>
+          </div>
+          
+          <!-- Info Box -->
+          <div style="background-color: #ffffff; border: 1px solid #e9ecef; border-radius: 6px; padding: 20px; margin: 30px 0;">
+            <div style="display: flex; align-items: flex-start;">
+              <span style="font-size: 16px; margin-right: 12px; color: #28a745;">></span>
+              <div>
+                <p style="margin: 0; color: #6c757d; font-size: 14px; line-height: 1.5; font-weight: 400;">
+                  Automated backup created by scheduled system. Manage backups via WordPress admin panel.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        <!-- Footer -->
+        <div style="background-color: #f8f9fa; padding: 25px 30px; text-align: center; border-top: 1px solid #e9ecef;">
+          <div style="display: flex; align-items: center; justify-content: center; margin-bottom: 10px;">
+            <span style="font-size: 14px; margin-right: 8px; color: #28a745;">#</span>
+            <span style="font-weight: 700; color: #28a745; text-transform: uppercase; letter-spacing: 1px;">Secure Backup</span>
+          </div>
+          <p style="margin: 0; color: #6c757d; font-size: 12px; font-weight: 400;">
+            Enterprise-grade data protection
+          </p>
+        </div>
+        
+      </div>
+      
+      <!-- Mobile Responsive Styles -->
+      <style>
+        @media only screen and (max-width: 600px) {
+          body[style*="padding: 20px"] {
+            padding: 10px !important;
+          }
+          
+          div[style*="max-width: 600px"] {
+            margin: 0 !important;
+            border-radius: 4px !important;
+          }
+          
+          div[style*="padding: 40px 30px"] {
+            padding: 25px 20px !important;
+          }
+          
+          h1[style*="font-size: 24px"] {
+            font-size: 20px !important;
+          }
+          
+          div[style*="display: grid"] {
+            display: block !important;
+          }
+          
+          div[style*="display: flex"] {
+            flex-direction: column !important;
+            align-items: flex-start !important;
+          }
+          
+          span[style*="min-width: 80px"] {
+            min-width: auto !important;
+            margin-bottom: 5px !important;
+          }
+        }
+        
+        @media only screen and (max-width: 480px) {
+          div[style*="padding: 40px 30px"] {
+            padding: 20px 15px !important;
+          }
+          
+          h1[style*="font-size: 24px"] {
+            font-size: 18px !important;
+          }
+          
+          p[style*="font-size: 16px"] {
+            font-size: 14px !important;
+          }
+        }
+      </style>
+    </body>
+    </html>';
+
+  // headers html
+  $headers = array('Content-Type: text/html; charset=UTF-8');
+
+  // send mail to admin
+  $result = wp_mail($admin_email, $subject, $body, $headers);
+
+  //  check error if send mail failed
+  if(is_wp_error($result)) {
+    error_log(sprintf(
+      "🙁 SEND MAIL TO ADMIN FAILED: %s - %s",
+      esc_html($admin_email),
+      $result->get_error_message()
+    ));
+  }
+
+  return $result;
 }

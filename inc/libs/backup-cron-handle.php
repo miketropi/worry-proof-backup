@@ -231,6 +231,9 @@ class WP_Backup_Cron_Handler {
       return new WP_Error('update_config_file_failed', $result->get_error_message());
     }
 
+    // add hook after backup completed
+    do_action('wp_backup:after_backup_cron_completed', $this->config, $context);
+
     return [
       'completed' => true,
       'end_time' => time(),
