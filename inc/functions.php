@@ -1023,323 +1023,71 @@ function wp_backup_get_period_key($type = 'weekly') {
   }
 }
 
-
-/**
- * Cron functions helper
- * @since 1.0.0
- * 
- * wp_backup_cron_step__create_config_file: Create config file
- * wp_backup_cron_step__database: Backup database
- * wp_backup_cron_step__plugin: Backup plugin
- * wp_backup_cron_step__theme: Backup theme
- * wp_backup_cron_step__uploads: Backup uploads
- * wp_backup_cron_step__finish: Finish backup
- */
-
-function wp_backup_cron_step__create_config_file($context) {
-  $backup_name = 'Backup Schedule (' . gmdate('F j, Y \a\t g:i A') . ')';
-  $backup_types = $context['backup_types'] ?? [];
-  $step = $context['step'] ?? 0;
-
-  $config_file = wp_backup_generate_config_file([
-    'backup_name' => $backup_name,
-    'backup_types' => implode(',', $backup_types),
-  ]);
-
-  // check if $config_file is a WP_Error
-  if (is_wp_error($config_file)) {
-    return $config_file;
+function wp_backup_save_backup_schedule_config($config = array()) {
+  // check $config is not empty
+  if (empty($config)) {
+    return new WP_Error('config_empty', esc_html__('config is empty', 'wp-backup'));
   }
 
-  // get name folder from $config_file
-  $name_folder = $config_file['name_folder'] ?? '';
+  // save config to wp-backup-cron-manager/wp-backup-schedule-config.json
+  $upload_dir = wp_upload_dir();
+  $backup_cron_manager_path = $upload_dir['basedir'] . '/wp-backup-cron-manager/';
 
-  // backup folder
-  $backup_folder = $config_file['backup_folder'] ?? '';
-
-  // check if $name_folder is not empty
-  if (empty($name_folder)) {
-    return new WP_Error('name_folder_empty', esc_html__('name folder is empty', 'wp-backup'));
+  // create folder if not exists
+  global $wp_filesystem;
+    
+  if (empty($wp_filesystem)) {
+    require_once(ABSPATH . 'wp-admin/includes/file.php');
+    WP_Filesystem();
   }
 
-  return [
-    'completed' => false,
-    'start_time' => time(),
-    'name_folder' => $name_folder,
-    'backup_folder' => $backup_folder,
-    'step' => (int) $step + 1,
-  ];
-}
-
-function wp_backup_cron_step__database($context) {
-  ignore_user_abort(true); 
-  $step = $context['step'] ?? 0;
-
-  // create backup database
-  $backup_ssid = $context['name_folder'] ?? '';
-  $backup_folder = $context['backup_folder'] ?? '';
-
-  // check if $backup_ssid is not empty
-  if (empty($backup_ssid)) {
-    return new WP_Error('backup_ssid_empty', esc_html__('backup ssid is empty', 'wp-backup'));
-  }
-
-  $backup = new WP_Backup_Database(5000, $backup_ssid);
-
-  // check if $backup is a WP_Error
-
-  // check error $backup
-  if (is_wp_error($backup)) {
-    return new WP_Error('backup_database_failed', $backup->get_error_message());
-  }
-
-  if (!isset($context['backup_ssid']) || empty($context['backup_ssid'])) {
-    $result = $backup->startBackup();
-
-    // check error $result
-    if (is_wp_error($result)) {
-      return new WP_Error('backup_database_failed', $result->get_error_message());
+  if (!$wp_filesystem->exists($backup_cron_manager_path)) {
+    $result = $wp_filesystem->mkdir($backup_cron_manager_path, 0755);
+    if (!$result) {
+      return new WP_Error('create_backup_cron_manager_folder_failed', esc_html__('Failed to create backup cron manager folder', 'wp-backup'));
     }
-
-    return [
-      'backup_ssid' => $backup_ssid,
-    ];
-  } else {
-    $done = false;
-
-    try {
-      while (!$done) {
-        $progress = $backup->processStep();
-  
-        // check error $progress
-        if (is_wp_error($progress)) {
-          return new WP_Error('backup_database_failed', $progress->get_error_message());
-        }
-  
-        if ($progress['done'] == true) {
-          $done = true;
-        }
-      } 
-    } catch (Exception $e) {
-      // if error, skip step
-
-      $result = wp_backup_update_config_file($backup_folder, [
-        'backup_status' => 'fail',
-      ]);
-
-      error_log('😵 BACKUP DATABASE FAILED: ' . $e->getMessage());
-
-      return [
-        // 'backup_database_error_message' => $e->getMessage(),
-        // 'step' => (int) $step + 1,
-        'completed' => true,
-        'end_time' => time(),
-      ];
-    }
-
-    // if($done !== true) {
-    //   return [];
-    // }
-
-    $result = $backup->finishBackup();
-
-    // check error $result
-    if (is_wp_error($result)) {
-      return new WP_Error('backup_database_failed', $result->get_error_message());
-    }
-
-    return [
-      'step' => (int) $step + 1,
-    ];
-  }
-}
-
-function wp_backup_cron_step__plugin($context) {
-  ignore_user_abort(true); 
-  $step = $context['step'] ?? 0;
-
-  // create backup database
-  $name_folder = isset($context['name_folder']) ? $context['name_folder'] : '';
-  $backup_folder = isset($context['backup_folder']) ? $context['backup_folder'] : '';
-
-  // create backup plugin
-  $backup = new WP_Backup_File_System([
-    'source_folder' => WP_PLUGIN_DIR,
-    'destination_folder' => $name_folder,
-    'zip_name' => 'plugins.zip',
-    'exclude' => ['wp-backup'], // phpcs:ignore WordPressVIPMinimum.Performance.WPQueryParams.PostNotIn_exclude
-  ]);
-
-  // check error $backup
-  if (is_wp_error($backup)) {
-    error_log('😵 BACKUP PLUGIN FAILED: ' . $backup->get_error_message());
-
-    // update status in config file
-    $result = wp_backup_update_config_file($backup_folder, [
-      'backup_status' => 'fail',
-    ]);
-
-    return [
-      'completed' => true,
-      'end_time' => time(),
-    ];
   }
 
-  // run backup
-  $zip_file = $backup->runBackup();
+  // save config to wp-backup-cron-manager/wp-backup-schedule-config.json
+  $config_path = $backup_cron_manager_path . 'wp-backup-schedule-config.json';
 
-  // check error $zip_file
-  if (is_wp_error($zip_file)) {
-    error_log('😵 BACKUP PLUGIN FAILED: ' . $zip_file->get_error_message());
-
-    // update status in config file
-    $result = wp_backup_update_config_file($backup_folder, [
-      'backup_status' => 'fail',
-    ]);
-
-    return [
-      'completed' => true,
-      'end_time' => time(),
-    ];
-  }
-
-  return [
-    'step' => (int) $step + 1,
-  ];
-}
-
-function wp_backup_cron_step__theme($context) {
-  ignore_user_abort(true); 
-  $step = $context['step'] ?? 0;
-
-  // create backup database
-  $name_folder = isset($context['name_folder']) ? $context['name_folder'] : '';
-  $backup_folder = isset($context['backup_folder']) ? $context['backup_folder'] : '';
-
-  // create backup theme
-  $backup = new WP_Backup_File_System([
-    'source_folder' => WP_CONTENT_DIR . '/themes/',
-    'destination_folder' => $name_folder,
-    'zip_name' => 'themes.zip',
-  ]);
-
-  // check error $backup
-  if (is_wp_error($backup)) {
-    error_log('😵 BACKUP THEME FAILED: ' . $backup->get_error_message());
-
-    // update status in config file
-    $result = wp_backup_update_config_file($backup_folder, [
-      'backup_status' => 'fail',
-    ]);
-
-    return [
-      'completed' => true,
-      'end_time' => time(),
-    ];
-  }
-
-  // run backup
-  $zip_file = $backup->runBackup();
-
-  // check error $zip_file
-  if (is_wp_error($zip_file)) {
-    error_log('😵 BACKUP THEME FAILED: ' . $zip_file->get_error_message());
-
-    // update status in config file
-    $result = wp_backup_update_config_file($backup_folder, [
-      'backup_status' => 'fail',
-    ]);
-
-    return [
-      'completed' => true,
-      'end_time' => time(),
-    ];
-  }
-
-  return [
-    'step' => (int) $step + 1,
-  ];
-}
-
-function wp_backup_cron_step__uploads($context) {
-  ignore_user_abort(true); 
-  $step = $context['step'] ?? 0;
-
-  // create backup database
-  $name_folder = isset($context['name_folder']) ? $context['name_folder'] : '';
-  $backup_folder = isset($context['backup_folder']) ? $context['backup_folder'] : '';
-
-  // create backup uploads
-  $backup = new WP_Backup_File_System([
-    'source_folder' => WP_CONTENT_DIR . '/uploads/',
-    'destination_folder' => $name_folder,
-    'zip_name' => 'uploads.zip',
-    'exclude' => ['wp-backup', 'wp-backup-zip', 'wp-backup-cron-manager'], // phpcs:ignore WordPressVIPMinimum.Performance.WPQueryParams.PostNotIn_exclude
-  ]);
-
-  // check error $backup
-  if (is_wp_error($backup)) {
-    error_log('😵 BACKUP UPLOADS FAILED: ' . $backup->get_error_message());
-
-    // update status in config file
-    $result = wp_backup_update_config_file($backup_folder, [
-      'backup_status' => 'fail',
-    ]);
-
-    return [
-      'completed' => true,
-      'end_time' => time(),
-    ];
-  }
-
-  // run backup
-  $zip_file = $backup->runBackup();
-
-  // check error $zip_file
-  if (is_wp_error($zip_file)) {
-    error_log('😵 BACKUP UPLOADS FAILED: ' . $zip_file->get_error_message());
-
-    // update status in config file
-    $result = wp_backup_update_config_file($backup_folder, [
-      'backup_status' => 'fail',
-    ]);
-
-    return [
-      'completed' => true,
-      'end_time' => time(),
-    ];
-  }
-
-  return [
-    'step' => (int) $step + 1,
-  ];
-}
-
-
-function wp_backup_cron_step__finish($context) {
-  $name_folder = $context['name_folder'] ?? '';
-
-  // get backup size
-  $backup_folder = $context['backup_folder'] ?? '';
-  $backup_size = wp_backup_calc_folder_size($backup_folder);
-
-  // update status in config file
-  $result = wp_backup_update_config_file($backup_folder, [
-    'backup_status' => 'completed',
-    'backup_size' => wp_backup_format_bytes($backup_size),
-  ]);
-
-  // check error $result
+  // save config to file
+  $result = $wp_filesystem->put_contents($config_path, json_encode($config, JSON_PRETTY_PRINT));
   if (is_wp_error($result)) {
-    return new WP_Error('update_config_file_failed', $result->get_error_message());
+    return new WP_Error('save_backup_schedule_config_failed', $result->get_error_message());
   }
 
-  return [
-    'completed' => true,
-    'end_time' => time(),
-  ];
+  // add hook after save config
+  do_action('wp_backup:after_save_backup_schedule_config', $config);
+
+  return true;
 }
 
-/**
- * End Cron functions helper
- */
+function wp_backup_get_backup_schedule_config() {
+  // get config from wp-backup-cron-manager/wp-backup-schedule-config.json
+  $upload_dir = wp_upload_dir();
+  $backup_cron_manager_path = $upload_dir['basedir'] . '/wp-backup-cron-manager/';
+
+  global $wp_filesystem;
+    
+  if (empty($wp_filesystem)) {
+    require_once(ABSPATH . 'wp-admin/includes/file.php');
+    WP_Filesystem();
+  }
+
+  // get config from file
+  $config_path = $backup_cron_manager_path . 'wp-backup-schedule-config.json';
+
+  // check if file exists
+  if (!$wp_filesystem->exists($config_path)) {
+    return false;
+  }
+
+  // get config from file
+  $config = $wp_filesystem->get_contents($config_path);
+  if (is_wp_error($config)) {
+    return new WP_Error('get_backup_schedule_config_failed', $config->get_error_message());
+  }
+
+  return json_decode($config, true);
+}

@@ -30603,16 +30603,24 @@ function _arrayWithHoles(r) { if (Array.isArray(r)) return r; }
 
 var BACKUP_TYPES = [{
   id: 'database',
-  label: 'Database'
+  label: 'Database',
+  description: 'WordPress database backup',
+  icon: '🗄️'
 }, {
   id: 'plugin',
-  label: 'Plugins'
+  label: 'Plugins',
+  description: 'All installed plugins',
+  icon: '🔌'
 }, {
   id: 'theme',
-  label: 'Themes'
+  label: 'Themes',
+  description: 'All installed themes',
+  icon: '🎨'
 }, {
   id: 'uploads',
-  label: 'Uploads Folder'
+  label: 'Uploads Folder',
+  description: 'Media files and uploads',
+  icon: '📁'
 }];
 var BackupConfigModal = function BackupConfigModal(_ref) {
   var isOpen = _ref.isOpen,
@@ -30646,120 +30654,206 @@ var BackupConfigModal = function BackupConfigModal(_ref) {
     onSave(config);
     onClose();
   };
-  return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsxs)(_Modal__WEBPACK_IMPORTED_MODULE_1__["default"], {
+  return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)(_Modal__WEBPACK_IMPORTED_MODULE_1__["default"], {
     isOpen: isOpen,
     onClose: onClose,
     title: "Backup Configuration",
     size: "md",
-    children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("div", {
-      className: "tw-mb-6 tw-p-4 tw-bg-gradient-to-r tw-from-purple-50 tw-to-pink-50 tw-border tw-border-purple-200 tw-rounded-md tw-shadow-sm",
-      children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsxs)("div", {
-        className: "tw-flex tw-items-start tw-gap-3",
-        children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("div", {
-          className: "tw-flex-shrink-0 tw-p-2 tw-bg-purple-100 tw-rounded-full",
-          children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("span", {
-            className: "tw-text-lg",
-            children: "\u26A1"
-          })
-        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsxs)("div", {
-          className: "tw-flex-1",
-          children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("h3", {
-            className: "tw-text-sm tw-font-bold tw-text-purple-900 tw-mb-1",
-            children: "Let's Set Up Your Backup! \uD83D\uDE80"
-          }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("div", {
-            className: "tw-text-sm tw-text-purple-700 tw-leading-relaxed",
-            children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("p", {
-              children: "Give your backup a name and choose what to include! You can select from database, plugins, themes, and uploads folder. Pick any combination you need! \u2728"
+    children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsxs)("div", {
+      className: "tw-space-y-6",
+      children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("div", {
+        className: "tw-p-4 tw-bg-gradient-to-r tw-from-blue-50 tw-to-purple-50 tw-border tw-border-blue-200 tw-rounded-lg tw-shadow-sm",
+        children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsxs)("div", {
+          className: "tw-flex tw-items-start tw-gap-3",
+          children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("div", {
+            className: "tw-flex-shrink-0 tw-p-2 tw-bg-blue-100 tw-rounded-lg",
+            children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("span", {
+              className: "tw-text-lg",
+              children: "\u26A1"
             })
+          }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsxs)("div", {
+            className: "tw-flex-1",
+            children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("h3", {
+              className: "tw-text-sm tw-font-bold tw-text-blue-900 tw-mb-1",
+              children: "Let's Set Up Your Backup! \uD83D\uDE80"
+            }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("div", {
+              className: "tw-text-sm tw-text-blue-700 tw-leading-relaxed",
+              children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("p", {
+                children: "Give your backup a name and choose what to include! You can select from database, plugins, themes, and uploads folder. Pick any combination you need! \u2728"
+              })
+            })]
+          })]
+        })
+      }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsxs)("form", {
+        onSubmit: handleSubmit,
+        className: "tw-space-y-8",
+        children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsxs)("div", {
+          className: "tw-space-y-4",
+          children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsxs)("div", {
+            children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("h3", {
+              className: "tw-text-base tw-font-semibold tw-text-gray-900 tw-mb-2",
+              children: "Backup Name"
+            }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("p", {
+              className: "tw-text-sm tw-text-gray-600",
+              children: "Give your backup a descriptive name to easily identify it later"
+            })]
+          }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsxs)("div", {
+            className: "tw-max-w-md",
+            children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("input", {
+              type: "text",
+              id: "backup-name",
+              value: config.name,
+              onChange: handleNameChange,
+              className: "tw-block tw-w-full tw-p-3 tw-rounded-lg tw-border tw-border-gray-200 tw-bg-gray-50 tw-text-gray-900 tw-placeholder-gray-400 tw-transition-colors focus:tw-border-blue-500 focus:tw-ring-2 focus:tw-ring-blue-200 focus:tw-bg-white tw-text-sm",
+              placeholder: "Enter backup name",
+              autoComplete: "off",
+              required: true
+            }), !config.name && /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsxs)("div", {
+              className: "tw-mt-2 tw-text-sm tw-text-red-600 tw-flex tw-items-center tw-gap-1",
+              children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("svg", {
+                className: "tw-w-4 tw-h-4",
+                fill: "none",
+                stroke: "currentColor",
+                viewBox: "0 0 24 24",
+                children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("path", {
+                  strokeLinecap: "round",
+                  strokeLinejoin: "round",
+                  strokeWidth: 2,
+                  d: "M12 8v4m0 4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"
+                })
+              }), "Backup name is required"]
+            })]
+          })]
+        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsxs)("div", {
+          className: "tw-space-y-4",
+          children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsxs)("div", {
+            children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("h3", {
+              className: "tw-text-base tw-font-semibold tw-text-gray-900 tw-mb-2",
+              children: "Backup Types"
+            }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("p", {
+              className: "tw-text-sm tw-text-gray-600",
+              children: "Select what you want to include in your backup"
+            })]
+          }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("div", {
+            className: "tw-grid tw-gap-3 sm:tw-grid-cols-1 lg:tw-grid-cols-1",
+            children: BACKUP_TYPES.map(function (type) {
+              return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsxs)("label", {
+                className: "tw-relative tw-flex tw-items-start tw-p-4 tw-rounded-lg tw-border tw-cursor-pointer tw-transition-all hover:tw-shadow-md ".concat(config.types.includes(type.id) ? 'tw-border-green-500 tw-bg-green-50 tw-ring-2 tw-ring-green-200' : 'tw-border-gray-200 tw-bg-gray-50 hover:tw-border-gray-300'),
+                children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("input", {
+                  type: "checkbox",
+                  checked: config.types.includes(type.id),
+                  onChange: function onChange() {
+                    return handleTypeChange(type.id);
+                  },
+                  className: "tw-sr-only"
+                }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsxs)("div", {
+                  className: "tw-flex tw-items-center tw-gap-3 tw-w-full",
+                  children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("div", {
+                    className: "tw-flex-shrink-0 tw-text-xl",
+                    children: type.icon
+                  }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsxs)("div", {
+                    className: "tw-flex-1 tw-min-w-0",
+                    children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("div", {
+                      className: "tw-text-sm tw-font-medium tw-text-gray-900",
+                      children: type.label
+                    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("div", {
+                      className: "tw-text-xs tw-text-gray-500 tw-leading-tight",
+                      children: type.description
+                    })]
+                  }), config.types.includes(type.id) && /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("div", {
+                    className: "tw-flex-shrink-0 tw-w-5 tw-h-5 tw-bg-green-500 tw-rounded tw-flex tw-items-center tw-justify-center",
+                    children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("svg", {
+                      className: "tw-w-3 tw-h-3 tw-text-white",
+                      fill: "currentColor",
+                      viewBox: "0 0 20 20",
+                      children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("path", {
+                        fillRule: "evenodd",
+                        d: "M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z",
+                        clipRule: "evenodd"
+                      })
+                    })
+                  })]
+                })]
+              }, type.id);
+            })
+          }), config.types.length === 0 && /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsxs)("div", {
+            className: "tw-mt-3 tw-text-sm tw-text-red-600 tw-flex tw-items-center tw-gap-2 tw-p-3 tw-bg-red-50 tw-rounded-lg tw-border tw-border-red-200",
+            children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("svg", {
+              className: "tw-w-4 tw-h-4",
+              fill: "none",
+              stroke: "currentColor",
+              viewBox: "0 0 24 24",
+              children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("path", {
+                strokeLinecap: "round",
+                strokeLinejoin: "round",
+                strokeWidth: 2,
+                d: "M12 8v4m0 4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"
+              })
+            }), "Please select at least one backup type"]
+          })]
+        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsxs)("div", {
+          className: "tw-bg-gray-50 tw-rounded-lg tw-p-4 tw-border tw-border-gray-200",
+          children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("h4", {
+            className: "tw-text-sm tw-font-semibold tw-text-gray-900 tw-mb-3",
+            children: "Backup Summary"
+          }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsxs)("div", {
+            className: "tw-space-y-2 tw-text-sm tw-text-gray-600",
+            children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsxs)("div", {
+              className: "tw-flex tw-items-center tw-gap-2",
+              children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("span", {
+                className: "tw-text-gray-400",
+                children: "\uD83D\uDCDD"
+              }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsxs)("span", {
+                children: ["Name: ", /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("strong", {
+                  className: "tw-text-gray-900",
+                  children: config.name || 'Not specified'
+                })]
+              })]
+            }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsxs)("div", {
+              className: "tw-flex tw-items-center tw-gap-2",
+              children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("span", {
+                className: "tw-text-gray-400",
+                children: "\uD83D\uDCE6"
+              }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsxs)("span", {
+                children: ["Include: ", /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsxs)("strong", {
+                  className: "tw-text-gray-900",
+                  children: [config.types.length, " type", config.types.length !== 1 ? 's' : '']
+                })]
+              })]
+            }), config.types.length > 0 && /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsxs)("div", {
+              className: "tw-flex tw-items-center tw-gap-2",
+              children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("span", {
+                className: "tw-text-gray-400",
+                children: "\u2705"
+              }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsxs)("span", {
+                children: ["Selected: ", /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("strong", {
+                  className: "tw-text-gray-900",
+                  children: config.types.map(function (id) {
+                    var _BACKUP_TYPES$find;
+                    return (_BACKUP_TYPES$find = BACKUP_TYPES.find(function (t) {
+                      return t.id === id;
+                    })) === null || _BACKUP_TYPES$find === void 0 ? void 0 : _BACKUP_TYPES$find.label;
+                  }).join(', ')
+                })]
+              })]
+            })]
+          })]
+        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsxs)("div", {
+          className: "tw-flex tw-justify-end tw-gap-3 tw-pt-6 tw-border-t tw-border-gray-200",
+          children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("button", {
+            type: "button",
+            onClick: onClose,
+            className: "tw-px-6 tw-py-2.5 tw-text-sm tw-font-medium tw-text-gray-700 tw-bg-white tw-border tw-border-gray-200 tw-rounded-lg tw-shadow-sm hover:tw-bg-gray-50 hover:tw-border-gray-300 tw-transition-colors focus:tw-outline-none focus:tw-ring-2 focus:tw-ring-offset-2 focus:tw-ring-blue-500",
+            children: "Cancel"
+          }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("button", {
+            type: "submit",
+            disabled: !config.name || config.types.length === 0,
+            className: "tw-px-6 tw-py-2.5 tw-text-sm tw-font-medium tw-text-white tw-bg-blue-600 tw-rounded-lg tw-shadow-sm hover:tw-bg-blue-700 tw-transition-colors focus:tw-outline-none focus:tw-ring-2 focus:tw-ring-offset-2 focus:tw-ring-blue-500 disabled:tw-opacity-50 disabled:tw-cursor-not-allowed disabled:hover:tw-bg-blue-600",
+            children: "Start Backup"
           })]
         })]
-      })
-    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsxs)("form", {
-      onSubmit: handleSubmit,
-      className: "tw-space-y-8",
-      children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsxs)("div", {
-        className: "tw-space-y-2",
-        children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("label", {
-          htmlFor: "backup-name",
-          className: "tw-block tw-text-sm tw-font-semibold tw-text-gray-800",
-          children: "Backup Name"
-        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("input", {
-          type: "text",
-          id: "backup-name",
-          value: config.name,
-          onChange: handleNameChange,
-          className: "tw-block tw-w-full tw-p-4 tw-rounded-lg tw-border tw-border-gray-200 tw-bg-gray-50 tw-text-gray-900 tw-placeholder-gray-400 tw-transition-colors focus:tw-border-blue-500 focus:tw-ring-2 focus:tw-ring-blue-200 focus:tw-bg-white",
-          placeholder: "Enter backup name",
-          autoComplete: "off",
-          required: true
-        }), !config.name && /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsxs)("div", {
-          className: "tw-mt-2 tw-text-sm tw-text-red-600 tw-flex tw-items-center tw-gap-1",
-          children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("svg", {
-            className: "tw-w-4 tw-h-4",
-            fill: "none",
-            stroke: "currentColor",
-            viewBox: "0 0 24 24",
-            children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("path", {
-              strokeLinecap: "round",
-              strokeLinejoin: "round",
-              strokeWidth: 2,
-              d: "M12 8v4m0 4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"
-            })
-          }), "Backup name is required"]
-        })]
-      }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsxs)("div", {
-        className: "tw-space-y-3",
-        children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("label", {
-          className: "tw-block tw-text-sm tw-font-semibold tw-text-gray-800",
-          children: "Backup Types"
-        }), config.types.length === 0 && /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsxs)("div", {
-          className: "tw-mt-2 tw-text-sm tw-text-red-600 tw-flex tw-items-center tw-gap-1",
-          children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("svg", {
-            className: "tw-w-4 tw-h-4",
-            fill: "none",
-            stroke: "currentColor",
-            viewBox: "0 0 24 24",
-            children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("path", {
-              strokeLinecap: "round",
-              strokeLinejoin: "round",
-              strokeWidth: 2,
-              d: "M12 8v4m0 4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"
-            })
-          }), "Please select at least one backup type"]
-        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("div", {
-          className: "tw-grid tw-gap-3 tw-p-4 tw-bg-gray-50 tw-rounded-lg tw-border tw-border-gray-200",
-          children: BACKUP_TYPES.map(function (type) {
-            return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsxs)("label", {
-              className: "tw-flex tw-items-center tw-p-3 tw-rounded-md hover:tw-bg-white tw-transition-colors tw-cursor-pointer",
-              children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("input", {
-                type: "checkbox",
-                checked: config.types.includes(type.id),
-                onChange: function onChange() {
-                  return handleTypeChange(type.id);
-                },
-                className: "tw-h-5 tw-w-5 tw-rounded-md tw-border-gray-300 tw-text-blue-600 focus:tw-ring-2 focus:tw-ring-blue-200"
-              }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("span", {
-                className: "tw-ml-3 tw-text-sm tw-font-medium tw-text-gray-700",
-                children: type.label
-              })]
-            }, type.id);
-          })
-        })]
-      }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsxs)("div", {
-        className: "tw-flex tw-justify-end tw-gap-3 tw-pt-6 tw-border-t tw-border-gray-200",
-        children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("button", {
-          type: "button",
-          onClick: onClose,
-          className: "tw-px-5 tw-py-2.5 tw-text-sm tw-font-medium tw-text-gray-700 tw-bg-white tw-border tw-border-gray-200 tw-rounded-lg tw-shadow-sm hover:tw-bg-gray-50 hover:tw-border-gray-300 tw-transition-colors focus:tw-outline-none focus:tw-ring-2 focus:tw-ring-offset-2 focus:tw-ring-blue-500",
-          children: "Cancel"
-        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("button", {
-          type: "submit",
-          disabled: !config.name || config.types.length === 0,
-          className: "tw-px-5 tw-py-2.5 tw-text-sm tw-font-medium tw-text-white tw-bg-blue-600 tw-rounded-lg tw-shadow-sm hover:tw-bg-blue-700 tw-transition-colors focus:tw-outline-none focus:tw-ring-2 focus:tw-ring-offset-2 focus:tw-ring-blue-500 disabled:tw-opacity-50 disabled:tw-cursor-not-allowed disabled:hover:tw-bg-blue-600",
-          children: "Start Backup"
-        })]
       })]
-    })]
+    })
   });
 };
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (BackupConfigModal);
@@ -31146,22 +31240,475 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "default": () => (/* binding */ BackupScheduleConfig)
 /* harmony export */ });
-/* harmony import */ var _Notification__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./Notification */ "./src/components/Notification.jsx");
-/* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react/jsx-runtime */ "./node_modules/react/jsx-runtime.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _Notification__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./Notification */ "./src/components/Notification.jsx");
+/* harmony import */ var _util_lib__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../util/lib */ "./src/util/lib.js");
+/* harmony import */ var _Toast__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./Toast */ "./src/components/Toast.jsx");
+/* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! react/jsx-runtime */ "./node_modules/react/jsx-runtime.js");
+function _typeof(o) { "@babel/helpers - typeof"; return _typeof = "function" == typeof Symbol && "symbol" == typeof Symbol.iterator ? function (o) { return typeof o; } : function (o) { return o && "function" == typeof Symbol && o.constructor === Symbol && o !== Symbol.prototype ? "symbol" : typeof o; }, _typeof(o); }
+function _toConsumableArray(r) { return _arrayWithoutHoles(r) || _iterableToArray(r) || _unsupportedIterableToArray(r) || _nonIterableSpread(); }
+function _nonIterableSpread() { throw new TypeError("Invalid attempt to spread non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method."); }
+function _iterableToArray(r) { if ("undefined" != typeof Symbol && null != r[Symbol.iterator] || null != r["@@iterator"]) return Array.from(r); }
+function _arrayWithoutHoles(r) { if (Array.isArray(r)) return _arrayLikeToArray(r); }
+function ownKeys(e, r) { var t = Object.keys(e); if (Object.getOwnPropertySymbols) { var o = Object.getOwnPropertySymbols(e); r && (o = o.filter(function (r) { return Object.getOwnPropertyDescriptor(e, r).enumerable; })), t.push.apply(t, o); } return t; }
+function _objectSpread(e) { for (var r = 1; r < arguments.length; r++) { var t = null != arguments[r] ? arguments[r] : {}; r % 2 ? ownKeys(Object(t), !0).forEach(function (r) { _defineProperty(e, r, t[r]); }) : Object.getOwnPropertyDescriptors ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t)) : ownKeys(Object(t)).forEach(function (r) { Object.defineProperty(e, r, Object.getOwnPropertyDescriptor(t, r)); }); } return e; }
+function _defineProperty(e, r, t) { return (r = _toPropertyKey(r)) in e ? Object.defineProperty(e, r, { value: t, enumerable: !0, configurable: !0, writable: !0 }) : e[r] = t, e; }
+function _toPropertyKey(t) { var i = _toPrimitive(t, "string"); return "symbol" == _typeof(i) ? i : i + ""; }
+function _toPrimitive(t, r) { if ("object" != _typeof(t) || !t) return t; var e = t[Symbol.toPrimitive]; if (void 0 !== e) { var i = e.call(t, r || "default"); if ("object" != _typeof(i)) return i; throw new TypeError("@@toPrimitive must return a primitive value."); } return ("string" === r ? String : Number)(t); }
+function _regenerator() { /*! regenerator-runtime -- Copyright (c) 2014-present, Facebook, Inc. -- license (MIT): https://github.com/babel/babel/blob/main/packages/babel-helpers/LICENSE */ var e, t, r = "function" == typeof Symbol ? Symbol : {}, n = r.iterator || "@@iterator", o = r.toStringTag || "@@toStringTag"; function i(r, n, o, i) { var c = n && n.prototype instanceof Generator ? n : Generator, u = Object.create(c.prototype); return _regeneratorDefine2(u, "_invoke", function (r, n, o) { var i, c, u, f = 0, p = o || [], y = !1, G = { p: 0, n: 0, v: e, a: d, f: d.bind(e, 4), d: function d(t, r) { return i = t, c = 0, u = e, G.n = r, a; } }; function d(r, n) { for (c = r, u = n, t = 0; !y && f && !o && t < p.length; t++) { var o, i = p[t], d = G.p, l = i[2]; r > 3 ? (o = l === n) && (u = i[(c = i[4]) ? 5 : (c = 3, 3)], i[4] = i[5] = e) : i[0] <= d && ((o = r < 2 && d < i[1]) ? (c = 0, G.v = n, G.n = i[1]) : d < l && (o = r < 3 || i[0] > n || n > l) && (i[4] = r, i[5] = n, G.n = l, c = 0)); } if (o || r > 1) return a; throw y = !0, n; } return function (o, p, l) { if (f > 1) throw TypeError("Generator is already running"); for (y && 1 === p && d(p, l), c = p, u = l; (t = c < 2 ? e : u) || !y;) { i || (c ? c < 3 ? (c > 1 && (G.n = -1), d(c, u)) : G.n = u : G.v = u); try { if (f = 2, i) { if (c || (o = "next"), t = i[o]) { if (!(t = t.call(i, u))) throw TypeError("iterator result is not an object"); if (!t.done) return t; u = t.value, c < 2 && (c = 0); } else 1 === c && (t = i["return"]) && t.call(i), c < 2 && (u = TypeError("The iterator does not provide a '" + o + "' method"), c = 1); i = e; } else if ((t = (y = G.n < 0) ? u : r.call(n, G)) !== a) break; } catch (t) { i = e, c = 1, u = t; } finally { f = 1; } } return { value: t, done: y }; }; }(r, o, i), !0), u; } var a = {}; function Generator() {} function GeneratorFunction() {} function GeneratorFunctionPrototype() {} t = Object.getPrototypeOf; var c = [][n] ? t(t([][n]())) : (_regeneratorDefine2(t = {}, n, function () { return this; }), t), u = GeneratorFunctionPrototype.prototype = Generator.prototype = Object.create(c); function f(e) { return Object.setPrototypeOf ? Object.setPrototypeOf(e, GeneratorFunctionPrototype) : (e.__proto__ = GeneratorFunctionPrototype, _regeneratorDefine2(e, o, "GeneratorFunction")), e.prototype = Object.create(u), e; } return GeneratorFunction.prototype = GeneratorFunctionPrototype, _regeneratorDefine2(u, "constructor", GeneratorFunctionPrototype), _regeneratorDefine2(GeneratorFunctionPrototype, "constructor", GeneratorFunction), GeneratorFunction.displayName = "GeneratorFunction", _regeneratorDefine2(GeneratorFunctionPrototype, o, "GeneratorFunction"), _regeneratorDefine2(u), _regeneratorDefine2(u, o, "Generator"), _regeneratorDefine2(u, n, function () { return this; }), _regeneratorDefine2(u, "toString", function () { return "[object Generator]"; }), (_regenerator = function _regenerator() { return { w: i, m: f }; })(); }
+function _regeneratorDefine2(e, r, n, t) { var i = Object.defineProperty; try { i({}, "", {}); } catch (e) { i = 0; } _regeneratorDefine2 = function _regeneratorDefine(e, r, n, t) { if (r) i ? i(e, r, { value: n, enumerable: !t, configurable: !t, writable: !t }) : e[r] = n;else { var o = function o(r, n) { _regeneratorDefine2(e, r, function (e) { return this._invoke(r, n, e); }); }; o("next", 0), o("throw", 1), o("return", 2); } }, _regeneratorDefine2(e, r, n, t); }
+function asyncGeneratorStep(n, t, e, r, o, a, c) { try { var i = n[a](c), u = i.value; } catch (n) { return void e(n); } i.done ? t(u) : Promise.resolve(u).then(r, o); }
+function _asyncToGenerator(n) { return function () { var t = this, e = arguments; return new Promise(function (r, o) { var a = n.apply(t, e); function _next(n) { asyncGeneratorStep(a, r, o, _next, _throw, "next", n); } function _throw(n) { asyncGeneratorStep(a, r, o, _next, _throw, "throw", n); } _next(void 0); }); }; }
+function _slicedToArray(r, e) { return _arrayWithHoles(r) || _iterableToArrayLimit(r, e) || _unsupportedIterableToArray(r, e) || _nonIterableRest(); }
+function _nonIterableRest() { throw new TypeError("Invalid attempt to destructure non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method."); }
+function _unsupportedIterableToArray(r, a) { if (r) { if ("string" == typeof r) return _arrayLikeToArray(r, a); var t = {}.toString.call(r).slice(8, -1); return "Object" === t && r.constructor && (t = r.constructor.name), "Map" === t || "Set" === t ? Array.from(r) : "Arguments" === t || /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(t) ? _arrayLikeToArray(r, a) : void 0; } }
+function _arrayLikeToArray(r, a) { (null == a || a > r.length) && (a = r.length); for (var e = 0, n = Array(a); e < a; e++) n[e] = r[e]; return n; }
+function _iterableToArrayLimit(r, l) { var t = null == r ? null : "undefined" != typeof Symbol && r[Symbol.iterator] || r["@@iterator"]; if (null != t) { var e, n, i, u, a = [], f = !0, o = !1; try { if (i = (t = t.call(r)).next, 0 === l) { if (Object(t) !== t) return; f = !1; } else for (; !(f = (e = i.call(t)).done) && (a.push(e.value), a.length !== l); f = !0); } catch (r) { o = !0, n = r; } finally { try { if (!f && null != t["return"] && (u = t["return"](), Object(u) !== u)) return; } finally { if (o) throw n; } } return a; } }
+function _arrayWithHoles(r) { if (Array.isArray(r)) return r; }
 
 
-function BackupScheduleConfig() {
-  return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("div", {
-    children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)(_Notification__WEBPACK_IMPORTED_MODULE_0__["default"], {
+
+
+
+var BACKUP_FREQUENCIES = [{
+  id: 'weekly',
+  label: 'Weekly',
+  description: 'Backup every week',
+  icon: '📅'
+}, {
+  id: 'monthly',
+  label: 'Monthly',
+  description: 'Backup every month',
+  icon: '🗓️'
+}];
+var BACKUP_TYPES = [{
+  id: 'database',
+  label: 'Database',
+  description: 'WordPress database backup',
+  icon: '🗄️'
+}, {
+  id: 'plugin',
+  label: 'Plugins',
+  description: 'All installed plugins',
+  icon: '🔌'
+}, {
+  id: 'theme',
+  label: 'Themes',
+  description: 'All installed themes',
+  icon: '🎨'
+}, {
+  id: 'uploads',
+  label: 'Uploads Folder',
+  description: 'Media files and uploads',
+  icon: '📁'
+}];
+var VERSION_LIMITS = [{
+  value: 1,
+  label: 'Keep last 1 backup'
+}, {
+  value: 2,
+  label: 'Keep last 2 backups'
+}, {
+  value: 3,
+  label: 'Keep last 3 backups'
+}, {
+  value: 4,
+  label: 'Keep last 4 backups'
+}, {
+  value: 5,
+  label: 'Keep last 5 backups'
+}];
+function BackupScheduleConfig(_ref) {
+  var onCancel = _ref.onCancel;
+  var toast = (0,_Toast__WEBPACK_IMPORTED_MODULE_3__.useToast)();
+  var _useState = (0,react__WEBPACK_IMPORTED_MODULE_0__.useState)(false),
+    _useState2 = _slicedToArray(_useState, 2),
+    isLoading = _useState2[0],
+    setIsLoading = _useState2[1];
+  var _useState3 = (0,react__WEBPACK_IMPORTED_MODULE_0__.useState)(false),
+    _useState4 = _slicedToArray(_useState3, 2),
+    isSaving = _useState4[0],
+    setIsSaving = _useState4[1];
+  var _useState5 = (0,react__WEBPACK_IMPORTED_MODULE_0__.useState)({
+      enabled: false,
+      frequency: 'weekly',
+      types: ['database'],
+      versionLimit: 2
+    }),
+    _useState6 = _slicedToArray(_useState5, 2),
+    schedule = _useState6[0],
+    setSchedule = _useState6[1];
+  (0,react__WEBPACK_IMPORTED_MODULE_0__.useEffect)(function () {
+    var fetchSchedule = /*#__PURE__*/function () {
+      var _ref2 = _asyncToGenerator(/*#__PURE__*/_regenerator().m(function _callee() {
+        var response;
+        return _regenerator().w(function (_context) {
+          while (1) switch (_context.n) {
+            case 0:
+              setIsLoading(true);
+              _context.n = 1;
+              return (0,_util_lib__WEBPACK_IMPORTED_MODULE_2__.getBackupScheduleConfig)();
+            case 1:
+              response = _context.v;
+              if (!(response.data === false)) {
+                _context.n = 2;
+                break;
+              }
+              setIsLoading(false);
+              return _context.a(2);
+            case 2:
+              setSchedule(response.data);
+              setIsLoading(false);
+            case 3:
+              return _context.a(2);
+          }
+        }, _callee);
+      }));
+      return function fetchSchedule() {
+        return _ref2.apply(this, arguments);
+      };
+    }();
+    fetchSchedule();
+  }, []);
+  var handleFrequencyChange = function handleFrequencyChange(frequency) {
+    setSchedule(function (prev) {
+      return _objectSpread(_objectSpread({}, prev), {}, {
+        frequency: frequency
+      });
+    });
+  };
+  var handleTypeChange = function handleTypeChange(typeId) {
+    setSchedule(function (prev) {
+      return _objectSpread(_objectSpread({}, prev), {}, {
+        types: prev.types.includes(typeId) ? prev.types.filter(function (id) {
+          return id !== typeId;
+        }) : [].concat(_toConsumableArray(prev.types), [typeId])
+      });
+    });
+  };
+  var handleVersionLimitChange = function handleVersionLimitChange(e) {
+    setSchedule(function (prev) {
+      return _objectSpread(_objectSpread({}, prev), {}, {
+        versionLimit: parseInt(e.target.value)
+      });
+    });
+  };
+  var handleEnableToggle = function handleEnableToggle() {
+    setSchedule(function (prev) {
+      return _objectSpread(_objectSpread({}, prev), {}, {
+        enabled: !prev.enabled
+      });
+    });
+  };
+  var handleSaveSchedule = /*#__PURE__*/function () {
+    var _ref3 = _asyncToGenerator(/*#__PURE__*/_regenerator().m(function _callee2() {
+      var response;
+      return _regenerator().w(function (_context2) {
+        while (1) switch (_context2.n) {
+          case 0:
+            // TODO: Implement save functionality
+            // console.log('Saving schedule:', schedule);
+            setIsSaving(true);
+            _context2.n = 1;
+            return (0,_util_lib__WEBPACK_IMPORTED_MODULE_2__.saveBackupScheduleConfig)(schedule);
+          case 1:
+            response = _context2.v;
+            // console.log(response);
+            if (response.success) {
+              toast({
+                message: 'Backup schedule saved',
+                type: 'success'
+              });
+            } else {
+              toast({
+                message: 'Backup schedule failed',
+                type: 'error'
+              });
+            }
+            setIsSaving(false);
+          case 2:
+            return _context2.a(2);
+        }
+      }, _callee2);
+    }));
+    return function handleSaveSchedule() {
+      return _ref3.apply(this, arguments);
+    };
+  }();
+  if (isLoading) {
+    return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)("div", {
+      className: "tw-flex tw-justify-center tw-items-center tw-h-screen",
+      children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)("div", {
+        className: "tw-animate-spin tw-rounded-full tw-h-10 tw-w-10 tw-border-t-2 tw-border-b-2 tw-border-blue-500"
+      })
+    });
+  }
+  return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsxs)("div", {
+    className: "tw-space-y-6",
+    children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)(_Notification__WEBPACK_IMPORTED_MODULE_1__["default"], {
       type: "warning",
       title: "Backup Scheduling",
-      children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)("p", {
+      children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsxs)("p", {
         className: "tw-text-xs",
-        children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("strong", {
+        children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)("strong", {
           children: "Heads up! \uD83D\uDEA8 "
-        }), " This feature only works effectively when your website has stable traffic. If your data is too large it can take hours or even days for the process to complete. \u23F0 \uD83D\uDCCA"]
+        }), " This feature only works effectively when your website has stable traffic."]
       })
-    })
+    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)("div", {
+      className: "tw-bg-white",
+      children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsxs)("div", {
+        className: "tw-space-y-8",
+        children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)("div", {
+          className: "tw-space-y-4",
+          children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsxs)("div", {
+            className: "tw-flex tw-items-center tw-justify-between tw-p-4 tw-bg-gray-50 tw-rounded-lg tw-border tw-border-gray-200",
+            children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsxs)("div", {
+              className: "tw-flex tw-items-center tw-gap-3",
+              children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)("div", {
+                className: "tw-flex-shrink-0 tw-p-2 tw-bg-blue-100 tw-rounded-lg",
+                children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)("span", {
+                  className: "tw-text-lg",
+                  children: "\u26A1"
+                })
+              }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsxs)("div", {
+                children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)("h3", {
+                  className: "tw-text-base tw-font-semibold tw-text-gray-900",
+                  children: "Enable Backup Schedule"
+                }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)("p", {
+                  className: "tw-text-sm tw-text-gray-600",
+                  children: "Turn on automatic backup scheduling"
+                })]
+              })]
+            }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)("button", {
+              type: "button",
+              onClick: handleEnableToggle,
+              className: "tw-relative tw-inline-flex tw-h-6 tw-w-11 tw-flex-shrink-0 tw-cursor-pointer tw-rounded-full tw-border-2 tw-border-transparent tw-transition-colors tw-duration-200 tw-ease-in-out focus:tw-outline-none focus:tw-ring-2 focus:tw-ring-blue-500 focus:tw-ring-offset-2 ".concat(schedule.enabled ? 'tw-bg-blue-600' : 'tw-bg-gray-200'),
+              role: "switch",
+              "aria-checked": schedule.enabled,
+              children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)("span", {
+                className: "tw-pointer-events-none tw-inline-block tw-h-5 tw-w-5 tw-transform tw-rounded-full tw-bg-white tw-shadow tw-ring-0 tw-transition tw-duration-200 tw-ease-in-out ".concat(schedule.enabled ? 'tw-translate-x-5' : 'tw-translate-x-0')
+              })
+            })]
+          })
+        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsxs)("div", {
+          className: "tw-space-y-4 ".concat(!schedule.enabled ? 'tw-opacity-50 tw-pointer-events-none' : ''),
+          children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsxs)("div", {
+            children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)("h3", {
+              className: "tw-text-base tw-font-semibold tw-text-gray-900 tw-mb-2",
+              children: "Backup Frequency"
+            }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)("p", {
+              className: "tw-text-sm tw-text-gray-600",
+              children: "Choose how often you want automatic backups to run"
+            })]
+          }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)("div", {
+            className: "tw-grid tw-gap-3 sm:tw-grid-cols-2",
+            children: BACKUP_FREQUENCIES.map(function (frequency) {
+              return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsxs)("label", {
+                className: "tw-relative tw-flex tw-items-start tw-p-4 tw-rounded-lg tw-border tw-cursor-pointer tw-transition-all hover:tw-shadow-md ".concat(schedule.frequency === frequency.id ? 'tw-border-blue-500 tw-bg-blue-50 tw-ring-2 tw-ring-blue-200' : 'tw-border-gray-200 tw-bg-gray-50 hover:tw-border-gray-300'),
+                children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)("input", {
+                  type: "radio",
+                  name: "frequency",
+                  value: frequency.id,
+                  checked: schedule.frequency === frequency.id,
+                  onChange: function onChange() {
+                    return handleFrequencyChange(frequency.id);
+                  },
+                  className: "tw-sr-only"
+                }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsxs)("div", {
+                  className: "tw-flex tw-items-center tw-gap-3 tw-w-full",
+                  children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)("div", {
+                    className: "tw-flex-shrink-0 tw-text-2xl",
+                    children: frequency.icon
+                  }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsxs)("div", {
+                    className: "tw-flex-1 tw-min-w-0",
+                    children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)("div", {
+                      className: "tw-text-sm tw-font-medium tw-text-gray-900",
+                      children: frequency.label
+                    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)("div", {
+                      className: "tw-text-xs tw-text-gray-500",
+                      children: frequency.description
+                    })]
+                  }), schedule.frequency === frequency.id && /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)("div", {
+                    className: "tw-flex-shrink-0 tw-w-5 tw-h-5 tw-bg-blue-500 tw-rounded-full tw-flex tw-items-center tw-justify-center",
+                    children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)("svg", {
+                      className: "tw-w-3 tw-h-3 tw-text-white",
+                      fill: "currentColor",
+                      viewBox: "0 0 20 20",
+                      children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)("path", {
+                        fillRule: "evenodd",
+                        d: "M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z",
+                        clipRule: "evenodd"
+                      })
+                    })
+                  })]
+                })]
+              }, frequency.id);
+            })
+          })]
+        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsxs)("div", {
+          className: "tw-space-y-4 ".concat(!schedule.enabled ? 'tw-opacity-50 tw-pointer-events-none' : ''),
+          children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsxs)("div", {
+            children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)("h3", {
+              className: "tw-text-base tw-font-semibold tw-text-gray-900 tw-mb-2",
+              children: "Backup Types"
+            }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)("p", {
+              className: "tw-text-sm tw-text-gray-600",
+              children: "Select what you want to include in your scheduled backups"
+            })]
+          }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)("div", {
+            className: "tw-grid tw-gap-3 sm:tw-grid-cols-1 lg:tw-grid-cols-1",
+            children: BACKUP_TYPES.map(function (type) {
+              return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsxs)("label", {
+                className: "tw-relative tw-flex tw-items-start tw-p-4 tw-rounded-lg tw-border tw-cursor-pointer tw-transition-all hover:tw-shadow-md ".concat(schedule.types.includes(type.id) ? 'tw-border-green-500 tw-bg-green-50 tw-ring-2 tw-ring-green-200' : 'tw-border-gray-200 tw-bg-gray-50 hover:tw-border-gray-300'),
+                children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)("input", {
+                  type: "checkbox",
+                  checked: schedule.types.includes(type.id),
+                  onChange: function onChange() {
+                    return handleTypeChange(type.id);
+                  },
+                  className: "tw-sr-only"
+                }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsxs)("div", {
+                  className: "tw-flex tw-items-center tw-gap-3 tw-w-full",
+                  children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)("div", {
+                    className: "tw-flex-shrink-0 tw-text-xl",
+                    children: type.icon
+                  }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsxs)("div", {
+                    className: "tw-flex-1 tw-min-w-0",
+                    children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)("div", {
+                      className: "tw-text-sm tw-font-medium tw-text-gray-900",
+                      children: type.label
+                    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)("div", {
+                      className: "tw-text-xs tw-text-gray-500 tw-leading-tight",
+                      children: type.description
+                    })]
+                  }), schedule.types.includes(type.id) && /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)("div", {
+                    className: "tw-flex-shrink-0 tw-w-5 tw-h-5 tw-bg-green-500 tw-rounded tw-flex tw-items-center tw-justify-center",
+                    children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)("svg", {
+                      className: "tw-w-3 tw-h-3 tw-text-white",
+                      fill: "currentColor",
+                      viewBox: "0 0 20 20",
+                      children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)("path", {
+                        fillRule: "evenodd",
+                        d: "M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z",
+                        clipRule: "evenodd"
+                      })
+                    })
+                  })]
+                })]
+              }, type.id);
+            })
+          }), schedule.types.length === 0 && /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsxs)("div", {
+            className: "tw-mt-3 tw-text-sm tw-text-red-600 tw-flex tw-items-center tw-gap-2 tw-p-3 tw-bg-red-50 tw-rounded-lg tw-border tw-border-red-200",
+            children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)("svg", {
+              className: "tw-w-4 tw-h-4",
+              fill: "none",
+              stroke: "currentColor",
+              viewBox: "0 0 24 24",
+              children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)("path", {
+                strokeLinecap: "round",
+                strokeLinejoin: "round",
+                strokeWidth: 2,
+                d: "M12 8v4m0 4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"
+              })
+            }), "Please select at least one backup type"]
+          })]
+        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsxs)("div", {
+          className: "tw-space-y-4 ".concat(!schedule.enabled ? 'tw-opacity-50 tw-pointer-events-none' : ''),
+          children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsxs)("div", {
+            children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)("h3", {
+              className: "tw-text-base tw-font-semibold tw-text-gray-900 tw-mb-2",
+              children: "Backup Retention"
+            }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)("p", {
+              className: "tw-text-sm tw-text-gray-600",
+              children: "Choose how many backup versions to keep (older backups will be automatically deleted)"
+            })]
+          }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)("div", {
+            className: "tw-max-w-full",
+            children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)("select", {
+              value: schedule.versionLimit,
+              onChange: handleVersionLimitChange,
+              className: "tw-block tw-w-full tw-p-3 tw-rounded-lg tw-border tw-border-gray-200 tw-bg-gray-50 tw-text-gray-900 tw-text-sm focus:tw-border-blue-500 focus:tw-ring-2 focus:tw-ring-blue-200 focus:tw-bg-white tw-transition-colors",
+              children: VERSION_LIMITS.map(function (option) {
+                return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)("option", {
+                  value: option.value,
+                  children: option.label
+                }, option.value);
+              })
+            })
+          })]
+        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsxs)("div", {
+          className: "tw-bg-gray-50 tw-rounded-lg tw-p-4 tw-border tw-border-gray-200 ".concat(!schedule.enabled ? 'tw-opacity-50' : ''),
+          children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)("h4", {
+            className: "tw-text-sm tw-font-semibold tw-text-gray-900 tw-mb-3",
+            children: "Schedule Summary"
+          }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsxs)("div", {
+            className: "tw-space-y-2 tw-text-sm tw-text-gray-600",
+            children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsxs)("div", {
+              className: "tw-flex tw-items-center tw-gap-2",
+              children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)("span", {
+                className: "tw-text-gray-400",
+                children: "\u26A1"
+              }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsxs)("span", {
+                children: ["Schedule: ", /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)("strong", {
+                  className: "tw-text-gray-900",
+                  children: schedule.enabled ? 'Enabled' : 'Disabled'
+                })]
+              })]
+            }), schedule.enabled && /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsxs)(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.Fragment, {
+              children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsxs)("div", {
+                className: "tw-flex tw-items-center tw-gap-2",
+                children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)("span", {
+                  className: "tw-text-gray-400",
+                  children: "\uD83D\uDCC5"
+                }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsxs)("span", {
+                  children: ["Backup every ", /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)("strong", {
+                    className: "tw-text-gray-900",
+                    children: schedule.frequency === 'weekly' ? 'week' : 'month'
+                  })]
+                })]
+              }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsxs)("div", {
+                className: "tw-flex tw-items-center tw-gap-2",
+                children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)("span", {
+                  className: "tw-text-gray-400",
+                  children: "\uD83D\uDCE6"
+                }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsxs)("span", {
+                  children: ["Include: ", /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsxs)("strong", {
+                    className: "tw-text-gray-900",
+                    children: [schedule.types.length, " type", schedule.types.length !== 1 ? 's' : '']
+                  })]
+                })]
+              }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsxs)("div", {
+                className: "tw-flex tw-items-center tw-gap-2",
+                children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)("span", {
+                  className: "tw-text-gray-400",
+                  children: "\uD83D\uDDD1\uFE0F"
+                }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsxs)("span", {
+                  children: ["Keep ", /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsxs)("strong", {
+                    className: "tw-text-gray-900",
+                    children: ["last ", schedule.versionLimit, " backup", schedule.versionLimit !== 1 ? 's' : '']
+                  })]
+                })]
+              })]
+            })]
+          })]
+        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsxs)("div", {
+          className: "tw-flex tw-justify-end tw-gap-3 tw-pt-6 tw-border-t tw-border-gray-200",
+          children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)("button", {
+            type: "button",
+            className: "tw-px-6 tw-py-2.5 tw-text-sm tw-font-medium tw-text-gray-700 tw-bg-white tw-border tw-border-gray-200 tw-rounded-lg tw-shadow-sm hover:tw-bg-gray-50 hover:tw-border-gray-300 tw-transition-colors focus:tw-outline-none focus:tw-ring-2 focus:tw-ring-offset-2 focus:tw-ring-blue-500",
+            onClick: onCancel,
+            children: "Cancel"
+          }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)("button", {
+            type: "button",
+            onClick: handleSaveSchedule,
+            disabled: schedule.enabled && schedule.types.length === 0 || isSaving,
+            className: "tw-px-6 tw-py-2.5 tw-text-sm tw-font-medium tw-text-white tw-bg-blue-600 tw-rounded-lg tw-shadow-sm hover:tw-bg-blue-700 tw-transition-colors focus:tw-outline-none focus:tw-ring-2 focus:tw-ring-offset-2 focus:tw-ring-blue-500 disabled:tw-opacity-50 disabled:tw-cursor-not-allowed disabled:hover:tw-bg-blue-600 ".concat(isSaving ? 'tw-opacity-50 tw-cursor-not-allowed' : ''),
+            children: isSaving ? 'Saving...' : 'Save Schedule'
+          })]
+        })]
+      })
+    })]
   });
 }
 
@@ -31555,9 +32102,11 @@ var BackupTable = function BackupTable() {
   };
   var handleBackupSchedule = function handleBackupSchedule() {
     openModal({
-      title: 'Backup Schedule',
+      title: '⏰ Backup Schedule',
       size: 'lg',
-      children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_16__.jsx)(_BackupScheduleConfig__WEBPACK_IMPORTED_MODULE_15__["default"], {})
+      children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_16__.jsx)(_BackupScheduleConfig__WEBPACK_IMPORTED_MODULE_15__["default"], {
+        onCancel: closeModal
+      })
     });
   };
   if (isLoading) {
@@ -35490,7 +36039,9 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */   doRestoreProcess: () => (/* binding */ doRestoreProcess),
 /* harmony export */   friendlyDateTime: () => (/* binding */ friendlyDateTime),
 /* harmony export */   getBackupDownloadZipPath: () => (/* binding */ getBackupDownloadZipPath),
+/* harmony export */   getBackupScheduleConfig: () => (/* binding */ getBackupScheduleConfig),
 /* harmony export */   getBackups: () => (/* binding */ getBackups),
+/* harmony export */   saveBackupScheduleConfig: () => (/* binding */ saveBackupScheduleConfig),
 /* harmony export */   sendReportEmail: () => (/* binding */ sendReportEmail),
 /* harmony export */   uploadFileWithProgress: () => (/* binding */ uploadFileWithProgress)
 /* harmony export */ });
@@ -35837,6 +36388,61 @@ var createBackupZip = /*#__PURE__*/function () {
   }));
   return function createBackupZip(_x8) {
     return _ref16.apply(this, arguments);
+  };
+}();
+var saveBackupScheduleConfig = /*#__PURE__*/function () {
+  var _ref19 = _asyncToGenerator(/*#__PURE__*/_regenerator().m(function _callee9(payload) {
+    var endpoint, response;
+    return _regenerator().w(function (_context9) {
+      while (1) switch (_context9.n) {
+        case 0:
+          endpoint = "".concat(ajax_url, "?action=wp_backup_ajax_save_backup_schedule_config");
+          _context9.n = 1;
+          return __request(endpoint, {
+            method: 'POST',
+            headers: {
+              'Content-Type': 'application/json'
+            },
+            body: JSON.stringify({
+              payload: payload,
+              nonce: nonce.wp_backup_nonce
+            })
+          });
+        case 1:
+          response = _context9.v;
+          return _context9.a(2, response);
+      }
+    }, _callee9);
+  }));
+  return function saveBackupScheduleConfig(_x9) {
+    return _ref19.apply(this, arguments);
+  };
+}();
+var getBackupScheduleConfig = /*#__PURE__*/function () {
+  var _ref20 = _asyncToGenerator(/*#__PURE__*/_regenerator().m(function _callee0() {
+    var endpoint, response;
+    return _regenerator().w(function (_context0) {
+      while (1) switch (_context0.n) {
+        case 0:
+          endpoint = "".concat(ajax_url, "?action=wp_backup_ajax_get_backup_schedule_config");
+          _context0.n = 1;
+          return __request(endpoint, {
+            method: 'POST',
+            headers: {
+              'Content-Type': 'application/json'
+            },
+            body: JSON.stringify({
+              nonce: nonce.wp_backup_nonce
+            })
+          });
+        case 1:
+          response = _context0.v;
+          return _context0.a(2, response);
+      }
+    }, _callee0);
+  }));
+  return function getBackupScheduleConfig() {
+    return _ref20.apply(this, arguments);
   };
 }();
 

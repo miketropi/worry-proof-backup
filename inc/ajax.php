@@ -669,3 +669,43 @@ function wp_backup_ajax_create_backup_zip() {
 
   wp_send_json_success($backup_create_zip);
 }
+
+// wp_backup_ajax_save_backup_schedule_config
+add_action('wp_ajax_wp_backup_ajax_save_backup_schedule_config', 'wp_backup_ajax_save_backup_schedule_config');
+function wp_backup_ajax_save_backup_schedule_config() {
+  $json = file_get_contents("php://input");
+  $data = json_decode($json, true);
+  $nonce = $data['nonce'];
+  $payload = $data['payload'];
+
+  # check ajax nonce
+  if (!wp_verify_nonce($nonce, 'wp_backup_nonce_' . get_current_user_id())) {
+    wp_send_json_error(['message' => 'Nonce is invalid'], 403);
+  }
+
+  $result = wp_backup_save_backup_schedule_config($payload);
+
+  // check error $result
+  if (is_wp_error($result)) {
+    wp_send_json_error($result->get_error_message());
+  }
+
+  wp_send_json_success($result);
+}
+
+// wp_backup_ajax_get_backup_schedule_config
+add_action('wp_ajax_wp_backup_ajax_get_backup_schedule_config', 'wp_backup_ajax_get_backup_schedule_config');
+function wp_backup_ajax_get_backup_schedule_config() {
+  $json = file_get_contents("php://input");
+  $data = json_decode($json, true);
+  $nonce = $data['nonce'];
+
+  # check ajax nonce
+  if (!wp_verify_nonce($nonce, 'wp_backup_nonce_' . get_current_user_id())) {
+    wp_send_json_error(['message' => 'Nonce is invalid'], 403);
+  }
+
+  $result = wp_backup_get_backup_schedule_config();
+
+  wp_send_json_success($result);
+}

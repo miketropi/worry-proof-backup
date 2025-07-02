@@ -107,4 +107,9 @@ class WP_Backup_Cron_Manager {
 
         $this->fs->put_contents($this->history_file, json_encode($data, JSON_PRETTY_PRINT));
     }
+
+    // delete history file
+    public function delete_history_file() {
+        $this->fs->delete($this->history_file);
+    }
 }

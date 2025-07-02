@@ -187,9 +187,9 @@ const BackupTable = () => {
 
   const handleBackupSchedule = () => {
     openModal({
-      title: 'Backup Schedule',
+      title: '⏰ Backup Schedule',
       size: 'lg',
-      children: <BackupScheduleConfig />,
+      children: <BackupScheduleConfig onCancel={closeModal} />,
     });
   };
 

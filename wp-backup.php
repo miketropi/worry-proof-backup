@@ -52,6 +52,7 @@
   require_once WP_BACKUP_PLUGIN_PATH . 'inc/libs/restore-database.php';
   require_once WP_BACKUP_PLUGIN_PATH . 'inc/libs/restore-file-system.php';
   require_once WP_BACKUP_PLUGIN_PATH . 'inc/libs/backup-cron-manager.php';
+  require_once WP_BACKUP_PLUGIN_PATH . 'inc/libs/backup-cron-handle.php';
 
   # include static file
   require_once WP_BACKUP_PLUGIN_PATH . 'inc/static.php';
@@ -64,6 +65,8 @@
 
   # include hooks file
   require_once WP_BACKUP_PLUGIN_PATH . 'inc/hooks.php';
+
+  
 }
 
 // add link go to backup page in plugin page
