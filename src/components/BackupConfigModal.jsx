@@ -24,7 +24,7 @@ const BACKUP_TYPES = [
 const BackupConfigModal = ({ isOpen, onClose, onSave }) => {
   const [config, setConfig] = useState({
     name: '',
-    types: [],
+    types: ['database'],
   });
 
   const handleNameChange = (e) => {

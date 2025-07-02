@@ -5,7 +5,7 @@ Tags: backup, restore, import, export, database
 Requires at least: 6.0
 Tested up to: 6.8
 Requires PHP: 8.0
-Stable tag: 0.1.1
+Stable tag: 0.1.2
 License: GPLv2 or later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
 
@@ -29,11 +29,11 @@ WP Backup provides a developer-friendly way to package and import demo content, 
 == Installation ==
 1. Upload the plugin files to the `/wp-content/plugins/wp-backup` directory, or install via the WordPress Plugins screen.
 2. Activate the plugin through the 'Plugins' menu in WordPress.
-3. Access the **WP Backup** menu in your WordPress admin sidebar.
+3. Access the **WP Backup** menu in your WordPress admin tools sidebar.
 
 == Frequently Asked Questions ==
 = What does WP Backup backup? =
-It can backup your database, plugins, themes, uploads, and demo content.
+It can backup your database, plugins, themes, uploads, and solution for demo content import one Click.
 
 = Is it secure? =
 Yes, all operations are secured with WordPress nonces and AJAX.
@@ -48,12 +48,18 @@ Yes, you can use the import/export tools to move your site or demo content betwe
 4. Admin dashboard interface
 
 == Changelog ==
+= 0.1.2 =
+* Added automated backup scheduling (daily, weekly, monthly)
+* Added email notifications for completed backups
+* Enhanced security with improved nonce validation
+* Updated plugin branding to "Worry Proof Backup"
+* Improved backup folder organization
+* Added backup completion status tracking
+* Enhanced admin interface with React components
+
+== Changelog ==
 = 0.1.1 =
 * Initial release
-
-== Upgrade Notice ==
-= 0.1.1 =
-First public release.
 
 == License ==
 GPL v2 or later. See https://www.gnu.org/licenses/gpl-2.0.html for details.

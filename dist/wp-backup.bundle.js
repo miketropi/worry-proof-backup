@@ -30628,7 +30628,7 @@ var BackupConfigModal = function BackupConfigModal(_ref) {
     onSave = _ref.onSave;
   var _useState = (0,react__WEBPACK_IMPORTED_MODULE_0__.useState)({
       name: '',
-      types: []
+      types: ['database']
     }),
     _useState2 = _slicedToArray(_useState, 2),
     config = _useState2[0],

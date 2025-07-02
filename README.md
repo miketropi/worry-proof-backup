@@ -16,6 +16,9 @@ A powerful, user-friendly WordPress plugin to backup, restore, import, and expor
 - **Demo Content Import**: Provide a seamless demo content import solution for theme and plugin developers.
 - **Modern Admin UI**: Clean, React-powered admin interface for managing backups and server metrics.
 - **AJAX & Nonce Security**: All operations are secured with WordPress nonces and AJAX for a smooth experience.
+- **Automated Backup Scheduling**: Set up daily, weekly, or monthly automated backups with email notifications.
+- **Email Notifications**: Receive detailed email reports when scheduled backups complete successfully.
+- **Backup Status Tracking**: Monitor backup completion status and history through the admin interface.
 
 ## Installation
 

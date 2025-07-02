@@ -1316,10 +1316,10 @@ function wp_backup_send_mail_to_admin_when_backup_cron_completed($config, $conte
         <div style="background-color: #f8f9fa; padding: 25px 30px; text-align: center; border-top: 1px solid #e9ecef;">
           <div style="display: flex; align-items: center; justify-content: center; margin-bottom: 10px;">
             <span style="font-size: 14px; margin-right: 8px; color: #28a745;">#</span>
-            <span style="font-weight: 700; color: #28a745; text-transform: uppercase; letter-spacing: 1px;">Secure Backup</span>
+            <span style="font-weight: 700; color: #28a745; text-transform: uppercase; letter-spacing: 1px;">Worry Proof Backup</span>
           </div>
           <p style="margin: 0; color: #6c757d; font-size: 12px; font-weight: 400;">
-            Enterprise-grade data protection
+            Professional WordPress backup solution with enterprise-grade security, automated scheduling, and comprehensive data protection
           </p>
         </div>
         
