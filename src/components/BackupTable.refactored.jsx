@@ -13,6 +13,7 @@ import BackupMobileCard from './BackupMobileCard';
 import RestoreConfigModal from './RestoreConfigModal';
 import UploadBackup from './UploadBackup';
 import DownloadBackup from './DownloadBackup';
+import BackupScheduleConfig from './BackupScheduleConfig';
 
 const BackupTable = () => {
   const { backups, fetchBackups_Fn } = useBackupStore();
@@ -184,6 +185,14 @@ const BackupTable = () => {
     });
   };
 
+  const handleBackupSchedule = () => {
+    openModal({
+      title: '⏰ Backup Schedule',
+      size: 'lg',
+      children: <BackupScheduleConfig onCancel={closeModal} />,
+    });
+  };
+
   if (isLoading) {
     return <LoadingSkeleton />;
   }
@@ -199,6 +208,7 @@ const BackupTable = () => {
         onDeleteBackups={handleDeleteSelectedBackups}
         selectedBackups={selectedBackups}
         onUploadBackup={handleUploadBackup}
+        onBackupSchedule={handleBackupSchedule}
       />
 
       {/* Mobile/Tablet View */}

@@ -3,7 +3,7 @@
  * Plugin Name: Worry Proof Backup
  * Plugin URI: https://github.com/miketropi/wp-backup
  * Description: 🛡️ Professional WordPress backup solution with comprehensive database and file system protection. Features automated backups, secure storage, and one-click restoration capabilities. Built for reliability and ease of use in production environments. **100% FREE FOREVER** - No hidden costs, no premium tiers, no limitations.
- * Version: 0.1.1
+ * Version: 0.1.2
  * Requires at least: 6.0
  * Requires PHP: 8.0
  * Author: @Mike
@@ -35,7 +35,7 @@
   define( 'WP_BACKUP_PLUGIN_URL', plugin_dir_url( __FILE__ ) );
 
   # define plugin version
-  define( 'WP_BACKUP_PLUGIN_VERSION', '0.1.1' );
+  define( 'WP_BACKUP_PLUGIN_VERSION', '0.1.2' );
 
   # beta version
   define( 'WP_BACKUP_PLUGIN_BETA', true );
@@ -51,6 +51,8 @@
   require_once WP_BACKUP_PLUGIN_PATH . 'inc/libs/backup-file-system.php';
   require_once WP_BACKUP_PLUGIN_PATH . 'inc/libs/restore-database.php';
   require_once WP_BACKUP_PLUGIN_PATH . 'inc/libs/restore-file-system.php';
+  require_once WP_BACKUP_PLUGIN_PATH . 'inc/libs/backup-cron-manager.php';
+  require_once WP_BACKUP_PLUGIN_PATH . 'inc/libs/backup-cron-handle.php';
 
   # include static file
   require_once WP_BACKUP_PLUGIN_PATH . 'inc/static.php';
@@ -63,6 +65,8 @@
 
   # include hooks file
   require_once WP_BACKUP_PLUGIN_PATH . 'inc/hooks.php';
+
+  
 }
 
 // add link go to backup page in plugin page

@@ -198,3 +198,34 @@ export const createBackupZip = async (folder_name) => {
 
   return response;
 };
+
+export const saveBackupScheduleConfig = async (payload) => {
+  const endpoint = `${ajax_url}?action=wp_backup_ajax_save_backup_schedule_config`;
+  const response = await __request(endpoint, {
+    method: 'POST',
+    headers: {
+      'Content-Type': 'application/json',
+    },
+    body: JSON.stringify({
+      payload,
+      nonce: nonce.wp_backup_nonce
+    }),
+  });
+
+  return response;
+}
+
+export const getBackupScheduleConfig = async () => {
+  const endpoint = `${ajax_url}?action=wp_backup_ajax_get_backup_schedule_config`;
+  const response = await __request(endpoint, {
+    method: 'POST',
+    headers: {
+      'Content-Type': 'application/json',
+    },
+    body: JSON.stringify({
+      nonce: nonce.wp_backup_nonce
+    }),
+  });
+
+  return response;
+}
