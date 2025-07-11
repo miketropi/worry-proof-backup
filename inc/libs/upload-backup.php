@@ -1,7 +1,7 @@
 <?php
 if ( ! defined( 'ABSPATH' ) ) exit; // Exit if accessed directly
 /**
- * WP_Upload_Backup_File Class
+ * WORRPB_Upload_Backup_File Class
  *
  * Upload and extract a backup zip file to wp-content/uploads/wp-backup
  *
@@ -11,7 +11,7 @@ if ( ! defined( 'ABSPATH' ) ) exit; // Exit if accessed directly
  * @license: GPL-2.0+
  */
 
-class WP_Upload_Backup_File {
+class WORRPB_Upload_Backup_File {
     private $file;
     private $session_id;
     private $upload_dir;

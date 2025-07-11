@@ -42,6 +42,44 @@ WP Backup provides a developer-friendly way to package and import demo content, 
 - WordPress 6.0 or higher
 - PHP 8.0 or higher
 
+---
+
+## ⚠️ PHP 8.0 or Higher Required – Why?
+
+**Worry Proof Backup** is built with modern techniques to ensure your data **restores safely, quickly, and reliably** – especially when working with large backup files.
+
+We require **PHP 8.0 or higher** for the following reasons:
+
+### 🚀 1. Superior Performance
+
+PHP 8 introduces **Just-In-Time (JIT)** compilation, which significantly speeds up operations like:
+
+* Extracting ZIP archives with tens of thousands of files
+* Reading and writing large file contents in memory
+* Fast, stable looping over file lists
+
+### 🔒 2. Improved Stability and Accuracy
+
+In PHP 7, some built-in functions like `stream_get_contents()` can behave inconsistently with large files or streams. PHP 8 provides:
+
+* More reliable file extraction
+* Fewer write failures and timeouts
+* Better handling of memory streams
+
+### 🧠 3. Better File System Handling
+
+Our plugin supports restoring entire folders with **thousands of files**, which demands fast and reliable filesystem operations – something PHP 8 handles far better than PHP 7.
+
+---
+
+### 💡 Still Using PHP 7?
+
+We strongly recommend upgrading to **PHP 8.0+** for optimal compatibility, performance, and security – not just for this plugin, but for your entire WordPress site.
+
+Most hosting providers support PHP 8 – feel free to reach out to your hosting support team and ask for an upgrade.
+
+---
+
 ## License
 
 GPL v2 or later. See [LICENSE](https://www.gnu.org/licenses/gpl-2.0.html) for details.

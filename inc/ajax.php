@@ -128,7 +128,7 @@ function worrpb_ajax_generate_backup_plugin() {
     'source_folder' => WP_PLUGIN_DIR,
     'destination_folder' => $payload['name_folder'],
     'zip_name' => 'plugins.zip',
-    'exclude' => ['wp-backup'], // phpcs:ignore WordPressVIPMinimum.Performance.WPQueryParams.PostNotIn_exclude
+    'exclude' => ['worry-proof-backup'], // phpcs:ignore WordPressVIPMinimum.Performance.WPQueryParams.PostNotIn_exclude
   ]);
 
   // check error $backup
@@ -358,7 +358,7 @@ function worrpb_ajax_restore_database() {
   $exclude_tables = isset($payload['exclude_tables']) ? $payload['exclude_tables'] : [];
   $exclude_tables = apply_filters('wp_backup:restore_database_exclude_tables', $exclude_tables, $payload);
 
-  $restore_database = new WP_Restore_Database($folder_name, $exclude_tables, $backup_prefix);
+  $restore_database = new WORRPB_Restore_Database($folder_name, $exclude_tables, $backup_prefix);
 
   // check error $restore_database
   if (is_wp_error($restore_database)) {
@@ -431,24 +431,57 @@ function worrpb_ajax_restore_plugin() {
     wp_send_json_error('Zip file not found');
   }
 
-  $restore_plugin = new WP_Restore_File_System([
-    'zip_file' => $path_zip_file,
-    'destination_folder' => WP_PLUGIN_DIR,
-    'overwrite_existing' => true,
-    'exclude' => ['wp-backup'], // phpcs:ignore WordPressVIPMinimum.Performance.WPQueryParams.PostNotIn_exclude
-  ]);
+  try {
+    $restorer = new WORRPB_Restore_File_System([
+      'zip_file' => $path_zip_file,
+      'destination_folder' => WP_PLUGIN_DIR,
+      'overwrite_existing' => true,
+      'exclude' => ['worry-proof-backup'], // phpcs:ignore WordPressVIPMinimum.Performance.WPQueryParams.PostNotIn_exclude
+      'restore_progress_file_name' => '__plugin-restore-progress.json',
+    ]);
 
-  // check error $restore_plugin
-  if (is_wp_error($restore_plugin)) {
-    wp_send_json_error($restore_plugin->get_error_message());
+    $result = $restorer->runRestore();
+
+    // check error $result
+    if (is_wp_error($result)) {
+      wp_send_json_error($result->get_error_message());
+    }
+
+    if($result['done'] != true) {
+      wp_send_json_success([
+        'restore_plugin_status' => 'is_running',
+        'next_step' => false,
+        // 'progress' => $result,
+      ]);
+    } else {
+      wp_send_json_success([
+        'restore_plugin_status' => 'done',
+        'next_step' => true,
+      ]);
+    }
+
+  } catch (Exception $e) {
+    wp_send_json_error($e->getMessage());
   }
 
-  $result = $restore_plugin->runRestore();
+  // $restore_plugin = new WORRPB_Restore_File_System([
+  //   'zip_file' => $path_zip_file,
+  //   'destination_folder' => WP_PLUGIN_DIR,
+  //   'overwrite_existing' => true,
+  //   'exclude' => ['worry-proof-backup'], // phpcs:ignore WordPressVIPMinimum.Performance.WPQueryParams.PostNotIn_exclude
+  // ]);
 
-  // check error $result
-  if (is_wp_error($result)) {
-    wp_send_json_error($result->get_error_message());
-  }
+  // // check error $restore_plugin
+  // if (is_wp_error($restore_plugin)) {
+  //   wp_send_json_error($restore_plugin->get_error_message());
+  // }
+
+  // $result = $restore_plugin->runRestore();
+
+  // // check error $result
+  // if (is_wp_error($result)) {
+  //   wp_send_json_error($result->get_error_message());
+  // }
 
   wp_send_json_success([
     'restore_plugin_status' => 'done',
@@ -474,23 +507,55 @@ function worrpb_ajax_restore_theme() {
     wp_send_json_error('Zip file not found');
   }
 
-  $restore_theme = new WP_Restore_File_System([
-    'zip_file' => $path_zip_file,
-    'destination_folder' => WP_CONTENT_DIR . '/themes/',
-    'overwrite_existing' => true,
-  ]);
+  try {
+    $restorer = new WORRPB_Restore_File_System([
+      'zip_file' => $path_zip_file,
+      'destination_folder' => WP_CONTENT_DIR . '/themes/',
+      'overwrite_existing' => true,
+      'restore_progress_file_name' => '__theme-restore-progress.json',
+    ]);
 
-  // check error $restore_theme
-  if (is_wp_error($restore_theme)) {
-    wp_send_json_error($restore_theme->get_error_message());
+    $result = $restorer->runRestore();
+
+    // check error $result
+    if (is_wp_error($result)) {
+      wp_send_json_error($result->get_error_message());
+    }
+
+    if($result['done'] != true) {
+      wp_send_json_success([
+        'restore_theme_status' => 'is_running',
+        'next_step' => false,
+        // 'progress' => $result,
+      ]);
+    } else {
+      wp_send_json_success([
+        'restore_theme_status' => 'done',
+        'next_step' => true,
+      ]);
+    }
+
+  } catch (Exception $e) {
+    wp_send_json_error($e->getMessage());
   }
 
-  $result = $restore_theme->runRestore();
+  // $restore_theme = new WORRPB_Restore_File_System([
+  //   'zip_file' => $path_zip_file,
+  //   'destination_folder' => WP_CONTENT_DIR . '/themes/',
+  //   'overwrite_existing' => true,
+  // ]);
 
-  // check error $result
-  if (is_wp_error($result)) {
-    wp_send_json_error($result->get_error_message());
-  }
+  // // check error $restore_theme
+  // if (is_wp_error($restore_theme)) {
+  //   wp_send_json_error($restore_theme->get_error_message());
+  // }
+
+  // $result = $restore_theme->runRestore();
+
+  // // check error $result
+  // if (is_wp_error($result)) {
+  //   wp_send_json_error($result->get_error_message());
+  // }
 
   wp_send_json_success([
     'restore_theme_status' => 'done',
@@ -516,24 +581,57 @@ function worrpb_ajax_restore_uploads() {
     wp_send_json_error('Zip file not found');
   }
 
-  $restore_uploads = new WP_Restore_File_System([
-    'zip_file' => $path_zip_file,
-    'destination_folder' => WP_CONTENT_DIR . '/uploads/',
-    'overwrite_existing' => true,
-    'exclude' => ['wp-backup', 'wp-backup-zip'], // phpcs:ignore WordPressVIPMinimum.Performance.WPQueryParams.PostNotIn_exclude
-  ]);
+  try {
+    $restorer = new WORRPB_Restore_File_System([
+      'zip_file' => $path_zip_file,
+      'destination_folder' => WP_CONTENT_DIR . '/uploads/',
+      'overwrite_existing' => true,
+      'exclude' => ['wp-backup', 'wp-backup-zip'], // phpcs:ignore WordPressVIPMinimum.Performance.WPQueryParams.PostNotIn_exclude
+      'restore_progress_file_name' => '__uploads-restore-progress.json',
+    ]);
 
-  // check error $restore_uploads
-  if (is_wp_error($restore_uploads)) {
-    wp_send_json_error($restore_uploads->get_error_message());
+    $result = $restorer->runRestore();
+
+    // check error $result
+    if (is_wp_error($result)) {
+      wp_send_json_error($result->get_error_message());
+    }
+
+    if($result['done'] != true) {
+      wp_send_json_success([
+        'restore_uploads_status' => 'is_running',
+        'next_step' => false,
+        // 'progress' => $result,
+      ]);
+    } else {
+      wp_send_json_success([
+        'restore_uploads_status' => 'done',
+        'next_step' => true,
+      ]);
+    }
+
+  } catch (Exception $e) {
+    wp_send_json_error($e->getMessage());
   }
 
-  $result = $restore_uploads->runRestore();
+  // $restore_uploads = new WORRPB_Restore_File_System([
+  //   'zip_file' => $path_zip_file,
+  //   'destination_folder' => WP_CONTENT_DIR . '/uploads/',
+  //   'overwrite_existing' => true,
+  //   'exclude' => ['wp-backup', 'wp-backup-zip'], // phpcs:ignore WordPressVIPMinimum.Performance.WPQueryParams.PostNotIn_exclude
+  // ]);
 
-  // check error $result
-  if (is_wp_error($result)) {
-    wp_send_json_error($result->get_error_message());
-  }
+  // // check error $restore_uploads
+  // if (is_wp_error($restore_uploads)) {
+  //   wp_send_json_error($restore_uploads->get_error_message());
+  // }
+
+  // $result = $restore_uploads->runRestore();
+
+  // // check error $result
+  // if (is_wp_error($result)) {
+  //   wp_send_json_error($result->get_error_message());
+  // }
 
   wp_send_json_success([
     'restore_uploads_status' => 'done',
@@ -620,7 +718,7 @@ function worrpb_ajax_upload_backup_file() {
   // die();
 
   // upload backup file
-  $uploader = new WP_Upload_Backup_File([
+  $uploader = new WORRPB_Upload_Backup_File([
     'file' => $file,
     'session_id' => 'backup_upload_' . uniqid(),
     'overwrite' => true,

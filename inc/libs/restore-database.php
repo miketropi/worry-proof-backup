@@ -10,7 +10,7 @@ if ( ! defined( 'ABSPATH' ) ) exit; // Exit if accessed directly
  * @copyright: (c) 2025 Mike Tropi
  */
 
-class WP_Restore_Database {
+class WORRPB_Restore_Database {
     private $wpdb;
     private $restore_file;
     private $progress_file;

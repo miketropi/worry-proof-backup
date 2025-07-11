@@ -5,7 +5,7 @@ Tags: backup, restore, import, export, database
 Requires at least: 6.0
 Tested up to: 6.8
 Requires PHP: 8.0
-Stable tag: 0.1.2
+Stable tag: 0.1.3
 License: GPLv2 or later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
 
@@ -25,6 +25,34 @@ WP Backup is a comprehensive backup solution for WordPress. Effortlessly create 
 
 = Demo Content Import Solution =
 WP Backup provides a developer-friendly way to package and import demo content, making it ideal for theme and plugin authors who want to offer a quick start for their users.
+
+= ⚠️ PHP 8.0 or Higher Required – Why? =
+
+Worry Proof Backup is built with modern techniques to ensure your data restores safely, quickly, and reliably—even when working with large backup files.
+
+We require PHP 8.0 or higher for the following reasons:
+
+== 🚀 1. Superior Performance ==
+PHP 8 introduces Just-In-Time (JIT) compilation, which significantly speeds up operations like:
+* Extracting ZIP archives with tens of thousands of files
+* Reading and writing large file contents in memory
+* Fast, stable looping over file lists
+
+== 🔒 2. Improved Stability and Accuracy ==
+In PHP 7, some built-in functions like `stream_get_contents()` can behave inconsistently with large files or streams. PHP 8 provides:
+* More reliable file extraction
+* Fewer write failures and timeouts
+* Better handling of memory streams
+
+== 🧠 3. Better File System Handling ==
+Our plugin supports restoring entire folders with thousands of files, which demands fast and reliable filesystem operations—something PHP 8 handles far better than PHP 7.
+
+---
+
+= 💡 Still Using PHP 7? =
+We strongly recommend upgrading to PHP 8.0+ for optimal compatibility, performance, and security—not just for this plugin, but for your entire WordPress site.
+
+Most hosting providers support PHP 8—feel free to reach out to your hosting support team and ask for an upgrade.
 
 == Installation ==
 1. Upload the plugin files to the `/wp-content/plugins/wp-backup` directory, or install via the WordPress Plugins screen.
