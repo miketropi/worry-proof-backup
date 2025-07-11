@@ -35,7 +35,7 @@
   define( 'WP_BACKUP_PLUGIN_URL', plugin_dir_url( __FILE__ ) );
 
   # define plugin version
-  define( 'WP_BACKUP_PLUGIN_VERSION', '0.1.2' );
+  define( 'WP_BACKUP_PLUGIN_VERSION', '0.1.3' );
 
   # beta version
   define( 'WP_BACKUP_PLUGIN_BETA', true );
