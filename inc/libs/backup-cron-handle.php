@@ -1,4 +1,5 @@
 <?php
+if ( ! defined( 'ABSPATH' ) ) exit; // Exit if accessed directly
 /**
  * @author: Mike Tropi
  * @version: 1.0.0
@@ -9,7 +10,7 @@
  * @copyright: (c) 2025 Mike Tropi
  */
 
-class WP_Backup_Cron_Handler {
+class WORRPB_Cron_Handler {
   protected $type = 'weekly';
   protected $backup_types = ['database', 'plugin', 'theme', 'uploads'];
   protected $steps = [];
@@ -22,12 +23,12 @@ class WP_Backup_Cron_Handler {
 
   public function init_handler() {
     // get backup schedule config
-    $config = wp_backup_get_backup_schedule_config();
+    $config = worrpb_get_backup_schedule_config();
     $this->config = $config;
 
     // check if config is wp error
     if (is_wp_error($config)) {
-      error_log("😵 BACKUP SCHEDULE CONFIG ERROR: " . $config->get_error_message());
+      worrpb_log("😵 BACKUP SCHEDULE CONFIG ERROR: " . $config->get_error_message());
       return;
     }
 
@@ -46,7 +47,7 @@ class WP_Backup_Cron_Handler {
     $this->backup_types = $config['types'] ?? ['database', 'plugin', 'theme', 'uploads'];
 
     // ✅ start in init
-    $this->period_key = wp_backup_get_period_key($this->type);
+    $this->period_key = worrpb_get_period_key($this->type);
     $this->register_steps();
     $this->handle_cron();
   }
@@ -55,7 +56,7 @@ class WP_Backup_Cron_Handler {
     $step = 0;
 
     $this->steps["step__{$step}"] = [
-      'name' => __('Create config file', 'wp-backup'),
+      'name' => __('Create config file', 'worry-proof-backup'),
       'callback_fn' => [$this, 'step_create_config_file'],
       'context' => [
         'backup_types' => $this->backup_types,
@@ -65,19 +66,19 @@ class WP_Backup_Cron_Handler {
     foreach ($this->backup_types as $type) {
       $step++;
       $this->steps["step__{$step}"] = [
-        'name' => __("Backup {$type}", 'wp-backup'),
+        'name' => sprintf(__("Backup %s", 'worry-proof-backup'), $type), // phpcs:ignore WordPress.WP.I18n.MissingTranslatorsComment
         'callback_fn' => [$this, "step_{$type}"]
       ];
     }
 
     $this->steps["step__" . ($step + 1)] = [
-      'name' => __('Finish', 'wp-backup'),
+      'name' => __('Finish', 'worry-proof-backup'),
       'callback_fn' => [$this, 'step_finish']
     ];
   }
 
   public function handle_cron() {
-    $cron = new WP_Backup_Cron_Manager('wp_backup_cron_manager', function ($context) {
+    $cron = new WORRPB_Cron_Manager('worrpb_cron_manager', function ($context) {
       $step = (int) ($context['step'] ?? 0);
       $completed = $context['completed'] ?? false;
       $last_key = $context['period_key'] ?? '';
@@ -118,7 +119,7 @@ class WP_Backup_Cron_Handler {
     $backup_types = $context['backup_types'] ?? [];
     $step = (int) ($context['step'] ?? 0);
 
-    $config_file = wp_backup_generate_config_file([
+    $config_file = worrpb_generate_config_file([
       'backup_name' => $backup_name,
       'backup_types' => implode(',', $backup_types),
     ]);
@@ -129,7 +130,7 @@ class WP_Backup_Cron_Handler {
     $backup_folder = $config_file['backup_folder'] ?? '';
 
     if (empty($name_folder)) {
-      return new WP_Error('name_folder_empty', __('Name folder is empty', 'wp-backup'));
+      return new WP_Error('name_folder_empty', __('Name folder is empty', 'worry-proof-backup'));
     }
 
     return [
@@ -137,6 +138,7 @@ class WP_Backup_Cron_Handler {
       'start_time' => time(),
       'name_folder' => $name_folder,
       'backup_folder' => $backup_folder,
+      'backup_ssid' => '', // reset backup_ssid
       'step' => $step + 1,
     ];
   }
@@ -149,10 +151,10 @@ class WP_Backup_Cron_Handler {
     $backup_folder = $context['backup_folder'] ?? '';
 
     if (empty($ssid)) {
-      return new WP_Error('backup_ssid_empty', __('Backup SSID is empty', 'wp-backup'));
+      return new WP_Error('backup_ssid_empty', __('Backup SSID is empty', 'worry-proof-backup'));
     }
 
-    $backup = new WP_Backup_Database(5000, $ssid);
+    $backup = new WORRPB_Database(5000, $ssid);
     if (is_wp_error($backup)) return $backup;
 
     if (empty($context['backup_ssid'])) {
@@ -169,8 +171,8 @@ class WP_Backup_Cron_Handler {
         if ($progress['done']) break;
       }
     } catch (Exception $e) {
-      wp_backup_update_config_file($backup_folder, ['backup_status' => 'fail']);
-      error_log('😵 BACKUP DATABASE FAILED: ' . $e->getMessage());
+      worrpb_update_config_file($backup_folder, ['backup_status' => 'fail']);
+      worrpb_log('😵 BACKUP DATABASE FAILED: ' . $e->getMessage());
       return ['completed' => true, 'end_time' => time()];
     }
 
@@ -201,17 +203,17 @@ class WP_Backup_Cron_Handler {
     $name_folder = $context['name_folder'] ?? '';
     $backup_folder = $context['backup_folder'] ?? '';
 
-    $backup = new WP_Backup_File_System([
+    $backup = new WORRPB_File_System([
       'source_folder' => $source,
       'destination_folder' => $name_folder,
       'zip_name' => $zip_name,
-      'exclude' => $exclude,
+      'exclude' => $exclude, // phpcs:ignore WordPressVIPMinimum.Performance.WPQueryParams.PostNotIn_exclude
     ]);
 
     if (is_wp_error($backup) || is_wp_error($zip = $backup->runBackup())) {
       $error = is_wp_error($backup) ? $backup : $zip;
-      error_log("😵 BACKUP FAILED ($zip_name): " . $error->get_error_message());
-      wp_backup_update_config_file($backup_folder, ['backup_status' => 'fail']);
+      worrpb_log("😵 BACKUP FAILED ($zip_name): " . $error->get_error_message());
+      worrpb_update_config_file($backup_folder, ['backup_status' => 'fail']);
       return ['completed' => true, 'end_time' => time()];
     }
 
@@ -221,10 +223,10 @@ class WP_Backup_Cron_Handler {
   // 🧩 Step 6: Finish
   public function step_finish($context) {
     $backup_folder = $context['backup_folder'] ?? '';
-    $size = wp_backup_calc_folder_size($backup_folder);
-    $result = wp_backup_update_config_file($backup_folder, [
+    $size = worrpb_calc_folder_size($backup_folder);
+    $result = worrpb_update_config_file($backup_folder, [
       'backup_status' => 'completed',
-      'backup_size' => wp_backup_format_bytes($size),
+      'backup_size' => worrpb_format_bytes($size),
     ]);
 
     if (is_wp_error($result)) {
@@ -242,4 +244,4 @@ class WP_Backup_Cron_Handler {
 }
 
 // ⏱ init handler
-new WP_Backup_Cron_Handler();
+new WORRPB_Cron_Handler();

@@ -1,4 +1,5 @@
 <?php
+if ( ! defined( 'ABSPATH' ) ) exit; // Exit if accessed directly
 /**
  * @author: Mike Tropi
  * @version: 1.0.0
@@ -10,7 +11,7 @@
  * Backup File System Class
  *
  * Usage:
- * $backup = new WP_Backup_File_System([
+ * $backup = new WORRPB_File_System([
  *    'source_folder' => '/path/to/source', // required
  *    'destination_folder' => 'backup_xxx', // required (relative to uploads/wp-backup/)
  *    'zip_name' => 'filesystem.zip', // optional, zip filename (default: filesystem.zip)
@@ -19,7 +20,7 @@
  * $zip_file = $backup->runBackup();
  */
 
-class WP_Backup_File_System {
+class WORRPB_File_System {
     private $exclude = [];
     private $source_folder;
     private $destination_folder;

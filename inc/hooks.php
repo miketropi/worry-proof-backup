@@ -3,11 +3,11 @@
  * Hooks file
  */
 
-add_action( 'admin_menu', 'wp_backup_register_admin_page' );
+add_action( 'admin_menu', 'worrpb_register_admin_page' );
 
 // wp_backup:after_restore_database_success
-add_action('wp_backup:after_restore_database_success', 'wp_backup_after_restore_database_success', 10, 1);
-function wp_backup_after_restore_database_success($payload) {
+add_action('wp_backup:after_restore_database_success', 'worrpb_after_restore_database_success', 10, 1);
+function worrpb_after_restore_database_success($payload) {
   global $wpdb;
 
   // delete cache options
@@ -18,11 +18,11 @@ function wp_backup_after_restore_database_success($payload) {
 }
 
 // wp_backup:after_save_backup_schedule_config
-add_action('wp_backup:after_save_backup_schedule_config', 'wp_backup_after_save_backup_schedule_config', 10, 1);
-function wp_backup_after_save_backup_schedule_config($config) {
+add_action('wp_backup:after_save_backup_schedule_config', 'worrpb_after_save_backup_schedule_config', 10, 1);
+function worrpb_after_save_backup_schedule_config($config) {
 
   // delete history file
-  $cron_manager = new WP_Backup_Cron_Manager('wp_backup_cron_manager', function() {
+  $cron_manager = new WORRPB_Cron_Manager('worrpb_cron_manager', function() {
     // nothing to do
   });
 
@@ -30,14 +30,14 @@ function wp_backup_after_save_backup_schedule_config($config) {
 }
 
 // wp_backup:after_backup_cron_completed
-add_action('wp_backup:after_backup_cron_completed', 'wp_backup_after_backup_cron_completed', 10, 2);
-function wp_backup_after_backup_cron_completed($config, $context) {
+add_action('wp_backup:after_backup_cron_completed', 'worrpb_after_backup_cron_completed', 10, 2);
+function worrpb_after_backup_cron_completed($config, $context) {
   // delete older backups
   if(isset($config['versionLimit']) && $config['versionLimit'] > 0) {
     $keep_last_n_backup = $config['versionLimit'];
-    wp_backup_delete_older_backups($keep_last_n_backup);
+    worrpb_delete_older_backups($keep_last_n_backup);
   }
 
   // send mail to admin when backup cron completed
-  wp_backup_send_mail_to_admin_when_backup_cron_completed($config, $context);
+  worrpb_send_mail_to_admin_when_backup_cron_completed($config, $context);
 }

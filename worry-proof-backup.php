@@ -3,12 +3,12 @@
  * Plugin Name: Worry Proof Backup
  * Plugin URI: https://github.com/miketropi/wp-backup
  * Description: 🛡️ Professional WordPress backup solution with comprehensive database and file system protection. Features automated backups, secure storage, and one-click restoration capabilities. Built for reliability and ease of use in production environments. **100% FREE FOREVER** - No hidden costs, no premium tiers, no limitations.
- * Version: 0.1.2
+ * Version: 0.1.3
  * Requires at least: 6.0
  * Requires PHP: 8.0
  * Author: @Mike
  * Author URI: https://github.com/miketropi
- * Text Domain: wp-backup
+ * Text Domain: worry-proof-backup
  * Domain Path: /languages
  * License: GPL v2 or later
  * License URI: https://www.gnu.org/licenses/gpl-2.0.html
@@ -70,9 +70,9 @@
 }
 
 // add link go to backup page in plugin page
-add_filter('plugin_action_links_' . plugin_basename(__FILE__), 'wp_backup_plugin_action_links');
-function wp_backup_plugin_action_links($links) {
-  $backup_link = '<a href="' . admin_url('admin.php?page=wp-backup') . '">' . __('Backup Now', 'wp-backup') . '</a>';
+add_filter('plugin_action_links_' . plugin_basename(__FILE__), 'worrpb_plugin_action_links');
+function worrpb_plugin_action_links($links) {
+  $backup_link = '<a href="' . admin_url('admin.php?page=wp-backup') . '">' . __('Backup Now', 'worry-proof-backup') . '</a>';
   array_unshift($links, $backup_link);
   return $links;
 }

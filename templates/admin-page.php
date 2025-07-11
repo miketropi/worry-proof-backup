@@ -1,4 +1,5 @@
 <?php 
+if ( ! defined( 'ABSPATH' ) ) exit; // Exit if accessed directly
 /**
  * Admin page template
  * @since 1.0.0
@@ -33,7 +34,7 @@
           </div>
         </div>
         <div>
-          <p class="tw-text-sm tw-text-gray-600 tw-leading-relaxed"><?php esc_html_e('Supercharge your WordPress site with our awesome backup solution! 💪 Create backups in a snap, manage them like a pro, and restore with confidence. Your site\'s security is our top priority - we\'ve got your back! 🛡️', 'wp-backup'); ?></p>
+          <p class="tw-text-sm tw-text-gray-600 tw-leading-relaxed"><?php esc_html_e('Supercharge your WordPress site with our awesome backup solution! 💪 Create backups in a snap, manage them like a pro, and restore with confidence. Your site\'s security is our top priority - we\'ve got your back! 🛡️', 'worry-proof-backup'); ?></p>
         </div>
       </div>
     </div>

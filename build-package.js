@@ -3,8 +3,8 @@ const path = require("path");
 const archiver = require("archiver");
 
 // ====== CONFIG =========
-const pluginFile = "wp-backup.php"; // name of main plugin file
-const pluginSlug = "wp-backup";     // slug of zip file
+const pluginFile = "worry-proof-backup.php"; // name of main plugin file
+const pluginSlug = "worry-proof-backup";     // slug of zip file
 const excludeList = [
   "node_modules",
   "src",

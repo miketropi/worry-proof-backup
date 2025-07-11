@@ -1,4 +1,5 @@
 <?php 
+if ( ! defined( 'ABSPATH' ) ) exit; // Exit if accessed directly
 /**
  * @author: Mike Tropi
  * @version: 1.0.0
@@ -9,7 +10,7 @@
  * @copyright: (c) 2025 Mike Tropi
  */
 
-class WP_Backup_Cron_Manager {
+class WORRPB_Cron_Manager {
     protected $lock_file;
     protected $history_file;
     protected $task_callback;

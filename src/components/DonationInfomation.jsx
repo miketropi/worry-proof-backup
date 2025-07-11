@@ -5,7 +5,7 @@ const DonationInfomation = () => {
   // Configuration - Update these with your actual Buy Me a Coffee details
   const config = {
     buyMeACoffeeUrl: 'https://coff.ee/mikebeplusu', // Replace with your actual URL
-    pluginName: 'WP Backup',
+    pluginName: 'Worry Proof Backup',
     developerName: '@Mike', // Replace with your name
   };
 

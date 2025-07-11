@@ -1,4 +1,5 @@
 <?php
+if ( ! defined( 'ABSPATH' ) ) exit; // Exit if accessed directly
 /**
  * @author: Mike Tropi
  * @version: 1.0.0
@@ -17,11 +18,11 @@
  * Usage Example:
  * $session_id = uniqid('user123_', true);
  * $exclude_tables = ['wp_users', 'wp_options']; // tables to exclude
- * $backup = new WP_Backup_Database(1000, $session_id, $exclude_tables);
+ * $backup = new WORRPB_Database(1000, $session_id, $exclude_tables);
  * $backup->startBackup();
  *
  * // In each AJAX request or step, call:
- * $backup = new WP_Backup_Database(1000, $_POST['session_id'], $exclude_tables);
+ * $backup = new WORRPB_Database(1000, $_POST['session_id'], $exclude_tables);
  * $progress = $backup->processStep();
  *
  * // Check progress
@@ -31,7 +32,7 @@
  * $backup->finishBackup();
  */
 
-class WP_Backup_Database {
+class WORRPB_Database {
     private $wpdb;
     private $backup_file;
     private $progress_file;

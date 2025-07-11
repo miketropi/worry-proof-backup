@@ -1,4 +1,5 @@
 <?php
+if ( ! defined( 'ABSPATH' ) ) exit; // Exit if accessed directly
 /**
  * @author: Mike Tropi
  * @version: 1.0.0
@@ -27,10 +28,10 @@ class WP_Restore_File_System {
 
     public function __construct($opts = []) {
         if (empty($opts['zip_file'])) {
-            throw new Exception(esc_html__('Zip file path is required', 'wp-backup'));
+            throw new Exception(esc_html__('Zip file path is required', 'worry-proof-backup'));
         }
         if (empty($opts['destination_folder'])) {
-            throw new Exception(esc_html__('Destination folder is required', 'wp-backup'));
+            throw new Exception(esc_html__('Destination folder is required', 'worry-proof-backup'));
         }
 
         $this->zip_file = $opts['zip_file'];
@@ -40,24 +41,24 @@ class WP_Restore_File_System {
         $this->include_only = isset($opts['include_only']) ? (array) $opts['include_only'] : [];
 
         if (!file_exists($this->zip_file)) {
-            return new WP_Error('zip_file_not_found', esc_html__('Zip file does not exist: ', 'wp-backup') . $this->zip_file);
+            return new WP_Error('zip_file_not_found', esc_html__('Zip file does not exist: ', 'worry-proof-backup') . $this->zip_file);
         }
 
         if (!is_dir($this->destination_folder)) {
             if (!wp_mkdir_p($this->destination_folder)) {
-                return new Exception(esc_html__('Failed to create destination directory: ', 'wp-backup') . $this->destination_folder);
+                return new Exception(esc_html__('Failed to create destination directory: ', 'worry-proof-backup') . $this->destination_folder);
             }
         }
     }
 
     public function runRestore() {
         if (!class_exists('ZipArchive')) {
-            return new WP_Error('missing_ziparchive', esc_html__('PHP ZipArchive extension is not enabled.', 'wp-backup'));
+            return new WP_Error('missing_ziparchive', esc_html__('PHP ZipArchive extension is not enabled.', 'worry-proof-backup'));
         }
 
         $zip = new ZipArchive();
         if ($zip->open($this->zip_file) !== true) {
-            return new WP_Error('zip_open_failed', esc_html__('Failed to open zip file: ', 'wp-backup') . $this->zip_file);
+            return new WP_Error('zip_open_failed', esc_html__('Failed to open zip file: ', 'worry-proof-backup') . $this->zip_file);
         }
 
         $total_files = $zip->numFiles;
@@ -130,24 +131,24 @@ class WP_Restore_File_System {
         if ($is_dir) {
             if (!$wp_filesystem->is_dir($destination_path)) {
                 if (!$wp_filesystem->mkdir($destination_path, FS_CHMOD_DIR)) {
-                    return new WP_Error('mkdir_failed', esc_html__('Failed to create directory: ', 'wp-backup') . $destination_path);
+                    return new WP_Error('mkdir_failed', esc_html__('Failed to create directory: ', 'worry-proof-backup') . $destination_path);
                 }
             }
         } else {
             $destination_dir = dirname($destination_path);
             if (!$wp_filesystem->is_dir($destination_dir)) {
                 if (!$wp_filesystem->mkdir($destination_dir, FS_CHMOD_DIR)) {
-                    return new WP_Error('mkdir_failed', esc_html__('Failed to create directory: ', 'wp-backup') . $destination_dir);
+                    return new WP_Error('mkdir_failed', esc_html__('Failed to create directory: ', 'worry-proof-backup') . $destination_dir);
                 }
             }
 
             if ($wp_filesystem->exists($destination_path) && !$this->overwrite_existing) {
-                return new WP_Error('file_exists', esc_html__('File already exists and overwrite is disabled: ', 'wp-backup') . $destination_path);
+                return new WP_Error('file_exists', esc_html__('File already exists and overwrite is disabled: ', 'worry-proof-backup') . $destination_path);
             }
 
             $stream = $zip->getStream($file_path);
             if (!$stream) {
-                return new WP_Error('extract_failed', esc_html__('Failed to extract file: ', 'wp-backup') . $file_path);
+                return new WP_Error('extract_failed', esc_html__('Failed to extract file: ', 'worry-proof-backup') . $file_path);
             }
 
             $file_contents = stream_get_contents($stream);
@@ -162,7 +163,7 @@ class WP_Restore_File_System {
             );
 
             if ($bytes_written !== strlen($file_contents)) {
-                return new WP_Error('copy_failed', esc_html__('Failed to copy complete file: ', 'wp-backup') . $file_path);
+                return new WP_Error('copy_failed', esc_html__('Failed to copy complete file: ', 'worry-proof-backup') . $file_path);
             }
 
             $this->preserveFilePermissions($destination_path, $file_info);
@@ -183,12 +184,12 @@ class WP_Restore_File_System {
 
     public function getZipContents() {
         if (!class_exists('ZipArchive')) {
-            return new WP_Error('missing_ziparchive', esc_html__('PHP ZipArchive extension is not enabled.', 'wp-backup'));
+            return new WP_Error('missing_ziparchive', esc_html__('PHP ZipArchive extension is not enabled.', 'worry-proof-backup'));
         }
 
         $zip = new ZipArchive();
         if ($zip->open($this->zip_file) !== true) {
-            return new WP_Error('zip_open_failed', esc_html__('Failed to open zip file: ', 'wp-backup') . $this->zip_file);
+            return new WP_Error('zip_open_failed', esc_html__('Failed to open zip file: ', 'worry-proof-backup') . $this->zip_file);
         }
 
         $files = [];
@@ -209,13 +210,13 @@ class WP_Restore_File_System {
 
     public function validateZip() {
         if (!class_exists('ZipArchive')) {
-            return new WP_Error('missing_ziparchive', esc_html__('PHP ZipArchive extension is not enabled.', 'wp-backup'));
+            return new WP_Error('missing_ziparchive', esc_html__('PHP ZipArchive extension is not enabled.', 'worry-proof-backup'));
         }
 
         $zip = new ZipArchive();
         $result = $zip->open($this->zip_file);
         if ($result !== true) {
-            return new WP_Error('zip_invalid', esc_html__('Invalid or corrupted zip file: ', 'wp-backup') . $this->zip_file);
+            return new WP_Error('zip_invalid', esc_html__('Invalid or corrupted zip file: ', 'worry-proof-backup') . $this->zip_file);
         }
 
         $zip->close();

@@ -1,4 +1,5 @@
 <?php 
+if ( ! defined( 'ABSPATH' ) ) exit; // Exit if accessed directly
 /**
  * @author: Mike Tropi
  * @version: 1.1.1
@@ -145,7 +146,7 @@ class WP_Restore_Database {
 
         if (feof($handle)) {
             $progress['done'] = true;
-            file_put_contents($this->log_file, esc_html__("== Restore finished at ", 'wp-backup') . gmdate('Y-m-d H:i:s') . " ==\n", FILE_APPEND);
+            file_put_contents($this->log_file, esc_html__("== Restore finished at ", 'worry-proof-backup') . gmdate('Y-m-d H:i:s') . " ==\n", FILE_APPEND);
         }
 
         $progress['line'] = $current_line;
@@ -190,11 +191,11 @@ class WP_Restore_Database {
 
     public function getProgress() {
         if (!file_exists($this->progress_file)) {
-            return new WP_Error('progress_missing', esc_html__("Progress file not found", 'wp-backup') . ": " . $this->progress_file);
+            return new WP_Error('progress_missing', esc_html__("Progress file not found", 'worry-proof-backup') . ": " . $this->progress_file);
         }
 
         $progress = json_decode(file_get_contents($this->progress_file), true);
-        return $progress ?: new WP_Error('progress_corrupt', esc_html__("Invalid progress file", 'wp-backup'));
+        return $progress ?: new WP_Error('progress_corrupt', esc_html__("Invalid progress file", 'worry-proof-backup'));
     }
 
     public function finishRestore() {
@@ -202,7 +203,7 @@ class WP_Restore_Database {
             wp_delete_file($this->progress_file);
         }
         if (file_exists($this->log_file)) {
-            file_put_contents($this->log_file, esc_html__("== Restore manually finished at ", 'wp-backup') . gmdate('Y-m-d H:i:s') . " ==\n", FILE_APPEND);
+            file_put_contents($this->log_file, esc_html__("== Restore manually finished at ", 'worry-proof-backup') . gmdate('Y-m-d H:i:s') . " ==\n", FILE_APPEND);
         }
     }
 

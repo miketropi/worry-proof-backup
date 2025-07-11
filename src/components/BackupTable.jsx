@@ -190,7 +190,7 @@ const BackupTable = () => {
                 ))}
               </div>
               <div className="tw-flex tw-justify-between tw-text-sm tw-text-gray-500">
-                <span>{ friendlyDateTime(backup.date, wp_backup_php_data.current_datetime) }</span>
+                <span>{ friendlyDateTime(backup.date, worrpb_php_data.current_datetime) }</span>
                 <span>{backup.size}</span>
               </div>
               <div className="tw-flex tw-items-center tw-justify-between">
@@ -291,7 +291,7 @@ const BackupTable = () => {
                       <svg className="tw-w-3 tw-h-3 tw-text-slate-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
                       </svg>
-                      { friendlyDateTime(backup.date, wp_backup_php_data.current_datetime) }  
+                      { friendlyDateTime(backup.date, worrpb_php_data.current_datetime) }  
                     </span>
                   </div>
                 </td>

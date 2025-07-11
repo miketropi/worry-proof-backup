@@ -178,7 +178,7 @@ const BackupTable = () => {
       children: <UploadBackup 
         ref={uploadRef}
         accept=".zip" 
-        maxSize={ wp_backup_php_data.server_metrics.WP_Max_Upload_Size } 
+        maxSize={ worrpb_php_data.server_metrics.WP_Max_Upload_Size } 
         maxFiles={ 1 }
         onUpload={handleUploadBackupFiles}
         />,

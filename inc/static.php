@@ -3,10 +3,10 @@
  * Static file
  */
 
-function wp_backup_wp_enqueue_scripts() {
+function worrpb_wp_enqueue_scripts() {
 
   // Only enqueue style if on the WP Backup admin page
-  if ( wp_backup_is_current_admin_page( 'tools_page_wp-backup' ) ) {
+  if ( worrpb_is_current_admin_page( 'tools_page_wp-backup' ) ) {
     # Google fonts
     // Google Fonts URLs are dynamic and don't have version parameters
     wp_enqueue_style( 'wp-backup-google-fonts', 'https://fonts.googleapis.com/css2?family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap', array(), null ); // phpcs:ignore WordPress.WP.EnqueuedResourceParameters.MissingVersion
@@ -22,10 +22,10 @@ function wp_backup_wp_enqueue_scripts() {
   $current_user_id = get_current_user_id();
 
   # localize script
-  wp_localize_script( 'wp-backup', 'wp_backup_php_data', array(
+  wp_localize_script( 'wp-backup', 'worrpb_php_data', array(
     'ajax_url' => admin_url( 'admin-ajax.php' ),
     'language' => array(),
-    'server_metrics' => wp_backup_get_server_metrics(),
+    'server_metrics' => worrpb_get_server_metrics(),
     
     # current datetime of server
     'current_datetime' => gmdate('Y-m-d H:i:s'),
@@ -34,10 +34,10 @@ function wp_backup_wp_enqueue_scripts() {
     'current_domain' => get_home_url(),
     
     'nonce' => array(
-      'wp_backup_nonce' => wp_create_nonce( 'wp_backup_nonce_' . $current_user_id ),
+      'worrpb_nonce' => wp_create_nonce( 'worrpb_nonce_' . $current_user_id ),
       'wp_restore_nonce' => wp_create_nonce( 'wp-backup-restore' ),
     ),
   ) );
 }
 
-add_action( 'admin_enqueue_scripts', 'wp_backup_wp_enqueue_scripts' );
+add_action( 'admin_enqueue_scripts', 'worrpb_wp_enqueue_scripts' );

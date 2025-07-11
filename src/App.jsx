@@ -38,7 +38,7 @@ const tabs = [
   {
     label: 'Server Metrics',
     icon: <Server size={14} />,
-    content: <ServerMetrics metrics={wp_backup_php_data.server_metrics} />
+    content: <ServerMetrics metrics={worrpb_php_data.server_metrics} />
   },
   // {
   //   label: 'Documentation',
