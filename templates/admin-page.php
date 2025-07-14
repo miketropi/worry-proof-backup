@@ -8,6 +8,7 @@ if ( ! defined( 'ABSPATH' ) ) exit; // Exit if accessed directly
 ?>
 
 <div id="WP-BACKUP-ADMIN-PAGE" class="wrap tw-font-space-mono">
+  <h1></h1>
   <div class="tw-bg-white tw-p-8 tw-mb-8 tw-border tw-border-gray-200">
     <div class="tw-flex tw-items-center tw-space-x-4 tw-mb-4">
       <h2 class="tw-text-xl tw-font-bold tw-text-gray-900 tw-flex tw-items-center tw-gap-2">
