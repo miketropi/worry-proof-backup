@@ -239,6 +239,9 @@ class WORRPB_Cron_Handler {
     return [
       'completed' => true,
       'end_time' => time(),
+      'backup_ssid' => '',
+      'name_folder' => '',
+      'backup_folder' => '',
     ];
   }
 }
