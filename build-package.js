@@ -7,7 +7,7 @@ const pluginFile = "worry-proof-backup.php"; // name of main plugin file
 const pluginSlug = "worry-proof-backup";     // slug of zip file
 const excludeList = [
   "node_modules",
-  "src",
+  // "src",
   ".git",
   ".gitignore",
   ".DS_Store",
@@ -18,11 +18,11 @@ const excludeList = [
   ".env.development.local",
   ".env.test.local",
   "package-lock.json",
-  "package.json",
-  "postcss.config.js",
-  "tailwind.config.js",
-  "webpack.mix.js",
-  "build-package.js",
+  // "package.json",
+  // "postcss.config.js",
+  // "tailwind.config.js",
+  // "webpack.mix.js",
+  // "build-package.js",
   "wp-backup.zip"
 ];
 // ========================
