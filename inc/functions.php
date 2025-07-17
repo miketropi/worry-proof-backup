@@ -11,12 +11,12 @@
  * @param bool $echo Whether to echo the template or return it
  * @return string|void
  */
-function worrpb_load_template($template_name, $args = array(), $echo = true) {
+function worrprba_load_template($template_name, $args = array(), $echo = true) {
   // Get default template path
-  $default_template_path = WP_BACKUP_PLUGIN_PATH . 'templates/' . $template_name . '.php';
+  $default_template_path = WORRPRBA_PLUGIN_PATH . 'templates/' . $template_name . '.php';
   
   // Allow template path to be overridden via filter
-  $template_path = apply_filters('worrpb_template_path', $default_template_path, $template_name);
+  $template_path = apply_filters('worrprba_template_path', $default_template_path, $template_name);
 
   // Check if template exists
   if (!file_exists($template_path)) {
@@ -48,7 +48,7 @@ function worrpb_load_template($template_name, $args = array(), $echo = true) {
 /**
  * Register admin page
  */
-function worrpb_register_admin_page() {
+function worrprba_register_admin_page() {
   // check if user is admin role
   if (!current_user_can('manage_options')) {
     return;
@@ -58,27 +58,27 @@ function worrpb_register_admin_page() {
     __('Worry Proof Backup', 'worry-proof-backup'), // Page title
     __('Backup Tools', 'worry-proof-backup'), // Menu title
     'manage_options', // Capability required
-    'wp-backup', // Menu slug
-    'worrpb_admin_page' // Function to display the page
+    'worry-proof-backup', // Menu slug
+    'worrprba_admin_page' // Function to display the page
   );
 }
 
-function worrpb_admin_page() {
+function worrprba_admin_page() {
 
   # plugin version
-  $plugin_version = WP_BACKUP_PLUGIN_VERSION;
+  $plugin_version = WORRPRBA_PLUGIN_VERSION;
 
   # load template admin page
-  worrpb_load_template('admin-page', array(
+  worrprba_load_template('admin-page', array(
     'plugin_version' => $plugin_version,
   ), true);
 }
 
-function worrpb_get_backups() {
+function worrprba_get_backups() {
 
-  // scan folder: wp-content/uploads/wp-backup/
+  // scan folder: wp-content/uploads/worry-proof-backup/
   $upload_dir = wp_upload_dir();
-  $backup_folder = $upload_dir['basedir'] . '/wp-backup/';
+  $backup_folder = $upload_dir['basedir'] . '/worry-proof-backup/';
 
   // check if $backup_folder is exists
   if (!file_exists($backup_folder)) {
@@ -153,7 +153,7 @@ function worrpb_get_backups() {
  * 
  * @return bool
  */
-function worrpb_is_wp_cli_available() {
+function worrprba_is_wp_cli_available() {
   if ( defined( 'WP_CLI' ) && WP_CLI ) {
       return true; // WP-CLI is running
   }
@@ -162,7 +162,7 @@ function worrpb_is_wp_cli_available() {
   return ! empty( $cli_path );
 }
 
-function worrpb_is_current_admin_page( $screen_id_check = '' ) {
+function worrprba_is_current_admin_page( $screen_id_check = '' ) {
   if ( ! is_admin() ) {
       return false;
   }
@@ -196,22 +196,22 @@ function worrpb_is_current_admin_page( $screen_id_check = '' ) {
  *
  * @return array
  */
-function worrpb_get_server_metrics() {
+function worrprba_get_server_metrics() {
   // Disk space
   $root = ABSPATH;
   $disk_free_space = @disk_free_space($root);
   $disk_total_space = @disk_total_space($root);
 
   // PHP memory
-  $memory_limit = worrpb_return_bytes(@ini_get('memory_limit'));
+  $memory_limit = worrprba_return_bytes(@ini_get('memory_limit'));
   $memory_usage = function_exists('memory_get_usage') ? memory_get_usage() : null;
 
   // PHP execution time
   $max_execution_time = @ini_get('max_execution_time');
 
   // Upload limits
-  $upload_max_filesize = worrpb_return_bytes(@ini_get('upload_max_filesize'));
-  $post_max_size = worrpb_return_bytes(@ini_get('post_max_size'));
+  $upload_max_filesize = worrprba_return_bytes(@ini_get('upload_max_filesize'));
+  $post_max_size = worrprba_return_bytes(@ini_get('post_max_size'));
 
   // Safe mode (legacy, for old PHP)
   $safe_mode = false;
@@ -245,9 +245,9 @@ function worrpb_get_server_metrics() {
     'mysql_version'      => $mysql_version,
     'ZipArchive'         => class_exists('ZipArchive'),
     'WP_Debug'           => defined('WP_DEBUG') && WP_DEBUG,
-    'WP_CLI'             => worrpb_is_wp_cli_available(),
+    'WP_CLI'             => worrprba_is_wp_cli_available(),
     'WP_Max_Upload_Size' => wp_max_upload_size(),
-    'plugin_version'     => WP_BACKUP_PLUGIN_VERSION,
+    'plugin_version'     => WORRPRBA_PLUGIN_VERSION,
   );
 }
 
@@ -257,7 +257,7 @@ function worrpb_get_server_metrics() {
  * @param string $val
  * @return int
  */
-function worrpb_return_bytes($val) {
+function worrprba_return_bytes($val) {
   $val = trim($val);
   $last = strtolower($val[strlen($val)-1]);
   $num = (int)$val;
@@ -281,7 +281,7 @@ function worrpb_return_bytes($val) {
  * @param string $data
  * @return bool
  */
-function worrpb_save_data_to_file($file_path, $data) {
+function worrprba_save_data_to_file($file_path, $data) {
   // Ensure the directory exists
   $directory = dirname($file_path);
   if (!file_exists($directory)) {
@@ -314,7 +314,7 @@ function worrpb_save_data_to_file($file_path, $data) {
  * @param int $permissions Directory permissions (default: 0755)
  * @return bool|WP_Error True on success, WP_Error on failure
  */
-function worrpb_ensure_file_directory($file_path, $permissions = 0755) {
+function worrprba_ensure_file_directory($file_path, $permissions = 0755) {
   global $wp_filesystem;
   
   // Initialize WP_Filesystem if not already done
@@ -348,7 +348,7 @@ function worrpb_ensure_file_directory($file_path, $permissions = 0755) {
  * @param bool $recursive Whether to create parent directories (default: true)
  * @return bool|WP_Error True on success, WP_Error on failure
  */
-function worrpb_mkdir($path, $permissions = 0755, $recursive = true) {
+function worrprba_mkdir($path, $permissions = 0755, $recursive = true) {
   global $wp_filesystem;
   
   // Initialize WP_Filesystem if not already done
@@ -376,7 +376,7 @@ function worrpb_mkdir($path, $permissions = 0755, $recursive = true) {
 
 /**
  * generate config file 
- * Create a new folder in uploads/wp-backup/backup_<random_string>
+ * Create a new folder in uploads/worry-proof-backup/backup_<random_string>
  * Create a new file in the folder: config.json
  * The file should contain the following information:
  * - backup_id
@@ -388,7 +388,7 @@ function worrpb_mkdir($path, $permissions = 0755, $recursive = true) {
  * - backup_status
  * - backup_size
  */
-function worrpb_generate_config_file($args = array()) {
+function worrprba_generate_config_file($args = array()) {
   global $wpdb;
   
   $defaults = array(
@@ -413,20 +413,20 @@ function worrpb_generate_config_file($args = array()) {
 
   $upload_dir = wp_upload_dir();
   $name_folder = 'backup_' . $args['backup_id'] . '_' . gmdate('Y-m-d_H-i-s');
-  $root_backup_folder = $upload_dir['basedir'] . '/wp-backup/';
+  $root_backup_folder = $upload_dir['basedir'] . '/worry-proof-backup/';
   $backup_folder = $root_backup_folder . $name_folder;
 
   // check if $root_backup_folder is exists
   if (!file_exists($root_backup_folder)) {
-    $check_root_folder = worrpb_mkdir($root_backup_folder);
+    $check_root_folder = worrprba_mkdir($root_backup_folder);
 
     if(is_wp_error($check_root_folder)) {
       return new WP_Error('mkdir_failed', $check_root_folder->get_error_message());
     }
   }
 
-  // check if $backup_folder is exists via worrpb_ensure_file_directory
-  $check_folder = worrpb_mkdir($backup_folder);
+  // check if $backup_folder is exists via worrprba_ensure_file_directory
+  $check_folder = worrprba_mkdir($backup_folder);
 
   if(is_wp_error($check_folder)) {
     return new WP_Error('mkdir_failed', $check_folder->get_error_message());
@@ -459,7 +459,7 @@ function worrpb_generate_config_file($args = array()) {
  * @param array $fields Associative array of fields to update, e.g. ['backup_status' => 'completed']
  * @return bool|WP_Error
  */
-function worrpb_update_config_file($backup_folder, $fields) {
+function worrprba_update_config_file($backup_folder, $fields) {
   $config_file = $backup_folder . '/config.json';
 
   // Check if config file exists
@@ -504,7 +504,7 @@ function worrpb_update_config_file($backup_folder, $fields) {
  * @param string $folder Absolute path to folder
  * @return float Folder size (bytes)
  */
-function worrpb_calc_folder_size($folder) {
+function worrprba_calc_folder_size($folder) {
   $size = 0.0;
 
   if (!is_dir($folder)) {
@@ -545,7 +545,7 @@ function worrpb_calc_folder_size($folder) {
  * @param int $precision
  * @return string
  */
-function worrpb_format_bytes($bytes, $precision = 2) {
+function worrprba_format_bytes($bytes, $precision = 2) {
   $units = array('B', 'KB', 'MB', 'GB', 'TB');
 
   $bytes = max($bytes, 0);
@@ -558,7 +558,7 @@ function worrpb_format_bytes($bytes, $precision = 2) {
 }
 
 
-function worrpb_rmdir( $dir_path ) {
+function worrprba_rmdir( $dir_path ) {
   if ( ! function_exists( 'WP_Filesystem' ) ) {
       require_once ABSPATH . 'wp-admin/includes/file.php';
   }
@@ -589,7 +589,7 @@ function worrpb_rmdir( $dir_path ) {
  * @param string $folder Absolute path to folder
  * @return true|WP_Error True if removed, WP_Error on failure
  */
-function worrpb_remove_folder($folder) {
+function worrprba_remove_folder($folder) {
   if (!is_dir($folder)) {
     // Nothing to do
     return true;
@@ -609,7 +609,7 @@ function worrpb_remove_folder($folder) {
       $path = $file->getPathname();
 
       if ($file->isDir()) {
-        if (!worrpb_rmdir($path)) {
+        if (!worrprba_rmdir($path)) {
           return new WP_Error('remove_folder_failed', esc_html__('Failed to remove directory: ', 'worry-proof-backup') . $path);
         }
       } else {
@@ -619,15 +619,15 @@ function worrpb_remove_folder($folder) {
       }
     }
 
-    // check and delete zip file in uploads > wp-backup-zip > $folder .zip
+    // check and delete zip file in uploads > worry-proof-backup-zip > $folder .zip
     $upload_dir = wp_upload_dir();
-    $backup_zip_path = $upload_dir['basedir'] . '/wp-backup-zip/' . $name_folder . '.zip';
+    $backup_zip_path = $upload_dir['basedir'] . '/worry-proof-backup-zip/' . $name_folder . '.zip';
     if (file_exists($backup_zip_path)) {
       wp_delete_file($backup_zip_path);
     }
 
     // Finally remove the folder itself
-    if (!worrpb_rmdir($folder)) {
+    if (!worrprba_rmdir($folder)) {
       return new WP_Error('remove_folder_failed', esc_html__('Failed to remove directory: ', 'worry-proof-backup') . $folder);
     }
 
@@ -637,9 +637,9 @@ function worrpb_remove_folder($folder) {
   }
 }
 
-function worrpb_get_config_file($folder_name) {
+function worrprba_get_config_file($folder_name) {
   $upload_dir = wp_upload_dir();
-  $backup_folder = $upload_dir['basedir'] . '/wp-backup/' . $folder_name . '/config.json';
+  $backup_folder = $upload_dir['basedir'] . '/worry-proof-backup/' . $folder_name . '/config.json';
 
   // check if $backup_folder is exists
   if (!file_exists($backup_folder)) {
@@ -647,7 +647,14 @@ function worrpb_get_config_file($folder_name) {
   }
 
   // get config file content
-  $config_file_content = file_get_contents($backup_folder);
+  global $wp_filesystem;
+    
+  if (empty($wp_filesystem)) {
+    require_once(ABSPATH . 'wp-admin/includes/file.php');
+    WP_Filesystem();
+  }
+
+  $config_file_content = $wp_filesystem->get_contents($backup_folder);
 
   // check if $config_file_content is not empty
   if (empty($config_file_content)) {
@@ -666,7 +673,7 @@ function worrpb_get_config_file($folder_name) {
 }
 
 // send report email
-function worrpb_send_report_email($args = array()) {
+function worrprba_send_report_email($args = array()) {
   $defaults = array(
     'name' => '',
     'email' => '',
@@ -682,7 +689,7 @@ function worrpb_send_report_email($args = array()) {
   $args = wp_parse_args($args, $defaults);
 
   // get system info
-  $system_info = worrpb_get_server_metrics();
+  $system_info = worrprba_get_server_metrics();
   
   // wordpress domain
   $wordpress_domain = get_bloginfo('url');
@@ -819,19 +826,19 @@ function worrpb_send_report_email($args = array()) {
             <table>
                 <tr>
                     <td>Disk Free Space:</td>
-                    <td>' . esc_html(worrpb_format_bytes($system_info['disk_free_space'])) . '</td>
+                    <td>' . esc_html(worrprba_format_bytes($system_info['disk_free_space'])) . '</td>
                 </tr>
                 <tr>
                     <td>Disk Total Space:</td>
-                    <td>' . esc_html(worrpb_format_bytes($system_info['disk_total_space'])) . '</td>
+                    <td>' . esc_html(worrprba_format_bytes($system_info['disk_total_space'])) . '</td>
                 </tr>
                 <tr>
                     <td>Memory Limit:</td>
-                    <td>' . esc_html(worrpb_format_bytes($system_info['memory_limit'])) . '</td>
+                    <td>' . esc_html(worrprba_format_bytes($system_info['memory_limit'])) . '</td>
                 </tr>
                 <tr>
                     <td>Memory Usage:</td>
-                    <td>' . esc_html(worrpb_format_bytes($system_info['memory_usage'])) . '</td>
+                    <td>' . esc_html(worrprba_format_bytes($system_info['memory_usage'])) . '</td>
                 </tr>
                 <tr>
                     <td>Max Execution Time:</td>
@@ -839,11 +846,11 @@ function worrpb_send_report_email($args = array()) {
                 </tr>
                 <tr>
                     <td>Upload Max Filesize:</td>
-                    <td>' . esc_html(worrpb_format_bytes($system_info['upload_max_filesize'])) . '</td>
+                    <td>' . esc_html(worrprba_format_bytes($system_info['upload_max_filesize'])) . '</td>
                 </tr>
                 <tr>
                     <td>Post Max Size:</td>
-                    <td>' . esc_html(worrpb_format_bytes($system_info['post_max_size'])) . '</td>
+                    <td>' . esc_html(worrprba_format_bytes($system_info['post_max_size'])) . '</td>
                 </tr>
                 <tr>
                     <td>Safe Mode:</td>
@@ -907,45 +914,45 @@ function worrpb_send_report_email($args = array()) {
 }
 
 // check backup download available
-function worrpb_get_backup_download_zip_path($backup_folder_name = '') {
-  // find backup download zip in uploads > wp-backup-zip > $backup_folder_name .zip
+function worrprba_get_backup_download_zip_path($backup_folder_name = '') {
+  // find backup download zip in uploads > worry-proof-backup-zip > $backup_folder_name .zip
   $upload_dir = wp_upload_dir();
-  $backup_zip_path = $upload_dir['basedir'] . '/wp-backup-zip/' . $backup_folder_name . '.zip';
+  $backup_zip_path = $upload_dir['basedir'] . '/worry-proof-backup-zip/' . $backup_folder_name . '.zip';
 
   // check if file exists
   if (file_exists($backup_zip_path)) {
     // return uri of file
-    return $upload_dir['baseurl'] . '/wp-backup-zip/' . $backup_folder_name . '.zip';
+    return $upload_dir['baseurl'] . '/worry-proof-backup-zip/' . $backup_folder_name . '.zip';
   }
 
   return false;
 }
 
-// worrpb_create_backup_zip
-function worrpb_create_backup_zip($backup_folder_name = '') {
-  // create backup zip in uploads > wp-backup-zip > $backup_folder_name .zip
+// worrprba_create_backup_zip
+function worrprba_create_backup_zip($backup_folder_name = '') {
+  // create backup zip in uploads > worry-proof-backup-zip > $backup_folder_name .zip
   $upload_dir = wp_upload_dir();
-  $backup_zip_path = $upload_dir['basedir'] . '/wp-backup-zip/' . $backup_folder_name . '.zip';
+  $backup_zip_path = $upload_dir['basedir'] . '/worry-proof-backup-zip/' . $backup_folder_name . '.zip';
 
   // check if file exists
   if (file_exists($backup_zip_path)) {
 
     // return uri of file 
-    return $upload_dir['baseurl'] . '/wp-backup-zip/' . $backup_folder_name . '.zip';
+    return $upload_dir['baseurl'] . '/worry-proof-backup-zip/' . $backup_folder_name . '.zip';
   }
 
-  $backup_folder_path = $upload_dir['basedir'] . '/wp-backup/' . $backup_folder_name;
+  $backup_folder_path = $upload_dir['basedir'] . '/worry-proof-backup/' . $backup_folder_name;
 
-  // create folder "wp-backup-zip" if not exists
-  if (!file_exists($upload_dir['basedir'] . '/wp-backup-zip/')) {
-    $result = wp_mkdir_p($upload_dir['basedir'] . '/wp-backup-zip/');
+  // create folder "worry-proof-backup-zip" if not exists
+  if (!file_exists($upload_dir['basedir'] . '/worry-proof-backup-zip/')) {
+    $result = wp_mkdir_p($upload_dir['basedir'] . '/worry-proof-backup-zip/');
     if (is_wp_error($result)) {
       return new WP_Error('create_backup_zip_failed', $result->get_error_message());
     }
   }
 
   // create zip file backup
-  $backup_zip_path = $upload_dir['basedir'] . '/wp-backup-zip/' . $backup_folder_name . '.zip';
+  $backup_zip_path = $upload_dir['basedir'] . '/worry-proof-backup-zip/' . $backup_folder_name . '.zip';
 
   // create zip file
   $zip = new ZipArchive();
@@ -985,11 +992,11 @@ function worrpb_create_backup_zip($backup_folder_name = '') {
     return new WP_Error('create_backup_zip_failed', 'Backup zip file failed, please try again!');
   }
 
-  return $upload_dir['baseurl'] . '/wp-backup-zip/' . $backup_folder_name . '.zip';
+  return $upload_dir['baseurl'] . '/worry-proof-backup-zip/' . $backup_folder_name . '.zip';
 }
 
 // func create process restore id, includes params backup filename
-function worrpb_create_process_restore_id($backup_folder = '') {
+function worrprba_create_process_restore_id($backup_folder = '') {
   // check $backup_folder is not empty
   if (empty($backup_folder)) {
     return new WP_Error('backup_folder_empty', esc_html__('backup folder is empty', 'worry-proof-backup'));
@@ -997,9 +1004,9 @@ function worrpb_create_process_restore_id($backup_folder = '') {
 
   $__id = 'backup_restore.' . uniqid() . '.process';
 
-  // create process restore id in uploads > wp-backup-process-restore > $backup_folder .json
+  // create process restore id in uploads > worry-proof-backup-process-restore > $backup_folder .json
   $upload_dir = wp_upload_dir();
-  $backup_restore_path = $upload_dir['basedir'] . '/wp-backup/' . $backup_folder;
+  $backup_restore_path = $upload_dir['basedir'] . '/worry-proof-backup/' . $backup_folder;
 
   global $wp_filesystem;
     
@@ -1025,7 +1032,7 @@ function worrpb_create_process_restore_id($backup_folder = '') {
 }
 
 // validate process restore id, params process_restore_id, backup_folder
-function worrpb_validate_process_restore_id($process_restore_id = '', $backup_folder = '') {
+function worrprba_validate_process_restore_id($process_restore_id = '', $backup_folder = '') {
   // check $process_restore_id is not empty
   if (empty($process_restore_id)) {
     return new WP_Error('process_restore_id_empty', esc_html__('process restore id is empty', 'worry-proof-backup'));
@@ -1037,7 +1044,7 @@ function worrpb_validate_process_restore_id($process_restore_id = '', $backup_fo
   }
 
   $upload_dir = wp_upload_dir();
-  $backup_restore_path = $upload_dir['basedir'] . '/wp-backup/' . $backup_folder;
+  $backup_restore_path = $upload_dir['basedir'] . '/worry-proof-backup/' . $backup_folder;
   $process_restore_log_path = $backup_restore_path . '/__process_restore.log';
 
   global $wp_filesystem;
@@ -1069,14 +1076,14 @@ function worrpb_validate_process_restore_id($process_restore_id = '', $backup_fo
 }
 
 // delete process restore id, params backup_folder
-function worrpb_delete_process_restore_id($backup_folder = '') {
+function worrprba_delete_process_restore_id($backup_folder = '') {
   // check $backup_folder is not empty
   if (empty($backup_folder)) {
     return new WP_Error('backup_folder_empty', esc_html__('backup folder is empty', 'worry-proof-backup'));
   }
 
   $upload_dir = wp_upload_dir();
-  $backup_restore_path = $upload_dir['basedir'] . '/wp-backup/' . $backup_folder;
+  $backup_restore_path = $upload_dir['basedir'] . '/worry-proof-backup/' . $backup_folder;
   $process_restore_log_path = $backup_restore_path . '/__process_restore.log';
 
   global $wp_filesystem;
@@ -1100,7 +1107,7 @@ function worrpb_delete_process_restore_id($backup_folder = '') {
   return true;
 }
 
-function worrpb_get_period_key($type = 'weekly') {
+function worrprba_get_period_key($type = 'weekly') {
   switch ($type) {
       case 'daily': return gmdate('Y-m-d');
       case 'monthly': return gmdate('Y-m');
@@ -1111,15 +1118,15 @@ function worrpb_get_period_key($type = 'weekly') {
   }
 }
 
-function worrpb_save_backup_schedule_config($config = array()) {
+function worrprba_save_backup_schedule_config($config = array()) {
   // check $config is not empty
   if (empty($config)) {
     return new WP_Error('config_empty', esc_html__('config is empty', 'worry-proof-backup'));
   }
 
-  // save config to wp-backup-cron-manager/wp-backup-schedule-config.json
+  // save config to worry-proof-backup-cron-manager/worry-proof-backup-schedule-config.json
   $upload_dir = wp_upload_dir();
-  $backup_cron_manager_path = $upload_dir['basedir'] . '/wp-backup-cron-manager/';
+  $backup_cron_manager_path = $upload_dir['basedir'] . '/worry-proof-backup-cron-manager/';
 
   // create folder if not exists
   global $wp_filesystem;
@@ -1136,8 +1143,8 @@ function worrpb_save_backup_schedule_config($config = array()) {
     }
   }
 
-  // save config to wp-backup-cron-manager/wp-backup-schedule-config.json
-  $config_path = $backup_cron_manager_path . 'wp-backup-schedule-config.json';
+  // save config to worry-proof-backup-cron-manager/worry-proof-backup-schedule-config.json
+  $config_path = $backup_cron_manager_path . 'worry-proof-backup-schedule-config.json';
 
   // save config to file
   $result = $wp_filesystem->put_contents($config_path, json_encode($config, JSON_PRETTY_PRINT));
@@ -1151,10 +1158,10 @@ function worrpb_save_backup_schedule_config($config = array()) {
   return true;
 }
 
-function worrpb_get_backup_schedule_config() {
-  // get config from wp-backup-cron-manager/wp-backup-schedule-config.json
+function worrprba_get_backup_schedule_config() {
+  // get config from worry-proof-backup-cron-manager/worry-proof-backup-schedule-config.json
   $upload_dir = wp_upload_dir();
-  $backup_cron_manager_path = $upload_dir['basedir'] . '/wp-backup-cron-manager/';
+  $backup_cron_manager_path = $upload_dir['basedir'] . '/worry-proof-backup-cron-manager/';
 
   global $wp_filesystem;
     
@@ -1164,7 +1171,7 @@ function worrpb_get_backup_schedule_config() {
   }
 
   // get config from file
-  $config_path = $backup_cron_manager_path . 'wp-backup-schedule-config.json';
+  $config_path = $backup_cron_manager_path . 'worry-proof-backup-schedule-config.json';
 
   // check if file exists
   if (!$wp_filesystem->exists($config_path)) {
@@ -1186,9 +1193,9 @@ function worrpb_get_backup_schedule_config() {
  * @param int $keep_last_n_backup Number of most recent backups to keep.
  * @return bool True if completed, false if skipped.
  */
-function worrpb_delete_older_backups($keep_last_n_backup = 2) {
+function worrprba_delete_older_backups($keep_last_n_backup = 2) {
   // get all backups
-  $all_backups = worrpb_get_backups();
+  $all_backups = worrprba_get_backups();
 
   // filter backups with name start with "Backup Schedule ..."
   $scheduled_backups = array_filter($all_backups, function($backup) {
@@ -1214,11 +1221,11 @@ function worrpb_delete_older_backups($keep_last_n_backup = 2) {
       continue;
     }
 
-    $backup_folder = WP_CONTENT_DIR . '/uploads/wp-backup/' . $backup['folder_name'];
-    $result = worrpb_remove_folder($backup_folder);
+    $backup_folder = WP_CONTENT_DIR . '/uploads/worry-proof-backup/' . $backup['folder_name'];
+    $result = worrprba_remove_folder($backup_folder);
 
     if (is_wp_error($result)) {
-      worrpb_log(sprintf(
+      worrprba_log(sprintf(
         "🙁 DELETE BACKUP FOLDER FAILED: %s - %s",
         esc_html($backup_folder),
         $result->get_error_message()
@@ -1230,7 +1237,7 @@ function worrpb_delete_older_backups($keep_last_n_backup = 2) {
 }
 
 // send mail to admin when backup cron completed
-function worrpb_send_mail_to_admin_when_backup_cron_completed($config, $context) {
+function worrprba_send_mail_to_admin_when_backup_cron_completed($config, $context) {
   // get admin email
   $admin_email = get_option('admin_email');
 
@@ -1385,7 +1392,7 @@ function worrpb_send_mail_to_admin_when_backup_cron_completed($config, $context)
 
   //  check error if send mail failed
   if(is_wp_error($result)) {
-    worrpb_log(sprintf(
+    worrprba_log(sprintf(
       "🙁 SEND MAIL TO ADMIN FAILED: %s - %s",
       esc_html($admin_email),
       $result->get_error_message()
@@ -1401,7 +1408,7 @@ function worrpb_send_mail_to_admin_when_backup_cron_completed($config, $context)
  * @param mixed $message
  * @return void
  */
-function worrpb_log( $message ) {
+function worrprba_log( $message ) {
 	if ( defined('WP_DEBUG') && WP_DEBUG && defined('WP_DEBUG_LOG') && WP_DEBUG_LOG ) {
 		if ( is_array($message) || is_object($message) ) {
 			$message = print_r($message, true); // phpcs:ignore WordPress.PHP.DevelopmentFunctions.error_log_print_r

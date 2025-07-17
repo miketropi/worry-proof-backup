@@ -5,7 +5,7 @@ if ( ! defined( 'ABSPATH' ) ) exit; // Exit if accessed directly
  * @version: 1.0.0
  * @date: 2025-06-19
  * @description: Backup File System Class
- * @support: https://github.com/miketropi/wp-backup
+ * @support: https://github.com/miketropi/worry-proof-backup
  * @license: GPL-2.0+
  * @copyright: (c) 2025 Mike Tropi
  * Backup File System Class
@@ -13,7 +13,7 @@ if ( ! defined( 'ABSPATH' ) ) exit; // Exit if accessed directly
  * Usage:
  * $backup = new WORRPB_File_System([
  *    'source_folder' => '/path/to/source', // required
- *    'destination_folder' => 'backup_xxx', // required (relative to uploads/wp-backup/)
+ *    'destination_folder' => 'backup_xxx', // required (relative to uploads/worry-proof-backup/)
  *    'zip_name' => 'filesystem.zip', // optional, zip filename (default: filesystem.zip)
  *    'exclude' => ['node_modules', '.git', 'vendor'], // optional, folder/file names (1st-level)
  * ]);
@@ -43,7 +43,7 @@ class WORRPB_File_System {
         $this->destination_folder = $opts['destination_folder'];
 
         $upload_dir = wp_upload_dir();
-        $this->backup_dir = $upload_dir['basedir'] . '/wp-backup/' . $this->destination_folder;
+        $this->backup_dir = $upload_dir['basedir'] . '/worry-proof-backup/' . $this->destination_folder;
 
         if (!is_dir($this->backup_dir)) {
             wp_mkdir_p($this->backup_dir);

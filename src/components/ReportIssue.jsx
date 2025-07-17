@@ -3,8 +3,8 @@ import { useToast } from './Toast';
 import { sendReportEmail } from '../util/lib';
 
 const getSystemInfo = () => {
-  if (typeof window !== 'undefined' && window.worrpb_php_data) {
-    const d = window.worrpb_php_data;
+  if (typeof window !== 'undefined' && window.worrprba_php_data) {
+    const d = window.worrprba_php_data;
     return {
       wp_version: d.server_metrics?.wp_version || '',
       php_version: d.server_metrics?.php_version || '',

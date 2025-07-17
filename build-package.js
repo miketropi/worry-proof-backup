@@ -23,7 +23,7 @@ const excludeList = [
   // "tailwind.config.js",
   // "webpack.mix.js",
   // "build-package.js",
-  "wp-backup.zip"
+  "worry-proof-backup.zip"
 ];
 // ========================
 

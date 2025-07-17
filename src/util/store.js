@@ -54,7 +54,7 @@ const useBackupStore = create(
           step: 1,
           name: 'Generate Config File',
           description: '📝 Let\'s set the stage! Creating a shiny new config file with your backup preferences. Almost like writing a recipe for your perfect backup. 🍰',
-          action: 'worrpb_ajax_create_backup_config_file',
+          action: 'worrprba_ajax_create_backup_config_file',
           payload: {
             name,
             types,
@@ -75,7 +75,7 @@ const useBackupStore = create(
           step: process.length + 1,
           name: `Generating ${type} backup`,
           description: typeMessages[type],
-          action: `worrpb_ajax_generate_backup_${type}`,
+          action: `worrprba_ajax_generate_backup_${type}`,
           payload: {
             name,
             type,
@@ -88,7 +88,7 @@ const useBackupStore = create(
         step: process.length + 1,
         name: 'Done',
         description: '🎉 All done! Your backup is complete and safe. Time to celebrate! 🥳',
-        action: 'worrpb_ajax_generate_backup_done',
+        action: 'worrprba_ajax_generate_backup_done',
         payload: {},
       });
 
@@ -135,7 +135,7 @@ const useBackupStore = create(
           step: 1,
           name: 'Read Config File',
           description: '📖 Oop, let me check what you wanted restored! Reading your backup config like a pro detective 🔍✨',
-          action: 'worrpb_ajax_restore_read_backup_config_file',
+          action: 'worrprba_ajax_restore_read_backup_config_file',
           payload: {
             folder_name,
             types: types.join(','),
@@ -155,7 +155,7 @@ const useBackupStore = create(
           step: process.length + 1,
           name: `Restoring ${type}`,
           description: typeMessages[type],
-          action: `worrpb_ajax_restore_${type}`,
+          action: `worrprba_ajax_restore_${type}`,
           payload: {
             folder_name,
             type, 
@@ -168,7 +168,7 @@ const useBackupStore = create(
         step: process.length + 1,
         name: 'Done',
         description: '🎉 All done! Your restore is complete and everything is back to normal. Time to celebrate! 🥳',
-        action: 'worrpb_ajax_restore_done',
+        action: 'worrprba_ajax_restore_done',
         payload: {
           folder_name,
         },

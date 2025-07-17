@@ -5,7 +5,7 @@ if ( ! defined( 'ABSPATH' ) ) exit; // Exit if accessed directly
  * @version: 1.1.1
  * @date: 2025-06-24
  * @description: Restore Database Class (Safe Enhanced)
- * @support: https://github.com/miketropi/wp-backup
+ * @support: https://github.com/miketropi/worry-proof-backup
  * @license: GPL-2.0+
  * @copyright: (c) 2025 Mike Tropi
  */
@@ -38,7 +38,7 @@ class WORRPB_Restore_Database {
             return new WP_Error('upload_dir_error', "Upload directory error.");
         }
 
-        $this->restore_dir = $upload_dir['basedir'] . '/wp-backup/' . $this->session_id;
+        $this->restore_dir = $upload_dir['basedir'] . '/worry-proof-backup/' . $this->session_id;
         if (!file_exists($this->restore_dir)) {
             return new WP_Error('restore_dir_not_found', "Restore directory not found: $this->restore_dir");
         }

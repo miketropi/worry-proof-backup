@@ -1,7 +1,7 @@
 <?php 
 /**
  * Plugin Name: Worry Proof Backup
- * Plugin URI: https://github.com/miketropi/wp-backup
+ * Plugin URI: https://github.com/miketropi/worry-proof-backup
  * Description: 🛡️ Professional WordPress backup solution with comprehensive database and file system protection. Features automated backups, secure storage, and one-click restoration capabilities. Built for reliability and ease of use in production environments. **100% FREE FOREVER** - No hidden costs, no premium tiers, no limitations.
  * Version: 0.1.3
  * Requires at least: 6.0
@@ -29,16 +29,16 @@
 
 {
   # define plugin path
-  define( 'WP_BACKUP_PLUGIN_PATH', plugin_dir_path( __FILE__ ) );
+  define( 'WORRPRBA_PLUGIN_PATH', plugin_dir_path( __FILE__ ) );
 
   # define plugin url
-  define( 'WP_BACKUP_PLUGIN_URL', plugin_dir_url( __FILE__ ) );
+  define( 'WORRPRBA_PLUGIN_URL', plugin_dir_url( __FILE__ ) );
 
   # define plugin version
-  define( 'WP_BACKUP_PLUGIN_VERSION', '0.1.3' );
+  define( 'WORRPRBA_PLUGIN_VERSION', '0.1.3' );
 
   # beta version
-  define( 'WP_BACKUP_PLUGIN_BETA', true );
+  define( 'WORRPRBA_PLUGIN_BETA', true );
 }
 
 {
@@ -47,32 +47,32 @@
    */
 
   # include libs file
-  require_once WP_BACKUP_PLUGIN_PATH . 'inc/libs/backup-database.php';
-  require_once WP_BACKUP_PLUGIN_PATH . 'inc/libs/backup-file-system.php';
-  require_once WP_BACKUP_PLUGIN_PATH . 'inc/libs/restore-database.php';
-  require_once WP_BACKUP_PLUGIN_PATH . 'inc/libs/restore-file-system.php';
-  require_once WP_BACKUP_PLUGIN_PATH . 'inc/libs/backup-cron-manager.php';
-  require_once WP_BACKUP_PLUGIN_PATH . 'inc/libs/backup-cron-handle.php';
+  require_once WORRPRBA_PLUGIN_PATH . 'inc/libs/backup-database.php';
+  require_once WORRPRBA_PLUGIN_PATH . 'inc/libs/backup-file-system.php';
+  require_once WORRPRBA_PLUGIN_PATH . 'inc/libs/restore-database.php';
+  require_once WORRPRBA_PLUGIN_PATH . 'inc/libs/restore-file-system.php';
+  require_once WORRPRBA_PLUGIN_PATH . 'inc/libs/backup-cron-manager.php';
+  require_once WORRPRBA_PLUGIN_PATH . 'inc/libs/backup-cron-handle.php';
 
   # include static file
-  require_once WP_BACKUP_PLUGIN_PATH . 'inc/static.php';
+  require_once WORRPRBA_PLUGIN_PATH . 'inc/static.php';
 
   # include functions file
-  require_once WP_BACKUP_PLUGIN_PATH . 'inc/functions.php';
+  require_once WORRPRBA_PLUGIN_PATH . 'inc/functions.php';
 
   # include ajax file
-  require_once WP_BACKUP_PLUGIN_PATH . 'inc/ajax.php';
+  require_once WORRPRBA_PLUGIN_PATH . 'inc/ajax.php';
 
   # include hooks file
-  require_once WP_BACKUP_PLUGIN_PATH . 'inc/hooks.php';
+  require_once WORRPRBA_PLUGIN_PATH . 'inc/hooks.php';
 
   
 }
 
 // add link go to backup page in plugin page
-add_filter('plugin_action_links_' . plugin_basename(__FILE__), 'worrpb_plugin_action_links');
-function worrpb_plugin_action_links($links) {
-  $backup_link = '<a href="' . admin_url('admin.php?page=wp-backup') . '">' . __('Backup Now', 'worry-proof-backup') . '</a>';
+add_filter('plugin_action_links_' . plugin_basename(__FILE__), 'worrprba_plugin_action_links');
+function worrprba_plugin_action_links($links) {
+  $backup_link = '<a href="' . admin_url('admin.php?page=worry-proof-backup') . '">' . __('Backup Now', 'worry-proof-backup') . '</a>';
   array_unshift($links, $backup_link);
   return $links;
 }

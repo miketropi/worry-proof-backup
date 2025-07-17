@@ -1,6 +1,6 @@
 === Worry Proof Backup ===
 Contributors: miketropi
-Donate link: https://github.com/miketropi/wp-backup
+Donate link: https://github.com/miketropi/worry-proof-backup
 Tags: backup, restore, import, export, database
 Requires at least: 6.0
 Tested up to: 6.8
@@ -55,7 +55,7 @@ We strongly recommend upgrading to PHP 8.0+ for optimal compatibility, performan
 Most hosting providers support PHP 8—feel free to reach out to your hosting support team and ask for an upgrade.
 
 == Installation ==
-1. Upload the plugin files to the `/wp-content/plugins/wp-backup` directory, or install via the WordPress Plugins screen.
+1. Upload the plugin files to the `/wp-content/plugins/worry-proof-backup` directory, or install via the WordPress Plugins screen.
 2. Activate the plugin through the 'Plugins' menu in WordPress.
 3. Access the **WP Backup** menu in your WordPress admin tools sidebar.
 
@@ -84,6 +84,9 @@ Yes, you can use the import/export tools to move your site or demo content betwe
 * Improved backup folder organization
 * Added backup completion status tracking
 * Enhanced admin interface with React components
+
+== External services ==
+* No External services
 
 == Changelog ==
 = 0.1.1 =

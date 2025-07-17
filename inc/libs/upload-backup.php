@@ -3,7 +3,7 @@ if ( ! defined( 'ABSPATH' ) ) exit; // Exit if accessed directly
 /**
  * WORRPB_Upload_Backup_File Class
  *
- * Upload and extract a backup zip file to wp-content/uploads/wp-backup
+ * Upload and extract a backup zip file to wp-content/uploads/worry-proof-backup
  *
  * @author: @Mike
  * @version: 1.0.0
@@ -35,7 +35,7 @@ class WORRPB_Upload_Backup_File {
             throw new Exception('Could not get WordPress upload directory.');
         }
         $this->upload_dir = $upload_dir['basedir'];
-        $this->backup_dir = $this->upload_dir . '/wp-backup/' . $this->session_id;
+        $this->backup_dir = $this->upload_dir . '/worry-proof-backup/' . $this->session_id;
 
         require_once ABSPATH . 'wp-admin/includes/file.php';
         WP_Filesystem();

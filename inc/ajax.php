@@ -4,27 +4,27 @@
  */
 
 // get backups
-add_action('wp_ajax_worrpb_ajax_get_backups', 'worrpb_ajax_get_backups');
-function worrpb_ajax_get_backups() {
+add_action('wp_ajax_worrprba_ajax_get_backups', 'worrprba_ajax_get_backups');
+function worrprba_ajax_get_backups() {
   # check nonce
-  check_ajax_referer('worrpb_nonce_' . get_current_user_id(), 'nonce');
+  check_ajax_referer('worrprba_nonce_' . get_current_user_id(), 'nonce');
 
   # get backups
-  $backups = worrpb_get_backups();
+  $backups = worrprba_get_backups();
   wp_send_json_success($backups);
 }
 
 // create backup config file
-add_action('wp_ajax_worrpb_ajax_create_backup_config_file', 'worrpb_ajax_create_backup_config_file');
-function worrpb_ajax_create_backup_config_file() {
+add_action('wp_ajax_worrprba_ajax_create_backup_config_file', 'worrprba_ajax_create_backup_config_file');
+function worrprba_ajax_create_backup_config_file() {
 
   # check nonce 
-  check_ajax_referer('worrpb_nonce_' . get_current_user_id(), 'nonce');
+  check_ajax_referer('worrprba_nonce_' . get_current_user_id(), 'nonce');
 
   # get payload
   $payload = isset($_POST['payload']) ? wp_unslash($_POST['payload']) : array(); // phpcs:ignore WordPress.Security.ValidatedSanitizedInput.InputNotSanitized
 
-  $config_file = worrpb_generate_config_file([
+  $config_file = worrprba_generate_config_file([
     'backup_name' => isset($payload['name']) ? $payload['name'] : '',
     'backup_types' => isset($payload['types']) ? $payload['types'] : array(),
   ]);
@@ -40,11 +40,11 @@ function worrpb_ajax_create_backup_config_file() {
   ));
 }
 
-// worrpb_ajax_generate_backup_database
-add_action('wp_ajax_worrpb_ajax_generate_backup_database', 'worrpb_ajax_generate_backup_database');
-function worrpb_ajax_generate_backup_database() {
+// worrprba_ajax_generate_backup_database
+add_action('wp_ajax_worrprba_ajax_generate_backup_database', 'worrprba_ajax_generate_backup_database');
+function worrprba_ajax_generate_backup_database() {
   # check nonce
-  check_ajax_referer('worrpb_nonce_' . get_current_user_id(), 'nonce');
+  check_ajax_referer('worrprba_nonce_' . get_current_user_id(), 'nonce');
 
   # get payload
   $payload = isset($_POST['payload']) ? wp_unslash($_POST['payload']) : array(); // phpcs:ignore WordPress.Security.ValidatedSanitizedInput.InputNotSanitized
@@ -110,10 +110,10 @@ function worrpb_ajax_generate_backup_database() {
 }
 
 // backup plugins
-add_action('wp_ajax_worrpb_ajax_generate_backup_plugin', 'worrpb_ajax_generate_backup_plugin');
-function worrpb_ajax_generate_backup_plugin() {
+add_action('wp_ajax_worrprba_ajax_generate_backup_plugin', 'worrprba_ajax_generate_backup_plugin');
+function worrprba_ajax_generate_backup_plugin() {
   # check nonce
-  check_ajax_referer('worrpb_nonce_' . get_current_user_id(), 'nonce');
+  check_ajax_referer('worrprba_nonce_' . get_current_user_id(), 'nonce');
 
   # get payload
   $payload = isset($_POST['payload']) ? wp_unslash($_POST['payload']) : array(); // phpcs:ignore WordPress.Security.ValidatedSanitizedInput.InputNotSanitized
@@ -152,10 +152,10 @@ function worrpb_ajax_generate_backup_plugin() {
 }
 
 // backup themes
-add_action('wp_ajax_worrpb_ajax_generate_backup_theme', 'worrpb_ajax_generate_backup_theme');
-function worrpb_ajax_generate_backup_theme() {
+add_action('wp_ajax_worrprba_ajax_generate_backup_theme', 'worrprba_ajax_generate_backup_theme');
+function worrprba_ajax_generate_backup_theme() {
   # check nonce
-  check_ajax_referer('worrpb_nonce_' . get_current_user_id(), 'nonce');
+  check_ajax_referer('worrprba_nonce_' . get_current_user_id(), 'nonce');
 
   # get payload
   $payload = isset($_POST['payload']) ? wp_unslash($_POST['payload']) : array(); // phpcs:ignore WordPress.Security.ValidatedSanitizedInput.InputNotSanitized
@@ -193,10 +193,10 @@ function worrpb_ajax_generate_backup_theme() {
 }
 
 // folder uploads
-add_action('wp_ajax_worrpb_ajax_generate_backup_uploads', 'worrpb_ajax_generate_backup_uploads');
-function worrpb_ajax_generate_backup_uploads() {
+add_action('wp_ajax_worrprba_ajax_generate_backup_uploads', 'worrprba_ajax_generate_backup_uploads');
+function worrprba_ajax_generate_backup_uploads() {
   # check nonce
-  check_ajax_referer('worrpb_nonce_' . get_current_user_id(), 'nonce');
+  check_ajax_referer('worrprba_nonce_' . get_current_user_id(), 'nonce');
   
   # get payload
   $payload = isset($_POST['payload']) ? wp_unslash($_POST['payload']) : array(); // phpcs:ignore WordPress.Security.ValidatedSanitizedInput.InputNotSanitized
@@ -211,7 +211,7 @@ function worrpb_ajax_generate_backup_uploads() {
     'source_folder' => WP_CONTENT_DIR . '/uploads/',
     'destination_folder' => $payload['name_folder'],
     'zip_name' => 'uploads.zip',
-    'exclude' => ['wp-backup', 'wp-backup-zip', 'wp-backup-cron-manager'], // phpcs:ignore WordPressVIPMinimum.Performance.WPQueryParams.PostNotIn_exclude
+    'exclude' => ['worry-proof-backup', 'worry-proof-backup-zip', 'worry-proof-backup-cron-manager'], // phpcs:ignore WordPressVIPMinimum.Performance.WPQueryParams.PostNotIn_exclude
   ]);
 
   // check error $backup
@@ -234,22 +234,22 @@ function worrpb_ajax_generate_backup_uploads() {
   ]);
 }
 
-// worrpb_ajax_generate_backup_done
-add_action('wp_ajax_worrpb_ajax_generate_backup_done', 'worrpb_ajax_generate_backup_done');
-function worrpb_ajax_generate_backup_done() {
+// worrprba_ajax_generate_backup_done
+add_action('wp_ajax_worrprba_ajax_generate_backup_done', 'worrprba_ajax_generate_backup_done');
+function worrprba_ajax_generate_backup_done() {
   # check nonce
-  check_ajax_referer('worrpb_nonce_' . get_current_user_id(), 'nonce');
+  check_ajax_referer('worrprba_nonce_' . get_current_user_id(), 'nonce');
 
   # get payload
   $payload = isset($_POST['payload']) ? wp_unslash($_POST['payload']) : array(); // phpcs:ignore WordPress.Security.ValidatedSanitizedInput.InputNotSanitized
 
   // get backup size
-  $backup_size = worrpb_calc_folder_size($payload['backup_folder']);
+  $backup_size = worrprba_calc_folder_size($payload['backup_folder']);
 
   // update status in config file
-  $result = worrpb_update_config_file($payload['backup_folder'], [
+  $result = worrprba_update_config_file($payload['backup_folder'], [
     'backup_status' => 'completed',
-    'backup_size' => worrpb_format_bytes($backup_size),
+    'backup_size' => worrprba_format_bytes($backup_size),
   ]);
 
   // check error $result
@@ -262,13 +262,13 @@ function worrpb_ajax_generate_backup_done() {
   ]);
 }
 
-// worrpb_ajax_delete_backup_folder
-add_action('wp_ajax_worrpb_ajax_delete_backup_folder', 'worrpb_ajax_delete_backup_folder');
-function worrpb_ajax_delete_backup_folder() {
+// worrprba_ajax_delete_backup_folder
+add_action('wp_ajax_worrprba_ajax_delete_backup_folder', 'worrprba_ajax_delete_backup_folder');
+function worrprba_ajax_delete_backup_folder() {
   // wp_send_json($_POST);
   // die();
   # check nonce
-  check_ajax_referer('worrpb_nonce_' . get_current_user_id(), 'nonce');
+  check_ajax_referer('worrprba_nonce_' . get_current_user_id(), 'nonce');
 
   # get payload
   $payload = isset($_POST['payload']) ? wp_unslash($_POST['payload']) : array(); // phpcs:ignore WordPress.Security.ValidatedSanitizedInput.InputNotSanitized
@@ -276,11 +276,11 @@ function worrpb_ajax_delete_backup_folder() {
   // name_folder backup folder
   $name_folder = $payload['name_folder'];
 
-  // backup folder  get wp uploads + /wp-backup/name_folder
-  $backup_folder_dir = WP_CONTENT_DIR . '/uploads/wp-backup/' . $name_folder;
+  // backup folder  get wp uploads + /worry-proof-backup/name_folder
+  $backup_folder_dir = WP_CONTENT_DIR . '/uploads/worry-proof-backup/' . $name_folder;
   
   // delete backup folder
-  $result = worrpb_remove_folder($backup_folder_dir);
+  $result = worrprba_remove_folder($backup_folder_dir);
   
   // check error $result
   if (is_wp_error($result)) {
@@ -292,11 +292,11 @@ function worrpb_ajax_delete_backup_folder() {
   ]);
 }
 
-// worrpb_ajax_restore_read_backup_config_file
-add_action('wp_ajax_worrpb_ajax_restore_read_backup_config_file', 'worrpb_ajax_restore_read_backup_config_file');
-function worrpb_ajax_restore_read_backup_config_file() {
+// worrprba_ajax_restore_read_backup_config_file
+add_action('wp_ajax_worrprba_ajax_restore_read_backup_config_file', 'worrprba_ajax_restore_read_backup_config_file');
+function worrprba_ajax_restore_read_backup_config_file() {
   # check nonce
-  check_ajax_referer('worrpb_nonce_' . get_current_user_id(), 'nonce');
+  check_ajax_referer('worrprba_nonce_' . get_current_user_id(), 'nonce');
 
   # get payload
   $payload = isset($_POST['payload']) ? wp_unslash($_POST['payload']) : array(); // phpcs:ignore WordPress.Security.ValidatedSanitizedInput.InputNotSanitized
@@ -305,14 +305,14 @@ function worrpb_ajax_restore_read_backup_config_file() {
   $types = $payload['types'];
 
   // get backup config file
-  $backup_config = worrpb_get_config_file($folder_name);
+  $backup_config = worrprba_get_config_file($folder_name);
 
   // check error $backup_config
   if (is_wp_error($backup_config)) {
     wp_send_json_error($backup_config->get_error_message());
   }
 
-  $process_restore_id = worrpb_create_process_restore_id($folder_name);
+  $process_restore_id = worrprba_create_process_restore_id($folder_name);
   if (is_wp_error($process_restore_id)) {
     wp_send_json_error($process_restore_id->get_error_message());
   }
@@ -326,18 +326,18 @@ function worrpb_ajax_restore_read_backup_config_file() {
 }
 
 /**
- * worrpb_ajax_restore_database
+ * worrprba_ajax_restore_database
  * 
  * @description: Restore database, this function is called after the user has read the backup config file and has clicked the restore database button.
  * Can't be called independently, and is strictly checked based on the randomly generated process id each time the user requests a restore.
  * During the database restore, your current login session might be lost. This affects WordPress's security check mechanism using nonces. Since we can't verify the usual nonce after a restore, we generate a unique process_restore_id to securely continue the process.
  * 
  */
-add_action('wp_ajax_worrpb_ajax_restore_database', 'worrpb_ajax_restore_database');
-add_action('wp_ajax_nopriv_worrpb_ajax_restore_database', 'worrpb_ajax_restore_database');
-function worrpb_ajax_restore_database() {
+add_action('wp_ajax_worrprba_ajax_restore_database', 'worrprba_ajax_restore_database');
+add_action('wp_ajax_nopriv_worrprba_ajax_restore_database', 'worrprba_ajax_restore_database');
+function worrprba_ajax_restore_database() {
   # check nonce
-  // check_ajax_referer('wp-backup-restore', 'wp_restore_nonce');
+  // check_ajax_referer('worry-proof-backup-restore', 'wp_restore_nonce');
 
   # get payload
   $payload = isset($_POST['payload']) ? wp_unslash($_POST['payload']) : array(); // phpcs:ignore WordPress.Security.ValidatedSanitizedInput.InputNotSanitized,WordPress.Security.NonceVerification.Missing
@@ -347,11 +347,11 @@ function worrpb_ajax_restore_database() {
   $backup_prefix = $payload['table_prefix'];
 
   // During the database restore, your current login session might be lost. This affects WordPress's security check mechanism using nonces. Since we can't verify the usual nonce after a restore, we generate a unique process_restore_id to securely continue the process.
-  $validate_process_restore_id = worrpb_validate_process_restore_id($process_restore_id, $folder_name);
+  $validate_process_restore_id = worrprba_validate_process_restore_id($process_restore_id, $folder_name);
   if (is_wp_error($validate_process_restore_id)) {
 
     // error delete process restore id
-    $delete_process_restore = worrpb_delete_process_restore_id($folder_name);
+    $delete_process_restore = worrprba_delete_process_restore_id($folder_name);
     wp_send_json_error($validate_process_restore_id->get_error_message());
   }
 
@@ -413,18 +413,18 @@ function worrpb_ajax_restore_database() {
   }
 }
 
-// worrpb_ajax_restore_plugin 
-add_action('wp_ajax_worrpb_ajax_restore_plugin', 'worrpb_ajax_restore_plugin');
-// add_action('wp_ajax_nopriv_worrpb_ajax_restore_plugin', 'worrpb_ajax_restore_plugin');
-function worrpb_ajax_restore_plugin() {
+// worrprba_ajax_restore_plugin 
+add_action('wp_ajax_worrprba_ajax_restore_plugin', 'worrprba_ajax_restore_plugin');
+// add_action('wp_ajax_nopriv_worrprba_ajax_restore_plugin', 'worrprba_ajax_restore_plugin');
+function worrprba_ajax_restore_plugin() {
   # check nonce
-  check_ajax_referer('wp-backup-restore', 'wp_restore_nonce');
+  check_ajax_referer('worry-proof-backup-restore', 'wp_restore_nonce');
 
   # get payload
   $payload = isset($_POST['payload']) ? wp_unslash($_POST['payload']) : array(); // phpcs:ignore WordPress.Security.ValidatedSanitizedInput.InputNotSanitized
 
   $folder_name = $payload['folder_name'];
-  $path_zip_file = WP_CONTENT_DIR . '/uploads/wp-backup/' . $folder_name . '/plugins.zip';
+  $path_zip_file = WP_CONTENT_DIR . '/uploads/worry-proof-backup/' . $folder_name . '/plugins.zip';
   
   // validate $path_zip_file
   if (!file_exists($path_zip_file)) {
@@ -489,18 +489,18 @@ function worrpb_ajax_restore_plugin() {
   ]);
 }
 
-// worrpb_ajax_restore_theme
-add_action('wp_ajax_worrpb_ajax_restore_theme', 'worrpb_ajax_restore_theme');
-// add_action('wp_ajax_nopriv_worrpb_ajax_restore_theme', 'worrpb_ajax_restore_theme');
-function worrpb_ajax_restore_theme() {
+// worrprba_ajax_restore_theme
+add_action('wp_ajax_worrprba_ajax_restore_theme', 'worrprba_ajax_restore_theme');
+// add_action('wp_ajax_nopriv_worrprba_ajax_restore_theme', 'worrprba_ajax_restore_theme');
+function worrprba_ajax_restore_theme() {
   # check nonce
-  check_ajax_referer('wp-backup-restore', 'wp_restore_nonce');
+  check_ajax_referer('worry-proof-backup-restore', 'wp_restore_nonce');
   
   # get payload
   $payload = isset($_POST['payload']) ? wp_unslash($_POST['payload']) : array(); // phpcs:ignore WordPress.Security.ValidatedSanitizedInput.InputNotSanitized
 
   $folder_name = $payload['folder_name'];
-  $path_zip_file = WP_CONTENT_DIR . '/uploads/wp-backup/' . $folder_name . '/themes.zip';
+  $path_zip_file = WP_CONTENT_DIR . '/uploads/worry-proof-backup/' . $folder_name . '/themes.zip';
   
   // validate $path_zip_file
   if (!file_exists($path_zip_file)) {
@@ -563,18 +563,18 @@ function worrpb_ajax_restore_theme() {
   ]);
 }
 
-// worrpb_ajax_restore_uploads
-add_action('wp_ajax_worrpb_ajax_restore_uploads', 'worrpb_ajax_restore_uploads');
-// add_action('wp_ajax_nopriv_worrpb_ajax_restore_uploads', 'worrpb_ajax_restore_uploads');
-function worrpb_ajax_restore_uploads() {
+// worrprba_ajax_restore_uploads
+add_action('wp_ajax_worrprba_ajax_restore_uploads', 'worrprba_ajax_restore_uploads');
+// add_action('wp_ajax_nopriv_worrprba_ajax_restore_uploads', 'worrprba_ajax_restore_uploads');
+function worrprba_ajax_restore_uploads() {
   # check nonce
-  check_ajax_referer('wp-backup-restore', 'wp_restore_nonce');
+  check_ajax_referer('worry-proof-backup-restore', 'wp_restore_nonce');
   
   # get payload
   $payload = isset($_POST['payload']) ? wp_unslash($_POST['payload']) : array(); // phpcs:ignore WordPress.Security.ValidatedSanitizedInput.InputNotSanitized
 
   $folder_name = $payload['folder_name'];
-  $path_zip_file = WP_CONTENT_DIR . '/uploads/wp-backup/' . $folder_name . '/uploads.zip';
+  $path_zip_file = WP_CONTENT_DIR . '/uploads/worry-proof-backup/' . $folder_name . '/uploads.zip';
   
   // validate $path_zip_file
   if (!file_exists($path_zip_file)) {
@@ -586,7 +586,7 @@ function worrpb_ajax_restore_uploads() {
       'zip_file' => $path_zip_file,
       'destination_folder' => WP_CONTENT_DIR . '/uploads/',
       'overwrite_existing' => true,
-      'exclude' => ['wp-backup', 'wp-backup-zip'], // phpcs:ignore WordPressVIPMinimum.Performance.WPQueryParams.PostNotIn_exclude
+      'exclude' => ['worry-proof-backup', 'worry-proof-backup-zip'], // phpcs:ignore WordPressVIPMinimum.Performance.WPQueryParams.PostNotIn_exclude
       'restore_progress_file_name' => '__uploads-restore-progress.json',
     ]);
 
@@ -618,7 +618,7 @@ function worrpb_ajax_restore_uploads() {
   //   'zip_file' => $path_zip_file,
   //   'destination_folder' => WP_CONTENT_DIR . '/uploads/',
   //   'overwrite_existing' => true,
-  //   'exclude' => ['wp-backup', 'wp-backup-zip'], // phpcs:ignore WordPressVIPMinimum.Performance.WPQueryParams.PostNotIn_exclude
+  //   'exclude' => ['worry-proof-backup', 'worry-proof-backup-zip'], // phpcs:ignore WordPressVIPMinimum.Performance.WPQueryParams.PostNotIn_exclude
   // ]);
 
   // // check error $restore_uploads
@@ -639,12 +639,12 @@ function worrpb_ajax_restore_uploads() {
   ]);
 }
 
-// worrpb_ajax_restore_done
-add_action('wp_ajax_worrpb_ajax_restore_done', 'worrpb_ajax_restore_done');
-add_action('wp_ajax_nopriv_worrpb_ajax_restore_done', 'worrpb_ajax_restore_done');
-function worrpb_ajax_restore_done() {
+// worrprba_ajax_restore_done
+add_action('wp_ajax_worrprba_ajax_restore_done', 'worrprba_ajax_restore_done');
+add_action('wp_ajax_nopriv_worrprba_ajax_restore_done', 'worrprba_ajax_restore_done');
+function worrprba_ajax_restore_done() {
   # check nonce
-  // check_ajax_referer('wp-backup-restore', 'wp_restore_nonce');
+  // check_ajax_referer('worry-proof-backup-restore', 'wp_restore_nonce');
 
   # get payload
   $payload = isset($_POST['payload']) ? wp_unslash($_POST['payload']) : array(); // phpcs:ignore WordPress.Security.ValidatedSanitizedInput.InputNotSanitized,WordPress.Security.NonceVerification.Missing
@@ -652,7 +652,7 @@ function worrpb_ajax_restore_done() {
   $folder_name = $payload['folder_name'];
 
   // delete process restore id
-  $delete_process_restore = worrpb_delete_process_restore_id($folder_name);
+  $delete_process_restore = worrprba_delete_process_restore_id($folder_name);
   if (is_wp_error($delete_process_restore)) {
     wp_send_json_error($delete_process_restore->get_error_message());
   }
@@ -665,17 +665,17 @@ function worrpb_ajax_restore_done() {
   ]);
 }
 
-// worrpb_ajax_send_report_email
-add_action('wp_ajax_worrpb_ajax_send_report_email', 'worrpb_ajax_send_report_email');
-function worrpb_ajax_send_report_email() {
+// worrprba_ajax_send_report_email
+add_action('wp_ajax_worrprba_ajax_send_report_email', 'worrprba_ajax_send_report_email');
+function worrprba_ajax_send_report_email() {
   # check nonce
-  check_ajax_referer('worrpb_nonce_' . get_current_user_id(), 'nonce');
+  check_ajax_referer('worrprba_nonce_' . get_current_user_id(), 'nonce');
 
   # get payload
   $payload = isset($_POST['payload']) ? wp_unslash($_POST['payload']) : array(); // phpcs:ignore WordPress.Security.ValidatedSanitizedInput.InputNotSanitized
 
   // send report email
-  $result = worrpb_send_report_email($payload);
+  $result = worrprba_send_report_email($payload);
 
   // check error $result
   if (is_wp_error($result)) {
@@ -686,11 +686,11 @@ function worrpb_ajax_send_report_email() {
 }
 
 
-// worrpb_ajax_upload_backup_file
-add_action('wp_ajax_worrpb_ajax_upload_backup_file', 'worrpb_ajax_upload_backup_file');
-function worrpb_ajax_upload_backup_file() {
+// worrprba_ajax_upload_backup_file
+add_action('wp_ajax_worrprba_ajax_upload_backup_file', 'worrprba_ajax_upload_backup_file');
+function worrprba_ajax_upload_backup_file() {
   // check nonce
-  check_ajax_referer('worrpb_nonce_' . get_current_user_id(), 'nonce');
+  check_ajax_referer('worrprba_nonce_' . get_current_user_id(), 'nonce');
 
   if (!isset($_FILES['file'])) {
     wp_send_json_error('No file uploaded');
@@ -712,7 +712,7 @@ function worrpb_ajax_upload_backup_file() {
   }
 
   // require libs/upload-backup.php
-  require_once(WP_BACKUP_PLUGIN_PATH . 'inc/libs/upload-backup.php');
+  require_once(WORRPRBA_PLUGIN_PATH . 'inc/libs/upload-backup.php');
 
   // wp_send_json_success($file);
   // die();
@@ -736,52 +736,52 @@ function worrpb_ajax_upload_backup_file() {
 }
 
 
-// worrpb_ajax_get_backup_download_zip_path 
-add_action('wp_ajax_worrpb_ajax_get_backup_download_zip_path', 'worrpb_ajax_get_backup_download_zip_path');
-function worrpb_ajax_get_backup_download_zip_path() {
+// worrprba_ajax_get_backup_download_zip_path 
+add_action('wp_ajax_worrprba_ajax_get_backup_download_zip_path', 'worrprba_ajax_get_backup_download_zip_path');
+function worrprba_ajax_get_backup_download_zip_path() {
   # check nonce
-  check_ajax_referer('worrpb_nonce_' . get_current_user_id(), 'nonce');
+  check_ajax_referer('worrprba_nonce_' . get_current_user_id(), 'nonce');
 
   # get payload
   $payload = isset($_POST['payload']) ? wp_unslash($_POST['payload']) : array(); // phpcs:ignore WordPress.Security.ValidatedSanitizedInput.InputNotSanitized
 
   $backup_folder_name = $payload['folder_name'];
 
-  $backup_download_zip_path = worrpb_get_backup_download_zip_path($backup_folder_name);
+  $backup_download_zip_path = worrprba_get_backup_download_zip_path($backup_folder_name);
 
   wp_send_json_success($backup_download_zip_path);
 }
 
-// worrpb_ajax_create_backup_zip
-add_action('wp_ajax_worrpb_ajax_create_backup_zip', 'worrpb_ajax_create_backup_zip');
-function worrpb_ajax_create_backup_zip() {
+// worrprba_ajax_create_backup_zip
+add_action('wp_ajax_worrprba_ajax_create_backup_zip', 'worrprba_ajax_create_backup_zip');
+function worrprba_ajax_create_backup_zip() {
   # check nonce
-  check_ajax_referer('worrpb_nonce_' . get_current_user_id(), 'nonce');
+  check_ajax_referer('worrprba_nonce_' . get_current_user_id(), 'nonce');
 
   # get payload
   $payload = isset($_POST['payload']) ? wp_unslash($_POST['payload']) : array(); // phpcs:ignore WordPress.Security.ValidatedSanitizedInput.InputNotSanitized
 
   $backup_folder_name = $payload['folder_name'];
 
-  $backup_create_zip = worrpb_create_backup_zip($backup_folder_name);
+  $backup_create_zip = worrprba_create_backup_zip($backup_folder_name);
 
   wp_send_json_success($backup_create_zip);
 }
 
-// worrpb_ajax_save_backup_schedule_config
-add_action('wp_ajax_worrpb_ajax_save_backup_schedule_config', 'worrpb_ajax_save_backup_schedule_config');
-function worrpb_ajax_save_backup_schedule_config() {
+// worrprba_ajax_save_backup_schedule_config
+add_action('wp_ajax_worrprba_ajax_save_backup_schedule_config', 'worrprba_ajax_save_backup_schedule_config');
+function worrprba_ajax_save_backup_schedule_config() {
   $json = file_get_contents("php://input");
   $data = json_decode($json, true);
   $nonce = $data['nonce'];
   $payload = $data['payload'];
 
   # check ajax nonce
-  if (!wp_verify_nonce($nonce, 'worrpb_nonce_' . get_current_user_id())) {
+  if (!wp_verify_nonce($nonce, 'worrprba_nonce_' . get_current_user_id())) {
     wp_send_json_error(['message' => 'Nonce is invalid'], 403);
   }
 
-  $result = worrpb_save_backup_schedule_config($payload);
+  $result = worrprba_save_backup_schedule_config($payload);
 
   // check error $result
   if (is_wp_error($result)) {
@@ -791,19 +791,19 @@ function worrpb_ajax_save_backup_schedule_config() {
   wp_send_json_success($result);
 }
 
-// worrpb_ajax_get_backup_schedule_config
-add_action('wp_ajax_worrpb_ajax_get_backup_schedule_config', 'worrpb_ajax_get_backup_schedule_config');
-function worrpb_ajax_get_backup_schedule_config() {
+// worrprba_ajax_get_backup_schedule_config
+add_action('wp_ajax_worrprba_ajax_get_backup_schedule_config', 'worrprba_ajax_get_backup_schedule_config');
+function worrprba_ajax_get_backup_schedule_config() {
   $json = file_get_contents("php://input");
   $data = json_decode($json, true);
   $nonce = $data['nonce'];
 
   # check ajax nonce
-  if (!wp_verify_nonce($nonce, 'worrpb_nonce_' . get_current_user_id())) {
+  if (!wp_verify_nonce($nonce, 'worrprba_nonce_' . get_current_user_id())) {
     wp_send_json_error(['message' => 'Nonce is invalid'], 403);
   }
 
-  $result = worrpb_get_backup_schedule_config();
+  $result = worrprba_get_backup_schedule_config();
 
   wp_send_json_success($result);
 }

@@ -30508,7 +30508,7 @@ var tabs = [{
     size: 14
   }),
   content: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_15__.jsx)(_components_ServerMetrics__WEBPACK_IMPORTED_MODULE_1__["default"], {
-    metrics: worrpb_php_data.server_metrics
+    metrics: worrprba_php_data.server_metrics
   })
 },
 // {
@@ -30935,7 +30935,7 @@ var BackupMobileCard = function BackupMobileCard(_ref) {
               strokeWidth: 2,
               d: "M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"
             })
-          }), (0,_util_lib__WEBPACK_IMPORTED_MODULE_2__.friendlyDateTime)(backup.date, worrpb_php_data.current_datetime)]
+          }), (0,_util_lib__WEBPACK_IMPORTED_MODULE_2__.friendlyDateTime)(backup.date, worrprba_php_data.current_datetime)]
         }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsx)("span", {
           children: backup.size
         })]
@@ -32094,7 +32094,7 @@ var BackupTable = function BackupTable() {
       children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_16__.jsx)(_UploadBackup__WEBPACK_IMPORTED_MODULE_13__["default"], {
         ref: uploadRef,
         accept: ".zip",
-        maxSize: worrpb_php_data.server_metrics.WP_Max_Upload_Size,
+        maxSize: worrprba_php_data.server_metrics.WP_Max_Upload_Size,
         maxFiles: 1,
         onUpload: handleUploadBackupFiles
       })
@@ -32277,7 +32277,7 @@ var BackupTableRow = function BackupTableRow(_ref) {
               strokeWidth: 2,
               d: "M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"
             })
-          }), (0,_util_lib__WEBPACK_IMPORTED_MODULE_3__.friendlyDateTime)(backup.date, worrpb_php_data.current_datetime)]
+          }), (0,_util_lib__WEBPACK_IMPORTED_MODULE_3__.friendlyDateTime)(backup.date, worrprba_php_data.current_datetime)]
         })
       })
     }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsx)("td", {
@@ -34011,9 +34011,9 @@ function _arrayWithHoles(r) { if (Array.isArray(r)) return r; }
 
 
 var getSystemInfo = function getSystemInfo() {
-  if (typeof window !== 'undefined' && window.worrpb_php_data) {
+  if (typeof window !== 'undefined' && window.worrprba_php_data) {
     var _d$server_metrics, _d$server_metrics2, _d$server_metrics3;
-    var d = window.worrpb_php_data;
+    var d = window.worrprba_php_data;
     return {
       wp_version: ((_d$server_metrics = d.server_metrics) === null || _d$server_metrics === void 0 ? void 0 : _d$server_metrics.wp_version) || '',
       php_version: ((_d$server_metrics2 = d.server_metrics) === null || _d$server_metrics2 === void 0 ? void 0 : _d$server_metrics2.php_version) || '',
@@ -34432,7 +34432,7 @@ function RestoreConfigModal(_ref) {
             })]
           })]
         })
-      }), worrpb_php_data.current_domain != backup.site_url && selectedBackupRestoreTypes.includes('database') && /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("div", {
+      }), worrprba_php_data.current_domain != backup.site_url && selectedBackupRestoreTypes.includes('database') && /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("div", {
         className: "tw-bg-yellow-50 tw-border tw-border-yellow-200 tw-rounded-lg tw-p-4",
         children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsxs)("div", {
           className: "tw-flex tw-items-start tw-space-x-3",
@@ -34457,7 +34457,7 @@ function RestoreConfigModal(_ref) {
               children: ["This restore package was created for a different domain than your current WordPress site. After restoring the database, you may be ", /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("b", {
                 children: "logged out"
               }), " and might need to ", /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("a", {
-                href: "https://github.com/miketropi/wp-backup/blob/master/doc/manually-update-the-site-url.md",
+                href: "https://github.com/miketropi/worry-proof-backup/blob/master/doc/manually-update-the-site-url.md",
                 target: "_blank",
                 rel: "noopener noreferrer",
                 className: "tw-text-blue-600 tw-font-semibold hover:tw-text-blue-800 tw-underline",
@@ -36061,9 +36061,9 @@ function _regenerator() { /*! regenerator-runtime -- Copyright (c) 2014-present,
 function _regeneratorDefine2(e, r, n, t) { var i = Object.defineProperty; try { i({}, "", {}); } catch (e) { i = 0; } _regeneratorDefine2 = function _regeneratorDefine(e, r, n, t) { if (r) i ? i(e, r, { value: n, enumerable: !t, configurable: !t, writable: !t }) : e[r] = n;else { var o = function o(r, n) { _regeneratorDefine2(e, r, function (e) { return this._invoke(r, n, e); }); }; o("next", 0), o("throw", 1), o("return", 2); } }, _regeneratorDefine2(e, r, n, t); }
 function asyncGeneratorStep(n, t, e, r, o, a, c) { try { var i = n[a](c), u = i.value; } catch (n) { return void e(n); } i.done ? t(u) : Promise.resolve(u).then(r, o); }
 function _asyncToGenerator(n) { return function () { var t = this, e = arguments; return new Promise(function (r, o) { var a = n.apply(t, e); function _next(n) { asyncGeneratorStep(a, r, o, _next, _throw, "next", n); } function _throw(n) { asyncGeneratorStep(a, r, o, _next, _throw, "throw", n); } _next(void 0); }); }; }
-var _worrpb_php_data = worrpb_php_data,
-  ajax_url = _worrpb_php_data.ajax_url,
-  nonce = _worrpb_php_data.nonce;
+var _worrprba_php_data = worrprba_php_data,
+  ajax_url = _worrprba_php_data.ajax_url,
+  nonce = _worrprba_php_data.nonce;
 var __request = /*#__PURE__*/function () {
   var _ref = _asyncToGenerator(/*#__PURE__*/_regenerator().m(function _callee(url, options) {
     var response;
@@ -36095,8 +36095,8 @@ var getBackups = /*#__PURE__*/function () {
               'Content-Type': 'application/x-www-form-urlencoded'
             },
             body: new URLSearchParams({
-              action: 'worrpb_ajax_get_backups',
-              nonce: nonce.worrpb_nonce
+              action: 'worrprba_ajax_get_backups',
+              nonce: nonce.worrprba_nonce
             })
           });
         case 1:
@@ -36130,7 +36130,7 @@ var doBackupProcess = /*#__PURE__*/function () {
                 value = _ref5[1];
               return ["payload[".concat(key, "]"), value];
             }))), {}, {
-              nonce: nonce.worrpb_nonce
+              nonce: nonce.worrprba_nonce
             }))
           });
         case 1:
@@ -36162,7 +36162,7 @@ var deleteBackupFolder = /*#__PURE__*/function () {
               'Content-Type': 'application/x-www-form-urlencoded'
             },
             body: new URLSearchParams(_objectSpread(_objectSpread({
-              action: 'worrpb_ajax_delete_backup_folder'
+              action: 'worrprba_ajax_delete_backup_folder'
             }, Object.fromEntries(Object.entries({
               name_folder: name_folder
             }).map(function (_ref7) {
@@ -36171,7 +36171,7 @@ var deleteBackupFolder = /*#__PURE__*/function () {
                 value = _ref8[1];
               return ["payload[".concat(key, "]"), value];
             }))), {}, {
-              nonce: nonce.worrpb_nonce
+              nonce: nonce.worrprba_nonce
             }))
           });
         case 1:
@@ -36243,7 +36243,7 @@ var doRestoreProcess = /*#__PURE__*/function () {
                 value = _ref1[1];
               return ["payload[".concat(key, "]"), value];
             }))), {}, {
-              nonce: nonce.worrpb_nonce,
+              nonce: nonce.worrprba_nonce,
               wp_restore_nonce: nonce.wp_restore_nonce
             }))
           });
@@ -36270,14 +36270,14 @@ var sendReportEmail = /*#__PURE__*/function () {
               'Content-Type': 'application/x-www-form-urlencoded'
             },
             body: new URLSearchParams(_objectSpread(_objectSpread({
-              action: 'worrpb_ajax_send_report_email'
+              action: 'worrprba_ajax_send_report_email'
             }, Object.fromEntries(Object.entries(payload).map(function (_ref11) {
               var _ref12 = _slicedToArray(_ref11, 2),
                 key = _ref12[0],
                 value = _ref12[1];
               return ["payload[".concat(key, "]"), value];
             }))), {}, {
-              nonce: nonce.worrpb_nonce
+              nonce: nonce.worrprba_nonce
             }))
           });
         case 1:
@@ -36294,8 +36294,8 @@ var uploadFileWithProgress = function uploadFileWithProgress(file, onProgress) {
   return new Promise(function (resolve, reject) {
     var xhr = new XMLHttpRequest();
     var formData = new FormData();
-    formData.append('action', 'worrpb_ajax_upload_backup_file');
-    formData.append('nonce', nonce.worrpb_nonce);
+    formData.append('action', 'worrprba_ajax_upload_backup_file');
+    formData.append('nonce', nonce.worrprba_nonce);
     formData.append('file', file);
     xhr.open('POST', ajax_url);
 
@@ -36333,7 +36333,7 @@ var getBackupDownloadZipPath = /*#__PURE__*/function () {
               'Content-Type': 'application/x-www-form-urlencoded'
             },
             body: new URLSearchParams(_objectSpread(_objectSpread({
-              action: 'worrpb_ajax_get_backup_download_zip_path'
+              action: 'worrprba_ajax_get_backup_download_zip_path'
             }, Object.fromEntries(Object.entries({
               folder_name: folder_name
             }).map(function (_ref14) {
@@ -36342,7 +36342,7 @@ var getBackupDownloadZipPath = /*#__PURE__*/function () {
                 value = _ref15[1];
               return ["payload[".concat(key, "]"), value];
             }))), {}, {
-              nonce: nonce.worrpb_nonce
+              nonce: nonce.worrprba_nonce
             }))
           });
         case 1:
@@ -36368,7 +36368,7 @@ var createBackupZip = /*#__PURE__*/function () {
               'Content-Type': 'application/x-www-form-urlencoded'
             },
             body: new URLSearchParams(_objectSpread(_objectSpread({
-              action: 'worrpb_ajax_create_backup_zip'
+              action: 'worrprba_ajax_create_backup_zip'
             }, Object.fromEntries(Object.entries({
               folder_name: folder_name
             }).map(function (_ref17) {
@@ -36377,7 +36377,7 @@ var createBackupZip = /*#__PURE__*/function () {
                 value = _ref18[1];
               return ["payload[".concat(key, "]"), value];
             }))), {}, {
-              nonce: nonce.worrpb_nonce
+              nonce: nonce.worrprba_nonce
             }))
           });
         case 1:
@@ -36396,7 +36396,7 @@ var saveBackupScheduleConfig = /*#__PURE__*/function () {
     return _regenerator().w(function (_context9) {
       while (1) switch (_context9.n) {
         case 0:
-          endpoint = "".concat(ajax_url, "?action=worrpb_ajax_save_backup_schedule_config");
+          endpoint = "".concat(ajax_url, "?action=worrprba_ajax_save_backup_schedule_config");
           _context9.n = 1;
           return __request(endpoint, {
             method: 'POST',
@@ -36405,7 +36405,7 @@ var saveBackupScheduleConfig = /*#__PURE__*/function () {
             },
             body: JSON.stringify({
               payload: payload,
-              nonce: nonce.worrpb_nonce
+              nonce: nonce.worrprba_nonce
             })
           });
         case 1:
@@ -36424,7 +36424,7 @@ var getBackupScheduleConfig = /*#__PURE__*/function () {
     return _regenerator().w(function (_context0) {
       while (1) switch (_context0.n) {
         case 0:
-          endpoint = "".concat(ajax_url, "?action=worrpb_ajax_get_backup_schedule_config");
+          endpoint = "".concat(ajax_url, "?action=worrprba_ajax_get_backup_schedule_config");
           _context0.n = 1;
           return __request(endpoint, {
             method: 'POST',
@@ -36432,7 +36432,7 @@ var getBackupScheduleConfig = /*#__PURE__*/function () {
               'Content-Type': 'application/json'
             },
             body: JSON.stringify({
-              nonce: nonce.worrpb_nonce
+              nonce: nonce.worrprba_nonce
             })
           });
         case 1:
@@ -36528,7 +36528,7 @@ var useBackupStore = (0,zustand__WEBPACK_IMPORTED_MODULE_0__.create)((0,zustand_
         step: 1,
         name: 'Generate Config File',
         description: '📝 Let\'s set the stage! Creating a shiny new config file with your backup preferences. Almost like writing a recipe for your perfect backup. 🍰',
-        action: 'worrpb_ajax_create_backup_config_file',
+        action: 'worrprba_ajax_create_backup_config_file',
         payload: {
           name: name,
           types: types
@@ -36547,7 +36547,7 @@ var useBackupStore = (0,zustand__WEBPACK_IMPORTED_MODULE_0__.create)((0,zustand_
           step: process.length + 1,
           name: "Generating ".concat(type, " backup"),
           description: typeMessages[type],
-          action: "worrpb_ajax_generate_backup_".concat(type),
+          action: "worrprba_ajax_generate_backup_".concat(type),
           payload: {
             name: name,
             type: type
@@ -36560,7 +36560,7 @@ var useBackupStore = (0,zustand__WEBPACK_IMPORTED_MODULE_0__.create)((0,zustand_
         step: process.length + 1,
         name: 'Done',
         description: '🎉 All done! Your backup is complete and safe. Time to celebrate! 🥳',
-        action: 'worrpb_ajax_generate_backup_done',
+        action: 'worrprba_ajax_generate_backup_done',
         payload: {}
       });
       set(function (state) {
@@ -36618,7 +36618,7 @@ var useBackupStore = (0,zustand__WEBPACK_IMPORTED_MODULE_0__.create)((0,zustand_
         step: 1,
         name: 'Read Config File',
         description: '📖 Oop, let me check what you wanted restored! Reading your backup config like a pro detective 🔍✨',
-        action: 'worrpb_ajax_restore_read_backup_config_file',
+        action: 'worrprba_ajax_restore_read_backup_config_file',
         payload: {
           folder_name: folder_name,
           types: types.join(',')
@@ -36637,7 +36637,7 @@ var useBackupStore = (0,zustand__WEBPACK_IMPORTED_MODULE_0__.create)((0,zustand_
           step: process.length + 1,
           name: "Restoring ".concat(type),
           description: typeMessages[type],
-          action: "worrpb_ajax_restore_".concat(type),
+          action: "worrprba_ajax_restore_".concat(type),
           payload: {
             folder_name: folder_name,
             type: type
@@ -36650,7 +36650,7 @@ var useBackupStore = (0,zustand__WEBPACK_IMPORTED_MODULE_0__.create)((0,zustand_
         step: process.length + 1,
         name: 'Done',
         description: '🎉 All done! Your restore is complete and everything is back to normal. Time to celebrate! 🥳',
-        action: 'worrpb_ajax_restore_done',
+        action: 'worrprba_ajax_restore_done',
         payload: {
           folder_name: folder_name
         }

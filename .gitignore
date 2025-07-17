@@ -1,5 +1,5 @@
 node_modules
 .DS_Store
 .env
-wp-backup-*.zip
-wp-backup.zip
+worry-proof-backup-*.zip
+worry-proof-backup.zip

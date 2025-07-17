@@ -90,7 +90,7 @@ export default function RestoreConfigModal({ backup, closeModal, toast }) {
         </div>
         
         {
-          worrpb_php_data.current_domain != backup.site_url && selectedBackupRestoreTypes.includes('database') && (
+          worrprba_php_data.current_domain != backup.site_url && selectedBackupRestoreTypes.includes('database') && (
             <div className="tw-bg-yellow-50 tw-border tw-border-yellow-200 tw-rounded-lg tw-p-4">
               <div className="tw-flex tw-items-start tw-space-x-3">
                 <svg className="tw-w-5 tw-h-5 tw-text-yellow-600 tw-mt-0.5 tw-flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -100,7 +100,7 @@ export default function RestoreConfigModal({ backup, closeModal, toast }) {
                   <p className="tw-font-semibold tw-mb-1">Domain Mismatch Warning</p>
                   <p className="tw-leading-relaxed">
                     This restore package was created for a different domain than your current WordPress site. 
-                    After restoring the database, you may be <b>logged out</b> and might need to <a href="https://github.com/miketropi/wp-backup/blob/master/doc/manually-update-the-site-url.md" 
+                    After restoring the database, you may be <b>logged out</b> and might need to <a href="https://github.com/miketropi/worry-proof-backup/blob/master/doc/manually-update-the-site-url.md" 
                       target="_blank" 
                       rel="noopener noreferrer" 
                       className="tw-text-blue-600 tw-font-semibold hover:tw-text-blue-800 tw-underline">

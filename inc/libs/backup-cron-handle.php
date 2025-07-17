@@ -5,7 +5,7 @@ if ( ! defined( 'ABSPATH' ) ) exit; // Exit if accessed directly
  * @version: 1.0.0
  * @date: 2025-07-02
  * @description: Backup Cron Handler Class
- * @support: https://github.com/miketropi/wp-backup
+ * @support: https://github.com/miketropi/worry-proof-backup
  * @license: GPL-2.0+
  * @copyright: (c) 2025 Mike Tropi
  */
@@ -23,12 +23,12 @@ class WORRPB_Cron_Handler {
 
   public function init_handler() {
     // get backup schedule config
-    $config = worrpb_get_backup_schedule_config();
+    $config = worrprba_get_backup_schedule_config();
     $this->config = $config;
 
     // check if config is wp error
     if (is_wp_error($config)) {
-      worrpb_log("😵 BACKUP SCHEDULE CONFIG ERROR: " . $config->get_error_message());
+      worrprba_log("😵 BACKUP SCHEDULE CONFIG ERROR: " . $config->get_error_message());
       return;
     }
 
@@ -47,7 +47,7 @@ class WORRPB_Cron_Handler {
     $this->backup_types = $config['types'] ?? ['database', 'plugin', 'theme', 'uploads'];
 
     // ✅ start in init
-    $this->period_key = worrpb_get_period_key($this->type);
+    $this->period_key = worrprba_get_period_key($this->type);
     $this->register_steps();
     $this->handle_cron();
   }
@@ -78,7 +78,7 @@ class WORRPB_Cron_Handler {
   }
 
   public function handle_cron() {
-    $cron = new WORRPB_Cron_Manager('worrpb_cron_manager', function ($context) {
+    $cron = new WORRPB_Cron_Manager('worrprba_cron_manager', function ($context) {
       $step = (int) ($context['step'] ?? 0);
       $completed = $context['completed'] ?? false;
       $last_key = $context['period_key'] ?? '';
@@ -119,7 +119,7 @@ class WORRPB_Cron_Handler {
     $backup_types = $context['backup_types'] ?? [];
     $step = (int) ($context['step'] ?? 0);
 
-    $config_file = worrpb_generate_config_file([
+    $config_file = worrprba_generate_config_file([
       'backup_name' => $backup_name,
       'backup_types' => implode(',', $backup_types),
     ]);
@@ -171,8 +171,8 @@ class WORRPB_Cron_Handler {
         if ($progress['done']) break;
       }
     } catch (Exception $e) {
-      worrpb_update_config_file($backup_folder, ['backup_status' => 'fail']);
-      worrpb_log('😵 BACKUP DATABASE FAILED: ' . $e->getMessage());
+      worrprba_update_config_file($backup_folder, ['backup_status' => 'fail']);
+      worrprba_log('😵 BACKUP DATABASE FAILED: ' . $e->getMessage());
       return ['completed' => true, 'end_time' => time()];
     }
 
@@ -184,7 +184,7 @@ class WORRPB_Cron_Handler {
 
   // 🧩 Step 3–5: plugin, theme, uploads
   public function step_plugin($context) {
-    return $this->backup_folder_step(WP_PLUGIN_DIR, 'plugins.zip', $context, ['wp-backup']);
+    return $this->backup_folder_step(WP_PLUGIN_DIR, 'plugins.zip', $context, ['worry-proof-backup']);
   }
 
   public function step_theme($context) {
@@ -193,7 +193,7 @@ class WORRPB_Cron_Handler {
 
   public function step_uploads($context) {
     return $this->backup_folder_step(WP_CONTENT_DIR . '/uploads/', 'uploads.zip', $context, [
-      'wp-backup', 'wp-backup-zip', 'wp-backup-cron-manager'
+      'worry-proof-backup', 'worry-proof-backup-zip', 'worry-proof-backup-cron-manager'
     ]);
   }
 
@@ -212,8 +212,8 @@ class WORRPB_Cron_Handler {
 
     if (is_wp_error($backup) || is_wp_error($zip = $backup->runBackup())) {
       $error = is_wp_error($backup) ? $backup : $zip;
-      worrpb_log("😵 BACKUP FAILED ($zip_name): " . $error->get_error_message());
-      worrpb_update_config_file($backup_folder, ['backup_status' => 'fail']);
+      worrprba_log("😵 BACKUP FAILED ($zip_name): " . $error->get_error_message());
+      worrprba_update_config_file($backup_folder, ['backup_status' => 'fail']);
       return ['completed' => true, 'end_time' => time()];
     }
 
@@ -223,10 +223,10 @@ class WORRPB_Cron_Handler {
   // 🧩 Step 6: Finish
   public function step_finish($context) {
     $backup_folder = $context['backup_folder'] ?? '';
-    $size = worrpb_calc_folder_size($backup_folder);
-    $result = worrpb_update_config_file($backup_folder, [
+    $size = worrprba_calc_folder_size($backup_folder);
+    $result = worrprba_update_config_file($backup_folder, [
       'backup_status' => 'completed',
-      'backup_size' => worrpb_format_bytes($size),
+      'backup_size' => worrprba_format_bytes($size),
     ]);
 
     if (is_wp_error($result)) {

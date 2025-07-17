@@ -1,10 +1,10 @@
 {
-  "name": "wp-backup",
+  "name": "worry-proof-backup",
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "tailwind-run": "npx tailwindcss-cli -i ./src/style.css -o ./dist/css/wp-backup.bundle.css --minify --watch",
+    "tailwind-run": "npx tailwindcss-cli -i ./src/style.css -o ./dist/css/worry-proof-backup.bundle.css --minify --watch",
     "mix-watch": "npx mix watch",
     "dev": "run-p tailwind-run mix-watch",
     "build": "npx mix --production",

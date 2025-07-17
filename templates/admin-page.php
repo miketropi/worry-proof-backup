@@ -18,7 +18,7 @@ if ( ! defined( 'ABSPATH' ) ) exit; // Exit if accessed directly
             <span class="tw-w-1.5 tw-h-1.5 tw-bg-emerald-400 tw-rounded-full tw-animate-pulse" style="background-color: #10b981;"></span>
             v<?php echo esc_html($plugin_version); ?>
           </span>
-          <?php if (WP_BACKUP_PLUGIN_BETA) { ?>
+          <?php if (WORRPRBA_PLUGIN_BETA) { ?>
             <span class="tw-inline-flex tw-items-center tw-gap-1.5 tw-px-3 tw-py-1.5 tw-text-xs tw-font-semibold tw-bg-gradient-to-r tw-from-orange-100 tw-to-amber-100 tw-text-orange-700 tw-rounded-md tw-border tw-border-orange-200/60 tw-shadow-sm tw-backdrop-blur-sm tw-animate-pulse">
               <span class="tw-w-1.5 tw-h-1.5 tw-bg-orange-500 tw-rounded-full" style="background-color: #ff7f00;"></span>
               beta

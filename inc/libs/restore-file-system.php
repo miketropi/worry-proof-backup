@@ -5,7 +5,7 @@ if ( ! defined( 'ABSPATH' ) ) exit; // Exit if accessed directly
  * @version: 1.0.3
  * @date: 2025-06711
  * @description: Restore File System Class
- * @support: https://github.com/miketropi/wp-backup
+ * @support: https://github.com/miketropi/worry-proof-backup
  * @license: GPL-2.0+
  * @copyright: (c) 2025 Mike Tropi
  */

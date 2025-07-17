@@ -5,7 +5,7 @@ if ( ! defined( 'ABSPATH' ) ) exit; // Exit if accessed directly
  * @version: 1.0.0
  * @date: 2025-06-30
  * @description: Backup Cron Manager Class
- * @support: https://github.com/miketropi/wp-backup
+ * @support: https://github.com/miketropi/worry-proof-backup
  * @license: GPL-2.0+
  * @copyright: (c) 2025 Mike Tropi
  */
@@ -31,7 +31,7 @@ class WORRPB_Cron_Manager {
             return new WP_Error('upload_dir_error', "Uh-oh! 📂 Couldn't get the upload directory. Please check your WordPress upload settings and try again! 🙏");
         }
 
-        $this->base_path = $upload_dir['basedir'] . '/wp-backup-cron-manager/';
+        $this->base_path = $upload_dir['basedir'] . '/worry-proof-backup-cron-manager/';
 
         // check if folder exists
         if (!$this->fs->exists($this->base_path)) {

@@ -5,7 +5,7 @@ if ( ! defined( 'ABSPATH' ) ) exit; // Exit if accessed directly
  * @version: 1.0.0
  * @date: 2025-06-18
  * @description: Chunked WordPress Database Backup Class
- * @support: https://github.com/miketropi/wp-backup
+ * @support: https://github.com/miketropi/worry-proof-backup
  * @license: GPL-2.0+
  * @copyright: (c) 2025 Mike Tropi
  * 
@@ -61,7 +61,7 @@ class WORRPB_Database {
         if (empty($upload_dir['basedir'])) {
             return new WP_Error('upload_dir_error', "Uh-oh! 📂 Couldn't get the upload directory. Please check your WordPress upload settings and try again! 🙏");
         }
-        $this->backup_dir = $upload_dir['basedir'] . '/wp-backup/' . $this->session_id;
+        $this->backup_dir = $upload_dir['basedir'] . '/worry-proof-backup/' . $this->session_id;
 
         if (!file_exists($this->backup_dir)) {
             if (!wp_mkdir_p($this->backup_dir)) {
