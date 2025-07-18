@@ -1119,6 +1119,7 @@ function worrprba_get_period_key($type = 'weekly') {
 }
 
 function worrprba_save_backup_schedule_config($config = array()) {
+
   // check $config is not empty
   if (empty($config)) {
     return new WP_Error('config_empty', esc_html__('config is empty', 'worry-proof-backup'));
@@ -1145,6 +1146,8 @@ function worrprba_save_backup_schedule_config($config = array()) {
 
   // save config to worry-proof-backup-cron-manager/worry-proof-backup-schedule-config.json
   $config_path = $backup_cron_manager_path . 'worry-proof-backup-schedule-config.json';
+
+  
 
   // save config to file
   $result = $wp_filesystem->put_contents($config_path, json_encode($config, JSON_PRETTY_PRINT));

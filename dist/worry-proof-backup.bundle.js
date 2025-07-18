@@ -36032,6 +36032,7 @@ var UploadBackup = /*#__PURE__*/(0,react__WEBPACK_IMPORTED_MODULE_0__.forwardRef
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   __ajax: () => (/* binding */ __ajax),
 /* harmony export */   __request: () => (/* binding */ __request),
 /* harmony export */   createBackupZip: () => (/* binding */ createBackupZip),
 /* harmony export */   deleteBackupFolder: () => (/* binding */ deleteBackupFolder),
@@ -36082,79 +36083,59 @@ var __request = /*#__PURE__*/function () {
     return _ref.apply(this, arguments);
   };
 }();
-var getBackups = /*#__PURE__*/function () {
-  var _ref2 = _asyncToGenerator(/*#__PURE__*/_regenerator().m(function _callee2() {
-    var response;
+var __ajax = /*#__PURE__*/function () {
+  var _ref2 = _asyncToGenerator(/*#__PURE__*/_regenerator().m(function _callee2(action) {
+    var data,
+      type,
+      _args2 = arguments;
     return _regenerator().w(function (_context2) {
       while (1) switch (_context2.n) {
         case 0:
+          data = _args2.length > 1 && _args2[1] !== undefined ? _args2[1] : {};
+          type = _args2.length > 2 && _args2[2] !== undefined ? _args2[2] : 'POST';
           _context2.n = 1;
-          return __request(ajax_url, {
-            method: 'POST',
-            headers: {
-              'Content-Type': 'application/x-www-form-urlencoded'
-            },
-            body: new URLSearchParams({
-              action: 'worrprba_ajax_get_backups',
+          return jQuery.ajax({
+            url: ajax_url,
+            type: type,
+            dataType: 'json',
+            data: _objectSpread(_objectSpread({
+              action: action
+            }, data), {}, {
               nonce: nonce.worrprba_nonce
             })
           });
         case 1:
-          response = _context2.v;
-          return _context2.a(2, response);
+          return _context2.a(2, _context2.v);
       }
     }, _callee2);
   }));
-  return function getBackups() {
+  return function __ajax(_x3) {
     return _ref2.apply(this, arguments);
   };
 }();
-var doBackupProcess = /*#__PURE__*/function () {
-  var _ref3 = _asyncToGenerator(/*#__PURE__*/_regenerator().m(function _callee3(process) {
-    var action, payload, response;
+var getBackups = /*#__PURE__*/function () {
+  var _ref3 = _asyncToGenerator(/*#__PURE__*/_regenerator().m(function _callee3() {
     return _regenerator().w(function (_context3) {
       while (1) switch (_context3.n) {
         case 0:
-          action = process.action, payload = process.payload;
           _context3.n = 1;
-          return __request(ajax_url, {
-            method: 'POST',
-            headers: {
-              'Content-Type': 'application/x-www-form-urlencoded'
-            },
-            body: new URLSearchParams(_objectSpread(_objectSpread({
-              action: action
-            }, Object.fromEntries(Object.entries(payload).map(function (_ref4) {
-              var _ref5 = _slicedToArray(_ref4, 2),
-                key = _ref5[0],
-                value = _ref5[1];
-              return ["payload[".concat(key, "]"), value];
-            }))), {}, {
-              nonce: nonce.worrprba_nonce
-            }))
-          });
+          return __ajax('worrprba_ajax_get_backups');
         case 1:
-          response = _context3.v;
-          return _context3.a(2, response);
+          return _context3.a(2, _context3.v);
       }
     }, _callee3);
   }));
-  return function doBackupProcess(_x3) {
+  return function getBackups() {
     return _ref3.apply(this, arguments);
   };
 }();
-
-/**
- * Delete backup folder
- * @param {string} name_folder
- * @returns {Promise<boolean>}
- */
-var deleteBackupFolder = /*#__PURE__*/function () {
-  var _ref6 = _asyncToGenerator(/*#__PURE__*/_regenerator().m(function _callee4(name_folder) {
-    var response;
+var doBackupProcess = /*#__PURE__*/function () {
+  var _ref4 = _asyncToGenerator(/*#__PURE__*/_regenerator().m(function _callee4(process) {
+    var action, payload, response;
     return _regenerator().w(function (_context4) {
       while (1) switch (_context4.n) {
         case 0:
+          action = process.action, payload = process.payload;
           _context4.n = 1;
           return __request(ajax_url, {
             method: 'POST',
@@ -36162,13 +36143,11 @@ var deleteBackupFolder = /*#__PURE__*/function () {
               'Content-Type': 'application/x-www-form-urlencoded'
             },
             body: new URLSearchParams(_objectSpread(_objectSpread({
-              action: 'worrprba_ajax_delete_backup_folder'
-            }, Object.fromEntries(Object.entries({
-              name_folder: name_folder
-            }).map(function (_ref7) {
-              var _ref8 = _slicedToArray(_ref7, 2),
-                key = _ref8[0],
-                value = _ref8[1];
+              action: action
+            }, Object.fromEntries(Object.entries(payload).map(function (_ref5) {
+              var _ref6 = _slicedToArray(_ref5, 2),
+                key = _ref6[0],
+                value = _ref6[1];
               return ["payload[".concat(key, "]"), value];
             }))), {}, {
               nonce: nonce.worrprba_nonce
@@ -36180,8 +36159,34 @@ var deleteBackupFolder = /*#__PURE__*/function () {
       }
     }, _callee4);
   }));
-  return function deleteBackupFolder(_x4) {
-    return _ref6.apply(this, arguments);
+  return function doBackupProcess(_x4) {
+    return _ref4.apply(this, arguments);
+  };
+}();
+
+/**
+ * Delete backup folder
+ * @param {string} name_folder
+ * @returns {Promise<boolean>}
+ */
+var deleteBackupFolder = /*#__PURE__*/function () {
+  var _ref7 = _asyncToGenerator(/*#__PURE__*/_regenerator().m(function _callee5(name_folder) {
+    return _regenerator().w(function (_context5) {
+      while (1) switch (_context5.n) {
+        case 0:
+          _context5.n = 1;
+          return __ajax('worrprba_ajax_delete_backup_folder', {
+            payload: {
+              name_folder: name_folder
+            }
+          });
+        case 1:
+          return _context5.a(2, _context5.v);
+      }
+    }, _callee5);
+  }));
+  return function deleteBackupFolder(_x5) {
+    return _ref7.apply(this, arguments);
   };
 }();
 
@@ -36223,46 +36228,12 @@ function friendlyDateTime(inputDatetime, serverCurrentDatetime) {
   }));
 }
 var doRestoreProcess = /*#__PURE__*/function () {
-  var _ref9 = _asyncToGenerator(/*#__PURE__*/_regenerator().m(function _callee5(process) {
+  var _ref8 = _asyncToGenerator(/*#__PURE__*/_regenerator().m(function _callee6(process) {
     var action, payload, response;
-    return _regenerator().w(function (_context5) {
-      while (1) switch (_context5.n) {
-        case 0:
-          action = process.action, payload = process.payload;
-          _context5.n = 1;
-          return __request(ajax_url, {
-            method: 'POST',
-            headers: {
-              'Content-Type': 'application/x-www-form-urlencoded'
-            },
-            body: new URLSearchParams(_objectSpread(_objectSpread({
-              action: action
-            }, Object.fromEntries(Object.entries(payload).map(function (_ref0) {
-              var _ref1 = _slicedToArray(_ref0, 2),
-                key = _ref1[0],
-                value = _ref1[1];
-              return ["payload[".concat(key, "]"), value];
-            }))), {}, {
-              nonce: nonce.worrprba_nonce,
-              wp_restore_nonce: nonce.wp_restore_nonce
-            }))
-          });
-        case 1:
-          response = _context5.v;
-          return _context5.a(2, response);
-      }
-    }, _callee5);
-  }));
-  return function doRestoreProcess(_x5) {
-    return _ref9.apply(this, arguments);
-  };
-}();
-var sendReportEmail = /*#__PURE__*/function () {
-  var _ref10 = _asyncToGenerator(/*#__PURE__*/_regenerator().m(function _callee6(payload) {
-    var response;
     return _regenerator().w(function (_context6) {
       while (1) switch (_context6.n) {
         case 0:
+          action = process.action, payload = process.payload;
           _context6.n = 1;
           return __request(ajax_url, {
             method: 'POST',
@@ -36270,14 +36241,15 @@ var sendReportEmail = /*#__PURE__*/function () {
               'Content-Type': 'application/x-www-form-urlencoded'
             },
             body: new URLSearchParams(_objectSpread(_objectSpread({
-              action: 'worrprba_ajax_send_report_email'
-            }, Object.fromEntries(Object.entries(payload).map(function (_ref11) {
-              var _ref12 = _slicedToArray(_ref11, 2),
-                key = _ref12[0],
-                value = _ref12[1];
+              action: action
+            }, Object.fromEntries(Object.entries(payload).map(function (_ref9) {
+              var _ref0 = _slicedToArray(_ref9, 2),
+                key = _ref0[0],
+                value = _ref0[1];
               return ["payload[".concat(key, "]"), value];
             }))), {}, {
-              nonce: nonce.worrprba_nonce
+              nonce: nonce.worrprba_nonce,
+              wp_restore_nonce: nonce.wp_restore_nonce
             }))
           });
         case 1:
@@ -36286,8 +36258,26 @@ var sendReportEmail = /*#__PURE__*/function () {
       }
     }, _callee6);
   }));
-  return function sendReportEmail(_x6) {
-    return _ref10.apply(this, arguments);
+  return function doRestoreProcess(_x6) {
+    return _ref8.apply(this, arguments);
+  };
+}();
+var sendReportEmail = /*#__PURE__*/function () {
+  var _ref1 = _asyncToGenerator(/*#__PURE__*/_regenerator().m(function _callee7(payload) {
+    return _regenerator().w(function (_context7) {
+      while (1) switch (_context7.n) {
+        case 0:
+          _context7.n = 1;
+          return __ajax('worrprba_ajax_send_report_email', {
+            payload: payload
+          });
+        case 1:
+          return _context7.a(2, _context7.v);
+      }
+    }, _callee7);
+  }));
+  return function sendReportEmail(_x7) {
+    return _ref1.apply(this, arguments);
   };
 }();
 var uploadFileWithProgress = function uploadFileWithProgress(file, onProgress) {
@@ -36321,12 +36311,12 @@ var uploadFileWithProgress = function uploadFileWithProgress(file, onProgress) {
   });
 };
 var getBackupDownloadZipPath = /*#__PURE__*/function () {
-  var _ref13 = _asyncToGenerator(/*#__PURE__*/_regenerator().m(function _callee7(folder_name) {
+  var _ref10 = _asyncToGenerator(/*#__PURE__*/_regenerator().m(function _callee8(folder_name) {
     var response;
-    return _regenerator().w(function (_context7) {
-      while (1) switch (_context7.n) {
+    return _regenerator().w(function (_context8) {
+      while (1) switch (_context8.n) {
         case 0:
-          _context7.n = 1;
+          _context8.n = 1;
           return __request(ajax_url, {
             method: 'POST',
             headers: {
@@ -36334,6 +36324,41 @@ var getBackupDownloadZipPath = /*#__PURE__*/function () {
             },
             body: new URLSearchParams(_objectSpread(_objectSpread({
               action: 'worrprba_ajax_get_backup_download_zip_path'
+            }, Object.fromEntries(Object.entries({
+              folder_name: folder_name
+            }).map(function (_ref11) {
+              var _ref12 = _slicedToArray(_ref11, 2),
+                key = _ref12[0],
+                value = _ref12[1];
+              return ["payload[".concat(key, "]"), value];
+            }))), {}, {
+              nonce: nonce.worrprba_nonce
+            }))
+          });
+        case 1:
+          response = _context8.v;
+          return _context8.a(2, response);
+      }
+    }, _callee8);
+  }));
+  return function getBackupDownloadZipPath(_x8) {
+    return _ref10.apply(this, arguments);
+  };
+}();
+var createBackupZip = /*#__PURE__*/function () {
+  var _ref13 = _asyncToGenerator(/*#__PURE__*/_regenerator().m(function _callee9(folder_name) {
+    var response;
+    return _regenerator().w(function (_context9) {
+      while (1) switch (_context9.n) {
+        case 0:
+          _context9.n = 1;
+          return __request(ajax_url, {
+            method: 'POST',
+            headers: {
+              'Content-Type': 'application/x-www-form-urlencoded'
+            },
+            body: new URLSearchParams(_objectSpread(_objectSpread({
+              action: 'worrprba_ajax_create_backup_zip'
             }, Object.fromEntries(Object.entries({
               folder_name: folder_name
             }).map(function (_ref14) {
@@ -36346,103 +36371,47 @@ var getBackupDownloadZipPath = /*#__PURE__*/function () {
             }))
           });
         case 1:
-          response = _context7.v;
-          return _context7.a(2, response);
-      }
-    }, _callee7);
-  }));
-  return function getBackupDownloadZipPath(_x7) {
-    return _ref13.apply(this, arguments);
-  };
-}();
-var createBackupZip = /*#__PURE__*/function () {
-  var _ref16 = _asyncToGenerator(/*#__PURE__*/_regenerator().m(function _callee8(folder_name) {
-    var response;
-    return _regenerator().w(function (_context8) {
-      while (1) switch (_context8.n) {
-        case 0:
-          _context8.n = 1;
-          return __request(ajax_url, {
-            method: 'POST',
-            headers: {
-              'Content-Type': 'application/x-www-form-urlencoded'
-            },
-            body: new URLSearchParams(_objectSpread(_objectSpread({
-              action: 'worrprba_ajax_create_backup_zip'
-            }, Object.fromEntries(Object.entries({
-              folder_name: folder_name
-            }).map(function (_ref17) {
-              var _ref18 = _slicedToArray(_ref17, 2),
-                key = _ref18[0],
-                value = _ref18[1];
-              return ["payload[".concat(key, "]"), value];
-            }))), {}, {
-              nonce: nonce.worrprba_nonce
-            }))
-          });
-        case 1:
-          response = _context8.v;
-          return _context8.a(2, response);
-      }
-    }, _callee8);
-  }));
-  return function createBackupZip(_x8) {
-    return _ref16.apply(this, arguments);
-  };
-}();
-var saveBackupScheduleConfig = /*#__PURE__*/function () {
-  var _ref19 = _asyncToGenerator(/*#__PURE__*/_regenerator().m(function _callee9(payload) {
-    var endpoint, response;
-    return _regenerator().w(function (_context9) {
-      while (1) switch (_context9.n) {
-        case 0:
-          endpoint = "".concat(ajax_url, "?action=worrprba_ajax_save_backup_schedule_config");
-          _context9.n = 1;
-          return __request(endpoint, {
-            method: 'POST',
-            headers: {
-              'Content-Type': 'application/json'
-            },
-            body: JSON.stringify({
-              payload: payload,
-              nonce: nonce.worrprba_nonce
-            })
-          });
-        case 1:
           response = _context9.v;
           return _context9.a(2, response);
       }
     }, _callee9);
   }));
-  return function saveBackupScheduleConfig(_x9) {
-    return _ref19.apply(this, arguments);
+  return function createBackupZip(_x9) {
+    return _ref13.apply(this, arguments);
   };
 }();
-var getBackupScheduleConfig = /*#__PURE__*/function () {
-  var _ref20 = _asyncToGenerator(/*#__PURE__*/_regenerator().m(function _callee0() {
-    var endpoint, response;
+var saveBackupScheduleConfig = /*#__PURE__*/function () {
+  var _ref16 = _asyncToGenerator(/*#__PURE__*/_regenerator().m(function _callee0(payload) {
     return _regenerator().w(function (_context0) {
       while (1) switch (_context0.n) {
         case 0:
-          endpoint = "".concat(ajax_url, "?action=worrprba_ajax_get_backup_schedule_config");
           _context0.n = 1;
-          return __request(endpoint, {
-            method: 'POST',
-            headers: {
-              'Content-Type': 'application/json'
-            },
-            body: JSON.stringify({
-              nonce: nonce.worrprba_nonce
-            })
+          return __ajax('worrprba_ajax_save_backup_schedule_config', {
+            payload: payload
           });
         case 1:
-          response = _context0.v;
-          return _context0.a(2, response);
+          return _context0.a(2, _context0.v);
       }
     }, _callee0);
   }));
+  return function saveBackupScheduleConfig(_x0) {
+    return _ref16.apply(this, arguments);
+  };
+}();
+var getBackupScheduleConfig = /*#__PURE__*/function () {
+  var _ref17 = _asyncToGenerator(/*#__PURE__*/_regenerator().m(function _callee1() {
+    return _regenerator().w(function (_context1) {
+      while (1) switch (_context1.n) {
+        case 0:
+          _context1.n = 1;
+          return __ajax('worrprba_ajax_get_backup_schedule_config');
+        case 1:
+          return _context1.a(2, _context1.v);
+      }
+    }, _callee1);
+  }));
   return function getBackupScheduleConfig() {
-    return _ref20.apply(this, arguments);
+    return _ref17.apply(this, arguments);
   };
 }();
 

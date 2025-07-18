@@ -5,18 +5,21 @@ export const __request = async (url, options) => {
   return response.json();
 };
 
-export const getBackups = async () => {
-  const response = await __request(ajax_url, {
-    method: 'POST',
-    headers: {
-      'Content-Type': 'application/x-www-form-urlencoded',
-    },
-    body: new URLSearchParams({
-      action: 'worrprba_ajax_get_backups',
+export const __ajax = async (action, data = {}, type = 'POST') => {
+  return await jQuery.ajax({
+    url: ajax_url,
+    type,
+    dataType: 'json',
+    data: {
+      action,
+      ...data,
       nonce: nonce.worrprba_nonce,
-    }),
-  });
-  return response;
+    },
+  })
+};
+
+export const getBackups = async () => {
+  return await __ajax('worrprba_ajax_get_backups');
 };
 
 export const doBackupProcess = async (process) => {
@@ -43,19 +46,9 @@ export const doBackupProcess = async (process) => {
  * @returns {Promise<boolean>}
  */
 export const deleteBackupFolder = async (name_folder) => {
-  const response = await __request(ajax_url, {
-    method: 'POST',
-    headers: {
-      'Content-Type': 'application/x-www-form-urlencoded',
-    },
-    body: new URLSearchParams({
-      action: 'worrprba_ajax_delete_backup_folder',
-      ...Object.fromEntries(Object.entries({ name_folder }).map(([key, value]) => [`payload[${key}]`, value])),
-      nonce: nonce.worrprba_nonce,
-    }),
+  return await __ajax('worrprba_ajax_delete_backup_folder', {
+    payload: { name_folder }
   });
-
-  return response;
 }
 
 /**
@@ -118,19 +111,9 @@ export const doRestoreProcess = async (process) => {
 }
 
 export const sendReportEmail = async (payload) => {
-  const response = await __request(ajax_url, {
-    method: 'POST',
-    headers: {
-      'Content-Type': 'application/x-www-form-urlencoded',
-    },
-    body: new URLSearchParams({
-      action: 'worrprba_ajax_send_report_email',
-      ...Object.fromEntries(Object.entries(payload).map(([key, value]) => [`payload[${key}]`, value])),
-      nonce: nonce.worrprba_nonce,
-    }),
+  return await __ajax('worrprba_ajax_send_report_email', {
+    payload,
   });
-
-  return response;
 };
 
 export const uploadFileWithProgress = (file, onProgress) => {
@@ -200,32 +183,24 @@ export const createBackupZip = async (folder_name) => {
 };
 
 export const saveBackupScheduleConfig = async (payload) => {
-  const endpoint = `${ajax_url}?action=worrprba_ajax_save_backup_schedule_config`;
-  const response = await __request(endpoint, {
-    method: 'POST',
-    headers: {
-      'Content-Type': 'application/json',
-    },
-    body: JSON.stringify({
-      payload,
-      nonce: nonce.worrprba_nonce
-    }),
+  return await __ajax('worrprba_ajax_save_backup_schedule_config', {
+    payload,
   });
-
-  return response;
 }
 
 export const getBackupScheduleConfig = async () => {
-  const endpoint = `${ajax_url}?action=worrprba_ajax_get_backup_schedule_config`;
-  const response = await __request(endpoint, {
-    method: 'POST',
-    headers: {
-      'Content-Type': 'application/json',
-    },
-    body: JSON.stringify({
-      nonce: nonce.worrprba_nonce
-    }),
-  });
+  return await __ajax('worrprba_ajax_get_backup_schedule_config');
 
-  return response;
+  // const endpoint = `${ajax_url}?action=worrprba_ajax_get_backup_schedule_config`;
+  // const response = await __request(endpoint, {
+  //   method: 'POST',
+  //   headers: {
+  //     'Content-Type': 'application/json',
+  //   },
+  //   body: JSON.stringify({
+  //     nonce: nonce.worrprba_nonce
+  //   }),
+  // });
+
+  // return response;
 }

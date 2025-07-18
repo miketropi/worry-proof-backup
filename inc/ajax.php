@@ -771,15 +771,22 @@ function worrprba_ajax_create_backup_zip() {
 // worrprba_ajax_save_backup_schedule_config
 add_action('wp_ajax_worrprba_ajax_save_backup_schedule_config', 'worrprba_ajax_save_backup_schedule_config');
 function worrprba_ajax_save_backup_schedule_config() {
-  $json = file_get_contents("php://input");
-  $data = json_decode($json, true);
-  $nonce = $data['nonce'];
-  $payload = $data['payload'];
 
-  # check ajax nonce
-  if (!wp_verify_nonce($nonce, 'worrprba_nonce_' . get_current_user_id())) {
-    wp_send_json_error(['message' => 'Nonce is invalid'], 403);
-  }
+  // check nonce
+  check_ajax_referer('worrprba_nonce_' . get_current_user_id(), 'nonce'); 
+
+  // get payload
+  $payload = isset($_POST['payload']) ? wp_unslash($_POST['payload']) : array(); // phpcs:ignore WordPress.Security.ValidatedSanitizedInput.InputNotSanitized
+
+  // validate data type payload
+  require_once(WORRPRBA_PLUGIN_PATH . 'inc/libs/type-validator.php');
+  $payload_rules = [
+    'enabled' => [ 'type' => 'bool', 'default' => false ],
+    'frequency' => [ 'type' => 'string', 'default' => 'weekly' ],
+    'types' => [ 'type' => 'array', 'default' => ["database"] ],
+    'versionLimit' => [ 'type' => 'int', 'default' => 2 ],
+  ];
+  $payload = WORRPB_Type_Validator::validate( $payload, $payload_rules );
 
   $result = worrprba_save_backup_schedule_config($payload);
 
@@ -794,16 +801,10 @@ function worrprba_ajax_save_backup_schedule_config() {
 // worrprba_ajax_get_backup_schedule_config
 add_action('wp_ajax_worrprba_ajax_get_backup_schedule_config', 'worrprba_ajax_get_backup_schedule_config');
 function worrprba_ajax_get_backup_schedule_config() {
-  $json = file_get_contents("php://input");
-  $data = json_decode($json, true);
-  $nonce = $data['nonce'];
 
-  # check ajax nonce
-  if (!wp_verify_nonce($nonce, 'worrprba_nonce_' . get_current_user_id())) {
-    wp_send_json_error(['message' => 'Nonce is invalid'], 403);
-  }
-
+  // check nonce
+  check_ajax_referer('worrprba_nonce_' . get_current_user_id(), 'nonce');
+  
   $result = worrprba_get_backup_schedule_config();
-
   wp_send_json_success($result);
 }
