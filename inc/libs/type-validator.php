@@ -94,7 +94,7 @@ class WORRPB_Type_Validator {
 				throw new WORRPB_Validation_Exception(
 					sprintf(
 						/* translators: %1$s: field name, %2$s: error message */
-						__( 'Field "%1$s": %2$s', 'worrpb' ),
+						esc_html__( 'Field "%1$s": %2$s', 'worry-proof-backup' ),
 						$field,
 						$e->getMessage()
 					),
@@ -123,7 +123,7 @@ class WORRPB_Type_Validator {
 		// Check if field exists.
 		if ( ! isset( $data[ $field ] ) ) {
 			if ( $config['required'] ) {
-				throw new WORRPB_Validation_Exception( __( 'Field is required', 'worrpb' ) );
+				throw new WORRPB_Validation_Exception( esc_html__( 'Field is required', 'worry-proof-backup' ) );
 			}
 			return $config['default'];
 		}
@@ -160,7 +160,7 @@ class WORRPB_Type_Validator {
 			);
 		}
 
-		throw new WORRPB_Validation_Exception( __( 'Invalid rule format', 'worrpb' ) );
+		throw new WORRPB_Validation_Exception( esc_html__( 'Invalid rule format', 'worry-proof-backup' ) );
 	}
 
 	/**
@@ -178,7 +178,7 @@ class WORRPB_Type_Validator {
 			throw new WORRPB_Type_Exception(
 				sprintf(
 					/* translators: %s: type name */
-					__( 'Unsupported type: %s', 'worrpb' ),
+					esc_html__( 'Unsupported type: %s', 'worry-proof-backup' ),
 					$type
 				)
 			);
@@ -203,7 +203,7 @@ class WORRPB_Type_Validator {
 				throw new WORRPB_Type_Exception(
 					sprintf(
 						/* translators: %s: type name */
-						__( 'Unknown type: %s', 'worrpb' ),
+						esc_html__( 'Unknown type: %s', 'worry-proof-backup' ),
 						$type
 					)
 				);
@@ -239,7 +239,7 @@ class WORRPB_Type_Validator {
 		throw new WORRPB_Type_Exception(
 			sprintf(
 				/* translators: %s: value type */
-				__( 'Cannot convert "%s" to integer', 'worrpb' ),
+				esc_html__( 'Cannot convert "%s" to integer', 'worry-proof-backup' ),
 				gettype( $value )
 			)
 		);
@@ -270,7 +270,7 @@ class WORRPB_Type_Validator {
 		throw new WORRPB_Type_Exception(
 			sprintf(
 				/* translators: %s: value type */
-				__( 'Cannot convert "%s" to string', 'worrpb' ),
+				esc_html__( 'Cannot convert "%s" to string', 'worry-proof-backup' ),
 				gettype( $value )
 			)
 		);

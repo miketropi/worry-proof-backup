@@ -337,6 +337,7 @@ add_action('wp_ajax_worrprba_ajax_restore_database', 'worrprba_ajax_restore_data
 add_action('wp_ajax_nopriv_worrprba_ajax_restore_database', 'worrprba_ajax_restore_database');
 function worrprba_ajax_restore_database() {
   # check nonce
+  # During the database restore, your current login session might be lost. This affects WordPress's security check mechanism using nonces. Since we can't verify the usual nonce after a restore, we generate a unique process_restore_id to securely continue the process.
   // check_ajax_referer('worry-proof-backup-restore', 'wp_restore_nonce');
 
   # get payload
@@ -601,6 +602,9 @@ add_action('wp_ajax_worrprba_ajax_restore_done', 'worrprba_ajax_restore_done');
 add_action('wp_ajax_nopriv_worrprba_ajax_restore_done', 'worrprba_ajax_restore_done');
 function worrprba_ajax_restore_done() {
   # check nonce
+  # Skip nonce verification here since the database restore may have logged out the user,
+  # making the normal WordPress nonce check fail. We use a separate process_restore_id 
+  # system for security during restore operations.
   // check_ajax_referer('worry-proof-backup-restore', 'wp_restore_nonce');
 
   # get payload
