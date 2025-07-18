@@ -75,18 +75,25 @@ Yes, you can use the import/export tools to move your site or demo content betwe
 3. Import/export tools
 4. Admin dashboard interface
 
+== External services ==
+* No External services
+
+== Github repository ==
+* [Plugin Source](https://github.com/miketropi/worry-proof-backup)
+
+== Changelog ==
+= 0.1.4 =
+* Enhanced security (new class WORRPB_Type_Validator)
+
 == Changelog ==
 = 0.1.2 =
-* Added automated backup scheduling (daily, weekly, monthly)
+* Added automated backup scheduling (weekly, monthly)
 * Added email notifications for completed backups
 * Enhanced security with improved nonce validation
 * Updated plugin branding to "Worry Proof Backup"
 * Improved backup folder organization
 * Added backup completion status tracking
 * Enhanced admin interface with React components
-
-== External services ==
-* No External services
 
 == Changelog ==
 = 0.1.1 =

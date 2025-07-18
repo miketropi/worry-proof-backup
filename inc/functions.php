@@ -1147,7 +1147,7 @@ function worrprba_save_backup_schedule_config($config = array()) {
   // save config to worry-proof-backup-cron-manager/worry-proof-backup-schedule-config.json
   $config_path = $backup_cron_manager_path . 'worry-proof-backup-schedule-config.json';
 
-  
+
 
   // save config to file
   $result = $wp_filesystem->put_contents($config_path, json_encode($config, JSON_PRETTY_PRINT));
@@ -1156,7 +1156,7 @@ function worrprba_save_backup_schedule_config($config = array()) {
   }
 
   // add hook after save config
-  do_action('wp_backup:after_save_backup_schedule_config', $config);
+  do_action('worry-proof-backup:after_save_backup_schedule_config', $config);
 
   return true;
 }
@@ -1418,4 +1418,36 @@ function worrprba_log( $message ) {
 		}
 		error_log('[WP Backup] ' . $message); // phpcs:ignore WordPress.PHP.DevelopmentFunctions.error_log_error_log
 	}
+}
+
+/**
+ * Safely sanitize payload array
+ */
+function worrprba_sanitize_payload_array( $payload ) {
+  if ( ! is_array( $payload ) ) {
+      return array();
+  }
+  
+  $sanitized = array();
+  
+  foreach ( $payload as $key => $value ) {
+      $clean_key = sanitize_key( $key );
+      
+      if ( is_array( $value ) ) {
+          // Recursive sanitization for nested arrays
+          $sanitized[ $clean_key ] = sanitize_payload_array( $value );
+      } elseif ( is_string( $value ) ) { 
+          // Sanitize based on expected content type
+          $sanitized[ $clean_key ] = sanitize_text_field( $value );
+      } elseif ( is_numeric( $value ) ) {
+          $sanitized[ $clean_key ] = is_float( $value ) ? floatval( $value ) : intval( $value );
+      } elseif ( is_bool( $value ) ) {
+          $sanitized[ $clean_key ] = (bool) $value;
+      } else {
+          // Skip unknown data types
+          continue;
+      }
+  }
+  
+  return $sanitized;
 }

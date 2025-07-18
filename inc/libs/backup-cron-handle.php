@@ -234,7 +234,7 @@ class WORRPB_Cron_Handler {
     }
 
     // add hook after backup completed
-    do_action('wp_backup:after_backup_cron_completed', $this->config, $context);
+    do_action('worry-proof-backup:after_backup_cron_completed', $this->config, $context);
 
     return [
       'completed' => true,

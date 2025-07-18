@@ -340,7 +340,10 @@ function worrprba_ajax_restore_database() {
   // check_ajax_referer('worry-proof-backup-restore', 'wp_restore_nonce');
 
   # get payload
-  $payload = isset($_POST['payload']) ? wp_unslash($_POST['payload']) : array(); // phpcs:ignore WordPress.Security.ValidatedSanitizedInput.InputNotSanitized,WordPress.Security.NonceVerification.Missing
+  $raw_payload = isset($_POST['payload']) ? wp_unslash($_POST['payload']) : array(); // phpcs:ignore WordPress.Security.ValidatedSanitizedInput.InputNotSanitized
+  
+  # Sanitize payload
+  $payload = worrprba_sanitize_payload_array( $raw_payload );
 
   $process_restore_id = $payload['process_restore_id'];
   $folder_name = $payload['folder_name'];
@@ -356,7 +359,7 @@ function worrprba_ajax_restore_database() {
   }
 
   $exclude_tables = isset($payload['exclude_tables']) ? $payload['exclude_tables'] : [];
-  $exclude_tables = apply_filters('wp_backup:restore_database_exclude_tables', $exclude_tables, $payload);
+  $exclude_tables = apply_filters('worry-proof-backup:restore_database_exclude_tables', $exclude_tables, $payload);
 
   $restore_database = new WORRPB_Restore_Database($folder_name, $exclude_tables, $backup_prefix);
 
@@ -394,7 +397,7 @@ function worrprba_ajax_restore_database() {
       }
 
       // create hook after restore database successfully
-      do_action('wp_backup:after_restore_database_success', $payload);
+      do_action('worry-proof-backup:after_restore_database_success', $payload);
 
       wp_send_json_success([
         'restore_database_ssid' => $folder_name,
@@ -421,7 +424,10 @@ function worrprba_ajax_restore_plugin() {
   check_ajax_referer('worry-proof-backup-restore', 'wp_restore_nonce');
 
   # get payload
-  $payload = isset($_POST['payload']) ? wp_unslash($_POST['payload']) : array(); // phpcs:ignore WordPress.Security.ValidatedSanitizedInput.InputNotSanitized
+  $raw_payload = isset($_POST['payload']) ? wp_unslash($_POST['payload']) : array(); // phpcs:ignore WordPress.Security.ValidatedSanitizedInput.InputNotSanitized
+  
+  # Sanitize payload
+  $payload = worrprba_sanitize_payload_array( $raw_payload );
 
   $folder_name = $payload['folder_name'];
   $path_zip_file = WP_CONTENT_DIR . '/uploads/worry-proof-backup/' . $folder_name . '/plugins.zip';
@@ -464,25 +470,6 @@ function worrprba_ajax_restore_plugin() {
     wp_send_json_error($e->getMessage());
   }
 
-  // $restore_plugin = new WORRPB_Restore_File_System([
-  //   'zip_file' => $path_zip_file,
-  //   'destination_folder' => WP_PLUGIN_DIR,
-  //   'overwrite_existing' => true,
-  //   'exclude' => ['worry-proof-backup'], // phpcs:ignore WordPressVIPMinimum.Performance.WPQueryParams.PostNotIn_exclude
-  // ]);
-
-  // // check error $restore_plugin
-  // if (is_wp_error($restore_plugin)) {
-  //   wp_send_json_error($restore_plugin->get_error_message());
-  // }
-
-  // $result = $restore_plugin->runRestore();
-
-  // // check error $result
-  // if (is_wp_error($result)) {
-  //   wp_send_json_error($result->get_error_message());
-  // }
-
   wp_send_json_success([
     'restore_plugin_status' => 'done',
     'next_step' => true,
@@ -497,7 +484,11 @@ function worrprba_ajax_restore_theme() {
   check_ajax_referer('worry-proof-backup-restore', 'wp_restore_nonce');
   
   # get payload
-  $payload = isset($_POST['payload']) ? wp_unslash($_POST['payload']) : array(); // phpcs:ignore WordPress.Security.ValidatedSanitizedInput.InputNotSanitized
+  $raw_payload = isset($_POST['payload']) ? wp_unslash($_POST['payload']) : array(); // phpcs:ignore WordPress.Security.ValidatedSanitizedInput.InputNotSanitized
+  
+  # Sanitize payload
+  $payload = worrprba_sanitize_payload_array( $raw_payload );
+
 
   $folder_name = $payload['folder_name'];
   $path_zip_file = WP_CONTENT_DIR . '/uploads/worry-proof-backup/' . $folder_name . '/themes.zip';
@@ -539,24 +530,6 @@ function worrprba_ajax_restore_theme() {
     wp_send_json_error($e->getMessage());
   }
 
-  // $restore_theme = new WORRPB_Restore_File_System([
-  //   'zip_file' => $path_zip_file,
-  //   'destination_folder' => WP_CONTENT_DIR . '/themes/',
-  //   'overwrite_existing' => true,
-  // ]);
-
-  // // check error $restore_theme
-  // if (is_wp_error($restore_theme)) {
-  //   wp_send_json_error($restore_theme->get_error_message());
-  // }
-
-  // $result = $restore_theme->runRestore();
-
-  // // check error $result
-  // if (is_wp_error($result)) {
-  //   wp_send_json_error($result->get_error_message());
-  // }
-
   wp_send_json_success([
     'restore_theme_status' => 'done',
     'next_step' => true,
@@ -571,7 +544,10 @@ function worrprba_ajax_restore_uploads() {
   check_ajax_referer('worry-proof-backup-restore', 'wp_restore_nonce');
   
   # get payload
-  $payload = isset($_POST['payload']) ? wp_unslash($_POST['payload']) : array(); // phpcs:ignore WordPress.Security.ValidatedSanitizedInput.InputNotSanitized
+  $raw_payload = isset($_POST['payload']) ? wp_unslash($_POST['payload']) : array(); // phpcs:ignore WordPress.Security.ValidatedSanitizedInput.InputNotSanitized
+  
+  # Sanitize payload
+  $payload = worrprba_sanitize_payload_array( $raw_payload );
 
   $folder_name = $payload['folder_name'];
   $path_zip_file = WP_CONTENT_DIR . '/uploads/worry-proof-backup/' . $folder_name . '/uploads.zip';
@@ -614,25 +590,6 @@ function worrprba_ajax_restore_uploads() {
     wp_send_json_error($e->getMessage());
   }
 
-  // $restore_uploads = new WORRPB_Restore_File_System([
-  //   'zip_file' => $path_zip_file,
-  //   'destination_folder' => WP_CONTENT_DIR . '/uploads/',
-  //   'overwrite_existing' => true,
-  //   'exclude' => ['worry-proof-backup', 'worry-proof-backup-zip'], // phpcs:ignore WordPressVIPMinimum.Performance.WPQueryParams.PostNotIn_exclude
-  // ]);
-
-  // // check error $restore_uploads
-  // if (is_wp_error($restore_uploads)) {
-  //   wp_send_json_error($restore_uploads->get_error_message());
-  // }
-
-  // $result = $restore_uploads->runRestore();
-
-  // // check error $result
-  // if (is_wp_error($result)) {
-  //   wp_send_json_error($result->get_error_message());
-  // }
-
   wp_send_json_success([
     'restore_uploads_status' => 'done',
     'next_step' => true,
@@ -647,7 +604,10 @@ function worrprba_ajax_restore_done() {
   // check_ajax_referer('worry-proof-backup-restore', 'wp_restore_nonce');
 
   # get payload
-  $payload = isset($_POST['payload']) ? wp_unslash($_POST['payload']) : array(); // phpcs:ignore WordPress.Security.ValidatedSanitizedInput.InputNotSanitized,WordPress.Security.NonceVerification.Missing
+  $raw_payload = isset($_POST['payload']) ? wp_unslash($_POST['payload']) : array(); // phpcs:ignore WordPress.Security.ValidatedSanitizedInput.InputNotSanitized
+  
+  # Sanitize payload
+  $payload = worrprba_sanitize_payload_array( $raw_payload );
 
   $folder_name = $payload['folder_name'];
 
@@ -658,7 +618,7 @@ function worrprba_ajax_restore_done() {
   }
 
   // create hook after restore process successfully
-  do_action('wp_backup:after_restore_process_success', $payload);
+  do_action('worry-proof-backup:after_restore_process_success', $payload);
 
   wp_send_json_success([
     'restore_process_status' => 'done',
@@ -804,7 +764,7 @@ function worrprba_ajax_get_backup_schedule_config() {
 
   // check nonce
   check_ajax_referer('worrprba_nonce_' . get_current_user_id(), 'nonce');
-  
+
   $result = worrprba_get_backup_schedule_config();
   wp_send_json_success($result);
 }
