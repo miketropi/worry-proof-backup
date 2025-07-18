@@ -69,7 +69,6 @@ class WORRPB_Restore_Database {
     }
 
     public function processStep() {
-        @set_time_limit(300); // phpcs:ignore Squiz.PHP.DiscouragedFunctions.Discouraged
 
         $progress = $this->getProgress();
         if (is_wp_error($progress) || $progress['done']) return $progress;
