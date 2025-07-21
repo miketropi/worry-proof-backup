@@ -95,10 +95,10 @@ class WORRPB_Type_Validator {
 					sprintf(
 						/* translators: %1$s: field name, %2$s: error message */
 						esc_html__( 'Field "%1$s": %2$s', 'worry-proof-backup' ),
-						$field,
-						$e->getMessage()
+						$field, // phpcs:ignore WordPress.Security.EscapeOutput.ExceptionNotEscaped
+						$e->getMessage() // phpcs:ignore WordPress.Security.EscapeOutput.ExceptionNotEscaped
 					),
-					$field
+					$field // phpcs:ignore WordPress.Security.EscapeOutput.ExceptionNotEscaped
 				);
 			}
 		}
@@ -179,7 +179,7 @@ class WORRPB_Type_Validator {
 				sprintf(
 					/* translators: %s: type name */
 					esc_html__( 'Unsupported type: %s', 'worry-proof-backup' ),
-					$type
+					$type // phpcs:ignore WordPress.Security.EscapeOutput.ExceptionNotEscaped
 				)
 			);
 		}
@@ -204,7 +204,7 @@ class WORRPB_Type_Validator {
 					sprintf(
 						/* translators: %s: type name */
 						esc_html__( 'Unknown type: %s', 'worry-proof-backup' ),
-						$type
+						$type // phpcs:ignore WordPress.Security.EscapeOutput.ExceptionNotEscaped
 					)
 				);
 		}
@@ -240,7 +240,7 @@ class WORRPB_Type_Validator {
 			sprintf(
 				/* translators: %s: value type */
 				esc_html__( 'Cannot convert "%s" to integer', 'worry-proof-backup' ),
-				gettype( $value )
+				gettype( $value ) // phpcs:ignore WordPress.Security.EscapeOutput.ExceptionNotEscaped
 			)
 		);
 	}
@@ -271,7 +271,7 @@ class WORRPB_Type_Validator {
 			sprintf(
 				/* translators: %s: value type */
 				esc_html__( 'Cannot convert "%s" to string', 'worry-proof-backup' ),
-				gettype( $value )
+				gettype( $value ) // phpcs:ignore WordPress.Security.EscapeOutput.ExceptionNotEscaped
 			)
 		);
 	}
