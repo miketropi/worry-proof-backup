@@ -242,6 +242,7 @@ class WORRPB_Cron_Handler {
       'backup_ssid' => '',
       'name_folder' => '',
       'backup_folder' => '',
+      'step' => 0,
     ];
   }
 }
