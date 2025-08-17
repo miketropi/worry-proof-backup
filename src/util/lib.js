@@ -2,6 +2,12 @@ const { ajax_url, nonce } = worrprba_php_data;
 
 export const __request = async (url, options) => {
   const response = await fetch(url, options);
+
+  if (!response.ok) {
+    throw new Error(`HTTP error! status: ${response.status}`);
+  }
+
+  // Check if the response is JSON
   return response.json();
 };
 
