@@ -30461,7 +30461,6 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var lucide_react__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! lucide-react */ "./node_modules/lucide-react/dist/esm/icons/package.js");
 /* harmony import */ var lucide_react__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! lucide-react */ "./node_modules/lucide-react/dist/esm/icons/server.js");
 /* harmony import */ var lucide_react__WEBPACK_IMPORTED_MODULE_14__ = __webpack_require__(/*! lucide-react */ "./node_modules/lucide-react/dist/esm/icons/bug.js");
-/* harmony import */ var lucide_react__WEBPACK_IMPORTED_MODULE_15__ = __webpack_require__(/*! lucide-react */ "./node_modules/lucide-react/dist/esm/icons/heart.js");
 /* harmony import */ var _components_Modal__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./components/Modal */ "./src/components/Modal.jsx");
 /* harmony import */ var _components_BackupTable_refactored__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./components/BackupTable.refactored */ "./src/components/BackupTable.refactored.jsx");
 /* harmony import */ var _components_RestoreProcess__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./components/RestoreProcess */ "./src/components/RestoreProcess.jsx");
@@ -30534,13 +30533,13 @@ var tabs = [{
     size: 14
   }),
   content: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_11__.jsx)(_components_ReportIssue__WEBPACK_IMPORTED_MODULE_10__["default"], {})
-}, {
-  label: 'Support the author',
-  icon: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_11__.jsx)(lucide_react__WEBPACK_IMPORTED_MODULE_15__["default"], {
-    size: 14
-  }),
-  content: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_11__.jsx)(_components_DonationInfomation__WEBPACK_IMPORTED_MODULE_9__["default"], {})
-}];
+}
+// {
+//   label: 'Support the author',
+//   icon: <Heart size={14} />,
+//   content: <DonationInfomation />
+// },
+];
 function App() {
   return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_11__.jsxs)(AppProvider, {
     children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_11__.jsx)("div", {
