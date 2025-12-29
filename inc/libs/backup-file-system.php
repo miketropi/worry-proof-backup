@@ -21,77 +21,77 @@ if ( ! defined( 'ABSPATH' ) ) exit; // Exit if accessed directly
  */
 
 class WORRPB_File_System {
-    private $exclude = [];
-    private $source_folder;
-    private $destination_folder;
-    private $backup_dir;
-    private $zip_filename;
-    private $zip_name;
+	private $exclude = [];
+	private $source_folder;
+	private $destination_folder;
+	private $backup_dir;
+	private $zip_filename;
+	private $zip_name;
 
-    public function __construct($opts = []) {
-        if (empty($opts['source_folder'])) {
-            throw new Exception('Source folder is required');
-        }
-        if (empty($opts['destination_folder'])) {
-            throw new Exception('Destination folder is required');
-        }
+	public function __construct($opts = []) {
+		if (empty($opts['source_folder'])) {
+			throw new Exception('Source folder is required');
+		}
+		if (empty($opts['destination_folder'])) {
+			throw new Exception('Destination folder is required');
+		}
 
-        $this->zip_name = !empty($opts['zip_name']) ? $opts['zip_name'] : 'filesystem.zip';
+		$this->zip_name = !empty($opts['zip_name']) ? $opts['zip_name'] : 'filesystem.zip';
 
-        $this->exclude = isset($opts['exclude']) ? (array) $opts['exclude'] : [];
-        $this->source_folder = rtrim($opts['source_folder'], '/\\');
-        $this->destination_folder = $opts['destination_folder'];
+		$this->exclude = isset($opts['exclude']) ? (array) $opts['exclude'] : [];
+		$this->source_folder = rtrim($opts['source_folder'], '/\\');
+		$this->destination_folder = $opts['destination_folder'];
 
-        $upload_dir = wp_upload_dir();
-        $this->backup_dir = $upload_dir['basedir'] . '/worry-proof-backup/' . $this->destination_folder;
+		$upload_dir = wp_upload_dir();
+		$this->backup_dir = $upload_dir['basedir'] . '/worry-proof-backup/' . $this->destination_folder;
 
-        if (!is_dir($this->backup_dir)) {
-            wp_mkdir_p($this->backup_dir);
-        }
+		if (!is_dir($this->backup_dir)) {
+			wp_mkdir_p($this->backup_dir);
+		}
 
-        $this->zip_filename = $this->backup_dir . '/' . $this->zip_name;
-    }
+		$this->zip_filename = $this->backup_dir . '/' . $this->zip_name;
+}
 
-    /**
-     * Run backup and return zip file path
-     */
-    public function runBackup() {
-        if (!class_exists('ZipArchive')) {
-            return new WP_Error('missing_ziparchive', 'PHP ZipArchive extension is not enabled.');
-        }
+/**
+ * Run backup and return zip file path
+ */
+public function runBackup() {
+		if (!class_exists('ZipArchive')) {
+			return new WP_Error('missing_ziparchive', 'PHP ZipArchive extension is not enabled.');
+		}
 
-        $zip = new ZipArchive();
-        if ($zip->open($this->zip_filename, ZipArchive::CREATE | ZipArchive::OVERWRITE) !== true) {
-            return new WP_Error('zip_failed', 'Failed to create zip file.');
-        }
+		$zip = new ZipArchive();
+		if ($zip->open($this->zip_filename, ZipArchive::CREATE | ZipArchive::OVERWRITE) !== true) {
+			return new WP_Error('zip_failed', 'Failed to create zip file.');
+		}
 
-        $iterator = new RecursiveIteratorIterator(
-            new RecursiveDirectoryIterator($this->source_folder, FilesystemIterator::SKIP_DOTS),
-            RecursiveIteratorIterator::SELF_FIRST
-        );
+		$iterator = new RecursiveIteratorIterator(
+			new RecursiveDirectoryIterator($this->source_folder, FilesystemIterator::SKIP_DOTS),
+			RecursiveIteratorIterator::SELF_FIRST
+		);
 
-        foreach ($iterator as $file) {
-            $file_path = $file->getPathname();
+		foreach ($iterator as $file) {
+			$file_path = $file->getPathname();
 
-            // Normalize relative path (Windows / Linux safe)
-            $relative_path = ltrim(str_replace('\\', '/', str_replace($this->source_folder, '', $file_path)), '/');
+			// Normalize relative path (Windows / Linux safe)
+			$relative_path = ltrim(str_replace('\\', '/', str_replace($this->source_folder, '', $file_path)), '/');
 
-            // Split parts to check top-level folder/file
-            $relative_parts = explode('/', $relative_path);
+			// Split parts to check top-level folder/file
+			$relative_parts = explode('/', $relative_path);
 
-            // Exclude if 1st-level folder/file is in $this->exclude
-            if (count($relative_parts) >= 1 && in_array($relative_parts[0], $this->exclude, true)) {
-                continue;
-            }
+			// Exclude if 1st-level folder/file is in $this->exclude
+			if (count($relative_parts) >= 1 && in_array($relative_parts[0], $this->exclude, true)) {
+				continue;
+			}
 
-            if ($file->isDir()) {
-                $zip->addEmptyDir($relative_path);
-            } else {
-                $zip->addFile($file_path, $relative_path);
-            }
-        }
+			if ($file->isDir()) {
+				$zip->addEmptyDir($relative_path);
+			} else {
+				$zip->addFile($file_path, $relative_path);
+			}
+		}
 
-        $zip->close();
-        return $this->zip_filename;
-    }
+		$zip->close();
+		return $this->zip_filename;
+	}
 }

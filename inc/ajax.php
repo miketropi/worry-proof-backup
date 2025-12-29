@@ -207,31 +207,62 @@ function worrprba_ajax_generate_backup_uploads() {
   }
 
   // create backup uploads
-  $backup = new WORRPB_File_System([
-    'source_folder' => WP_CONTENT_DIR . '/uploads/',
-    'destination_folder' => $payload['name_folder'],
-    'zip_name' => 'uploads.zip',
-    'exclude' => ['worry-proof-backup', 'worry-proof-backup-zip', 'worry-proof-backup-cron-manager'], // phpcs:ignore WordPressVIPMinimum.Performance.WPQueryParams.PostNotIn_exclude
-  ]);
+  $backup_ssid = $payload['name_folder'];
+  
+  try {
+    $backup = new WORRPB_File_System_V2([
+      'source_folder' => WP_CONTENT_DIR . '/uploads/',
+      'destination_folder' => $payload['name_folder'],
+      'zip_name' => 'uploads.zip',
+      'exclude' => ['worry-proof-backup', 'worry-proof-backup-zip', 'worry-proof-backup-cron-manager'], // phpcs:ignore WordPressVIPMinimum.Performance.WPQueryParams.PostNotIn_exclude
+      'chunk_size' => 100, // Process 100 files per batch
+      'max_zip_size' => 2147483648, // 2GB max per zip file
+    ]);
 
-  // check error $backup
-  if (is_wp_error($backup)) {
-    wp_send_json_error($backup->get_error_message());
+    // if payload not backup_ssid, create new backup_ssid
+    if (!isset($payload['backup_uploads_status']) || empty($payload['backup_uploads_status'])) {
+      $result = $backup->startBackup();
+
+      // check error $result
+      if (is_wp_error($result)) {
+        wp_send_json_error($result->get_error_message());
+      }
+
+      wp_send_json_success([
+        'backup_ssid' => $backup_ssid,
+        'backup_uploads_status' => 'is_running',
+        'next_step' => false,
+        'progress' => $result,
+      ]);
+    } else {
+      $progress = $backup->processStep();
+
+      // check error $progress
+      if (is_wp_error($progress)) {
+        wp_send_json_error($progress->get_error_message());
+      }
+      
+      if ($progress['done']) {
+        $zip_files = $backup->getZipFiles();
+
+        wp_send_json_success([
+          'backup_ssid' => $backup_ssid,
+          'backup_uploads_status' => 'done',
+          'uploads_zip_files' => $zip_files,
+          'next_step' => true,
+        ]);
+      } else {
+        wp_send_json_success([
+          'backup_ssid' => $backup_ssid,
+          'backup_uploads_status' => 'is_running',
+          'progress' => $progress,
+          'next_step' => false,
+        ]);
+      }
+    }
+  } catch (Exception $e) {
+    wp_send_json_error($e->getMessage());
   }
-
-  // run backup
-  $zip_file = $backup->runBackup();
-
-  // check error $zip_file
-  if (is_wp_error($zip_file)) {
-    wp_send_json_error($zip_file->get_error_message());
-  }
-
-  wp_send_json_success([
-    'backup_uploads_status' => 'done',
-    'uploads_zip_file' => $zip_file,
-    'next_step' => true,
-  ]);
 }
 
 // worrprba_ajax_generate_backup_done
