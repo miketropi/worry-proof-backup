@@ -3,7 +3,7 @@ Contributors: miketropi
 Donate link: https://github.com/miketropi/worry-proof-backup
 Tags: backup, restore, import, export, database
 Requires at least: 6.0
-Tested up to: 6.8
+Tested up to: 6.9
 Requires PHP: 8.0
 Stable tag: 0.1.5
 License: GPLv2 or later
