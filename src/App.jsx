@@ -62,11 +62,11 @@ const tabs = [
     icon: <Bug size={14} />,
     content: <ReportIssue />
   },
-  {
-    label: 'Support the author',
-    icon: <Heart size={14} />,
-    content: <DonationInfomation />
-  },
+  // {
+  //   label: 'Support the author',
+  //   icon: <Heart size={14} />,
+  //   content: <DonationInfomation />
+  // },
 ];
 
 export default function App() {
