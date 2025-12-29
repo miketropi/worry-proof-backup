@@ -5,7 +5,7 @@ Tags: backup, restore, import, export, database
 Requires at least: 6.0
 Tested up to: 6.8
 Requires PHP: 8.0
-Stable tag: 0.1.4
+Stable tag: 0.1.5
 License: GPLv2 or later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
 
@@ -80,6 +80,11 @@ Yes, you can use the import/export tools to move your site or demo content betwe
 
 == Github repository ==
 * [Plugin Source](https://github.com/miketropi/worry-proof-backup)
+
+= 0.1.5 =
+* Added new "Backup File System V2" class with support for customizable chunk size during file backups.
+* Improved handling of large sites and backup stability.
+* Preparation for advanced backup and restore features.
 
 == Changelog ==
 = 0.1.4 =
