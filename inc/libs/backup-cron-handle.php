@@ -202,22 +202,63 @@ class WORRPB_Cron_Handler {
     $step = (int) ($context['step'] ?? 0);
     $name_folder = $context['name_folder'] ?? '';
     $backup_folder = $context['backup_folder'] ?? '';
+    $backup_type_key = 'backup_' . str_replace('.zip', '', $zip_name) . '_ssid';
 
-    $backup = new WORRPB_File_System([
-      'source_folder' => $source,
-      'destination_folder' => $name_folder,
-      'zip_name' => $zip_name,
-      'exclude' => $exclude, // phpcs:ignore WordPressVIPMinimum.Performance.WPQueryParams.PostNotIn_exclude
-    ]);
+    if (empty($name_folder)) {
+      return new WP_Error('name_folder_empty', __('Name folder is empty', 'worry-proof-backup'));
+    }
 
-    if (is_wp_error($backup) || is_wp_error($zip = $backup->runBackup())) {
-      $error = is_wp_error($backup) ? $backup : $zip;
-      worrprba_log("😵 BACKUP FAILED ($zip_name): " . $error->get_error_message());
+    // Generate unique progress file name based on zip_name to avoid conflicts
+    $progress_file_name = '__' . str_replace('.zip', '', $zip_name) . '_backup_progress.json';
+
+    try {
+      $backup = new WORRPB_File_System_V2([
+        'source_folder' => $source,
+        'destination_folder' => $name_folder,
+        'zip_name' => $zip_name,
+        'exclude' => $exclude, // phpcs:ignore WordPressVIPMinimum.Performance.WPQueryParams.PostNotIn_exclude
+        'chunk_size' => 1000, // Process 1000 files per batch
+        'max_zip_size' => 2147483648, // 2GB max per zip file
+        'progress_file_name' => $progress_file_name,
+      ]);
+
+      if (empty($context[$backup_type_key])) {
+        $result = $backup->startBackup();
+        if (is_wp_error($result)) {
+          worrprba_log("😵 BACKUP FAILED ($zip_name): " . $result->get_error_message());
+          worrprba_update_config_file($backup_folder, ['backup_status' => 'fail']);
+          return ['completed' => true, 'end_time' => time()];
+        }
+
+        return [$backup_type_key => $name_folder];
+      }
+
+      // Process one chunk per request
+      $progress = $backup->processStep();
+      if (is_wp_error($progress)) {
+        worrprba_log("😵 BACKUP FAILED ($zip_name): " . $progress->get_error_message());
+        worrprba_update_config_file($backup_folder, ['backup_status' => 'fail']);
+        return ['completed' => true, 'end_time' => time()];
+      }
+
+      // If not done, continue processing in next request
+      if (!$progress['done']) {
+        return [$backup_type_key => $name_folder]; // Keep the key so it continues
+      }
+
+      // Backup is done, clean up progress file and move to next step
+      $backup->cleanup();
+
+      return [
+        'step' => $step + 1,
+        $backup_type_key => '', // Reset for next backup type
+      ];
+
+    } catch (Exception $e) {
+      worrprba_log("😵 BACKUP FAILED ($zip_name): " . $e->getMessage());
       worrprba_update_config_file($backup_folder, ['backup_status' => 'fail']);
       return ['completed' => true, 'end_time' => time()];
     }
-
-    return ['step' => $step + 1];
   }
 
   // 🧩 Step 6: Finish

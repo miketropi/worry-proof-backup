@@ -35,7 +35,7 @@
   define( 'WORRPRBA_PLUGIN_URL', plugin_dir_url( __FILE__ ) );
 
   # define plugin version
-  define( 'WORRPRBA_PLUGIN_VERSION', '0.1.5' );
+  define( 'WORRPRBA_PLUGIN_VERSION', '0.1.6' );
 
   # beta version
   define( 'WORRPRBA_PLUGIN_BETA', true );
