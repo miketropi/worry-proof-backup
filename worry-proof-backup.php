@@ -3,7 +3,7 @@
  * Plugin Name: Worry Proof Backup
  * Plugin URI: https://worry-proof-backup.vercel.app/
  * Description: 🛡️ Professional WordPress backup solution with comprehensive database and file system protection. Features automated backups, secure storage, and one-click restoration capabilities. Built for reliability and ease of use in production environments. **100% FREE FOREVER** - No hidden costs, no premium tiers, no limitations.
- * Version: 0.1.5
+ * Version: 0.1.6
  * Requires at least: 6.0
  * Requires PHP: 8.0
  * Author: @Mike
