@@ -5,7 +5,7 @@ Tags: backup, restore, import, export, database
 Requires at least: 6.0
 Tested up to: 6.9
 Requires PHP: 8.0
-Stable tag: 0.1.6
+Stable tag: 0.1.7
 License: GPLv2 or later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
 
@@ -81,12 +81,24 @@ Yes, you can use the import/export tools to move your site or demo content betwe
 == Github repository ==
 * [Plugin Source](https://github.com/miketropi/worry-proof-backup)
 
+== Changelog ==
+
+= 0.1.7 =
+* Major upgrade to Backup Schedule: improved scheduling accuracy and reliability.
+* Backups are now tracked using unique IDs, names, and enhanced metadata for easier management.
+* Better tracking of backup status ("completed"), backup type, size, and date.
+* Foundation for advanced recurring scheduling and backup history.
+* General code clean-up and minor bug fixes.
+
+= 0.1.6 =
+* Fixed compatibility issues with certain hosting providers (like Kinsta) where functions such as `disk_total_space` and `shell_exec` are not available.
+* Known issue: Backing up the database on Kinsta may sometimes fail because `file_put_contents` can change special characters in the SQL file. This is not fixed yet.
+
 = 0.1.5 =
 * Added new "Backup File System V2" class with support for customizable chunk size during file backups.
 * Improved handling of large sites and backup stability.
 * Preparation for advanced backup and restore features.
 
-== Changelog ==
 = 0.1.4 =
 * Enhanced security (new class WORRPB_Type_Validator)
 
