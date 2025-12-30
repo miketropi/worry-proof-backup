@@ -158,7 +158,7 @@ function worrprba_is_wp_cli_available() {
       return true; // WP-CLI is running
   }
 
-  $cli_path = shell_exec( 'which wp' );
+  $cli_path = function_exists('shell_exec') ? shell_exec('which wp') : '';
   return ! empty( $cli_path );
 }
 
@@ -199,8 +199,8 @@ function worrprba_is_current_admin_page( $screen_id_check = '' ) {
 function worrprba_get_server_metrics() {
   // Disk space
   $root = ABSPATH;
-  $disk_free_space = @disk_free_space($root);
-  $disk_total_space = @disk_total_space($root);
+  $disk_free_space = function_exists('disk_free_space') ? @disk_free_space($root) : null;
+  $disk_total_space = function_exists('disk_total_space') ? @disk_total_space($root) : null;
 
   // PHP memory
   $memory_limit = worrprba_return_bytes(@ini_get('memory_limit'));
