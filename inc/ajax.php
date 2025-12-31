@@ -228,7 +228,7 @@ function worrprba_ajax_generate_backup_uploads() {
       'destination_folder' => $payload['name_folder'],
       'zip_name' => 'uploads.zip',
       'exclude' => ['worry-proof-backup', 'worry-proof-backup-zip', 'worry-proof-backup-cron-manager'], // phpcs:ignore WordPressVIPMinimum.Performance.WPQueryParams.PostNotIn_exclude
-      'chunk_size' => 100, // Process 100 files per batch
+      'chunk_size' => 1000, // Process 1000 files per batch
       'max_zip_size' => 2147483648, // 2GB max per zip file
     ]);
 
