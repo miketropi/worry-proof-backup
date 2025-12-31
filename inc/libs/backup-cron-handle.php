@@ -154,20 +154,46 @@ class WORRPB_Cron_Handler {
       return new WP_Error('backup_ssid_empty', __('Backup SSID is empty', 'worry-proof-backup'));
     }
 
-    $backup = new WORRPB_Database(5000, $ssid);
-    if (is_wp_error($backup)) return $backup;
-
-    if (empty($context['backup_ssid'])) {
-      $result = $backup->startBackup();
-      if (is_wp_error($result)) return $result;
-
-      return ['backup_ssid' => $ssid];
+    // Verify upload directory exists before creating backup instance
+    $upload_dir = wp_upload_dir();
+    if (empty($upload_dir['basedir'])) {
+      worrprba_update_config_file($backup_folder, ['backup_status' => 'fail']);
+      worrprba_log('😵 BACKUP DATABASE FAILED: Upload directory not found');
+      return ['completed' => true, 'end_time' => time()];
     }
 
+    $exclude_tables = isset($context['exclude_tables']) ? $context['exclude_tables'] : array();
+
     try {
+      $backup = new WORRPB_Database_Dumper_JSON(5000, $ssid, $exclude_tables);
+
+      // Verify backup directory was created
+      $backup_dir = $backup->getBackupDir();
+      if (!file_exists($backup_dir)) {
+        worrprba_update_config_file($backup_folder, ['backup_status' => 'fail']);
+        worrprba_log('😵 BACKUP DATABASE FAILED: Failed to create backup directory');
+        return ['completed' => true, 'end_time' => time()];
+      }
+
+      if (empty($context['backup_ssid'])) {
+        $result = $backup->start();
+        if ($result === false) {
+          worrprba_update_config_file($backup_folder, ['backup_status' => 'fail']);
+          worrprba_log('😵 BACKUP DATABASE FAILED: Failed to start backup');
+          return ['completed' => true, 'end_time' => time()];
+        }
+
+        return ['backup_ssid' => $ssid];
+      }
+
       while (true) {
-        $progress = $backup->processStep();
-        if (is_wp_error($progress)) return $progress;
+        $progress = $backup->step();
+        // step() returns array, not WP_Error, but can throw exceptions
+        if (!is_array($progress)) {
+          worrprba_update_config_file($backup_folder, ['backup_status' => 'fail']);
+          worrprba_log('😵 BACKUP DATABASE FAILED: Invalid progress returned');
+          return ['completed' => true, 'end_time' => time()];
+        }
         if ($progress['done']) break;
       }
     } catch (Exception $e) {
@@ -177,7 +203,10 @@ class WORRPB_Cron_Handler {
     }
 
     $result = $backup->finishBackup();
-    if (is_wp_error($result)) return $result;
+    if (is_wp_error($result)) {
+      worrprba_log('⚠️ BACKUP DATABASE WARNING: ' . $result->get_error_message());
+      // Don't fail the backup if cleanup fails, just log it
+    }
 
     return ['step' => $step + 1];
   }

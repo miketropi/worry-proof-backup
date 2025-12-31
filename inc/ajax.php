@@ -54,58 +54,71 @@ function worrprba_ajax_generate_backup_database() {
     wp_send_json_error('Backup folder is empty');
   }
 
-  // create backup database
+  // create backup database using JSON dumper
   $backup_ssid = $payload['name_folder'];
-  $backup = new WORRPB_Database(1000, $backup_ssid);
-
-  // check error $backup
-  if (is_wp_error($backup)) {
-    wp_send_json_error($backup->get_error_message());
+  $exclude_tables = isset($payload['exclude_tables']) ? $payload['exclude_tables'] : array();
+  
+  // Verify upload directory exists before creating backup instance
+  $upload_dir = wp_upload_dir();
+  if (empty($upload_dir['basedir'])) {
+    wp_send_json_error('Upload directory not found');
   }
+  
+  try {
+    $backup = new WORRPB_Database_Dumper_JSON(1000, $backup_ssid, $exclude_tables);
 
-  // if payload not backup_ssid, create new backup_ssid
-  if (!isset($payload['backup_ssid']) || empty($payload['backup_ssid'])) {
-    $result = $backup->startBackup();
-
-    // check error $result
-    if (is_wp_error($result)) {
-      wp_send_json_error($result->get_error_message());
+    // Verify backup directory was created
+    $backup_dir = $backup->getBackupDir();
+    if (!file_exists($backup_dir)) {
+      wp_send_json_error('Failed to create backup directory');
     }
 
-    wp_send_json_success([
-      'backup_ssid' => $backup_ssid,
-      'backup_database_status' => 'is_running',
-      'next_step' => false,
-    ]);
-  } else {
-    $progress = $backup->processStep();
-
-    // check error $progress
-    if (is_wp_error($progress)) {
-      wp_send_json_error($progress->get_error_message());
-    }
-    
-    if ($progress['done']) {
-      $result = $backup->finishBackup();
+    // if payload not backup_ssid, create new backup_ssid
+    if (!isset($payload['backup_ssid']) || empty($payload['backup_ssid'])) {
+      $result = $backup->start();
 
       // check error $result
-      if (is_wp_error($result)) {
-        wp_send_json_error($result->get_error_message());
+      if ($result === false) {
+        wp_send_json_error('Failed to start backup');
       }
 
       wp_send_json_success([
         'backup_ssid' => $backup_ssid,
-        'backup_database_status' => 'is_done',
-        'next_step' => true,
-      ]);
-    } else {
-      wp_send_json_success([
-        'backup_ssid' => $backup_ssid,
         'backup_database_status' => 'is_running',
-        'progress' => $progress,
         'next_step' => false,
       ]);
+    } else {
+      $progress = $backup->step();
+
+      // check error $progress - step() returns array, not WP_Error
+      if (!is_array($progress)) {
+        wp_send_json_error('Failed to process backup step');
+      }
+      
+      if ($progress['done']) {
+        $result = $backup->finishBackup();
+
+        // check error $result
+        if (is_wp_error($result)) {
+          wp_send_json_error($result->get_error_message());
+        }
+
+        wp_send_json_success([
+          'backup_ssid' => $backup_ssid,
+          'backup_database_status' => 'is_done',
+          'next_step' => true,
+        ]);
+      } else {
+        wp_send_json_success([
+          'backup_ssid' => $backup_ssid,
+          'backup_database_status' => 'is_running',
+          'progress' => $progress,
+          'next_step' => false,
+        ]);
+      }
     }
+  } catch (Exception $e) {
+    wp_send_json_error($e->getMessage());
   }
 }
 
@@ -393,58 +406,78 @@ function worrprba_ajax_restore_database() {
   $exclude_tables = isset($payload['exclude_tables']) ? $payload['exclude_tables'] : [];
   $exclude_tables = apply_filters('worry-proof-backup:restore_database_exclude_tables', $exclude_tables, $payload);
 
-  $restore_database = new WORRPB_Restore_Database($folder_name, $exclude_tables, $backup_prefix);
-
-  // check error $restore_database
-  if (is_wp_error($restore_database)) {
-    wp_send_json_error($restore_database->get_error_message());
+  // Verify upload directory exists before creating restore instance
+  $upload_dir = wp_upload_dir();
+  if (empty($upload_dir['basedir'])) {
+    wp_send_json_error('Upload directory not found');
   }
 
-  if(!isset($payload['restore_database_ssid']) || empty($payload['restore_database_ssid'])) {
-    $progress = $restore_database->startRestore();
+  // Verify restore directory and JSON file exist
+  $restore_dir = $upload_dir['basedir'] . '/worry-proof-backup/' . $folder_name;
+  $restore_file = $restore_dir . '/backup.sql.jsonl';
+  
+  if (!is_dir($restore_dir)) {
+    wp_send_json_error('Restore directory not found');
+  }
+  
+  if (!file_exists($restore_file)) {
+    wp_send_json_error('Restore JSON file not found. Expected: backup.sql.jsonl');
+  }
 
-    // check error $progress
-    if (is_wp_error($progress)) {
-      wp_send_json_error($progress->get_error_message());
-    }
+  try {
+    $restore_database = new WORRPB_Restore_Database_JSON($folder_name, $exclude_tables, $backup_prefix);
 
-    wp_send_json_success([
-      'restore_database_ssid' => $folder_name,
-      'next_step' => false,
-    ]);
-  } else {
-    $progress = $restore_database->processStep();
-    
-    // check error $progress
-    if (is_wp_error($progress)) {
-      wp_send_json_error($progress->get_error_message());
-    }
+    // Note: PHP constructors can't return WP_Error, but the class checks are done above
+    // If constructor fails, it would need to throw an exception or we check properties
 
-    if($progress['done']) {
-      $result = $restore_database->finishRestore();
+    if(!isset($payload['restore_database_ssid']) || empty($payload['restore_database_ssid'])) {
+      $progress = $restore_database->startRestore();
 
-      // check error $result
-      if (is_wp_error($result)) {
-        wp_send_json_error($result->get_error_message());
+      // check error $progress
+      if (is_wp_error($progress)) {
+        wp_send_json_error($progress->get_error_message());
       }
 
-      // create hook after restore database successfully
-      do_action('worry-proof-backup:after_restore_database_success', $payload);
-
       wp_send_json_success([
         'restore_database_ssid' => $folder_name,
-        'restore_database_status' => 'done',
-        'next_step' => true,
+        'next_step' => false,
       ]);
     } else {
+      $progress = $restore_database->processStep();
       
-      wp_send_json_success([
-        'restore_database_ssid' => $folder_name,
-        'restore_database_status' => 'is_running',
-        'next_step' => false,
-        'progress' => $progress,
-      ]);
+      // check error $progress
+      if (is_wp_error($progress)) {
+        wp_send_json_error($progress->get_error_message());
+      }
+
+      if($progress['done']) {
+        $result = $restore_database->finishRestore();
+
+        // check error $result
+        if (is_wp_error($result)) {
+          wp_send_json_error($result->get_error_message());
+        }
+
+        // create hook after restore database successfully
+        do_action('worry-proof-backup:after_restore_database_success', $payload);
+
+        wp_send_json_success([
+          'restore_database_ssid' => $folder_name,
+          'restore_database_status' => 'done',
+          'next_step' => true,
+        ]);
+      } else {
+        
+        wp_send_json_success([
+          'restore_database_ssid' => $folder_name,
+          'restore_database_status' => 'is_running',
+          'next_step' => false,
+          'progress' => $progress,
+        ]);
+      }
     }
+  } catch (Exception $e) {
+    wp_send_json_error($e->getMessage());
   }
 }
 

@@ -47,10 +47,12 @@
    */
 
   # include libs file
-  require_once WORRPRBA_PLUGIN_PATH . 'inc/libs/backup-database.php';
+  // require_once WORRPRBA_PLUGIN_PATH . 'inc/libs/backup-database.php';
+  require_once WORRPRBA_PLUGIN_PATH . 'inc/libs/backup-database-dumper-json.php';
   require_once WORRPRBA_PLUGIN_PATH . 'inc/libs/backup-file-system.php';
   require_once WORRPRBA_PLUGIN_PATH . 'inc/libs/backup-file-system-v2.php';
-  require_once WORRPRBA_PLUGIN_PATH . 'inc/libs/restore-database.php';
+  // require_once WORRPRBA_PLUGIN_PATH . 'inc/libs/restore-database.php';
+  require_once WORRPRBA_PLUGIN_PATH . 'inc/libs/restore-database-json.php';
   require_once WORRPRBA_PLUGIN_PATH . 'inc/libs/restore-file-system.php';
   require_once WORRPRBA_PLUGIN_PATH . 'inc/libs/backup-cron-manager.php';
   require_once WORRPRBA_PLUGIN_PATH . 'inc/libs/backup-cron-handle.php';
