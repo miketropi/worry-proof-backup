@@ -1,0 +1,221 @@
+<?php
+if ( ! defined( 'ABSPATH' ) ) exit;
+
+class WORRPB_Restore_Database_JSON {
+
+	private $wpdb;
+	private $restore_file;
+	private $progress_file;
+	private $session_id;
+	private $restore_dir;
+	private $chunk_lines = 1000;
+	private $exclude_tables = [];
+	private $new_prefix;
+	private $old_prefix;
+	private $log_file;
+	private $skip_duplicate_entry = true;
+	private $use_transaction = true;
+
+	public function __construct($session_id, $exclude_tables = [], $backup_prefix = '') {
+		if (!$session_id) {
+			return new WP_Error('session_required', __('Session ID is required.', 'worry-proof-backup'));
+		}
+
+		global $wpdb;
+		$this->wpdb = $wpdb;
+
+		$this->session_id = sanitize_file_name($session_id);
+
+		$upload_dir = wp_upload_dir();
+		if (empty($upload_dir['basedir'])) {
+			return new WP_Error('upload_dir_error', __('Upload dir not found', 'worry-proof-backup'));
+		}
+
+		$this->restore_dir = $upload_dir['basedir'] . '/worry-proof-backup/' . $this->session_id;
+		$this->restore_file  = $this->restore_dir . '/backup.sql.jsonl';
+		$this->progress_file = $this->restore_dir . '/restore-progress.json';
+		$this->log_file      = $this->restore_dir . '/restore.log';
+
+		if (!is_dir($this->restore_dir) || !file_exists($this->restore_file)) {
+			return new WP_Error('restore_missing', __('Restore data not found.', 'worry-proof-backup'));
+		}
+
+		$this->exclude_tables = $exclude_tables;
+		$this->new_prefix = $wpdb->prefix;
+		$this->old_prefix = $backup_prefix;
+	}
+
+	/* ================= START ================= */
+
+	public function startRestore() {
+		$progress = [
+			'line' => 0,
+			'done' => false,
+		];
+
+		file_put_contents($this->progress_file, wp_json_encode($progress));
+		file_put_contents(
+			$this->log_file,
+			"== Restore started at " . gmdate('Y-m-d H:i:s') . " ==\n",
+			FILE_APPEND
+		);
+
+		return $progress;
+	}
+
+	/* ================= PROCESS ================= */
+
+	public function processStep() {
+
+		$progress = $this->getProgress();
+		if (is_wp_error($progress) || $progress['done']) {
+			return $progress;
+		}
+
+		$handle = fopen($this->restore_file, 'r');
+		if (!$handle) {
+			return new WP_Error('file_open_failed', __('Cannot open restore file.', 'worry-proof-backup'));
+		}
+
+		$current  = 0;
+		$executed = 0;
+
+		$this->wpdb->query('SET FOREIGN_KEY_CHECKS=0;');
+		if ($this->use_transaction) {
+			$this->wpdb->query('START TRANSACTION;');
+		}
+
+		while (!feof($handle)) {
+
+			$line = fgets($handle);
+			$current++;
+
+			if ($current <= $progress['line']) continue;
+			if (trim($line) === '') continue;
+
+			$payload = json_decode($line, true);
+			if (!$payload || empty($payload['statements']) || !is_array($payload['statements'])) {
+				continue;
+			}
+
+			foreach ($payload['statements'] as $statement) {
+
+				$sql = $this->processQueryPrefix($statement);
+				$sql = $this->normalizeOptionsQuery($sql);
+
+				if ($this->shouldExcludeQuery($sql)) {
+					continue;
+				}
+
+				$result = $this->wpdb->query($sql); // phpcs:ignore
+
+				if ($result === false) {
+					$error = $this->wpdb->last_error;
+
+					if ($this->skip_duplicate_entry && stripos($error, 'Duplicate entry') !== false) {
+						file_put_contents(
+							$this->log_file,
+							"[Skip] Duplicate entry at line {$current}: {$error}\n",
+							FILE_APPEND
+						);
+						continue;
+					}
+
+					if ($this->use_transaction) {
+						$this->wpdb->query('ROLLBACK;');
+					}
+
+					fclose($handle);
+					return new WP_Error('query_failed', $error);
+				}
+			}
+
+			$executed++;
+			if ($executed >= $this->chunk_lines) {
+				break;
+			}
+		}
+
+		if ($this->use_transaction) {
+			$this->wpdb->query('COMMIT;');
+		}
+
+		$this->wpdb->query('SET FOREIGN_KEY_CHECKS=1;');
+
+		if (feof($handle)) {
+			$progress['done'] = true;
+			file_put_contents(
+				$this->log_file,
+				"== Restore finished at " . gmdate('Y-m-d H:i:s') . " ==\n",
+				FILE_APPEND
+			);
+		}
+
+		$progress['line'] = $current;
+		fclose($handle);
+
+		file_put_contents($this->progress_file, wp_json_encode($progress));
+		return $progress;
+	}
+
+	/* ================= HELPERS ================= */
+
+	private function processQueryPrefix($query) {
+		if (!$this->old_prefix || $this->old_prefix === $this->new_prefix) {
+			return $query;
+		}
+
+		$pattern = '/\b' . preg_quote($this->old_prefix, '/') . '([a-z0-9_]+)\b/i';
+
+		return preg_replace_callback($pattern, function ($m) {
+			return $this->new_prefix . $m[1];
+		}, $query);
+	}
+
+	private function normalizeOptionsQuery($sql) {
+
+    // Only handle INSERT into wp_options
+    if (!preg_match('/^INSERT\s+INTO\s+`?' . preg_quote($this->new_prefix, '/') . 'options`?/i', $sql)) {
+			return $sql;
+    }
+
+    // Replace INSERT with REPLACE.
+    $sql = preg_replace(
+			'/^INSERT\s+INTO/i',
+			'REPLACE INTO',
+			$sql
+    );
+
+    return $sql;
+	}
+
+	private function shouldExcludeQuery($query) {
+		foreach ($this->exclude_tables as $table) {
+			if (stripos($query, $table) !== false) {
+				return true;
+			}
+		}
+		return false;
+	}
+
+	public function getProgress() {
+		if (!file_exists($this->progress_file)) {
+			return new WP_Error('progress_missing', __('Progress file missing.', 'worry-proof-backup'));
+		}
+		return json_decode(file_get_contents($this->progress_file), true);
+	}
+
+	public function finishRestore() {
+		if (file_exists($this->progress_file)) {
+			wp_delete_file($this->progress_file);
+		}
+		if (file_exists($this->log_file)) {
+			file_put_contents(
+				$this->log_file,
+				"== Restore manually finished at " . gmdate('Y-m-d H:i:s') . " ==\n",
+				FILE_APPEND
+			);
+		}
+		return true;
+	}
+}
