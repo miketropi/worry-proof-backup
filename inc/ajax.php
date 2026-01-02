@@ -74,7 +74,7 @@ function worrprba_ajax_generate_backup_database() {
     }
 
     // if payload not backup_ssid, create new backup_ssid
-    if (!isset($payload['backup_ssid']) || empty($payload['backup_ssid'])) {
+    if (!isset($payload['backup_database_status']) || empty($payload['backup_database_status'])) {
       $result = $backup->start();
 
       // check error $result
