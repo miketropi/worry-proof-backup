@@ -192,7 +192,7 @@ const UploadBackup = forwardRef(({ onUpload, accept = '.zip,.tar,.gz,.sql', maxF
         <button
           type="button"
           onClick={() => inputRef.current.click()}
-          className="tw-px-4 tw-py-2 tw-bg-blue-600 tw-text-white tw-rounded-md tw-font-medium tw-shadow-sm hover:tw-bg-blue-700 focus:tw-outline-none focus:tw-ring-2 focus:tw-ring-blue-200"
+          className="tw-px-4 tw-py-2 tw-bg-blue-600 tw-text-white tw-rounded-md tw-font-medium tw-shadow-sm hover:tw-bg-blue-700 focus:tw-outline-none focus:tw-ring-2 focus:tw-ring-blue-200 tw-font-space-mono"
         >
           Choose File
         </button>
@@ -203,7 +203,7 @@ const UploadBackup = forwardRef(({ onUpload, accept = '.zip,.tar,.gz,.sql', maxF
               if (onUpload) onUpload(files);
               // toast({ message: 'Uploading file...', type: 'info' });
             }}
-            className="tw-px-4 tw-py-2 tw-bg-green-600 tw-text-white tw-rounded-md tw-font-medium tw-shadow-sm hover:tw-bg-green-700 focus:tw-outline-none focus:tw-ring-2 focus:tw-ring-green-200"
+            className="tw-px-4 tw-py-2 tw-bg-green-600 tw-text-white tw-rounded-md tw-font-medium tw-shadow-sm hover:tw-bg-green-700 focus:tw-outline-none focus:tw-ring-2 focus:tw-ring-green-200 tw-font-space-mono"
           >
             Upload
           </button>

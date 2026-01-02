@@ -101,7 +101,7 @@ export default function BackupScheduleConfig({ onCancel }) {
     <div className="tw-space-y-6">
       {/* Warning Notification */}
       <Notification type="warning" title="Backup Scheduling">
-        <p className="tw-text-xs">
+        <p className="tw-text-xs tw-font-space-mono">
           <strong>Heads up! 🚨 </strong> This feature only works effectively when your website has stable traffic.
         </p>
       </Notification>
@@ -121,7 +121,7 @@ export default function BackupScheduleConfig({ onCancel }) {
                   <h3 className="tw-text-base tw-font-semibold tw-text-gray-900">
                     Enable Backup Schedule
                   </h3>
-                  <p className="tw-text-sm tw-text-gray-600">
+                  <p className="tw-text-sm tw-text-gray-600 tw-font-space-mono">
                     Turn on automatic backup scheduling
                   </p>
                 </div>
@@ -316,7 +316,7 @@ export default function BackupScheduleConfig({ onCancel }) {
           <div className="tw-flex tw-justify-end tw-gap-3 tw-pt-6 tw-border-t tw-border-gray-200">
             <button
               type="button"
-              className="tw-px-6 tw-py-2.5 tw-text-sm tw-font-medium tw-text-gray-700 tw-bg-white tw-border tw-border-gray-200 tw-rounded-lg tw-shadow-sm hover:tw-bg-gray-50 hover:tw-border-gray-300 tw-transition-colors focus:tw-outline-none focus:tw-ring-2 focus:tw-ring-offset-2 focus:tw-ring-blue-500"
+              className="tw-px-6 tw-py-2.5 tw-text-sm tw-font-medium tw-text-gray-700 tw-bg-white tw-border tw-border-gray-200 tw-rounded-lg tw-shadow-sm hover:tw-bg-gray-50 hover:tw-border-gray-300 tw-transition-colors focus:tw-outline-none focus:tw-ring-2 focus:tw-ring-offset-2 focus:tw-ring-blue-500 tw-font-space-mono"
               onClick={onCancel}
             >
               Cancel
@@ -325,7 +325,7 @@ export default function BackupScheduleConfig({ onCancel }) {
               type="button"
               onClick={handleSaveSchedule}
               disabled={schedule.enabled && schedule.types.length === 0 || isSaving}
-              className={ `tw-px-6 tw-py-2.5 tw-text-sm tw-font-medium tw-text-white tw-bg-blue-600 tw-rounded-lg tw-shadow-sm hover:tw-bg-blue-700 tw-transition-colors focus:tw-outline-none focus:tw-ring-2 focus:tw-ring-offset-2 focus:tw-ring-blue-500 disabled:tw-opacity-50 disabled:tw-cursor-not-allowed disabled:hover:tw-bg-blue-600 ${isSaving ? 'tw-opacity-50 tw-cursor-not-allowed' : ''}` }
+              className={ `tw-px-6 tw-py-2.5 tw-text-sm tw-font-medium tw-text-white tw-bg-blue-600 tw-rounded-lg tw-shadow-sm hover:tw-bg-blue-700 tw-transition-colors focus:tw-outline-none focus:tw-ring-2 focus:tw-ring-offset-2 focus:tw-ring-blue-500 disabled:tw-opacity-50 disabled:tw-cursor-not-allowed disabled:hover:tw-bg-blue-600 tw-font-space-mono ${isSaving ? 'tw-opacity-50 tw-cursor-not-allowed' : ''}` }
             >
               {isSaving ? 'Saving...' : 'Save Schedule'}
             </button>

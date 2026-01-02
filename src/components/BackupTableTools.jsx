@@ -9,7 +9,7 @@ export const NewBackupButton = () => {
 
   const handleCreateBackup = async () => {
     // TODO: Implement create backup functionality
-    console.log('Create backup clicked');
+    // console.log('Create backup clicked');
     setIsConfigModalOpen(true);
   };
 
@@ -21,7 +21,7 @@ export const NewBackupButton = () => {
   return <>
     <button
       onClick={handleCreateBackup}
-      className="tw-inline-flex tw-items-center tw-px-3 sm:tw-px-4 tw-py-2 tw-border tw-border-transparent tw-shadow-sm tw-text-xs sm:tw-text-sm tw-font-medium tw-rounded-md tw-text-white tw-bg-blue-600 hover:tw-bg-blue-700 focus:tw-outline-none focus:tw-ring-2 focus:tw-ring-offset-2 focus:tw-ring-blue-500 tw-transition-colors tw-duration-200"
+      className="tw-inline-flex tw-items-center tw-px-3 sm:tw-px-4 tw-py-2 tw-border tw-border-transparent tw-shadow-sm tw-text-xs sm:tw-text-sm tw-font-medium tw-rounded-md tw-text-white tw-bg-blue-600 hover:tw-bg-blue-700 focus:tw-outline-none focus:tw-ring-2 focus:tw-ring-offset-2 focus:tw-ring-blue-500 tw-transition-colors tw-duration-200 tw-font-space-mono"
     >
       <svg
         className="tw--ml-1 tw-mr-1 sm:tw-mr-2 tw-h-4 tw-w-4 sm:tw-h-5 sm:tw-w-5"
@@ -61,7 +61,7 @@ const BackupTableTools = ({ onFilterChange, selectedBackups, onDeleteBackups, on
 
   const handleCreateBackup = async () => {
     // TODO: Implement create backup functionality
-    console.log('Create backup clicked');
+    // console.log('Create backup clicked');
     setIsConfigModalOpen(true);
   };
 
@@ -71,7 +71,7 @@ const BackupTableTools = ({ onFilterChange, selectedBackups, onDeleteBackups, on
       return;
     }
     // TODO: Implement delete backup functionality
-    console.log('Delete backups:', selectedBackups);
+    // console.log('Delete backups:', selectedBackups);
     onDeleteBackups(selectedBackups);
   };
 
@@ -82,7 +82,7 @@ const BackupTableTools = ({ onFilterChange, selectedBackups, onDeleteBackups, on
   };
 
   const handleSaveBackup = async (config) => {
-    console.log('Save backup:', config);
+    // console.log('Save backup:', config);
     buildBackupProcess(config);
   };
 
@@ -92,7 +92,7 @@ const BackupTableTools = ({ onFilterChange, selectedBackups, onDeleteBackups, on
       <div className="tw-grid tw-grid-cols-2 sm:tw-flex sm:tw-items-center tw-gap-2 sm:tw-gap-3 tw-w-full sm:tw-w-auto">
         <button
           onClick={handleCreateBackup}
-          className="tw-inline-flex tw-items-center tw-justify-center tw-px-3 sm:tw-px-4 tw-py-2 tw-border tw-border-transparent tw-shadow-sm tw-text-xs sm:tw-text-sm tw-font-medium tw-rounded-md tw-text-white tw-bg-blue-600 hover:tw-bg-blue-700 focus:tw-outline-none focus:tw-ring-2 focus:tw-ring-offset-2 focus:tw-ring-blue-500 tw-transition-colors tw-duration-200 tw-col-span-2 sm:tw-col-span-1"
+          className="tw-inline-flex tw-items-center tw-justify-center tw-px-3 sm:tw-px-4 tw-py-2 tw-border tw-border-transparent tw-shadow-sm tw-text-xs sm:tw-text-sm tw-font-medium tw-rounded-md tw-text-white tw-bg-blue-600 hover:tw-bg-blue-700 focus:tw-outline-none focus:tw-ring-2 focus:tw-ring-offset-2 focus:tw-ring-blue-500 tw-transition-colors tw-duration-200 tw-col-span-2 sm:tw-col-span-1 tw-font-space-mono"
         >
           <svg
             className="tw-mr-1 sm:tw-mr-2 tw-h-4 tw-w-4 sm:tw-h-5 sm:tw-w-5"
@@ -114,7 +114,7 @@ const BackupTableTools = ({ onFilterChange, selectedBackups, onDeleteBackups, on
         <button
           onClick={handleDeleteBackups}
           disabled={selectedBackups.length === 0}
-          className={`tw-inline-flex tw-items-center tw-justify-center tw-px-3 sm:tw-px-4 tw-py-2 tw-border tw-border-transparent tw-shadow-sm tw-text-xs sm:tw-text-sm tw-font-medium tw-rounded-md tw-text-white tw-transition-colors tw-duration-200 ${
+          className={`tw-inline-flex tw-items-center tw-justify-center tw-px-3 sm:tw-px-4 tw-py-2 tw-border tw-border-transparent tw-shadow-sm tw-text-xs sm:tw-text-sm tw-font-medium tw-rounded-md tw-text-white tw-transition-colors tw-duration-200 tw-font-space-mono ${
             selectedBackups.length === 0
               ? 'tw-bg-gray-400 tw-cursor-not-allowed'
               : 'tw-bg-red-600 hover:tw-bg-red-700 focus:tw-outline-none focus:tw-ring-2 focus:tw-ring-offset-2 focus:tw-ring-red-500'
@@ -127,7 +127,7 @@ const BackupTableTools = ({ onFilterChange, selectedBackups, onDeleteBackups, on
 
         <button
           onClick={handleUploadBackup}
-          className="tw-inline-flex tw-items-center tw-justify-center tw-px-3 sm:tw-px-4 tw-py-2 tw-border tw-border-transparent tw-shadow-sm tw-text-xs sm:tw-text-sm tw-font-medium tw-rounded-md tw-text-white tw-bg-green-600 hover:tw-bg-green-700 focus:tw-outline-none focus:tw-ring-2 focus:tw-ring-offset-2 focus:tw-ring-green-500 tw-transition-colors tw-duration-200"
+          className="tw-inline-flex tw-items-center tw-justify-center tw-px-3 sm:tw-px-4 tw-py-2 tw-border tw-border-transparent tw-shadow-sm tw-text-xs sm:tw-text-sm tw-font-medium tw-rounded-md tw-text-white tw-bg-green-600 hover:tw-bg-green-700 focus:tw-outline-none focus:tw-ring-2 focus:tw-ring-offset-2 focus:tw-ring-green-500 tw-transition-colors tw-duration-200 tw-font-space-mono"
         >
           <FileUp className="tw-w-4 tw-h-4 tw-mr-1 sm:tw-mr-2" />
           <span className="tw-hidden sm:tw-inline">Upload Backup</span>
@@ -140,7 +140,7 @@ const BackupTableTools = ({ onFilterChange, selectedBackups, onDeleteBackups, on
             e.preventDefault();
             onBackupSchedule();
           }}
-          className="tw-inline-flex tw-items-center tw-justify-center tw-px-3 sm:tw-px-4 tw-py-2 tw-border tw-border-transparent tw-shadow-sm tw-text-xs sm:tw-text-sm tw-font-medium tw-rounded-md tw-text-white tw-bg-yellow-600 hover:tw-bg-yellow-700 focus:tw-outline-none focus:tw-ring-2 focus:tw-ring-offset-2 focus:tw-ring-yellow-500 tw-transition-colors tw-duration-200"
+          className="tw-inline-flex tw-items-center tw-justify-center tw-px-3 sm:tw-px-4 tw-py-2 tw-border tw-border-transparent tw-shadow-sm tw-text-xs sm:tw-text-sm tw-font-medium tw-rounded-md tw-text-white tw-bg-yellow-600 hover:tw-bg-yellow-700 focus:tw-outline-none focus:tw-ring-2 focus:tw-ring-offset-2 focus:tw-ring-yellow-500 tw-transition-colors tw-duration-200 tw-font-space-mono"
         >
           <Clock className="tw-w-4 tw-h-4 tw-mr-1 sm:tw-mr-2" />
           <span className="tw-hidden sm:tw-inline">Backup Schedule</span>

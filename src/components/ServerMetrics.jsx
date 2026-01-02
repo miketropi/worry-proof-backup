@@ -175,7 +175,7 @@ const ServerMetrics = ({ metrics, showWarnings = true }) => {
               <h3 className="tw-text-base tw-font-semibold tw-text-indigo-900 tw-mb-2 tw-flex tw-items-center tw-gap-2">
                 Pro Tips for Your Server Setup 💡
               </h3>
-              <p className="tw-text-sm tw-leading-relaxed tw-text-indigo-700">
+              <p className="tw-text-sm tw-leading-relaxed tw-text-indigo-700 tw-font-space-mono">
                 Hey there! 👋 Your server setup is like choosing the right gear for a mission - 
                 it totally depends on your site's vibe! Small sites? You're good with the basics! 
                 But if you're running a massive site with tons of plugins, themes, or getting that 
@@ -204,7 +204,7 @@ const ServerMetrics = ({ metrics, showWarnings = true }) => {
                     ? minimums[key].message
                     : null;
                 return (
-                  <tr key={key} className="tw-border-t tw-border-gray-100 hover:tw-bg-gray-50 tw-transition-colors">
+                  <tr key={key} className="tw-border-t tw-border-gray-100 hover:tw-bg-gray-50 tw-transition-colors tw-font-space-mono">
                     <td className="tw-px-4 tw-py-3 tw-align-middle">
                       <span className="tw-w-5 tw-h-5 tw-flex tw-items-center tw-justify-center tw-text-gray-400">
                         {React.cloneElement(icon, { className: "tw-w-4 tw-h-4 tw-text-gray-400" })}

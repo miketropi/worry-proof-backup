@@ -82,7 +82,7 @@ const ReportIssue = () => {
       <p className="tw-text-gray-600 tw-text-sm tw-text-center tw-mb-6 tw-col-span-2">Please use this template to help us resolve your issue faster. The more details you provide, the better we can help!</p>
       <div className="tw-grid tw-grid-cols-1 md:tw-grid-cols-2 tw-gap-8 tw-items-start">
         {/* Left: Instructions/Checklist */}
-        <div className="tw-bg-gradient-to-br tw-from-blue-50 tw-to-indigo-50 tw-rounded-lg tw-p-6 tw-border tw-border-blue-100 tw-mb-6 md:tw-mb-0 tw-shadow-sm">
+        <div className="tw-bg-gradient-to-br tw-from-blue-50 tw-to-indigo-50 tw-rounded-lg tw-p-6 tw-border tw-border-blue-100 tw-mb-6 md:tw-mb-0 tw-shadow-sm tw-font-space-mono">
           <div className="tw-text-lg tw-font-bold tw-text-gray-800 tw-mb-3 tw-flex tw-items-center tw-gap-2">
             <span>📝</span>
             Pro Tips for the Perfect Bug Report
@@ -146,7 +146,7 @@ const ReportIssue = () => {
                 <button
                   key={t.value}
                   type="button"
-                  className={`tw-px-4 tw-py-2 tw-rounded-md tw-text-sm tw-font-medium tw-border tw-transition-colors focus:tw-outline-none focus:tw-ring-1 focus:tw-ring-blue-200 ${form.type === t.value ? 'tw-bg-blue-600 tw-text-white tw-border-blue-600' : 'tw-bg-white tw-text-gray-700 tw-border-gray-300 hover:tw-bg-blue-50'}`}
+                  className={`tw-px-4 tw-py-2 tw-rounded-md tw-text-sm tw-font-medium tw-border tw-transition-colors focus:tw-outline-none focus:tw-ring-1 focus:tw-ring-blue-200 tw-font-space-mono ${form.type === t.value ? 'tw-bg-blue-600 tw-text-white tw-border-blue-600' : 'tw-bg-white tw-text-gray-700 tw-border-gray-300 hover:tw-bg-blue-50'}`}
                   onClick={() => handleTypeChange(t.value)}
                   aria-pressed={form.type === t.value}
                 >
@@ -186,13 +186,13 @@ const ReportIssue = () => {
           <button
             type="submit"
             disabled={submitting}
-            className="tw-w-full tw-py-2 tw-rounded-md tw-bg-blue-600 tw-text-white tw-font-medium tw-text-base tw-transition-colors hover:tw-bg-blue-700 focus:tw-outline-none focus:tw-ring-2 focus:tw-ring-blue-200 disabled:tw-opacity-50 disabled:tw-cursor-not-allowed"
+            className="tw-w-full tw-py-2 tw-rounded-md tw-bg-blue-600 tw-text-white tw-font-medium tw-text-base tw-transition-colors hover:tw-bg-blue-700 focus:tw-outline-none focus:tw-ring-2 focus:tw-ring-blue-200 disabled:tw-opacity-50 disabled:tw-cursor-not-allowed tw-font-space-mono"
           >
             {submitting ? 'Submitting...' : 'Submit Report'}
           </button>
         </div>
       </div>
-      <div className="tw-mt-10 tw-text-xs tw-text-gray-500 tw-text-center tw-space-x-3">
+      <div className="tw-mt-10 tw-text-xs tw-text-gray-500 tw-text-center tw-space-x-3 tw-font-space-mono">
         <span>WP: {form.wp_version || 'N/A'}</span>
         <span>PHP: {form.php_version || 'N/A'}</span>
         <span>Plugin: {form.plugin_version || 'N/A'}</span>
