@@ -69,7 +69,8 @@
   # include hooks file
   require_once WORRPRBA_PLUGIN_PATH . 'inc/hooks.php';
 
-  
+  # include rest file
+  require_once WORRPRBA_PLUGIN_PATH . 'inc/rest.php';
 }
 
 // add link go to backup page in plugin page
