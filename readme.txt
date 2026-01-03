@@ -5,7 +5,7 @@ Tags: backup, restore, import, export, database
 Requires at least: 6.0
 Tested up to: 6.9
 Requires PHP: 8.0
-Stable tag: 0.1.9
+Stable tag: 0.2.0
 License: GPLv2 or later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
 
@@ -82,6 +82,20 @@ Yes, you can use the import/export tools to move your site or demo content betwe
 * [Plugin Source](https://github.com/miketropi/worry-proof-backup)
 
 == Changelog ==
+
+= 0.2.0 =
+* New: Added support for uploading large backup files via CLI REST endpoint.
+* Feature: REST API endpoints allow chunked uploads of backup ZIPs for improved reliability with big files.
+* Security: Only users with `manage_options` capability can use the chunked upload endpoints.
+* Enhancement: Restores can now be initialized from uploaded ZIP backups regardless of size via CLI-compatible REST routes.
+
+= 0.1.9 =
+* Upgrade: Improved the folder/file restore logic for better performance, reliability, and compatibility with extremely large folders.
+* Change: Refactored the restore file system methods to avoid memory exhaustion and timeout issues even with tens of thousands of files.
+* Enhanced: Restore operations now work in batches with progress tracking to ensure smooth restores on all hosts.
+* Security: Improved checks and error handling during restore to prevent incomplete or partial restores.
+* Fix: Fixed rare bug where deeply nested folders could fail to restore under certain server configurations.
+
 
 = 0.1.8 =
 * New: Added backup-database-dumper-json.php class for improved database backups with JSON-based dumps for faster export and better compatibility.
