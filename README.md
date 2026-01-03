@@ -20,6 +20,26 @@ A powerful, user-friendly WordPress plugin to backup, restore, import, and expor
 - **Email Notifications**: Receive detailed email reports when scheduled backups complete successfully.
 - **Backup Status Tracking**: Monitor backup completion status and history through the admin interface.
 
+## 📦 Upload Backups via CLI
+
+Starting with version 0.2.0, WP Backup supports **chunked upload of large backup ZIP files directly via the command line** using a REST API endpoint, perfect for big sites or automated workflows.
+
+- [CLI Tool & Usage Guide →](https://github.com/miketropi/wpb-upload-cli)
+
+This feature enables you to:
+- Upload and restore backup ZIPs larger than typical browser/APIs allow.
+- Integrate with the open source CLI client [`wpb-upload-cli`](https://github.com/miketropi/wpb-upload-cli).
+
+**How it works:**
+1. Generates an upload session for the backup ZIP, sending it in chunks to avoid timeouts or browser limits.
+2. After upload completes, triggers the restore process via a REST API endpoint.
+
+**Quick Start:**
+- See [`wpb-upload-cli`](https://github.com/miketropi/wpb-upload-cli) for command-line usage instructions, authentication, and automation tips.
+
+**Security:** Only admins (users with the `manage_options` capability) can use this REST API/CLI upload feature.
+
+
 ## Installation
 
 1. Upload the plugin files to the `/wp-content/plugins/worry-proof-backup` directory, or install via the WordPress Plugins screen.

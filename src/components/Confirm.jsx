@@ -31,7 +31,7 @@ const Confirm = ({
             type="button"
             onClick={onClose}
             disabled={loading}
-            className="tw-px-5 tw-py-2.5 tw-text-sm tw-font-medium tw-text-gray-700 tw-bg-white tw-border tw-border-gray-200 tw-rounded-lg tw-shadow-sm hover:tw-bg-gray-50 hover:tw-border-gray-300 tw-transition-colors focus:tw-outline-none focus:tw-ring-2 focus:tw-ring-offset-2 focus:tw-ring-blue-500 disabled:tw-opacity-50 disabled:tw-cursor-not-allowed"
+            className="tw-px-5 tw-py-2.5 tw-text-sm tw-font-medium tw-text-gray-700 tw-bg-white tw-border tw-border-gray-200 tw-rounded-lg tw-shadow-sm hover:tw-bg-gray-50 hover:tw-border-gray-300 tw-transition-colors focus:tw-outline-none focus:tw-ring-2 focus:tw-ring-offset-2 focus:tw-ring-blue-500 disabled:tw-opacity-50 disabled:tw-cursor-not-allowed tw-font-space-mono"
           >
             {cancelText}
           </button>
@@ -39,7 +39,7 @@ const Confirm = ({
             type="button"
             onClick={onConfirm}
             disabled={loading}
-            className={`tw-px-5 tw-py-2.5 tw-text-sm tw-font-medium tw-rounded-lg tw-shadow-sm tw-transition-colors focus:tw-outline-none focus:tw-ring-2 focus:tw-ring-offset-2
+            className={`tw-px-5 tw-py-2.5 tw-text-sm tw-font-medium tw-rounded-lg tw-shadow-sm tw-transition-colors focus:tw-outline-none focus:tw-ring-2 focus:tw-ring-offset-2 tw-font-space-mono 
               ${danger
                 ? 'tw-text-white tw-bg-red-600 hover:tw-bg-red-700 focus:tw-ring-red-500'
                 : 'tw-text-white tw-bg-blue-600 hover:tw-bg-blue-700 focus:tw-ring-blue-500'}

@@ -54,7 +54,7 @@ const BackupConfigModal = ({ isOpen, onClose, onSave }) => {
       isOpen={isOpen}
       onClose={onClose}
       title="Backup Configuration"
-      size="md"
+      size="lg"
     >
       <div className="tw-space-y-6">
         {/* Welcome Message */}
@@ -67,7 +67,7 @@ const BackupConfigModal = ({ isOpen, onClose, onSave }) => {
               <h3 className="tw-text-sm tw-font-bold tw-text-blue-900 tw-mb-1">
                 Let's Set Up Your Backup! 🚀
               </h3>
-              <div className="tw-text-sm tw-text-blue-700 tw-leading-relaxed">
+              <div className="tw-text-sm tw-text-blue-700 tw-leading-relaxed tw-font-space-mono">
                 <p>
                   Give your backup a name and choose what to include! 
                   You can select from database, plugins, themes, and uploads folder. 
@@ -199,14 +199,14 @@ const BackupConfigModal = ({ isOpen, onClose, onSave }) => {
             <button
               type="button"
               onClick={onClose}
-              className="tw-px-6 tw-py-2.5 tw-text-sm tw-font-medium tw-text-gray-700 tw-bg-white tw-border tw-border-gray-200 tw-rounded-lg tw-shadow-sm hover:tw-bg-gray-50 hover:tw-border-gray-300 tw-transition-colors focus:tw-outline-none focus:tw-ring-2 focus:tw-ring-offset-2 focus:tw-ring-blue-500"
+              className="tw-px-6 tw-py-2.5 tw-text-sm tw-font-medium tw-text-gray-700 tw-bg-white tw-border tw-border-gray-200 tw-rounded-lg tw-shadow-sm hover:tw-bg-gray-50 hover:tw-border-gray-300 tw-transition-colors focus:tw-outline-none focus:tw-ring-2 focus:tw-ring-offset-2 focus:tw-ring-blue-500 tw-font-space-mono"
             >
               Cancel
             </button>
             <button
               type="submit"
               disabled={!config.name || config.types.length === 0}
-              className="tw-px-6 tw-py-2.5 tw-text-sm tw-font-medium tw-text-white tw-bg-blue-600 tw-rounded-lg tw-shadow-sm hover:tw-bg-blue-700 tw-transition-colors focus:tw-outline-none focus:tw-ring-2 focus:tw-ring-offset-2 focus:tw-ring-blue-500 disabled:tw-opacity-50 disabled:tw-cursor-not-allowed disabled:hover:tw-bg-blue-600"
+              className="tw-px-6 tw-py-2.5 tw-text-sm tw-font-medium tw-text-white tw-bg-blue-600 tw-rounded-lg tw-shadow-sm hover:tw-bg-blue-700 tw-transition-colors focus:tw-outline-none focus:tw-ring-2 focus:tw-ring-offset-2 focus:tw-ring-blue-500 disabled:tw-opacity-50 disabled:tw-cursor-not-allowed disabled:hover:tw-bg-blue-600 tw-font-space-mono"
             >
               Start Backup
             </button>

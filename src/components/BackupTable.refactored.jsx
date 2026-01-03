@@ -154,11 +154,11 @@ const BackupTable = () => {
       toast({ message: 'Uploading...', type: 'info' });
 
       const res = await uploadFileWithProgress(file, (percent) => {
-        console.log('Upload progress', percent);
+        // console.log('Upload progress', percent);
         uploadRef.current?.setUploadProgress(percent);
       });
 
-      console.log('Upload res', res);
+      // console.log('Upload res', res);
 
       toast({ message: 'Upload success!', type: 'success' });
       uploadRef.current?.setUploadProgress(100);
@@ -171,7 +171,7 @@ const BackupTable = () => {
   };
 
   const handleUploadBackup = () => {
-    console.log('Upload backup clicked');
+    // console.log('Upload backup clicked');
     openModal({
       title: 'Upload Backup',
       size: 'lg',
