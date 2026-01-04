@@ -33775,7 +33775,10 @@ var Modal = function Modal(_ref) {
     }
   };
   var modalContent = /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsxs)("div", {
-    className: "tw-fixed tw-inset-0 tw-z-50 tw-overflow-y-auto __tw-font-space-mono",
+    className: "tw-fixed tw-inset-0 tw-z-50 tw-overflow-y-auto",
+    style: {
+      zIndex: 9999
+    },
     onClick: handleBackdropClick,
     role: "presentation",
     children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("div", {

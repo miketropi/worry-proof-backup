@@ -1,14 +1,24 @@
 import { __request } from './lib';
 
-const { endpoint, theme_slug, nonce, ajax_url, php_version, parent_theme_version, wordpress_version, license_key } = worrprba_dummy_pack_center_data;
+const { 
+  endpoint, 
+  theme_slug, 
+  nonce, 
+  ajax_url, 
+  php_version, 
+  parent_theme_version, 
+  wordpress_version, 
+  license_key } = worrprba_dummy_pack_center_data;
+
+const headers = {
+  'Content-Type': 'application/json',
+  'license_key': license_key
+};
 
 export const getDummyPacks = async () => {
   const response = await __request(`${ endpoint }packages/${ theme_slug }`, {
     method: 'GET',
-    headers: {
-      'Content-Type': 'application/json',
-      'license_key': license_key
-    },
+    headers,
   });
 
   return response;
@@ -17,10 +27,7 @@ export const getDummyPacks = async () => {
 export const getDownloadPackUrl = async (packID) => {
   const response = await __request(`${ endpoint }packages/${ theme_slug }/${ packID }`, {
     method: 'GET',
-    headers: {
-      'Content-Type': 'application/json',
-      'license_key': license_key
-    },
+    headers,
   });
 
   return response;
@@ -68,3 +75,21 @@ export const validateVersionPackageRequirements = (type, version) => {
   
   return true; // Versions are equal
 };
+
+export const doInstallProcess = async (process) => {
+  const { action, payload } = process;
+
+  const response = await __request(ajax_url, {
+    method: 'POST',
+    headers: {
+      'Content-Type': 'application/x-www-form-urlencoded',
+    },
+    body: new URLSearchParams({
+      action,
+      ...Object.fromEntries(Object.entries(payload).map(([key, value]) => [`payload[${key}]`, value])),
+      installNonce: nonce,
+    }),
+  });
+
+  return response;
+}

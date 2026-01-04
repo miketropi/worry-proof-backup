@@ -1,5 +1,6 @@
 import { create } from 'zustand';
 import { immer } from 'zustand/middleware/immer';
+import { doInstallProcess } from './dummyPackLib';
 
 const useDummyPackStore = create(
 	immer((set, get) => ({
@@ -64,8 +65,8 @@ const useDummyPackStore = create(
         state.installProcess.process = process;
         // set inProgress to true
         state.installProcess.inProgress = false;
-        // set inProgressStep to 1
-        state.installProcess.inProgressStep = 1;
+        // set inProgressStep to 0
+        state.installProcess.inProgressStep = 0;
         state.installProcess.isModalOpen = true;
         state.installProcess.packData = packData;
       });
@@ -74,6 +75,18 @@ const useDummyPackStore = create(
     setInstallProcessModalOpen: (isOpen) => {
       set((state) => {
         state.installProcess.isModalOpen = isOpen;
+      });
+    },
+    // set install process in progress
+    setInstallProcessInProgress: (inProgress) => {
+      set((state) => {
+        state.installProcess.inProgress = inProgress;
+      });
+    },
+    // set install process in progress step
+    setInstallProcessInProgressStep: (inProgressStep) => {
+      set((state) => {
+        state.installProcess.inProgressStep = inProgressStep;
       });
     }
 	})),

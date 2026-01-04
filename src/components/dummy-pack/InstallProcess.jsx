@@ -1,11 +1,51 @@
 import { useState, useEffect } from 'react';
 import useDummyPackStore from '../../util/dummyPackStore';
 import Modal from '../Modal';
+import { doInstallProcess } from '../../util/dummyPackLib';
 
 export default function InstallProcess() {
-  const { setInstallInProgress, setInstallInProgressStep, setInstallProcessModalOpen, ...rest } = useDummyPackStore();
+  const { setInstallProcessInProgress, setInstallProcessInProgressStep, setInstallProcessModalOpen, ...rest } = useDummyPackStore();
   const { process, inProgress, inProgressStep, isModalOpen, packData } = rest.installProcess;
   const [error, setError] = useState(null);
+  const [payload, setPayload] = useState({});
+
+  const onStartInstallProcess = () => {
+    setInstallProcessInProgress(true);
+  };
+
+  const installProcessHandler = async (process) => {
+    let __payload = { ...payload, ...process.payload };
+    const response = await doInstallProcess({
+      ...process,
+      payload: __payload,
+    });
+    if(response.success != true) {
+      alert('error: ' + response.data.error_message);
+      return;
+    }
+
+    let response_data = { ...payload, ...response.data };
+    setPayload(response_data);
+
+    if(response.data.next_step == true) {
+      setInstallProcessInProgressStep(inProgressStep + 1);
+      return;
+    } else {
+      installProcessHandler({
+        ...process,
+        payload: {
+          ...process.payload,
+          ...response.data,
+        },
+      });
+    }
+  };
+
+  useEffect(() => {
+    if(inProgress == true) {
+      installProcessHandler(process[inProgressStep]);
+    }
+  }, [inProgressStep, inProgress])
 
   if(!packData) return <></>
 
@@ -22,14 +62,14 @@ export default function InstallProcess() {
         <svg className="tw-w-5 tw-h-5 tw-text-yellow-400 tw-mt-0.5 tw-flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 9v2m0 4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
         </svg>
-        <span className="tw-text-sm tw-text-yellow-900 tw-leading-relaxed">
+        <span className="tw-text-xs tw-text-yellow-900 tw-leading-relaxed tw-font-space-mono">
           <strong className="tw-font-semibold">Warning:</strong> Your data (database, plugins, uploads) will be lost during this process; for safety, please back it up before proceeding.
         </span>
       </div>
       <ol className="tw-relative tw-border-l-2 tw-border-blue-200 tw-ml-4">
         {process.map((step, idx) => {
-          const isCompleted = inProgressStep > step.step;
-          const isCurrent = inProgressStep === step.step;
+          const isCompleted = inProgressStep > idx; // step.step;
+          const isCurrent = inProgressStep === idx; // step.step;
           return (
             <li key={step.step} className="tw-mb-8 tw-ml-6 tw-last:mb-0">
               <span className={`tw-absolute tw--left-4 tw-flex tw-items-center tw-justify-center tw-w-8 tw-h-8 tw-rounded-full tw-border-2 ${
@@ -102,9 +142,9 @@ export default function InstallProcess() {
           <button
             type="button"
             className="tw-inline-flex tw-items-center tw-px-5 tw-py-2.5 tw-bg-blue-600 hover:tw-bg-blue-700 tw-text-white tw-rounded-md tw-font-semibold tw-shadow-sm tw-transition-all tw-duration-150 focus:tw-outline-none focus:tw-ring-2 focus:tw-ring-offset-2 focus:tw-ring-blue-500"
-            onClick={ () => {} }
+            onClick={ onStartInstallProcess }
           >
-            Start Install Process
+            Yes, Start Install Now
           </button>
         </div>
       )}
