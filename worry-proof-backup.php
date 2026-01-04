@@ -71,6 +71,9 @@
 
   # include rest file
   require_once WORRPRBA_PLUGIN_PATH . 'inc/rest.php';
+
+  # include dummy center file
+  require_once WORRPRBA_PLUGIN_PATH . 'inc/dummy-center.php';
 }
 
 // add link go to backup page in plugin page
