@@ -7,6 +7,7 @@ add_action( 'admin_menu', 'worrprba_register_admin_page' );
 
 // worry-proof-backup:after_restore_database_success
 add_action('worry-proof-backup:after_restore_database_success', 'worrprba_after_restore_database_success', 10, 1);
+add_action('worry-proof-backup:after_restore_database_success_dummy_pack', 'worrprba_after_restore_database_success', 10, 1);
 function worrprba_after_restore_database_success($payload) {
   global $wpdb;
 

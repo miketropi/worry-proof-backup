@@ -165,6 +165,16 @@ function worrprba_dummy_pack_get_signed_url($package_id = '') {
  * Hooks ajax install
  */
 add_action( 'wp_ajax_worrprba_ajax_download_dummy_pack', 'worrprba_ajax_download_dummy_pack' );
+add_action( 'wp_ajax_worrprba_ajax_unzip_dummy_pack', 'worrprba_ajax_unzip_dummy_pack' );
+add_action( 'wp_ajax_worrprba_ajax_restore_read_dummy_pack_config_file', 'worrprba_ajax_restore_read_dummy_pack_config_file' );
+add_action( 'wp_ajax_worrprba_ajax_restore_dummy_pack_uploads', 'worrprba_ajax_restore_dummy_pack_uploads' );
+add_action( 'wp_ajax_worrprba_ajax_restore_dummy_pack_plugins', 'worrprba_ajax_restore_dummy_pack_plugins' );
+
+add_action( 'wp_ajax_worrprba_ajax_restore_dummy_pack_database', 'worrprba_ajax_restore_dummy_pack_database' );
+add_action( 'wp_ajax_nopriv_worrprba_ajax_restore_dummy_pack_database', 'worrprba_ajax_restore_dummy_pack_database' );
+
+add_action( 'wp_ajax_worrprba_ajax_dummy_pack_install_done', 'worrprba_ajax_dummy_pack_install_done' );
+add_action( 'wp_ajax_nopriv_worrprba_ajax_dummy_pack_install_done', 'worrprba_ajax_dummy_pack_install_done' );
 
 /**
  * Download dummy pack with chunked download support.
@@ -318,5 +328,399 @@ function worrprba_ajax_download_dummy_pack() {
   wp_send_json_error( array(
     'error_code' => 'invalid_download_step',
     'error_message' => __( 'Invalid download step provided.', 'worry-proof-backup' ),
+  ) );
+}
+
+function worrprba_ajax_unzip_dummy_pack() {
+  // check nonce
+  check_ajax_referer( 'worrprba_dummy_pack_center_nonce', 'installNonce' );
+
+  # get payload
+  $payload = isset($_POST['payload']) ? wp_unslash($_POST['payload']) : array();
+  $file_path = isset($payload['file_path']) ? sanitize_text_field($payload['file_path']) : '';
+
+  if ( empty( $file_path ) ) {
+    wp_send_json_error( array(
+      'error_code' => 'invalid_file_path',
+      'error_message' => __( 'File path is required.', 'worry-proof-backup' ),
+    ) );
+  }
+
+  // Validate file exists
+  if ( ! file_exists( $file_path ) ) {
+    wp_send_json_error( array(
+      'error_code' => 'file_not_found',
+      'error_message' => __( 'Zip file not found.', 'worry-proof-backup' ),
+    ) );
+  }
+
+  // Get upload directory
+  $upload_dir = wp_upload_dir();
+  if ( empty( $upload_dir['basedir'] ) ) {
+    wp_send_json_error( array(
+      'error_code' => 'upload_dir_not_found',
+      'error_message' => __( 'Upload directory not found.', 'worry-proof-backup' ),
+    ) );
+  }
+
+  // Extract folder name from zip file name (without .zip extension)
+  $folder_name_by_zip_name = pathinfo($file_path, PATHINFO_FILENAME);
+
+  // Determine destination folder
+  $destination_folder = $upload_dir['basedir'] . '/' . 'worry-proof-backup' . '/' . $folder_name_by_zip_name;
+
+  try {
+    $restorer = new WORRPB_Restore_File_System( array(
+      'zip_file' => $file_path,
+      'destination_folder' => $destination_folder,
+      'overwrite_existing' => true,
+      'batch_size' => 100,
+      'restore_progress_file_name' => '__dummy-pack-unzip-progress.json',
+    ) );
+
+    $result = $restorer->runRestore();
+
+    // check error $result
+    if ( is_wp_error( $result ) ) {
+      wp_send_json_error( array(
+        'error_code' => $result->get_error_code(),
+        'error_message' => $result->get_error_message(),
+      ) );
+    }
+
+    if ( $result['done'] !== true ) {
+      wp_send_json_success( array(
+        'unzip_status' => 'is_running',
+        'next_step' => false,
+        'progress' => $result,
+      ) );
+    } else {
+      wp_send_json_success( array(
+        'unzip_status' => 'done',
+        'extracted_folder' => $destination_folder,
+        'next_step' => true,
+      ) );
+    }
+
+  } catch ( Exception $e ) {
+    wp_send_json_error( array(
+      'error_code' => 'exception',
+      'error_message' => $e->getMessage(),
+    ) );
+  }
+}
+
+/**
+ * Read dummy pack config file.
+ */
+function worrprba_ajax_restore_read_dummy_pack_config_file() {
+  // check nonce
+  check_ajax_referer( 'worrprba_dummy_pack_center_nonce', 'installNonce' );
+
+  # get payload
+  $payload = isset($_POST['payload']) ? wp_unslash($_POST['payload']) : array();
+  $extracted_folder = isset($payload['extracted_folder']) ? sanitize_text_field($payload['extracted_folder']) : '';
+  
+  if ( empty( $extracted_folder ) ) {
+    wp_send_json_error( array(
+      'error_code' => 'invalid_extracted_folder',
+      'error_message' => __( 'Extracted folder is required.', 'worry-proof-backup' ),
+    ) );
+  }
+
+  // Determine destination folder
+  $folder_name_by_zip_name = pathinfo($extracted_folder, PATHINFO_FILENAME);
+
+  // get config file
+  $config_file = $extracted_folder . '/config.json';
+  
+  if ( ! file_exists( $config_file ) ) {
+    wp_send_json_error( array(
+      'error_code' => 'config_file_not_found',
+      'error_message' => __( 'Config file not found.', 'worry-proof-backup' ),
+    ) );
+  }
+
+  // get config file content
+  $config_file_content = file_get_contents( $config_file );
+  $config_data = json_decode( $config_file_content, true );
+
+  wp_send_json_success( array(
+    // 'config_data' => $config_data,
+    'table_prefix' => $config_data['table_prefix'],
+    'current_domain' => get_home_url(),
+    'folder_name' => $folder_name_by_zip_name,
+    'next_step' => true,
+  ) );
+}
+
+/**
+ * Restore uploads from dummy pack.
+ */
+function worrprba_ajax_restore_dummy_pack_uploads() {
+  // check nonce
+  check_ajax_referer( 'worrprba_dummy_pack_center_nonce', 'installNonce' );
+
+  # get payload
+  $payload = isset($_POST['payload']) ? wp_unslash($_POST['payload']) : array();
+  $extracted_folder = isset($payload['extracted_folder']) ? sanitize_text_field($payload['extracted_folder']) : '';
+
+  if ( empty( $extracted_folder ) ) {
+    wp_send_json_error( array(
+      'error_code' => 'invalid_extracted_folder',
+      'error_message' => __( 'Extracted folder is required.', 'worry-proof-backup' ),
+    ) );
+  }
+
+  $path_zip_file = $extracted_folder . '/uploads.zip';
+
+  if ( ! file_exists( $path_zip_file ) ) {
+    wp_send_json_error( array(
+      'error_code' => 'file_not_found',
+      'error_message' => __( 'Zip file not found.', 'worry-proof-backup' ),
+    ) );
+  }
+  
+  try {
+    $restorer = new WORRPB_Restore_File_System( array(
+      'zip_file' => $path_zip_file,
+      'destination_folder' => WP_CONTENT_DIR . '/uploads/',
+      'overwrite_existing' => true,
+      'exclude' => ['worry-proof-backup', 'worry-proof-backup-cron-manager', 'worry-proof-backup-zip'],
+      'restore_progress_file_name' => '__uploads-restore-progress.json',
+    ) );
+
+    $result = $restorer->runRestore();
+
+    // check error $result
+    if ( is_wp_error( $result ) ) {
+      wp_send_json_error( array(
+        'error_code' => $result->get_error_code(),
+        'error_message' => $result->get_error_message(),
+      ) );
+    }
+    
+    if ( $result['done'] !== true ) {
+      wp_send_json_success( array(
+        'restore_uploads_status' => 'is_running',
+        'next_step' => false,
+        'progress' => $result,
+      ) );
+    } else {
+      wp_send_json_success( array(
+        'restore_uploads_status' => 'done',
+        'next_step' => true,
+      ) );
+    }
+
+  } catch ( Exception $e ) {
+    wp_send_json_error( array(
+      'error_code' => 'exception',
+      'error_message' => $e->getMessage(),
+    ) );
+  }
+
+  wp_send_json_success( array(
+    'restore_uploads_status' => 'done',
+    'next_step' => true,
+  ) );
+}
+
+/**
+ * Restore plugins from dummy pack.
+ */
+function worrprba_ajax_restore_dummy_pack_plugins() {
+  // check nonce
+  check_ajax_referer( 'worrprba_dummy_pack_center_nonce', 'installNonce' );
+
+  # get payload
+  $payload = isset($_POST['payload']) ? wp_unslash($_POST['payload']) : array();
+  $extracted_folder = isset($payload['extracted_folder']) ? sanitize_text_field($payload['extracted_folder']) : '';
+
+  if ( empty( $extracted_folder ) ) {
+    wp_send_json_error( array(
+      'error_code' => 'invalid_extracted_folder',
+      'error_message' => __( 'Extracted folder is required.', 'worry-proof-backup' ),
+    ) );
+  }
+
+  // plugins.zip
+  $path_zip_file = $extracted_folder . '/plugins.zip';
+
+  if ( ! file_exists( $path_zip_file ) ) {
+    wp_send_json_error( array(
+      'error_code' => 'file_not_found',
+      'error_message' => __( 'Zip file not found.', 'worry-proof-backup' ),
+    ) );
+  }
+  
+  try {
+    $restorer = new WORRPB_Restore_File_System( array(
+      'zip_file' => $path_zip_file,
+      'destination_folder' => WP_PLUGIN_DIR,
+      'overwrite_existing' => true,
+      'exclude' => ['worry-proof-backup', 'worry-proof-backup-zip', 'worry-proof-backup-cron-manager'],
+      'restore_progress_file_name' => '__plugins-restore-progress.json',
+    ) );
+
+    $result = $restorer->runRestore();
+
+    // check error $result
+    if ( is_wp_error( $result ) ) {
+      wp_send_json_error( array(
+        'error_code' => $result->get_error_code(),
+        'error_message' => $result->get_error_message(),
+      ) );
+    }
+
+    if ( $result['done'] !== true ) {
+      wp_send_json_success( array(
+        'restore_plugins_status' => 'is_running',
+        'next_step' => false,
+        'progress' => $result,
+      ) );
+    } else {
+      wp_send_json_success( array(
+        'restore_plugins_status' => 'done',
+        'next_step' => true,
+      ) );
+    }
+
+  } catch ( Exception $e ) {
+    wp_send_json_error( array(
+      'error_code' => 'exception',
+      'error_message' => $e->getMessage(),
+    ) );
+  }
+}
+
+/**
+ * Restore database from dummy pack.
+ */
+function worrprba_ajax_restore_dummy_pack_database() {
+  // check nonce
+  // check_ajax_referer( 'worrprba_dummy_pack_center_nonce', 'installNonce' );
+
+  # get payload
+  $payload = isset($_POST['payload']) ? wp_unslash($_POST['payload']) : array();
+  $extracted_folder = isset($payload['extracted_folder']) ? sanitize_text_field($payload['extracted_folder']) : '';
+  $table_prefix = isset($payload['table_prefix']) ? sanitize_text_field($payload['table_prefix']) : '';
+  $folder_name = isset($payload['folder_name']) ? sanitize_text_field($payload['folder_name']) : '';
+
+  if ( empty( $extracted_folder ) ) {
+    wp_send_json_error( array(
+      'error_code' => 'invalid_extracted_folder',
+      'error_message' => __( 'Extracted folder is required.', 'worry-proof-backup' ),
+    ) );
+  }
+
+  if ( empty( $table_prefix ) ) {
+    wp_send_json_error( array(
+      'error_code' => 'invalid_table_prefix',
+      'error_message' => __( 'Table prefix is required.', 'worry-proof-backup' ),
+    ) );
+  }
+
+  // Check if extracted folder exists
+  if ( ! is_dir( $extracted_folder ) ) {
+    wp_send_json_error( array(
+      'error_code' => 'extracted_folder_not_found',
+      'error_message' => __( 'Extracted folder not found.', 'worry-proof-backup' ),
+    ) );
+  }
+
+  // backup.sql.jsonl
+  $backup_jsonl_file = $extracted_folder . '/backup.sql.jsonl';
+
+  if ( ! file_exists( $backup_jsonl_file ) ) {
+    wp_send_json_error( array(
+      'error_code' => 'file_not_found',
+      'error_message' => __( 'Backup JSONL file not found.', 'worry-proof-backup' ),
+    ) );
+  }
+
+  global $wpdb;
+  $exclude_tables = [
+    $table_prefix . 'users',
+    $table_prefix . 'usermeta',
+    $wpdb->prefix . 'users',
+    $wpdb->prefix . 'usermeta'
+  ];
+  $exclude_tables = apply_filters( 'worry-proof-backup:restore_database_exclude_tables_dummy_pack', $exclude_tables, $payload );
+
+  try {
+    $restore_database = new WORRPB_Restore_Database_JSON( $folder_name, $exclude_tables, $table_prefix );
+
+    if ( ! isset( $payload['restore_database_ssid'] ) || empty( $payload['restore_database_ssid'] ) ) {
+      $progress = $restore_database->startRestore();
+
+      // check error $progress
+      if ( is_wp_error( $progress ) ) {
+        wp_send_json_error( array(
+          'error_code' => $progress->get_error_code(),
+          'error_message' => $progress->get_error_message(),
+        ) );
+      }
+
+      wp_send_json_success( array(
+        'restore_database_ssid' => $folder_name,
+        'restore_database_status' => 'is_running',
+        'next_step' => false,
+      ) );
+    } else {
+      $progress = $restore_database->processStep();
+
+      // check error $progress
+      if ( is_wp_error( $progress ) ) {
+        wp_send_json_error( array(
+          'error_code' => $progress->get_error_code(),
+          'error_message' => $progress->get_error_message(),
+        ) );
+      }
+
+      if ( $progress['done'] ) {
+        $result = $restore_database->finishRestore();
+
+        // check error $result
+        if ( is_wp_error( $result ) ) {
+          wp_send_json_error( array(
+            'error_code' => $result->get_error_code(),
+            'error_message' => $result->get_error_message(),
+          ) );
+        }
+
+        // create hook after restore database successfully
+        do_action( 'worry-proof-backup:after_restore_database_success_dummy_pack', $payload );
+
+        wp_send_json_success( array(
+          'restore_database_ssid' => $folder_name,
+          'restore_database_status' => 'done',
+          'next_step' => true,
+        ) );
+      } else {
+        wp_send_json_success( array(
+          'restore_database_ssid' => $folder_name,
+          'restore_database_status' => 'is_running',
+          'next_step' => false,
+          'progress' => $progress,
+        ) );
+      }
+    }
+  } catch ( Exception $e ) {
+    wp_send_json_error( array(
+      'error_code' => 'exception',
+      'error_message' => $e->getMessage(),
+    ) );
+  }
+}
+
+function worrprba_ajax_dummy_pack_install_done() {
+
+  $payload = isset($_POST['payload']) ? wp_unslash($_POST['payload']) : array();
+  do_action( 'worry-proof-backup:after_install_dummy_pack_done', $payload );
+
+  wp_send_json_success( array(
+    'install_done_status' => 'done',
+    'next_step' => true,
   ) );
 }

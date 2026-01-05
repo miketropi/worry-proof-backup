@@ -6,6 +6,7 @@ import PackGrid from "./components/dummy-pack/PackGrid";
 import { getDownloadPackUrl } from "./util/dummyPackLib";
 import InstallProcess from "./components/dummy-pack/InstallProcess";
 import useDummyPackStore from "./util/dummyPackStore";
+import { RotateCcw } from "lucide-react";
 
 export default function WorrprbaDummyCenter() {
   const { packs, isLoading, error } = useDummyPack();
@@ -24,38 +25,49 @@ export default function WorrprbaDummyCenter() {
 
   if (isLoading) {
     return (
-      <div>Loading...</div>
+      <div className="tw-max-w-7xl tw-mx-auto tw-px-2 sm:tw-px-4 tw-py-10">
+        <div className=" tw-p-6 tw-flex tw-flex-col tw-items-center tw-justify-center tw-min-h-[300px]">
+          <div className="tw-flex tw-items-center tw-gap-3">
+            <svg className="tw-w-6 tw-h-6 tw-text-blue-400 tw-animate-spin" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <circle className="tw-opacity-25" cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="4"></circle>
+              <path className="tw-opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8v8z"></path>
+            </svg>
+            <span className="tw-text-lg tw-text-blue-600 tw-font-semibold">Loading Dummy Packs...</span>
+          </div>
+          <span className="tw-text-xs tw-text-gray-700 tw-mt-2 tw-font-space-mono">Please wait while we fetch the latest packages for you.</span>
+        </div>
+      </div>
     );
   }
 
   if (error) {
     return (
-      <div className="tw-max-w-7xl tw-mx-auto tw-px-2 sm:tw-px-4 tw-py-10 tw-bg-white">
-        <div className="tw-bg-red-50 tw-border tw-border-red-200 tw-rounded-md tw-p-4">
-          <div className="tw-flex tw-items-center">
-            <div className="tw-flex-shrink-0">
-              <svg
-                className="tw-h-5 tw-w-5 tw-text-red-400"
-                viewBox="0 0 20 20"
-                fill="currentColor"
-              >
-                <path
-                  fillRule="evenodd"
-                  d="M10 18a8 8 0 100-16 8 8 0 000 16zM8.707 7.293a1 1 0 00-1.414 1.414L8.586 10l-1.293 1.293a1 1 0 101.414 1.414L10 11.414l1.293 1.293a1 1 0 001.414-1.414L11.414 10l1.293-1.293a1 1 0 00-1.414-1.414L10 8.586 8.707 7.293z"
-                  clipRule="evenodd"
-                />
-              </svg>
-            </div>
-            <div className="tw-ml-3">
-              <h3 className="tw-text-sm tw-font-medium tw-text-red-800">
-                Error loading dummy packs
-              </h3>
-              <div className="tw-mt-2 tw-text-sm tw-text-red-700">
-                <p>{error}</p>
-              </div>
-            </div>
-          </div>
+      <div className="tw-max-w-7xl tw-mx-auto tw-px-2 sm:tw-px-4 tw-py-10"> 
+      <div className="tw-bg-red-50 tw-border tw-border-red-200 tw-p-5 tw-rounded-lg tw-shadow-sm tw-flex tw-gap-4 tw-items-start">
+        <div className="tw-mt-1 tw-flex-shrink-0">
+          <svg className="tw-w-6 tw-h-6 tw-text-red-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <circle className="tw-opacity-20" cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="3" />
+            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M12 8v4m0 4h.01" />
+          </svg>
         </div>
+        <div>
+          <div className="tw-text-sm tw-font-semibold tw-text-red-700 tw-mb-1 tw-font-space-mono">
+            Could not connect to Dummy Pack Center
+          </div>
+          <p className="tw-text-xs tw-text-red-800 tw-mb-2 tw-font-space-mono">
+            {typeof error === "string"
+              ? error
+              : "Sorry, we couldn't display available dummy packs right now. Please check your internet or try reloading this page in a moment."}
+          </p>
+          <button
+            className="tw-inline-flex tw-items-center tw-gap-2 tw-px-4 tw-py-1.5 tw-bg-red-500 tw-text-white tw-font-semibold tw-rounded hover:tw-bg-red-600 focus:tw-outline-none focus:tw-ring-2 focus:tw-ring-red-400"
+            onClick={() => window.location.reload()}
+          >
+            <RotateCcw className="tw-w-4 tw-h-4 tw-text-white" />
+            Retry
+          </button>
+        </div>
+      </div>
       </div>
     );
   }

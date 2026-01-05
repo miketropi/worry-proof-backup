@@ -8,6 +8,7 @@ export default function InstallProcess() {
   const { process, inProgress, inProgressStep, isModalOpen, packData } = rest.installProcess;
   const [error, setError] = useState(null);
   const [payload, setPayload] = useState({});
+  const [allInstallProcessDone, setAllInstallProcessDone] = useState(false);
 
   const onStartInstallProcess = () => {
     setInstallProcessInProgress(true);
@@ -42,6 +43,14 @@ export default function InstallProcess() {
   };
 
   useEffect(() => {
+    // If inProgressStep is greater than or equal to process.length, the installation is done
+    if (inProgress && inProgressStep >= process.length) {
+      // Mark install process as complete
+      setInstallProcessInProgress(false);
+      setAllInstallProcessDone(true);
+      return;
+    }
+
     if(inProgress == true) {
       installProcessHandler(process[inProgressStep]);
     }
@@ -63,7 +72,9 @@ export default function InstallProcess() {
           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 9v2m0 4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
         </svg>
         <span className="tw-text-xs tw-text-yellow-900 tw-leading-relaxed tw-font-space-mono">
-          <strong className="tw-font-semibold">Warning:</strong> Your data (database, plugins, uploads) will be lost during this process; for safety, please back it up before proceeding.
+          <strong className="tw-font-semibold">Warning:</strong> Your data (database, plugins, uploads) will be lost during this process; for safety, please back it up before proceeding.<br />
+          <hr className="tw-my-2 tw-border-t-1 tw-border-b-0 tw-border-yellow-200" />
+          <strong className="tw-font-semibold">Important:</strong> To ensure the installation process works properly, please do not close your browser, reload the page, or close this popup while the installation is in progress.
         </span>
       </div>
       <ol className="tw-relative tw-border-l-2 tw-border-blue-200 tw-ml-4">
@@ -127,7 +138,7 @@ export default function InstallProcess() {
       </ol>
 
       {/* Start Button */}
-      {(!inProgress && !error) && (
+      {(!inProgress && !error && !allInstallProcessDone) && (
         <div className="tw-mt-8 tw-flex tw-justify-end">
           <button
             type="button"
@@ -144,8 +155,35 @@ export default function InstallProcess() {
             className="tw-inline-flex tw-items-center tw-px-5 tw-py-2.5 tw-bg-blue-600 hover:tw-bg-blue-700 tw-text-white tw-rounded-md tw-font-semibold tw-shadow-sm tw-transition-all tw-duration-150 focus:tw-outline-none focus:tw-ring-2 focus:tw-ring-offset-2 focus:tw-ring-blue-500"
             onClick={ onStartInstallProcess }
           >
-            Yes, Start Install Now
+            Yes, Install Now
           </button>
+        </div>
+      )}
+
+      {allInstallProcessDone && (
+        <div className="tw-mt-8 tw-flex tw-justify-end">
+          <button
+            type="button"
+            className="tw-inline-flex tw-items-center tw-px-4 tw-py-2 tw-bg-gray-100 hover:tw-bg-gray-200 tw-text-gray-700 tw-rounded-md tw-font-medium tw-shadow-sm tw-transition-all tw-duration-150 focus:tw-outline-none focus:tw-ring-2 focus:tw-ring-offset-2 focus:tw-ring-gray-400 tw-mr-2"
+            aria-label="Close"
+            onClick={ () => {
+              setInstallProcessModalOpen(false);
+            } }
+          >
+            Close
+          </button>
+          {/* Button to visit homepage if payload.current_domain exists */}
+          {payload?.current_domain && (
+            <a
+              href={payload.current_domain}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="tw-inline-flex tw-items-center tw-px-5 tw-py-2.5 tw-bg-blue-600 hover:tw-bg-blue-700 tw-text-white tw-rounded-md tw-font-semibold tw-shadow-sm tw-transition-all tw-duration-150 focus:tw-outline-none focus:tw-ring-2 focus:tw-ring-offset-2 focus:tw-ring-blue-500"
+              style={{ marginLeft: 8 }}
+            >
+              Visit Homepage
+            </a>
+          )}
         </div>
       )}
     </Modal>
