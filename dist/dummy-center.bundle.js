@@ -30123,10 +30123,16 @@ function InstallProcess() {
   };
   var _installProcessHandler = /*#__PURE__*/function () {
     var _ref = _asyncToGenerator(/*#__PURE__*/_regenerator().m(function _callee(process) {
-      var __payload, response, response_data;
+      var retry,
+        __payload,
+        response,
+        error_message,
+        response_data,
+        _args = arguments;
       return _regenerator().w(function (_context) {
         while (1) switch (_context.n) {
           case 0:
+            retry = _args.length > 1 && _args[1] !== undefined ? _args[1] : 0;
             __payload = _objectSpread(_objectSpread({}, payload), process.payload);
             _context.n = 1;
             return (0,_util_dummyPackLib__WEBPACK_IMPORTED_MODULE_3__.doInstallProcess)(_objectSpread(_objectSpread({}, process), {}, {
@@ -30135,25 +30141,37 @@ function InstallProcess() {
           case 1:
             response = _context.v;
             if (!(response.success != true)) {
+              _context.n = 3;
+              break;
+            }
+            // alert('error: ' + response.data.error_message);
+            error_message = response.data.error_message ? response.data.error_message : response.data;
+            if (!(retry > 4)) {
               _context.n = 2;
               break;
             }
-            alert('error: ' + response.data.error_message);
+            setError(error_message);
             return _context.a(2);
           case 2:
+            // recall
+            setTimeout(function () {
+              _installProcessHandler(process, retry + 1);
+            }, 4000);
+            return _context.a(2);
+          case 3:
             response_data = _objectSpread(_objectSpread({}, payload), response.data);
             setPayload(response_data);
             if (!(response.data.next_step == true)) {
-              _context.n = 3;
+              _context.n = 4;
               break;
             }
             setInstallProcessInProgressStep(inProgressStep + 1);
             return _context.a(2);
-          case 3:
+          case 4:
             _installProcessHandler(_objectSpread(_objectSpread({}, process), {}, {
               payload: _objectSpread(_objectSpread({}, process.payload), response.data)
             }));
-          case 4:
+          case 5:
             return _context.a(2);
         }
       }, _callee);

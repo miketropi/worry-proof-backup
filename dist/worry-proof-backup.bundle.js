@@ -34587,7 +34587,7 @@ var RestoreProcess = function RestoreProcess() {
               _context.n = 3;
               break;
             }
-            if (!(retry > 3)) {
+            if (!(retry > 4)) {
               _context.n = 2;
               break;
             }
@@ -34597,7 +34597,7 @@ var RestoreProcess = function RestoreProcess() {
             // recall
             setTimeout(function () {
               _restoreProcessHandler(process, retry + 1);
-            }, 3000);
+            }, 4000);
             return _context.a(2);
           case 3:
             if (!(response.data.restore_process_status == 'done')) {

@@ -23,7 +23,7 @@ const RestoreProcess = () => {
 
     if (response.success != true) {
       
-      if (retry > 3) {
+      if (retry > 4) {
         setError(response.data);
         return;
       }
@@ -31,7 +31,7 @@ const RestoreProcess = () => {
       // recall
       setTimeout(() => {
         restoreProcessHandler(process, retry + 1);
-      }, 3000);
+      }, 4000);
 
       return;
     }

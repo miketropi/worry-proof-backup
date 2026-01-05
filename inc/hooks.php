@@ -43,6 +43,9 @@ function worrprba_after_backup_cron_completed($config, $context) {
   worrprba_send_mail_to_admin_when_backup_cron_completed($config, $context);
 }
 
-add_filter( 'worrprba_restore_plugin_exclude', function($exclude) {
+add_filter( 'worrprba_restore_plugin_exclude_dummy_pack', 'worrprba_restore_plugin_exclude', 10 );
+add_filter( 'worrprba_restore_plugin_exclude', 'worrprba_restore_plugin_exclude', 10 );
+
+function worrprba_restore_plugin_exclude($exclude) {
   return array_merge($exclude, ['wppusher']);
-} );
+}

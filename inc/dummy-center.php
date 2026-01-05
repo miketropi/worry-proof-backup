@@ -570,7 +570,7 @@ function worrprba_ajax_restore_dummy_pack_plugins() {
       'zip_file' => $path_zip_file,
       'destination_folder' => WP_PLUGIN_DIR,
       'overwrite_existing' => true,
-      'exclude' => ['worry-proof-backup', 'worry-proof-backup-zip', 'worry-proof-backup-cron-manager'],
+      'exclude' => apply_filters('worrprba_restore_plugin_exclude_dummy_pack', ['worry-proof-backup']), // phpcs:ignore WordPressVIPMinimum.Performance.WPQueryParams.PostNotIn_exclude
       'restore_progress_file_name' => '__plugins-restore-progress.json',
     ) );
 

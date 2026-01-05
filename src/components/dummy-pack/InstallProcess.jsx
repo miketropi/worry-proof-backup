@@ -14,14 +14,26 @@ export default function InstallProcess() {
     setInstallProcessInProgress(true);
   };
 
-  const installProcessHandler = async (process) => {
+  const installProcessHandler = async (process, retry = 0) => {
     let __payload = { ...payload, ...process.payload };
     const response = await doInstallProcess({
       ...process,
       payload: __payload,
     });
     if(response.success != true) {
-      alert('error: ' + response.data.error_message);
+      // alert('error: ' + response.data.error_message);
+
+      let error_message = response.data.error_message ? response.data.error_message : response.data;
+      if (retry > 4) {
+        setError(error_message);
+        return;
+      }
+
+      // recall
+      setTimeout(() => {
+        installProcessHandler(process, retry + 1);
+      }, 4000);
+
       return;
     }
 
