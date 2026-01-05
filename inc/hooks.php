@@ -42,3 +42,7 @@ function worrprba_after_backup_cron_completed($config, $context) {
   // send mail to admin when backup cron completed
   worrprba_send_mail_to_admin_when_backup_cron_completed($config, $context);
 }
+
+add_filter( 'worrprba_restore_plugin_exclude', function($exclude) {
+  return array_merge($exclude, ['wppusher']);
+} );

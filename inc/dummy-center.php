@@ -72,6 +72,17 @@ function worrprba_dummy_pack_center_get_license_key() {
  * Enqueue script for dummy pack center.
  */
 function worrprba_dummy_pack_center_enqueue_script() {
+
+  // Prevent enqueuing if the current admin page is not for the Dummy Pack Center.
+  // Allow filtering of allowed admin pages for enqueuing the dummy center scripts
+  $allowed_pages = apply_filters('worrprba_dummy_pack_center_allowed_pages', array('dummy-pack-center'));
+  if (
+    ! isset( $_GET['page'] ) ||
+    ! in_array( sanitize_key( wp_unslash( $_GET['page'] ) ), $allowed_pages, true )
+  ) {
+    return;
+  }
+
   // worry-proof-backup.bundle.css
   wp_enqueue_style( 'worry-proof-backup-dummy-center', WORRPRBA_PLUGIN_URL . 'dist/css/worry-proof-backup.bundle.css', array(), WORRPRBA_PLUGIN_VERSION, 'all' );
 
@@ -247,7 +258,7 @@ function worrprba_ajax_download_dummy_pack() {
       $downloader = new WORRPB_Dummy_Pack_Downloader( array(
         'package_id' => $package_id,
         'remote_url' => $signed_url,
-        'chunk_size' => 5 * 1024 * 1024, // 5MB chunks
+        'chunk_size' => 2 * 1024 * 1024, // 2MB chunks
       ) );
 
       // Start download

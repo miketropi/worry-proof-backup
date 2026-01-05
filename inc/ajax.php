@@ -538,7 +538,7 @@ function worrprba_ajax_restore_plugin() {
       'zip_file' => $path_zip_file,
       'destination_folder' => WP_PLUGIN_DIR,
       'overwrite_existing' => true,
-      'exclude' => ['worry-proof-backup'], // phpcs:ignore WordPressVIPMinimum.Performance.WPQueryParams.PostNotIn_exclude
+      'exclude' => apply_filters('worrprba_restore_plugin_exclude', ['worry-proof-backup']), // phpcs:ignore WordPressVIPMinimum.Performance.WPQueryParams.PostNotIn_exclude
       'restore_progress_file_name' => '__plugin-restore-progress.json',
     ]);
 

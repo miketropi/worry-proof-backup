@@ -178,7 +178,7 @@ export default function InstallProcess() {
               href={payload.current_domain}
               target="_blank"
               rel="noopener noreferrer"
-              className="tw-inline-flex tw-items-center tw-px-5 tw-py-2.5 tw-bg-blue-600 hover:tw-bg-blue-700 tw-text-white tw-rounded-md tw-font-semibold tw-shadow-sm tw-transition-all tw-duration-150 focus:tw-outline-none focus:tw-ring-2 focus:tw-ring-offset-2 focus:tw-ring-blue-500"
+              className="tw-inline-flex tw-items-center tw-px-5 tw-py-2.5 tw-bg-blue-600 hover:tw-bg-blue-700 tw-text-white hover:tw-text-white tw-rounded-md tw-font-semibold tw-shadow-sm tw-transition-all tw-duration-150 focus:tw-outline-none focus:tw-ring-2 focus:tw-ring-offset-2 focus:tw-ring-blue-500"
               style={{ marginLeft: 8 }}
             >
               Visit Homepage

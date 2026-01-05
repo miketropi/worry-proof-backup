@@ -18,11 +18,21 @@ const RestoreProcess = () => {
   const [error, setError] = useState(null);
   const toast = useToast();
 
-  const restoreProcessHandler = async (process) => {
+  const restoreProcessHandler = async (process, retry = 0) => {
     const response = await doRestoreProcess(process);
 
     if (response.success != true) {
-      setError(response.data);
+      
+      if (retry > 3) {
+        setError(response.data);
+        return;
+      }
+
+      // recall
+      setTimeout(() => {
+        restoreProcessHandler(process, retry + 1);
+      }, 3000);
+
       return;
     }
 

@@ -107,26 +107,13 @@ class WORRPB_Restore_Database_JSON {
 					continue;
 				}
 
-				$result = $this->wpdb->query($sql); // phpcs:ignore
-
-				if ($result === false) {
-					$error = $this->wpdb->last_error;
-
-					if ($this->skip_duplicate_entry && stripos($error, 'Duplicate entry') !== false) {
-						file_put_contents(
-							$this->log_file,
-							"[Skip] Duplicate entry at line {$current}: {$error}\n",
-							FILE_APPEND
-						);
-						continue;
-					}
-
+				$result = $this->executeQuerySafely($sql, $current);
+				if (is_wp_error($result)) {
 					if ($this->use_transaction) {
 						$this->wpdb->query('ROLLBACK;');
 					}
-
 					fclose($handle);
-					return new WP_Error('query_failed', $error);
+					return $result;
 				}
 			}
 
@@ -158,6 +145,52 @@ class WORRPB_Restore_Database_JSON {
 		return $progress;
 	}
 
+	/* ================= SQL GUARD ================= */
+
+	private function executeQuerySafely($sql, $line) {
+
+		// Skip obviously broken SQL
+		if (preg_match('/ADD\s+``\s*\(\s*``\s*\)/', $sql)) {
+			$this->log("[Skip] Invalid ADD clause at line {$line}");
+			return true;
+		}
+
+		$result = $this->wpdb->query($sql); // phpcs:ignore
+
+		if ($result !== false) {
+			return true;
+		}
+
+		$error = $this->wpdb->last_error;
+
+		$skippable = [
+			'Duplicate entry',
+			'Duplicate key name',
+			'Duplicate column name',
+			'Duplicate index',
+			'Column already exists',
+			'Index already exists',
+		];
+
+		foreach ($skippable as $needle) {
+			if (stripos($error, $needle) !== false) {
+				$this->log("[Skip] {$error} at line {$line}");
+				return true;
+			}
+		}
+
+		$this->log("[Fatal] {$error} at line {$line}");
+		return new WP_Error('query_failed', $error);
+	}
+
+	private function log($message) {
+		file_put_contents(
+			$this->log_file,
+			$message . "\n",
+			FILE_APPEND
+		);
+	}
+
 	/* ================= HELPERS ================= */
 
 	private function processQueryPrefix($query) {
@@ -173,20 +206,10 @@ class WORRPB_Restore_Database_JSON {
 	}
 
 	private function normalizeOptionsQuery($sql) {
-
-    // Only handle INSERT into wp_options
-    if (!preg_match('/^INSERT\s+INTO\s+`?' . preg_quote($this->new_prefix, '/') . 'options`?/i', $sql)) {
+		if (!preg_match('/^INSERT\s+INTO\s+`?' . preg_quote($this->new_prefix, '/') . 'options`?/i', $sql)) {
 			return $sql;
-    }
-
-    // Replace INSERT with REPLACE.
-    $sql = preg_replace(
-			'/^INSERT\s+INTO/i',
-			'REPLACE INTO',
-			$sql
-    );
-
-    return $sql;
+		}
+		return preg_replace('/^INSERT\s+INTO/i', 'REPLACE INTO', $sql);
 	}
 
 	private function shouldExcludeQuery($query) {
@@ -209,13 +232,7 @@ class WORRPB_Restore_Database_JSON {
 		if (file_exists($this->progress_file)) {
 			wp_delete_file($this->progress_file);
 		}
-		if (file_exists($this->log_file)) {
-			file_put_contents(
-				$this->log_file,
-				"== Restore manually finished at " . gmdate('Y-m-d H:i:s') . " ==\n",
-				FILE_APPEND
-			);
-		}
+		$this->log("== Restore manually finished at " . gmdate('Y-m-d H:i:s') . " ==");
 		return true;
 	}
 }

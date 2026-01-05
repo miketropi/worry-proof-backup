@@ -4,7 +4,11 @@ export const __request = async (url, options) => {
   const response = await fetch(url, options);
 
   if (!response.ok) {
-    throw new Error(`HTTP error! status: ${response.status}`);
+    // throw new Error(`HTTP error! status: ${response.status}`);
+    return {
+      success: false,
+      data: `HTTP error! status: ${response.status}`,
+    };
   }
 
   // Check if the response is JSON
