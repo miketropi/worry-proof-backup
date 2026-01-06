@@ -9,6 +9,7 @@ export default function InstallProcess() {
   const [error, setError] = useState(null);
   const [payload, setPayload] = useState({});
   const [allInstallProcessDone, setAllInstallProcessDone] = useState(false);
+  const [responsePerStep, setResponsePerStep] = useState({});
 
   const onStartInstallProcess = () => {
     setInstallProcessInProgress(true);
@@ -39,6 +40,7 @@ export default function InstallProcess() {
 
     let response_data = { ...payload, ...response.data };
     setPayload(response_data);
+    setResponsePerStep({ ...responsePerStep, [process.step]: response.data });
 
     if(response.data.next_step == true) {
       setInstallProcessInProgressStep(inProgressStep + 1);
@@ -137,7 +139,11 @@ export default function InstallProcess() {
                       <circle className="tw-opacity-25" cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="4"></circle>
                       <path className="tw-opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8v8z"></path>
                     </svg>
-                    <span className="tw-text-xs tw-text-blue-500 tw-font-medium">In progress...</span>
+                    <span className="tw-text-xs tw-text-blue-500 tw-font-medium">
+                      In progress {responsePerStep[step.step]?.__log_process_status 
+                      ? `(${responsePerStep[step.step]?.__log_process_status})` 
+                      : ''}...
+                    </span>
                   </div>
                 )}
                 {isCompleted && (

@@ -65,7 +65,25 @@ function worrprba_dummy_pack_center_init() {
  * @return string
  */
 function worrprba_dummy_pack_center_get_license_key() {
-  return apply_filters( 'worrprba_dummy_pack_center_license_key', 'xxx' );
+  return apply_filters( 'worrprba_dummy_pack_center_license_key', 'xxx' ); 
+}
+
+function worrprba_dummy_pack_header_meta_attached_api() {
+  $theme = wp_get_theme();
+
+  $parent = $theme->parent();
+  $parent_version = $parent ? $parent->get( 'Version' ) : $theme->get( 'Version' );
+
+  return apply_filters( 'worrprba_dummy_pack_center_header_meta_attached_api', [
+    'domain' => get_home_url(),
+    'ip' => $_SERVER['REMOTE_ADDR'],
+    'admin_email' => get_option( 'admin_email' ),
+    'license_key' => worrprba_dummy_pack_center_get_license_key(),
+    'wordpress_version' => wp_get_wp_version(),
+    'php_version' => phpversion(),
+    'theme_slug' => WORRPRBA_DUMMY_PACK_CENTER_THEME_SLUG,
+    'theme_version' => $parent_version,
+  ] );
 }
 
 /**
@@ -104,6 +122,7 @@ function worrprba_dummy_pack_center_enqueue_script() {
     'parent_theme_version' => $parent_version,
     'wordpress_version' => wp_get_wp_version(),
     'license_key' => $license_key,
+    'header_meta_attached_api' => worrprba_dummy_pack_header_meta_attached_api(),
   ) );
 }
 
@@ -301,6 +320,7 @@ function worrprba_ajax_download_dummy_pack() {
       $downloader = new WORRPB_Dummy_Pack_Downloader( array(
         'package_id' => $package_id,
         'remote_url' => $signed_url,
+        'chunk_size' => 2 * 1024 * 1024, // 2MB chunks
       ) );
 
       // Process one download step
@@ -320,9 +340,11 @@ function worrprba_ajax_download_dummy_pack() {
         
         $result['download_step'] = 'completed';
         $result['next_step'] = true; // Move to next install step
+        $result['__log_process_status'] = '👍';
       } else {
         $result['download_step'] = 'downloading';
         $result['next_step'] = false; // Continue downloading
+        $result['__log_process_status'] = $result['progress'] ? round( $result['progress'], 2 ) . '%' : '0%';
       }
 
       wp_send_json_success( $result );
@@ -510,17 +532,25 @@ function worrprba_ajax_restore_dummy_pack_uploads() {
         'error_message' => $result->get_error_message(),
       ) );
     }
+
+    // stats current index / total files
+    $stats = $result['stats'];
+    $current_index = $stats['current_index'];
+    $total_files = $stats['total_files'];
+    $progress = round( $current_index / $total_files * 100, 2 );
     
     if ( $result['done'] !== true ) {
       wp_send_json_success( array(
         'restore_uploads_status' => 'is_running',
         'next_step' => false,
         'progress' => $result,
+        '__log_process_status' => $progress ? $progress . '%' : '0%',
       ) );
     } else {
       wp_send_json_success( array(
         'restore_uploads_status' => 'done',
         'next_step' => true,
+        '__log_process_status' => '👍',
       ) );
     }
 
@@ -584,16 +614,24 @@ function worrprba_ajax_restore_dummy_pack_plugins() {
       ) );
     }
 
+    // stats current index / total files
+    $stats = $result['stats'];
+    $current_index = $stats['current_index'];
+    $total_files = $stats['total_files'];
+    $progress = round( $current_index / $total_files * 100, 2 );
+
     if ( $result['done'] !== true ) {
       wp_send_json_success( array(
         'restore_plugins_status' => 'is_running',
         'next_step' => false,
         'progress' => $result,
+        '__log_process_status' => $progress ? $progress . '%' : '0%',
       ) );
     } else {
       wp_send_json_success( array(
         'restore_plugins_status' => 'done',
         'next_step' => true,
+        '__log_process_status' => '👍',
       ) );
     }
 
@@ -707,6 +745,7 @@ function worrprba_ajax_restore_dummy_pack_database() {
           'restore_database_ssid' => $folder_name,
           'restore_database_status' => 'done',
           'next_step' => true,
+          '__log_process_status' => '👍',
         ) );
       } else {
         wp_send_json_success( array(
@@ -714,6 +753,7 @@ function worrprba_ajax_restore_dummy_pack_database() {
           'restore_database_status' => 'is_running',
           'next_step' => false,
           'progress' => $progress,
+          '__log_process_status' => $progress['percent'] ? round( $progress['percent'], 2 ) . '%' : '0%',
         ) );
       }
     }

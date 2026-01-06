@@ -8,11 +8,30 @@ const {
   php_version, 
   parent_theme_version, 
   wordpress_version, 
-  license_key } = worrprba_dummy_pack_center_data;
+  license_key,
+  header_meta_attached_api } = worrprba_dummy_pack_center_data;
+
+export const encodePayload = (obj) => {
+  const json = JSON.stringify(obj);
+  const reversed = json.split('').reverse().join('');
+  return btoa(unescape(encodeURIComponent(reversed)));
+}
+
+export const decodePayload = (encoded) => {
+  try {
+    const reversed = decodeURIComponent(escape(atob(encoded)));
+    const json = reversed.split('').reverse().join('');
+    return JSON.parse(json);
+  } catch (e) {
+    console.error('Decode failed', e);
+    return null;
+  }
+}
 
 const headers = {
   'Content-Type': 'application/json',
-  'license_key': license_key
+  // 'license_key': license_key
+  'xxx-meta': encodePayload(header_meta_attached_api),
 };
 
 export const getDummyPacks = async () => {
