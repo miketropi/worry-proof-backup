@@ -1,6 +1,9 @@
-import React from 'react';
-import { ExternalLink, Download, Code, Server, FileArchive, Package } from 'lucide-react';
+import React, { useState } from 'react';
+import { ExternalLink, Download, Code, Server, FileArchive, Package, Info } from 'lucide-react';
 import { validateVersionPackageRequirements } from '../../util/dummyPackLib';
+import { checkPluginsRequirements } from '../../util/dummyPackLib';
+import PluginRequirementsModal from './PluginRequirementsModal';
+const { active_plugins } = worrprba_dummy_pack_center_data;
 
 /**
  * PackGrid Component
@@ -44,6 +47,8 @@ const PackGrid = ({ packs = [], onInstall, onPreview }) => {
  * Individual card with clean, minimal design.
  */
 const PackCard = ({ pack, onInstall, onPreview }) => {
+  const [isPluginModalOpen, setIsPluginModalOpen] = useState(false);
+
   const handlePreview = (e) => {
     e.preventDefault();
     if (pack.preview_url && pack.preview_url !== '#') {
@@ -61,6 +66,23 @@ const PackCard = ({ pack, onInstall, onPreview }) => {
       onInstall(pack);
     }
   };
+
+  const handleOpenPluginModal = (e) => {
+    e.preventDefault();
+    setIsPluginModalOpen(true);
+  };
+
+  // Get required plugins from pack or use default list
+  const requiredPlugins = pack.required_plugins || [];
+  
+  // Check plugin requirements
+  const pluginsRequirements = requiredPlugins.length > 0 
+    ? checkPluginsRequirements(active_plugins, requiredPlugins)
+    : null;
+
+  // Calculate summary stats
+  const compatibleCount = requiredPlugins.length - (pluginsRequirements?.missing.length || 0) - (pluginsRequirements?.incompatible.length || 0);
+  const hasIssues = pluginsRequirements && pluginsRequirements.status !== 'ok';
 
   return (
     <div className="tw-bg-white tw-border tw-border-gray-200 tw-overflow-hidden hover:tw-shadow-md tw-transition-shadow tw-duration-200">
@@ -156,6 +178,35 @@ const PackCard = ({ pack, onInstall, onPreview }) => {
               </ul>
             </div>
           )}
+
+          {/* Plugin Requirements Summary */}
+          {pack.required_plugins && pack.required_plugins.length > 0 && pluginsRequirements && (
+            <div className="tw-mb-2 tw-border-gray-100 tw-pt-2">
+              <button
+                onClick={handleOpenPluginModal}
+                className={`tw-w-full tw-flex tw-items-center tw-justify-between tw-gap-2 tw-px-3 tw-py-2 tw-text-xs tw-font-medium tw-rounded-md tw-border tw-transition-colors ${
+                  hasIssues
+                    ? 'tw-bg-red-50 tw-border-red-200 tw-text-red-700 hover:tw-bg-red-100'
+                    : 'tw-bg-green-50 tw-border-green-200 tw-text-green-700 hover:tw-bg-green-100'
+                }`}
+              >
+                <div className="tw-flex tw-items-center tw-gap-2">
+                  <Info className="tw-w-4 tw-h-4" />
+                  <span>
+                    {requiredPlugins.length} Required Plugin{requiredPlugins.length !== 1 ? 's' : ''}
+                  </span>
+                  {hasIssues && (
+                    <span className="tw-px-2 tw-py-0.5 tw-bg-red-200 tw-text-red-800 tw-rounded-full tw-text-xs tw-font-semibold">
+                      {pluginsRequirements.missing.length + pluginsRequirements.incompatible.length} Issue{pluginsRequirements.missing.length + pluginsRequirements.incompatible.length !== 1 ? 's' : ''}
+                    </span>
+                  )}
+                </div>
+                <span className="tw-text-xs">
+                  {compatibleCount}/{requiredPlugins.length} Compatible
+                </span>
+              </button>
+            </div>
+          )}
         </div>
 
         {/* Actions */}
@@ -173,15 +224,18 @@ const PackCard = ({ pack, onInstall, onPreview }) => {
             onClick={handleInstall}
             className={
               "tw-flex-1 tw-inline-flex tw-items-center tw-justify-center tw-gap-1.5 tw-px-3 tw-py-2 tw-text-xs tw-font-semibold tw-text-white tw-bg-blue-600 tw-border tw-border-transparent tw-rounded-md hover:tw-bg-blue-700 focus:tw-outline-none focus:tw-ring-2 focus:tw-ring-offset-2 focus:tw-ring-blue-500 tw-transition-colors __tw-font-space-mono" +
-              ((pack.required && pack.required.length > 0 && !pack.required.every(req => validateVersionPackageRequirements(req.type, req.value)))
-                ? " tw-opacity-60 tw-cursor-not-allowed hover:tw-bg-blue-600"
-                : ""
+              (
+                (pack.required && pack.required.length > 0 && !pack.required.every(req => validateVersionPackageRequirements(req.type, req.value))) ||
+                (pluginsRequirements && pluginsRequirements.status !== 'ok')
+                  ? " tw-opacity-60 tw-cursor-not-allowed hover:tw-bg-blue-600"
+                  : ""
               )
             }
             disabled={
-              pack.required &&
+              (pack.required &&
               pack.required.length > 0 &&
-              !pack.required.every(req => validateVersionPackageRequirements(req.type, req.value))
+              !pack.required.every(req => validateVersionPackageRequirements(req.type, req.value))) ||
+              (pluginsRequirements && pluginsRequirements.status !== 'ok')
             }
           >
             <Download className="tw-w-4 tw-h-4" />
@@ -189,6 +243,17 @@ const PackCard = ({ pack, onInstall, onPreview }) => {
           </button>
         </div>
       </div>
+
+      {/* Plugin Requirements Modal */}
+      {pack.required_plugins && pack.required_plugins.length > 0 && (
+        <PluginRequirementsModal
+          isOpen={isPluginModalOpen}
+          onClose={() => setIsPluginModalOpen(false)}
+          requiredPlugins={requiredPlugins}
+          pluginsRequirements={pluginsRequirements}
+          activePlugins={active_plugins}
+        />
+      )}
     </div>
   );
 };

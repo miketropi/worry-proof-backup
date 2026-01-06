@@ -13,7 +13,7 @@ export default function useDummyPack() {
         const response = await getDummyPacks();
         
         if(response?.success?.valueOf() == false) {
-          console.log('getDummyPacks', response?.success?.valueOf() == false);
+          // console.log('getDummyPacks', response?.success?.valueOf() == false);
           setError(response.data);
           setPacks(null);
           return;

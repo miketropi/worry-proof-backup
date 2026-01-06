@@ -112,3 +112,71 @@ export const doInstallProcess = async (process) => {
 
   return response;
 }
+
+/**
+ * Compare current installed plugins with required plugins to check for required slugs and their version requirements.
+ * 
+ * @param {Array<Object>} currentPlugins - Array of objects: [{slug, name, version}]
+ * @param {Array<Object>} requiredPlugins - Array of objects: [{slug, version}]
+ * @returns {Object} {
+ *   status: "ok" | "missing" | "version_mismatch",
+ *   missing: string[],         // missing required plugin slugs
+ *   incompatible: Array<{slug, requiredVersion, installedVersion}> // wrong versions
+ * }
+ */
+export function checkPluginsRequirements(currentPlugins, requiredPlugins) {
+  if (!Array.isArray(currentPlugins)) currentPlugins = [];
+  if (!Array.isArray(requiredPlugins)) requiredPlugins = [];
+
+  const installedMap = {};
+  currentPlugins.forEach(plg => {
+    installedMap[plg.slug] = plg.version || "";
+  });
+
+  const missing = [];
+  const incompatible = [];
+
+  requiredPlugins.forEach(req => {
+    const reqSlug = req.slug;
+    const reqVersion = (req.version || "").toString();
+
+    if (!(reqSlug in installedMap)) {
+      missing.push(reqSlug);
+    } else if (reqVersion && reqVersion !== "") {
+      // Compare versions (installed >= required)
+      const installedVer = (installedMap[reqSlug] || "").toString();
+      if (!isVersionGte(installedVer, reqVersion)) {
+        incompatible.push({
+          slug: reqSlug,
+          requiredVersion: reqVersion,
+          installedVersion: installedVer
+        });
+      }
+    }
+  });
+
+  let status = "ok";
+  if (missing.length > 0) status = "missing";
+  else if (incompatible.length > 0) status = "version_mismatch";
+
+  return {
+    status,
+    missing,
+    incompatible
+  };
+}
+
+/**
+ * Returns true if v1 >= v2 (both dot-separated, e.g. "2.1.3")
+ */
+export function isVersionGte(v1, v2) {
+  const splitToNum = v => v.split('.').map(x => parseInt(x, 10) || 0);
+  const a = splitToNum(v1);
+  const b = splitToNum(v2);
+  const len = Math.max(a.length, b.length);
+  for (let i = 0; i < len; i++) {
+    if ((a[i] || 0) > (b[i] || 0)) return true;
+    if ((a[i] || 0) < (b[i] || 0)) return false;
+  }
+  return true;
+}

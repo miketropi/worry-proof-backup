@@ -402,6 +402,7 @@ function worrprba_generate_config_file($args = array()) {
     'backup_size' => '???',
     'site_url' => home_url(),
     'table_prefix' => $wpdb->prefix,
+    'active_plugins' => worrprba_get_active_plugins_with_versions(),
   );
   $args = wp_parse_args($args, $defaults);
 
@@ -1450,4 +1451,40 @@ function worrprba_sanitize_payload_array( $payload ) {
   }
   
   return $sanitized;
+}
+
+/**
+ * Get all active plugins and their versions.
+ *
+ * @return array Array of active plugins with their versions.
+ */
+function worrprba_get_active_plugins_with_versions() {
+  // Get the list of active plugins as plugin paths (e.g. 'plugin-folder/plugin-file.php')
+  $active_plugins = (array) get_option('active_plugins', array());
+
+  // If multisite, add sitewide active plugins
+  if ( is_multisite() ) {
+    $network_plugins = get_site_option('active_sitewide_plugins', array());
+    $active_plugins = array_unique( array_merge( $active_plugins, array_keys( $network_plugins ) ) );
+  }
+
+  // Get all plugin data from plugins directory
+  if ( ! function_exists('get_plugins') ) {
+    require_once ABSPATH . 'wp-admin/includes/plugin.php';
+  }
+  $all_plugins = get_plugins();
+
+  $plugins_with_versions = array();
+  foreach ( $active_plugins as $plugin_path ) {
+    if ( isset( $all_plugins[ $plugin_path ] ) ) {
+      $plugin_data = $all_plugins[ $plugin_path ];
+      $plugins_with_versions[] = array(
+        'slug'    => $plugin_path,
+        'name'    => isset( $plugin_data['Name'] ) ? $plugin_data['Name'] : '',
+        'version' => isset( $plugin_data['Version'] ) ? $plugin_data['Version'] : '',
+      );
+    }
+  }
+
+  return $plugins_with_versions;
 }

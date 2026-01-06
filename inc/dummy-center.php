@@ -123,6 +123,7 @@ function worrprba_dummy_pack_center_enqueue_script() {
     'wordpress_version' => wp_get_wp_version(),
     'license_key' => $license_key,
     'header_meta_attached_api' => worrprba_dummy_pack_header_meta_attached_api(),
+    'active_plugins' => worrprba_get_active_plugins_with_versions(),
   ) );
 }
 
@@ -518,7 +519,7 @@ function worrprba_ajax_restore_dummy_pack_uploads() {
     $restorer = new WORRPB_Restore_File_System( array(
       'zip_file' => $path_zip_file,
       'destination_folder' => WP_CONTENT_DIR . '/uploads/',
-      'overwrite_existing' => true,
+      'overwrite_existing' => false,
       'exclude' => ['worry-proof-backup', 'worry-proof-backup-cron-manager', 'worry-proof-backup-zip'],
       'restore_progress_file_name' => '__uploads-restore-progress.json',
     ) );
@@ -599,7 +600,7 @@ function worrprba_ajax_restore_dummy_pack_plugins() {
     $restorer = new WORRPB_Restore_File_System( array(
       'zip_file' => $path_zip_file,
       'destination_folder' => WP_PLUGIN_DIR,
-      'overwrite_existing' => true,
+      'overwrite_existing' => false,
       'exclude' => apply_filters('worrprba_restore_plugin_exclude_dummy_pack', ['worry-proof-backup']), // phpcs:ignore WordPressVIPMinimum.Performance.WPQueryParams.PostNotIn_exclude
       'restore_progress_file_name' => '__plugins-restore-progress.json',
     ) );
@@ -774,4 +775,76 @@ function worrprba_ajax_dummy_pack_install_done() {
     'install_done_status' => 'done',
     'next_step' => true,
   ) );
+}
+
+/**
+ * Validate required plugin versions.
+ *
+ * @param array $required_plugins Array of plugins to validate in the format [
+ *   [
+ *     'slug'    => 'plugin-folder/plugin-main-file.php',
+ *     'name'    => 'Plugin Name',
+ *     'version' => 'required-minimum-version'
+ *   ],
+ *   ...
+ * ]
+ * @return array [
+ *   'passed' => bool, // true if all passed, false if any failed
+ *   'results' => [
+ *       [
+ *           'slug' => string,
+ *           'name' => string,
+ *           'installed' => bool,
+ *           'current_version' => string|null,
+ *           'required_version' => string,
+ *           'passed' => bool,
+ *       ],
+ *       ...
+ *   ]
+ * ]
+ */
+function worrprba_validate_required_plugins_versions( $required_plugins ) {
+  if ( ! function_exists( 'get_plugins' ) ) {
+    require_once ABSPATH . 'wp-admin/includes/plugin.php';
+  }
+  $all_plugins = get_plugins();
+  $results = array();
+  $all_passed = true;
+
+  foreach ( $required_plugins as $plugin ) {
+    $slug = isset( $plugin['slug'] ) ? $plugin['slug'] : '';
+    $name = isset( $plugin['name'] ) ? $plugin['name'] : '';
+    $required_version = isset( $plugin['version'] ) ? $plugin['version'] : '';
+    $plugin_info = isset( $all_plugins[ $slug ] ) ? $all_plugins[ $slug ] : null;
+    $installed = $plugin_info !== null;
+    $current_version = $installed ? ( isset( $plugin_info['Version'] ) ? $plugin_info['Version'] : '' ) : null;
+    $passed = true;
+
+    if ( $installed ) {
+      // Use version_compare, true if installed version >= required
+      if ( version_compare( $current_version, $required_version, '>=' ) ) {
+        $passed = true;
+      } else {
+        $passed = false;
+        $all_passed = false;
+      }
+    } else {
+      // Not installed = passed
+      $passed = true;
+    }
+
+    $results[] = array(
+      'slug' => $slug,
+      'name' => $name,
+      'installed' => $installed,
+      'current_version' => $current_version,
+      'required_version' => $required_version,
+      'passed' => $passed,
+    );
+  }
+
+  return array(
+    'passed' => $all_passed,
+    'results' => $results,
+  );
 }
