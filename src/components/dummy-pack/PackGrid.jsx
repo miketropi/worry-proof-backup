@@ -1,9 +1,7 @@
 import React, { useState } from 'react';
 import { ExternalLink, Download, Code, Server, FileArchive, Package, Info } from 'lucide-react';
 import { validateVersionPackageRequirements } from '../../util/dummyPackLib';
-import { checkPluginsRequirements } from '../../util/dummyPackLib';
 import PluginRequirementsModal from './PluginRequirementsModal';
-const { active_plugins } = worrprba_dummy_pack_center_data;
 
 /**
  * PackGrid Component
@@ -72,18 +70,8 @@ const PackCard = ({ pack, onInstall, onPreview }) => {
     setIsPluginModalOpen(true);
   };
 
-  // Get required plugins from pack or use default list
-  const requiredPlugins = pack.required_plugins || [];
-  
-  // Check plugin requirements
-  const pluginsRequirements = requiredPlugins.length > 0 
-    ? checkPluginsRequirements(active_plugins, requiredPlugins)
-    : null;
-
-  // Calculate summary stats
-  const compatibleCount = requiredPlugins.length - (pluginsRequirements?.missing.length || 0) - (pluginsRequirements?.incompatible.length || 0);
-  const hasIssues = pluginsRequirements && pluginsRequirements.status !== 'ok';
-
+  const buttonInstallActiveByPluginRequirements = pack.validated_required_plugins ? pack.validated_required_plugins.passed : true;
+  console.log(buttonInstallActiveByPluginRequirements)
   return (
     <div className="tw-bg-white tw-border tw-border-gray-200 tw-overflow-hidden hover:tw-shadow-md tw-transition-shadow tw-duration-200">
       {/* Image */}
@@ -180,33 +168,43 @@ const PackCard = ({ pack, onInstall, onPreview }) => {
           )}
 
           {/* Plugin Requirements Summary */}
-          {pack.required_plugins && pack.required_plugins.length > 0 && pluginsRequirements && (
-            <div className="tw-mb-2 tw-border-gray-100 tw-pt-2">
-              <button
-                onClick={handleOpenPluginModal}
-                className={`tw-w-full tw-flex tw-items-center tw-justify-between tw-gap-2 tw-px-3 tw-py-2 tw-text-xs tw-font-medium tw-rounded-md tw-border tw-transition-colors ${
-                  hasIssues
-                    ? 'tw-bg-red-50 tw-border-red-200 tw-text-red-700 hover:tw-bg-red-100'
-                    : 'tw-bg-green-50 tw-border-green-200 tw-text-green-700 hover:tw-bg-green-100'
-                }`}
+          {
+            pack.validated_required_plugins && (
+              <div
+                className="tw-flex tw-items-center tw-gap-2 tw-cursor-pointer tw-rounded-md"
+                role="button"
+                tabIndex={0}
+                title="View required plugins"
+                onClick={() => setIsPluginModalOpen(true)}
+                onKeyPress={e => {
+                  if (e.key === 'Enter' || e.key === ' ') setIsPluginModalOpen(true);
+                }}
+                style={{ minHeight: '28px' }}
               >
-                <div className="tw-flex tw-items-center tw-gap-2">
-                  <Info className="tw-w-4 tw-h-4" />
-                  <span>
-                    {requiredPlugins.length} Required Plugin{requiredPlugins.length !== 1 ? 's' : ''}
-                  </span>
-                  {hasIssues && (
-                    <span className="tw-px-2 tw-py-0.5 tw-bg-red-200 tw-text-red-800 tw-rounded-full tw-text-xs tw-font-semibold">
-                      {pluginsRequirements.missing.length + pluginsRequirements.incompatible.length} Issue{pluginsRequirements.missing.length + pluginsRequirements.incompatible.length !== 1 ? 's' : ''}
+                {/* Show an icon and summary indicating if all plugin requirements are met */}
+                {pack.validated_required_plugins.passed ? (
+                  <>
+                    <span className="tw-inline-flex tw-items-center tw-bg-green-100 tw-text-green-700 tw-px-2 tw-py-0.5 tw-rounded-full tw-text-xs tw-font-semibold">
+                      <svg className="tw-w-4 tw-h-4 tw-mr-1" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24">
+                        <path strokeLinecap="round" strokeLinejoin="round" d="M5 13l4 4L19 7" />
+                      </svg>
+                      All plugin requirements met
                     </span>
-                  )}
-                </div>
-                <span className="tw-text-xs">
-                  {compatibleCount}/{requiredPlugins.length} Compatible
-                </span>
-              </button>
-            </div>
-          )}
+                  </>
+                ) : (
+                  <>
+                    <span className="tw-inline-flex tw-items-center tw-bg-yellow-50 tw-text-yellow-700 tw-px-2 tw-py-0.5 tw-rounded-full tw-text-xs tw-font-semibold">
+                      <svg className="tw-w-4 tw-h-4 tw-mr-1" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24">
+                        <circle cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="2" fill="none" />
+                        <path strokeLinecap="round" strokeLinejoin="round" d="M12 8v4m0 4h.01" />
+                      </svg>
+                      Plugin requirements
+                    </span>
+                  </>
+                )}
+              </div>
+            )
+          }
         </div>
 
         {/* Actions */}
@@ -225,8 +223,10 @@ const PackCard = ({ pack, onInstall, onPreview }) => {
             className={
               "tw-flex-1 tw-inline-flex tw-items-center tw-justify-center tw-gap-1.5 tw-px-3 tw-py-2 tw-text-xs tw-font-semibold tw-text-white tw-bg-blue-600 tw-border tw-border-transparent tw-rounded-md hover:tw-bg-blue-700 focus:tw-outline-none focus:tw-ring-2 focus:tw-ring-offset-2 focus:tw-ring-blue-500 tw-transition-colors __tw-font-space-mono" +
               (
-                (pack.required && pack.required.length > 0 && !pack.required.every(req => validateVersionPackageRequirements(req.type, req.value))) ||
-                (pluginsRequirements && pluginsRequirements.status !== 'ok')
+                (pack.required && 
+                pack.required.length > 0 && 
+                !pack.required.every(req => validateVersionPackageRequirements(req.type, req.value)) ||
+                !buttonInstallActiveByPluginRequirements)
                   ? " tw-opacity-60 tw-cursor-not-allowed hover:tw-bg-blue-600"
                   : ""
               )
@@ -234,8 +234,8 @@ const PackCard = ({ pack, onInstall, onPreview }) => {
             disabled={
               (pack.required &&
               pack.required.length > 0 &&
-              !pack.required.every(req => validateVersionPackageRequirements(req.type, req.value))) ||
-              (pluginsRequirements && pluginsRequirements.status !== 'ok')
+              !pack.required.every(req => validateVersionPackageRequirements(req.type, req.value)) ||
+              !buttonInstallActiveByPluginRequirements)
             }
           >
             <Download className="tw-w-4 tw-h-4" />
@@ -245,14 +245,11 @@ const PackCard = ({ pack, onInstall, onPreview }) => {
       </div>
 
       {/* Plugin Requirements Modal */}
-      {pack.required_plugins && pack.required_plugins.length > 0 && (
-        <PluginRequirementsModal
-          isOpen={isPluginModalOpen}
-          onClose={() => setIsPluginModalOpen(false)}
-          requiredPlugins={requiredPlugins}
-          pluginsRequirements={pluginsRequirements}
-          activePlugins={active_plugins}
-        />
+      {pack.validated_required_plugins && (
+        <PluginRequirementsModal 
+          isOpen={ isPluginModalOpen } 
+          onClose={ () => setIsPluginModalOpen(false) } 
+          validatedRequiredPlugins={pack.validated_required_plugins} />
       )}
     </div>
   );

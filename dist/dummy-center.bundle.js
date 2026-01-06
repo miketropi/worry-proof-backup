@@ -1318,8 +1318,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ });
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var _shared_src_utils_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./shared/src/utils.js */ "./node_modules/lucide-react/dist/esm/shared/src/utils.js");
-/* harmony import */ var _Icon_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./Icon.js */ "./node_modules/lucide-react/dist/esm/Icon.js");
+/* harmony import */ var _shared_src_utils_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./shared/src/utils.js */ "./node_modules/lucide-react/dist/esm/shared/src/utils.js");
+/* harmony import */ var _Icon_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./Icon.js */ "./node_modules/lucide-react/dist/esm/Icon.js");
 /**
  * @license lucide-react v0.518.0 - ISC
  *
@@ -1333,18 +1333,18 @@ __webpack_require__.r(__webpack_exports__);
 
 const createLucideIcon = (iconName, iconNode) => {
   const Component = (0,react__WEBPACK_IMPORTED_MODULE_0__.forwardRef)(
-    ({ className, ...props }, ref) => (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)(_Icon_js__WEBPACK_IMPORTED_MODULE_2__["default"], {
+    ({ className, ...props }, ref) => (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)(_Icon_js__WEBPACK_IMPORTED_MODULE_1__["default"], {
       ref,
       iconNode,
-      className: (0,_shared_src_utils_js__WEBPACK_IMPORTED_MODULE_1__.mergeClasses)(
-        `lucide-${(0,_shared_src_utils_js__WEBPACK_IMPORTED_MODULE_1__.toKebabCase)((0,_shared_src_utils_js__WEBPACK_IMPORTED_MODULE_1__.toPascalCase)(iconName))}`,
+      className: (0,_shared_src_utils_js__WEBPACK_IMPORTED_MODULE_2__.mergeClasses)(
+        `lucide-${(0,_shared_src_utils_js__WEBPACK_IMPORTED_MODULE_2__.toKebabCase)((0,_shared_src_utils_js__WEBPACK_IMPORTED_MODULE_2__.toPascalCase)(iconName))}`,
         `lucide-${iconName}`,
         className
       ),
       ...props
     })
   );
-  Component.displayName = (0,_shared_src_utils_js__WEBPACK_IMPORTED_MODULE_1__.toPascalCase)(iconName);
+  Component.displayName = (0,_shared_src_utils_js__WEBPACK_IMPORTED_MODULE_2__.toPascalCase)(iconName);
   return Component;
 };
 
@@ -1390,51 +1390,17 @@ var defaultAttributes = {
 
 /***/ }),
 
-/***/ "./node_modules/lucide-react/dist/esm/icons/circle-check-big.js":
-/*!**********************************************************************!*\
-  !*** ./node_modules/lucide-react/dist/esm/icons/circle-check-big.js ***!
-  \**********************************************************************/
+/***/ "./node_modules/lucide-react/dist/esm/icons/circle-alert.js":
+/*!******************************************************************!*\
+  !*** ./node_modules/lucide-react/dist/esm/icons/circle-alert.js ***!
+  \******************************************************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   __iconNode: () => (/* binding */ __iconNode),
-/* harmony export */   "default": () => (/* binding */ CircleCheckBig)
-/* harmony export */ });
-/* harmony import */ var _createLucideIcon_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../createLucideIcon.js */ "./node_modules/lucide-react/dist/esm/createLucideIcon.js");
-/**
- * @license lucide-react v0.518.0 - ISC
- *
- * This source code is licensed under the ISC license.
- * See the LICENSE file in the root directory of this source tree.
- */
-
-
-
-const __iconNode = [
-  ["path", { d: "M21.801 10A10 10 0 1 1 17 3.335", key: "yps3ct" }],
-  ["path", { d: "m9 11 3 3L22 4", key: "1pflzl" }]
-];
-const CircleCheckBig = (0,_createLucideIcon_js__WEBPACK_IMPORTED_MODULE_0__["default"])("circle-check-big", __iconNode);
-
-
-//# sourceMappingURL=circle-check-big.js.map
-
-
-/***/ }),
-
-/***/ "./node_modules/lucide-react/dist/esm/icons/circle-x.js":
-/*!**************************************************************!*\
-  !*** ./node_modules/lucide-react/dist/esm/icons/circle-x.js ***!
-  \**************************************************************/
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   __iconNode: () => (/* binding */ __iconNode),
-/* harmony export */   "default": () => (/* binding */ CircleX)
+/* harmony export */   "default": () => (/* binding */ CircleAlert)
 /* harmony export */ });
 /* harmony import */ var _createLucideIcon_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../createLucideIcon.js */ "./node_modules/lucide-react/dist/esm/createLucideIcon.js");
 /**
@@ -1448,13 +1414,47 @@ __webpack_require__.r(__webpack_exports__);
 
 const __iconNode = [
   ["circle", { cx: "12", cy: "12", r: "10", key: "1mglay" }],
-  ["path", { d: "m15 9-6 6", key: "1uzhvr" }],
-  ["path", { d: "m9 9 6 6", key: "z0biqf" }]
+  ["line", { x1: "12", x2: "12", y1: "8", y2: "12", key: "1pkeuh" }],
+  ["line", { x1: "12", x2: "12.01", y1: "16", y2: "16", key: "4dfq90" }]
 ];
-const CircleX = (0,_createLucideIcon_js__WEBPACK_IMPORTED_MODULE_0__["default"])("circle-x", __iconNode);
+const CircleAlert = (0,_createLucideIcon_js__WEBPACK_IMPORTED_MODULE_0__["default"])("circle-alert", __iconNode);
 
 
-//# sourceMappingURL=circle-x.js.map
+//# sourceMappingURL=circle-alert.js.map
+
+
+/***/ }),
+
+/***/ "./node_modules/lucide-react/dist/esm/icons/circle-check.js":
+/*!******************************************************************!*\
+  !*** ./node_modules/lucide-react/dist/esm/icons/circle-check.js ***!
+  \******************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   __iconNode: () => (/* binding */ __iconNode),
+/* harmony export */   "default": () => (/* binding */ CircleCheck)
+/* harmony export */ });
+/* harmony import */ var _createLucideIcon_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../createLucideIcon.js */ "./node_modules/lucide-react/dist/esm/createLucideIcon.js");
+/**
+ * @license lucide-react v0.518.0 - ISC
+ *
+ * This source code is licensed under the ISC license.
+ * See the LICENSE file in the root directory of this source tree.
+ */
+
+
+
+const __iconNode = [
+  ["circle", { cx: "12", cy: "12", r: "10", key: "1mglay" }],
+  ["path", { d: "m9 12 2 2 4-4", key: "dzmm74" }]
+];
+const CircleCheck = (0,_createLucideIcon_js__WEBPACK_IMPORTED_MODULE_0__["default"])("circle-check", __iconNode);
+
+
+//# sourceMappingURL=circle-check.js.map
 
 
 /***/ }),
@@ -1570,41 +1570,6 @@ const FileArchive = (0,_createLucideIcon_js__WEBPACK_IMPORTED_MODULE_0__["defaul
 
 /***/ }),
 
-/***/ "./node_modules/lucide-react/dist/esm/icons/info.js":
-/*!**********************************************************!*\
-  !*** ./node_modules/lucide-react/dist/esm/icons/info.js ***!
-  \**********************************************************/
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   __iconNode: () => (/* binding */ __iconNode),
-/* harmony export */   "default": () => (/* binding */ Info)
-/* harmony export */ });
-/* harmony import */ var _createLucideIcon_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../createLucideIcon.js */ "./node_modules/lucide-react/dist/esm/createLucideIcon.js");
-/**
- * @license lucide-react v0.518.0 - ISC
- *
- * This source code is licensed under the ISC license.
- * See the LICENSE file in the root directory of this source tree.
- */
-
-
-
-const __iconNode = [
-  ["circle", { cx: "12", cy: "12", r: "10", key: "1mglay" }],
-  ["path", { d: "M12 16v-4", key: "1dtifu" }],
-  ["path", { d: "M12 8h.01", key: "e9boi3" }]
-];
-const Info = (0,_createLucideIcon_js__WEBPACK_IMPORTED_MODULE_0__["default"])("info", __iconNode);
-
-
-//# sourceMappingURL=info.js.map
-
-
-/***/ }),
-
 /***/ "./node_modules/lucide-react/dist/esm/icons/package.js":
 /*!*************************************************************!*\
   !*** ./node_modules/lucide-react/dist/esm/icons/package.js ***!
@@ -1643,6 +1608,42 @@ const Package = (0,_createLucideIcon_js__WEBPACK_IMPORTED_MODULE_0__["default"])
 
 
 //# sourceMappingURL=package.js.map
+
+
+/***/ }),
+
+/***/ "./node_modules/lucide-react/dist/esm/icons/refresh-cw.js":
+/*!****************************************************************!*\
+  !*** ./node_modules/lucide-react/dist/esm/icons/refresh-cw.js ***!
+  \****************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   __iconNode: () => (/* binding */ __iconNode),
+/* harmony export */   "default": () => (/* binding */ RefreshCw)
+/* harmony export */ });
+/* harmony import */ var _createLucideIcon_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../createLucideIcon.js */ "./node_modules/lucide-react/dist/esm/createLucideIcon.js");
+/**
+ * @license lucide-react v0.518.0 - ISC
+ *
+ * This source code is licensed under the ISC license.
+ * See the LICENSE file in the root directory of this source tree.
+ */
+
+
+
+const __iconNode = [
+  ["path", { d: "M3 12a9 9 0 0 1 9-9 9.75 9.75 0 0 1 6.74 2.74L21 8", key: "v9h5vc" }],
+  ["path", { d: "M21 3v5h-5", key: "1q7to0" }],
+  ["path", { d: "M21 12a9 9 0 0 1-9 9 9.75 9.75 0 0 1-6.74-2.74L3 16", key: "3uifl3" }],
+  ["path", { d: "M8 16H3v5", key: "1cv678" }]
+];
+const RefreshCw = (0,_createLucideIcon_js__WEBPACK_IMPORTED_MODULE_0__["default"])("refresh-cw", __iconNode);
+
+
+//# sourceMappingURL=refresh-cw.js.map
 
 
 /***/ }),
@@ -1718,40 +1719,6 @@ const TriangleAlert = (0,_createLucideIcon_js__WEBPACK_IMPORTED_MODULE_0__["defa
 
 
 //# sourceMappingURL=triangle-alert.js.map
-
-
-/***/ }),
-
-/***/ "./node_modules/lucide-react/dist/esm/icons/x.js":
-/*!*******************************************************!*\
-  !*** ./node_modules/lucide-react/dist/esm/icons/x.js ***!
-  \*******************************************************/
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   __iconNode: () => (/* binding */ __iconNode),
-/* harmony export */   "default": () => (/* binding */ X)
-/* harmony export */ });
-/* harmony import */ var _createLucideIcon_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../createLucideIcon.js */ "./node_modules/lucide-react/dist/esm/createLucideIcon.js");
-/**
- * @license lucide-react v0.518.0 - ISC
- *
- * This source code is licensed under the ISC license.
- * See the LICENSE file in the root directory of this source tree.
- */
-
-
-
-const __iconNode = [
-  ["path", { d: "M18 6 6 18", key: "1bl5f8" }],
-  ["path", { d: "m6 6 12 12", key: "d8bk6v" }]
-];
-const X = (0,_createLucideIcon_js__WEBPACK_IMPORTED_MODULE_0__["default"])("x", __iconNode);
-
-
-//# sourceMappingURL=x.js.map
 
 
 /***/ }),
@@ -29689,8 +29656,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _util_dummyPackLib__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./util/dummyPackLib */ "./src/util/dummyPackLib.js");
 /* harmony import */ var _components_dummy_pack_InstallProcess__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./components/dummy-pack/InstallProcess */ "./src/components/dummy-pack/InstallProcess.jsx");
 /* harmony import */ var _util_dummyPackStore__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./util/dummyPackStore */ "./src/util/dummyPackStore.js");
-/* harmony import */ var lucide_react__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! lucide-react */ "./node_modules/lucide-react/dist/esm/icons/rotate-ccw.js");
-/* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! react/jsx-runtime */ "./node_modules/react/jsx-runtime.js");
+/* harmony import */ var lucide_react__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! lucide-react */ "./node_modules/lucide-react/dist/esm/icons/rotate-ccw.js");
+/* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! react/jsx-runtime */ "./node_modules/react/jsx-runtime.js");
 function _regenerator() { /*! regenerator-runtime -- Copyright (c) 2014-present, Facebook, Inc. -- license (MIT): https://github.com/babel/babel/blob/main/packages/babel-helpers/LICENSE */ var e, t, r = "function" == typeof Symbol ? Symbol : {}, n = r.iterator || "@@iterator", o = r.toStringTag || "@@toStringTag"; function i(r, n, o, i) { var c = n && n.prototype instanceof Generator ? n : Generator, u = Object.create(c.prototype); return _regeneratorDefine2(u, "_invoke", function (r, n, o) { var i, c, u, f = 0, p = o || [], y = !1, G = { p: 0, n: 0, v: e, a: d, f: d.bind(e, 4), d: function d(t, r) { return i = t, c = 0, u = e, G.n = r, a; } }; function d(r, n) { for (c = r, u = n, t = 0; !y && f && !o && t < p.length; t++) { var o, i = p[t], d = G.p, l = i[2]; r > 3 ? (o = l === n) && (u = i[(c = i[4]) ? 5 : (c = 3, 3)], i[4] = i[5] = e) : i[0] <= d && ((o = r < 2 && d < i[1]) ? (c = 0, G.v = n, G.n = i[1]) : d < l && (o = r < 3 || i[0] > n || n > l) && (i[4] = r, i[5] = n, G.n = l, c = 0)); } if (o || r > 1) return a; throw y = !0, n; } return function (o, p, l) { if (f > 1) throw TypeError("Generator is already running"); for (y && 1 === p && d(p, l), c = p, u = l; (t = c < 2 ? e : u) || !y;) { i || (c ? c < 3 ? (c > 1 && (G.n = -1), d(c, u)) : G.n = u : G.v = u); try { if (f = 2, i) { if (c || (o = "next"), t = i[o]) { if (!(t = t.call(i, u))) throw TypeError("iterator result is not an object"); if (!t.done) return t; u = t.value, c < 2 && (c = 0); } else 1 === c && (t = i["return"]) && t.call(i), c < 2 && (u = TypeError("The iterator does not provide a '" + o + "' method"), c = 1); i = e; } else if ((t = (y = G.n < 0) ? u : r.call(n, G)) !== a) break; } catch (t) { i = e, c = 1, u = t; } finally { f = 1; } } return { value: t, done: y }; }; }(r, o, i), !0), u; } var a = {}; function Generator() {} function GeneratorFunction() {} function GeneratorFunctionPrototype() {} t = Object.getPrototypeOf; var c = [][n] ? t(t([][n]())) : (_regeneratorDefine2(t = {}, n, function () { return this; }), t), u = GeneratorFunctionPrototype.prototype = Generator.prototype = Object.create(c); function f(e) { return Object.setPrototypeOf ? Object.setPrototypeOf(e, GeneratorFunctionPrototype) : (e.__proto__ = GeneratorFunctionPrototype, _regeneratorDefine2(e, o, "GeneratorFunction")), e.prototype = Object.create(u), e; } return GeneratorFunction.prototype = GeneratorFunctionPrototype, _regeneratorDefine2(u, "constructor", GeneratorFunctionPrototype), _regeneratorDefine2(GeneratorFunctionPrototype, "constructor", GeneratorFunction), GeneratorFunction.displayName = "GeneratorFunction", _regeneratorDefine2(GeneratorFunctionPrototype, o, "GeneratorFunction"), _regeneratorDefine2(u), _regeneratorDefine2(u, o, "Generator"), _regeneratorDefine2(u, n, function () { return this; }), _regeneratorDefine2(u, "toString", function () { return "[object Generator]"; }), (_regenerator = function _regenerator() { return { w: i, m: f }; })(); }
 function _regeneratorDefine2(e, r, n, t) { var i = Object.defineProperty; try { i({}, "", {}); } catch (e) { i = 0; } _regeneratorDefine2 = function _regeneratorDefine(e, r, n, t) { if (r) i ? i(e, r, { value: n, enumerable: !t, configurable: !t, writable: !t }) : e[r] = n;else { var o = function o(r, n) { _regeneratorDefine2(e, r, function (e) { return this._invoke(r, n, e); }); }; o("next", 0), o("throw", 1), o("return", 2); } }, _regeneratorDefine2(e, r, n, t); }
 function asyncGeneratorStep(n, t, e, r, o, a, c) { try { var i = n[a](c), u = i.value; } catch (n) { return void e(n); } i.done ? t(u) : Promise.resolve(u).then(r, o); }
@@ -29733,34 +29700,34 @@ function WorrprbaDummyCenter() {
     });
   }, [packs === null || packs === void 0 ? void 0 : packs.packages, searchTerm]);
   if (isLoading) {
-    return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_9__.jsx)("div", {
+    return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsx)("div", {
       className: "tw-max-w-7xl tw-mx-auto tw-px-2 sm:tw-px-4 tw-py-10",
-      children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_9__.jsxs)("div", {
+      children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsxs)("div", {
         className: " tw-p-6 tw-flex tw-flex-col tw-items-center tw-justify-center tw-min-h-[300px]",
-        children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_9__.jsxs)("div", {
+        children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsxs)("div", {
           className: "tw-flex tw-items-center tw-gap-3",
-          children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_9__.jsxs)("svg", {
+          children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsxs)("svg", {
             className: "tw-w-6 tw-h-6 tw-text-blue-400 tw-animate-spin",
             fill: "none",
             stroke: "currentColor",
             viewBox: "0 0 24 24",
-            children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_9__.jsx)("circle", {
+            children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsx)("circle", {
               className: "tw-opacity-25",
               cx: "12",
               cy: "12",
               r: "10",
               stroke: "currentColor",
               strokeWidth: "4"
-            }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_9__.jsx)("path", {
+            }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsx)("path", {
               className: "tw-opacity-75",
               fill: "currentColor",
               d: "M4 12a8 8 0 018-8v8z"
             })]
-          }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_9__.jsx)("span", {
+          }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsx)("span", {
             className: "tw-text-lg tw-text-blue-600 tw-font-semibold",
             children: "Loading Dummy Packs..."
           })]
-        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_9__.jsx)("span", {
+        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsx)("span", {
           className: "tw-text-xs tw-text-gray-700 tw-mt-2 tw-font-space-mono",
           children: "Please wait while we fetch the latest packages for you."
         })]
@@ -29768,44 +29735,44 @@ function WorrprbaDummyCenter() {
     });
   }
   if (error) {
-    return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_9__.jsx)("div", {
+    return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsx)("div", {
       className: "tw-max-w-7xl tw-mx-auto tw-px-2 sm:tw-px-4 tw-py-10",
-      children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_9__.jsxs)("div", {
+      children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsxs)("div", {
         className: "tw-bg-red-50 tw-border tw-border-red-200 tw-p-5 tw-rounded-lg tw-shadow-sm tw-flex tw-gap-4 tw-items-start",
-        children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_9__.jsx)("div", {
+        children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsx)("div", {
           className: "tw-mt-1 tw-flex-shrink-0",
-          children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_9__.jsxs)("svg", {
+          children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsxs)("svg", {
             className: "tw-w-6 tw-h-6 tw-text-red-400",
             fill: "none",
             stroke: "currentColor",
             viewBox: "0 0 24 24",
-            children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_9__.jsx)("circle", {
+            children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsx)("circle", {
               className: "tw-opacity-20",
               cx: "12",
               cy: "12",
               r: "10",
               stroke: "currentColor",
               strokeWidth: "3"
-            }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_9__.jsx)("path", {
+            }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsx)("path", {
               strokeLinecap: "round",
               strokeLinejoin: "round",
               strokeWidth: 2.5,
               d: "M12 8v4m0 4h.01"
             })]
           })
-        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_9__.jsxs)("div", {
-          children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_9__.jsx)("div", {
+        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsxs)("div", {
+          children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsx)("div", {
             className: "tw-text-sm tw-font-semibold tw-text-red-700 tw-mb-1 tw-font-space-mono",
             children: "Could not connect to Dummy Pack Center"
-          }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_9__.jsx)("p", {
+          }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsx)("p", {
             className: "tw-text-xs tw-text-red-800 tw-mb-2 tw-font-space-mono",
             children: typeof error === "string" ? error : "Sorry, we couldn't display available dummy packs right now. Please check your internet or try reloading this page in a moment."
-          }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_9__.jsxs)("button", {
+          }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsxs)("button", {
             className: "tw-inline-flex tw-items-center tw-gap-2 tw-px-4 tw-py-1.5 tw-bg-red-500 tw-text-white tw-font-semibold tw-rounded hover:tw-bg-red-600 focus:tw-outline-none focus:tw-ring-2 focus:tw-ring-red-400",
             onClick: function onClick() {
               return window.location.reload();
             },
-            children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_9__.jsx)(lucide_react__WEBPACK_IMPORTED_MODULE_8__["default"], {
+            children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsx)(lucide_react__WEBPACK_IMPORTED_MODULE_9__["default"], {
               className: "tw-w-4 tw-h-4 tw-text-white"
             }), "Retry"]
           })]
@@ -29828,30 +29795,30 @@ function WorrprbaDummyCenter() {
       return _ref.apply(this, arguments);
     };
   }();
-  return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_9__.jsxs)("div", {
+  return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsxs)("div", {
     className: "tw-max-w-7xl tw-mx-auto tw-px-2 sm:tw-px-4 tw-py-10",
-    children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_9__.jsx)("h1", {}), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_9__.jsx)(_components_dummy_pack_Heading__WEBPACK_IMPORTED_MODULE_2__["default"], {
+    children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsx)("h1", {}), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsx)(_components_dummy_pack_Heading__WEBPACK_IMPORTED_MODULE_2__["default"], {
       title: packs === null || packs === void 0 ? void 0 : packs.name,
       subtitle: packs === null || packs === void 0 ? void 0 : packs.description
-    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_9__.jsxs)("div", {
+    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsxs)("div", {
       className: "tw-mt-8 tw-mb-6",
-      children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_9__.jsxs)("div", {
+      children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsxs)("div", {
         className: "tw-relative tw-max-w-md",
-        children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_9__.jsx)("span", {
+        children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsx)("span", {
           className: "tw-absolute tw-inset-y-0 tw-left-0 tw-pl-3 tw-flex tw-items-center pointer-events-none",
-          children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_9__.jsx)("svg", {
+          children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsx)("svg", {
             className: "tw-h-5 tw-w-5 tw-text-gray-400",
             fill: "none",
             stroke: "currentColor",
             viewBox: "0 0 24 24",
-            children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_9__.jsx)("path", {
+            children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsx)("path", {
               strokeLinecap: "round",
               strokeLinejoin: "round",
               strokeWidth: 2,
               d: "M21 21l-4.35-4.35M17 11A6 6 0 105 11a6 6 0 0012 0z"
             })
           })
-        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_9__.jsx)("input", {
+        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsx)("input", {
           type: "text",
           style: {
             width: "100%",
@@ -29872,18 +29839,18 @@ function WorrprbaDummyCenter() {
           onChange: function onChange(e) {
             return setSearchTerm(e.target.value);
           }
-        }), searchTerm && /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_9__.jsx)("button", {
+        }), searchTerm && /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsx)("button", {
           type: "button",
           className: "tw-absolute tw-inset-y-0 tw-right-0 tw-pr-3 tw-flex tw-items-center",
           onClick: function onClick() {
             return setSearchTerm("");
           },
-          children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_9__.jsx)("svg", {
+          children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsx)("svg", {
             className: "tw-h-5 tw-w-5 tw-text-gray-400 hover:tw-text-gray-600",
             fill: "none",
             stroke: "currentColor",
             viewBox: "0 0 24 24",
-            children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_9__.jsx)("path", {
+            children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsx)("path", {
               strokeLinecap: "round",
               strokeLinejoin: "round",
               strokeWidth: 2,
@@ -29891,36 +29858,36 @@ function WorrprbaDummyCenter() {
             })
           })
         })]
-      }), searchTerm && /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_9__.jsxs)("p", {
+      }), searchTerm && /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsxs)("p", {
         className: "tw-mt-2 tw-text-sm tw-text-gray-600",
         children: ["Found ", filteredPackages.length, " package", filteredPackages.length !== 1 ? 's' : '']
       })]
-    }), filteredPackages.length > 0 ? /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_9__.jsxs)(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_9__.Fragment, {
-      children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_9__.jsx)(_components_dummy_pack_PackGrid__WEBPACK_IMPORTED_MODULE_4__["default"], {
+    }), filteredPackages.length > 0 ? /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsxs)(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.Fragment, {
+      children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsx)(_components_dummy_pack_PackGrid__WEBPACK_IMPORTED_MODULE_4__["default"], {
         packs: filteredPackages,
         onInstall: onInstall
-      }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_9__.jsx)(_components_dummy_pack_InstallProcess__WEBPACK_IMPORTED_MODULE_6__["default"], {})]
-    }) : searchTerm ? /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_9__.jsxs)("div", {
+      }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsx)(_components_dummy_pack_InstallProcess__WEBPACK_IMPORTED_MODULE_6__["default"], {})]
+    }) : searchTerm ? /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsxs)("div", {
       className: "tw-text-gray-500 tw-mt-8 tw-text-center tw-py-12",
-      children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_9__.jsx)("svg", {
+      children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsx)("svg", {
         className: "tw-mx-auto tw-h-12 tw-w-12 tw-text-gray-400",
         fill: "none",
         stroke: "currentColor",
         viewBox: "0 0 24 24",
-        children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_9__.jsx)("path", {
+        children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsx)("path", {
           strokeLinecap: "round",
           strokeLinejoin: "round",
           strokeWidth: 2,
           d: "M9.172 16.172a4 4 0 015.656 0M9 10h.01M15 10h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"
         })
-      }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_9__.jsx)("p", {
+      }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsx)("p", {
         className: "tw-mt-4 tw-text-lg tw-font-medium",
         children: "No packages found"
-      }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_9__.jsx)("p", {
+      }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsx)("p", {
         className: "tw-mt-2 tw-text-sm",
         children: "Try adjusting your search term"
       })]
-    }) : /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_9__.jsx)("div", {
+    }) : /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsx)("div", {
       className: "tw-text-gray-500 tw-mt-8",
       children: "No dummy packs found. Please try again later."
     })]
@@ -30064,7 +30031,7 @@ var Modal = function Modal(_ref) {
     }
   };
   var modalContent = /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsxs)("div", {
-    className: "tw-fixed tw-inset-0 tw-z-50 tw-overflow-y-auto",
+    className: "tw-fixed tw-inset-0 ___tw-z-50 tw-overflow-y-auto",
     style: {
       zIndex: 9999
     },
@@ -30185,8 +30152,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ });
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var lucide_react__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! lucide-react */ "./node_modules/lucide-react/dist/esm/icons/package.js");
-/* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! react/jsx-runtime */ "./node_modules/react/jsx-runtime.js");
+/* harmony import */ var lucide_react__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! lucide-react */ "./node_modules/lucide-react/dist/esm/icons/package.js");
+/* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react/jsx-runtime */ "./node_modules/react/jsx-runtime.js");
 
 
 
@@ -30208,21 +30175,21 @@ var Heading = function Heading(_ref) {
     icon = _ref.icon,
     _ref$className = _ref.className,
     className = _ref$className === void 0 ? "" : _ref$className;
-  var IconComponent = icon || /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)(lucide_react__WEBPACK_IMPORTED_MODULE_1__["default"], {
+  var IconComponent = icon || /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)(lucide_react__WEBPACK_IMPORTED_MODULE_2__["default"], {
     className: "tw-w-5 tw-h-5"
   });
-  return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsxs)("div", {
+  return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)("div", {
     className: "tw-bg-white tw-p-8 tw-mb-8 tw-border tw-border-gray-200 ".concat(className),
-    children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsxs)("h2", {
+    children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)("h2", {
       className: "tw-text-2xl tw-font-semibold tw-text-gray-900 tw-mb-2 tw-flex tw-items-center tw-gap-2",
-      children: [IconComponent && /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("span", {
+      children: [IconComponent && /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("span", {
         className: "tw-bg-gray-100 tw-p-2 tw-rounded-xl tw-shadow-sm tw-flex tw-items-center tw-justify-center tw-border tw-border-gray-200 tw-mr-1",
-        children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("span", {
+        children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("span", {
           className: "tw-text-blue-500 tw-drop-shadow-sm",
           children: IconComponent
         })
       }), title]
-    }), subtitle && /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("p", {
+    }), subtitle && /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("p", {
       className: "tw-text-sm tw-text-gray-600 tw-leading-relaxed",
       children: subtitle
     })]
@@ -30547,14 +30514,13 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ });
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var lucide_react__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! lucide-react */ "./node_modules/lucide-react/dist/esm/icons/download.js");
-/* harmony import */ var lucide_react__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! lucide-react */ "./node_modules/lucide-react/dist/esm/icons/external-link.js");
-/* harmony import */ var lucide_react__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! lucide-react */ "./node_modules/lucide-react/dist/esm/icons/file-archive.js");
-/* harmony import */ var lucide_react__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! lucide-react */ "./node_modules/lucide-react/dist/esm/icons/info.js");
+/* harmony import */ var lucide_react__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! lucide-react */ "./node_modules/lucide-react/dist/esm/icons/file-archive.js");
 /* harmony import */ var lucide_react__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! lucide-react */ "./node_modules/lucide-react/dist/esm/icons/package.js");
-/* harmony import */ var _util_dummyPackLib__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../../util/dummyPackLib */ "./src/util/dummyPackLib.js");
-/* harmony import */ var _PluginRequirementsModal__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./PluginRequirementsModal */ "./src/components/dummy-pack/PluginRequirementsModal.jsx");
-/* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! react/jsx-runtime */ "./node_modules/react/jsx-runtime.js");
+/* harmony import */ var lucide_react__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! lucide-react */ "./node_modules/lucide-react/dist/esm/icons/external-link.js");
+/* harmony import */ var lucide_react__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! lucide-react */ "./node_modules/lucide-react/dist/esm/icons/download.js");
+/* harmony import */ var _util_dummyPackLib__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../util/dummyPackLib */ "./src/util/dummyPackLib.js");
+/* harmony import */ var _PluginRequirementsModal__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./PluginRequirementsModal */ "./src/components/dummy-pack/PluginRequirementsModal.jsx");
+/* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! react/jsx-runtime */ "./node_modules/react/jsx-runtime.js");
 function _slicedToArray(r, e) { return _arrayWithHoles(r) || _iterableToArrayLimit(r, e) || _unsupportedIterableToArray(r, e) || _nonIterableRest(); }
 function _nonIterableRest() { throw new TypeError("Invalid attempt to destructure non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method."); }
 function _unsupportedIterableToArray(r, a) { if (r) { if ("string" == typeof r) return _arrayLikeToArray(r, a); var t = {}.toString.call(r).slice(8, -1); return "Object" === t && r.constructor && (t = r.constructor.name), "Map" === t || "Set" === t ? Array.from(r) : "Arguments" === t || /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(t) ? _arrayLikeToArray(r, a) : void 0; } }
@@ -30566,10 +30532,6 @@ function _arrayWithHoles(r) { if (Array.isArray(r)) return r; }
 
 
 
-
-var _worrprba_dummy_pack_ = worrprba_dummy_pack_center_data,
-  active_plugins = _worrprba_dummy_pack_.active_plugins;
-
 /**
  * PackGrid Component
  * 
@@ -30579,29 +30541,30 @@ var _worrprba_dummy_pack_ = worrprba_dummy_pack_center_data,
  * @param {Function} onInstall - Callback function when install button is clicked (pack) => void
  * @param {Function} onPreview - Callback function when preview button is clicked (pack) => void
  */
+
 var PackGrid = function PackGrid(_ref) {
   var _ref$packs = _ref.packs,
     packs = _ref$packs === void 0 ? [] : _ref$packs,
     onInstall = _ref.onInstall,
     onPreview = _ref.onPreview;
   if (!packs || packs.length === 0) {
-    return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsxs)("div", {
+    return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsxs)("div", {
       className: "tw-text-center tw-py-12 tw-bg-gray-50 tw-border tw-border-gray-200 tw-rounded-lg",
-      children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsx)(lucide_react__WEBPACK_IMPORTED_MODULE_3__["default"], {
+      children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)(lucide_react__WEBPACK_IMPORTED_MODULE_4__["default"], {
         className: "tw-mx-auto tw-h-12 tw-w-12 tw-text-gray-400 tw-mb-4"
-      }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsx)("h3", {
+      }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("h3", {
         className: "tw-text-sm tw-font-medium tw-text-gray-900 tw-mb-1",
         children: "No packs available"
-      }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsx)("p", {
+      }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("p", {
         className: "tw-text-sm tw-text-gray-500",
         children: "Check back soon for available dummy packs."
       })]
     });
   }
-  return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsx)("div", {
+  return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("div", {
     className: "tw-grid tw-grid-cols-1 md:tw-grid-cols-2 lg:tw-grid-cols-3 tw-gap-6",
     children: packs.map(function (pack) {
-      return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsx)(PackCard, {
+      return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)(PackCard, {
         pack: pack,
         onInstall: onInstall,
         onPreview: onPreview
@@ -30643,89 +30606,81 @@ var PackCard = function PackCard(_ref2) {
     e.preventDefault();
     setIsPluginModalOpen(true);
   };
-
-  // Get required plugins from pack or use default list
-  var requiredPlugins = pack.required_plugins || [];
-
-  // Check plugin requirements
-  var pluginsRequirements = requiredPlugins.length > 0 ? (0,_util_dummyPackLib__WEBPACK_IMPORTED_MODULE_6__.checkPluginsRequirements)(active_plugins, requiredPlugins) : null;
-
-  // Calculate summary stats
-  var compatibleCount = requiredPlugins.length - ((pluginsRequirements === null || pluginsRequirements === void 0 ? void 0 : pluginsRequirements.missing.length) || 0) - ((pluginsRequirements === null || pluginsRequirements === void 0 ? void 0 : pluginsRequirements.incompatible.length) || 0);
-  var hasIssues = pluginsRequirements && pluginsRequirements.status !== 'ok';
-  return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsxs)("div", {
+  var buttonInstallActiveByPluginRequirements = pack.validated_required_plugins ? pack.validated_required_plugins.passed : true;
+  console.log(buttonInstallActiveByPluginRequirements);
+  return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsxs)("div", {
     className: "tw-bg-white tw-border tw-border-gray-200 tw-overflow-hidden hover:tw-shadow-md tw-transition-shadow tw-duration-200",
-    children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsx)("div", {
+    children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("div", {
       className: "tw-relative tw-w-full tw-h-48 tw-bg-gray-50 tw-overflow-hidden tw-group",
-      children: pack.image ? /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsx)("img", {
+      children: pack.image ? /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("img", {
         src: pack.image,
         alt: pack.name,
         className: "tw-w-full tw-h-full tw-object-cover tw-border-none",
         loading: "lazy"
-      }) : /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsx)("div", {
+      }) : /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("div", {
         className: "tw-w-full tw-h-full tw-flex tw-items-center tw-justify-center",
-        children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsx)(lucide_react__WEBPACK_IMPORTED_MODULE_5__["default"], {
+        children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)(lucide_react__WEBPACK_IMPORTED_MODULE_5__["default"], {
           className: "tw-w-16 tw-h-16 tw-text-gray-300"
         })
       })
-    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsxs)("div", {
+    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsxs)("div", {
       className: "tw-p-4",
-      children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsx)("h3", {
+      children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("h3", {
         className: "tw-text-base tw-font-semibold tw-text-gray-900 tw-mb-2 tw-line-clamp-1",
         children: pack.name
-      }), pack.description && /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsx)("p", {
+      }), pack.description && /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("p", {
         className: "tw-text-xs tw-text-gray-600 tw-leading-relaxed tw-mb-3 tw-line-clamp-2 tw-font-space-mono",
         children: pack.description ? pack.description.split(" ").slice(0, 10).join(" ") + (pack.description.split(" ").length > 10 ? "..." : "") : ""
-      }), pack.tags && pack.tags.length > 0 && /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsx)("div", {
+      }), pack.tags && pack.tags.length > 0 && /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("div", {
         className: "tw-flex tw-flex-wrap tw-gap-2 tw-mb-3",
         children: pack.tags.map(function (tag, index) {
-          return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsx)("span", {
+          return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("span", {
             className: "tw-inline-flex tw-items-center tw-px-2 tw-py-0.5 tw-text-xs tw-font-medium tw-rounded-md tw-bg-blue-50 tw-text-blue-700 tw-border tw-border-blue-100",
             children: tag
           }, index);
         })
-      }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsxs)("div", {
+      }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsxs)("div", {
         className: "tw-space-y-2 tw-mb-4 tw-font-space-mono",
-        children: [pack.required && pack.required.length > 0 && /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsx)("div", {
+        children: [pack.required && pack.required.length > 0 && /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("div", {
           className: "tw-mb-2 tw-border-gray-100 tw-pt-2",
-          children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsx)("ul", {
+          children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("ul", {
             className: "tw-space-y-1 tw-pl-0 tw-pt-1",
             children: pack.required.map(function (req, index) {
-              return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsx)("li", {
+              return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("li", {
                 className: "tw-flex tw-items-center tw-gap-2 tw-text-xs tw-text-gray-700 tw-pl-1 tw-mb-0",
-                children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsxs)(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.Fragment, {
-                  children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsx)("span", {
-                    children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsxs)("strong", {
+                children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsxs)(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.Fragment, {
+                  children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("span", {
+                    children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsxs)("strong", {
                       className: "tw-font-semibold",
                       children: [req.type.replace(/_/g, " ").replace(/\b\w/g, function (l) {
                         return l.toUpperCase();
                       }), " ", req.value, req.type === 'php_version' ? '+' : '+']
                     })
-                  }), (0,_util_dummyPackLib__WEBPACK_IMPORTED_MODULE_6__.validateVersionPackageRequirements)(req.type, req.value) ? /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsx)("span", {
+                  }), (0,_util_dummyPackLib__WEBPACK_IMPORTED_MODULE_1__.validateVersionPackageRequirements)(req.type, req.value) ? /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("span", {
                     className: "tw-inline-flex tw-items-center tw-gap-1 tw-bg-green-100 tw-text-green-700 tw-px-2 tw-py-0.5 tw-rounded-full tw-text-xs tw-font-semibold",
                     title: "Compatible",
-                    children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsx)("svg", {
+                    children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("svg", {
                       className: "tw-w-3 tw-h-3",
                       fill: "none",
                       stroke: "currentColor",
                       strokeWidth: "2",
                       viewBox: "0 0 24 24",
-                      children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsx)("path", {
+                      children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("path", {
                         strokeLinecap: "round",
                         strokeLinejoin: "round",
                         d: "M5 13l4 4L19 7"
                       })
                     })
-                  }) : /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsx)("span", {
+                  }) : /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("span", {
                     className: "tw-inline-flex tw-items-center tw-gap-1 tw-bg-red-100 tw-text-red-700 tw-px-2 tw-py-0.5 tw-rounded-full tw-text-xs tw-font-semibold",
                     title: "Not compatible",
-                    children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsx)("svg", {
+                    children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("svg", {
                       className: "tw-w-3 tw-h-3",
                       fill: "none",
                       stroke: "currentColor",
                       strokeWidth: "2",
                       viewBox: "0 0 24 24",
-                      children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsx)("path", {
+                      children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("path", {
                         strokeLinecap: "round",
                         strokeLinejoin: "round",
                         d: "M6 18L18 6M6 6l12 12"
@@ -30736,60 +30691,92 @@ var PackCard = function PackCard(_ref2) {
               }, index);
             })
           })
-        }), pack.required_plugins && pack.required_plugins.length > 0 && pluginsRequirements && /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsx)("div", {
-          className: "tw-mb-2 tw-border-gray-100 tw-pt-2",
-          children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsxs)("button", {
-            onClick: handleOpenPluginModal,
-            className: "tw-w-full tw-flex tw-items-center tw-justify-between tw-gap-2 tw-px-3 tw-py-2 tw-text-xs tw-font-medium tw-rounded-md tw-border tw-transition-colors ".concat(hasIssues ? 'tw-bg-red-50 tw-border-red-200 tw-text-red-700 hover:tw-bg-red-100' : 'tw-bg-green-50 tw-border-green-200 tw-text-green-700 hover:tw-bg-green-100'),
-            children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsxs)("div", {
-              className: "tw-flex tw-items-center tw-gap-2",
-              children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsx)(lucide_react__WEBPACK_IMPORTED_MODULE_4__["default"], {
-                className: "tw-w-4 tw-h-4"
-              }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsxs)("span", {
-                children: [requiredPlugins.length, " Required Plugin", requiredPlugins.length !== 1 ? 's' : '']
-              }), hasIssues && /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsxs)("span", {
-                className: "tw-px-2 tw-py-0.5 tw-bg-red-200 tw-text-red-800 tw-rounded-full tw-text-xs tw-font-semibold",
-                children: [pluginsRequirements.missing.length + pluginsRequirements.incompatible.length, " Issue", pluginsRequirements.missing.length + pluginsRequirements.incompatible.length !== 1 ? 's' : '']
-              })]
-            }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsxs)("span", {
-              className: "tw-text-xs",
-              children: [compatibleCount, "/", requiredPlugins.length, " Compatible"]
-            })]
+        }), pack.validated_required_plugins && /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("div", {
+          className: "tw-flex tw-items-center tw-gap-2 tw-cursor-pointer tw-rounded-md",
+          role: "button",
+          tabIndex: 0,
+          title: "View required plugins",
+          onClick: function onClick() {
+            return setIsPluginModalOpen(true);
+          },
+          onKeyPress: function onKeyPress(e) {
+            if (e.key === 'Enter' || e.key === ' ') setIsPluginModalOpen(true);
+          },
+          style: {
+            minHeight: '28px'
+          },
+          children: pack.validated_required_plugins.passed ? /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.Fragment, {
+            children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsxs)("span", {
+              className: "tw-inline-flex tw-items-center tw-bg-green-100 tw-text-green-700 tw-px-2 tw-py-0.5 tw-rounded-full tw-text-xs tw-font-semibold",
+              children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("svg", {
+                className: "tw-w-4 tw-h-4 tw-mr-1",
+                fill: "none",
+                stroke: "currentColor",
+                strokeWidth: "2",
+                viewBox: "0 0 24 24",
+                children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("path", {
+                  strokeLinecap: "round",
+                  strokeLinejoin: "round",
+                  d: "M5 13l4 4L19 7"
+                })
+              }), "All plugin requirements met"]
+            })
+          }) : /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.Fragment, {
+            children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsxs)("span", {
+              className: "tw-inline-flex tw-items-center tw-bg-yellow-50 tw-text-yellow-700 tw-px-2 tw-py-0.5 tw-rounded-full tw-text-xs tw-font-semibold",
+              children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsxs)("svg", {
+                className: "tw-w-4 tw-h-4 tw-mr-1",
+                fill: "none",
+                stroke: "currentColor",
+                strokeWidth: "2",
+                viewBox: "0 0 24 24",
+                children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("circle", {
+                  cx: "12",
+                  cy: "12",
+                  r: "10",
+                  stroke: "currentColor",
+                  strokeWidth: "2",
+                  fill: "none"
+                }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("path", {
+                  strokeLinecap: "round",
+                  strokeLinejoin: "round",
+                  d: "M12 8v4m0 4h.01"
+                })]
+              }), "Plugin requirements"]
+            })
           })
         })]
-      }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsxs)("div", {
+      }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsxs)("div", {
         className: "tw-flex tw-gap-2 tw-pt-3 tw-border-t tw-border-gray-200",
-        children: [pack.preview_url && pack.preview_url !== '#' && /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsxs)("button", {
+        children: [pack.preview_url && pack.preview_url !== '#' && /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsxs)("button", {
           onClick: handlePreview,
           className: "tw-flex-1 tw-inline-flex tw-items-center tw-justify-center tw-gap-1.5 tw-px-3 tw-py-2 tw-text-xs tw-font-semibold tw-text-gray-700 tw-bg-white tw-border tw-border-gray-300 tw-rounded-md hover:tw-bg-gray-50 focus:tw-outline-none focus:tw-ring-2 focus:tw-ring-offset-2 focus:tw-ring-blue-500 tw-transition-colors __tw-font-space-mono",
-          children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsx)(lucide_react__WEBPACK_IMPORTED_MODULE_2__["default"], {
+          children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)(lucide_react__WEBPACK_IMPORTED_MODULE_6__["default"], {
             className: "tw-w-4 tw-h-4"
-          }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsx)("span", {
+          }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("span", {
             children: "Preview"
           })]
-        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsxs)("button", {
+        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsxs)("button", {
           onClick: handleInstall,
           className: "tw-flex-1 tw-inline-flex tw-items-center tw-justify-center tw-gap-1.5 tw-px-3 tw-py-2 tw-text-xs tw-font-semibold tw-text-white tw-bg-blue-600 tw-border tw-border-transparent tw-rounded-md hover:tw-bg-blue-700 focus:tw-outline-none focus:tw-ring-2 focus:tw-ring-offset-2 focus:tw-ring-blue-500 tw-transition-colors __tw-font-space-mono" + (pack.required && pack.required.length > 0 && !pack.required.every(function (req) {
-            return (0,_util_dummyPackLib__WEBPACK_IMPORTED_MODULE_6__.validateVersionPackageRequirements)(req.type, req.value);
-          }) || pluginsRequirements && pluginsRequirements.status !== 'ok' ? " tw-opacity-60 tw-cursor-not-allowed hover:tw-bg-blue-600" : ""),
+            return (0,_util_dummyPackLib__WEBPACK_IMPORTED_MODULE_1__.validateVersionPackageRequirements)(req.type, req.value);
+          }) || !buttonInstallActiveByPluginRequirements ? " tw-opacity-60 tw-cursor-not-allowed hover:tw-bg-blue-600" : ""),
           disabled: pack.required && pack.required.length > 0 && !pack.required.every(function (req) {
-            return (0,_util_dummyPackLib__WEBPACK_IMPORTED_MODULE_6__.validateVersionPackageRequirements)(req.type, req.value);
-          }) || pluginsRequirements && pluginsRequirements.status !== 'ok',
-          children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsx)(lucide_react__WEBPACK_IMPORTED_MODULE_1__["default"], {
+            return (0,_util_dummyPackLib__WEBPACK_IMPORTED_MODULE_1__.validateVersionPackageRequirements)(req.type, req.value);
+          }) || !buttonInstallActiveByPluginRequirements,
+          children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)(lucide_react__WEBPACK_IMPORTED_MODULE_7__["default"], {
             className: "tw-w-4 tw-h-4"
-          }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsx)("span", {
+          }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("span", {
             children: "Install"
           })]
         })]
       })]
-    }), pack.required_plugins && pack.required_plugins.length > 0 && /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsx)(_PluginRequirementsModal__WEBPACK_IMPORTED_MODULE_7__["default"], {
+    }), pack.validated_required_plugins && /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)(_PluginRequirementsModal__WEBPACK_IMPORTED_MODULE_2__["default"], {
       isOpen: isPluginModalOpen,
       onClose: function onClose() {
         return setIsPluginModalOpen(false);
       },
-      requiredPlugins: requiredPlugins,
-      pluginsRequirements: pluginsRequirements,
-      activePlugins: active_plugins
+      validatedRequiredPlugins: pack.validated_required_plugins
     })]
   });
 };
@@ -30810,209 +30797,266 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ });
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var lucide_react__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! lucide-react */ "./node_modules/lucide-react/dist/esm/icons/circle-check-big.js");
-/* harmony import */ var lucide_react__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! lucide-react */ "./node_modules/lucide-react/dist/esm/icons/circle-x.js");
-/* harmony import */ var lucide_react__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! lucide-react */ "./node_modules/lucide-react/dist/esm/icons/triangle-alert.js");
-/* harmony import */ var lucide_react__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! lucide-react */ "./node_modules/lucide-react/dist/esm/icons/x.js");
-/* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! react/jsx-runtime */ "./node_modules/react/jsx-runtime.js");
+/* harmony import */ var lucide_react__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! lucide-react */ "./node_modules/lucide-react/dist/esm/icons/circle-check.js");
+/* harmony import */ var lucide_react__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! lucide-react */ "./node_modules/lucide-react/dist/esm/icons/download.js");
+/* harmony import */ var lucide_react__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! lucide-react */ "./node_modules/lucide-react/dist/esm/icons/triangle-alert.js");
+/* harmony import */ var lucide_react__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! lucide-react */ "./node_modules/lucide-react/dist/esm/icons/refresh-cw.js");
+/* harmony import */ var lucide_react__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! lucide-react */ "./node_modules/lucide-react/dist/esm/icons/circle-alert.js");
+/* harmony import */ var _Modal__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../Modal */ "./src/components/Modal.jsx");
+/* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! react/jsx-runtime */ "./node_modules/react/jsx-runtime.js");
+function _typeof(o) { "@babel/helpers - typeof"; return _typeof = "function" == typeof Symbol && "symbol" == typeof Symbol.iterator ? function (o) { return typeof o; } : function (o) { return o && "function" == typeof Symbol && o.constructor === Symbol && o !== Symbol.prototype ? "symbol" : typeof o; }, _typeof(o); }
+function ownKeys(e, r) { var t = Object.keys(e); if (Object.getOwnPropertySymbols) { var o = Object.getOwnPropertySymbols(e); r && (o = o.filter(function (r) { return Object.getOwnPropertyDescriptor(e, r).enumerable; })), t.push.apply(t, o); } return t; }
+function _objectSpread(e) { for (var r = 1; r < arguments.length; r++) { var t = null != arguments[r] ? arguments[r] : {}; r % 2 ? ownKeys(Object(t), !0).forEach(function (r) { _defineProperty(e, r, t[r]); }) : Object.getOwnPropertyDescriptors ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t)) : ownKeys(Object(t)).forEach(function (r) { Object.defineProperty(e, r, Object.getOwnPropertyDescriptor(t, r)); }); } return e; }
+function _defineProperty(e, r, t) { return (r = _toPropertyKey(r)) in e ? Object.defineProperty(e, r, { value: t, enumerable: !0, configurable: !0, writable: !0 }) : e[r] = t, e; }
+function _toPropertyKey(t) { var i = _toPrimitive(t, "string"); return "symbol" == _typeof(i) ? i : i + ""; }
+function _toPrimitive(t, r) { if ("object" != _typeof(t) || !t) return t; var e = t[Symbol.toPrimitive]; if (void 0 !== e) { var i = e.call(t, r || "default"); if ("object" != _typeof(i)) return i; throw new TypeError("@@toPrimitive must return a primitive value."); } return ("string" === r ? String : Number)(t); }
+
 
 
 
 /**
- * PluginRequirementsModal Component
- * 
- * Displays plugin requirements in a modal dialog.
- * 
- * @param {boolean} isOpen - Whether the modal is open
- * @param {Function} onClose - Callback to close the modal
- * @param {Array} requiredPlugins - Array of required plugin objects
- * @param {Object} pluginsRequirements - Result from checkPluginsRequirements
- * @param {Array} activePlugins - Array of currently active plugins
+ * Template configuration mapping
+ * Maps __template values from backend to UI configuration
  */
 
+var TEMPLATE_CONFIG = {
+  'success': {
+    type: 'success',
+    icon: lucide_react__WEBPACK_IMPORTED_MODULE_3__["default"],
+    iconColor: 'tw-text-green-500',
+    badgeClass: 'tw-bg-green-50 tw-text-green-700 tw-border-green-200 tw-hidden',
+    badge: 'Ready',
+    message: null,
+    messageStyle: null
+  },
+  'auto-install': {
+    type: 'auto-install',
+    icon: lucide_react__WEBPACK_IMPORTED_MODULE_4__["default"],
+    iconColor: 'tw-text-blue-500',
+    badgeClass: 'tw-bg-blue-50 tw-text-blue-700 tw-border-blue-200',
+    badge: 'Will Install',
+    message: 'We will install the corresponding version for you.',
+    messageStyle: {
+      bgClass: 'tw-bg-blue-50',
+      borderClass: 'tw-border-blue-200',
+      textClass: 'tw-text-blue-700',
+      iconClass: 'tw-text-blue-500'
+    }
+  },
+  'warning': {
+    type: 'warning',
+    icon: lucide_react__WEBPACK_IMPORTED_MODULE_5__["default"],
+    iconColor: 'tw-text-yellow-600',
+    badgeClass: 'tw-bg-yellow-50 tw-text-yellow-800 tw-border-yellow-300',
+    badge: 'Action Required',
+    message: 'This plugin is active with an incompatible version. Please update it to meet the requirements or deactivate/remove it before proceeding.',
+    messageStyle: {
+      bgClass: 'tw-bg-yellow-50',
+      borderClass: 'tw-border-yellow-300',
+      textClass: 'tw-text-yellow-900',
+      iconClass: 'tw-text-yellow-600'
+    }
+  },
+  'auto-update': {
+    type: 'auto-update',
+    icon: lucide_react__WEBPACK_IMPORTED_MODULE_6__["default"],
+    iconColor: 'tw-text-blue-500',
+    badgeClass: 'tw-bg-blue-50 tw-text-blue-700 tw-border-blue-200',
+    badge: 'Will Update',
+    message: null,
+    // Will be set dynamically with version info
+    messageStyle: {
+      bgClass: 'tw-bg-blue-50',
+      borderClass: 'tw-border-blue-200',
+      textClass: 'tw-text-blue-700',
+      iconClass: 'tw-text-blue-500'
+    }
+  },
+  'auto-activate': {
+    type: 'auto-activate',
+    icon: lucide_react__WEBPACK_IMPORTED_MODULE_3__["default"],
+    iconColor: 'tw-text-green-500',
+    badgeClass: 'tw-bg-green-50 tw-text-green-700 tw-border-green-200',
+    badge: 'Will Activate',
+    message: 'Plugin meets version requirements and will be activated.',
+    messageStyle: {
+      bgClass: 'tw-bg-green-50',
+      borderClass: 'tw-border-green-200',
+      textClass: 'tw-text-green-700',
+      iconClass: 'tw-text-green-500'
+    }
+  },
+  'unknown': {
+    type: 'unknown',
+    icon: lucide_react__WEBPACK_IMPORTED_MODULE_7__["default"],
+    iconColor: 'tw-text-gray-500',
+    badgeClass: 'tw-bg-gray-50 tw-text-gray-700 tw-border-gray-200',
+    badge: 'Unknown',
+    message: 'Unable to determine plugin status.',
+    messageStyle: {
+      bgClass: 'tw-bg-gray-50',
+      borderClass: 'tw-border-gray-200',
+      textClass: 'tw-text-gray-700',
+      iconClass: 'tw-text-gray-500'
+    }
+  }
+};
+
+/**
+ * Get plugin status configuration from __template field
+ * 
+ * @param {Object} plugin - Plugin data from backend
+ * @returns {Object} Status configuration for UI rendering
+ */
+var getPluginStatus = function getPluginStatus(plugin) {
+  var template = plugin.__template || 'unknown';
+  var config = TEMPLATE_CONFIG[template] || TEMPLATE_CONFIG['unknown'];
+
+  // For auto-update template, add dynamic version message if available
+  if (template === 'auto-update' && plugin.current_version && plugin.required_version) {
+    return _objectSpread(_objectSpread({}, config), {}, {
+      message: "Current version (v".concat(plugin.current_version, ") is lower than required (v").concat(plugin.required_version, "). We will update to the corresponding version for you.")
+    });
+  }
+  return config;
+};
+
+/**
+ * Plugin Requirements Modal
+ * 
+ * Displays plugin requirements validation results with clean, minimal styling.
+ * 
+ * @param {Object} props
+ * @param {boolean} props.isOpen - Controls modal visibility
+ * @param {Function} props.onClose - Function to close the modal
+ * @param {Object} props.validatedRequiredPlugins - Validation results object
+ */
 var PluginRequirementsModal = function PluginRequirementsModal(_ref) {
   var isOpen = _ref.isOpen,
     onClose = _ref.onClose,
-    _ref$requiredPlugins = _ref.requiredPlugins,
-    requiredPlugins = _ref$requiredPlugins === void 0 ? [] : _ref$requiredPlugins,
-    _ref$pluginsRequireme = _ref.pluginsRequirements,
-    pluginsRequirements = _ref$pluginsRequireme === void 0 ? null : _ref$pluginsRequireme,
-    _ref$activePlugins = _ref.activePlugins,
-    activePlugins = _ref$activePlugins === void 0 ? [] : _ref$activePlugins;
-  if (!isOpen) return null;
-  var handleBackdropClick = function handleBackdropClick(e) {
-    if (e.target === e.currentTarget) {
-      onClose();
-    }
-  };
-  var getStatusIcon = function getStatusIcon(isCompatible, isIncompatible, isMissing) {
-    if (isCompatible) {
-      return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)(lucide_react__WEBPACK_IMPORTED_MODULE_1__["default"], {
-        className: "tw-w-5 tw-h-5 tw-text-green-600"
-      });
-    } else if (isIncompatible) {
-      return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)(lucide_react__WEBPACK_IMPORTED_MODULE_3__["default"], {
-        className: "tw-w-5 tw-h-5 tw-text-yellow-600"
-      });
-    } else {
-      return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)(lucide_react__WEBPACK_IMPORTED_MODULE_2__["default"], {
-        className: "tw-w-5 tw-h-5 tw-text-red-600"
-      });
-    }
-  };
-  var getStatusBadge = function getStatusBadge(isCompatible, isIncompatible, isMissing) {
-    if (isCompatible) {
-      return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsxs)("span", {
-        className: "tw-inline-flex tw-items-center tw-gap-1 tw-bg-green-100 tw-text-green-700 tw-px-2.5 tw-py-1 tw-rounded-full tw-text-xs tw-font-semibold",
-        children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)(lucide_react__WEBPACK_IMPORTED_MODULE_1__["default"], {
-          className: "tw-w-3.5 tw-h-3.5"
-        }), "Compatible"]
-      });
-    } else if (isIncompatible) {
-      return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsxs)("span", {
-        className: "tw-inline-flex tw-items-center tw-gap-1 tw-bg-yellow-100 tw-text-yellow-700 tw-px-2.5 tw-py-1 tw-rounded-full tw-text-xs tw-font-semibold",
-        children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)(lucide_react__WEBPACK_IMPORTED_MODULE_3__["default"], {
-          className: "tw-w-3.5 tw-h-3.5"
-        }), "Version Mismatch"]
-      });
-    } else {
-      return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsxs)("span", {
-        className: "tw-inline-flex tw-items-center tw-gap-1 tw-bg-red-100 tw-text-red-700 tw-px-2.5 tw-py-1 tw-rounded-full tw-text-xs tw-font-semibold",
-        children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)(lucide_react__WEBPACK_IMPORTED_MODULE_2__["default"], {
-          className: "tw-w-3.5 tw-h-3.5"
-        }), "Not Installed"]
-      });
-    }
-  };
-  var allCompatible = pluginsRequirements && pluginsRequirements.status === 'ok';
-  return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsxs)("div", {
-    className: "tw-fixed tw-inset-0 tw-z-50 tw-overflow-y-auto",
-    onClick: handleBackdropClick,
-    children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)("div", {
-      className: "tw-fixed tw-inset-0 tw-bg-black tw-bg-opacity-50 tw-transition-opacity"
-    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)("div", {
-      className: "tw-flex tw-items-center tw-justify-center tw-min-h-screen tw-px-4 tw-py-8",
-      children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsxs)("div", {
-        className: "tw-relative tw-bg-white tw-rounded-lg tw-shadow-xl tw-max-w-2xl tw-w-full tw-max-h-[90vh] tw-overflow-hidden tw-flex tw-flex-col",
-        children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsxs)("div", {
-          className: "tw-flex tw-items-center tw-justify-between tw-px-6 tw-py-4 tw-border-b tw-border-gray-200",
-          children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsxs)("div", {
-            children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)("h2", {
-              className: "tw-text-lg tw-font-semibold tw-text-gray-900",
-              children: "Required Plugins"
-            }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)("p", {
-              className: "tw-text-sm tw-text-gray-500 tw-mt-1",
-              children: allCompatible ? 'All required plugins are installed and compatible' : 'Some plugins need to be installed or updated'
-            })]
-          }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)("button", {
-            onClick: onClose,
-            className: "tw-text-gray-400 hover:tw-text-gray-500 tw-transition-colors",
-            children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)(lucide_react__WEBPACK_IMPORTED_MODULE_4__["default"], {
-              className: "tw-w-5 tw-h-5"
-            })
-          })]
-        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)("div", {
-          className: "tw-flex-1 tw-overflow-y-auto tw-px-6 tw-py-4",
-          children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)("div", {
-            className: "tw-space-y-3",
-            children: requiredPlugins.map(function (reqPlugin, index) {
-              var isMissing = (pluginsRequirements === null || pluginsRequirements === void 0 ? void 0 : pluginsRequirements.missing.includes(reqPlugin.slug)) || false;
-              var incompatible = pluginsRequirements === null || pluginsRequirements === void 0 ? void 0 : pluginsRequirements.incompatible.find(function (inc) {
-                return inc.slug === reqPlugin.slug;
-              });
-              var isCompatible = !isMissing && !incompatible;
+    validatedRequiredPlugins = _ref.validatedRequiredPlugins;
+  if (!validatedRequiredPlugins) {
+    return null;
+  }
+  var passed = validatedRequiredPlugins.passed,
+    _validatedRequiredPlu = validatedRequiredPlugins.results,
+    results = _validatedRequiredPlu === void 0 ? [] : _validatedRequiredPlu;
 
-              // Find installed plugin info
-              var installedPlugin = activePlugins.find(function (p) {
-                return p.slug === reqPlugin.slug;
-              });
-              return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)("div", {
-                className: "tw-border tw-border-gray-200 tw-rounded-lg tw-p-4 tw-bg-gray-50 hover:tw-bg-gray-100 tw-transition-colors",
-                children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsxs)("div", {
-                  className: "tw-flex tw-items-start tw-gap-4",
-                  children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)("div", {
-                    className: "tw-flex-shrink-0 tw-mt-0.5",
-                    children: getStatusIcon(isCompatible, !!incompatible, isMissing)
-                  }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsxs)("div", {
-                    className: "tw-flex-1 tw-min-w-0",
-                    children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsxs)("div", {
-                      className: "tw-flex tw-items-center tw-justify-between tw-gap-3 tw-mb-2",
-                      children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)("h3", {
-                        className: "tw-text-base tw-font-semibold tw-text-gray-900",
-                        children: reqPlugin.name || reqPlugin.slug
-                      }), getStatusBadge(isCompatible, !!incompatible, isMissing)]
-                    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)("p", {
-                      className: "tw-text-xs tw-text-gray-500 tw-mb-3 tw-font-mono",
-                      children: reqPlugin.slug
-                    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsxs)("div", {
-                      className: "tw-space-y-1.5",
-                      children: [isMissing ? /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsxs)("div", {
-                        className: "tw-text-sm tw-text-red-600",
-                        children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)("strong", {
-                          children: "Status:"
-                        }), " Plugin is not installed"]
-                      }) : incompatible ? /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsxs)("div", {
-                        className: "tw-space-y-1",
-                        children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsxs)("div", {
-                          className: "tw-text-sm tw-text-gray-700",
-                          children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)("strong", {
-                            children: "Installed Version:"
-                          }), ' ', /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)("span", {
-                            className: "tw-font-mono tw-text-red-600",
-                            children: incompatible.installedVersion || 'N/A'
-                          })]
-                        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsxs)("div", {
-                          className: "tw-text-sm tw-text-gray-700",
-                          children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)("strong", {
-                            children: "Required Version:"
-                          }), ' ', /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsxs)("span", {
-                            className: "tw-font-mono tw-font-semibold tw-text-yellow-600",
-                            children: [incompatible.requiredVersion, "+"]
-                          })]
-                        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)("div", {
-                          className: "tw-text-xs tw-text-yellow-700 tw-mt-2 tw-p-2 tw-bg-yellow-50 tw-rounded tw-border tw-border-yellow-200",
-                          children: "\u26A0\uFE0F Please update this plugin to the required version or higher."
-                        })]
-                      }) : /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsxs)("div", {
-                        className: "tw-text-sm tw-text-gray-700",
-                        children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)("strong", {
-                          children: "Installed Version:"
-                        }), ' ', /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)("span", {
-                          className: "tw-font-mono tw-text-green-700 tw-font-semibold",
-                          children: (installedPlugin === null || installedPlugin === void 0 ? void 0 : installedPlugin.version) || 'N/A'
-                        })]
-                      }), reqPlugin.version && /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsxs)("div", {
-                        className: "tw-text-xs tw-text-gray-500 tw-mt-1",
-                        children: ["Minimum required: ", /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsxs)("span", {
-                          className: "tw-font-mono",
-                          children: [reqPlugin.version, "+"]
-                        })]
-                      })]
-                    })]
-                  })]
-                })
-              }, index);
-            })
-          })
-        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)("div", {
-          className: "tw-px-6 tw-py-4 tw-border-t tw-border-gray-200 tw-bg-gray-50",
-          children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsxs)("div", {
-            className: "tw-flex tw-items-center tw-justify-between",
-            children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)("div", {
-              className: "tw-text-sm tw-text-gray-600",
-              children: allCompatible ? /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)("span", {
-                className: "tw-text-green-700 tw-font-medium",
-                children: "\u2713 All requirements met"
-              }) : /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)("span", {
-                className: "tw-text-yellow-700 tw-font-medium",
-                children: "\u26A0 Please install or update required plugins"
-              })
-            }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)("button", {
-              onClick: onClose,
-              className: "tw-px-4 tw-py-2 tw-text-sm tw-font-semibold tw-text-white tw-bg-blue-600 tw-rounded-md hover:tw-bg-blue-700 focus:tw-outline-none focus:tw-ring-2 focus:tw-ring-offset-2 focus:tw-ring-blue-500 tw-transition-colors",
-              children: "Close"
+  // Count different statuses
+  var statusCounts = results.reduce(function (acc, plugin) {
+    var status = getPluginStatus(plugin);
+    acc[status.type] = (acc[status.type] || 0) + 1;
+    return acc;
+  }, {});
+  var hasWarnings = (statusCounts['warning'] || 0) > 0;
+  var needsAutoAction = (statusCounts['auto-install'] || 0) + (statusCounts['auto-update'] || 0) > 0;
+  return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsxs)(_Modal__WEBPACK_IMPORTED_MODULE_1__["default"], {
+    isOpen: isOpen,
+    onClose: onClose,
+    title: "Plugin Requirements",
+    size: "lg",
+    children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsxs)("div", {
+      className: "tw-border tw-p-4 tw-mb-4 tw-flex tw-items-start tw-gap-3 ".concat(passed ? 'tw-bg-green-50 tw-border-green-200' : hasWarnings ? 'tw-bg-yellow-50 tw-border-yellow-300' : 'tw-bg-blue-50 tw-border-blue-200'),
+      children: [passed ? /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)(lucide_react__WEBPACK_IMPORTED_MODULE_3__["default"], {
+        className: "tw-w-5 tw-h-5 tw-text-green-500 tw-mt-0.5 tw-flex-shrink-0"
+      }) : hasWarnings ? /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)(lucide_react__WEBPACK_IMPORTED_MODULE_5__["default"], {
+        className: "tw-w-5 tw-h-5 tw-text-yellow-600 tw-mt-0.5 tw-flex-shrink-0"
+      }) : /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)(lucide_react__WEBPACK_IMPORTED_MODULE_7__["default"], {
+        className: "tw-w-5 tw-h-5 tw-text-blue-500 tw-mt-0.5 tw-flex-shrink-0"
+      }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("div", {
+        className: "tw-text-xs tw-leading-relaxed tw-font-space-mono",
+        children: passed ? /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsxs)("span", {
+          className: "tw-text-green-900",
+          children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("strong", {
+            className: "tw-font-semibold",
+            children: "All requirements met!"
+          }), " All ", results.length, " required plugins are ready."]
+        }) : /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.Fragment, {
+          children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsxs)("span", {
+            className: hasWarnings ? 'tw-text-yellow-900' : 'tw-text-blue-900',
+            children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("strong", {
+              className: "tw-font-semibold",
+              children: hasWarnings ? 'Manual action required:' : 'Ready to proceed:'
+            }), ' ', hasWarnings && /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsxs)(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.Fragment, {
+              children: [statusCounts['warning'], " plugin", statusCounts['warning'] > 1 ? 's' : '', " need", statusCounts['warning'] === 1 ? 's' : '', " manual update or deactivation."]
+            }), needsAutoAction && /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsxs)(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.Fragment, {
+              children: [hasWarnings && ' ', statusCounts['auto-install'] || 0, " plugin", (statusCounts['auto-install'] || 0) !== 1 ? 's' : '', " will be installed and ", statusCounts['auto-update'] || 0, " will be updated automatically."]
             })]
           })
+        })
+      })]
+    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("div", {
+      className: "tw-space-y-2 tw-max-h-[400px] tw-overflow-y-auto",
+      children: results.map(function (plugin, index) {
+        var status = getPluginStatus(plugin);
+        var StatusIcon = status.icon;
+        return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsxs)("div", {
+          className: "tw-bg-white tw-border tw-border-gray-200 tw-p-3 tw-flex tw-items-start tw-gap-3",
+          children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)(StatusIcon, {
+            className: "tw-w-4 tw-h-4 ".concat(status.iconColor, " tw-mt-0.5 tw-flex-shrink-0")
+          }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsxs)("div", {
+            className: "tw-flex-1 tw-min-w-0",
+            children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsxs)("div", {
+              className: "tw-flex tw-items-center tw-justify-between tw-gap-2",
+              children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("h5", {
+                className: "tw-text-sm tw-font-semibold tw-text-gray-900 tw-truncate",
+                children: plugin.name
+              }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("span", {
+                className: "tw-inline-flex tw-items-center tw-px-2 tw-py-0.5 tw-text-xs tw-font-medium tw-border tw-rounded-full ".concat(status.badgeClass, " tw-flex-shrink-0"),
+                children: status.badge
+              })]
+            }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsxs)("div", {
+              className: "tw-flex tw-items-center tw-gap-3 tw-mt-1 tw-text-xs tw-font-space-mono tw-text-gray-600",
+              children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsxs)("span", {
+                children: ["Required: ", /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsxs)("span", {
+                  className: "tw-text-gray-900",
+                  children: ["v", plugin.required_version]
+                })]
+              }), plugin.installed && /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsxs)(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.Fragment, {
+                children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("span", {
+                  className: "tw-text-gray-400",
+                  children: "\u2022"
+                }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsxs)("span", {
+                  children: ["Current: ", /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsxs)("span", {
+                    className: plugin.passed ? 'tw-text-green-600' : status.type === 'warning' ? 'tw-text-yellow-700' : 'tw-text-blue-600',
+                    children: ["v", plugin.current_version]
+                  })]
+                }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("span", {
+                  className: "tw-text-gray-400",
+                  children: "\u2022"
+                }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("span", {
+                  className: plugin.active ? 'tw-text-green-600' : 'tw-text-gray-500',
+                  children: plugin.active ? 'Active' : 'Inactive'
+                })]
+              })]
+            }), status.message && status.messageStyle && /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsxs)("div", {
+              className: "tw-mt-2 tw-p-2 tw-border tw-flex tw-items-start tw-gap-2 ".concat(status.messageStyle.bgClass, " ").concat(status.messageStyle.borderClass),
+              children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)(lucide_react__WEBPACK_IMPORTED_MODULE_7__["default"], {
+                className: "tw-w-3 tw-h-3 tw-mt-0.5 tw-flex-shrink-0 ".concat(status.messageStyle.iconClass)
+              }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("span", {
+                className: "tw-text-xs tw-leading-relaxed ".concat(status.messageStyle.textClass, " tw-font-space-mono"),
+                children: status.message
+              })]
+            })]
+          })]
+        }, plugin.slug || index);
+      })
+    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("div", {
+      className: "tw-flex tw-justify-between tw-items-center tw-gap-2 tw-mt-4 tw-pt-4 tw-border-t tw-border-gray-200",
+      children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsxs)("div", {
+        className: "tw-flex tw-gap-2 tw-ml-auto",
+        children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("button", {
+          type: "button",
+          onClick: onClose,
+          className: "tw-inline-flex tw-items-center tw-px-4 tw-py-2 tw-bg-gray-100 hover:tw-bg-gray-200 tw-text-gray-700 tw-rounded-md tw-font-medium tw-shadow-sm tw-transition-all tw-duration-150 focus:tw-outline-none focus:tw-ring-2 focus:tw-ring-offset-2 focus:tw-ring-gray-400 tw-mr-2",
+          children: "Close"
+        }), !passed && hasWarnings && /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("button", {
+          type: "button",
+          onClick: function onClick() {
+            window.location.href = '/wp-admin/plugins.php';
+          },
+          className: "tw-inline-flex tw-items-center tw-px-5 tw-py-2.5 tw-bg-blue-600 hover:tw-bg-blue-700 tw-text-white tw-rounded-md tw-font-semibold tw-shadow-sm tw-transition-all tw-duration-150 focus:tw-outline-none focus:tw-ring-2 focus:tw-ring-offset-2 focus:tw-ring-blue-500",
+          children: "Manage Plugins"
         })]
       })
     })]
@@ -31064,26 +31108,25 @@ function useDummyPack() {
   (0,react__WEBPACK_IMPORTED_MODULE_0__.useEffect)(function () {
     var fetchPacks = /*#__PURE__*/function () {
       var _ref = _asyncToGenerator(/*#__PURE__*/_regenerator().m(function _callee() {
-        var _response$success, response, _t;
+        var response, _response$data, _t;
         return _regenerator().w(function (_context) {
-          while (1) switch (_context.p = _context.n) {
+          while (1) switch (_context.n) {
             case 0:
               setIsLoading(true);
               _context.p = 1;
               _context.n = 2;
-              return (0,_util_dummyPackLib__WEBPACK_IMPORTED_MODULE_1__.getDummyPacks)();
+              return (0,_util_dummyPackLib__WEBPACK_IMPORTED_MODULE_1__.getDummyPacks2)();
             case 2:
               response = _context.v;
-              if (!((response === null || response === void 0 || (_response$success = response.success) === null || _response$success === void 0 ? void 0 : _response$success.valueOf()) == false)) {
+              if (!(response.success == false)) {
                 _context.n = 3;
                 break;
               }
-              // console.log('getDummyPacks', response?.success?.valueOf() == false);
-              setError(response.data);
+              setError(response === null || response === void 0 || (_response$data = response.data) === null || _response$data === void 0 ? void 0 : _response$data.error_message);
               setPacks(null);
               return _context.a(2);
             case 3:
-              setPacks(response);
+              setPacks(response === null || response === void 0 ? void 0 : response.data);
               setError(null);
               _context.n = 5;
               break;
@@ -31131,6 +31174,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */   encodePayload: () => (/* binding */ encodePayload),
 /* harmony export */   getDownloadPackUrl: () => (/* binding */ getDownloadPackUrl),
 /* harmony export */   getDummyPacks: () => (/* binding */ getDummyPacks),
+/* harmony export */   getDummyPacks2: () => (/* binding */ getDummyPacks2),
 /* harmony export */   isVersionGte: () => (/* binding */ isVersionGte),
 /* harmony export */   validateVersionPackageRequirements: () => (/* binding */ validateVersionPackageRequirements)
 /* harmony export */ });
@@ -31203,25 +31247,43 @@ var getDummyPacks = /*#__PURE__*/function () {
     return _ref.apply(this, arguments);
   };
 }();
-var getDownloadPackUrl = /*#__PURE__*/function () {
-  var _ref2 = _asyncToGenerator(/*#__PURE__*/_regenerator().m(function _callee2(packID) {
+var getDummyPacks2 = /*#__PURE__*/function () {
+  var _ref2 = _asyncToGenerator(/*#__PURE__*/_regenerator().m(function _callee2() {
     var response;
     return _regenerator().w(function (_context2) {
       while (1) switch (_context2.n) {
         case 0:
           _context2.n = 1;
-          return (0,_lib__WEBPACK_IMPORTED_MODULE_0__.__request)("".concat(endpoint, "packages/").concat(theme_slug, "/").concat(packID), {
-            method: 'GET',
-            headers: headers
-          });
+          return (0,_lib__WEBPACK_IMPORTED_MODULE_0__.__request)("".concat(ajax_url, "?action=worrprba_ajax_dummy_pack_center_get_packs&installNonce=").concat(nonce));
         case 1:
           response = _context2.v;
           return _context2.a(2, response);
       }
     }, _callee2);
   }));
-  return function getDownloadPackUrl(_x) {
+  return function getDummyPacks2() {
     return _ref2.apply(this, arguments);
+  };
+}();
+var getDownloadPackUrl = /*#__PURE__*/function () {
+  var _ref3 = _asyncToGenerator(/*#__PURE__*/_regenerator().m(function _callee3(packID) {
+    var response;
+    return _regenerator().w(function (_context3) {
+      while (1) switch (_context3.n) {
+        case 0:
+          _context3.n = 1;
+          return (0,_lib__WEBPACK_IMPORTED_MODULE_0__.__request)("".concat(endpoint, "packages/").concat(theme_slug, "/").concat(packID), {
+            method: 'GET',
+            headers: headers
+          });
+        case 1:
+          response = _context3.v;
+          return _context3.a(2, response);
+      }
+    }, _callee3);
+  }));
+  return function getDownloadPackUrl(_x) {
+    return _ref3.apply(this, arguments);
   };
 }();
 
@@ -31262,13 +31324,13 @@ var validateVersionPackageRequirements = function validateVersionPackageRequirem
   return true; // Versions are equal
 };
 var doInstallProcess = /*#__PURE__*/function () {
-  var _ref3 = _asyncToGenerator(/*#__PURE__*/_regenerator().m(function _callee3(process) {
+  var _ref4 = _asyncToGenerator(/*#__PURE__*/_regenerator().m(function _callee4(process) {
     var action, payload, response;
-    return _regenerator().w(function (_context3) {
-      while (1) switch (_context3.n) {
+    return _regenerator().w(function (_context4) {
+      while (1) switch (_context4.n) {
         case 0:
           action = process.action, payload = process.payload;
-          _context3.n = 1;
+          _context4.n = 1;
           return (0,_lib__WEBPACK_IMPORTED_MODULE_0__.__request)(ajax_url, {
             method: 'POST',
             headers: {
@@ -31276,23 +31338,23 @@ var doInstallProcess = /*#__PURE__*/function () {
             },
             body: new URLSearchParams(_objectSpread(_objectSpread({
               action: action
-            }, Object.fromEntries(Object.entries(payload).map(function (_ref4) {
-              var _ref5 = _slicedToArray(_ref4, 2),
-                key = _ref5[0],
-                value = _ref5[1];
+            }, Object.fromEntries(Object.entries(payload).map(function (_ref5) {
+              var _ref6 = _slicedToArray(_ref5, 2),
+                key = _ref6[0],
+                value = _ref6[1];
               return ["payload[".concat(key, "]"), value];
             }))), {}, {
               installNonce: nonce
             }))
           });
         case 1:
-          response = _context3.v;
-          return _context3.a(2, response);
+          response = _context4.v;
+          return _context4.a(2, response);
       }
-    }, _callee3);
+    }, _callee4);
   }));
   return function doInstallProcess(_x2) {
-    return _ref3.apply(this, arguments);
+    return _ref4.apply(this, arguments);
   };
 }();
 
@@ -31374,13 +31436,16 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
 /* harmony export */ });
-/* harmony import */ var zustand__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! zustand */ "./node_modules/zustand/esm/react.mjs");
-/* harmony import */ var zustand_middleware_immer__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! zustand/middleware/immer */ "./node_modules/zustand/esm/middleware/immer.mjs");
-/* harmony import */ var _dummyPackLib__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./dummyPackLib */ "./src/util/dummyPackLib.js");
+/* harmony import */ var zustand__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! zustand */ "./node_modules/zustand/esm/react.mjs");
+/* harmony import */ var zustand_middleware_immer__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! zustand/middleware/immer */ "./node_modules/zustand/esm/middleware/immer.mjs");
+/* harmony import */ var _dummyPackLib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./dummyPackLib */ "./src/util/dummyPackLib.js");
+var _excluded = ["ID", "size"];
+function _objectWithoutProperties(e, t) { if (null == e) return {}; var o, r, i = _objectWithoutPropertiesLoose(e, t); if (Object.getOwnPropertySymbols) { var n = Object.getOwnPropertySymbols(e); for (r = 0; r < n.length; r++) o = n[r], -1 === t.indexOf(o) && {}.propertyIsEnumerable.call(e, o) && (i[o] = e[o]); } return i; }
+function _objectWithoutPropertiesLoose(r, e) { if (null == r) return {}; var t = {}; for (var n in r) if ({}.hasOwnProperty.call(r, n)) { if (-1 !== e.indexOf(n)) continue; t[n] = r[n]; } return t; }
 
 
 
-var useDummyPackStore = (0,zustand__WEBPACK_IMPORTED_MODULE_0__.create)((0,zustand_middleware_immer__WEBPACK_IMPORTED_MODULE_1__.immer)(function (set, get) {
+var useDummyPackStore = (0,zustand__WEBPACK_IMPORTED_MODULE_1__.create)((0,zustand_middleware_immer__WEBPACK_IMPORTED_MODULE_2__.immer)(function (set, get) {
   return {
     // State
     installProcess: {
@@ -31392,7 +31457,11 @@ var useDummyPackStore = (0,zustand__WEBPACK_IMPORTED_MODULE_0__.create)((0,zusta
     },
     buildInstallProcess: function buildInstallProcess(packData) {
       var ID = packData.ID,
-        size = packData.size;
+        size = packData.size,
+        rest = _objectWithoutProperties(packData, _excluded);
+      var restorePluginsPayload = rest.skip_restore_plugins && rest.skip_restore_plugins.length > 0 ? {
+        skip_restore_plugins: rest.skip_restore_plugins.join(',')
+      } : {};
       var process = [{
         step: 1,
         name: "Download Package ".concat(size ? "(".concat(size, ")") : ''),
@@ -31424,7 +31493,7 @@ var useDummyPackStore = (0,zustand__WEBPACK_IMPORTED_MODULE_0__.create)((0,zusta
         name: 'Restore Plugins',
         description: '🔌 Restoring plugins from the dummy pack. Your site\'s functionality is coming back online!',
         action: 'worrprba_ajax_restore_dummy_pack_plugins',
-        payload: {}
+        payload: restorePluginsPayload
       }, {
         step: 6,
         name: 'Restore Database',

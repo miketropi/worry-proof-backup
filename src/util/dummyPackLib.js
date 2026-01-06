@@ -43,6 +43,11 @@ export const getDummyPacks = async () => {
   return response;
 };
 
+export const getDummyPacks2 = async () => {
+  const response = await __request(`${ ajax_url }?action=worrprba_ajax_dummy_pack_center_get_packs&installNonce=${ nonce }`);
+  return response;
+}
+
 export const getDownloadPackUrl = async (packID) => {
   const response = await __request(`${ endpoint }packages/${ theme_slug }/${ packID }`, {
     method: 'GET',

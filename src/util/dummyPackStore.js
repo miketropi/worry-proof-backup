@@ -13,7 +13,9 @@ const useDummyPackStore = create(
       packData: null,
 		},
     buildInstallProcess: (packData) => {
-      const { ID, size } = packData;
+      const { ID, size, ...rest } = packData;
+      const restorePluginsPayload = rest.skip_restore_plugins && rest.skip_restore_plugins.length > 0 ? { skip_restore_plugins: rest.skip_restore_plugins.join(',') } : {};
+      
       const process = [
 				{
 					step: 1,
@@ -22,7 +24,7 @@ const useDummyPackStore = create(
 					action: 'worrprba_ajax_download_dummy_pack',
 					payload: {
             ID
-          },
+          }
 				},
 				{
 					step: 2,
@@ -50,7 +52,7 @@ const useDummyPackStore = create(
 					name: 'Restore Plugins',
 					description: '🔌 Restoring plugins from the dummy pack. Your site\'s functionality is coming back online!',
 					action: 'worrprba_ajax_restore_dummy_pack_plugins',
-					payload: {},
+					payload: restorePluginsPayload,
 				},
 				{
 					step: 6,

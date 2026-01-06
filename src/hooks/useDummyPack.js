@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import { getDummyPacks } from "../util/dummyPackLib";
+import { getDummyPacks, getDummyPacks2 } from "../util/dummyPackLib";
 
 export default function useDummyPack() {
   const [packs, setPacks] = useState(null);
@@ -10,16 +10,15 @@ export default function useDummyPack() {
     const fetchPacks = async () => {
       setIsLoading(true);
       try {
-        const response = await getDummyPacks();
+        const response = await getDummyPacks2();
         
-        if(response?.success?.valueOf() == false) {
-          // console.log('getDummyPacks', response?.success?.valueOf() == false);
-          setError(response.data);
+        if(response.success == false) {
+          setError(response?.data?.error_message);
           setPacks(null);
           return;
         }
 
-        setPacks(response);
+        setPacks(response?.data);
         setError(null);
       } catch (err) {
         setError(err.data);

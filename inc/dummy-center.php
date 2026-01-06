@@ -123,7 +123,6 @@ function worrprba_dummy_pack_center_enqueue_script() {
     'wordpress_version' => wp_get_wp_version(),
     'license_key' => $license_key,
     'header_meta_attached_api' => worrprba_dummy_pack_header_meta_attached_api(),
-    'active_plugins' => worrprba_get_active_plugins_with_versions(),
   ) );
 }
 
@@ -175,7 +174,7 @@ function worrprba_dummy_pack_center_page() {
 function worrprba_dummy_pack_get_signed_url($package_id = '') {
   $headers = array(
     'Content-Type' => 'application/json',
-    'license_key' => worrprba_dummy_pack_center_get_license_key(),
+    'xxx-meta' => worrprba_dummy_pack_center_encode_payload(worrprba_dummy_pack_header_meta_attached_api()),
   );
   $url = WORRPRBA_DUMMY_PACK_CENTER_ENDPOINT . 'packages/' . WORRPRBA_DUMMY_PACK_CENTER_THEME_SLUG . '/' . $package_id;
   $response = wp_remote_get( $url, array( 'headers' => $headers ) );
@@ -193,7 +192,95 @@ function worrprba_dummy_pack_get_signed_url($package_id = '') {
 }
 
 /**
- * Hooks ajax install
+ * Encodes a payload similar to dummyPackLib.js encodePayload.
+ * - JSON stringifies the object/array
+ * - Reverses the string
+ * - Encodes as base64 (url-safe)
+ *
+ * @param mixed $obj
+ * @return string
+ */
+function worrprba_dummy_pack_center_encode_payload($obj) {
+  // Convert to JSON
+  $json = json_encode($obj);
+
+  // Reverse the string (multibyte safe)
+  $reversed = implode('', array_reverse(preg_split('//u', $json, -1, PREG_SPLIT_NO_EMPTY)));
+
+  // Base64 encode (urlsafe, unescaped)
+  $encoded = base64_encode($reversed);
+
+  return $encoded;
+}
+
+add_action('wp_ajax_worrprba_ajax_dummy_pack_center_get_packs', 'worrprba_ajax_dummy_pack_center_get_packs');
+function worrprba_ajax_dummy_pack_center_get_packs() {
+  // check nonce
+  check_ajax_referer( 'worrprba_dummy_pack_center_nonce', 'installNonce' );
+
+  $data = worrprba_dummy_pack_get_packs();
+
+  if ( is_wp_error( $data ) ) {
+    wp_send_json_error( array(
+      'error_message' => $data->get_error_message(),
+    ) );
+  }
+
+  wp_send_json_success( $data );  
+};
+
+/**
+ * Get dummy packs list from remote API.
+ * 
+ * @return array|WP_Error
+ */
+function worrprba_dummy_pack_get_packs() {
+  $endpoint = WORRPRBA_DUMMY_PACK_CENTER_ENDPOINT . 'packages/' . WORRPRBA_DUMMY_PACK_CENTER_THEME_SLUG;
+  $headers = array(
+    'Content-Type' => 'application/json',
+    'xxx-meta' => worrprba_dummy_pack_center_encode_payload(worrprba_dummy_pack_header_meta_attached_api()),
+  );
+
+  $response = wp_remote_get( $endpoint, array( 'headers' => $headers ) );
+
+  if ( is_wp_error( $response ) ) {
+    return new WP_Error( 'error', $response->get_error_message() );
+  }
+
+  $code = wp_remote_retrieve_response_code( $response );
+  $body = wp_remote_retrieve_body( $response );
+  $data = json_decode( $body, true );
+
+  if ( $code !== 200 ) {
+    return new WP_Error( 'error', 'Failed to fetch dummy packs. Status code: ' . $code . ' - ' . $body );
+  }
+
+  if(isset($data['packages']) && count($data['packages'])) {
+    // verify required plugins
+    $data['packages'] = array_map(function($package) {
+      if(isset($package['required_plugins']) && count($package['required_plugins'])) {
+        $validated_required_plugins = worrprba_validate_required_plugins_versions($package['required_plugins']);
+        $package['validated_required_plugins'] = $validated_required_plugins;
+
+        // make array filter by $validated_required_plugins, installed = true and passed = true
+        $skip_restore_plugins = array_values(array_filter($validated_required_plugins['results'], function($p) {
+          return $p['installed'] && $p['passed'];
+        }));
+
+        $package['skip_restore_plugins'] = array_map(function($p) {
+          return explode('/', $p['slug'])[0];
+        }, $skip_restore_plugins);
+      }
+      return $package;
+    }, $data['packages']);
+  }
+
+  return $data;
+}
+
+
+/**
+ * Hooks ajax install dummy process
  */
 add_action( 'wp_ajax_worrprba_ajax_download_dummy_pack', 'worrprba_ajax_download_dummy_pack' );
 add_action( 'wp_ajax_worrprba_ajax_unzip_dummy_pack', 'worrprba_ajax_unzip_dummy_pack' );
@@ -519,7 +606,7 @@ function worrprba_ajax_restore_dummy_pack_uploads() {
     $restorer = new WORRPB_Restore_File_System( array(
       'zip_file' => $path_zip_file,
       'destination_folder' => WP_CONTENT_DIR . '/uploads/',
-      'overwrite_existing' => false,
+      'overwrite_existing' => true,
       'exclude' => ['worry-proof-backup', 'worry-proof-backup-cron-manager', 'worry-proof-backup-zip'],
       'restore_progress_file_name' => '__uploads-restore-progress.json',
     ) );
@@ -578,6 +665,7 @@ function worrprba_ajax_restore_dummy_pack_plugins() {
   # get payload
   $payload = isset($_POST['payload']) ? wp_unslash($_POST['payload']) : array();
   $extracted_folder = isset($payload['extracted_folder']) ? sanitize_text_field($payload['extracted_folder']) : '';
+  $skip_restore_plugins = isset($payload['skip_restore_plugins']) ? explode(',', $payload['skip_restore_plugins']) : array();
 
   if ( empty( $extracted_folder ) ) {
     wp_send_json_error( array(
@@ -595,13 +683,19 @@ function worrprba_ajax_restore_dummy_pack_plugins() {
       'error_message' => __( 'Zip file not found.', 'worry-proof-backup' ),
     ) );
   }
+
+  $exclude = array('worry-proof-backup');
+  // check $skip_restore_plugins and convert to array push to $exclude
+  if($skip_restore_plugins && count($skip_restore_plugins)) {
+    $exclude = array_merge($exclude, $skip_restore_plugins);
+  }
   
   try {
     $restorer = new WORRPB_Restore_File_System( array(
       'zip_file' => $path_zip_file,
       'destination_folder' => WP_PLUGIN_DIR,
-      'overwrite_existing' => false,
-      'exclude' => apply_filters('worrprba_restore_plugin_exclude_dummy_pack', ['worry-proof-backup']), // phpcs:ignore WordPressVIPMinimum.Performance.WPQueryParams.PostNotIn_exclude
+      'overwrite_existing' => true,
+      'exclude' => apply_filters('worrprba_restore_plugin_exclude_dummy_pack', $exclude), // phpcs:ignore WordPressVIPMinimum.Performance.WPQueryParams.PostNotIn_exclude
       'restore_progress_file_name' => '__plugins-restore-progress.json',
     ) );
 
@@ -808,6 +902,12 @@ function worrprba_validate_required_plugins_versions( $required_plugins ) {
     require_once ABSPATH . 'wp-admin/includes/plugin.php';
   }
   $all_plugins = get_plugins();
+  $active_plugins = (array) get_option( 'active_plugins', array() );
+  // If multisite, merge with network active plugins
+  if ( is_multisite() ) {
+    $network_plugins = get_site_option( 'active_sitewide_plugins', array() );
+    $active_plugins = array_unique( array_merge( $active_plugins, array_keys( $network_plugins ) ) );
+  }
   $results = array();
   $all_passed = true;
 
@@ -818,6 +918,7 @@ function worrprba_validate_required_plugins_versions( $required_plugins ) {
     $plugin_info = isset( $all_plugins[ $slug ] ) ? $all_plugins[ $slug ] : null;
     $installed = $plugin_info !== null;
     $current_version = $installed ? ( isset( $plugin_info['Version'] ) ? $plugin_info['Version'] : '' ) : null;
+    $active = $installed && in_array( $slug, $active_plugins );
     $passed = true;
 
     if ( $installed ) {
@@ -825,21 +926,31 @@ function worrprba_validate_required_plugins_versions( $required_plugins ) {
       if ( version_compare( $current_version, $required_version, '>=' ) ) {
         $passed = true;
       } else {
-        $passed = false;
-        $all_passed = false;
+        if( $active ) {
+          $passed = false;
+          $all_passed = false;
+        } else {
+          $passed = false;
+          $all_passed = true;
+        }
       }
     } else {
       // Not installed = passed
       $passed = true;
     }
 
+    // Determine template type based on plugin status
+    $template = worrprba_determine_plugin_template( $installed, $active, $passed );
+
     $results[] = array(
-      'slug' => $slug,
-      'name' => $name,
-      'installed' => $installed,
-      'current_version' => $current_version,
-      'required_version' => $required_version,
-      'passed' => $passed,
+      'slug' => $slug, // string, plugin slug
+      'name' => $name, // string, plugin name
+      'installed' => $installed, // boolean, true if plugin installed
+      'active' => $active, // boolean, true if plugin active
+      'current_version' => $current_version, // string, plugin current version
+      'required_version' => $required_version, // string, plugin required version
+      'passed' => $passed, // boolean, true if installed version >= required version
+      '__template' => $template, // string, template type for UI rendering
     );
   }
 
@@ -847,4 +958,54 @@ function worrprba_validate_required_plugins_versions( $required_plugins ) {
     'passed' => $all_passed,
     'results' => $results,
   );
+}
+
+/**
+ * Determine plugin template type based on installation, activation, and version status.
+ *
+ * Template Types:
+ * - 'success': Plugin is installed, active, and meets version requirements
+ * - 'auto-install': Plugin is not installed (will be auto-installed)
+ * - 'warning': Plugin is active but doesn't meet version requirements (requires manual action)
+ * - 'auto-update': Plugin is installed but inactive with wrong version (will be auto-updated)
+ * - 'auto-activate': Plugin is installed with correct version but not active (will be activated)
+ *
+ * @param bool $installed Whether plugin is installed
+ * @param bool $active Whether plugin is active
+ * @param bool $passed Whether plugin meets version requirements
+ * @return string Template type
+ */
+function worrprba_determine_plugin_template( $installed, $active, $passed ) {
+  // CASE 1: All requirements met ✓
+  // Plugin is installed, active, and meets version requirements
+  if ( $passed === true && $installed === true && $active === true ) {
+    return 'success';
+  }
+
+  // CASE 2: Plugin not installed 📥
+  // Plugin needs to be installed
+  if ( $installed === false ) {
+    return 'auto-install';
+  }
+
+  // CASE 3: Plugin installed but ACTIVE with wrong version ⚠️
+  // Requires manual action - user must update or deactivate
+  // Cannot auto-update active plugins to avoid breaking the site
+  if ( $installed === true && $active === true && $passed === false ) {
+    return 'warning';
+  }
+
+  // CASE 4: Plugin installed but INACTIVE with wrong version 🔄
+  // Can be auto-updated since it's not active
+  if ( $installed === true && $active === false && $passed === false ) {
+    return 'auto-update';
+  }
+
+  // CASE 5: Plugin installed and passed, but not active (will be activated)
+  if ( $installed === true && $active === false && $passed === true ) {
+    return 'auto-activate';
+  }
+
+  // Fallback for any unexpected state
+  return 'unknown';
 }

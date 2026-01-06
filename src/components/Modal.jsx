@@ -71,7 +71,7 @@ const Modal = ({
 
   const modalContent = (
     <div
-      className="tw-fixed tw-inset-0 tw-z-50 tw-overflow-y-auto"
+      className="tw-fixed tw-inset-0 ___tw-z-50 tw-overflow-y-auto"
       style={{ zIndex: 9999 }}
       onClick={handleBackdropClick}
       role="presentation"
