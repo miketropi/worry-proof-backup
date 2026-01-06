@@ -34562,12 +34562,16 @@ var RestoreProcess = function RestoreProcess() {
     inProgressStep = restoreProcess.inProgressStep;
   var _useState = (0,react__WEBPACK_IMPORTED_MODULE_0__.useState)({}),
     _useState2 = _slicedToArray(_useState, 2),
-    responseOldStep = _useState2[0],
-    setResponseOldStep = _useState2[1];
-  var _useState3 = (0,react__WEBPACK_IMPORTED_MODULE_0__.useState)(null),
+    responsePerStep = _useState2[0],
+    setResponsePerStep = _useState2[1];
+  var _useState3 = (0,react__WEBPACK_IMPORTED_MODULE_0__.useState)({}),
     _useState4 = _slicedToArray(_useState3, 2),
-    error = _useState4[0],
-    setError = _useState4[1];
+    responseOldStep = _useState4[0],
+    setResponseOldStep = _useState4[1];
+  var _useState5 = (0,react__WEBPACK_IMPORTED_MODULE_0__.useState)(null),
+    _useState6 = _slicedToArray(_useState5, 2),
+    error = _useState6[0],
+    setError = _useState6[1];
   var toast = (0,_Toast__WEBPACK_IMPORTED_MODULE_3__.useToast)();
   var _restoreProcessHandler = /*#__PURE__*/function () {
     var _ref = _asyncToGenerator(/*#__PURE__*/_regenerator().m(function _callee(process) {
@@ -34600,6 +34604,7 @@ var RestoreProcess = function RestoreProcess() {
             }, 4000);
             return _context.a(2);
           case 3:
+            setResponsePerStep(_objectSpread(_objectSpread({}, responsePerStep), {}, _defineProperty({}, process.step, response.data)));
             if (!(response.data.restore_process_status == 'done')) {
               _context.n = 5;
               break;
@@ -34667,6 +34672,7 @@ var RestoreProcess = function RestoreProcess() {
     children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)("ol", {
       className: "tw-relative tw-border-l-2 tw-border-blue-200 tw-ml-4",
       children: restoreProcessSteps.map(function (step, idx) {
+        var _responsePerStep$step, _responsePerStep$step2;
         var isCompleted = inProgressStep > step.step;
         var isCurrent = inProgressStep === step.step;
         return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsxs)("li", {
@@ -34735,9 +34741,9 @@ var RestoreProcess = function RestoreProcess() {
                   fill: "currentColor",
                   d: "M4 12a8 8 0 018-8v8z"
                 })]
-              }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)("span", {
+              }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsxs)("span", {
                 className: "tw-text-xs tw-text-blue-500 tw-font-medium",
-                children: "In progress..."
+                children: ["In progress ", (_responsePerStep$step = responsePerStep[step.step]) !== null && _responsePerStep$step !== void 0 && _responsePerStep$step.__log_process_status ? "(".concat((_responsePerStep$step2 = responsePerStep[step.step]) === null || _responsePerStep$step2 === void 0 ? void 0 : _responsePerStep$step2.__log_process_status, ")") : '', " ..."]
               })]
             }), isCompleted && /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)("span", {
               className: "tw-mt-2 tw-inline-block tw-text-xs tw-text-green-600 tw-font-medium",
