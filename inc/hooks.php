@@ -7,6 +7,7 @@ add_action( 'admin_menu', 'worrprba_register_admin_page' );
 
 // worry-proof-backup:after_restore_database_success
 add_action('worry-proof-backup:after_restore_database_success', 'worrprba_after_restore_database_success', 10, 1);
+add_action('worry-proof-backup:after_restore_database_success_dummy_pack', 'worrprba_after_restore_database_success', 10, 1);
 function worrprba_after_restore_database_success($payload) {
   global $wpdb;
 
@@ -40,4 +41,11 @@ function worrprba_after_backup_cron_completed($config, $context) {
 
   // send mail to admin when backup cron completed
   worrprba_send_mail_to_admin_when_backup_cron_completed($config, $context);
+}
+
+add_filter( 'worrprba_restore_plugin_exclude_dummy_pack', 'worrprba_restore_plugin_exclude', 10 );
+add_filter( 'worrprba_restore_plugin_exclude', 'worrprba_restore_plugin_exclude', 10 );
+
+function worrprba_restore_plugin_exclude($exclude) {
+  return array_merge($exclude, ['wppusher']);
 }

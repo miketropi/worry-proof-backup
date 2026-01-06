@@ -2,6 +2,7 @@ const mix = require('laravel-mix');
 
 mix
   .js('src/main.js', 'worry-proof-backup.bundle.js')
+  .js('src/dummy-center.js', 'dummy-center.bundle.js')
   .react()
   .setPublicPath(`./dist`);
 

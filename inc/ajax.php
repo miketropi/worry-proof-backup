@@ -475,6 +475,7 @@ function worrprba_ajax_restore_database() {
       ]);
     } else {
       $progress = $restore_database->processStep();
+      $percent = isset($progress['percent']) ? $progress['percent'] : 0;
       
       // check error $progress
       if (is_wp_error($progress)) {
@@ -496,6 +497,7 @@ function worrprba_ajax_restore_database() {
           'restore_database_ssid' => $folder_name,
           'restore_database_status' => 'done',
           'next_step' => true,
+          '__log_process_status' => '👍',
         ]);
       } else {
         
@@ -504,6 +506,7 @@ function worrprba_ajax_restore_database() {
           'restore_database_status' => 'is_running',
           'next_step' => false,
           'progress' => $progress,
+          '__log_process_status' => $percent ? $percent . '%' : '0%',
         ]);
       }
     }
@@ -538,11 +541,17 @@ function worrprba_ajax_restore_plugin() {
       'zip_file' => $path_zip_file,
       'destination_folder' => WP_PLUGIN_DIR,
       'overwrite_existing' => true,
-      'exclude' => ['worry-proof-backup'], // phpcs:ignore WordPressVIPMinimum.Performance.WPQueryParams.PostNotIn_exclude
+      'exclude' => apply_filters('worrprba_restore_plugin_exclude', ['worry-proof-backup']), // phpcs:ignore WordPressVIPMinimum.Performance.WPQueryParams.PostNotIn_exclude
       'restore_progress_file_name' => '__plugin-restore-progress.json',
     ]);
 
     $result = $restorer->runRestore();
+
+    // stats current index / total files
+    $stats = $result['stats'];
+    $current_index = $stats['current_index'];
+    $total_files = $stats['total_files'];
+    $progress = round( $current_index / $total_files * 100, 2 );
 
     // check error $result
     if (is_wp_error($result)) {
@@ -553,12 +562,14 @@ function worrprba_ajax_restore_plugin() {
       wp_send_json_success([
         'restore_plugin_status' => 'is_running',
         'next_step' => false,
+        '__log_process_status' => $progress ? $progress . '%' : '0%',
         // 'progress' => $result,
       ]);
     } else {
       wp_send_json_success([
         'restore_plugin_status' => 'done',
         'next_step' => true,
+        '__log_process_status' => '👍',
       ]);
     }
 
@@ -604,6 +615,12 @@ function worrprba_ajax_restore_theme() {
 
     $result = $restorer->runRestore();
 
+    // stats current index / total files
+    $stats = $result['stats'];
+    $current_index = $stats['current_index'];
+    $total_files = $stats['total_files'];
+    $progress = round( $current_index / $total_files * 100, 2 );
+
     // check error $result
     if (is_wp_error($result)) {
       wp_send_json_error($result->get_error_message());
@@ -613,12 +630,14 @@ function worrprba_ajax_restore_theme() {
       wp_send_json_success([
         'restore_theme_status' => 'is_running',
         'next_step' => false,
+        '__log_process_status' => $progress ? $progress . '%' : '0%',
         // 'progress' => $result,
       ]);
     } else {
       wp_send_json_success([
         'restore_theme_status' => 'done',
         'next_step' => true,
+        '__log_process_status' => '👍',
       ]);
     }
 
@@ -664,6 +683,12 @@ function worrprba_ajax_restore_uploads() {
 
     $result = $restorer->runRestore();
 
+    // stats current index / total files
+    $stats = $result['stats'];
+    $current_index = $stats['current_index'];
+    $total_files = $stats['total_files'];
+    $progress = round( $current_index / $total_files * 100, 2 );
+
     // check error $result
     if (is_wp_error($result)) {
       wp_send_json_error($result->get_error_message());
@@ -673,12 +698,14 @@ function worrprba_ajax_restore_uploads() {
       wp_send_json_success([
         'restore_uploads_status' => 'is_running',
         'next_step' => false,
+        '__log_process_status' => $progress ? $progress . '%' : '0%',
         // 'progress' => $result,
       ]);
     } else {
       wp_send_json_success([
         'restore_uploads_status' => 'done',
         'next_step' => true,
+        '__log_process_status' => '👍',
       ]);
     }
 

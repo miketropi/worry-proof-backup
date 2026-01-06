@@ -1390,372 +1390,6 @@ var defaultAttributes = {
 
 /***/ }),
 
-/***/ "./node_modules/lucide-react/dist/esm/icons/bug.js":
-/*!*********************************************************!*\
-  !*** ./node_modules/lucide-react/dist/esm/icons/bug.js ***!
-  \*********************************************************/
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   __iconNode: () => (/* binding */ __iconNode),
-/* harmony export */   "default": () => (/* binding */ Bug)
-/* harmony export */ });
-/* harmony import */ var _createLucideIcon_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../createLucideIcon.js */ "./node_modules/lucide-react/dist/esm/createLucideIcon.js");
-/**
- * @license lucide-react v0.518.0 - ISC
- *
- * This source code is licensed under the ISC license.
- * See the LICENSE file in the root directory of this source tree.
- */
-
-
-
-const __iconNode = [
-  ["path", { d: "m8 2 1.88 1.88", key: "fmnt4t" }],
-  ["path", { d: "M14.12 3.88 16 2", key: "qol33r" }],
-  ["path", { d: "M9 7.13v-1a3.003 3.003 0 1 1 6 0v1", key: "d7y7pr" }],
-  [
-    "path",
-    {
-      d: "M12 20c-3.3 0-6-2.7-6-6v-3a4 4 0 0 1 4-4h4a4 4 0 0 1 4 4v3c0 3.3-2.7 6-6 6",
-      key: "xs1cw7"
-    }
-  ],
-  ["path", { d: "M12 20v-9", key: "1qisl0" }],
-  ["path", { d: "M6.53 9C4.6 8.8 3 7.1 3 5", key: "32zzws" }],
-  ["path", { d: "M6 13H2", key: "82j7cp" }],
-  ["path", { d: "M3 21c0-2.1 1.7-3.9 3.8-4", key: "4p0ekp" }],
-  ["path", { d: "M20.97 5c0 2.1-1.6 3.8-3.5 4", key: "18gb23" }],
-  ["path", { d: "M22 13h-4", key: "1jl80f" }],
-  ["path", { d: "M17.2 17c2.1.1 3.8 1.9 3.8 4", key: "k3fwyw" }]
-];
-const Bug = (0,_createLucideIcon_js__WEBPACK_IMPORTED_MODULE_0__["default"])("bug", __iconNode);
-
-
-//# sourceMappingURL=bug.js.map
-
-
-/***/ }),
-
-/***/ "./node_modules/lucide-react/dist/esm/icons/circle-alert.js":
-/*!******************************************************************!*\
-  !*** ./node_modules/lucide-react/dist/esm/icons/circle-alert.js ***!
-  \******************************************************************/
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   __iconNode: () => (/* binding */ __iconNode),
-/* harmony export */   "default": () => (/* binding */ CircleAlert)
-/* harmony export */ });
-/* harmony import */ var _createLucideIcon_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../createLucideIcon.js */ "./node_modules/lucide-react/dist/esm/createLucideIcon.js");
-/**
- * @license lucide-react v0.518.0 - ISC
- *
- * This source code is licensed under the ISC license.
- * See the LICENSE file in the root directory of this source tree.
- */
-
-
-
-const __iconNode = [
-  ["circle", { cx: "12", cy: "12", r: "10", key: "1mglay" }],
-  ["line", { x1: "12", x2: "12", y1: "8", y2: "12", key: "1pkeuh" }],
-  ["line", { x1: "12", x2: "12.01", y1: "16", y2: "16", key: "4dfq90" }]
-];
-const CircleAlert = (0,_createLucideIcon_js__WEBPACK_IMPORTED_MODULE_0__["default"])("circle-alert", __iconNode);
-
-
-//# sourceMappingURL=circle-alert.js.map
-
-
-/***/ }),
-
-/***/ "./node_modules/lucide-react/dist/esm/icons/circle-check-big.js":
-/*!**********************************************************************!*\
-  !*** ./node_modules/lucide-react/dist/esm/icons/circle-check-big.js ***!
-  \**********************************************************************/
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   __iconNode: () => (/* binding */ __iconNode),
-/* harmony export */   "default": () => (/* binding */ CircleCheckBig)
-/* harmony export */ });
-/* harmony import */ var _createLucideIcon_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../createLucideIcon.js */ "./node_modules/lucide-react/dist/esm/createLucideIcon.js");
-/**
- * @license lucide-react v0.518.0 - ISC
- *
- * This source code is licensed under the ISC license.
- * See the LICENSE file in the root directory of this source tree.
- */
-
-
-
-const __iconNode = [
-  ["path", { d: "M21.801 10A10 10 0 1 1 17 3.335", key: "yps3ct" }],
-  ["path", { d: "m9 11 3 3L22 4", key: "1pflzl" }]
-];
-const CircleCheckBig = (0,_createLucideIcon_js__WEBPACK_IMPORTED_MODULE_0__["default"])("circle-check-big", __iconNode);
-
-
-//# sourceMappingURL=circle-check-big.js.map
-
-
-/***/ }),
-
-/***/ "./node_modules/lucide-react/dist/esm/icons/circle-check.js":
-/*!******************************************************************!*\
-  !*** ./node_modules/lucide-react/dist/esm/icons/circle-check.js ***!
-  \******************************************************************/
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   __iconNode: () => (/* binding */ __iconNode),
-/* harmony export */   "default": () => (/* binding */ CircleCheck)
-/* harmony export */ });
-/* harmony import */ var _createLucideIcon_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../createLucideIcon.js */ "./node_modules/lucide-react/dist/esm/createLucideIcon.js");
-/**
- * @license lucide-react v0.518.0 - ISC
- *
- * This source code is licensed under the ISC license.
- * See the LICENSE file in the root directory of this source tree.
- */
-
-
-
-const __iconNode = [
-  ["circle", { cx: "12", cy: "12", r: "10", key: "1mglay" }],
-  ["path", { d: "m9 12 2 2 4-4", key: "dzmm74" }]
-];
-const CircleCheck = (0,_createLucideIcon_js__WEBPACK_IMPORTED_MODULE_0__["default"])("circle-check", __iconNode);
-
-
-//# sourceMappingURL=circle-check.js.map
-
-
-/***/ }),
-
-/***/ "./node_modules/lucide-react/dist/esm/icons/circle-x.js":
-/*!**************************************************************!*\
-  !*** ./node_modules/lucide-react/dist/esm/icons/circle-x.js ***!
-  \**************************************************************/
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   __iconNode: () => (/* binding */ __iconNode),
-/* harmony export */   "default": () => (/* binding */ CircleX)
-/* harmony export */ });
-/* harmony import */ var _createLucideIcon_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../createLucideIcon.js */ "./node_modules/lucide-react/dist/esm/createLucideIcon.js");
-/**
- * @license lucide-react v0.518.0 - ISC
- *
- * This source code is licensed under the ISC license.
- * See the LICENSE file in the root directory of this source tree.
- */
-
-
-
-const __iconNode = [
-  ["circle", { cx: "12", cy: "12", r: "10", key: "1mglay" }],
-  ["path", { d: "m15 9-6 6", key: "1uzhvr" }],
-  ["path", { d: "m9 9 6 6", key: "z0biqf" }]
-];
-const CircleX = (0,_createLucideIcon_js__WEBPACK_IMPORTED_MODULE_0__["default"])("circle-x", __iconNode);
-
-
-//# sourceMappingURL=circle-x.js.map
-
-
-/***/ }),
-
-/***/ "./node_modules/lucide-react/dist/esm/icons/clock.js":
-/*!***********************************************************!*\
-  !*** ./node_modules/lucide-react/dist/esm/icons/clock.js ***!
-  \***********************************************************/
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   __iconNode: () => (/* binding */ __iconNode),
-/* harmony export */   "default": () => (/* binding */ Clock)
-/* harmony export */ });
-/* harmony import */ var _createLucideIcon_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../createLucideIcon.js */ "./node_modules/lucide-react/dist/esm/createLucideIcon.js");
-/**
- * @license lucide-react v0.518.0 - ISC
- *
- * This source code is licensed under the ISC license.
- * See the LICENSE file in the root directory of this source tree.
- */
-
-
-
-const __iconNode = [
-  ["circle", { cx: "12", cy: "12", r: "10", key: "1mglay" }],
-  ["polyline", { points: "12 6 12 12 16 14", key: "68esgv" }]
-];
-const Clock = (0,_createLucideIcon_js__WEBPACK_IMPORTED_MODULE_0__["default"])("clock", __iconNode);
-
-
-//# sourceMappingURL=clock.js.map
-
-
-/***/ }),
-
-/***/ "./node_modules/lucide-react/dist/esm/icons/code.js":
-/*!**********************************************************!*\
-  !*** ./node_modules/lucide-react/dist/esm/icons/code.js ***!
-  \**********************************************************/
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   __iconNode: () => (/* binding */ __iconNode),
-/* harmony export */   "default": () => (/* binding */ Code)
-/* harmony export */ });
-/* harmony import */ var _createLucideIcon_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../createLucideIcon.js */ "./node_modules/lucide-react/dist/esm/createLucideIcon.js");
-/**
- * @license lucide-react v0.518.0 - ISC
- *
- * This source code is licensed under the ISC license.
- * See the LICENSE file in the root directory of this source tree.
- */
-
-
-
-const __iconNode = [
-  ["path", { d: "m16 18 6-6-6-6", key: "eg8j8" }],
-  ["path", { d: "m8 6-6 6 6 6", key: "ppft3o" }]
-];
-const Code = (0,_createLucideIcon_js__WEBPACK_IMPORTED_MODULE_0__["default"])("code", __iconNode);
-
-
-//# sourceMappingURL=code.js.map
-
-
-/***/ }),
-
-/***/ "./node_modules/lucide-react/dist/esm/icons/coffee.js":
-/*!************************************************************!*\
-  !*** ./node_modules/lucide-react/dist/esm/icons/coffee.js ***!
-  \************************************************************/
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   __iconNode: () => (/* binding */ __iconNode),
-/* harmony export */   "default": () => (/* binding */ Coffee)
-/* harmony export */ });
-/* harmony import */ var _createLucideIcon_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../createLucideIcon.js */ "./node_modules/lucide-react/dist/esm/createLucideIcon.js");
-/**
- * @license lucide-react v0.518.0 - ISC
- *
- * This source code is licensed under the ISC license.
- * See the LICENSE file in the root directory of this source tree.
- */
-
-
-
-const __iconNode = [
-  ["path", { d: "M10 2v2", key: "7u0qdc" }],
-  ["path", { d: "M14 2v2", key: "6buw04" }],
-  [
-    "path",
-    {
-      d: "M16 8a1 1 0 0 1 1 1v8a4 4 0 0 1-4 4H7a4 4 0 0 1-4-4V9a1 1 0 0 1 1-1h14a4 4 0 1 1 0 8h-1",
-      key: "pwadti"
-    }
-  ],
-  ["path", { d: "M6 2v2", key: "colzsn" }]
-];
-const Coffee = (0,_createLucideIcon_js__WEBPACK_IMPORTED_MODULE_0__["default"])("coffee", __iconNode);
-
-
-//# sourceMappingURL=coffee.js.map
-
-
-/***/ }),
-
-/***/ "./node_modules/lucide-react/dist/esm/icons/copy.js":
-/*!**********************************************************!*\
-  !*** ./node_modules/lucide-react/dist/esm/icons/copy.js ***!
-  \**********************************************************/
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   __iconNode: () => (/* binding */ __iconNode),
-/* harmony export */   "default": () => (/* binding */ Copy)
-/* harmony export */ });
-/* harmony import */ var _createLucideIcon_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../createLucideIcon.js */ "./node_modules/lucide-react/dist/esm/createLucideIcon.js");
-/**
- * @license lucide-react v0.518.0 - ISC
- *
- * This source code is licensed under the ISC license.
- * See the LICENSE file in the root directory of this source tree.
- */
-
-
-
-const __iconNode = [
-  ["rect", { width: "14", height: "14", x: "8", y: "8", rx: "2", ry: "2", key: "17jyea" }],
-  ["path", { d: "M4 16c-1.1 0-2-.9-2-2V4c0-1.1.9-2 2-2h10c1.1 0 2 .9 2 2", key: "zix9uf" }]
-];
-const Copy = (0,_createLucideIcon_js__WEBPACK_IMPORTED_MODULE_0__["default"])("copy", __iconNode);
-
-
-//# sourceMappingURL=copy.js.map
-
-
-/***/ }),
-
-/***/ "./node_modules/lucide-react/dist/esm/icons/database.js":
-/*!**************************************************************!*\
-  !*** ./node_modules/lucide-react/dist/esm/icons/database.js ***!
-  \**************************************************************/
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   __iconNode: () => (/* binding */ __iconNode),
-/* harmony export */   "default": () => (/* binding */ Database)
-/* harmony export */ });
-/* harmony import */ var _createLucideIcon_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../createLucideIcon.js */ "./node_modules/lucide-react/dist/esm/createLucideIcon.js");
-/**
- * @license lucide-react v0.518.0 - ISC
- *
- * This source code is licensed under the ISC license.
- * See the LICENSE file in the root directory of this source tree.
- */
-
-
-
-const __iconNode = [
-  ["ellipse", { cx: "12", cy: "5", rx: "9", ry: "3", key: "msslwz" }],
-  ["path", { d: "M3 5V19A9 3 0 0 0 21 19V5", key: "1wlel7" }],
-  ["path", { d: "M3 12A9 3 0 0 0 21 12", key: "mv7ke4" }]
-];
-const Database = (0,_createLucideIcon_js__WEBPACK_IMPORTED_MODULE_0__["default"])("database", __iconNode);
-
-
-//# sourceMappingURL=database.js.map
-
-
-/***/ }),
-
 /***/ "./node_modules/lucide-react/dist/esm/icons/download.js":
 /*!**************************************************************!*\
   !*** ./node_modules/lucide-react/dist/esm/icons/download.js ***!
@@ -1787,6 +1421,41 @@ const Download = (0,_createLucideIcon_js__WEBPACK_IMPORTED_MODULE_0__["default"]
 
 
 //# sourceMappingURL=download.js.map
+
+
+/***/ }),
+
+/***/ "./node_modules/lucide-react/dist/esm/icons/external-link.js":
+/*!*******************************************************************!*\
+  !*** ./node_modules/lucide-react/dist/esm/icons/external-link.js ***!
+  \*******************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   __iconNode: () => (/* binding */ __iconNode),
+/* harmony export */   "default": () => (/* binding */ ExternalLink)
+/* harmony export */ });
+/* harmony import */ var _createLucideIcon_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../createLucideIcon.js */ "./node_modules/lucide-react/dist/esm/createLucideIcon.js");
+/**
+ * @license lucide-react v0.518.0 - ISC
+ *
+ * This source code is licensed under the ISC license.
+ * See the LICENSE file in the root directory of this source tree.
+ */
+
+
+
+const __iconNode = [
+  ["path", { d: "M15 3h6v6", key: "1q9fwt" }],
+  ["path", { d: "M10 14 21 3", key: "gplh6r" }],
+  ["path", { d: "M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6", key: "a6xqqp" }]
+];
+const ExternalLink = (0,_createLucideIcon_js__WEBPACK_IMPORTED_MODULE_0__["default"])("external-link", __iconNode);
+
+
+//# sourceMappingURL=external-link.js.map
 
 
 /***/ }),
@@ -1828,301 +1497,6 @@ const FileArchive = (0,_createLucideIcon_js__WEBPACK_IMPORTED_MODULE_0__["defaul
 
 
 //# sourceMappingURL=file-archive.js.map
-
-
-/***/ }),
-
-/***/ "./node_modules/lucide-react/dist/esm/icons/file-down.js":
-/*!***************************************************************!*\
-  !*** ./node_modules/lucide-react/dist/esm/icons/file-down.js ***!
-  \***************************************************************/
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   __iconNode: () => (/* binding */ __iconNode),
-/* harmony export */   "default": () => (/* binding */ FileDown)
-/* harmony export */ });
-/* harmony import */ var _createLucideIcon_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../createLucideIcon.js */ "./node_modules/lucide-react/dist/esm/createLucideIcon.js");
-/**
- * @license lucide-react v0.518.0 - ISC
- *
- * This source code is licensed under the ISC license.
- * See the LICENSE file in the root directory of this source tree.
- */
-
-
-
-const __iconNode = [
-  ["path", { d: "M15 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7Z", key: "1rqfz7" }],
-  ["path", { d: "M14 2v4a2 2 0 0 0 2 2h4", key: "tnqrlb" }],
-  ["path", { d: "M12 18v-6", key: "17g6i2" }],
-  ["path", { d: "m9 15 3 3 3-3", key: "1npd3o" }]
-];
-const FileDown = (0,_createLucideIcon_js__WEBPACK_IMPORTED_MODULE_0__["default"])("file-down", __iconNode);
-
-
-//# sourceMappingURL=file-down.js.map
-
-
-/***/ }),
-
-/***/ "./node_modules/lucide-react/dist/esm/icons/file-up.js":
-/*!*************************************************************!*\
-  !*** ./node_modules/lucide-react/dist/esm/icons/file-up.js ***!
-  \*************************************************************/
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   __iconNode: () => (/* binding */ __iconNode),
-/* harmony export */   "default": () => (/* binding */ FileUp)
-/* harmony export */ });
-/* harmony import */ var _createLucideIcon_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../createLucideIcon.js */ "./node_modules/lucide-react/dist/esm/createLucideIcon.js");
-/**
- * @license lucide-react v0.518.0 - ISC
- *
- * This source code is licensed under the ISC license.
- * See the LICENSE file in the root directory of this source tree.
- */
-
-
-
-const __iconNode = [
-  ["path", { d: "M15 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7Z", key: "1rqfz7" }],
-  ["path", { d: "M14 2v4a2 2 0 0 0 2 2h4", key: "tnqrlb" }],
-  ["path", { d: "M12 12v6", key: "3ahymv" }],
-  ["path", { d: "m15 15-3-3-3 3", key: "15xj92" }]
-];
-const FileUp = (0,_createLucideIcon_js__WEBPACK_IMPORTED_MODULE_0__["default"])("file-up", __iconNode);
-
-
-//# sourceMappingURL=file-up.js.map
-
-
-/***/ }),
-
-/***/ "./node_modules/lucide-react/dist/esm/icons/folder-archive.js":
-/*!********************************************************************!*\
-  !*** ./node_modules/lucide-react/dist/esm/icons/folder-archive.js ***!
-  \********************************************************************/
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   __iconNode: () => (/* binding */ __iconNode),
-/* harmony export */   "default": () => (/* binding */ FolderArchive)
-/* harmony export */ });
-/* harmony import */ var _createLucideIcon_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../createLucideIcon.js */ "./node_modules/lucide-react/dist/esm/createLucideIcon.js");
-/**
- * @license lucide-react v0.518.0 - ISC
- *
- * This source code is licensed under the ISC license.
- * See the LICENSE file in the root directory of this source tree.
- */
-
-
-
-const __iconNode = [
-  ["circle", { cx: "15", cy: "19", r: "2", key: "u2pros" }],
-  [
-    "path",
-    {
-      d: "M20.9 19.8A2 2 0 0 0 22 18V8a2 2 0 0 0-2-2h-7.9a2 2 0 0 1-1.69-.9L9.6 3.9A2 2 0 0 0 7.93 3H4a2 2 0 0 0-2 2v13a2 2 0 0 0 2 2h5.1",
-      key: "1jj40k"
-    }
-  ],
-  ["path", { d: "M15 11v-1", key: "cntcp" }],
-  ["path", { d: "M15 17v-2", key: "1279jj" }]
-];
-const FolderArchive = (0,_createLucideIcon_js__WEBPACK_IMPORTED_MODULE_0__["default"])("folder-archive", __iconNode);
-
-
-//# sourceMappingURL=folder-archive.js.map
-
-
-/***/ }),
-
-/***/ "./node_modules/lucide-react/dist/esm/icons/hard-drive.js":
-/*!****************************************************************!*\
-  !*** ./node_modules/lucide-react/dist/esm/icons/hard-drive.js ***!
-  \****************************************************************/
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   __iconNode: () => (/* binding */ __iconNode),
-/* harmony export */   "default": () => (/* binding */ HardDrive)
-/* harmony export */ });
-/* harmony import */ var _createLucideIcon_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../createLucideIcon.js */ "./node_modules/lucide-react/dist/esm/createLucideIcon.js");
-/**
- * @license lucide-react v0.518.0 - ISC
- *
- * This source code is licensed under the ISC license.
- * See the LICENSE file in the root directory of this source tree.
- */
-
-
-
-const __iconNode = [
-  ["line", { x1: "22", x2: "2", y1: "12", y2: "12", key: "1y58io" }],
-  [
-    "path",
-    {
-      d: "M5.45 5.11 2 12v6a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2v-6l-3.45-6.89A2 2 0 0 0 16.76 4H7.24a2 2 0 0 0-1.79 1.11z",
-      key: "oot6mr"
-    }
-  ],
-  ["line", { x1: "6", x2: "6.01", y1: "16", y2: "16", key: "sgf278" }],
-  ["line", { x1: "10", x2: "10.01", y1: "16", y2: "16", key: "1l4acy" }]
-];
-const HardDrive = (0,_createLucideIcon_js__WEBPACK_IMPORTED_MODULE_0__["default"])("hard-drive", __iconNode);
-
-
-//# sourceMappingURL=hard-drive.js.map
-
-
-/***/ }),
-
-/***/ "./node_modules/lucide-react/dist/esm/icons/heart.js":
-/*!***********************************************************!*\
-  !*** ./node_modules/lucide-react/dist/esm/icons/heart.js ***!
-  \***********************************************************/
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   __iconNode: () => (/* binding */ __iconNode),
-/* harmony export */   "default": () => (/* binding */ Heart)
-/* harmony export */ });
-/* harmony import */ var _createLucideIcon_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../createLucideIcon.js */ "./node_modules/lucide-react/dist/esm/createLucideIcon.js");
-/**
- * @license lucide-react v0.518.0 - ISC
- *
- * This source code is licensed under the ISC license.
- * See the LICENSE file in the root directory of this source tree.
- */
-
-
-
-const __iconNode = [
-  [
-    "path",
-    {
-      d: "M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z",
-      key: "c3ymky"
-    }
-  ]
-];
-const Heart = (0,_createLucideIcon_js__WEBPACK_IMPORTED_MODULE_0__["default"])("heart", __iconNode);
-
-
-//# sourceMappingURL=heart.js.map
-
-
-/***/ }),
-
-/***/ "./node_modules/lucide-react/dist/esm/icons/info.js":
-/*!**********************************************************!*\
-  !*** ./node_modules/lucide-react/dist/esm/icons/info.js ***!
-  \**********************************************************/
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   __iconNode: () => (/* binding */ __iconNode),
-/* harmony export */   "default": () => (/* binding */ Info)
-/* harmony export */ });
-/* harmony import */ var _createLucideIcon_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../createLucideIcon.js */ "./node_modules/lucide-react/dist/esm/createLucideIcon.js");
-/**
- * @license lucide-react v0.518.0 - ISC
- *
- * This source code is licensed under the ISC license.
- * See the LICENSE file in the root directory of this source tree.
- */
-
-
-
-const __iconNode = [
-  ["circle", { cx: "12", cy: "12", r: "10", key: "1mglay" }],
-  ["path", { d: "M12 16v-4", key: "1dtifu" }],
-  ["path", { d: "M12 8h.01", key: "e9boi3" }]
-];
-const Info = (0,_createLucideIcon_js__WEBPACK_IMPORTED_MODULE_0__["default"])("info", __iconNode);
-
-
-//# sourceMappingURL=info.js.map
-
-
-/***/ }),
-
-/***/ "./node_modules/lucide-react/dist/esm/icons/loader-circle.js":
-/*!*******************************************************************!*\
-  !*** ./node_modules/lucide-react/dist/esm/icons/loader-circle.js ***!
-  \*******************************************************************/
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   __iconNode: () => (/* binding */ __iconNode),
-/* harmony export */   "default": () => (/* binding */ LoaderCircle)
-/* harmony export */ });
-/* harmony import */ var _createLucideIcon_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../createLucideIcon.js */ "./node_modules/lucide-react/dist/esm/createLucideIcon.js");
-/**
- * @license lucide-react v0.518.0 - ISC
- *
- * This source code is licensed under the ISC license.
- * See the LICENSE file in the root directory of this source tree.
- */
-
-
-
-const __iconNode = [["path", { d: "M21 12a9 9 0 1 1-6.219-8.56", key: "13zald" }]];
-const LoaderCircle = (0,_createLucideIcon_js__WEBPACK_IMPORTED_MODULE_0__["default"])("loader-circle", __iconNode);
-
-
-//# sourceMappingURL=loader-circle.js.map
-
-
-/***/ }),
-
-/***/ "./node_modules/lucide-react/dist/esm/icons/lock.js":
-/*!**********************************************************!*\
-  !*** ./node_modules/lucide-react/dist/esm/icons/lock.js ***!
-  \**********************************************************/
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   __iconNode: () => (/* binding */ __iconNode),
-/* harmony export */   "default": () => (/* binding */ Lock)
-/* harmony export */ });
-/* harmony import */ var _createLucideIcon_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../createLucideIcon.js */ "./node_modules/lucide-react/dist/esm/createLucideIcon.js");
-/**
- * @license lucide-react v0.518.0 - ISC
- *
- * This source code is licensed under the ISC license.
- * See the LICENSE file in the root directory of this source tree.
- */
-
-
-
-const __iconNode = [
-  ["rect", { width: "18", height: "11", x: "3", y: "11", rx: "2", ry: "2", key: "1w4ew1" }],
-  ["path", { d: "M7 11V7a5 5 0 0 1 10 0v4", key: "fwvmzm" }]
-];
-const Lock = (0,_createLucideIcon_js__WEBPACK_IMPORTED_MODULE_0__["default"])("lock", __iconNode);
-
-
-//# sourceMappingURL=lock.js.map
 
 
 /***/ }),
@@ -2169,40 +1543,6 @@ const Package = (0,_createLucideIcon_js__WEBPACK_IMPORTED_MODULE_0__["default"])
 
 /***/ }),
 
-/***/ "./node_modules/lucide-react/dist/esm/icons/plus.js":
-/*!**********************************************************!*\
-  !*** ./node_modules/lucide-react/dist/esm/icons/plus.js ***!
-  \**********************************************************/
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   __iconNode: () => (/* binding */ __iconNode),
-/* harmony export */   "default": () => (/* binding */ Plus)
-/* harmony export */ });
-/* harmony import */ var _createLucideIcon_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../createLucideIcon.js */ "./node_modules/lucide-react/dist/esm/createLucideIcon.js");
-/**
- * @license lucide-react v0.518.0 - ISC
- *
- * This source code is licensed under the ISC license.
- * See the LICENSE file in the root directory of this source tree.
- */
-
-
-
-const __iconNode = [
-  ["path", { d: "M5 12h14", key: "1ays0h" }],
-  ["path", { d: "M12 5v14", key: "s699le" }]
-];
-const Plus = (0,_createLucideIcon_js__WEBPACK_IMPORTED_MODULE_0__["default"])("plus", __iconNode);
-
-
-//# sourceMappingURL=plus.js.map
-
-
-/***/ }),
-
 /***/ "./node_modules/lucide-react/dist/esm/icons/rotate-ccw.js":
 /*!****************************************************************!*\
   !*** ./node_modules/lucide-react/dist/esm/icons/rotate-ccw.js ***!
@@ -2233,297 +1573,6 @@ const RotateCcw = (0,_createLucideIcon_js__WEBPACK_IMPORTED_MODULE_0__["default"
 
 
 //# sourceMappingURL=rotate-ccw.js.map
-
-
-/***/ }),
-
-/***/ "./node_modules/lucide-react/dist/esm/icons/server.js":
-/*!************************************************************!*\
-  !*** ./node_modules/lucide-react/dist/esm/icons/server.js ***!
-  \************************************************************/
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   __iconNode: () => (/* binding */ __iconNode),
-/* harmony export */   "default": () => (/* binding */ Server)
-/* harmony export */ });
-/* harmony import */ var _createLucideIcon_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../createLucideIcon.js */ "./node_modules/lucide-react/dist/esm/createLucideIcon.js");
-/**
- * @license lucide-react v0.518.0 - ISC
- *
- * This source code is licensed under the ISC license.
- * See the LICENSE file in the root directory of this source tree.
- */
-
-
-
-const __iconNode = [
-  ["rect", { width: "20", height: "8", x: "2", y: "2", rx: "2", ry: "2", key: "ngkwjq" }],
-  ["rect", { width: "20", height: "8", x: "2", y: "14", rx: "2", ry: "2", key: "iecqi9" }],
-  ["line", { x1: "6", x2: "6.01", y1: "6", y2: "6", key: "16zg32" }],
-  ["line", { x1: "6", x2: "6.01", y1: "18", y2: "18", key: "nzw8ys" }]
-];
-const Server = (0,_createLucideIcon_js__WEBPACK_IMPORTED_MODULE_0__["default"])("server", __iconNode);
-
-
-//# sourceMappingURL=server.js.map
-
-
-/***/ }),
-
-/***/ "./node_modules/lucide-react/dist/esm/icons/shield.js":
-/*!************************************************************!*\
-  !*** ./node_modules/lucide-react/dist/esm/icons/shield.js ***!
-  \************************************************************/
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   __iconNode: () => (/* binding */ __iconNode),
-/* harmony export */   "default": () => (/* binding */ Shield)
-/* harmony export */ });
-/* harmony import */ var _createLucideIcon_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../createLucideIcon.js */ "./node_modules/lucide-react/dist/esm/createLucideIcon.js");
-/**
- * @license lucide-react v0.518.0 - ISC
- *
- * This source code is licensed under the ISC license.
- * See the LICENSE file in the root directory of this source tree.
- */
-
-
-
-const __iconNode = [
-  [
-    "path",
-    {
-      d: "M20 13c0 5-3.5 7.5-7.66 8.95a1 1 0 0 1-.67-.01C7.5 20.5 4 18 4 13V6a1 1 0 0 1 1-1c2 0 4.5-1.2 6.24-2.72a1.17 1.17 0 0 1 1.52 0C14.51 3.81 17 5 19 5a1 1 0 0 1 1 1z",
-      key: "oel41y"
-    }
-  ]
-];
-const Shield = (0,_createLucideIcon_js__WEBPACK_IMPORTED_MODULE_0__["default"])("shield", __iconNode);
-
-
-//# sourceMappingURL=shield.js.map
-
-
-/***/ }),
-
-/***/ "./node_modules/lucide-react/dist/esm/icons/target.js":
-/*!************************************************************!*\
-  !*** ./node_modules/lucide-react/dist/esm/icons/target.js ***!
-  \************************************************************/
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   __iconNode: () => (/* binding */ __iconNode),
-/* harmony export */   "default": () => (/* binding */ Target)
-/* harmony export */ });
-/* harmony import */ var _createLucideIcon_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../createLucideIcon.js */ "./node_modules/lucide-react/dist/esm/createLucideIcon.js");
-/**
- * @license lucide-react v0.518.0 - ISC
- *
- * This source code is licensed under the ISC license.
- * See the LICENSE file in the root directory of this source tree.
- */
-
-
-
-const __iconNode = [
-  ["circle", { cx: "12", cy: "12", r: "10", key: "1mglay" }],
-  ["circle", { cx: "12", cy: "12", r: "6", key: "1vlfrh" }],
-  ["circle", { cx: "12", cy: "12", r: "2", key: "1c9p78" }]
-];
-const Target = (0,_createLucideIcon_js__WEBPACK_IMPORTED_MODULE_0__["default"])("target", __iconNode);
-
-
-//# sourceMappingURL=target.js.map
-
-
-/***/ }),
-
-/***/ "./node_modules/lucide-react/dist/esm/icons/terminal.js":
-/*!**************************************************************!*\
-  !*** ./node_modules/lucide-react/dist/esm/icons/terminal.js ***!
-  \**************************************************************/
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   __iconNode: () => (/* binding */ __iconNode),
-/* harmony export */   "default": () => (/* binding */ Terminal)
-/* harmony export */ });
-/* harmony import */ var _createLucideIcon_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../createLucideIcon.js */ "./node_modules/lucide-react/dist/esm/createLucideIcon.js");
-/**
- * @license lucide-react v0.518.0 - ISC
- *
- * This source code is licensed under the ISC license.
- * See the LICENSE file in the root directory of this source tree.
- */
-
-
-
-const __iconNode = [
-  ["path", { d: "M12 19h8", key: "baeox8" }],
-  ["path", { d: "m4 17 6-6-6-6", key: "1yngyt" }]
-];
-const Terminal = (0,_createLucideIcon_js__WEBPACK_IMPORTED_MODULE_0__["default"])("terminal", __iconNode);
-
-
-//# sourceMappingURL=terminal.js.map
-
-
-/***/ }),
-
-/***/ "./node_modules/lucide-react/dist/esm/icons/trash-2.js":
-/*!*************************************************************!*\
-  !*** ./node_modules/lucide-react/dist/esm/icons/trash-2.js ***!
-  \*************************************************************/
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   __iconNode: () => (/* binding */ __iconNode),
-/* harmony export */   "default": () => (/* binding */ Trash2)
-/* harmony export */ });
-/* harmony import */ var _createLucideIcon_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../createLucideIcon.js */ "./node_modules/lucide-react/dist/esm/createLucideIcon.js");
-/**
- * @license lucide-react v0.518.0 - ISC
- *
- * This source code is licensed under the ISC license.
- * See the LICENSE file in the root directory of this source tree.
- */
-
-
-
-const __iconNode = [
-  ["path", { d: "M3 6h18", key: "d0wm0j" }],
-  ["path", { d: "M19 6v14c0 1-1 2-2 2H7c-1 0-2-1-2-2V6", key: "4alrt4" }],
-  ["path", { d: "M8 6V4c0-1 1-2 2-2h4c1 0 2 1 2 2v2", key: "v07s0e" }],
-  ["line", { x1: "10", x2: "10", y1: "11", y2: "17", key: "1uufr5" }],
-  ["line", { x1: "14", x2: "14", y1: "11", y2: "17", key: "xtxkd" }]
-];
-const Trash2 = (0,_createLucideIcon_js__WEBPACK_IMPORTED_MODULE_0__["default"])("trash-2", __iconNode);
-
-
-//# sourceMappingURL=trash-2.js.map
-
-
-/***/ }),
-
-/***/ "./node_modules/lucide-react/dist/esm/icons/triangle-alert.js":
-/*!********************************************************************!*\
-  !*** ./node_modules/lucide-react/dist/esm/icons/triangle-alert.js ***!
-  \********************************************************************/
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   __iconNode: () => (/* binding */ __iconNode),
-/* harmony export */   "default": () => (/* binding */ TriangleAlert)
-/* harmony export */ });
-/* harmony import */ var _createLucideIcon_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../createLucideIcon.js */ "./node_modules/lucide-react/dist/esm/createLucideIcon.js");
-/**
- * @license lucide-react v0.518.0 - ISC
- *
- * This source code is licensed under the ISC license.
- * See the LICENSE file in the root directory of this source tree.
- */
-
-
-
-const __iconNode = [
-  [
-    "path",
-    {
-      d: "m21.73 18-8-14a2 2 0 0 0-3.48 0l-8 14A2 2 0 0 0 4 21h16a2 2 0 0 0 1.73-3",
-      key: "wmoenq"
-    }
-  ],
-  ["path", { d: "M12 9v4", key: "juzpu7" }],
-  ["path", { d: "M12 17h.01", key: "p32p05" }]
-];
-const TriangleAlert = (0,_createLucideIcon_js__WEBPACK_IMPORTED_MODULE_0__["default"])("triangle-alert", __iconNode);
-
-
-//# sourceMappingURL=triangle-alert.js.map
-
-
-/***/ }),
-
-/***/ "./node_modules/lucide-react/dist/esm/icons/upload.js":
-/*!************************************************************!*\
-  !*** ./node_modules/lucide-react/dist/esm/icons/upload.js ***!
-  \************************************************************/
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   __iconNode: () => (/* binding */ __iconNode),
-/* harmony export */   "default": () => (/* binding */ Upload)
-/* harmony export */ });
-/* harmony import */ var _createLucideIcon_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../createLucideIcon.js */ "./node_modules/lucide-react/dist/esm/createLucideIcon.js");
-/**
- * @license lucide-react v0.518.0 - ISC
- *
- * This source code is licensed under the ISC license.
- * See the LICENSE file in the root directory of this source tree.
- */
-
-
-
-const __iconNode = [
-  ["path", { d: "M12 3v12", key: "1x0j5s" }],
-  ["path", { d: "m17 8-5-5-5 5", key: "7q97r8" }],
-  ["path", { d: "M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4", key: "ih7n3h" }]
-];
-const Upload = (0,_createLucideIcon_js__WEBPACK_IMPORTED_MODULE_0__["default"])("upload", __iconNode);
-
-
-//# sourceMappingURL=upload.js.map
-
-
-/***/ }),
-
-/***/ "./node_modules/lucide-react/dist/esm/icons/x.js":
-/*!*******************************************************!*\
-  !*** ./node_modules/lucide-react/dist/esm/icons/x.js ***!
-  \*******************************************************/
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   __iconNode: () => (/* binding */ __iconNode),
-/* harmony export */   "default": () => (/* binding */ X)
-/* harmony export */ });
-/* harmony import */ var _createLucideIcon_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../createLucideIcon.js */ "./node_modules/lucide-react/dist/esm/createLucideIcon.js");
-/**
- * @license lucide-react v0.518.0 - ISC
- *
- * This source code is licensed under the ISC license.
- * See the LICENSE file in the root directory of this source tree.
- */
-
-
-
-const __iconNode = [
-  ["path", { d: "M18 6 6 18", key: "1bl5f8" }],
-  ["path", { d: "m6 6 12 12", key: "d8bk6v" }]
-];
-const X = (0,_createLucideIcon_js__WEBPACK_IMPORTED_MODULE_0__["default"])("x", __iconNode);
-
-
-//# sourceMappingURL=x.js.map
 
 
 /***/ }),
@@ -30441,143 +29490,32 @@ const createStore = (createState) => createState ? createStoreImpl(createState) 
 
 /***/ }),
 
-/***/ "./src/App.jsx":
-/*!*********************!*\
-  !*** ./src/App.jsx ***!
-  \*********************/
+/***/ "./src/WorrprbaDummyCenter.jsx":
+/*!*************************************!*\
+  !*** ./src/WorrprbaDummyCenter.jsx ***!
+  \*************************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "default": () => (/* binding */ App)
-/* harmony export */ });
-/* harmony import */ var _components_Footer__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./components/Footer */ "./src/components/Footer.jsx");
-/* harmony import */ var _components_ServerMetrics__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./components/ServerMetrics */ "./src/components/ServerMetrics.jsx");
-/* harmony import */ var _components_BackupProcess__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./components/BackupProcess */ "./src/components/BackupProcess.jsx");
-/* harmony import */ var _components_Confirm__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./components/Confirm */ "./src/components/Confirm.jsx");
-/* harmony import */ var _components_Toast__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./components/Toast */ "./src/components/Toast.jsx");
-/* harmony import */ var _components_Tab__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./components/Tab */ "./src/components/Tab.jsx");
-/* harmony import */ var lucide_react__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! lucide-react */ "./node_modules/lucide-react/dist/esm/icons/bug.js");
-/* harmony import */ var lucide_react__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! lucide-react */ "./node_modules/lucide-react/dist/esm/icons/package.js");
-/* harmony import */ var lucide_react__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! lucide-react */ "./node_modules/lucide-react/dist/esm/icons/server.js");
-/* harmony import */ var _components_Modal__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ./components/Modal */ "./src/components/Modal.jsx");
-/* harmony import */ var _components_BackupTable_refactored__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ./components/BackupTable.refactored */ "./src/components/BackupTable.refactored.jsx");
-/* harmony import */ var _components_RestoreProcess__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! ./components/RestoreProcess */ "./src/components/RestoreProcess.jsx");
-/* harmony import */ var _components_DonationInfomation__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! ./components/DonationInfomation */ "./src/components/DonationInfomation.jsx");
-/* harmony import */ var _components_ReportIssue__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! ./components/ReportIssue */ "./src/components/ReportIssue.jsx");
-/* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_14__ = __webpack_require__(/*! react/jsx-runtime */ "./node_modules/react/jsx-runtime.js");
-// import BackupTable from './components/BackupTable';
-
-
-
-
-
-
-
-
-
-
-
-
-
-var AppProvider = function AppProvider(_ref) {
-  var children = _ref.children;
-  return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_14__.jsx)(_components_Confirm__WEBPACK_IMPORTED_MODULE_3__.ConfirmProvider, {
-    children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_14__.jsx)(_components_Toast__WEBPACK_IMPORTED_MODULE_4__.ToastProvider, {
-      children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_14__.jsx)(_components_Modal__WEBPACK_IMPORTED_MODULE_9__.ModalProvider, {
-        children: children
-      })
-    })
-  });
-};
-var tabs = [{
-  label: 'Your Backups',
-  icon: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_14__.jsx)(lucide_react__WEBPACK_IMPORTED_MODULE_7__["default"], {
-    size: 14
-  }),
-  content: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_14__.jsxs)(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_14__.Fragment, {
-    children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_14__.jsx)(_components_BackupProcess__WEBPACK_IMPORTED_MODULE_2__["default"], {}), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_14__.jsx)(_components_RestoreProcess__WEBPACK_IMPORTED_MODULE_11__["default"], {}), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_14__.jsx)(_components_BackupTable_refactored__WEBPACK_IMPORTED_MODULE_10__["default"], {})]
-  })
-},
-// server metrics
-{
-  label: 'Server Metrics',
-  icon: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_14__.jsx)(lucide_react__WEBPACK_IMPORTED_MODULE_8__["default"], {
-    size: 14
-  }),
-  content: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_14__.jsx)(_components_ServerMetrics__WEBPACK_IMPORTED_MODULE_1__["default"], {
-    metrics: worrprba_php_data.server_metrics
-  })
-},
-// {
-//   label: 'Documentation',
-//   icon: <Book size={14} />,
-//   content: <div className="tw-text-center tw-py-12">
-//     <div className="tw-text-6xl tw-mb-4">🚀</div>
-//     <h3 className="tw-text-xl tw-font-semibold tw-text-gray-900 tw-mb-2">
-//       Documentation is cooking! 👨‍🍳
-//     </h3>
-//     <p className="tw-text-gray-600 tw-mb-4">
-//       We're whipping up some amazing docs for you! 📚✨
-//     </p>
-//     <div className="tw-text-sm tw-text-gray-500">
-//       Stay tuned for the full guide on how to master your backups! 💪
-//     </div>
-//   </div>
-// },
-// report issue
-{
-  label: 'Report Issue',
-  icon: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_14__.jsx)(lucide_react__WEBPACK_IMPORTED_MODULE_6__["default"], {
-    size: 14
-  }),
-  content: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_14__.jsx)(_components_ReportIssue__WEBPACK_IMPORTED_MODULE_13__["default"], {})
-}
-// {
-//   label: 'Support the author',
-//   icon: <Heart size={14} />,
-//   content: <DonationInfomation />
-// },
-];
-function App() {
-  return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_14__.jsxs)(AppProvider, {
-    children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_14__.jsx)("div", {
-      className: "tw-w-full",
-      children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_14__.jsx)(_components_Tab__WEBPACK_IMPORTED_MODULE_5__["default"], {
-        tabs: tabs
-      })
-    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_14__.jsx)(_components_Footer__WEBPACK_IMPORTED_MODULE_0__["default"], {})]
-  });
-}
-
-/***/ }),
-
-/***/ "./src/components/BackupConfigModal.jsx":
-/*!**********************************************!*\
-  !*** ./src/components/BackupConfigModal.jsx ***!
-  \**********************************************/
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */   "default": () => (/* binding */ WorrprbaDummyCenter)
 /* harmony export */ });
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var _Modal__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./Modal */ "./src/components/Modal.jsx");
-/* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! react/jsx-runtime */ "./node_modules/react/jsx-runtime.js");
-function _typeof(o) { "@babel/helpers - typeof"; return _typeof = "function" == typeof Symbol && "symbol" == typeof Symbol.iterator ? function (o) { return typeof o; } : function (o) { return o && "function" == typeof Symbol && o.constructor === Symbol && o !== Symbol.prototype ? "symbol" : typeof o; }, _typeof(o); }
-function _toConsumableArray(r) { return _arrayWithoutHoles(r) || _iterableToArray(r) || _unsupportedIterableToArray(r) || _nonIterableSpread(); }
-function _nonIterableSpread() { throw new TypeError("Invalid attempt to spread non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method."); }
-function _iterableToArray(r) { if ("undefined" != typeof Symbol && null != r[Symbol.iterator] || null != r["@@iterator"]) return Array.from(r); }
-function _arrayWithoutHoles(r) { if (Array.isArray(r)) return _arrayLikeToArray(r); }
-function ownKeys(e, r) { var t = Object.keys(e); if (Object.getOwnPropertySymbols) { var o = Object.getOwnPropertySymbols(e); r && (o = o.filter(function (r) { return Object.getOwnPropertyDescriptor(e, r).enumerable; })), t.push.apply(t, o); } return t; }
-function _objectSpread(e) { for (var r = 1; r < arguments.length; r++) { var t = null != arguments[r] ? arguments[r] : {}; r % 2 ? ownKeys(Object(t), !0).forEach(function (r) { _defineProperty(e, r, t[r]); }) : Object.getOwnPropertyDescriptors ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t)) : ownKeys(Object(t)).forEach(function (r) { Object.defineProperty(e, r, Object.getOwnPropertyDescriptor(t, r)); }); } return e; }
-function _defineProperty(e, r, t) { return (r = _toPropertyKey(r)) in e ? Object.defineProperty(e, r, { value: t, enumerable: !0, configurable: !0, writable: !0 }) : e[r] = t, e; }
-function _toPropertyKey(t) { var i = _toPrimitive(t, "string"); return "symbol" == _typeof(i) ? i : i + ""; }
-function _toPrimitive(t, r) { if ("object" != _typeof(t) || !t) return t; var e = t[Symbol.toPrimitive]; if (void 0 !== e) { var i = e.call(t, r || "default"); if ("object" != _typeof(i)) return i; throw new TypeError("@@toPrimitive must return a primitive value."); } return ("string" === r ? String : Number)(t); }
+/* harmony import */ var _hooks_useDummyPack__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./hooks/useDummyPack */ "./src/hooks/useDummyPack.js");
+/* harmony import */ var _components_dummy_pack_Heading__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./components/dummy-pack/Heading */ "./src/components/dummy-pack/Heading.jsx");
+/* harmony import */ var _components_LoadingSkeleton__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./components/LoadingSkeleton */ "./src/components/LoadingSkeleton.jsx");
+/* harmony import */ var _components_dummy_pack_PackGrid__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./components/dummy-pack/PackGrid */ "./src/components/dummy-pack/PackGrid.jsx");
+/* harmony import */ var _util_dummyPackLib__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./util/dummyPackLib */ "./src/util/dummyPackLib.js");
+/* harmony import */ var _components_dummy_pack_InstallProcess__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./components/dummy-pack/InstallProcess */ "./src/components/dummy-pack/InstallProcess.jsx");
+/* harmony import */ var _util_dummyPackStore__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./util/dummyPackStore */ "./src/util/dummyPackStore.js");
+/* harmony import */ var lucide_react__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! lucide-react */ "./node_modules/lucide-react/dist/esm/icons/rotate-ccw.js");
+/* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! react/jsx-runtime */ "./node_modules/react/jsx-runtime.js");
+function _regenerator() { /*! regenerator-runtime -- Copyright (c) 2014-present, Facebook, Inc. -- license (MIT): https://github.com/babel/babel/blob/main/packages/babel-helpers/LICENSE */ var e, t, r = "function" == typeof Symbol ? Symbol : {}, n = r.iterator || "@@iterator", o = r.toStringTag || "@@toStringTag"; function i(r, n, o, i) { var c = n && n.prototype instanceof Generator ? n : Generator, u = Object.create(c.prototype); return _regeneratorDefine2(u, "_invoke", function (r, n, o) { var i, c, u, f = 0, p = o || [], y = !1, G = { p: 0, n: 0, v: e, a: d, f: d.bind(e, 4), d: function d(t, r) { return i = t, c = 0, u = e, G.n = r, a; } }; function d(r, n) { for (c = r, u = n, t = 0; !y && f && !o && t < p.length; t++) { var o, i = p[t], d = G.p, l = i[2]; r > 3 ? (o = l === n) && (u = i[(c = i[4]) ? 5 : (c = 3, 3)], i[4] = i[5] = e) : i[0] <= d && ((o = r < 2 && d < i[1]) ? (c = 0, G.v = n, G.n = i[1]) : d < l && (o = r < 3 || i[0] > n || n > l) && (i[4] = r, i[5] = n, G.n = l, c = 0)); } if (o || r > 1) return a; throw y = !0, n; } return function (o, p, l) { if (f > 1) throw TypeError("Generator is already running"); for (y && 1 === p && d(p, l), c = p, u = l; (t = c < 2 ? e : u) || !y;) { i || (c ? c < 3 ? (c > 1 && (G.n = -1), d(c, u)) : G.n = u : G.v = u); try { if (f = 2, i) { if (c || (o = "next"), t = i[o]) { if (!(t = t.call(i, u))) throw TypeError("iterator result is not an object"); if (!t.done) return t; u = t.value, c < 2 && (c = 0); } else 1 === c && (t = i["return"]) && t.call(i), c < 2 && (u = TypeError("The iterator does not provide a '" + o + "' method"), c = 1); i = e; } else if ((t = (y = G.n < 0) ? u : r.call(n, G)) !== a) break; } catch (t) { i = e, c = 1, u = t; } finally { f = 1; } } return { value: t, done: y }; }; }(r, o, i), !0), u; } var a = {}; function Generator() {} function GeneratorFunction() {} function GeneratorFunctionPrototype() {} t = Object.getPrototypeOf; var c = [][n] ? t(t([][n]())) : (_regeneratorDefine2(t = {}, n, function () { return this; }), t), u = GeneratorFunctionPrototype.prototype = Generator.prototype = Object.create(c); function f(e) { return Object.setPrototypeOf ? Object.setPrototypeOf(e, GeneratorFunctionPrototype) : (e.__proto__ = GeneratorFunctionPrototype, _regeneratorDefine2(e, o, "GeneratorFunction")), e.prototype = Object.create(u), e; } return GeneratorFunction.prototype = GeneratorFunctionPrototype, _regeneratorDefine2(u, "constructor", GeneratorFunctionPrototype), _regeneratorDefine2(GeneratorFunctionPrototype, "constructor", GeneratorFunction), GeneratorFunction.displayName = "GeneratorFunction", _regeneratorDefine2(GeneratorFunctionPrototype, o, "GeneratorFunction"), _regeneratorDefine2(u), _regeneratorDefine2(u, o, "Generator"), _regeneratorDefine2(u, n, function () { return this; }), _regeneratorDefine2(u, "toString", function () { return "[object Generator]"; }), (_regenerator = function _regenerator() { return { w: i, m: f }; })(); }
+function _regeneratorDefine2(e, r, n, t) { var i = Object.defineProperty; try { i({}, "", {}); } catch (e) { i = 0; } _regeneratorDefine2 = function _regeneratorDefine(e, r, n, t) { if (r) i ? i(e, r, { value: n, enumerable: !t, configurable: !t, writable: !t }) : e[r] = n;else { var o = function o(r, n) { _regeneratorDefine2(e, r, function (e) { return this._invoke(r, n, e); }); }; o("next", 0), o("throw", 1), o("return", 2); } }, _regeneratorDefine2(e, r, n, t); }
+function asyncGeneratorStep(n, t, e, r, o, a, c) { try { var i = n[a](c), u = i.value; } catch (n) { return void e(n); } i.done ? t(u) : Promise.resolve(u).then(r, o); }
+function _asyncToGenerator(n) { return function () { var t = this, e = arguments; return new Promise(function (r, o) { var a = n.apply(t, e); function _next(n) { asyncGeneratorStep(a, r, o, _next, _throw, "next", n); } function _throw(n) { asyncGeneratorStep(a, r, o, _next, _throw, "throw", n); } _next(void 0); }); }; }
 function _slicedToArray(r, e) { return _arrayWithHoles(r) || _iterableToArrayLimit(r, e) || _unsupportedIterableToArray(r, e) || _nonIterableRest(); }
 function _nonIterableRest() { throw new TypeError("Invalid attempt to destructure non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method."); }
 function _unsupportedIterableToArray(r, a) { if (r) { if ("string" == typeof r) return _arrayLikeToArray(r, a); var t = {}.toString.call(r).slice(8, -1); return "Object" === t && r.constructor && (t = r.constructor.name), "Map" === t || "Set" === t ? Array.from(r) : "Arguments" === t || /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(t) ? _arrayLikeToArray(r, a) : void 0; } }
@@ -30587,3056 +29525,228 @@ function _arrayWithHoles(r) { if (Array.isArray(r)) return r; }
 
 
 
-/**
- * @typedef {Object} BackupConfigModalProps
- * @property {boolean} isOpen - Controls modal visibility
- * @property {() => void} onClose - Function to handle modal closing
- * @property {(config: BackupConfig) => void} onSave - Function to handle saving backup configuration
- */
 
-/**
- * @typedef {Object} BackupConfig
- * @property {string} name - Backup name
- * @property {string[]} types - Selected backup types
- */
 
-var BACKUP_TYPES = [{
-  id: 'database',
-  label: 'Database',
-  description: 'WordPress database backup',
-  icon: '🗄️'
-}, {
-  id: 'plugin',
-  label: 'Plugins',
-  description: 'All installed plugins',
-  icon: '🔌'
-}, {
-  id: 'theme',
-  label: 'Themes',
-  description: 'All installed themes',
-  icon: '🎨'
-}, {
-  id: 'uploads',
-  label: 'Uploads Folder',
-  description: 'Media files and uploads',
-  icon: '📁'
-}];
-var BackupConfigModal = function BackupConfigModal(_ref) {
-  var isOpen = _ref.isOpen,
-    onClose = _ref.onClose,
-    onSave = _ref.onSave;
-  var _useState = (0,react__WEBPACK_IMPORTED_MODULE_0__.useState)({
-      name: '',
-      types: ['database']
-    }),
+
+
+
+
+
+function WorrprbaDummyCenter() {
+  var _useDummyPack = (0,_hooks_useDummyPack__WEBPACK_IMPORTED_MODULE_1__["default"])(),
+    packs = _useDummyPack.packs,
+    isLoading = _useDummyPack.isLoading,
+    error = _useDummyPack.error;
+  var _useState = (0,react__WEBPACK_IMPORTED_MODULE_0__.useState)(""),
     _useState2 = _slicedToArray(_useState, 2),
-    config = _useState2[0],
-    setConfig = _useState2[1];
-  var handleNameChange = function handleNameChange(e) {
-    setConfig(function (prev) {
-      return _objectSpread(_objectSpread({}, prev), {}, {
-        name: e.target.value
-      });
+    searchTerm = _useState2[0],
+    setSearchTerm = _useState2[1];
+  var _useDummyPackStore = (0,_util_dummyPackStore__WEBPACK_IMPORTED_MODULE_7__["default"])(),
+    buildInstallProcess = _useDummyPackStore.buildInstallProcess;
+
+  // Filter packages based on search term
+  var filteredPackages = (0,react__WEBPACK_IMPORTED_MODULE_0__.useMemo)(function () {
+    if (!Array.isArray(packs === null || packs === void 0 ? void 0 : packs.packages)) return [];
+    if (!searchTerm.trim()) return packs.packages;
+    return packs.packages.filter(function (pack) {
+      var _pack$name;
+      return (_pack$name = pack.name) === null || _pack$name === void 0 ? void 0 : _pack$name.toLowerCase().includes(searchTerm.toLowerCase());
     });
-  };
-  var handleTypeChange = function handleTypeChange(typeId) {
-    setConfig(function (prev) {
-      return _objectSpread(_objectSpread({}, prev), {}, {
-        types: prev.types.includes(typeId) ? prev.types.filter(function (id) {
-          return id !== typeId;
-        }) : [].concat(_toConsumableArray(prev.types), [typeId])
-      });
-    });
-  };
-  var handleSubmit = function handleSubmit(e) {
-    e.preventDefault();
-    onSave(config);
-    onClose();
-  };
-  return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)(_Modal__WEBPACK_IMPORTED_MODULE_1__["default"], {
-    isOpen: isOpen,
-    onClose: onClose,
-    title: "Backup Configuration",
-    size: "lg",
-    children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsxs)("div", {
-      className: "tw-space-y-6",
-      children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("div", {
-        className: "tw-p-4 tw-bg-gradient-to-r tw-from-blue-50 tw-to-purple-50 tw-border tw-border-blue-200 tw-rounded-lg tw-shadow-sm",
-        children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsxs)("div", {
-          className: "tw-flex tw-items-start tw-gap-3",
-          children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("div", {
-            className: "tw-flex-shrink-0 tw-p-2 tw-bg-blue-100 tw-rounded-lg",
-            children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("span", {
-              className: "tw-text-lg",
-              children: "\u26A1"
-            })
-          }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsxs)("div", {
-            className: "tw-flex-1",
-            children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("h3", {
-              className: "tw-text-sm tw-font-bold tw-text-blue-900 tw-mb-1",
-              children: "Let's Set Up Your Backup! \uD83D\uDE80"
-            }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("div", {
-              className: "tw-text-sm tw-text-blue-700 tw-leading-relaxed tw-font-space-mono",
-              children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("p", {
-                children: "Give your backup a name and choose what to include! You can select from database, plugins, themes, and uploads folder. Pick any combination you need! \u2728"
-              })
-            })]
-          })]
-        })
-      }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsxs)("form", {
-        onSubmit: handleSubmit,
-        className: "tw-space-y-8",
-        children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsxs)("div", {
-          className: "tw-space-y-4",
-          children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsxs)("div", {
-            children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("h3", {
-              className: "tw-text-base tw-font-semibold tw-text-gray-900 tw-mb-2",
-              children: "Backup Name"
-            }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("p", {
-              className: "tw-text-sm tw-text-gray-600",
-              children: "Give your backup a descriptive name to easily identify it later"
-            })]
-          }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsxs)("div", {
-            className: "tw-max-w-md",
-            children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("input", {
-              type: "text",
-              id: "backup-name",
-              value: config.name,
-              onChange: handleNameChange,
-              className: "tw-block tw-w-full tw-p-3 tw-rounded-lg tw-border tw-border-gray-200 tw-bg-gray-50 tw-text-gray-900 tw-placeholder-gray-400 tw-transition-colors focus:tw-border-blue-500 focus:tw-ring-2 focus:tw-ring-blue-200 focus:tw-bg-white tw-text-sm",
-              placeholder: "Enter backup name",
-              autoComplete: "off",
-              required: true
-            }), !config.name && /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsxs)("div", {
-              className: "tw-mt-2 tw-text-sm tw-text-red-600 tw-flex tw-items-center tw-gap-1",
-              children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("svg", {
-                className: "tw-w-4 tw-h-4",
-                fill: "none",
-                stroke: "currentColor",
-                viewBox: "0 0 24 24",
-                children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("path", {
-                  strokeLinecap: "round",
-                  strokeLinejoin: "round",
-                  strokeWidth: 2,
-                  d: "M12 8v4m0 4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"
-                })
-              }), "Backup name is required"]
-            })]
-          })]
-        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsxs)("div", {
-          className: "tw-space-y-4",
-          children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsxs)("div", {
-            children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("h3", {
-              className: "tw-text-base tw-font-semibold tw-text-gray-900 tw-mb-2",
-              children: "Backup Types"
-            }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("p", {
-              className: "tw-text-sm tw-text-gray-600",
-              children: "Select what you want to include in your backup"
-            })]
-          }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("div", {
-            className: "tw-grid tw-gap-3 sm:tw-grid-cols-1 lg:tw-grid-cols-1",
-            children: BACKUP_TYPES.map(function (type) {
-              return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsxs)("label", {
-                className: "tw-relative tw-flex tw-items-start tw-p-4 tw-rounded-lg tw-border tw-cursor-pointer tw-transition-all hover:tw-shadow-md ".concat(config.types.includes(type.id) ? 'tw-border-green-500 tw-bg-green-50 tw-ring-2 tw-ring-green-200' : 'tw-border-gray-200 tw-bg-gray-50 hover:tw-border-gray-300'),
-                children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("input", {
-                  type: "checkbox",
-                  checked: config.types.includes(type.id),
-                  onChange: function onChange() {
-                    return handleTypeChange(type.id);
-                  },
-                  className: "tw-sr-only"
-                }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsxs)("div", {
-                  className: "tw-flex tw-items-center tw-gap-3 tw-w-full",
-                  children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("div", {
-                    className: "tw-flex-shrink-0 tw-text-xl",
-                    children: type.icon
-                  }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsxs)("div", {
-                    className: "tw-flex-1 tw-min-w-0",
-                    children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("div", {
-                      className: "tw-text-sm tw-font-medium tw-text-gray-900",
-                      children: type.label
-                    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("div", {
-                      className: "tw-text-xs tw-text-gray-500 tw-leading-tight",
-                      children: type.description
-                    })]
-                  }), config.types.includes(type.id) && /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("div", {
-                    className: "tw-flex-shrink-0 tw-w-5 tw-h-5 tw-bg-green-500 tw-rounded tw-flex tw-items-center tw-justify-center",
-                    children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("svg", {
-                      className: "tw-w-3 tw-h-3 tw-text-white",
-                      fill: "currentColor",
-                      viewBox: "0 0 20 20",
-                      children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("path", {
-                        fillRule: "evenodd",
-                        d: "M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z",
-                        clipRule: "evenodd"
-                      })
-                    })
-                  })]
-                })]
-              }, type.id);
-            })
-          }), config.types.length === 0 && /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsxs)("div", {
-            className: "tw-mt-3 tw-text-sm tw-text-red-600 tw-flex tw-items-center tw-gap-2 tw-p-3 tw-bg-red-50 tw-rounded-lg tw-border tw-border-red-200",
-            children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("svg", {
-              className: "tw-w-4 tw-h-4",
-              fill: "none",
-              stroke: "currentColor",
-              viewBox: "0 0 24 24",
-              children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("path", {
-                strokeLinecap: "round",
-                strokeLinejoin: "round",
-                strokeWidth: 2,
-                d: "M12 8v4m0 4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"
-              })
-            }), "Please select at least one backup type"]
-          })]
-        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsxs)("div", {
-          className: "tw-bg-gray-50 tw-rounded-lg tw-p-4 tw-border tw-border-gray-200",
-          children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("h4", {
-            className: "tw-text-sm tw-font-semibold tw-text-gray-900 tw-mb-3",
-            children: "Backup Summary"
-          }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsxs)("div", {
-            className: "tw-space-y-2 tw-text-sm tw-text-gray-600",
-            children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsxs)("div", {
-              className: "tw-flex tw-items-center tw-gap-2",
-              children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("span", {
-                className: "tw-text-gray-400",
-                children: "\uD83D\uDCDD"
-              }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsxs)("span", {
-                children: ["Name: ", /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("strong", {
-                  className: "tw-text-gray-900",
-                  children: config.name || 'Not specified'
-                })]
-              })]
-            }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsxs)("div", {
-              className: "tw-flex tw-items-center tw-gap-2",
-              children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("span", {
-                className: "tw-text-gray-400",
-                children: "\uD83D\uDCE6"
-              }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsxs)("span", {
-                children: ["Include: ", /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsxs)("strong", {
-                  className: "tw-text-gray-900",
-                  children: [config.types.length, " type", config.types.length !== 1 ? 's' : '']
-                })]
-              })]
-            }), config.types.length > 0 && /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsxs)("div", {
-              className: "tw-flex tw-items-center tw-gap-2",
-              children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("span", {
-                className: "tw-text-gray-400",
-                children: "\u2705"
-              }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsxs)("span", {
-                children: ["Selected: ", /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("strong", {
-                  className: "tw-text-gray-900",
-                  children: config.types.map(function (id) {
-                    var _BACKUP_TYPES$find;
-                    return (_BACKUP_TYPES$find = BACKUP_TYPES.find(function (t) {
-                      return t.id === id;
-                    })) === null || _BACKUP_TYPES$find === void 0 ? void 0 : _BACKUP_TYPES$find.label;
-                  }).join(', ')
-                })]
-              })]
-            })]
-          })]
-        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsxs)("div", {
-          className: "tw-flex tw-justify-end tw-gap-3 tw-pt-6 tw-border-t tw-border-gray-200",
-          children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("button", {
-            type: "button",
-            onClick: onClose,
-            className: "tw-px-6 tw-py-2.5 tw-text-sm tw-font-medium tw-text-gray-700 tw-bg-white tw-border tw-border-gray-200 tw-rounded-lg tw-shadow-sm hover:tw-bg-gray-50 hover:tw-border-gray-300 tw-transition-colors focus:tw-outline-none focus:tw-ring-2 focus:tw-ring-offset-2 focus:tw-ring-blue-500 tw-font-space-mono",
-            children: "Cancel"
-          }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("button", {
-            type: "submit",
-            disabled: !config.name || config.types.length === 0,
-            className: "tw-px-6 tw-py-2.5 tw-text-sm tw-font-medium tw-text-white tw-bg-blue-600 tw-rounded-lg tw-shadow-sm hover:tw-bg-blue-700 tw-transition-colors focus:tw-outline-none focus:tw-ring-2 focus:tw-ring-offset-2 focus:tw-ring-blue-500 disabled:tw-opacity-50 disabled:tw-cursor-not-allowed disabled:hover:tw-bg-blue-600 tw-font-space-mono",
-            children: "Start Backup"
-          })]
-        })]
-      })]
-    })
-  });
-};
-/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (BackupConfigModal);
-
-/***/ }),
-
-/***/ "./src/components/BackupMobileCard.jsx":
-/*!*********************************************!*\
-  !*** ./src/components/BackupMobileCard.jsx ***!
-  \*********************************************/
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
-/* harmony export */ });
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var _BackupStatusBadge__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./BackupStatusBadge */ "./src/components/BackupStatusBadge.jsx");
-/* harmony import */ var _util_lib__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../util/lib */ "./src/util/lib.js");
-/* harmony import */ var _DropdownActions__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./DropdownActions */ "./src/components/DropdownActions.jsx");
-/* harmony import */ var lucide_react__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! lucide-react */ "./node_modules/lucide-react/dist/esm/icons/file-down.js");
-/* harmony import */ var lucide_react__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! lucide-react */ "./node_modules/lucide-react/dist/esm/icons/rotate-ccw.js");
-/* harmony import */ var lucide_react__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! lucide-react */ "./node_modules/lucide-react/dist/esm/icons/trash-2.js");
-/* harmony import */ var _BackupTypeBadge__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./BackupTypeBadge */ "./src/components/BackupTypeBadge.jsx");
-/* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! react/jsx-runtime */ "./node_modules/react/jsx-runtime.js");
-
-
-
-
-
-
-
-var BackupMobileCard = function BackupMobileCard(_ref) {
-  var backup = _ref.backup,
-    isSelected = _ref.isSelected,
-    onSelect = _ref.onSelect,
-    onDelete = _ref.onDelete,
-    onDownload = _ref.onDownload,
-    onRestore = _ref.onRestore;
-  return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsxs)("div", {
-    className: "tw-p-4 tw-border-b tw-border-gray-200",
-    children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsxs)("div", {
-      className: "tw-flex tw-items-center tw-justify-between tw-mb-2",
-      children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsx)("input", {
-        type: "checkbox",
-        className: "tw-form-checkbox tw-h-4 tw-w-4 tw-text-blue-600",
-        checked: isSelected,
-        onChange: function onChange(e) {
-          return onSelect(e, backup.id);
-        }
-      }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsx)("div", {
-        className: "tw-text-sm tw-font-medium tw-text-gray-900",
-        children: backup.name
-      })]
-    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsxs)("div", {
-      className: "tw-space-y-2",
-      children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsx)("div", {
-        className: "tw-flex tw-flex-wrap tw-gap-1",
-        children: backup.type.map(function (type) {
-          return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsx)(_BackupTypeBadge__WEBPACK_IMPORTED_MODULE_7__["default"], {
-            type: type
-          }, type);
-        })
-      }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsxs)("div", {
-        className: "tw-flex tw-justify-between tw-text-sm tw-text-gray-500",
-        children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsxs)("span", {
-          className: "tw-inline-flex tw-items-center tw-gap-1 tw-px-2.5 tw-py-1 tw-text-xs tw-font-medium tw-rounded-md tw-bg-slate-100 tw-text-slate-700 tw-border tw-border-slate-200/60 tw-shadow-sm",
-          title: backup.date,
-          children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsx)("svg", {
-            className: "tw-w-3 tw-h-3 tw-text-slate-400",
+  }, [packs === null || packs === void 0 ? void 0 : packs.packages, searchTerm]);
+  if (isLoading) {
+    return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_9__.jsx)("div", {
+      className: "tw-max-w-7xl tw-mx-auto tw-px-2 sm:tw-px-4 tw-py-10",
+      children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_9__.jsxs)("div", {
+        className: " tw-p-6 tw-flex tw-flex-col tw-items-center tw-justify-center tw-min-h-[300px]",
+        children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_9__.jsxs)("div", {
+          className: "tw-flex tw-items-center tw-gap-3",
+          children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_9__.jsxs)("svg", {
+            className: "tw-w-6 tw-h-6 tw-text-blue-400 tw-animate-spin",
             fill: "none",
             stroke: "currentColor",
             viewBox: "0 0 24 24",
-            children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsx)("path", {
-              strokeLinecap: "round",
-              strokeLinejoin: "round",
-              strokeWidth: 2,
-              d: "M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"
-            })
-          }), (0,_util_lib__WEBPACK_IMPORTED_MODULE_2__.friendlyDateTime)(backup.date, worrprba_php_data.current_datetime)]
-        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsx)("span", {
-          children: backup.size
-        })]
-      }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsxs)("div", {
-        className: "tw-flex tw-items-center tw-justify-between",
-        children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsx)(_BackupStatusBadge__WEBPACK_IMPORTED_MODULE_1__["default"], {
-          status: backup.status
-        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsx)(_DropdownActions__WEBPACK_IMPORTED_MODULE_3__["default"], {
-          items: [{
-            label: 'Restore',
-            icon: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsx)(lucide_react__WEBPACK_IMPORTED_MODULE_5__["default"], {
-              size: 16
-            }),
-            onClick: function onClick() {
-              return onRestore(backup);
-            }
-          }, {
-            label: 'Download',
-            icon: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsx)(lucide_react__WEBPACK_IMPORTED_MODULE_4__["default"], {
-              size: 16
-            }),
-            onClick: function onClick() {
-              return onDownload(backup.id);
-            }
-          }, {
-            label: 'Delete',
-            icon: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsx)(lucide_react__WEBPACK_IMPORTED_MODULE_6__["default"], {
-              size: 16
-            }),
-            danger: true,
-            onClick: function onClick() {
-              return onDelete(backup.id);
-            }
-          }]
-        })]
-      })]
-    })]
-  }, backup.id);
-};
-/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (BackupMobileCard);
-
-/***/ }),
-
-/***/ "./src/components/BackupProcess.jsx":
-/*!******************************************!*\
-  !*** ./src/components/BackupProcess.jsx ***!
-  \******************************************/
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
-/* harmony export */ });
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var _util_store__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../util/store */ "./src/util/store.js");
-/* harmony import */ var _util_lib__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../util/lib */ "./src/util/lib.js");
-/* harmony import */ var _Toast__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./Toast */ "./src/components/Toast.jsx");
-/* harmony import */ var _Modal__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./Modal */ "./src/components/Modal.jsx");
-/* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! react/jsx-runtime */ "./node_modules/react/jsx-runtime.js");
-function _typeof(o) { "@babel/helpers - typeof"; return _typeof = "function" == typeof Symbol && "symbol" == typeof Symbol.iterator ? function (o) { return typeof o; } : function (o) { return o && "function" == typeof Symbol && o.constructor === Symbol && o !== Symbol.prototype ? "symbol" : typeof o; }, _typeof(o); }
-function _toConsumableArray(r) { return _arrayWithoutHoles(r) || _iterableToArray(r) || _unsupportedIterableToArray(r) || _nonIterableSpread(); }
-function _nonIterableSpread() { throw new TypeError("Invalid attempt to spread non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method."); }
-function _iterableToArray(r) { if ("undefined" != typeof Symbol && null != r[Symbol.iterator] || null != r["@@iterator"]) return Array.from(r); }
-function _arrayWithoutHoles(r) { if (Array.isArray(r)) return _arrayLikeToArray(r); }
-function _regenerator() { /*! regenerator-runtime -- Copyright (c) 2014-present, Facebook, Inc. -- license (MIT): https://github.com/babel/babel/blob/main/packages/babel-helpers/LICENSE */ var e, t, r = "function" == typeof Symbol ? Symbol : {}, n = r.iterator || "@@iterator", o = r.toStringTag || "@@toStringTag"; function i(r, n, o, i) { var c = n && n.prototype instanceof Generator ? n : Generator, u = Object.create(c.prototype); return _regeneratorDefine2(u, "_invoke", function (r, n, o) { var i, c, u, f = 0, p = o || [], y = !1, G = { p: 0, n: 0, v: e, a: d, f: d.bind(e, 4), d: function d(t, r) { return i = t, c = 0, u = e, G.n = r, a; } }; function d(r, n) { for (c = r, u = n, t = 0; !y && f && !o && t < p.length; t++) { var o, i = p[t], d = G.p, l = i[2]; r > 3 ? (o = l === n) && (u = i[(c = i[4]) ? 5 : (c = 3, 3)], i[4] = i[5] = e) : i[0] <= d && ((o = r < 2 && d < i[1]) ? (c = 0, G.v = n, G.n = i[1]) : d < l && (o = r < 3 || i[0] > n || n > l) && (i[4] = r, i[5] = n, G.n = l, c = 0)); } if (o || r > 1) return a; throw y = !0, n; } return function (o, p, l) { if (f > 1) throw TypeError("Generator is already running"); for (y && 1 === p && d(p, l), c = p, u = l; (t = c < 2 ? e : u) || !y;) { i || (c ? c < 3 ? (c > 1 && (G.n = -1), d(c, u)) : G.n = u : G.v = u); try { if (f = 2, i) { if (c || (o = "next"), t = i[o]) { if (!(t = t.call(i, u))) throw TypeError("iterator result is not an object"); if (!t.done) return t; u = t.value, c < 2 && (c = 0); } else 1 === c && (t = i["return"]) && t.call(i), c < 2 && (u = TypeError("The iterator does not provide a '" + o + "' method"), c = 1); i = e; } else if ((t = (y = G.n < 0) ? u : r.call(n, G)) !== a) break; } catch (t) { i = e, c = 1, u = t; } finally { f = 1; } } return { value: t, done: y }; }; }(r, o, i), !0), u; } var a = {}; function Generator() {} function GeneratorFunction() {} function GeneratorFunctionPrototype() {} t = Object.getPrototypeOf; var c = [][n] ? t(t([][n]())) : (_regeneratorDefine2(t = {}, n, function () { return this; }), t), u = GeneratorFunctionPrototype.prototype = Generator.prototype = Object.create(c); function f(e) { return Object.setPrototypeOf ? Object.setPrototypeOf(e, GeneratorFunctionPrototype) : (e.__proto__ = GeneratorFunctionPrototype, _regeneratorDefine2(e, o, "GeneratorFunction")), e.prototype = Object.create(u), e; } return GeneratorFunction.prototype = GeneratorFunctionPrototype, _regeneratorDefine2(u, "constructor", GeneratorFunctionPrototype), _regeneratorDefine2(GeneratorFunctionPrototype, "constructor", GeneratorFunction), GeneratorFunction.displayName = "GeneratorFunction", _regeneratorDefine2(GeneratorFunctionPrototype, o, "GeneratorFunction"), _regeneratorDefine2(u), _regeneratorDefine2(u, o, "Generator"), _regeneratorDefine2(u, n, function () { return this; }), _regeneratorDefine2(u, "toString", function () { return "[object Generator]"; }), (_regenerator = function _regenerator() { return { w: i, m: f }; })(); }
-function _regeneratorDefine2(e, r, n, t) { var i = Object.defineProperty; try { i({}, "", {}); } catch (e) { i = 0; } _regeneratorDefine2 = function _regeneratorDefine(e, r, n, t) { if (r) i ? i(e, r, { value: n, enumerable: !t, configurable: !t, writable: !t }) : e[r] = n;else { var o = function o(r, n) { _regeneratorDefine2(e, r, function (e) { return this._invoke(r, n, e); }); }; o("next", 0), o("throw", 1), o("return", 2); } }, _regeneratorDefine2(e, r, n, t); }
-function ownKeys(e, r) { var t = Object.keys(e); if (Object.getOwnPropertySymbols) { var o = Object.getOwnPropertySymbols(e); r && (o = o.filter(function (r) { return Object.getOwnPropertyDescriptor(e, r).enumerable; })), t.push.apply(t, o); } return t; }
-function _objectSpread(e) { for (var r = 1; r < arguments.length; r++) { var t = null != arguments[r] ? arguments[r] : {}; r % 2 ? ownKeys(Object(t), !0).forEach(function (r) { _defineProperty(e, r, t[r]); }) : Object.getOwnPropertyDescriptors ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t)) : ownKeys(Object(t)).forEach(function (r) { Object.defineProperty(e, r, Object.getOwnPropertyDescriptor(t, r)); }); } return e; }
-function _defineProperty(e, r, t) { return (r = _toPropertyKey(r)) in e ? Object.defineProperty(e, r, { value: t, enumerable: !0, configurable: !0, writable: !0 }) : e[r] = t, e; }
-function _toPropertyKey(t) { var i = _toPrimitive(t, "string"); return "symbol" == _typeof(i) ? i : i + ""; }
-function _toPrimitive(t, r) { if ("object" != _typeof(t) || !t) return t; var e = t[Symbol.toPrimitive]; if (void 0 !== e) { var i = e.call(t, r || "default"); if ("object" != _typeof(i)) return i; throw new TypeError("@@toPrimitive must return a primitive value."); } return ("string" === r ? String : Number)(t); }
-function asyncGeneratorStep(n, t, e, r, o, a, c) { try { var i = n[a](c), u = i.value; } catch (n) { return void e(n); } i.done ? t(u) : Promise.resolve(u).then(r, o); }
-function _asyncToGenerator(n) { return function () { var t = this, e = arguments; return new Promise(function (r, o) { var a = n.apply(t, e); function _next(n) { asyncGeneratorStep(a, r, o, _next, _throw, "next", n); } function _throw(n) { asyncGeneratorStep(a, r, o, _next, _throw, "throw", n); } _next(void 0); }); }; }
-function _slicedToArray(r, e) { return _arrayWithHoles(r) || _iterableToArrayLimit(r, e) || _unsupportedIterableToArray(r, e) || _nonIterableRest(); }
-function _nonIterableRest() { throw new TypeError("Invalid attempt to destructure non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method."); }
-function _unsupportedIterableToArray(r, a) { if (r) { if ("string" == typeof r) return _arrayLikeToArray(r, a); var t = {}.toString.call(r).slice(8, -1); return "Object" === t && r.constructor && (t = r.constructor.name), "Map" === t || "Set" === t ? Array.from(r) : "Arguments" === t || /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(t) ? _arrayLikeToArray(r, a) : void 0; } }
-function _arrayLikeToArray(r, a) { (null == a || a > r.length) && (a = r.length); for (var e = 0, n = Array(a); e < a; e++) n[e] = r[e]; return n; }
-function _iterableToArrayLimit(r, l) { var t = null == r ? null : "undefined" != typeof Symbol && r[Symbol.iterator] || r["@@iterator"]; if (null != t) { var e, n, i, u, a = [], f = !0, o = !1; try { if (i = (t = t.call(r)).next, 0 === l) { if (Object(t) !== t) return; f = !1; } else for (; !(f = (e = i.call(t)).done) && (a.push(e.value), a.length !== l); f = !0); } catch (r) { o = !0, n = r; } finally { try { if (!f && null != t["return"] && (u = t["return"](), Object(u) !== u)) return; } finally { if (o) throw n; } } return a; } }
-function _arrayWithHoles(r) { if (Array.isArray(r)) return r; }
-
-
-
-
-
-
-/**
- * BackupProcess - Stepper UI for backup process
- * Shows each step, highlights current, marks completed, and disables future steps
- * Uses Tailwind CSS with 'tw-' prefix for all classes
- */
-
-var BackupProcess = function BackupProcess() {
-  var _useBackupStore = (0,_util_store__WEBPACK_IMPORTED_MODULE_1__["default"])(),
-    backupProcess = _useBackupStore.backupProcess,
-    inProgress = _useBackupStore.inProgress,
-    setInProgress = _useBackupStore.setInProgress,
-    inProgressStep = _useBackupStore.inProgressStep,
-    setInProgressStep = _useBackupStore.setInProgressStep,
-    fetchBackups_Fn = _useBackupStore.fetchBackups_Fn;
-  var _useState = (0,react__WEBPACK_IMPORTED_MODULE_0__.useState)({}),
-    _useState2 = _slicedToArray(_useState, 2),
-    responseOldStep = _useState2[0],
-    setResponseOldStep = _useState2[1];
-  var _useState3 = (0,react__WEBPACK_IMPORTED_MODULE_0__.useState)(null),
-    _useState4 = _slicedToArray(_useState3, 2),
-    error = _useState4[0],
-    setError = _useState4[1];
-  var toast = (0,_Toast__WEBPACK_IMPORTED_MODULE_3__.useToast)();
-  var _backupProcessHandler = /*#__PURE__*/function () {
-    var _ref = _asyncToGenerator(/*#__PURE__*/_regenerator().m(function _callee(process) {
-      var response, response_data;
-      return _regenerator().w(function (_context) {
-        while (1) switch (_context.n) {
-          case 0:
-            _context.n = 1;
-            return (0,_util_lib__WEBPACK_IMPORTED_MODULE_2__.doBackupProcess)(process);
-          case 1:
-            response = _context.v;
-            if (!(response.success != true)) {
-              _context.n = 2;
-              break;
-            }
-            // console.error(response);
-            setError(response.data);
-            return _context.a(2);
-          case 2:
-            if (!(response.data.backup_process_status == 'done')) {
-              _context.n = 4;
-              break;
-            }
-            setInProgressStep(backupProcess.length + 1); // passed all steps
-            setResponseOldStep({}); // reset response old step
-            _context.n = 3;
-            return fetchBackups_Fn();
-          case 3:
-            // fetch backups
-
-            // show toast
-            toast({
-              message: "🎉 Yasss! Full backup done, everything's safe & sound 🛡️. You're good to go, keep slaying! 😎✨",
-              type: 'success'
-            });
-            return _context.a(2);
-          case 4:
-            response_data = _objectSpread(_objectSpread({}, responseOldStep), response.data);
-            setResponseOldStep(response_data);
-            if (!(response.data.next_step == true)) {
-              _context.n = 5;
-              break;
-            }
-            setInProgressStep(process.step + 1);
-            return _context.a(2);
-          case 5:
-            // re-run process
-            _backupProcessHandler(_objectSpread(_objectSpread({}, process), {}, {
-              payload: _objectSpread({}, response_data)
-            }));
-          case 6:
-            return _context.a(2);
-        }
-      }, _callee);
-    }));
-    return function backupProcessHandler(_x) {
-      return _ref.apply(this, arguments);
-    };
-  }();
-  (0,react__WEBPACK_IMPORTED_MODULE_0__.useEffect)(function () {
-    if (inProgressStep > backupProcess.length) {
-      setTimeout(function () {
-        setInProgress(false);
-      }, 3000);
-    }
-  }, [inProgressStep]);
-  (0,react__WEBPACK_IMPORTED_MODULE_0__.useEffect)(function () {
-    if (inProgress == true) {
-      // get process by step
-      var process = _toConsumableArray(backupProcess).find(function (step) {
-        return step.step === inProgressStep;
-      });
-
-      // check if process is exists
-      if (!process) {
-        // passed all steps
-
-        return;
-      }
-      process = _objectSpread(_objectSpread({}, process), {}, {
-        payload: _objectSpread(_objectSpread({}, process.payload), responseOldStep)
-      });
-      // console.log(process, responseOldStep);
-      _backupProcessHandler(process);
-
-      // console.log(inProgress, inProgressStep);
-    }
-  }, [inProgress, inProgressStep]);
-  return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)(_Modal__WEBPACK_IMPORTED_MODULE_4__["default"], {
-    isOpen: inProgress && backupProcess.length > 0,
-    onClose: function onClose() {
-      return setInProgress(false);
-    },
-    title: "Backup Progress",
-    size: "lg",
-    children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)("ol", {
-      className: "tw-relative tw-border-l-2 tw-border-blue-200 tw-ml-4",
-      children: backupProcess.map(function (step, idx) {
-        var isCompleted = inProgressStep > step.step;
-        var isCurrent = inProgressStep === step.step;
-        return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsxs)("li", {
-          className: "tw-mb-8 tw-ml-6 tw-last:mb-0",
-          children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)("span", {
-            className: "tw-absolute tw--left-4 tw-flex tw-items-center tw-justify-center tw-w-8 tw-h-8 tw-rounded-full tw-border-2 ".concat(isCompleted ? 'tw-bg-blue-500 tw-border-blue-500' : isCurrent ? 'tw-bg-white tw-border-blue-500 tw-animate-pulse' : 'tw-bg-gray-100 tw-border-gray-300'),
-            children: isCompleted ? /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)("svg", {
-              className: "tw-w-5 tw-h-5 tw-text-white",
-              fill: "none",
+            children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_9__.jsx)("circle", {
+              className: "tw-opacity-25",
+              cx: "12",
+              cy: "12",
+              r: "10",
               stroke: "currentColor",
-              viewBox: "0 0 24 24",
-              children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)("path", {
-                strokeLinecap: "round",
-                strokeLinejoin: "round",
-                strokeWidth: 2,
-                d: "M5 13l4 4L19 7"
-              })
-            }) : /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)("span", {
-              className: "tw-text-base ".concat(isCurrent ? 'tw-text-blue-600' : 'tw-text-gray-400'),
-              children: step.step
-            })
-          }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsxs)("div", {
-            className: "tw-pl-4",
-            children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)("h3", {
-              className: "tw-text-base tw-font-semibold ".concat(isCompleted ? 'tw-text-blue-600' : isCurrent ? 'tw-text-blue-700' : 'tw-text-gray-500'),
-              children: step.name
-            }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)("p", {
-              className: "tw-mt-1 tw-text-sm tw-text-gray-500",
-              children: step.description
-            }), error && inProgressStep === step.step && /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)("div", {
-              className: "tw-mt-3 tw-p-3 tw-bg-red-50 tw-border tw-border-red-200 tw-rounded-md",
-              children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsxs)("div", {
-                className: "tw-flex tw-items-start tw-gap-2",
-                children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)("svg", {
-                  className: "tw-w-4 tw-h-4 tw-text-red-500 tw-mt-0.5 tw-flex-shrink-0",
-                  fill: "none",
-                  stroke: "currentColor",
-                  viewBox: "0 0 24 24",
-                  children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)("path", {
-                    strokeLinecap: "round",
-                    strokeLinejoin: "round",
-                    strokeWidth: 2,
-                    d: "M12 8v4m0 4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"
-                  })
-                }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)("p", {
-                  className: "tw-text-sm tw-text-red-700 tw-leading-relaxed",
-                  children: error
-                })]
-              })
-            }), isCurrent && !error && /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsxs)("div", {
-              className: "tw-mt-2 tw-flex tw-items-center tw-gap-2",
-              children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsxs)("svg", {
-                className: "tw-w-4 tw-h-4 tw-text-blue-400 tw-animate-spin",
-                fill: "none",
-                stroke: "currentColor",
-                viewBox: "0 0 24 24",
-                children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)("circle", {
-                  className: "tw-opacity-25",
-                  cx: "12",
-                  cy: "12",
-                  r: "10",
-                  stroke: "currentColor",
-                  strokeWidth: "4"
-                }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)("path", {
-                  className: "tw-opacity-75",
-                  fill: "currentColor",
-                  d: "M4 12a8 8 0 018-8v8z"
-                })]
-              }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)("span", {
-                className: "tw-text-xs tw-text-blue-500 tw-font-medium",
-                children: "In progress..."
-              })]
-            }), isCompleted && /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)("span", {
-              className: "tw-mt-2 tw-inline-block tw-text-xs tw-text-green-600 tw-font-medium",
-              children: "Completed"
+              strokeWidth: "4"
+            }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_9__.jsx)("path", {
+              className: "tw-opacity-75",
+              fill: "currentColor",
+              d: "M4 12a8 8 0 018-8v8z"
             })]
+          }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_9__.jsx)("span", {
+            className: "tw-text-lg tw-text-blue-600 tw-font-semibold",
+            children: "Loading Dummy Packs..."
           })]
-        }, step.step);
-      })
-    })
-  });
-};
-/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (BackupProcess);
-
-/***/ }),
-
-/***/ "./src/components/BackupScheduleConfig.jsx":
-/*!*************************************************!*\
-  !*** ./src/components/BackupScheduleConfig.jsx ***!
-  \*************************************************/
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "default": () => (/* binding */ BackupScheduleConfig)
-/* harmony export */ });
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var _Notification__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./Notification */ "./src/components/Notification.jsx");
-/* harmony import */ var _util_lib__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../util/lib */ "./src/util/lib.js");
-/* harmony import */ var _Toast__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./Toast */ "./src/components/Toast.jsx");
-/* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! react/jsx-runtime */ "./node_modules/react/jsx-runtime.js");
-function _typeof(o) { "@babel/helpers - typeof"; return _typeof = "function" == typeof Symbol && "symbol" == typeof Symbol.iterator ? function (o) { return typeof o; } : function (o) { return o && "function" == typeof Symbol && o.constructor === Symbol && o !== Symbol.prototype ? "symbol" : typeof o; }, _typeof(o); }
-function _toConsumableArray(r) { return _arrayWithoutHoles(r) || _iterableToArray(r) || _unsupportedIterableToArray(r) || _nonIterableSpread(); }
-function _nonIterableSpread() { throw new TypeError("Invalid attempt to spread non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method."); }
-function _iterableToArray(r) { if ("undefined" != typeof Symbol && null != r[Symbol.iterator] || null != r["@@iterator"]) return Array.from(r); }
-function _arrayWithoutHoles(r) { if (Array.isArray(r)) return _arrayLikeToArray(r); }
-function ownKeys(e, r) { var t = Object.keys(e); if (Object.getOwnPropertySymbols) { var o = Object.getOwnPropertySymbols(e); r && (o = o.filter(function (r) { return Object.getOwnPropertyDescriptor(e, r).enumerable; })), t.push.apply(t, o); } return t; }
-function _objectSpread(e) { for (var r = 1; r < arguments.length; r++) { var t = null != arguments[r] ? arguments[r] : {}; r % 2 ? ownKeys(Object(t), !0).forEach(function (r) { _defineProperty(e, r, t[r]); }) : Object.getOwnPropertyDescriptors ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t)) : ownKeys(Object(t)).forEach(function (r) { Object.defineProperty(e, r, Object.getOwnPropertyDescriptor(t, r)); }); } return e; }
-function _defineProperty(e, r, t) { return (r = _toPropertyKey(r)) in e ? Object.defineProperty(e, r, { value: t, enumerable: !0, configurable: !0, writable: !0 }) : e[r] = t, e; }
-function _toPropertyKey(t) { var i = _toPrimitive(t, "string"); return "symbol" == _typeof(i) ? i : i + ""; }
-function _toPrimitive(t, r) { if ("object" != _typeof(t) || !t) return t; var e = t[Symbol.toPrimitive]; if (void 0 !== e) { var i = e.call(t, r || "default"); if ("object" != _typeof(i)) return i; throw new TypeError("@@toPrimitive must return a primitive value."); } return ("string" === r ? String : Number)(t); }
-function _regenerator() { /*! regenerator-runtime -- Copyright (c) 2014-present, Facebook, Inc. -- license (MIT): https://github.com/babel/babel/blob/main/packages/babel-helpers/LICENSE */ var e, t, r = "function" == typeof Symbol ? Symbol : {}, n = r.iterator || "@@iterator", o = r.toStringTag || "@@toStringTag"; function i(r, n, o, i) { var c = n && n.prototype instanceof Generator ? n : Generator, u = Object.create(c.prototype); return _regeneratorDefine2(u, "_invoke", function (r, n, o) { var i, c, u, f = 0, p = o || [], y = !1, G = { p: 0, n: 0, v: e, a: d, f: d.bind(e, 4), d: function d(t, r) { return i = t, c = 0, u = e, G.n = r, a; } }; function d(r, n) { for (c = r, u = n, t = 0; !y && f && !o && t < p.length; t++) { var o, i = p[t], d = G.p, l = i[2]; r > 3 ? (o = l === n) && (u = i[(c = i[4]) ? 5 : (c = 3, 3)], i[4] = i[5] = e) : i[0] <= d && ((o = r < 2 && d < i[1]) ? (c = 0, G.v = n, G.n = i[1]) : d < l && (o = r < 3 || i[0] > n || n > l) && (i[4] = r, i[5] = n, G.n = l, c = 0)); } if (o || r > 1) return a; throw y = !0, n; } return function (o, p, l) { if (f > 1) throw TypeError("Generator is already running"); for (y && 1 === p && d(p, l), c = p, u = l; (t = c < 2 ? e : u) || !y;) { i || (c ? c < 3 ? (c > 1 && (G.n = -1), d(c, u)) : G.n = u : G.v = u); try { if (f = 2, i) { if (c || (o = "next"), t = i[o]) { if (!(t = t.call(i, u))) throw TypeError("iterator result is not an object"); if (!t.done) return t; u = t.value, c < 2 && (c = 0); } else 1 === c && (t = i["return"]) && t.call(i), c < 2 && (u = TypeError("The iterator does not provide a '" + o + "' method"), c = 1); i = e; } else if ((t = (y = G.n < 0) ? u : r.call(n, G)) !== a) break; } catch (t) { i = e, c = 1, u = t; } finally { f = 1; } } return { value: t, done: y }; }; }(r, o, i), !0), u; } var a = {}; function Generator() {} function GeneratorFunction() {} function GeneratorFunctionPrototype() {} t = Object.getPrototypeOf; var c = [][n] ? t(t([][n]())) : (_regeneratorDefine2(t = {}, n, function () { return this; }), t), u = GeneratorFunctionPrototype.prototype = Generator.prototype = Object.create(c); function f(e) { return Object.setPrototypeOf ? Object.setPrototypeOf(e, GeneratorFunctionPrototype) : (e.__proto__ = GeneratorFunctionPrototype, _regeneratorDefine2(e, o, "GeneratorFunction")), e.prototype = Object.create(u), e; } return GeneratorFunction.prototype = GeneratorFunctionPrototype, _regeneratorDefine2(u, "constructor", GeneratorFunctionPrototype), _regeneratorDefine2(GeneratorFunctionPrototype, "constructor", GeneratorFunction), GeneratorFunction.displayName = "GeneratorFunction", _regeneratorDefine2(GeneratorFunctionPrototype, o, "GeneratorFunction"), _regeneratorDefine2(u), _regeneratorDefine2(u, o, "Generator"), _regeneratorDefine2(u, n, function () { return this; }), _regeneratorDefine2(u, "toString", function () { return "[object Generator]"; }), (_regenerator = function _regenerator() { return { w: i, m: f }; })(); }
-function _regeneratorDefine2(e, r, n, t) { var i = Object.defineProperty; try { i({}, "", {}); } catch (e) { i = 0; } _regeneratorDefine2 = function _regeneratorDefine(e, r, n, t) { if (r) i ? i(e, r, { value: n, enumerable: !t, configurable: !t, writable: !t }) : e[r] = n;else { var o = function o(r, n) { _regeneratorDefine2(e, r, function (e) { return this._invoke(r, n, e); }); }; o("next", 0), o("throw", 1), o("return", 2); } }, _regeneratorDefine2(e, r, n, t); }
-function asyncGeneratorStep(n, t, e, r, o, a, c) { try { var i = n[a](c), u = i.value; } catch (n) { return void e(n); } i.done ? t(u) : Promise.resolve(u).then(r, o); }
-function _asyncToGenerator(n) { return function () { var t = this, e = arguments; return new Promise(function (r, o) { var a = n.apply(t, e); function _next(n) { asyncGeneratorStep(a, r, o, _next, _throw, "next", n); } function _throw(n) { asyncGeneratorStep(a, r, o, _next, _throw, "throw", n); } _next(void 0); }); }; }
-function _slicedToArray(r, e) { return _arrayWithHoles(r) || _iterableToArrayLimit(r, e) || _unsupportedIterableToArray(r, e) || _nonIterableRest(); }
-function _nonIterableRest() { throw new TypeError("Invalid attempt to destructure non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method."); }
-function _unsupportedIterableToArray(r, a) { if (r) { if ("string" == typeof r) return _arrayLikeToArray(r, a); var t = {}.toString.call(r).slice(8, -1); return "Object" === t && r.constructor && (t = r.constructor.name), "Map" === t || "Set" === t ? Array.from(r) : "Arguments" === t || /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(t) ? _arrayLikeToArray(r, a) : void 0; } }
-function _arrayLikeToArray(r, a) { (null == a || a > r.length) && (a = r.length); for (var e = 0, n = Array(a); e < a; e++) n[e] = r[e]; return n; }
-function _iterableToArrayLimit(r, l) { var t = null == r ? null : "undefined" != typeof Symbol && r[Symbol.iterator] || r["@@iterator"]; if (null != t) { var e, n, i, u, a = [], f = !0, o = !1; try { if (i = (t = t.call(r)).next, 0 === l) { if (Object(t) !== t) return; f = !1; } else for (; !(f = (e = i.call(t)).done) && (a.push(e.value), a.length !== l); f = !0); } catch (r) { o = !0, n = r; } finally { try { if (!f && null != t["return"] && (u = t["return"](), Object(u) !== u)) return; } finally { if (o) throw n; } } return a; } }
-function _arrayWithHoles(r) { if (Array.isArray(r)) return r; }
-
-
-
-
-
-var BACKUP_FREQUENCIES = [{
-  id: 'weekly',
-  label: 'Weekly',
-  description: 'Backup every week',
-  icon: '📅'
-}, {
-  id: 'monthly',
-  label: 'Monthly',
-  description: 'Backup every month',
-  icon: '🗓️'
-}];
-var BACKUP_TYPES = [{
-  id: 'database',
-  label: 'Database',
-  description: 'WordPress database backup',
-  icon: '🗄️'
-}, {
-  id: 'plugin',
-  label: 'Plugins',
-  description: 'All installed plugins',
-  icon: '🔌'
-}, {
-  id: 'theme',
-  label: 'Themes',
-  description: 'All installed themes',
-  icon: '🎨'
-}, {
-  id: 'uploads',
-  label: 'Uploads Folder',
-  description: 'Media files and uploads',
-  icon: '📁'
-}];
-var VERSION_LIMITS = [{
-  value: 1,
-  label: 'Keep last 1 backup'
-}, {
-  value: 2,
-  label: 'Keep last 2 backups'
-}, {
-  value: 3,
-  label: 'Keep last 3 backups'
-}, {
-  value: 4,
-  label: 'Keep last 4 backups'
-}, {
-  value: 5,
-  label: 'Keep last 5 backups'
-}];
-function BackupScheduleConfig(_ref) {
-  var onCancel = _ref.onCancel;
-  var toast = (0,_Toast__WEBPACK_IMPORTED_MODULE_3__.useToast)();
-  var _useState = (0,react__WEBPACK_IMPORTED_MODULE_0__.useState)(false),
-    _useState2 = _slicedToArray(_useState, 2),
-    isLoading = _useState2[0],
-    setIsLoading = _useState2[1];
-  var _useState3 = (0,react__WEBPACK_IMPORTED_MODULE_0__.useState)(false),
-    _useState4 = _slicedToArray(_useState3, 2),
-    isSaving = _useState4[0],
-    setIsSaving = _useState4[1];
-  var _useState5 = (0,react__WEBPACK_IMPORTED_MODULE_0__.useState)({
-      enabled: false,
-      frequency: 'weekly',
-      types: ['database'],
-      versionLimit: 2
-    }),
-    _useState6 = _slicedToArray(_useState5, 2),
-    schedule = _useState6[0],
-    setSchedule = _useState6[1];
-  (0,react__WEBPACK_IMPORTED_MODULE_0__.useEffect)(function () {
-    var fetchSchedule = /*#__PURE__*/function () {
-      var _ref2 = _asyncToGenerator(/*#__PURE__*/_regenerator().m(function _callee() {
-        var response;
-        return _regenerator().w(function (_context) {
-          while (1) switch (_context.n) {
-            case 0:
-              setIsLoading(true);
-              _context.n = 1;
-              return (0,_util_lib__WEBPACK_IMPORTED_MODULE_2__.getBackupScheduleConfig)();
-            case 1:
-              response = _context.v;
-              if (!(response.data === false)) {
-                _context.n = 2;
-                break;
-              }
-              setIsLoading(false);
-              return _context.a(2);
-            case 2:
-              setSchedule(response.data);
-              setIsLoading(false);
-            case 3:
-              return _context.a(2);
-          }
-        }, _callee);
-      }));
-      return function fetchSchedule() {
-        return _ref2.apply(this, arguments);
-      };
-    }();
-    fetchSchedule();
-  }, []);
-  var handleFrequencyChange = function handleFrequencyChange(frequency) {
-    setSchedule(function (prev) {
-      return _objectSpread(_objectSpread({}, prev), {}, {
-        frequency: frequency
-      });
-    });
-  };
-  var handleTypeChange = function handleTypeChange(typeId) {
-    setSchedule(function (prev) {
-      return _objectSpread(_objectSpread({}, prev), {}, {
-        types: prev.types.includes(typeId) ? prev.types.filter(function (id) {
-          return id !== typeId;
-        }) : [].concat(_toConsumableArray(prev.types), [typeId])
-      });
-    });
-  };
-  var handleVersionLimitChange = function handleVersionLimitChange(e) {
-    setSchedule(function (prev) {
-      return _objectSpread(_objectSpread({}, prev), {}, {
-        versionLimit: parseInt(e.target.value)
-      });
-    });
-  };
-  var handleEnableToggle = function handleEnableToggle() {
-    setSchedule(function (prev) {
-      return _objectSpread(_objectSpread({}, prev), {}, {
-        enabled: !prev.enabled
-      });
-    });
-  };
-  var handleSaveSchedule = /*#__PURE__*/function () {
-    var _ref3 = _asyncToGenerator(/*#__PURE__*/_regenerator().m(function _callee2() {
-      var response;
-      return _regenerator().w(function (_context2) {
-        while (1) switch (_context2.n) {
-          case 0:
-            // TODO: Implement save functionality
-            // console.log('Saving schedule:', schedule);
-            setIsSaving(true);
-            _context2.n = 1;
-            return (0,_util_lib__WEBPACK_IMPORTED_MODULE_2__.saveBackupScheduleConfig)(schedule);
-          case 1:
-            response = _context2.v;
-            // console.log(response);
-            if (response.success) {
-              toast({
-                message: 'Backup schedule saved',
-                type: 'success'
-              });
-            } else {
-              toast({
-                message: 'Backup schedule failed',
-                type: 'error'
-              });
-            }
-            setIsSaving(false);
-          case 2:
-            return _context2.a(2);
-        }
-      }, _callee2);
-    }));
-    return function handleSaveSchedule() {
-      return _ref3.apply(this, arguments);
-    };
-  }();
-  if (isLoading) {
-    return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)("div", {
-      className: "tw-flex tw-justify-center tw-items-center tw-h-screen",
-      children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)("div", {
-        className: "tw-animate-spin tw-rounded-full tw-h-10 tw-w-10 tw-border-t-2 tw-border-b-2 tw-border-blue-500"
-      })
-    });
-  }
-  return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsxs)("div", {
-    className: "tw-space-y-6",
-    children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)(_Notification__WEBPACK_IMPORTED_MODULE_1__["default"], {
-      type: "warning",
-      title: "Backup Scheduling",
-      children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsxs)("p", {
-        className: "tw-text-xs tw-font-space-mono",
-        children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)("strong", {
-          children: "Heads up! \uD83D\uDEA8 "
-        }), " This feature only works effectively when your website has stable traffic."]
-      })
-    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)("div", {
-      className: "tw-bg-white",
-      children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsxs)("div", {
-        className: "tw-space-y-8",
-        children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)("div", {
-          className: "tw-space-y-4",
-          children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsxs)("div", {
-            className: "tw-flex tw-items-center tw-justify-between tw-p-4 tw-bg-gray-50 tw-rounded-lg tw-border tw-border-gray-200",
-            children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsxs)("div", {
-              className: "tw-flex tw-items-center tw-gap-3",
-              children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)("div", {
-                className: "tw-flex-shrink-0 tw-p-2 tw-bg-blue-100 tw-rounded-lg",
-                children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)("span", {
-                  className: "tw-text-lg",
-                  children: "\u26A1"
-                })
-              }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsxs)("div", {
-                children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)("h3", {
-                  className: "tw-text-base tw-font-semibold tw-text-gray-900",
-                  children: "Enable Backup Schedule"
-                }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)("p", {
-                  className: "tw-text-sm tw-text-gray-600 tw-font-space-mono",
-                  children: "Turn on automatic backup scheduling"
-                })]
-              })]
-            }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)("button", {
-              type: "button",
-              onClick: handleEnableToggle,
-              className: "tw-relative tw-inline-flex tw-h-6 tw-w-11 tw-flex-shrink-0 tw-cursor-pointer tw-rounded-full tw-border-2 tw-border-transparent tw-transition-colors tw-duration-200 tw-ease-in-out focus:tw-outline-none focus:tw-ring-2 focus:tw-ring-blue-500 focus:tw-ring-offset-2 ".concat(schedule.enabled ? 'tw-bg-blue-600' : 'tw-bg-gray-200'),
-              role: "switch",
-              "aria-checked": schedule.enabled,
-              children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)("span", {
-                className: "tw-pointer-events-none tw-inline-block tw-h-5 tw-w-5 tw-transform tw-rounded-full tw-bg-white tw-shadow tw-ring-0 tw-transition tw-duration-200 tw-ease-in-out ".concat(schedule.enabled ? 'tw-translate-x-5' : 'tw-translate-x-0')
-              })
-            })]
-          })
-        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsxs)("div", {
-          className: "tw-space-y-4 ".concat(!schedule.enabled ? 'tw-opacity-50 tw-pointer-events-none' : ''),
-          children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsxs)("div", {
-            children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)("h3", {
-              className: "tw-text-base tw-font-semibold tw-text-gray-900 tw-mb-2",
-              children: "Backup Frequency"
-            }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)("p", {
-              className: "tw-text-sm tw-text-gray-600",
-              children: "Choose how often you want automatic backups to run"
-            })]
-          }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)("div", {
-            className: "tw-grid tw-gap-3 sm:tw-grid-cols-2",
-            children: BACKUP_FREQUENCIES.map(function (frequency) {
-              return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsxs)("label", {
-                className: "tw-relative tw-flex tw-items-start tw-p-4 tw-rounded-lg tw-border tw-cursor-pointer tw-transition-all hover:tw-shadow-md ".concat(schedule.frequency === frequency.id ? 'tw-border-blue-500 tw-bg-blue-50 tw-ring-2 tw-ring-blue-200' : 'tw-border-gray-200 tw-bg-gray-50 hover:tw-border-gray-300'),
-                children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)("input", {
-                  type: "radio",
-                  name: "frequency",
-                  value: frequency.id,
-                  checked: schedule.frequency === frequency.id,
-                  onChange: function onChange() {
-                    return handleFrequencyChange(frequency.id);
-                  },
-                  className: "tw-sr-only"
-                }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsxs)("div", {
-                  className: "tw-flex tw-items-center tw-gap-3 tw-w-full",
-                  children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)("div", {
-                    className: "tw-flex-shrink-0 tw-text-2xl",
-                    children: frequency.icon
-                  }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsxs)("div", {
-                    className: "tw-flex-1 tw-min-w-0",
-                    children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)("div", {
-                      className: "tw-text-sm tw-font-medium tw-text-gray-900",
-                      children: frequency.label
-                    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)("div", {
-                      className: "tw-text-xs tw-text-gray-500",
-                      children: frequency.description
-                    })]
-                  }), schedule.frequency === frequency.id && /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)("div", {
-                    className: "tw-flex-shrink-0 tw-w-5 tw-h-5 tw-bg-blue-500 tw-rounded-full tw-flex tw-items-center tw-justify-center",
-                    children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)("svg", {
-                      className: "tw-w-3 tw-h-3 tw-text-white",
-                      fill: "currentColor",
-                      viewBox: "0 0 20 20",
-                      children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)("path", {
-                        fillRule: "evenodd",
-                        d: "M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z",
-                        clipRule: "evenodd"
-                      })
-                    })
-                  })]
-                })]
-              }, frequency.id);
-            })
-          })]
-        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsxs)("div", {
-          className: "tw-space-y-4 ".concat(!schedule.enabled ? 'tw-opacity-50 tw-pointer-events-none' : ''),
-          children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsxs)("div", {
-            children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)("h3", {
-              className: "tw-text-base tw-font-semibold tw-text-gray-900 tw-mb-2",
-              children: "Backup Types"
-            }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)("p", {
-              className: "tw-text-sm tw-text-gray-600",
-              children: "Select what you want to include in your scheduled backups"
-            })]
-          }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)("div", {
-            className: "tw-grid tw-gap-3 sm:tw-grid-cols-1 lg:tw-grid-cols-1",
-            children: BACKUP_TYPES.map(function (type) {
-              return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsxs)("label", {
-                className: "tw-relative tw-flex tw-items-start tw-p-4 tw-rounded-lg tw-border tw-cursor-pointer tw-transition-all hover:tw-shadow-md ".concat(schedule.types.includes(type.id) ? 'tw-border-green-500 tw-bg-green-50 tw-ring-2 tw-ring-green-200' : 'tw-border-gray-200 tw-bg-gray-50 hover:tw-border-gray-300'),
-                children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)("input", {
-                  type: "checkbox",
-                  checked: schedule.types.includes(type.id),
-                  onChange: function onChange() {
-                    return handleTypeChange(type.id);
-                  },
-                  className: "tw-sr-only"
-                }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsxs)("div", {
-                  className: "tw-flex tw-items-center tw-gap-3 tw-w-full",
-                  children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)("div", {
-                    className: "tw-flex-shrink-0 tw-text-xl",
-                    children: type.icon
-                  }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsxs)("div", {
-                    className: "tw-flex-1 tw-min-w-0",
-                    children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)("div", {
-                      className: "tw-text-sm tw-font-medium tw-text-gray-900",
-                      children: type.label
-                    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)("div", {
-                      className: "tw-text-xs tw-text-gray-500 tw-leading-tight",
-                      children: type.description
-                    })]
-                  }), schedule.types.includes(type.id) && /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)("div", {
-                    className: "tw-flex-shrink-0 tw-w-5 tw-h-5 tw-bg-green-500 tw-rounded tw-flex tw-items-center tw-justify-center",
-                    children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)("svg", {
-                      className: "tw-w-3 tw-h-3 tw-text-white",
-                      fill: "currentColor",
-                      viewBox: "0 0 20 20",
-                      children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)("path", {
-                        fillRule: "evenodd",
-                        d: "M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z",
-                        clipRule: "evenodd"
-                      })
-                    })
-                  })]
-                })]
-              }, type.id);
-            })
-          }), schedule.types.length === 0 && /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsxs)("div", {
-            className: "tw-mt-3 tw-text-sm tw-text-red-600 tw-flex tw-items-center tw-gap-2 tw-p-3 tw-bg-red-50 tw-rounded-lg tw-border tw-border-red-200",
-            children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)("svg", {
-              className: "tw-w-4 tw-h-4",
-              fill: "none",
-              stroke: "currentColor",
-              viewBox: "0 0 24 24",
-              children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)("path", {
-                strokeLinecap: "round",
-                strokeLinejoin: "round",
-                strokeWidth: 2,
-                d: "M12 8v4m0 4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"
-              })
-            }), "Please select at least one backup type"]
-          })]
-        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsxs)("div", {
-          className: "tw-space-y-4 ".concat(!schedule.enabled ? 'tw-opacity-50 tw-pointer-events-none' : ''),
-          children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsxs)("div", {
-            children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)("h3", {
-              className: "tw-text-base tw-font-semibold tw-text-gray-900 tw-mb-2",
-              children: "Backup Retention"
-            }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)("p", {
-              className: "tw-text-sm tw-text-gray-600",
-              children: "Choose how many backup versions to keep (older backups will be automatically deleted)"
-            })]
-          }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)("div", {
-            className: "tw-max-w-full",
-            children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)("select", {
-              value: schedule.versionLimit,
-              onChange: handleVersionLimitChange,
-              className: "tw-block tw-w-full tw-p-3 tw-rounded-lg tw-border tw-border-gray-200 tw-bg-gray-50 tw-text-gray-900 tw-text-sm focus:tw-border-blue-500 focus:tw-ring-2 focus:tw-ring-blue-200 focus:tw-bg-white tw-transition-colors",
-              children: VERSION_LIMITS.map(function (option) {
-                return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)("option", {
-                  value: option.value,
-                  children: option.label
-                }, option.value);
-              })
-            })
-          })]
-        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsxs)("div", {
-          className: "tw-bg-gray-50 tw-rounded-lg tw-p-4 tw-border tw-border-gray-200 ".concat(!schedule.enabled ? 'tw-opacity-50' : ''),
-          children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)("h4", {
-            className: "tw-text-sm tw-font-semibold tw-text-gray-900 tw-mb-3",
-            children: "Schedule Summary"
-          }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsxs)("div", {
-            className: "tw-space-y-2 tw-text-sm tw-text-gray-600",
-            children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsxs)("div", {
-              className: "tw-flex tw-items-center tw-gap-2",
-              children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)("span", {
-                className: "tw-text-gray-400",
-                children: "\u26A1"
-              }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsxs)("span", {
-                children: ["Schedule: ", /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)("strong", {
-                  className: "tw-text-gray-900",
-                  children: schedule.enabled ? 'Enabled' : 'Disabled'
-                })]
-              })]
-            }), schedule.enabled && /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsxs)(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.Fragment, {
-              children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsxs)("div", {
-                className: "tw-flex tw-items-center tw-gap-2",
-                children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)("span", {
-                  className: "tw-text-gray-400",
-                  children: "\uD83D\uDCC5"
-                }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsxs)("span", {
-                  children: ["Backup every ", /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)("strong", {
-                    className: "tw-text-gray-900",
-                    children: schedule.frequency === 'weekly' ? 'week' : 'month'
-                  })]
-                })]
-              }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsxs)("div", {
-                className: "tw-flex tw-items-center tw-gap-2",
-                children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)("span", {
-                  className: "tw-text-gray-400",
-                  children: "\uD83D\uDCE6"
-                }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsxs)("span", {
-                  children: ["Include: ", /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsxs)("strong", {
-                    className: "tw-text-gray-900",
-                    children: [schedule.types.length, " type", schedule.types.length !== 1 ? 's' : '']
-                  })]
-                })]
-              }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsxs)("div", {
-                className: "tw-flex tw-items-center tw-gap-2",
-                children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)("span", {
-                  className: "tw-text-gray-400",
-                  children: "\uD83D\uDDD1\uFE0F"
-                }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsxs)("span", {
-                  children: ["Keep ", /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsxs)("strong", {
-                    className: "tw-text-gray-900",
-                    children: ["last ", schedule.versionLimit, " backup", schedule.versionLimit !== 1 ? 's' : '']
-                  })]
-                })]
-              })]
-            })]
-          })]
-        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsxs)("div", {
-          className: "tw-flex tw-justify-end tw-gap-3 tw-pt-6 tw-border-t tw-border-gray-200",
-          children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)("button", {
-            type: "button",
-            className: "tw-px-6 tw-py-2.5 tw-text-sm tw-font-medium tw-text-gray-700 tw-bg-white tw-border tw-border-gray-200 tw-rounded-lg tw-shadow-sm hover:tw-bg-gray-50 hover:tw-border-gray-300 tw-transition-colors focus:tw-outline-none focus:tw-ring-2 focus:tw-ring-offset-2 focus:tw-ring-blue-500 tw-font-space-mono",
-            onClick: onCancel,
-            children: "Cancel"
-          }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)("button", {
-            type: "button",
-            onClick: handleSaveSchedule,
-            disabled: schedule.enabled && schedule.types.length === 0 || isSaving,
-            className: "tw-px-6 tw-py-2.5 tw-text-sm tw-font-medium tw-text-white tw-bg-blue-600 tw-rounded-lg tw-shadow-sm hover:tw-bg-blue-700 tw-transition-colors focus:tw-outline-none focus:tw-ring-2 focus:tw-ring-offset-2 focus:tw-ring-blue-500 disabled:tw-opacity-50 disabled:tw-cursor-not-allowed disabled:hover:tw-bg-blue-600 tw-font-space-mono ".concat(isSaving ? 'tw-opacity-50 tw-cursor-not-allowed' : ''),
-            children: isSaving ? 'Saving...' : 'Save Schedule'
-          })]
+        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_9__.jsx)("span", {
+          className: "tw-text-xs tw-text-gray-700 tw-mt-2 tw-font-space-mono",
+          children: "Please wait while we fetch the latest packages for you."
         })]
       })
-    })]
-  });
-}
-
-/***/ }),
-
-/***/ "./src/components/BackupStatusBadge.jsx":
-/*!**********************************************!*\
-  !*** ./src/components/BackupStatusBadge.jsx ***!
-  \**********************************************/
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
-/* harmony export */ });
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react/jsx-runtime */ "./node_modules/react/jsx-runtime.js");
-
-
-var BackupStatusBadge = function BackupStatusBadge(_ref) {
-  var status = _ref.status;
-  switch (status) {
-    case "pending":
-      return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("span", {
-        className: "tw-px-2 tw-inline-flex tw-text-xs tw-leading-5 tw-font-semibold tw-rounded-full tw-bg-yellow-100 tw-text-yellow-800",
-        children: "Pending"
-      });
-    case "completed":
-      return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("span", {
-        className: "tw-px-2 tw-inline-flex tw-text-xs tw-leading-5 tw-font-semibold tw-rounded-full tw-bg-green-100 tw-text-green-800",
-        children: "Completed"
-      });
-    case "fail":
-      return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("span", {
-        className: "tw-px-2 tw-inline-flex tw-text-xs tw-leading-5 tw-font-semibold tw-rounded-full tw-bg-red-100 tw-text-red-800",
-        children: "Failed"
-      });
-    default:
-      return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("span", {
-        className: "tw-px-2 tw-inline-flex tw-text-xs tw-leading-5 tw-font-semibold tw-rounded-full tw-bg-gray-100 tw-text-gray-800",
-        children: status
-      });
+    });
   }
-};
-/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (BackupStatusBadge);
-
-/***/ }),
-
-/***/ "./src/components/BackupTable.refactored.jsx":
-/*!***************************************************!*\
-  !*** ./src/components/BackupTable.refactored.jsx ***!
-  \***************************************************/
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
-/* harmony export */ });
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var _util_store__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../util/store */ "./src/util/store.js");
-/* harmony import */ var _BackupTableTools__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./BackupTableTools */ "./src/components/BackupTableTools.jsx");
-/* harmony import */ var _util_lib__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../util/lib */ "./src/util/lib.js");
-/* harmony import */ var _Confirm__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./Confirm */ "./src/components/Confirm.jsx");
-/* harmony import */ var _Toast__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./Toast */ "./src/components/Toast.jsx");
-/* harmony import */ var _Modal__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./Modal */ "./src/components/Modal.jsx");
-/* harmony import */ var _LoadingSkeleton__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./LoadingSkeleton */ "./src/components/LoadingSkeleton.jsx");
-/* harmony import */ var _EmptyState__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./EmptyState */ "./src/components/EmptyState.jsx");
-/* harmony import */ var _BackupTypeBadge__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ./BackupTypeBadge */ "./src/components/BackupTypeBadge.jsx");
-/* harmony import */ var _BackupTableRow__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ./BackupTableRow */ "./src/components/BackupTableRow.jsx");
-/* harmony import */ var _BackupMobileCard__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! ./BackupMobileCard */ "./src/components/BackupMobileCard.jsx");
-/* harmony import */ var _RestoreConfigModal__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! ./RestoreConfigModal */ "./src/components/RestoreConfigModal.jsx");
-/* harmony import */ var _UploadBackup__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! ./UploadBackup */ "./src/components/UploadBackup.jsx");
-/* harmony import */ var _DownloadBackup__WEBPACK_IMPORTED_MODULE_14__ = __webpack_require__(/*! ./DownloadBackup */ "./src/components/DownloadBackup.jsx");
-/* harmony import */ var _BackupScheduleConfig__WEBPACK_IMPORTED_MODULE_15__ = __webpack_require__(/*! ./BackupScheduleConfig */ "./src/components/BackupScheduleConfig.jsx");
-/* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_16__ = __webpack_require__(/*! react/jsx-runtime */ "./node_modules/react/jsx-runtime.js");
-function _toConsumableArray(r) { return _arrayWithoutHoles(r) || _iterableToArray(r) || _unsupportedIterableToArray(r) || _nonIterableSpread(); }
-function _nonIterableSpread() { throw new TypeError("Invalid attempt to spread non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method."); }
-function _iterableToArray(r) { if ("undefined" != typeof Symbol && null != r[Symbol.iterator] || null != r["@@iterator"]) return Array.from(r); }
-function _arrayWithoutHoles(r) { if (Array.isArray(r)) return _arrayLikeToArray(r); }
-function _regenerator() { /*! regenerator-runtime -- Copyright (c) 2014-present, Facebook, Inc. -- license (MIT): https://github.com/babel/babel/blob/main/packages/babel-helpers/LICENSE */ var e, t, r = "function" == typeof Symbol ? Symbol : {}, n = r.iterator || "@@iterator", o = r.toStringTag || "@@toStringTag"; function i(r, n, o, i) { var c = n && n.prototype instanceof Generator ? n : Generator, u = Object.create(c.prototype); return _regeneratorDefine2(u, "_invoke", function (r, n, o) { var i, c, u, f = 0, p = o || [], y = !1, G = { p: 0, n: 0, v: e, a: d, f: d.bind(e, 4), d: function d(t, r) { return i = t, c = 0, u = e, G.n = r, a; } }; function d(r, n) { for (c = r, u = n, t = 0; !y && f && !o && t < p.length; t++) { var o, i = p[t], d = G.p, l = i[2]; r > 3 ? (o = l === n) && (u = i[(c = i[4]) ? 5 : (c = 3, 3)], i[4] = i[5] = e) : i[0] <= d && ((o = r < 2 && d < i[1]) ? (c = 0, G.v = n, G.n = i[1]) : d < l && (o = r < 3 || i[0] > n || n > l) && (i[4] = r, i[5] = n, G.n = l, c = 0)); } if (o || r > 1) return a; throw y = !0, n; } return function (o, p, l) { if (f > 1) throw TypeError("Generator is already running"); for (y && 1 === p && d(p, l), c = p, u = l; (t = c < 2 ? e : u) || !y;) { i || (c ? c < 3 ? (c > 1 && (G.n = -1), d(c, u)) : G.n = u : G.v = u); try { if (f = 2, i) { if (c || (o = "next"), t = i[o]) { if (!(t = t.call(i, u))) throw TypeError("iterator result is not an object"); if (!t.done) return t; u = t.value, c < 2 && (c = 0); } else 1 === c && (t = i["return"]) && t.call(i), c < 2 && (u = TypeError("The iterator does not provide a '" + o + "' method"), c = 1); i = e; } else if ((t = (y = G.n < 0) ? u : r.call(n, G)) !== a) break; } catch (t) { i = e, c = 1, u = t; } finally { f = 1; } } return { value: t, done: y }; }; }(r, o, i), !0), u; } var a = {}; function Generator() {} function GeneratorFunction() {} function GeneratorFunctionPrototype() {} t = Object.getPrototypeOf; var c = [][n] ? t(t([][n]())) : (_regeneratorDefine2(t = {}, n, function () { return this; }), t), u = GeneratorFunctionPrototype.prototype = Generator.prototype = Object.create(c); function f(e) { return Object.setPrototypeOf ? Object.setPrototypeOf(e, GeneratorFunctionPrototype) : (e.__proto__ = GeneratorFunctionPrototype, _regeneratorDefine2(e, o, "GeneratorFunction")), e.prototype = Object.create(u), e; } return GeneratorFunction.prototype = GeneratorFunctionPrototype, _regeneratorDefine2(u, "constructor", GeneratorFunctionPrototype), _regeneratorDefine2(GeneratorFunctionPrototype, "constructor", GeneratorFunction), GeneratorFunction.displayName = "GeneratorFunction", _regeneratorDefine2(GeneratorFunctionPrototype, o, "GeneratorFunction"), _regeneratorDefine2(u), _regeneratorDefine2(u, o, "Generator"), _regeneratorDefine2(u, n, function () { return this; }), _regeneratorDefine2(u, "toString", function () { return "[object Generator]"; }), (_regenerator = function _regenerator() { return { w: i, m: f }; })(); }
-function _regeneratorDefine2(e, r, n, t) { var i = Object.defineProperty; try { i({}, "", {}); } catch (e) { i = 0; } _regeneratorDefine2 = function _regeneratorDefine(e, r, n, t) { if (r) i ? i(e, r, { value: n, enumerable: !t, configurable: !t, writable: !t }) : e[r] = n;else { var o = function o(r, n) { _regeneratorDefine2(e, r, function (e) { return this._invoke(r, n, e); }); }; o("next", 0), o("throw", 1), o("return", 2); } }, _regeneratorDefine2(e, r, n, t); }
-function asyncGeneratorStep(n, t, e, r, o, a, c) { try { var i = n[a](c), u = i.value; } catch (n) { return void e(n); } i.done ? t(u) : Promise.resolve(u).then(r, o); }
-function _asyncToGenerator(n) { return function () { var t = this, e = arguments; return new Promise(function (r, o) { var a = n.apply(t, e); function _next(n) { asyncGeneratorStep(a, r, o, _next, _throw, "next", n); } function _throw(n) { asyncGeneratorStep(a, r, o, _next, _throw, "throw", n); } _next(void 0); }); }; }
-function _slicedToArray(r, e) { return _arrayWithHoles(r) || _iterableToArrayLimit(r, e) || _unsupportedIterableToArray(r, e) || _nonIterableRest(); }
-function _nonIterableRest() { throw new TypeError("Invalid attempt to destructure non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method."); }
-function _unsupportedIterableToArray(r, a) { if (r) { if ("string" == typeof r) return _arrayLikeToArray(r, a); var t = {}.toString.call(r).slice(8, -1); return "Object" === t && r.constructor && (t = r.constructor.name), "Map" === t || "Set" === t ? Array.from(r) : "Arguments" === t || /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(t) ? _arrayLikeToArray(r, a) : void 0; } }
-function _arrayLikeToArray(r, a) { (null == a || a > r.length) && (a = r.length); for (var e = 0, n = Array(a); e < a; e++) n[e] = r[e]; return n; }
-function _iterableToArrayLimit(r, l) { var t = null == r ? null : "undefined" != typeof Symbol && r[Symbol.iterator] || r["@@iterator"]; if (null != t) { var e, n, i, u, a = [], f = !0, o = !1; try { if (i = (t = t.call(r)).next, 0 === l) { if (Object(t) !== t) return; f = !1; } else for (; !(f = (e = i.call(t)).done) && (a.push(e.value), a.length !== l); f = !0); } catch (r) { o = !0, n = r; } finally { try { if (!f && null != t["return"] && (u = t["return"](), Object(u) !== u)) return; } finally { if (o) throw n; } } return a; } }
-function _arrayWithHoles(r) { if (Array.isArray(r)) return r; }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-var BackupTable = function BackupTable() {
-  var _useBackupStore = (0,_util_store__WEBPACK_IMPORTED_MODULE_1__["default"])(),
-    backups = _useBackupStore.backups,
-    fetchBackups_Fn = _useBackupStore.fetchBackups_Fn;
-  var _useState = (0,react__WEBPACK_IMPORTED_MODULE_0__.useState)(true),
-    _useState2 = _slicedToArray(_useState, 2),
-    isLoading = _useState2[0],
-    setIsLoading = _useState2[1];
-  var _useState3 = (0,react__WEBPACK_IMPORTED_MODULE_0__.useState)(null),
-    _useState4 = _slicedToArray(_useState3, 2),
-    filterDate = _useState4[0],
-    setFilterDate = _useState4[1];
-  var _useState5 = (0,react__WEBPACK_IMPORTED_MODULE_0__.useState)([]),
-    _useState6 = _slicedToArray(_useState5, 2),
-    selectedBackups = _useState6[0],
-    setSelectedBackups = _useState6[1];
-  var uploadRef = (0,react__WEBPACK_IMPORTED_MODULE_0__.useRef)();
-  var confirm = (0,_Confirm__WEBPACK_IMPORTED_MODULE_4__.useConfirm)();
-  var toast = (0,_Toast__WEBPACK_IMPORTED_MODULE_5__.useToast)();
-  var _useModal = (0,_Modal__WEBPACK_IMPORTED_MODULE_6__.useModal)(),
-    openModal = _useModal.openModal,
-    closeModal = _useModal.closeModal;
-  var fetchBackups = (0,react__WEBPACK_IMPORTED_MODULE_0__.useCallback)(/*#__PURE__*/_asyncToGenerator(/*#__PURE__*/_regenerator().m(function _callee() {
-    return _regenerator().w(function (_context) {
-      while (1) switch (_context.n) {
-        case 0:
-          _context.n = 1;
-          return fetchBackups_Fn();
-        case 1:
-          setIsLoading(false);
-        case 2:
-          return _context.a(2);
-      }
-    }, _callee);
-  })), [fetchBackups_Fn]);
-  (0,react__WEBPACK_IMPORTED_MODULE_0__.useEffect)(function () {
-    fetchBackups();
-  }, [fetchBackups]);
-  var filteredBackups = (0,react__WEBPACK_IMPORTED_MODULE_0__.useMemo)(function () {
-    if (!filterDate) {
-      return backups;
-    }
-    var filterDateStr = filterDate.toDateString();
-    return backups.filter(function (backup) {
-      var backupDate = new Date(backup.date);
-      return backupDate.toDateString() === filterDateStr;
-    });
-  }, [backups, filterDate]);
-  var handleFilterChange = function handleFilterChange(date) {
-    setFilterDate(date ? new Date(date) : null);
-  };
-  var handleDeleteBackup = (0,react__WEBPACK_IMPORTED_MODULE_0__.useCallback)(/*#__PURE__*/function () {
-    var _ref2 = _asyncToGenerator(/*#__PURE__*/_regenerator().m(function _callee2(backupId) {
-      var backupToDelete, response, _t;
-      return _regenerator().w(function (_context2) {
-        while (1) switch (_context2.p = _context2.n) {
-          case 0:
-            _context2.p = 0;
-            _context2.n = 1;
-            return confirm({
-              title: 'Delete item?',
-              description: '⚠️ This action cannot be undone, so make sure you really want to do this! 🗑️',
-              confirmText: 'Yes, delete',
-              danger: true
-            });
-          case 1:
-            backupToDelete = backups.find(function (backup) {
-              return backup.id === backupId;
-            });
-            if (backupToDelete) {
-              _context2.n = 2;
-              break;
-            }
-            toast({
-              message: 'Backup not found',
-              type: 'error'
-            });
-            return _context2.a(2);
-          case 2:
-            _context2.n = 3;
-            return (0,_util_lib__WEBPACK_IMPORTED_MODULE_3__.deleteBackupFolder)(backupToDelete.folder_name);
-          case 3:
-            response = _context2.v;
-            if (response.success) {
-              _context2.n = 4;
-              break;
-            }
-            toast({
-              message: response.data.message || 'Failed to delete backup',
-              type: 'error'
-            });
-            return _context2.a(2);
-          case 4:
-            toast({
-              message: 'Backup yeeted into oblivion 🗑️✨',
-              type: 'success'
-            });
-            fetchBackups();
-            _context2.n = 6;
-            break;
-          case 5:
-            _context2.p = 5;
-            _t = _context2.v;
-          case 6:
-            return _context2.a(2);
-        }
-      }, _callee2, null, [[0, 5]]);
-    }));
-    return function (_x) {
-      return _ref2.apply(this, arguments);
-    };
-  }(), [backups, confirm, toast, fetchBackups]);
-  var handleDeleteSelectedBackups = (0,react__WEBPACK_IMPORTED_MODULE_0__.useCallback)(/*#__PURE__*/_asyncToGenerator(/*#__PURE__*/_regenerator().m(function _callee3() {
-    var results, successfulDeletes, failedDeletes, _t2;
-    return _regenerator().w(function (_context3) {
-      while (1) switch (_context3.p = _context3.n) {
-        case 0:
-          if (!(selectedBackups.length === 0)) {
-            _context3.n = 1;
-            break;
-          }
-          return _context3.a(2);
-        case 1:
-          _context3.p = 1;
-          _context3.n = 2;
-          return confirm({
-            title: "Delete ".concat(selectedBackups.length, " items?"),
-            description: '⚠️ This action cannot be undone. Are you sure?',
-            confirmText: "Yes, delete ".concat(selectedBackups.length, " items"),
-            danger: true
-          });
-        case 2:
-          _context3.n = 3;
-          return Promise.all(selectedBackups.map(function (id) {
-            var backup = backups.find(function (b) {
-              return b.id === id;
-            });
-            if (backup !== null && backup !== void 0 && backup.folder_name) {
-              return (0,_util_lib__WEBPACK_IMPORTED_MODULE_3__.deleteBackupFolder)(backup.folder_name);
-            }
-            return Promise.resolve({
-              success: false,
-              data: {
-                message: "Backup with ID ".concat(id, " not found.")
-              }
-            });
-          }));
-        case 3:
-          results = _context3.v;
-          successfulDeletes = results.filter(function (r) {
-            return r.success;
-          }).length;
-          failedDeletes = results.length - successfulDeletes;
-          if (successfulDeletes > 0) {
-            toast({
-              message: "".concat(successfulDeletes, " backup(s) deleted successfully."),
-              type: 'success'
-            });
-          }
-          if (failedDeletes > 0) {
-            toast({
-              message: "Failed to delete ".concat(failedDeletes, " backup(s)."),
-              type: 'error'
-            });
-          }
-          setSelectedBackups([]);
-          fetchBackups();
-          _context3.n = 5;
-          break;
-        case 4:
-          _context3.p = 4;
-          _t2 = _context3.v;
-        case 5:
-          return _context3.a(2);
-      }
-    }, _callee3, null, [[1, 4]]);
-  })), [selectedBackups, backups, confirm, toast, fetchBackups]);
-  var handleDownloadBackup = function handleDownloadBackup(backup) {
-    // console.log('Download backup:', backupId);
-    // toast({ message: 'Download functionality is not yet implemented.', type: 'info' });
-    openModal({
-      title: 'Download Backup',
-      size: 'lg',
-      children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_16__.jsx)(_DownloadBackup__WEBPACK_IMPORTED_MODULE_14__["default"], {
-        backup: backup
-      })
-    });
-  };
-  var handleRestoreBackup = (0,react__WEBPACK_IMPORTED_MODULE_0__.useCallback)(function (backup) {
-    openModal({
-      title: 'Restore Backup',
-      children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_16__.jsx)(_RestoreConfigModal__WEBPACK_IMPORTED_MODULE_12__["default"], {
-        backup: backup,
-        closeModal: closeModal,
-        toast: toast
-      })
-    });
-  }, [openModal, closeModal, toast]);
-  var handleSelectBackup = function handleSelectBackup(e, backupId) {
-    if (e.target.checked) {
-      setSelectedBackups(function (prev) {
-        return [].concat(_toConsumableArray(prev), [backupId]);
-      });
-    } else {
-      setSelectedBackups(function (prev) {
-        return prev.filter(function (id) {
-          return id !== backupId;
-        });
-      });
-    }
-  };
-  var handleSelectAllBackups = function handleSelectAllBackups(e) {
-    if (e.target.checked) {
-      setSelectedBackups(filteredBackups.map(function (backup) {
-        return backup.id;
-      }));
-    } else {
-      setSelectedBackups([]);
-    }
-  };
-  var handleUploadBackupFiles = /*#__PURE__*/function () {
-    var _ref4 = _asyncToGenerator(/*#__PURE__*/_regenerator().m(function _callee4(files) {
-      var file, _uploadRef$current2, res, _uploadRef$current3, _t3;
-      return _regenerator().w(function (_context4) {
-        while (1) switch (_context4.p = _context4.n) {
-          case 0:
-            file = files[0];
-            _context4.p = 1;
-            toast({
-              message: 'Uploading...',
-              type: 'info'
-            });
-            _context4.n = 2;
-            return (0,_util_lib__WEBPACK_IMPORTED_MODULE_3__.uploadFileWithProgress)(file, function (percent) {
-              var _uploadRef$current;
-              // console.log('Upload progress', percent);
-              (_uploadRef$current = uploadRef.current) === null || _uploadRef$current === void 0 || _uploadRef$current.setUploadProgress(percent);
-            });
-          case 2:
-            res = _context4.v;
-            // console.log('Upload res', res);
-
-            toast({
-              message: 'Upload success!',
-              type: 'success'
-            });
-            (_uploadRef$current2 = uploadRef.current) === null || _uploadRef$current2 === void 0 || _uploadRef$current2.setUploadProgress(100);
-            fetchBackups();
-            closeModal();
-            _context4.n = 4;
-            break;
-          case 3:
-            _context4.p = 3;
-            _t3 = _context4.v;
-            toast({
-              message: "Upload error: ".concat(_t3),
-              type: 'error'
-            });
-            (_uploadRef$current3 = uploadRef.current) === null || _uploadRef$current3 === void 0 || _uploadRef$current3.resetProgress();
-          case 4:
-            return _context4.a(2);
-        }
-      }, _callee4, null, [[1, 3]]);
-    }));
-    return function handleUploadBackupFiles(_x2) {
-      return _ref4.apply(this, arguments);
-    };
-  }();
-  var handleUploadBackup = function handleUploadBackup() {
-    // console.log('Upload backup clicked');
-    openModal({
-      title: 'Upload Backup',
-      size: 'lg',
-      children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_16__.jsx)(_UploadBackup__WEBPACK_IMPORTED_MODULE_13__["default"], {
-        ref: uploadRef,
-        accept: ".zip",
-        maxSize: worrprba_php_data.server_metrics.WP_Max_Upload_Size,
-        maxFiles: 1,
-        onUpload: handleUploadBackupFiles
-      })
-    });
-  };
-  var handleBackupSchedule = function handleBackupSchedule() {
-    openModal({
-      title: '⏰ Backup Schedule',
-      size: 'lg',
-      children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_16__.jsx)(_BackupScheduleConfig__WEBPACK_IMPORTED_MODULE_15__["default"], {
-        onCancel: closeModal
-      })
-    });
-  };
-  if (isLoading) {
-    return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_16__.jsx)(_LoadingSkeleton__WEBPACK_IMPORTED_MODULE_7__["default"], {});
-  }
-  if (!backups || backups.length === 0) {
-    return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_16__.jsx)(_EmptyState__WEBPACK_IMPORTED_MODULE_8__["default"], {});
-  }
-  return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_16__.jsxs)("div", {
-    className: "tw-bg-white tw-border tw-border-gray-200",
-    children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_16__.jsx)(_BackupTableTools__WEBPACK_IMPORTED_MODULE_2__["default"], {
-      onFilterChange: handleFilterChange,
-      onDeleteBackups: handleDeleteSelectedBackups,
-      selectedBackups: selectedBackups,
-      onUploadBackup: handleUploadBackup,
-      onBackupSchedule: handleBackupSchedule
-    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_16__.jsx)("div", {
-      className: "tw-block md:tw-hidden tw-bg-white tw-border-t tw-border-gray-200",
-      children: filteredBackups.map(function (backup) {
-        return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_16__.jsx)(_BackupMobileCard__WEBPACK_IMPORTED_MODULE_11__["default"], {
-          backup: backup,
-          isSelected: selectedBackups.includes(backup.id),
-          onSelect: handleSelectBackup,
-          onDelete: handleDeleteBackup,
-          onDownload: handleDownloadBackup,
-          onRestore: handleRestoreBackup
-        }, backup.id);
-      })
-    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_16__.jsx)("div", {
-      className: "tw-hidden md:tw-block tw-overflow-x-auto",
-      children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_16__.jsxs)("table", {
-        className: "tw-min-w-full tw-divide-y tw-divide-gray-200",
-        children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_16__.jsx)("thead", {
-          className: "tw-bg-gray-50",
-          children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_16__.jsxs)("tr", {
-            children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_16__.jsx)("th", {
-              scope: "col",
-              className: "tw-px-6 tw-py-3 tw-text-left tw-text-xs tw-font-medium tw-text-gray-500",
-              width: "3%",
-              children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_16__.jsx)("input", {
-                type: "checkbox",
-                className: "tw-form-checkbox tw-h-4 tw-w-4 tw-text-blue-600",
-                checked: filteredBackups.length > 0 && selectedBackups.length === filteredBackups.length,
-                onChange: handleSelectAllBackups,
-                disabled: filteredBackups.length === 0
-              })
-            }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_16__.jsx)("th", {
-              scope: "col",
-              className: "tw-px-6 tw-py-3 tw-text-left tw-text-xs tw-font-medium tw-text-gray-500 tw-uppercase",
-              children: "Name"
-            }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_16__.jsx)("th", {
-              scope: "col",
-              className: "tw-px-6 tw-py-3 tw-text-left tw-text-xs tw-font-medium tw-text-gray-500 tw-uppercase tw-tracking-wider",
-              children: "Date"
-            }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_16__.jsx)("th", {
-              scope: "col",
-              className: "tw-px-6 tw-py-3 tw-text-left tw-text-xs tw-font-medium tw-text-gray-500 tw-uppercase tw-tracking-wider",
-              children: "Size"
-            }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_16__.jsx)("th", {
-              scope: "col",
-              className: "tw-px-6 tw-py-3 tw-text-left tw-text-xs tw-font-medium tw-text-gray-500 tw-uppercase tw-tracking-wider",
-              children: "Status"
-            }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_16__.jsx)("th", {
-              scope: "col",
-              className: "tw-relative tw-px-6 tw-py-3",
-              children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_16__.jsx)("span", {
-                className: "tw-sr-only",
-                children: "Actions"
-              })
-            })]
-          })
-        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_16__.jsx)("tbody", {
-          className: "tw-bg-white tw-divide-y tw-divide-gray-200",
-          children: filteredBackups.map(function (backup) {
-            return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_16__.jsx)(_BackupTableRow__WEBPACK_IMPORTED_MODULE_10__["default"], {
-              backup: backup,
-              isSelected: selectedBackups.includes(backup.id),
-              onSelect: handleSelectBackup,
-              onDelete: handleDeleteBackup,
-              onDownload: handleDownloadBackup,
-              onRestore: handleRestoreBackup
-            }, backup.id);
-          })
-        })]
-      })
-    })]
-  });
-};
-/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (BackupTable);
-
-/***/ }),
-
-/***/ "./src/components/BackupTableRow.jsx":
-/*!*******************************************!*\
-  !*** ./src/components/BackupTableRow.jsx ***!
-  \*******************************************/
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
-/* harmony export */ });
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var _BackupTypeBadge__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./BackupTypeBadge */ "./src/components/BackupTypeBadge.jsx");
-/* harmony import */ var _BackupStatusBadge__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./BackupStatusBadge */ "./src/components/BackupStatusBadge.jsx");
-/* harmony import */ var _util_lib__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../util/lib */ "./src/util/lib.js");
-/* harmony import */ var _DropdownActions__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./DropdownActions */ "./src/components/DropdownActions.jsx");
-/* harmony import */ var lucide_react__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! lucide-react */ "./node_modules/lucide-react/dist/esm/icons/file-down.js");
-/* harmony import */ var lucide_react__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! lucide-react */ "./node_modules/lucide-react/dist/esm/icons/rotate-ccw.js");
-/* harmony import */ var lucide_react__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! lucide-react */ "./node_modules/lucide-react/dist/esm/icons/trash-2.js");
-/* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! react/jsx-runtime */ "./node_modules/react/jsx-runtime.js");
-
-
-
-
-
-
-
-var BackupTableRow = function BackupTableRow(_ref) {
-  var backup = _ref.backup,
-    isSelected = _ref.isSelected,
-    onSelect = _ref.onSelect,
-    onDelete = _ref.onDelete,
-    onDownload = _ref.onDownload,
-    onRestore = _ref.onRestore;
-  return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsxs)("tr", {
-    children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsx)("td", {
-      className: "tw-px-6 tw-py-4",
-      width: "3%",
-      children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsx)("input", {
-        type: "checkbox",
-        className: "tw-form-checkbox tw-h-4 tw-w-4 tw-text-blue-600",
-        checked: isSelected,
-        onChange: function onChange(e) {
-          return onSelect(e, backup.id);
-        }
-      })
-    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsxs)("td", {
-      className: "tw-px-6 tw-py-4",
-      children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsx)("div", {
-        className: "tw-text-sm tw-font-bold tw-text-gray-900",
-        children: backup.name
-      }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsx)("div", {
-        className: "tw-flex tw-flex-wrap tw-gap-1 tw-mt-2",
-        children: backup.type.map(function (type) {
-          return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsx)(_BackupTypeBadge__WEBPACK_IMPORTED_MODULE_1__["default"], {
-            type: type
-          }, type);
-        })
-      })]
-    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsx)("td", {
-      className: "tw-px-6 tw-py-4 tw-whitespace-nowrap tw-text-sm tw-text-gray-500",
-      children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsx)("div", {
-        className: "tw-text-sm tw-text-gray-500 tw-font-space-mono",
-        children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsxs)("span", {
-          className: "tw-inline-flex tw-items-center tw-gap-1 tw-px-2.5 tw-py-1 tw-text-xs tw-font-medium tw-rounded-md tw-bg-slate-100 tw-text-slate-700 tw-border tw-border-slate-200/60 tw-shadow-sm",
-          title: backup.date,
-          children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsx)("svg", {
-            className: "tw-w-3 tw-h-3 tw-text-slate-400",
+  if (error) {
+    return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_9__.jsx)("div", {
+      className: "tw-max-w-7xl tw-mx-auto tw-px-2 sm:tw-px-4 tw-py-10",
+      children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_9__.jsxs)("div", {
+        className: "tw-bg-red-50 tw-border tw-border-red-200 tw-p-5 tw-rounded-lg tw-shadow-sm tw-flex tw-gap-4 tw-items-start",
+        children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_9__.jsx)("div", {
+          className: "tw-mt-1 tw-flex-shrink-0",
+          children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_9__.jsxs)("svg", {
+            className: "tw-w-6 tw-h-6 tw-text-red-400",
             fill: "none",
             stroke: "currentColor",
             viewBox: "0 0 24 24",
-            children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsx)("path", {
+            children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_9__.jsx)("circle", {
+              className: "tw-opacity-20",
+              cx: "12",
+              cy: "12",
+              r: "10",
+              stroke: "currentColor",
+              strokeWidth: "3"
+            }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_9__.jsx)("path", {
               strokeLinecap: "round",
               strokeLinejoin: "round",
-              strokeWidth: 2,
-              d: "M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"
-            })
-          }), (0,_util_lib__WEBPACK_IMPORTED_MODULE_3__.friendlyDateTime)(backup.date, worrprba_php_data.current_datetime)]
-        })
+              strokeWidth: 2.5,
+              d: "M12 8v4m0 4h.01"
+            })]
+          })
+        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_9__.jsxs)("div", {
+          children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_9__.jsx)("div", {
+            className: "tw-text-sm tw-font-semibold tw-text-red-700 tw-mb-1 tw-font-space-mono",
+            children: "Could not connect to Dummy Pack Center"
+          }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_9__.jsx)("p", {
+            className: "tw-text-xs tw-text-red-800 tw-mb-2 tw-font-space-mono",
+            children: typeof error === "string" ? error : "Sorry, we couldn't display available dummy packs right now. Please check your internet or try reloading this page in a moment."
+          }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_9__.jsxs)("button", {
+            className: "tw-inline-flex tw-items-center tw-gap-2 tw-px-4 tw-py-1.5 tw-bg-red-500 tw-text-white tw-font-semibold tw-rounded hover:tw-bg-red-600 focus:tw-outline-none focus:tw-ring-2 focus:tw-ring-red-400",
+            onClick: function onClick() {
+              return window.location.reload();
+            },
+            children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_9__.jsx)(lucide_react__WEBPACK_IMPORTED_MODULE_8__["default"], {
+              className: "tw-w-4 tw-h-4 tw-text-white"
+            }), "Retry"]
+          })]
+        })]
       })
-    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsx)("td", {
-      className: "tw-px-6 tw-py-4 tw-whitespace-nowrap tw-text-sm tw-text-gray-500 tw-font-space-mono",
-      children: backup.size
-    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsx)("td", {
-      className: "tw-px-6 tw-py-4 tw-whitespace-nowrap",
-      children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsx)(_BackupStatusBadge__WEBPACK_IMPORTED_MODULE_2__["default"], {
-        status: backup.status
-      })
-    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsx)("td", {
-      className: "tw-px-6 tw-py-4 tw-whitespace-nowrap tw-text-right tw-text-sm tw-font-medium",
-      children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsx)(_DropdownActions__WEBPACK_IMPORTED_MODULE_4__["default"], {
-        items: [{
-          label: 'Restore',
-          icon: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsx)(lucide_react__WEBPACK_IMPORTED_MODULE_6__["default"], {
-            size: 16
-          }),
-          onClick: function onClick() {
-            return onRestore(backup);
-          }
-        }, {
-          label: 'Download',
-          icon: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsx)(lucide_react__WEBPACK_IMPORTED_MODULE_5__["default"], {
-            size: 16
-          }),
-          onClick: function onClick() {
-            return onDownload(backup);
-          }
-        }, {
-          label: 'Delete',
-          icon: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsx)(lucide_react__WEBPACK_IMPORTED_MODULE_7__["default"], {
-            size: 16
-          }),
-          danger: true,
-          onClick: function onClick() {
-            return onDelete(backup.id);
-          }
-        }]
-      })
-    })]
-  }, backup.id);
-};
-/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (BackupTableRow);
-
-/***/ }),
-
-/***/ "./src/components/BackupTableTools.jsx":
-/*!*********************************************!*\
-  !*** ./src/components/BackupTableTools.jsx ***!
-  \*********************************************/
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   NewBackupButton: () => (/* binding */ NewBackupButton),
-/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
-/* harmony export */ });
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var _util_store__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../util/store */ "./src/util/store.js");
-/* harmony import */ var _BackupConfigModal__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./BackupConfigModal */ "./src/components/BackupConfigModal.jsx");
-/* harmony import */ var lucide_react__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! lucide-react */ "./node_modules/lucide-react/dist/esm/icons/clock.js");
-/* harmony import */ var lucide_react__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! lucide-react */ "./node_modules/lucide-react/dist/esm/icons/file-up.js");
-/* harmony import */ var lucide_react__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! lucide-react */ "./node_modules/lucide-react/dist/esm/icons/trash-2.js");
-/* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! react/jsx-runtime */ "./node_modules/react/jsx-runtime.js");
-function _regenerator() { /*! regenerator-runtime -- Copyright (c) 2014-present, Facebook, Inc. -- license (MIT): https://github.com/babel/babel/blob/main/packages/babel-helpers/LICENSE */ var e, t, r = "function" == typeof Symbol ? Symbol : {}, n = r.iterator || "@@iterator", o = r.toStringTag || "@@toStringTag"; function i(r, n, o, i) { var c = n && n.prototype instanceof Generator ? n : Generator, u = Object.create(c.prototype); return _regeneratorDefine2(u, "_invoke", function (r, n, o) { var i, c, u, f = 0, p = o || [], y = !1, G = { p: 0, n: 0, v: e, a: d, f: d.bind(e, 4), d: function d(t, r) { return i = t, c = 0, u = e, G.n = r, a; } }; function d(r, n) { for (c = r, u = n, t = 0; !y && f && !o && t < p.length; t++) { var o, i = p[t], d = G.p, l = i[2]; r > 3 ? (o = l === n) && (u = i[(c = i[4]) ? 5 : (c = 3, 3)], i[4] = i[5] = e) : i[0] <= d && ((o = r < 2 && d < i[1]) ? (c = 0, G.v = n, G.n = i[1]) : d < l && (o = r < 3 || i[0] > n || n > l) && (i[4] = r, i[5] = n, G.n = l, c = 0)); } if (o || r > 1) return a; throw y = !0, n; } return function (o, p, l) { if (f > 1) throw TypeError("Generator is already running"); for (y && 1 === p && d(p, l), c = p, u = l; (t = c < 2 ? e : u) || !y;) { i || (c ? c < 3 ? (c > 1 && (G.n = -1), d(c, u)) : G.n = u : G.v = u); try { if (f = 2, i) { if (c || (o = "next"), t = i[o]) { if (!(t = t.call(i, u))) throw TypeError("iterator result is not an object"); if (!t.done) return t; u = t.value, c < 2 && (c = 0); } else 1 === c && (t = i["return"]) && t.call(i), c < 2 && (u = TypeError("The iterator does not provide a '" + o + "' method"), c = 1); i = e; } else if ((t = (y = G.n < 0) ? u : r.call(n, G)) !== a) break; } catch (t) { i = e, c = 1, u = t; } finally { f = 1; } } return { value: t, done: y }; }; }(r, o, i), !0), u; } var a = {}; function Generator() {} function GeneratorFunction() {} function GeneratorFunctionPrototype() {} t = Object.getPrototypeOf; var c = [][n] ? t(t([][n]())) : (_regeneratorDefine2(t = {}, n, function () { return this; }), t), u = GeneratorFunctionPrototype.prototype = Generator.prototype = Object.create(c); function f(e) { return Object.setPrototypeOf ? Object.setPrototypeOf(e, GeneratorFunctionPrototype) : (e.__proto__ = GeneratorFunctionPrototype, _regeneratorDefine2(e, o, "GeneratorFunction")), e.prototype = Object.create(u), e; } return GeneratorFunction.prototype = GeneratorFunctionPrototype, _regeneratorDefine2(u, "constructor", GeneratorFunctionPrototype), _regeneratorDefine2(GeneratorFunctionPrototype, "constructor", GeneratorFunction), GeneratorFunction.displayName = "GeneratorFunction", _regeneratorDefine2(GeneratorFunctionPrototype, o, "GeneratorFunction"), _regeneratorDefine2(u), _regeneratorDefine2(u, o, "Generator"), _regeneratorDefine2(u, n, function () { return this; }), _regeneratorDefine2(u, "toString", function () { return "[object Generator]"; }), (_regenerator = function _regenerator() { return { w: i, m: f }; })(); }
-function _regeneratorDefine2(e, r, n, t) { var i = Object.defineProperty; try { i({}, "", {}); } catch (e) { i = 0; } _regeneratorDefine2 = function _regeneratorDefine(e, r, n, t) { if (r) i ? i(e, r, { value: n, enumerable: !t, configurable: !t, writable: !t }) : e[r] = n;else { var o = function o(r, n) { _regeneratorDefine2(e, r, function (e) { return this._invoke(r, n, e); }); }; o("next", 0), o("throw", 1), o("return", 2); } }, _regeneratorDefine2(e, r, n, t); }
-function asyncGeneratorStep(n, t, e, r, o, a, c) { try { var i = n[a](c), u = i.value; } catch (n) { return void e(n); } i.done ? t(u) : Promise.resolve(u).then(r, o); }
-function _asyncToGenerator(n) { return function () { var t = this, e = arguments; return new Promise(function (r, o) { var a = n.apply(t, e); function _next(n) { asyncGeneratorStep(a, r, o, _next, _throw, "next", n); } function _throw(n) { asyncGeneratorStep(a, r, o, _next, _throw, "throw", n); } _next(void 0); }); }; }
-function _slicedToArray(r, e) { return _arrayWithHoles(r) || _iterableToArrayLimit(r, e) || _unsupportedIterableToArray(r, e) || _nonIterableRest(); }
-function _nonIterableRest() { throw new TypeError("Invalid attempt to destructure non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method."); }
-function _unsupportedIterableToArray(r, a) { if (r) { if ("string" == typeof r) return _arrayLikeToArray(r, a); var t = {}.toString.call(r).slice(8, -1); return "Object" === t && r.constructor && (t = r.constructor.name), "Map" === t || "Set" === t ? Array.from(r) : "Arguments" === t || /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(t) ? _arrayLikeToArray(r, a) : void 0; } }
-function _arrayLikeToArray(r, a) { (null == a || a > r.length) && (a = r.length); for (var e = 0, n = Array(a); e < a; e++) n[e] = r[e]; return n; }
-function _iterableToArrayLimit(r, l) { var t = null == r ? null : "undefined" != typeof Symbol && r[Symbol.iterator] || r["@@iterator"]; if (null != t) { var e, n, i, u, a = [], f = !0, o = !1; try { if (i = (t = t.call(r)).next, 0 === l) { if (Object(t) !== t) return; f = !1; } else for (; !(f = (e = i.call(t)).done) && (a.push(e.value), a.length !== l); f = !0); } catch (r) { o = !0, n = r; } finally { try { if (!f && null != t["return"] && (u = t["return"](), Object(u) !== u)) return; } finally { if (o) throw n; } } return a; } }
-function _arrayWithHoles(r) { if (Array.isArray(r)) return r; }
-
-
-
-
-
-var NewBackupButton = function NewBackupButton() {
-  var _useBackupStore = (0,_util_store__WEBPACK_IMPORTED_MODULE_1__["default"])(),
-    buildBackupProcess = _useBackupStore.buildBackupProcess;
-  var _React$useState = react__WEBPACK_IMPORTED_MODULE_0___default().useState(false),
-    _React$useState2 = _slicedToArray(_React$useState, 2),
-    isConfigModalOpen = _React$useState2[0],
-    setIsConfigModalOpen = _React$useState2[1];
-  var handleCreateBackup = /*#__PURE__*/function () {
-    var _ref = _asyncToGenerator(/*#__PURE__*/_regenerator().m(function _callee() {
+    });
+  }
+  var onInstall = /*#__PURE__*/function () {
+    var _ref = _asyncToGenerator(/*#__PURE__*/_regenerator().m(function _callee(pack) {
       return _regenerator().w(function (_context) {
         while (1) switch (_context.n) {
           case 0:
-            // TODO: Implement create backup functionality
-            // console.log('Create backup clicked');
-            setIsConfigModalOpen(true);
+            buildInstallProcess(pack);
           case 1:
             return _context.a(2);
         }
       }, _callee);
     }));
-    return function handleCreateBackup() {
+    return function onInstall(_x) {
       return _ref.apply(this, arguments);
     };
   }();
-  var handleSaveBackup = /*#__PURE__*/function () {
-    var _ref2 = _asyncToGenerator(/*#__PURE__*/_regenerator().m(function _callee2(config) {
-      return _regenerator().w(function (_context2) {
-        while (1) switch (_context2.n) {
-          case 0:
-            console.log('Save backup:', config);
-            buildBackupProcess(config);
-          case 1:
-            return _context2.a(2);
-        }
-      }, _callee2);
-    }));
-    return function handleSaveBackup(_x) {
-      return _ref2.apply(this, arguments);
-    };
-  }();
-  return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsxs)(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.Fragment, {
-    children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsxs)("button", {
-      onClick: handleCreateBackup,
-      className: "tw-inline-flex tw-items-center tw-px-3 sm:tw-px-4 tw-py-2 tw-border tw-border-transparent tw-shadow-sm tw-text-xs sm:tw-text-sm tw-font-medium tw-rounded-md tw-text-white tw-bg-blue-600 hover:tw-bg-blue-700 focus:tw-outline-none focus:tw-ring-2 focus:tw-ring-offset-2 focus:tw-ring-blue-500 tw-transition-colors tw-duration-200 tw-font-space-mono",
-      children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsx)("svg", {
-        className: "tw--ml-1 tw-mr-1 sm:tw-mr-2 tw-h-4 tw-w-4 sm:tw-h-5 sm:tw-w-5",
-        fill: "none",
-        stroke: "currentColor",
-        viewBox: "0 0 24 24",
-        children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsx)("path", {
-          strokeLinecap: "round",
-          strokeLinejoin: "round",
-          strokeWidth: 2,
-          d: "M12 6v6m0 0v6m0-6h6m-6 0H6"
-        })
-      }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsx)("span", {
-        className: "tw-hidden sm:tw-inline",
-        children: "Create Backup"
-      }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsx)("span", {
-        className: "sm:tw-hidden",
-        children: "Create"
-      })]
-    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsx)(_BackupConfigModal__WEBPACK_IMPORTED_MODULE_2__["default"], {
-      isOpen: isConfigModalOpen,
-      onClose: function onClose() {
-        return setIsConfigModalOpen(false);
-      },
-      onSave: handleSaveBackup
-    })]
-  });
-};
-var BackupTableTools = function BackupTableTools(_ref3) {
-  var onFilterChange = _ref3.onFilterChange,
-    selectedBackups = _ref3.selectedBackups,
-    onDeleteBackups = _ref3.onDeleteBackups,
-    onUploadBackup = _ref3.onUploadBackup,
-    onBackupSchedule = _ref3.onBackupSchedule;
-  var _useBackupStore2 = (0,_util_store__WEBPACK_IMPORTED_MODULE_1__["default"])(),
-    buildBackupProcess = _useBackupStore2.buildBackupProcess;
-  var _React$useState3 = react__WEBPACK_IMPORTED_MODULE_0___default().useState(''),
-    _React$useState4 = _slicedToArray(_React$useState3, 2),
-    dateFilter = _React$useState4[0],
-    setDateFilter = _React$useState4[1];
-  var _React$useState5 = react__WEBPACK_IMPORTED_MODULE_0___default().useState(false),
-    _React$useState6 = _slicedToArray(_React$useState5, 2),
-    isConfigModalOpen = _React$useState6[0],
-    setIsConfigModalOpen = _React$useState6[1];
-  var handleDateFilterChange = function handleDateFilterChange(e) {
-    var value = e.target.value;
-    setDateFilter(value);
-    onFilterChange(value);
-  };
-  var handleCreateBackup = /*#__PURE__*/function () {
-    var _ref4 = _asyncToGenerator(/*#__PURE__*/_regenerator().m(function _callee3() {
-      return _regenerator().w(function (_context3) {
-        while (1) switch (_context3.n) {
-          case 0:
-            // TODO: Implement create backup functionality
-            // console.log('Create backup clicked');
-            setIsConfigModalOpen(true);
-          case 1:
-            return _context3.a(2);
-        }
-      }, _callee3);
-    }));
-    return function handleCreateBackup() {
-      return _ref4.apply(this, arguments);
-    };
-  }();
-  var handleDeleteBackups = /*#__PURE__*/function () {
-    var _ref5 = _asyncToGenerator(/*#__PURE__*/_regenerator().m(function _callee4() {
-      return _regenerator().w(function (_context4) {
-        while (1) switch (_context4.n) {
-          case 0:
-            if (!(selectedBackups.length === 0)) {
-              _context4.n = 1;
-              break;
-            }
-            alert('Please select backups to delete');
-            return _context4.a(2);
-          case 1:
-            // TODO: Implement delete backup functionality
-            // console.log('Delete backups:', selectedBackups);
-            onDeleteBackups(selectedBackups);
-          case 2:
-            return _context4.a(2);
-        }
-      }, _callee4);
-    }));
-    return function handleDeleteBackups() {
-      return _ref5.apply(this, arguments);
-    };
-  }();
-  var handleUploadBackup = /*#__PURE__*/function () {
-    var _ref6 = _asyncToGenerator(/*#__PURE__*/_regenerator().m(function _callee5() {
-      return _regenerator().w(function (_context5) {
-        while (1) switch (_context5.n) {
-          case 0:
-            // TODO: Implement upload backup functionality
-            // console.log('Upload backup clicked');
-            onUploadBackup();
-          case 1:
-            return _context5.a(2);
-        }
-      }, _callee5);
-    }));
-    return function handleUploadBackup() {
-      return _ref6.apply(this, arguments);
-    };
-  }();
-  var handleSaveBackup = /*#__PURE__*/function () {
-    var _ref7 = _asyncToGenerator(/*#__PURE__*/_regenerator().m(function _callee6(config) {
-      return _regenerator().w(function (_context6) {
-        while (1) switch (_context6.n) {
-          case 0:
-            // console.log('Save backup:', config);
-            buildBackupProcess(config);
-          case 1:
-            return _context6.a(2);
-        }
-      }, _callee6);
-    }));
-    return function handleSaveBackup(_x2) {
-      return _ref7.apply(this, arguments);
-    };
-  }();
-  return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsxs)("div", {
-    className: "tw-flex tw-flex-col sm:tw-flex-row tw-items-start sm:tw-items-center tw-justify-between tw-gap-3 sm:tw-gap-4 tw-p-3 sm:tw-p-4 tw-bg-white tw-border-b tw-border-gray-200",
-    children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsxs)("div", {
-      className: "tw-grid tw-grid-cols-2 sm:tw-flex sm:tw-items-center tw-gap-2 sm:tw-gap-3 tw-w-full sm:tw-w-auto",
-      children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsxs)("button", {
-        onClick: handleCreateBackup,
-        className: "tw-inline-flex tw-items-center tw-justify-center tw-px-3 sm:tw-px-4 tw-py-2 tw-border tw-border-transparent tw-shadow-sm tw-text-xs sm:tw-text-sm tw-font-medium tw-rounded-md tw-text-white tw-bg-blue-600 hover:tw-bg-blue-700 focus:tw-outline-none focus:tw-ring-2 focus:tw-ring-offset-2 focus:tw-ring-blue-500 tw-transition-colors tw-duration-200 tw-col-span-2 sm:tw-col-span-1 tw-font-space-mono",
-        children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsx)("svg", {
-          className: "tw-mr-1 sm:tw-mr-2 tw-h-4 tw-w-4 sm:tw-h-5 sm:tw-w-5",
-          fill: "none",
-          stroke: "currentColor",
-          viewBox: "0 0 24 24",
-          children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsx)("path", {
-            strokeLinecap: "round",
-            strokeLinejoin: "round",
-            strokeWidth: 2,
-            d: "M12 6v6m0 0v6m0-6h6m-6 0H6"
+  return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_9__.jsxs)("div", {
+    className: "tw-max-w-7xl tw-mx-auto tw-px-2 sm:tw-px-4 tw-py-10",
+    children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_9__.jsx)("h1", {}), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_9__.jsx)(_components_dummy_pack_Heading__WEBPACK_IMPORTED_MODULE_2__["default"], {
+      title: packs === null || packs === void 0 ? void 0 : packs.name,
+      subtitle: packs === null || packs === void 0 ? void 0 : packs.description
+    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_9__.jsxs)("div", {
+      className: "tw-mt-8 tw-mb-6",
+      children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_9__.jsxs)("div", {
+        className: "tw-relative tw-max-w-md",
+        children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_9__.jsx)("span", {
+          className: "tw-absolute tw-inset-y-0 tw-left-0 tw-pl-3 tw-flex tw-items-center pointer-events-none",
+          children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_9__.jsx)("svg", {
+            className: "tw-h-5 tw-w-5 tw-text-gray-400",
+            fill: "none",
+            stroke: "currentColor",
+            viewBox: "0 0 24 24",
+            children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_9__.jsx)("path", {
+              strokeLinecap: "round",
+              strokeLinejoin: "round",
+              strokeWidth: 2,
+              d: "M21 21l-4.35-4.35M17 11A6 6 0 105 11a6 6 0 0012 0z"
+            })
           })
-        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsx)("span", {
-          className: "tw-hidden sm:tw-inline",
-          children: "Create Backup"
-        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsx)("span", {
-          className: "sm:tw-hidden",
-          children: "Create"
-        })]
-      }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsxs)("button", {
-        onClick: handleDeleteBackups,
-        disabled: selectedBackups.length === 0,
-        className: "tw-inline-flex tw-items-center tw-justify-center tw-px-3 sm:tw-px-4 tw-py-2 tw-border tw-border-transparent tw-shadow-sm tw-text-xs sm:tw-text-sm tw-font-medium tw-rounded-md tw-text-white tw-transition-colors tw-duration-200 tw-font-space-mono ".concat(selectedBackups.length === 0 ? 'tw-bg-gray-400 tw-cursor-not-allowed' : 'tw-bg-red-600 hover:tw-bg-red-700 focus:tw-outline-none focus:tw-ring-2 focus:tw-ring-offset-2 focus:tw-ring-red-500'),
-        children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsx)(lucide_react__WEBPACK_IMPORTED_MODULE_5__["default"], {
-          className: "tw-w-4 tw-h-4 tw-mr-1 sm:tw-mr-2"
-        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsx)("span", {
-          className: "tw-hidden sm:tw-inline",
-          children: "Delete Selected"
-        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsx)("span", {
-          className: "sm:tw-hidden",
-          children: "Delete"
-        })]
-      }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsxs)("button", {
-        onClick: handleUploadBackup,
-        className: "tw-inline-flex tw-items-center tw-justify-center tw-px-3 sm:tw-px-4 tw-py-2 tw-border tw-border-transparent tw-shadow-sm tw-text-xs sm:tw-text-sm tw-font-medium tw-rounded-md tw-text-white tw-bg-green-600 hover:tw-bg-green-700 focus:tw-outline-none focus:tw-ring-2 focus:tw-ring-offset-2 focus:tw-ring-green-500 tw-transition-colors tw-duration-200 tw-font-space-mono",
-        children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsx)(lucide_react__WEBPACK_IMPORTED_MODULE_4__["default"], {
-          className: "tw-w-4 tw-h-4 tw-mr-1 sm:tw-mr-2"
-        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsx)("span", {
-          className: "tw-hidden sm:tw-inline",
-          children: "Upload Backup"
-        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsx)("span", {
-          className: "sm:tw-hidden",
-          children: "Upload"
-        })]
-      }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsxs)("button", {
-        onClick: function onClick(e) {
-          e.preventDefault();
-          onBackupSchedule();
-        },
-        className: "tw-inline-flex tw-items-center tw-justify-center tw-px-3 sm:tw-px-4 tw-py-2 tw-border tw-border-transparent tw-shadow-sm tw-text-xs sm:tw-text-sm tw-font-medium tw-rounded-md tw-text-white tw-bg-yellow-600 hover:tw-bg-yellow-700 focus:tw-outline-none focus:tw-ring-2 focus:tw-ring-offset-2 focus:tw-ring-yellow-500 tw-transition-colors tw-duration-200 tw-font-space-mono",
-        children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsx)(lucide_react__WEBPACK_IMPORTED_MODULE_3__["default"], {
-          className: "tw-w-4 tw-h-4 tw-mr-1 sm:tw-mr-2"
-        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsx)("span", {
-          className: "tw-hidden sm:tw-inline",
-          children: "Backup Schedule"
-        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsx)("span", {
-          className: "sm:tw-hidden",
-          children: "Schedule"
-        })]
-      })]
-    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsx)("div", {
-      className: "tw-w-full sm:tw-w-auto",
-      children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsxs)("div", {
-        className: "tw-relative",
-        children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsx)("label", {
-          htmlFor: "date-filter",
-          className: "tw-sr-only",
-          children: "Filter by date"
-        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsx)("input", {
-          id: "date-filter",
-          type: "date",
-          value: dateFilter,
-          onChange: handleDateFilterChange,
-          className: "tw-block tw-w-full sm:tw-w-auto tw-rounded-md tw-border-gray-300 tw-shadow-sm focus:tw-border-blue-500 focus:tw-ring-blue-500 tw-text-sm tw-px-3 tw-py-2 tw-min-w-[140px]",
-          placeholder: "Filter by date"
-        })]
-      })
-    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsx)(_BackupConfigModal__WEBPACK_IMPORTED_MODULE_2__["default"], {
-      isOpen: isConfigModalOpen,
-      onClose: function onClose() {
-        return setIsConfigModalOpen(false);
-      },
-      onSave: handleSaveBackup
-    })]
-  });
-};
-/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (BackupTableTools);
-
-/***/ }),
-
-/***/ "./src/components/BackupTypeBadge.jsx":
-/*!********************************************!*\
-  !*** ./src/components/BackupTypeBadge.jsx ***!
-  \********************************************/
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
-/* harmony export */ });
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react/jsx-runtime */ "./node_modules/react/jsx-runtime.js");
-
-
-var BackupTypeBadge = function BackupTypeBadge(_ref) {
-  var type = _ref.type;
-  var style = "";
-  var label = "";
-  switch (type) {
-    case "database":
-      style = "tw-bg-blue-100 tw-text-blue-800 tw-border tw-border-blue-200";
-      label = "Database";
-      break;
-    case "plugin":
-      style = "tw-bg-purple-100 tw-text-purple-800 tw-border tw-border-purple-200";
-      label = "Plugins";
-      break;
-    case "theme":
-      style = "tw-bg-yellow-100 tw-text-yellow-800 tw-border tw-border-yellow-200";
-      label = "Themes";
-      break;
-    case "uploads":
-      style = "tw-bg-green-100 tw-text-green-800 tw-border tw-border-green-200";
-      label = "Uploads";
-      break;
-    default:
-      style = "tw-bg-gray-100 tw-text-gray-800 tw-border tw-border-gray-200";
-      label = type;
-  }
-  return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("span", {
-    className: "tw-inline-flex tw-items-center tw-gap-1 tw-px-2 tw-py-0.5 tw-text-xs tw-font-medium tw-rounded-full ".concat(style, " tw-transition-colors tw-duration-200"),
-    style: {
-      letterSpacing: "0.01em"
-    },
-    children: label
-  });
-};
-/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (BackupTypeBadge);
-
-/***/ }),
-
-/***/ "./src/components/Confirm.jsx":
-/*!************************************!*\
-  !*** ./src/components/Confirm.jsx ***!
-  \************************************/
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   ConfirmProvider: () => (/* binding */ ConfirmProvider),
-/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__),
-/* harmony export */   useConfirm: () => (/* binding */ useConfirm)
-/* harmony export */ });
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var _Modal__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./Modal */ "./src/components/Modal.jsx");
-/* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! react/jsx-runtime */ "./node_modules/react/jsx-runtime.js");
-function _typeof(o) { "@babel/helpers - typeof"; return _typeof = "function" == typeof Symbol && "symbol" == typeof Symbol.iterator ? function (o) { return typeof o; } : function (o) { return o && "function" == typeof Symbol && o.constructor === Symbol && o !== Symbol.prototype ? "symbol" : typeof o; }, _typeof(o); }
-function _regenerator() { /*! regenerator-runtime -- Copyright (c) 2014-present, Facebook, Inc. -- license (MIT): https://github.com/babel/babel/blob/main/packages/babel-helpers/LICENSE */ var e, t, r = "function" == typeof Symbol ? Symbol : {}, n = r.iterator || "@@iterator", o = r.toStringTag || "@@toStringTag"; function i(r, n, o, i) { var c = n && n.prototype instanceof Generator ? n : Generator, u = Object.create(c.prototype); return _regeneratorDefine2(u, "_invoke", function (r, n, o) { var i, c, u, f = 0, p = o || [], y = !1, G = { p: 0, n: 0, v: e, a: d, f: d.bind(e, 4), d: function d(t, r) { return i = t, c = 0, u = e, G.n = r, a; } }; function d(r, n) { for (c = r, u = n, t = 0; !y && f && !o && t < p.length; t++) { var o, i = p[t], d = G.p, l = i[2]; r > 3 ? (o = l === n) && (u = i[(c = i[4]) ? 5 : (c = 3, 3)], i[4] = i[5] = e) : i[0] <= d && ((o = r < 2 && d < i[1]) ? (c = 0, G.v = n, G.n = i[1]) : d < l && (o = r < 3 || i[0] > n || n > l) && (i[4] = r, i[5] = n, G.n = l, c = 0)); } if (o || r > 1) return a; throw y = !0, n; } return function (o, p, l) { if (f > 1) throw TypeError("Generator is already running"); for (y && 1 === p && d(p, l), c = p, u = l; (t = c < 2 ? e : u) || !y;) { i || (c ? c < 3 ? (c > 1 && (G.n = -1), d(c, u)) : G.n = u : G.v = u); try { if (f = 2, i) { if (c || (o = "next"), t = i[o]) { if (!(t = t.call(i, u))) throw TypeError("iterator result is not an object"); if (!t.done) return t; u = t.value, c < 2 && (c = 0); } else 1 === c && (t = i["return"]) && t.call(i), c < 2 && (u = TypeError("The iterator does not provide a '" + o + "' method"), c = 1); i = e; } else if ((t = (y = G.n < 0) ? u : r.call(n, G)) !== a) break; } catch (t) { i = e, c = 1, u = t; } finally { f = 1; } } return { value: t, done: y }; }; }(r, o, i), !0), u; } var a = {}; function Generator() {} function GeneratorFunction() {} function GeneratorFunctionPrototype() {} t = Object.getPrototypeOf; var c = [][n] ? t(t([][n]())) : (_regeneratorDefine2(t = {}, n, function () { return this; }), t), u = GeneratorFunctionPrototype.prototype = Generator.prototype = Object.create(c); function f(e) { return Object.setPrototypeOf ? Object.setPrototypeOf(e, GeneratorFunctionPrototype) : (e.__proto__ = GeneratorFunctionPrototype, _regeneratorDefine2(e, o, "GeneratorFunction")), e.prototype = Object.create(u), e; } return GeneratorFunction.prototype = GeneratorFunctionPrototype, _regeneratorDefine2(u, "constructor", GeneratorFunctionPrototype), _regeneratorDefine2(GeneratorFunctionPrototype, "constructor", GeneratorFunction), GeneratorFunction.displayName = "GeneratorFunction", _regeneratorDefine2(GeneratorFunctionPrototype, o, "GeneratorFunction"), _regeneratorDefine2(u), _regeneratorDefine2(u, o, "Generator"), _regeneratorDefine2(u, n, function () { return this; }), _regeneratorDefine2(u, "toString", function () { return "[object Generator]"; }), (_regenerator = function _regenerator() { return { w: i, m: f }; })(); }
-function _regeneratorDefine2(e, r, n, t) { var i = Object.defineProperty; try { i({}, "", {}); } catch (e) { i = 0; } _regeneratorDefine2 = function _regeneratorDefine(e, r, n, t) { if (r) i ? i(e, r, { value: n, enumerable: !t, configurable: !t, writable: !t }) : e[r] = n;else { var o = function o(r, n) { _regeneratorDefine2(e, r, function (e) { return this._invoke(r, n, e); }); }; o("next", 0), o("throw", 1), o("return", 2); } }, _regeneratorDefine2(e, r, n, t); }
-function asyncGeneratorStep(n, t, e, r, o, a, c) { try { var i = n[a](c), u = i.value; } catch (n) { return void e(n); } i.done ? t(u) : Promise.resolve(u).then(r, o); }
-function _asyncToGenerator(n) { return function () { var t = this, e = arguments; return new Promise(function (r, o) { var a = n.apply(t, e); function _next(n) { asyncGeneratorStep(a, r, o, _next, _throw, "next", n); } function _throw(n) { asyncGeneratorStep(a, r, o, _next, _throw, "throw", n); } _next(void 0); }); }; }
-function ownKeys(e, r) { var t = Object.keys(e); if (Object.getOwnPropertySymbols) { var o = Object.getOwnPropertySymbols(e); r && (o = o.filter(function (r) { return Object.getOwnPropertyDescriptor(e, r).enumerable; })), t.push.apply(t, o); } return t; }
-function _objectSpread(e) { for (var r = 1; r < arguments.length; r++) { var t = null != arguments[r] ? arguments[r] : {}; r % 2 ? ownKeys(Object(t), !0).forEach(function (r) { _defineProperty(e, r, t[r]); }) : Object.getOwnPropertyDescriptors ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t)) : ownKeys(Object(t)).forEach(function (r) { Object.defineProperty(e, r, Object.getOwnPropertyDescriptor(t, r)); }); } return e; }
-function _defineProperty(e, r, t) { return (r = _toPropertyKey(r)) in e ? Object.defineProperty(e, r, { value: t, enumerable: !0, configurable: !0, writable: !0 }) : e[r] = t, e; }
-function _toPropertyKey(t) { var i = _toPrimitive(t, "string"); return "symbol" == _typeof(i) ? i : i + ""; }
-function _toPrimitive(t, r) { if ("object" != _typeof(t) || !t) return t; var e = t[Symbol.toPrimitive]; if (void 0 !== e) { var i = e.call(t, r || "default"); if ("object" != _typeof(i)) return i; throw new TypeError("@@toPrimitive must return a primitive value."); } return ("string" === r ? String : Number)(t); }
-function _slicedToArray(r, e) { return _arrayWithHoles(r) || _iterableToArrayLimit(r, e) || _unsupportedIterableToArray(r, e) || _nonIterableRest(); }
-function _nonIterableRest() { throw new TypeError("Invalid attempt to destructure non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method."); }
-function _unsupportedIterableToArray(r, a) { if (r) { if ("string" == typeof r) return _arrayLikeToArray(r, a); var t = {}.toString.call(r).slice(8, -1); return "Object" === t && r.constructor && (t = r.constructor.name), "Map" === t || "Set" === t ? Array.from(r) : "Arguments" === t || /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(t) ? _arrayLikeToArray(r, a) : void 0; } }
-function _arrayLikeToArray(r, a) { (null == a || a > r.length) && (a = r.length); for (var e = 0, n = Array(a); e < a; e++) n[e] = r[e]; return n; }
-function _iterableToArrayLimit(r, l) { var t = null == r ? null : "undefined" != typeof Symbol && r[Symbol.iterator] || r["@@iterator"]; if (null != t) { var e, n, i, u, a = [], f = !0, o = !1; try { if (i = (t = t.call(r)).next, 0 === l) { if (Object(t) !== t) return; f = !1; } else for (; !(f = (e = i.call(t)).done) && (a.push(e.value), a.length !== l); f = !0); } catch (r) { o = !0, n = r; } finally { try { if (!f && null != t["return"] && (u = t["return"](), Object(u) !== u)) return; } finally { if (o) throw n; } } return a; } }
-function _arrayWithHoles(r) { if (Array.isArray(r)) return r; }
-
-
-
-var Confirm = function Confirm(_ref) {
-  var isOpen = _ref.isOpen,
-    onClose = _ref.onClose,
-    onConfirm = _ref.onConfirm,
-    _ref$title = _ref.title,
-    title = _ref$title === void 0 ? 'Are you sure?' : _ref$title,
-    _ref$description = _ref.description,
-    description = _ref$description === void 0 ? '' : _ref$description,
-    _ref$confirmText = _ref.confirmText,
-    confirmText = _ref$confirmText === void 0 ? 'Confirm' : _ref$confirmText,
-    _ref$cancelText = _ref.cancelText,
-    cancelText = _ref$cancelText === void 0 ? 'Cancel' : _ref$cancelText,
-    _ref$danger = _ref.danger,
-    danger = _ref$danger === void 0 ? false : _ref$danger,
-    _ref$loading = _ref.loading,
-    loading = _ref$loading === void 0 ? false : _ref$loading;
-  return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)(_Modal__WEBPACK_IMPORTED_MODULE_1__["default"], {
-    isOpen: isOpen,
-    onClose: onClose,
-    title: title,
-    size: "sm",
-    showCloseButton: !loading,
-    children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsxs)("div", {
-      className: "tw-space-y-6",
-      children: [description && /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("div", {
-        className: "tw-text-gray-700 tw-text-base tw-leading-relaxed",
-        children: description
-      }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsxs)("div", {
-        className: "tw-flex tw-justify-end tw-gap-3 tw-pt-4 tw-border-t tw-border-gray-200",
-        children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("button", {
-          type: "button",
-          onClick: onClose,
-          disabled: loading,
-          className: "tw-px-5 tw-py-2.5 tw-text-sm tw-font-medium tw-text-gray-700 tw-bg-white tw-border tw-border-gray-200 tw-rounded-lg tw-shadow-sm hover:tw-bg-gray-50 hover:tw-border-gray-300 tw-transition-colors focus:tw-outline-none focus:tw-ring-2 focus:tw-ring-offset-2 focus:tw-ring-blue-500 disabled:tw-opacity-50 disabled:tw-cursor-not-allowed tw-font-space-mono",
-          children: cancelText
-        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("button", {
-          type: "button",
-          onClick: onConfirm,
-          disabled: loading,
-          className: "tw-px-5 tw-py-2.5 tw-text-sm tw-font-medium tw-rounded-lg tw-shadow-sm tw-transition-colors focus:tw-outline-none focus:tw-ring-2 focus:tw-ring-offset-2 tw-font-space-mono \n              ".concat(danger ? 'tw-text-white tw-bg-red-600 hover:tw-bg-red-700 focus:tw-ring-red-500' : 'tw-text-white tw-bg-blue-600 hover:tw-bg-blue-700 focus:tw-ring-blue-500', "\n              disabled:tw-opacity-50 disabled:tw-cursor-not-allowed disabled:hover:tw-bg-blue-600"),
-          children: loading ? /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsxs)("span", {
-            className: "tw-flex tw-items-center tw-gap-2",
-            children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsxs)("svg", {
-              className: "tw-animate-spin tw-h-5 tw-w-5 tw-text-white",
-              xmlns: "http://www.w3.org/2000/svg",
-              fill: "none",
-              viewBox: "0 0 24 24",
-              children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("circle", {
-                className: "tw-opacity-25",
-                cx: "12",
-                cy: "12",
-                r: "10",
-                stroke: "currentColor",
-                strokeWidth: "4"
-              }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("path", {
-                className: "tw-opacity-75",
-                fill: "currentColor",
-                d: "M4 12a8 8 0 018-8v4a4 4 0 00-4 4H4z"
-              })]
-            }), confirmText]
-          }) : confirmText
-        })]
-      })]
-    })
-  });
-};
-
-// --- Context & Provider ---
-var ConfirmContext = /*#__PURE__*/(0,react__WEBPACK_IMPORTED_MODULE_0__.createContext)();
-var ConfirmProvider = function ConfirmProvider(_ref2) {
-  var children = _ref2.children;
-  var _useState = (0,react__WEBPACK_IMPORTED_MODULE_0__.useState)({
-      isOpen: false,
-      options: {},
-      loading: false
-    }),
-    _useState2 = _slicedToArray(_useState, 2),
-    state = _useState2[0],
-    setState = _useState2[1];
-  var resolveRef = (0,react__WEBPACK_IMPORTED_MODULE_0__.useRef)(null);
-  var rejectRef = (0,react__WEBPACK_IMPORTED_MODULE_0__.useRef)(null);
-  var openConfirm = (0,react__WEBPACK_IMPORTED_MODULE_0__.useCallback)(function () {
-    var options = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : {};
-    return new Promise(function (resolve, reject) {
-      resolveRef.current = resolve;
-      rejectRef.current = reject;
-      setState({
-        isOpen: true,
-        options: options,
-        loading: false
-      });
-    });
-  }, []);
-  var handleClose = (0,react__WEBPACK_IMPORTED_MODULE_0__.useCallback)(function () {
-    if (rejectRef.current) {
-      rejectRef.current(new Error('cancelled'));
-    }
-    resolveRef.current = null;
-    rejectRef.current = null;
-    setState(function (s) {
-      return _objectSpread(_objectSpread({}, s), {}, {
-        isOpen: false,
-        loading: false
-      });
-    });
-  }, []);
-  var handleConfirm = (0,react__WEBPACK_IMPORTED_MODULE_0__.useCallback)(/*#__PURE__*/_asyncToGenerator(/*#__PURE__*/_regenerator().m(function _callee() {
-    return _regenerator().w(function (_context) {
-      while (1) switch (_context.n) {
-        case 0:
-          setState(function (s) {
-            return _objectSpread(_objectSpread({}, s), {}, {
-              loading: true
-            });
-          });
-          try {
-            if (resolveRef.current) {
-              resolveRef.current(true);
-            }
-          } finally {
-            resolveRef.current = null;
-            rejectRef.current = null;
-            setState(function (s) {
-              return _objectSpread(_objectSpread({}, s), {}, {
-                isOpen: false,
-                loading: false
-              });
-            });
+        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_9__.jsx)("input", {
+          type: "text",
+          style: {
+            width: "100%",
+            padding: "0.6rem 2.5rem 0.6rem 2.5rem",
+            borderRadius: "0rem",
+            border: "1px solid #d1d5db",
+            // Tailwind gray-300
+            fontSize: ".9rem",
+            lineHeight: "1.5",
+            color: "#111827",
+            // Tailwind gray-900
+            backgroundColor: "#fff",
+            transition: "border-color 0.2s, box-shadow 0.2s",
+            boxSizing: "border-box"
+          },
+          placeholder: "Search packages by name...",
+          value: searchTerm,
+          onChange: function onChange(e) {
+            return setSearchTerm(e.target.value);
           }
-        case 1:
-          return _context.a(2);
-      }
-    }, _callee);
-  })), []);
-  return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsxs)(ConfirmContext.Provider, {
-    value: openConfirm,
-    children: [children, /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)(Confirm, _objectSpread({
-      isOpen: state.isOpen,
-      onClose: handleClose,
-      onConfirm: handleConfirm,
-      loading: state.loading || state.options.loading
-    }, state.options))]
-  });
-};
-
-// --- useConfirm Hook ---
-var useConfirm = function useConfirm() {
-  var openConfirm = (0,react__WEBPACK_IMPORTED_MODULE_0__.useContext)(ConfirmContext);
-  if (!openConfirm) throw new Error('useConfirm must be used within a ConfirmProvider');
-  return openConfirm;
-};
-/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (Confirm);
-
-/***/ }),
-
-/***/ "./src/components/DonationInfomation.jsx":
-/*!***********************************************!*\
-  !*** ./src/components/DonationInfomation.jsx ***!
-  \***********************************************/
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
-/* harmony export */ });
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var lucide_react__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! lucide-react */ "./node_modules/lucide-react/dist/esm/icons/coffee.js");
-/* harmony import */ var lucide_react__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! lucide-react */ "./node_modules/lucide-react/dist/esm/icons/heart.js");
-/* harmony import */ var lucide_react__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! lucide-react */ "./node_modules/lucide-react/dist/esm/icons/target.js");
-/* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! react/jsx-runtime */ "./node_modules/react/jsx-runtime.js");
-
-
-
-var DonationInfomation = function DonationInfomation() {
-  // Configuration - Update these with your actual Buy Me a Coffee details
-  var config = {
-    buyMeACoffeeUrl: 'https://coff.ee/mikebeplusu',
-    // Replace with your actual URL
-    pluginName: 'Worry Proof Backup',
-    developerName: '@Mike' // Replace with your name
-  };
-  var handleDonateClick = function handleDonateClick() {
-    window.open(config.buyMeACoffeeUrl, '_blank', 'noopener,noreferrer');
-  };
-
-  // convert items of What Your Coffee Money Does to data
-  var whatYourCoffeeMoneyDoes = [{
-    icon: '🚀',
-    title: 'One-Click Magic',
-    description: 'Your coffee powers instant backup & restore with just one click! 🚀'
-  }, {
-    icon: '🛡️',
-    title: 'Security-First',
-    description: 'Every function built with enterprise-grade security as the top priority! 🔐'
-  }, {
-    icon: '💎',
-    title: 'Forever Free Gang',
-    description: 'This plugin stays 100% free forever - no hidden fees! ✨'
-  }, {
-    icon: '🎨',
-    title: 'UI/UX Glow Up',
-    description: 'Making the interface so smooth it feels like butter! 🧈'
-  }, {
-    icon: '🤝',
-    title: 'Community Built',
-    description: 'Built by the community, for the community - that\'s the vibe! 💪'
-  }];
-  return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsxs)("div", {
-    className: "tw-max-w-3xl tw-mx-auto tw-px-2 sm:tw-px-0 tw-py-10 tw-bg-white",
-    children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsxs)("div", {
-      className: "tw-text-center tw-mb-8",
-      children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsxs)("h2", {
-        className: "tw-text-2xl tw-font-bold tw-text-gray-900 tw-mb-4",
-        children: ["Loving ", config.pluginName, "? \uD83D\uDE80"]
-      }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)("p", {
-        className: "tw-text-gray-600 tw-leading-relaxed",
-        children: "This plugin is totally free forever! \u2728 If it's making your life easier, maybe throw me a coffee? \u2615 No pressure tho! \uD83D\uDE0A"
-      })]
-    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsxs)("div", {
-      className: "tw-grid tw-grid-cols-3 tw-gap-4 tw-mb-8",
-      children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsxs)("div", {
-        className: "tw-text-center tw-p-4 tw-bg-gray-50 tw-rounded-lg",
-        children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)("div", {
-          className: "tw-text-xl tw-font-bold tw-text-gray-900",
-          children: "10K+"
-        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)("div", {
-          className: "tw-text-sm tw-text-gray-600",
-          children: "Happy Users \uD83D\uDE0D"
-        })]
-      }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsxs)("div", {
-        className: "tw-text-center tw-p-4 tw-bg-gray-50 tw-rounded-lg",
-        children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)("div", {
-          className: "tw-text-xl tw-font-bold tw-text-gray-900",
-          children: "50K+"
-        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)("div", {
-          className: "tw-text-sm tw-text-gray-600",
-          children: "Backups Saved \uD83D\uDCBE"
-        })]
-      }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsxs)("div", {
-        className: "tw-text-center tw-p-4 tw-bg-gray-50 tw-rounded-lg",
-        children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)("div", {
-          className: "tw-text-xl tw-font-bold tw-text-gray-900",
-          children: "4.9\u2605"
-        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)("div", {
-          className: "tw-text-sm tw-text-gray-600",
-          children: "User Rating \u2B50"
-        })]
-      })]
-    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)("div", {
-      className: "tw-bg-blue-50 tw-border tw-border-blue-200 tw-rounded-lg tw-p-4 tw-mb-8",
-      children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsxs)("div", {
-        className: "tw-flex tw-items-start tw-gap-3",
-        children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)(lucide_react__WEBPACK_IMPORTED_MODULE_3__["default"], {
-          className: "tw-w-5 tw-h-5 tw-text-blue-600 tw-mt-0.5 tw-flex-shrink-0"
-        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsxs)("div", {
-          children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)("h4", {
-            className: "tw-font-semibold tw-text-blue-900 tw-mb-2",
-            children: "Honest Talk! \uD83E\uDD1D"
-          }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsxs)("p", {
-            className: "tw-text-sm tw-text-blue-800 tw-leading-relaxed",
-            children: ["These numbers above are my ", /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)("strong", {
-              children: "dream goals"
-            }), " for ", config.pluginName, "! \uD83C\uDFAF Right now, we're just getting started, but I believe with your help, we can make these numbers real! \uD83D\uDCAA"]
-          }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)("p", {
-            className: "tw-text-sm tw-text-blue-700 tw-mt-2 tw-italic",
-            children: "Every coffee, review, or share brings us closer to these goals! \uD83D\uDE80"
-          })]
-        })]
-      })
-    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsxs)("div", {
-      className: "tw-mb-8",
-      children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)("h3", {
-        className: "tw-text-lg tw-font-semibold tw-text-gray-900 tw-mb-4 tw-text-center",
-        children: "What Your Coffee Money Does \uD83D\uDCB8"
-      }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)("div", {
-        className: "tw-grid tw-grid-cols-1 md:tw-grid-cols-2 lg:tw-grid-cols-3 tw-gap-4",
-        children: whatYourCoffeeMoneyDoes.map(function (item, index) {
-          return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)("div", {
-            className: "tw-bg-white tw-border tw-border-gray-200 tw-rounded-lg tw-p-4 tw-shadow-sm hover:tw-shadow-md tw-transition-shadow",
-            children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsxs)("div", {
-              className: "tw-flex tw-items-start tw-gap-3",
-              children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)("div", {
-                className: "tw-text-2xl tw-flex-shrink-0",
-                children: item.icon
-              }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsxs)("div", {
-                children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)("h4", {
-                  className: "tw-font-semibold tw-text-gray-900 tw-mb-1 tw-text-sm",
-                  children: item.title
-                }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)("p", {
-                  className: "tw-text-xs tw-text-gray-600 tw-leading-relaxed",
-                  children: item.description
-                })]
-              })]
+        }), searchTerm && /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_9__.jsx)("button", {
+          type: "button",
+          className: "tw-absolute tw-inset-y-0 tw-right-0 tw-pr-3 tw-flex tw-items-center",
+          onClick: function onClick() {
+            return setSearchTerm("");
+          },
+          children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_9__.jsx)("svg", {
+            className: "tw-h-5 tw-w-5 tw-text-gray-400 hover:tw-text-gray-600",
+            fill: "none",
+            stroke: "currentColor",
+            viewBox: "0 0 24 24",
+            children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_9__.jsx)("path", {
+              strokeLinecap: "round",
+              strokeLinejoin: "round",
+              strokeWidth: 2,
+              d: "M6 18L18 6M6 6l12 12"
             })
-          }, index);
-        })
-      })]
-    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsxs)("div", {
-      className: "tw-text-center tw-mb-6",
-      children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsxs)("button", {
-        onClick: handleDonateClick,
-        className: "tw-group tw-relative tw-bg-gradient-to-r tw-from-blue-500 tw-to-purple-600 tw-text-white tw-px-8 tw-py-4 tw-rounded-full tw-font-semibold tw-flex tw-items-center tw-gap-3 tw-mx-auto tw-shadow-lg hover:tw-shadow-2xl tw-transition-all tw-duration-300 tw-ease-out tw-transform hover:tw-scale-105 tw-overflow-hidden tw-border-0",
-        children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)("div", {
-          className: "tw-absolute tw-inset-0 tw-bg-gradient-to-r tw-from-transparent tw-via-white/20 tw-to-transparent tw-translate-x-[-100%] group-hover:tw-translate-x-[100%] tw-transition-transform tw-duration-700 tw-ease-out"
-        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)(lucide_react__WEBPACK_IMPORTED_MODULE_1__["default"], {
-          className: "tw-w-5 tw-h-5 tw-relative tw-z-10 group-hover:tw-rotate-12 group-hover:tw-scale-110 tw-transition-all tw-duration-300 tw-ease-out"
-        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)("span", {
-          className: "tw-relative tw-z-10 tw-text-base tw-tracking-wide",
-          children: "Buy Me a Coffee"
-        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)("div", {
-          className: "tw-absolute tw-inset-0 tw-bg-gradient-to-r tw-from-blue-400/30 tw-to-purple-400/30 tw-opacity-0 group-hover:tw-opacity-100 tw-transition-opacity tw-duration-300 tw-rounded-2xl"
-        })]
-      }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsxs)("p", {
-        className: "tw-text-sm tw-text-gray-500 tw-mt-3",
-        children: ["Every coffee helps keep ", config.pluginName, " awesome! \uD83D\uDE4F"]
-      })]
-    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsxs)("div", {
-      className: "tw-bg-gray-50 tw-rounded-lg tw-p-4 tw-mb-6",
-      children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)("h4", {
-        className: "tw-text-sm tw-font-semibold tw-text-gray-900 tw-mb-3 tw-text-center",
-        children: "Other Ways to Show Love \uD83D\uDC95"
-      }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsxs)("div", {
-        className: "tw-flex tw-justify-center tw-gap-4",
-        children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)("button", {
-          className: "tw-text-sm tw-text-gray-600 hover:tw-text-gray-900 tw-transition-colors",
-          children: "\u2B50 Rate on WordPress.org"
-        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)("button", {
-          className: "tw-text-sm tw-text-gray-600 hover:tw-text-gray-900 tw-transition-colors",
-          children: "\uD83D\uDCDD Write a Review"
-        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)("button", {
-          className: "tw-text-sm tw-text-gray-600 hover:tw-text-gray-900 tw-transition-colors",
-          children: "\uD83D\uDD17 Share with Friends"
-        })]
-      })]
-    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsxs)("div", {
-      className: "tw-text-center tw-text-gray-500",
-      children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsxs)("p", {
-        className: "tw-text-sm",
-        children: ["Made with ", /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)(lucide_react__WEBPACK_IMPORTED_MODULE_2__["default"], {
-          className: "tw-w-4 tw-h-4 tw-inline tw-text-red-500"
-        }), " by ", config.developerName, " \uD83D\uDCBB"]
-      }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsxs)("p", {
-        className: "tw-text-xs tw-mt-1",
-        children: [config.pluginName, " will always be free - pinky promise! \uD83E\uDD19"]
-      })]
-    })]
-  });
-};
-/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (DonationInfomation);
-
-/***/ }),
-
-/***/ "./src/components/DownloadBackup.jsx":
-/*!*******************************************!*\
-  !*** ./src/components/DownloadBackup.jsx ***!
-  \*******************************************/
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
-/* harmony export */ });
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var lucide_react__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! lucide-react */ "./node_modules/lucide-react/dist/esm/icons/loader-circle.js");
-/* harmony import */ var lucide_react__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! lucide-react */ "./node_modules/lucide-react/dist/esm/icons/copy.js");
-/* harmony import */ var lucide_react__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! lucide-react */ "./node_modules/lucide-react/dist/esm/icons/download.js");
-/* harmony import */ var lucide_react__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! lucide-react */ "./node_modules/lucide-react/dist/esm/icons/folder-archive.js");
-/* harmony import */ var lucide_react__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! lucide-react */ "./node_modules/lucide-react/dist/esm/icons/package.js");
-/* harmony import */ var _util_lib__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../util/lib */ "./src/util/lib.js");
-/* harmony import */ var _Toast__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./Toast */ "./src/components/Toast.jsx");
-/* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! react/jsx-runtime */ "./node_modules/react/jsx-runtime.js");
-function _regenerator() { /*! regenerator-runtime -- Copyright (c) 2014-present, Facebook, Inc. -- license (MIT): https://github.com/babel/babel/blob/main/packages/babel-helpers/LICENSE */ var e, t, r = "function" == typeof Symbol ? Symbol : {}, n = r.iterator || "@@iterator", o = r.toStringTag || "@@toStringTag"; function i(r, n, o, i) { var c = n && n.prototype instanceof Generator ? n : Generator, u = Object.create(c.prototype); return _regeneratorDefine2(u, "_invoke", function (r, n, o) { var i, c, u, f = 0, p = o || [], y = !1, G = { p: 0, n: 0, v: e, a: d, f: d.bind(e, 4), d: function d(t, r) { return i = t, c = 0, u = e, G.n = r, a; } }; function d(r, n) { for (c = r, u = n, t = 0; !y && f && !o && t < p.length; t++) { var o, i = p[t], d = G.p, l = i[2]; r > 3 ? (o = l === n) && (u = i[(c = i[4]) ? 5 : (c = 3, 3)], i[4] = i[5] = e) : i[0] <= d && ((o = r < 2 && d < i[1]) ? (c = 0, G.v = n, G.n = i[1]) : d < l && (o = r < 3 || i[0] > n || n > l) && (i[4] = r, i[5] = n, G.n = l, c = 0)); } if (o || r > 1) return a; throw y = !0, n; } return function (o, p, l) { if (f > 1) throw TypeError("Generator is already running"); for (y && 1 === p && d(p, l), c = p, u = l; (t = c < 2 ? e : u) || !y;) { i || (c ? c < 3 ? (c > 1 && (G.n = -1), d(c, u)) : G.n = u : G.v = u); try { if (f = 2, i) { if (c || (o = "next"), t = i[o]) { if (!(t = t.call(i, u))) throw TypeError("iterator result is not an object"); if (!t.done) return t; u = t.value, c < 2 && (c = 0); } else 1 === c && (t = i["return"]) && t.call(i), c < 2 && (u = TypeError("The iterator does not provide a '" + o + "' method"), c = 1); i = e; } else if ((t = (y = G.n < 0) ? u : r.call(n, G)) !== a) break; } catch (t) { i = e, c = 1, u = t; } finally { f = 1; } } return { value: t, done: y }; }; }(r, o, i), !0), u; } var a = {}; function Generator() {} function GeneratorFunction() {} function GeneratorFunctionPrototype() {} t = Object.getPrototypeOf; var c = [][n] ? t(t([][n]())) : (_regeneratorDefine2(t = {}, n, function () { return this; }), t), u = GeneratorFunctionPrototype.prototype = Generator.prototype = Object.create(c); function f(e) { return Object.setPrototypeOf ? Object.setPrototypeOf(e, GeneratorFunctionPrototype) : (e.__proto__ = GeneratorFunctionPrototype, _regeneratorDefine2(e, o, "GeneratorFunction")), e.prototype = Object.create(u), e; } return GeneratorFunction.prototype = GeneratorFunctionPrototype, _regeneratorDefine2(u, "constructor", GeneratorFunctionPrototype), _regeneratorDefine2(GeneratorFunctionPrototype, "constructor", GeneratorFunction), GeneratorFunction.displayName = "GeneratorFunction", _regeneratorDefine2(GeneratorFunctionPrototype, o, "GeneratorFunction"), _regeneratorDefine2(u), _regeneratorDefine2(u, o, "Generator"), _regeneratorDefine2(u, n, function () { return this; }), _regeneratorDefine2(u, "toString", function () { return "[object Generator]"; }), (_regenerator = function _regenerator() { return { w: i, m: f }; })(); }
-function _regeneratorDefine2(e, r, n, t) { var i = Object.defineProperty; try { i({}, "", {}); } catch (e) { i = 0; } _regeneratorDefine2 = function _regeneratorDefine(e, r, n, t) { if (r) i ? i(e, r, { value: n, enumerable: !t, configurable: !t, writable: !t }) : e[r] = n;else { var o = function o(r, n) { _regeneratorDefine2(e, r, function (e) { return this._invoke(r, n, e); }); }; o("next", 0), o("throw", 1), o("return", 2); } }, _regeneratorDefine2(e, r, n, t); }
-function asyncGeneratorStep(n, t, e, r, o, a, c) { try { var i = n[a](c), u = i.value; } catch (n) { return void e(n); } i.done ? t(u) : Promise.resolve(u).then(r, o); }
-function _asyncToGenerator(n) { return function () { var t = this, e = arguments; return new Promise(function (r, o) { var a = n.apply(t, e); function _next(n) { asyncGeneratorStep(a, r, o, _next, _throw, "next", n); } function _throw(n) { asyncGeneratorStep(a, r, o, _next, _throw, "throw", n); } _next(void 0); }); }; }
-function _slicedToArray(r, e) { return _arrayWithHoles(r) || _iterableToArrayLimit(r, e) || _unsupportedIterableToArray(r, e) || _nonIterableRest(); }
-function _nonIterableRest() { throw new TypeError("Invalid attempt to destructure non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method."); }
-function _unsupportedIterableToArray(r, a) { if (r) { if ("string" == typeof r) return _arrayLikeToArray(r, a); var t = {}.toString.call(r).slice(8, -1); return "Object" === t && r.constructor && (t = r.constructor.name), "Map" === t || "Set" === t ? Array.from(r) : "Arguments" === t || /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(t) ? _arrayLikeToArray(r, a) : void 0; } }
-function _arrayLikeToArray(r, a) { (null == a || a > r.length) && (a = r.length); for (var e = 0, n = Array(a); e < a; e++) n[e] = r[e]; return n; }
-function _iterableToArrayLimit(r, l) { var t = null == r ? null : "undefined" != typeof Symbol && r[Symbol.iterator] || r["@@iterator"]; if (null != t) { var e, n, i, u, a = [], f = !0, o = !1; try { if (i = (t = t.call(r)).next, 0 === l) { if (Object(t) !== t) return; f = !1; } else for (; !(f = (e = i.call(t)).done) && (a.push(e.value), a.length !== l); f = !0); } catch (r) { o = !0, n = r; } finally { try { if (!f && null != t["return"] && (u = t["return"](), Object(u) !== u)) return; } finally { if (o) throw n; } } return a; } }
-function _arrayWithHoles(r) { if (Array.isArray(r)) return r; }
-
-
-
-
-
-/**
- * DownloadBackup component
- * @param {Object} props
- * @param {Object} props.backup - The backup item
- * @param {Function} [props.onDownload] - Called when download is requested
- * @param {Function} [props.onCreateZip] - Called when create zip is requested
- */
-
-var DownloadBackup = function DownloadBackup(_ref) {
-  var backup = _ref.backup;
-  var toast = (0,_Toast__WEBPACK_IMPORTED_MODULE_7__.useToast)();
-  var _useState = (0,react__WEBPACK_IMPORTED_MODULE_0__.useState)(false),
-    _useState2 = _slicedToArray(_useState, 2),
-    isLoading = _useState2[0],
-    setIsLoading = _useState2[1];
-  var _useState3 = (0,react__WEBPACK_IMPORTED_MODULE_0__.useState)(false),
-    _useState4 = _slicedToArray(_useState3, 2),
-    isCreatingZip = _useState4[0],
-    setIsCreatingZip = _useState4[1];
-  var _useState5 = (0,react__WEBPACK_IMPORTED_MODULE_0__.useState)(null),
-    _useState6 = _slicedToArray(_useState5, 2),
-    backupDownloadZipPath = _useState6[0],
-    setBackupDownloadZipPath = _useState6[1];
-  var handleDownload = /*#__PURE__*/function () {
-    var _ref2 = _asyncToGenerator(/*#__PURE__*/_regenerator().m(function _callee() {
-      var backup_download_zip_path;
-      return _regenerator().w(function (_context) {
-        while (1) switch (_context.n) {
-          case 0:
-            setIsLoading(true);
-            _context.n = 1;
-            return (0,_util_lib__WEBPACK_IMPORTED_MODULE_6__.getBackupDownloadZipPath)(backup.folder_name);
-          case 1:
-            backup_download_zip_path = _context.v;
-            if (!(backup_download_zip_path.success != true)) {
-              _context.n = 2;
-              break;
-            }
-            toast({
-              message: backup_download_zip_path.data,
-              type: 'error'
-            });
-            return _context.a(2);
-          case 2:
-            setBackupDownloadZipPath(backup_download_zip_path.data);
-            setIsLoading(false);
-          case 3:
-            return _context.a(2);
-        }
-      }, _callee);
-    }));
-    return function handleDownload() {
-      return _ref2.apply(this, arguments);
-    };
-  }();
-  var copyToClipboard = function copyToClipboard(text) {
-    if (navigator.clipboard && typeof navigator.clipboard.writeText === 'function') {
-      navigator.clipboard.writeText(text).then(function () {
-        console.log('Copied to clipboard!');
-      })["catch"](function (err) {
-        console.error('Failed to copy: ', err);
-      });
-    } else {
-      // Fallback cho trình duyệt cũ
-      var textarea = document.createElement('textarea');
-      textarea.value = text;
-      textarea.style.position = 'fixed'; // tránh cuộn trang
-      document.body.appendChild(textarea);
-      textarea.focus();
-      textarea.select();
-      try {
-        document.execCommand('copy');
-        console.log('Copied with fallback!');
-      } catch (err) {
-        console.error('Fallback failed: ', err);
-      }
-      document.body.removeChild(textarea);
-    }
-  };
-  var onHandleCopyLink = (0,react__WEBPACK_IMPORTED_MODULE_0__.useCallback)(function () {
-    copyToClipboard(backupDownloadZipPath);
-    toast({
-      message: 'Link copied to clipboard',
-      type: 'success'
-    });
-  }, [backupDownloadZipPath]);
-  (0,react__WEBPACK_IMPORTED_MODULE_0__.useEffect)(function () {
-    handleDownload();
-  }, []);
-  var handleCreateZip = /*#__PURE__*/function () {
-    var _ref3 = _asyncToGenerator(/*#__PURE__*/_regenerator().m(function _callee2() {
-      var backup_create_zip;
-      return _regenerator().w(function (_context2) {
-        while (1) switch (_context2.n) {
-          case 0:
-            setIsCreatingZip(true);
-            _context2.n = 1;
-            return (0,_util_lib__WEBPACK_IMPORTED_MODULE_6__.createBackupZip)(backup.folder_name);
-          case 1:
-            backup_create_zip = _context2.v;
-            console.log(backup_create_zip);
-            // validate
-            if (!(backup_create_zip.success != true)) {
-              _context2.n = 2;
-              break;
-            }
-            toast({
-              message: backup_create_zip.data,
-              type: 'error'
-            });
-            return _context2.a(2);
-          case 2:
-            setBackupDownloadZipPath(backup_create_zip.data);
-            setIsCreatingZip(false);
-          case 3:
-            return _context2.a(2);
-        }
-      }, _callee2);
-    }));
-    return function handleCreateZip() {
-      return _ref3.apply(this, arguments);
-    };
-  }();
-  if (isLoading) {
-    return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsx)("div", {
-      className: "tw-flex tw-items-center tw-justify-center tw-h-full",
-      children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsx)(lucide_react__WEBPACK_IMPORTED_MODULE_1__["default"], {
-        className: "tw-w-4 tw-h-4 tw-animate-spin"
-      })
-    });
-  }
-  if (backupDownloadZipPath == false) {
-    return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsxs)(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.Fragment, {
-      children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsx)("div", {
-        className: "tw-flex tw-flex-col tw-items-center tw-justify-center tw-h-full",
-        children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsx)("div", {
-          className: "tw-bg-blue-50 tw-border tw-border-blue-200 tw-rounded-md tw-p-4",
-          children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsxs)("div", {
-            className: "tw-flex tw-items-start tw-space-x-3",
-            children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsx)("div", {
-              className: "tw-flex-shrink-0",
-              children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsx)(lucide_react__WEBPACK_IMPORTED_MODULE_4__["default"], {
-                className: "tw-w-5 tw-h-5",
-                color: "#007bff"
-              })
-            }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsx)("div", {
-              className: "tw-flex-1",
-              children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsx)("p", {
-                className: "tw-text-sm tw-text-blue-800 tw-leading-relaxed",
-                children: "Backups are created on-demand to save storage \uD83D\uDCBE. Click below to generate one when needed, and don\u2019t forget to delete it once you\u2019re finished \u2014 keep things clean and efficient. \uD83E\uDDF9\u2728"
-              })
-            })]
           })
-        })
-      }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsx)("div", {
-        className: "tw-mt-4 tw-flex tw-justify-end",
-        children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsx)("button", {
-          onClick: handleCreateZip,
-          disabled: isCreatingZip,
-          className: "tw-inline-flex tw-items-center tw-px-4 tw-py-2 tw-bg-blue-600 tw-text-white tw-text-sm tw-font-medium tw-rounded-md tw-shadow-sm hover:tw-bg-blue-700 focus:tw-outline-none focus:tw-ring-2 focus:tw-ring-blue-500 focus:tw-ring-offset-2 disabled:tw-opacity-50 disabled:tw-cursor-not-allowed tw-transition-colors ".concat(isCreatingZip ? 'tw-opacity-50 tw-cursor-not-allowed' : ''),
-          children: isCreatingZip ? /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsxs)(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.Fragment, {
-            children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsx)(lucide_react__WEBPACK_IMPORTED_MODULE_1__["default"], {
-              className: "tw-w-4 tw-h-4 tw-mr-2 tw-animate-spin"
-            }), "Creating Backup..."]
-          }) : /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsxs)(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.Fragment, {
-            children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsx)(lucide_react__WEBPACK_IMPORTED_MODULE_5__["default"], {
-              className: "tw-w-4 tw-h-4 tw-mr-2"
-            }), "Create Backup Zip"]
-          })
-        })
-      })]
-    });
-  }
-  return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsxs)(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.Fragment, {
-    children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsx)("div", {
-      className: "tw-flex tw-flex-col tw-items-center tw-justify-center tw-h-full",
-      children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsx)("div", {
-        className: "tw-bg-green-50 tw-border tw-border-green-200 tw-rounded-md tw-p-4",
-        children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsxs)("div", {
-          className: "tw-flex tw-items-start tw-space-x-3",
-          children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsx)("div", {
-            className: "tw-flex-shrink-0",
-            children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsx)(lucide_react__WEBPACK_IMPORTED_MODULE_5__["default"], {
-              className: "tw-w-5 tw-h-5",
-              color: "#16a34a"
-            })
-          }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsxs)("div", {
-            className: "tw-flex-1",
-            children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsx)("h3", {
-              className: "tw-text-sm tw-font-medium tw-text-green-800 tw-mb-2",
-              children: "Backup Ready for Download"
-            }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsx)("p", {
-              className: "tw-text-sm tw-text-green-700 tw-leading-relaxed",
-              children: "Your backup zip file has been created successfully. Click the download button below to save it to your computer."
-            })]
-          })]
-        })
-      })
-    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsxs)("div", {
-      className: "tw-mt-4 tw-flex tw-justify-end tw-space-x-3",
-      children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsxs)("button", {
-        onClick: onHandleCopyLink,
-        className: "tw-inline-flex tw-items-center tw-px-4 tw-py-2 tw-bg-gray-600 tw-text-white tw-text-sm tw-font-medium tw-rounded-md tw-shadow-sm hover:tw-bg-gray-700 focus:tw-outline-none focus:tw-ring-2 focus:tw-ring-gray-500 focus:tw-ring-offset-2 tw-transition-colors",
-        children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsx)(lucide_react__WEBPACK_IMPORTED_MODULE_2__["default"], {
-          className: "tw-w-4 tw-h-4 tw-mr-2"
-        }), "Copy Link"]
-      }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsxs)("button", {
-        onClick: function onClick() {
-          return window.open(backupDownloadZipPath, '_blank');
-        },
-        className: "tw-inline-flex tw-items-center tw-px-4 tw-py-2 tw-bg-green-600 tw-text-white tw-text-sm tw-font-medium tw-rounded-md tw-shadow-sm hover:tw-bg-green-700 focus:tw-outline-none focus:tw-ring-2 focus:tw-ring-green-500 focus:tw-ring-offset-2 tw-transition-colors",
-        children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsx)(lucide_react__WEBPACK_IMPORTED_MODULE_3__["default"], {
-          className: "tw-w-4 tw-h-4 tw-mr-2"
-        }), "Download Backup"]
-      })]
-    })]
-  });
-};
-/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (DownloadBackup);
-
-/***/ }),
-
-/***/ "./src/components/DropdownActions.jsx":
-/*!********************************************!*\
-  !*** ./src/components/DropdownActions.jsx ***!
-  \********************************************/
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
-/* harmony export */ });
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var react_dom__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react-dom */ "./node_modules/react-dom/index.js");
-/* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! react/jsx-runtime */ "./node_modules/react/jsx-runtime.js");
-function _slicedToArray(r, e) { return _arrayWithHoles(r) || _iterableToArrayLimit(r, e) || _unsupportedIterableToArray(r, e) || _nonIterableRest(); }
-function _nonIterableRest() { throw new TypeError("Invalid attempt to destructure non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method."); }
-function _unsupportedIterableToArray(r, a) { if (r) { if ("string" == typeof r) return _arrayLikeToArray(r, a); var t = {}.toString.call(r).slice(8, -1); return "Object" === t && r.constructor && (t = r.constructor.name), "Map" === t || "Set" === t ? Array.from(r) : "Arguments" === t || /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(t) ? _arrayLikeToArray(r, a) : void 0; } }
-function _arrayLikeToArray(r, a) { (null == a || a > r.length) && (a = r.length); for (var e = 0, n = Array(a); e < a; e++) n[e] = r[e]; return n; }
-function _iterableToArrayLimit(r, l) { var t = null == r ? null : "undefined" != typeof Symbol && r[Symbol.iterator] || r["@@iterator"]; if (null != t) { var e, n, i, u, a = [], f = !0, o = !1; try { if (i = (t = t.call(r)).next, 0 === l) { if (Object(t) !== t) return; f = !1; } else for (; !(f = (e = i.call(t)).done) && (a.push(e.value), a.length !== l); f = !0); } catch (r) { o = !0, n = r; } finally { try { if (!f && null != t["return"] && (u = t["return"](), Object(u) !== u)) return; } finally { if (o) throw n; } } return a; } }
-function _arrayWithHoles(r) { if (Array.isArray(r)) return r; }
-
-
-
-/**
- * @typedef {Object} DropdownActionItem
- * @property {string} label - The label for the action
- * @property {React.ReactNode} [icon] - Optional icon
- * @property {() => void} onClick - Click handler
- * @property {boolean} [danger] - Optional: style as dangerous action
- */
-
-/**
- * DropdownActions Props
- * @param {Object} props
- * @param {DropdownActionItem[]} props.items - Array of action items
- * @param {React.ReactNode} [props.trigger] - Optional custom trigger
- * @param {string} [props.className] - Optional extra classes for dropdown
- */
-
-var DropdownActions = function DropdownActions(_ref) {
-  var items = _ref.items,
-    trigger = _ref.trigger,
-    _ref$className = _ref.className,
-    className = _ref$className === void 0 ? '' : _ref$className;
-  var _useState = (0,react__WEBPACK_IMPORTED_MODULE_0__.useState)(false),
-    _useState2 = _slicedToArray(_useState, 2),
-    open = _useState2[0],
-    setOpen = _useState2[1];
-  var menuRef = (0,react__WEBPACK_IMPORTED_MODULE_0__.useRef)(null);
-  var buttonRef = (0,react__WEBPACK_IMPORTED_MODULE_0__.useRef)(null);
-  var _useState3 = (0,react__WEBPACK_IMPORTED_MODULE_0__.useState)(-1),
-    _useState4 = _slicedToArray(_useState3, 2),
-    focusedIndex = _useState4[0],
-    setFocusedIndex = _useState4[1];
-  var _useState5 = (0,react__WEBPACK_IMPORTED_MODULE_0__.useState)({}),
-    _useState6 = _slicedToArray(_useState5, 2),
-    menuStyle = _useState6[0],
-    setMenuStyle = _useState6[1];
-
-  // Close dropdown on outside click
-  (0,react__WEBPACK_IMPORTED_MODULE_0__.useEffect)(function () {
-    if (!open) return;
-    function handleClick(e) {
-      if (menuRef.current && !menuRef.current.contains(e.target) && buttonRef.current && !buttonRef.current.contains(e.target)) {
-        setOpen(false);
-      }
-    }
-    function handleEscape(e) {
-      if (e.key === 'Escape') setOpen(false);
-    }
-    document.addEventListener('mousedown', handleClick);
-    document.addEventListener('keydown', handleEscape);
-    return function () {
-      document.removeEventListener('mousedown', handleClick);
-      document.removeEventListener('keydown', handleEscape);
-    };
-  }, [open]);
-
-  // Keyboard navigation
-  (0,react__WEBPACK_IMPORTED_MODULE_0__.useEffect)(function () {
-    if (!open) return;
-    function handleKey(e) {
-      if (e.key === 'ArrowDown') {
-        setFocusedIndex(function (i) {
-          return (i + 1) % items.length;
-        });
-        e.preventDefault();
-      } else if (e.key === 'ArrowUp') {
-        setFocusedIndex(function (i) {
-          return (i - 1 + items.length) % items.length;
-        });
-        e.preventDefault();
-      } else if (e.key === 'Enter' && focusedIndex >= 0) {
-        items[focusedIndex].onClick();
-        setOpen(false);
-      }
-    }
-    document.addEventListener('keydown', handleKey);
-    return function () {
-      return document.removeEventListener('keydown', handleKey);
-    };
-  }, [open, focusedIndex, items]);
-
-  // Focus first item when opened
-  (0,react__WEBPACK_IMPORTED_MODULE_0__.useEffect)(function () {
-    if (open) setFocusedIndex(0);else setFocusedIndex(-1);
-  }, [open]);
-
-  // Calculate menu position for portal
-  (0,react__WEBPACK_IMPORTED_MODULE_0__.useEffect)(function () {
-    if (open && buttonRef.current) {
-      var rect = buttonRef.current.getBoundingClientRect();
-      var isMobile = window.innerWidth < 640;
-      if (isMobile) {
-        setMenuStyle({
-          position: 'fixed',
-          left: 0,
-          right: 0,
-          top: rect.bottom + 8,
-          zIndex: 9999
-        });
-      } else {
-        setMenuStyle({
-          position: 'fixed',
-          left: rect.right - 176,
-          // 44*4 = 176px (w-44)
-          top: rect.bottom + 8,
-          zIndex: 9999
-        });
-      }
-    }
-  }, [open]);
-
-  // Default trigger: 3 dots
-  var defaultTrigger = /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsxs)("button", {
-    ref: buttonRef,
-    type: "button",
-    "aria-haspopup": "menu",
-    "aria-expanded": open,
-    onClick: function onClick() {
-      return setOpen(function (v) {
-        return !v;
-      });
-    },
-    className: "tw-inline-flex tw-items-center tw-justify-center tw-rounded-md tw-p-2 tw-text-gray-500 hover:tw-bg-gray-100 hover:tw-text-gray-700 focus:tw-outline-none focus:tw-ring-2 focus:tw-ring-blue-500",
-    children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsxs)("svg", {
-      className: "tw-w-5 tw-h-5",
-      fill: "none",
-      stroke: "currentColor",
-      viewBox: "0 0 24 24",
-      children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("circle", {
-        cx: "12",
-        cy: "6",
-        r: "1.5",
-        fill: "currentColor"
-      }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("circle", {
-        cx: "12",
-        cy: "12",
-        r: "1.5",
-        fill: "currentColor"
-      }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("circle", {
-        cx: "12",
-        cy: "18",
-        r: "1.5",
-        fill: "currentColor"
-      })]
-    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("span", {
-      className: "tw-sr-only",
-      children: "Open actions"
-    })]
-  });
-  var menu = open ? /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("div", {
-    ref: menuRef,
-    className: "tw-bg-white tw-border tw-border-gray-200 tw-rounded-md tw-shadow-lg tw-z-50 tw-py-1 tw-font-space-mono ".concat(className, "\n        sm:tw-w-44\n        tw-w-screen tw-left-0 tw-right-0 tw-mx-2 tw-max-w-xs tw-rounded-b-lg tw-pb-2 tw-pt-2 tw-bottom-auto\n        md:tw-w-56 md:tw-mx-0 md:tw-max-w-none md:tw-left-auto md:tw-right-0 md:tw-rounded-md md:tw-py-1\n      "),
-    style: menuStyle,
-    role: "menu",
-    tabIndex: "-1",
-    children: items.map(function (item, idx) {
-      return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsxs)("button", {
-        type: "button",
-        className: "tw-flex tw-items-center tw-w-full tw-px-5 tw-py-3 tw-text-base tw-text-left tw-gap-3 tw-transition-colors tw-duration-150 focus:tw-bg-gray-100 hover:tw-bg-gray-50 focus:tw-outline-none\n            ".concat(item.danger ? 'tw-text-red-600 hover:tw-bg-red-50 focus:tw-bg-red-50' : 'tw-text-gray-700', "\n            ").concat(focusedIndex === idx ? 'tw-bg-gray-100' : '', "\n            tw-rounded-none tw-font-medium\n            sm:tw-px-4 sm:tw-py-2 sm:tw-text-sm sm:tw-gap-2\n          "),
-        onClick: function onClick() {
-          item.onClick();
-          setOpen(false);
-        },
-        role: "menuitem",
-        tabIndex: focusedIndex === idx ? 0 : -1,
-        onMouseEnter: function onMouseEnter() {
-          return setFocusedIndex(idx);
-        },
-        style: {
-          touchAction: 'manipulation'
-        },
-        children: [item.icon && /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("span", {
-          className: "tw-w-5 tw-h-5 tw-flex tw-items-center",
-          children: item.icon
-        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("span", {
-          children: item.label
         })]
-      }, item.label);
-    })
-  }) : null;
-  return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsxs)("div", {
-    className: "tw-relative tw-inline-block",
-    children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("span", {
-      onClick: function onClick(e) {
-        return e.stopPropagation();
-      },
-      children: trigger ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().cloneElement(trigger, {
-        ref: buttonRef,
-        onClick: function onClick(e) {
-          e.stopPropagation();
-          setOpen(function (v) {
-            return !v;
-          });
-          trigger.props.onClick && trigger.props.onClick(e);
-        },
-        'aria-haspopup': 'menu',
-        'aria-expanded': open
-      }) : defaultTrigger
-    }), open && /*#__PURE__*/(0,react_dom__WEBPACK_IMPORTED_MODULE_1__.createPortal)(menu, document.body)]
-  });
-};
-/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (DropdownActions);
-
-/***/ }),
-
-/***/ "./src/components/EmptyState.jsx":
-/*!***************************************!*\
-  !*** ./src/components/EmptyState.jsx ***!
-  \***************************************/
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
-/* harmony export */ });
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var _BackupTableTools__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./BackupTableTools */ "./src/components/BackupTableTools.jsx");
-/* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! react/jsx-runtime */ "./node_modules/react/jsx-runtime.js");
-
-
-
-var EmptyState = function EmptyState() {
-  return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("div", {
-    className: "tw-text-center",
-    children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsxs)("div", {
-      className: "tw-bg-gray-50 tw-p-12 tw-border tw-border-gray-200",
-      children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("svg", {
+      }), searchTerm && /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_9__.jsxs)("p", {
+        className: "tw-mt-2 tw-text-sm tw-text-gray-600",
+        children: ["Found ", filteredPackages.length, " package", filteredPackages.length !== 1 ? 's' : '']
+      })]
+    }), filteredPackages.length > 0 ? /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_9__.jsxs)(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_9__.Fragment, {
+      children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_9__.jsx)(_components_dummy_pack_PackGrid__WEBPACK_IMPORTED_MODULE_4__["default"], {
+        packs: filteredPackages,
+        onInstall: onInstall
+      }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_9__.jsx)(_components_dummy_pack_InstallProcess__WEBPACK_IMPORTED_MODULE_6__["default"], {})]
+    }) : searchTerm ? /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_9__.jsxs)("div", {
+      className: "tw-text-gray-500 tw-mt-8 tw-text-center tw-py-12",
+      children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_9__.jsx)("svg", {
         className: "tw-mx-auto tw-h-12 tw-w-12 tw-text-gray-400",
         fill: "none",
         stroke: "currentColor",
         viewBox: "0 0 24 24",
-        children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("path", {
+        children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_9__.jsx)("path", {
           strokeLinecap: "round",
           strokeLinejoin: "round",
           strokeWidth: 2,
-          d: "M20 13V6a2 2 0 00-2-2H6a2 2 0 00-2 2v7m16 0v5a2 2 0 01-2 2H6a2 2 0 01-2-2v-5m16 0h-2.586a1 1 0 00-.707.293l-2.414 2.414a1 1 0 01-.707.293h-3.172a1 1 0 01-.707-.293l-2.414-2.414A1 1 0 006.586 13H4"
+          d: "M9.172 16.172a4 4 0 015.656 0M9 10h.01M15 10h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"
         })
-      }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("h3", {
-        className: "tw-mt-2 tw-text-sm tw-font-medium tw-text-gray-900",
-        children: "No backups"
-      }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("p", {
-        className: "tw-mt-1 tw-text-sm tw-text-gray-500",
-        children: "Get started by creating a new backup."
-      }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("div", {
-        className: "tw-mt-6",
-        children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)(_BackupTableTools__WEBPACK_IMPORTED_MODULE_1__.NewBackupButton, {})
+      }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_9__.jsx)("p", {
+        className: "tw-mt-4 tw-text-lg tw-font-medium",
+        children: "No packages found"
+      }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_9__.jsx)("p", {
+        className: "tw-mt-2 tw-text-sm",
+        children: "Try adjusting your search term"
       })]
-    })
-  });
-};
-/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (EmptyState);
-
-/***/ }),
-
-/***/ "./src/components/Footer.jsx":
-/*!***********************************!*\
-  !*** ./src/components/Footer.jsx ***!
-  \***********************************/
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
-/* harmony export */ });
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react/jsx-runtime */ "./node_modules/react/jsx-runtime.js");
-
-
-var Footer = function Footer() {
-  return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)("footer", {
-    className: "tw-w-full tw-py-6 tw-mt-8 tw-text-center",
-    children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)("p", {
-      className: "tw-text-gray-700 tw-text-sm tw-mx-auto tw-max-w-xl",
-      children: ["Thanks for choosing ", /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("a", {
-        href: "https://worry-proof-backup.vercel.app/",
-        target: "_blank",
-        rel: "noopener noreferrer",
-        className: "tw-font-semibold tw-text-blue-600 tw-border-b-2 tw-border-blue-600",
-        children: "Worry Proof Backup"
-      }), "! \uD83D\uDE80"]
-    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("p", {
-      className: "tw-text-gray-700 tw-text-sm tw-mx-auto tw-max-w-xl tw-mt-2",
-      children: "Backups made brilliant! \uD83E\uDDB8\u200D\u2642\uFE0F\u2728 Your WordPress world is safe, sound, and ready for adventure. Keep calm and back up on! \uD83D\uDDC2\uFE0F\uD83D\uDD12\uD83C\uDF8A"
+    }) : /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_9__.jsx)("div", {
+      className: "tw-text-gray-500 tw-mt-8",
+      children: "No dummy packs found. Please try again later."
     })]
   });
-};
-/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (Footer);
+}
 
 /***/ }),
 
@@ -33883,653 +29993,85 @@ var useModal = function useModal() {
 
 /***/ }),
 
-/***/ "./src/components/Notification.jsx":
-/*!*****************************************!*\
-  !*** ./src/components/Notification.jsx ***!
-  \*****************************************/
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
-/* harmony export */ });
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var lucide_react__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! lucide-react */ "./node_modules/lucide-react/dist/esm/icons/circle-alert.js");
-/* harmony import */ var lucide_react__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! lucide-react */ "./node_modules/lucide-react/dist/esm/icons/circle-check-big.js");
-/* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! react/jsx-runtime */ "./node_modules/react/jsx-runtime.js");
-
-
-
-var Notification = function Notification(_ref) {
-  var _ref$type = _ref.type,
-    type = _ref$type === void 0 ? 'info' : _ref$type,
-    title = _ref.title,
-    children = _ref.children,
-    onClose = _ref.onClose;
-  var getIcon = function getIcon() {
-    switch (type) {
-      case 'success':
-        return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)(lucide_react__WEBPACK_IMPORTED_MODULE_2__["default"], {
-          className: "tw-h-5 tw-w-5 tw-text-green-400"
-        });
-      case 'warning':
-        return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)(lucide_react__WEBPACK_IMPORTED_MODULE_1__["default"], {
-          className: "tw-h-5 tw-w-5 tw-text-yellow-400"
-        });
-      case 'error':
-        return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)(lucide_react__WEBPACK_IMPORTED_MODULE_1__["default"], {
-          className: "tw-h-5 tw-w-5 tw-text-red-400"
-        });
-      default:
-        return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)(lucide_react__WEBPACK_IMPORTED_MODULE_1__["default"], {
-          className: "tw-h-5 tw-w-5 tw-text-blue-400"
-        });
-    }
-  };
-  var getStyles = function getStyles() {
-    switch (type) {
-      case 'success':
-        return 'tw-bg-green-50 tw-border-green-200 tw-text-green-800';
-      case 'warning':
-        return 'tw-bg-yellow-50 tw-border-yellow-200 tw-text-yellow-800';
-      case 'error':
-        return 'tw-bg-red-50 tw-border-red-200 tw-text-red-800';
-      default:
-        return 'tw-bg-blue-50 tw-border-blue-200 tw-text-blue-800';
-    }
-  };
-  return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("div", {
-    className: "tw-border tw-rounded-lg tw-p-4 tw-mb-6 ".concat(getStyles()),
-    children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsxs)("div", {
-      className: "tw-flex tw-items-start tw-space-x-3",
-      children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("div", {
-        className: "tw-flex-shrink-0",
-        children: getIcon()
-      }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsxs)("div", {
-        className: "tw-flex-1 tw-min-w-0",
-        children: [title && /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("h3", {
-          className: "tw-text-sm tw-font-bold tw-mb-2",
-          children: title
-        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("div", {
-          className: "tw-text-sm tw-space-y-2",
-          children: children
-        })]
-      }), onClose && /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("div", {
-        className: "tw-flex-shrink-0",
-        children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("button", {
-          onClick: onClose,
-          className: "tw-text-gray-400 hover:tw-text-gray-600 tw-transition-colors",
-          children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("svg", {
-            className: "tw-h-5 tw-w-5",
-            fill: "currentColor",
-            viewBox: "0 0 20 20",
-            children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("path", {
-              fillRule: "evenodd",
-              d: "M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z",
-              clipRule: "evenodd"
-            })
-          })
-        })
-      })]
-    })
-  });
-};
-/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (Notification);
-
-/***/ }),
-
-/***/ "./src/components/ReportIssue.jsx":
-/*!****************************************!*\
-  !*** ./src/components/ReportIssue.jsx ***!
-  \****************************************/
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
-/* harmony export */ });
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var _Toast__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./Toast */ "./src/components/Toast.jsx");
-/* harmony import */ var _util_lib__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../util/lib */ "./src/util/lib.js");
-/* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! react/jsx-runtime */ "./node_modules/react/jsx-runtime.js");
-function _typeof(o) { "@babel/helpers - typeof"; return _typeof = "function" == typeof Symbol && "symbol" == typeof Symbol.iterator ? function (o) { return typeof o; } : function (o) { return o && "function" == typeof Symbol && o.constructor === Symbol && o !== Symbol.prototype ? "symbol" : typeof o; }, _typeof(o); }
-function _regenerator() { /*! regenerator-runtime -- Copyright (c) 2014-present, Facebook, Inc. -- license (MIT): https://github.com/babel/babel/blob/main/packages/babel-helpers/LICENSE */ var e, t, r = "function" == typeof Symbol ? Symbol : {}, n = r.iterator || "@@iterator", o = r.toStringTag || "@@toStringTag"; function i(r, n, o, i) { var c = n && n.prototype instanceof Generator ? n : Generator, u = Object.create(c.prototype); return _regeneratorDefine2(u, "_invoke", function (r, n, o) { var i, c, u, f = 0, p = o || [], y = !1, G = { p: 0, n: 0, v: e, a: d, f: d.bind(e, 4), d: function d(t, r) { return i = t, c = 0, u = e, G.n = r, a; } }; function d(r, n) { for (c = r, u = n, t = 0; !y && f && !o && t < p.length; t++) { var o, i = p[t], d = G.p, l = i[2]; r > 3 ? (o = l === n) && (u = i[(c = i[4]) ? 5 : (c = 3, 3)], i[4] = i[5] = e) : i[0] <= d && ((o = r < 2 && d < i[1]) ? (c = 0, G.v = n, G.n = i[1]) : d < l && (o = r < 3 || i[0] > n || n > l) && (i[4] = r, i[5] = n, G.n = l, c = 0)); } if (o || r > 1) return a; throw y = !0, n; } return function (o, p, l) { if (f > 1) throw TypeError("Generator is already running"); for (y && 1 === p && d(p, l), c = p, u = l; (t = c < 2 ? e : u) || !y;) { i || (c ? c < 3 ? (c > 1 && (G.n = -1), d(c, u)) : G.n = u : G.v = u); try { if (f = 2, i) { if (c || (o = "next"), t = i[o]) { if (!(t = t.call(i, u))) throw TypeError("iterator result is not an object"); if (!t.done) return t; u = t.value, c < 2 && (c = 0); } else 1 === c && (t = i["return"]) && t.call(i), c < 2 && (u = TypeError("The iterator does not provide a '" + o + "' method"), c = 1); i = e; } else if ((t = (y = G.n < 0) ? u : r.call(n, G)) !== a) break; } catch (t) { i = e, c = 1, u = t; } finally { f = 1; } } return { value: t, done: y }; }; }(r, o, i), !0), u; } var a = {}; function Generator() {} function GeneratorFunction() {} function GeneratorFunctionPrototype() {} t = Object.getPrototypeOf; var c = [][n] ? t(t([][n]())) : (_regeneratorDefine2(t = {}, n, function () { return this; }), t), u = GeneratorFunctionPrototype.prototype = Generator.prototype = Object.create(c); function f(e) { return Object.setPrototypeOf ? Object.setPrototypeOf(e, GeneratorFunctionPrototype) : (e.__proto__ = GeneratorFunctionPrototype, _regeneratorDefine2(e, o, "GeneratorFunction")), e.prototype = Object.create(u), e; } return GeneratorFunction.prototype = GeneratorFunctionPrototype, _regeneratorDefine2(u, "constructor", GeneratorFunctionPrototype), _regeneratorDefine2(GeneratorFunctionPrototype, "constructor", GeneratorFunction), GeneratorFunction.displayName = "GeneratorFunction", _regeneratorDefine2(GeneratorFunctionPrototype, o, "GeneratorFunction"), _regeneratorDefine2(u), _regeneratorDefine2(u, o, "Generator"), _regeneratorDefine2(u, n, function () { return this; }), _regeneratorDefine2(u, "toString", function () { return "[object Generator]"; }), (_regenerator = function _regenerator() { return { w: i, m: f }; })(); }
-function _regeneratorDefine2(e, r, n, t) { var i = Object.defineProperty; try { i({}, "", {}); } catch (e) { i = 0; } _regeneratorDefine2 = function _regeneratorDefine(e, r, n, t) { if (r) i ? i(e, r, { value: n, enumerable: !t, configurable: !t, writable: !t }) : e[r] = n;else { var o = function o(r, n) { _regeneratorDefine2(e, r, function (e) { return this._invoke(r, n, e); }); }; o("next", 0), o("throw", 1), o("return", 2); } }, _regeneratorDefine2(e, r, n, t); }
-function asyncGeneratorStep(n, t, e, r, o, a, c) { try { var i = n[a](c), u = i.value; } catch (n) { return void e(n); } i.done ? t(u) : Promise.resolve(u).then(r, o); }
-function _asyncToGenerator(n) { return function () { var t = this, e = arguments; return new Promise(function (r, o) { var a = n.apply(t, e); function _next(n) { asyncGeneratorStep(a, r, o, _next, _throw, "next", n); } function _throw(n) { asyncGeneratorStep(a, r, o, _next, _throw, "throw", n); } _next(void 0); }); }; }
-function ownKeys(e, r) { var t = Object.keys(e); if (Object.getOwnPropertySymbols) { var o = Object.getOwnPropertySymbols(e); r && (o = o.filter(function (r) { return Object.getOwnPropertyDescriptor(e, r).enumerable; })), t.push.apply(t, o); } return t; }
-function _objectSpread(e) { for (var r = 1; r < arguments.length; r++) { var t = null != arguments[r] ? arguments[r] : {}; r % 2 ? ownKeys(Object(t), !0).forEach(function (r) { _defineProperty(e, r, t[r]); }) : Object.getOwnPropertyDescriptors ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t)) : ownKeys(Object(t)).forEach(function (r) { Object.defineProperty(e, r, Object.getOwnPropertyDescriptor(t, r)); }); } return e; }
-function _defineProperty(e, r, t) { return (r = _toPropertyKey(r)) in e ? Object.defineProperty(e, r, { value: t, enumerable: !0, configurable: !0, writable: !0 }) : e[r] = t, e; }
-function _toPropertyKey(t) { var i = _toPrimitive(t, "string"); return "symbol" == _typeof(i) ? i : i + ""; }
-function _toPrimitive(t, r) { if ("object" != _typeof(t) || !t) return t; var e = t[Symbol.toPrimitive]; if (void 0 !== e) { var i = e.call(t, r || "default"); if ("object" != _typeof(i)) return i; throw new TypeError("@@toPrimitive must return a primitive value."); } return ("string" === r ? String : Number)(t); }
-function _slicedToArray(r, e) { return _arrayWithHoles(r) || _iterableToArrayLimit(r, e) || _unsupportedIterableToArray(r, e) || _nonIterableRest(); }
-function _nonIterableRest() { throw new TypeError("Invalid attempt to destructure non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method."); }
-function _unsupportedIterableToArray(r, a) { if (r) { if ("string" == typeof r) return _arrayLikeToArray(r, a); var t = {}.toString.call(r).slice(8, -1); return "Object" === t && r.constructor && (t = r.constructor.name), "Map" === t || "Set" === t ? Array.from(r) : "Arguments" === t || /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(t) ? _arrayLikeToArray(r, a) : void 0; } }
-function _arrayLikeToArray(r, a) { (null == a || a > r.length) && (a = r.length); for (var e = 0, n = Array(a); e < a; e++) n[e] = r[e]; return n; }
-function _iterableToArrayLimit(r, l) { var t = null == r ? null : "undefined" != typeof Symbol && r[Symbol.iterator] || r["@@iterator"]; if (null != t) { var e, n, i, u, a = [], f = !0, o = !1; try { if (i = (t = t.call(r)).next, 0 === l) { if (Object(t) !== t) return; f = !1; } else for (; !(f = (e = i.call(t)).done) && (a.push(e.value), a.length !== l); f = !0); } catch (r) { o = !0, n = r; } finally { try { if (!f && null != t["return"] && (u = t["return"](), Object(u) !== u)) return; } finally { if (o) throw n; } } return a; } }
-function _arrayWithHoles(r) { if (Array.isArray(r)) return r; }
-
-
-
-
-var getSystemInfo = function getSystemInfo() {
-  if (typeof window !== 'undefined' && window.worrprba_php_data) {
-    var _d$server_metrics, _d$server_metrics2, _d$server_metrics3;
-    var d = window.worrprba_php_data;
-    return {
-      wp_version: ((_d$server_metrics = d.server_metrics) === null || _d$server_metrics === void 0 ? void 0 : _d$server_metrics.wp_version) || '',
-      php_version: ((_d$server_metrics2 = d.server_metrics) === null || _d$server_metrics2 === void 0 ? void 0 : _d$server_metrics2.php_version) || '',
-      plugin_version: ((_d$server_metrics3 = d.server_metrics) === null || _d$server_metrics3 === void 0 ? void 0 : _d$server_metrics3.plugin_version) || ''
-    };
-  }
-  return {
-    wp_version: '',
-    php_version: '',
-    plugin_version: ''
-  };
-};
-var ISSUE_TYPES = [{
-  value: 'bug',
-  label: 'Bug'
-}, {
-  value: 'feature',
-  label: 'Feature Request'
-}, {
-  value: 'question',
-  label: 'Question'
-}];
-var ReportIssue = function ReportIssue() {
-  var toast = (0,_Toast__WEBPACK_IMPORTED_MODULE_1__.useToast)();
-  var _useState = (0,react__WEBPACK_IMPORTED_MODULE_0__.useState)(_objectSpread({
-      name: '',
-      email: '',
-      type: 'bug',
-      description: '',
-      screenshot: null
-    }, getSystemInfo())),
-    _useState2 = _slicedToArray(_useState, 2),
-    form = _useState2[0],
-    setForm = _useState2[1];
-  var _useState3 = (0,react__WEBPACK_IMPORTED_MODULE_0__.useState)(false),
-    _useState4 = _slicedToArray(_useState3, 2),
-    submitting = _useState4[0],
-    setSubmitting = _useState4[1];
-  var _useState5 = (0,react__WEBPACK_IMPORTED_MODULE_0__.useState)(''),
-    _useState6 = _slicedToArray(_useState5, 2),
-    error = _useState6[0],
-    setError = _useState6[1];
-  var handleChange = function handleChange(e) {
-    var _e$target = e.target,
-      name = _e$target.name,
-      value = _e$target.value,
-      files = _e$target.files;
-    if (name === 'screenshot') {
-      setForm(function (f) {
-        return _objectSpread(_objectSpread({}, f), {}, {
-          screenshot: files[0]
-        });
-      });
-    } else {
-      setForm(function (f) {
-        return _objectSpread(_objectSpread({}, f), {}, _defineProperty({}, name, value));
-      });
-    }
-  };
-  var handleTypeChange = function handleTypeChange(value) {
-    setForm(function (f) {
-      return _objectSpread(_objectSpread({}, f), {}, {
-        type: value
-      });
-    });
-  };
-  var handleSubmit = /*#__PURE__*/function () {
-    var _ref = _asyncToGenerator(/*#__PURE__*/_regenerator().m(function _callee(e) {
-      var result;
-      return _regenerator().w(function (_context) {
-        while (1) switch (_context.n) {
-          case 0:
-            e.preventDefault();
-            setError('');
-            if (!(!form.name || !form.email || !form.description)) {
-              _context.n = 1;
-              break;
-            }
-            setError('Please fill in all required fields.');
-            return _context.a(2);
-          case 1:
-            setSubmitting(true);
-            _context.n = 2;
-            return (0,_util_lib__WEBPACK_IMPORTED_MODULE_2__.sendReportEmail)(form);
-          case 2:
-            result = _context.v;
-            if (result.success == true) {
-              setSubmitting(false);
-              toast({
-                message: 'Thank you for your report! We appreciate your feedback.',
-                type: 'success'
-              });
-              // reset form
-              setForm({
-                name: '',
-                email: '',
-                type: 'bug',
-                description: ''
-              });
-            } else {
-              setError('Failed to send report. Please try again.');
-            }
-          case 3:
-            return _context.a(2);
-        }
-      }, _callee);
-    }));
-    return function handleSubmit(_x) {
-      return _ref.apply(this, arguments);
-    };
-  }();
-  return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsxs)("form", {
-    className: "tw-max-w-3xl tw-mx-auto tw-px-2 sm:tw-px-0 tw-py-10 tw-bg-white",
-    onSubmit: handleSubmit,
-    style: {
-      fontFamily: 'inherit'
-    },
-    children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("h2", {
-      className: "tw-text-2xl tw-font-semibold tw-text-gray-900 tw-mb-2 tw-text-center tw-col-span-2",
-      children: "Report an Issue"
-    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("p", {
-      className: "tw-text-gray-600 tw-text-sm tw-text-center tw-mb-6 tw-col-span-2",
-      children: "Please use this template to help us resolve your issue faster. The more details you provide, the better we can help!"
-    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsxs)("div", {
-      className: "tw-grid tw-grid-cols-1 md:tw-grid-cols-2 tw-gap-8 tw-items-start",
-      children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsxs)("div", {
-        className: "tw-bg-gradient-to-br tw-from-blue-50 tw-to-indigo-50 tw-rounded-lg tw-p-6 tw-border tw-border-blue-100 tw-mb-6 md:tw-mb-0 tw-shadow-sm tw-font-space-mono",
-        children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsxs)("div", {
-          className: "tw-text-lg tw-font-bold tw-text-gray-800 tw-mb-3 tw-flex tw-items-center tw-gap-2",
-          children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("span", {
-            children: "\uD83D\uDCDD"
-          }), "Pro Tips for the Perfect Bug Report"]
-        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsxs)("div", {
-          className: "tw-text-sm tw-text-gray-700 tw-space-y-3",
-          children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsxs)("div", {
-            className: "tw-flex tw-items-start tw-gap-2",
-            children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("span", {
-              className: "tw-text-blue-500 tw-font-bold",
-              children: "1."
-            }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsxs)("span", {
-              children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("strong", {
-                children: "What's broken?"
-              }), " Keep calm and make a cup of coffee \u2615 - describe exactly what went wrong"]
-            })]
-          }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsxs)("div", {
-            className: "tw-flex tw-items-start tw-gap-2",
-            children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("span", {
-              className: "tw-text-blue-500 tw-font-bold",
-              children: "2."
-            }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsxs)("span", {
-              children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("strong", {
-                children: "Steps to recreate:"
-              }), " Walk us through it like we're 5 \uD83D\uDC76 - what buttons did you click?"]
-            })]
-          }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsxs)("div", {
-            className: "tw-flex tw-items-start tw-gap-2",
-            children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("span", {
-              className: "tw-text-blue-500 tw-font-bold",
-              children: "3."
-            }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsxs)("span", {
-              children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("strong", {
-                children: "Expected vs Reality:"
-              }), " What should've happened vs what actually happened \uD83E\uDD14"]
-            })]
-          }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsxs)("div", {
-            className: "tw-flex tw-items-start tw-gap-2",
-            children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("span", {
-              className: "tw-text-blue-500 tw-font-bold",
-              children: "4."
-            }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsxs)("span", {
-              children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("strong", {
-                children: "Visual proof:"
-              }), " Screenshots are worth 1000 words \uD83D\uDCF8 - attach ", /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("b", {
-                children: "image or video url"
-              }), " to describe the issue if you can!"]
-            })]
-          }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsxs)("div", {
-            className: "tw-mt-4 tw-p-3 tw-bg-blue-100 tw-rounded-md tw-text-xs tw-text-blue-800",
-            children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("strong", {
-              children: "\uD83D\uDCA1 Pro tip:"
-            }), " The more details you give us, the faster we can fix it and get you back to your day! \uD83D\uDE80"]
-          })]
-        })]
-      }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsxs)("div", {
-        className: "tw-space-y-5",
-        children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsxs)("div", {
-          children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("label", {
-            htmlFor: "name",
-            className: "tw-block tw-text-sm tw-font-medium tw-text-gray-800 tw-mb-1",
-            children: "Name"
-          }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("input", {
-            id: "name",
-            name: "name",
-            type: "text",
-            autoComplete: "off",
-            className: "tw-block tw-w-full tw-py-2 tw-px-3 tw-rounded-md tw-border tw-border-gray-300 tw-bg-white tw-text-gray-900 tw-placeholder-gray-400 focus:tw-border-blue-500 focus:tw-ring-1 focus:tw-ring-blue-200 focus:tw-outline-none tw-transition",
-            placeholder: "Your name",
-            value: form.name,
-            onChange: handleChange,
-            required: true
-          })]
-        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsxs)("div", {
-          children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("label", {
-            htmlFor: "email",
-            className: "tw-block tw-text-sm tw-font-medium tw-text-gray-800 tw-mb-1",
-            children: "Email"
-          }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("input", {
-            id: "email",
-            name: "email",
-            type: "email",
-            autoComplete: "off",
-            className: "tw-block tw-w-full tw-py-2 tw-px-3 tw-rounded-md tw-border tw-border-gray-300 tw-bg-white tw-text-gray-900 tw-placeholder-gray-400 focus:tw-border-blue-500 focus:tw-ring-1 focus:tw-ring-blue-200 focus:tw-outline-none tw-transition",
-            placeholder: "you@email.com",
-            value: form.email,
-            onChange: handleChange,
-            required: true
-          })]
-        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsxs)("div", {
-          children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("label", {
-            className: "tw-block tw-text-sm tw-font-medium tw-text-gray-800 tw-mb-1",
-            children: "Issue Type"
-          }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("div", {
-            className: "tw-flex tw-gap-2",
-            children: ISSUE_TYPES.map(function (t) {
-              return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("button", {
-                type: "button",
-                className: "tw-px-4 tw-py-2 tw-rounded-md tw-text-sm tw-font-medium tw-border tw-transition-colors focus:tw-outline-none focus:tw-ring-1 focus:tw-ring-blue-200 tw-font-space-mono ".concat(form.type === t.value ? 'tw-bg-blue-600 tw-text-white tw-border-blue-600' : 'tw-bg-white tw-text-gray-700 tw-border-gray-300 hover:tw-bg-blue-50'),
-                onClick: function onClick() {
-                  return handleTypeChange(t.value);
-                },
-                "aria-pressed": form.type === t.value,
-                children: t.label
-              }, t.value);
-            })
-          })]
-        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsxs)("div", {
-          children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("label", {
-            htmlFor: "description",
-            className: "tw-block tw-text-sm tw-font-medium tw-text-gray-800 tw-mb-1",
-            children: "Description"
-          }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("textarea", {
-            id: "description",
-            name: "description",
-            rows: 8,
-            className: "tw-block tw-w-full tw-py-2 tw-px-3 tw-rounded-md tw-border tw-border-gray-300 tw-bg-white tw-text-gray-900 tw-placeholder-gray-400 focus:tw-border-blue-500 focus:tw-ring-1 focus:tw-ring-blue-200 focus:tw-outline-none tw-transition",
-            placeholder: "Describe the issue, steps to reproduce, expected behavior, etc.",
-            value: form.description,
-            onChange: handleChange,
-            required: true
-          })]
-        }), error && /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("div", {
-          className: "tw-text-red-600 tw-text-sm tw-mt-2",
-          children: error
-        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("button", {
-          type: "submit",
-          disabled: submitting,
-          className: "tw-w-full tw-py-2 tw-rounded-md tw-bg-blue-600 tw-text-white tw-font-medium tw-text-base tw-transition-colors hover:tw-bg-blue-700 focus:tw-outline-none focus:tw-ring-2 focus:tw-ring-blue-200 disabled:tw-opacity-50 disabled:tw-cursor-not-allowed tw-font-space-mono",
-          children: submitting ? 'Submitting...' : 'Submit Report'
-        })]
-      })]
-    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsxs)("div", {
-      className: "tw-mt-10 tw-text-xs tw-text-gray-500 tw-text-center tw-space-x-3 tw-font-space-mono",
-      children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsxs)("span", {
-        children: ["WP: ", form.wp_version || 'N/A']
-      }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsxs)("span", {
-        children: ["PHP: ", form.php_version || 'N/A']
-      }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsxs)("span", {
-        children: ["Plugin: ", form.plugin_version || 'N/A']
-      })]
-    })]
-  });
-};
-/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (ReportIssue);
-
-/***/ }),
-
-/***/ "./src/components/RestoreConfigModal.jsx":
+/***/ "./src/components/dummy-pack/Heading.jsx":
 /*!***********************************************!*\
-  !*** ./src/components/RestoreConfigModal.jsx ***!
+  !*** ./src/components/dummy-pack/Heading.jsx ***!
   \***********************************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "default": () => (/* binding */ RestoreConfigModal)
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
 /* harmony export */ });
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var _BackupTypeBadge__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./BackupTypeBadge */ "./src/components/BackupTypeBadge.jsx");
-/* harmony import */ var _util_store__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../util/store */ "./src/util/store.js");
-/* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! react/jsx-runtime */ "./node_modules/react/jsx-runtime.js");
-function _toConsumableArray(r) { return _arrayWithoutHoles(r) || _iterableToArray(r) || _unsupportedIterableToArray(r) || _nonIterableSpread(); }
-function _nonIterableSpread() { throw new TypeError("Invalid attempt to spread non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method."); }
-function _iterableToArray(r) { if ("undefined" != typeof Symbol && null != r[Symbol.iterator] || null != r["@@iterator"]) return Array.from(r); }
-function _arrayWithoutHoles(r) { if (Array.isArray(r)) return _arrayLikeToArray(r); }
-function _slicedToArray(r, e) { return _arrayWithHoles(r) || _iterableToArrayLimit(r, e) || _unsupportedIterableToArray(r, e) || _nonIterableRest(); }
-function _nonIterableRest() { throw new TypeError("Invalid attempt to destructure non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method."); }
-function _unsupportedIterableToArray(r, a) { if (r) { if ("string" == typeof r) return _arrayLikeToArray(r, a); var t = {}.toString.call(r).slice(8, -1); return "Object" === t && r.constructor && (t = r.constructor.name), "Map" === t || "Set" === t ? Array.from(r) : "Arguments" === t || /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(t) ? _arrayLikeToArray(r, a) : void 0; } }
-function _arrayLikeToArray(r, a) { (null == a || a > r.length) && (a = r.length); for (var e = 0, n = Array(a); e < a; e++) n[e] = r[e]; return n; }
-function _iterableToArrayLimit(r, l) { var t = null == r ? null : "undefined" != typeof Symbol && r[Symbol.iterator] || r["@@iterator"]; if (null != t) { var e, n, i, u, a = [], f = !0, o = !1; try { if (i = (t = t.call(r)).next, 0 === l) { if (Object(t) !== t) return; f = !1; } else for (; !(f = (e = i.call(t)).done) && (a.push(e.value), a.length !== l); f = !0); } catch (r) { o = !0, n = r; } finally { try { if (!f && null != t["return"] && (u = t["return"](), Object(u) !== u)) return; } finally { if (o) throw n; } } return a; } }
-function _arrayWithHoles(r) { if (Array.isArray(r)) return r; }
+/* harmony import */ var lucide_react__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! lucide-react */ "./node_modules/lucide-react/dist/esm/icons/package.js");
+/* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! react/jsx-runtime */ "./node_modules/react/jsx-runtime.js");
 
 
 
+/**
+ * Heading Component for Dummy Pack Page
+ * 
+ * Displays the main heading for the Dummy Pack Center page with title, subtitle, and optional icon.
+ * 
+ * @param {string} title - Main heading text (default: "Dummy Pack Center")
+ * @param {string} subtitle - Optional subtitle/description text
+ * @param {ReactNode} icon - Optional icon element (default: Package icon)
+ * @param {string} className - Additional CSS classes
+ */
 
-function RestoreConfigModal(_ref) {
-  var backup = _ref.backup,
-    closeModal = _ref.closeModal,
-    toast = _ref.toast;
-  var _useBackupStore = (0,_util_store__WEBPACK_IMPORTED_MODULE_2__["default"])(),
-    buildRestoreProcess = _useBackupStore.buildRestoreProcess;
-  var _useState = (0,react__WEBPACK_IMPORTED_MODULE_0__.useState)(backup.type),
-    _useState2 = _slicedToArray(_useState, 2),
-    selectedBackupRestoreTypes = _useState2[0],
-    setSelectedBackupRestoreTypes = _useState2[1];
-  return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("div", {
-    children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsxs)("div", {
-      className: "tw-space-y-4",
-      children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("div", {
-        children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("p", {
-          className: "tw-text-sm tw-text-gray-600 tw-mt-1",
-          children: "Select which components you want to restore from this backup."
-        })
-      }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsxs)("div", {
-        className: "tw-bg-gray-50 tw-p-4 tw-rounded-lg tw-border tw-border-gray-200",
-        children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsxs)("div", {
-          className: "tw-flex tw-items-center tw-justify-between tw-mb-3",
-          children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("span", {
-            className: "tw-text-sm tw-font-medium tw-text-gray-700",
-            children: "Backup Details"
-          }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("span", {
-            className: "tw-text-xs tw-text-gray-500",
-            children: backup.name
-          })]
-        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsxs)("div", {
-          className: "tw-space-y-2 tw-text-xs tw-text-gray-600",
-          children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsxs)("div", {
-            className: "tw-flex tw-items-center tw-justify-between tw-py-1 tw-border-b tw-border-gray-100",
-            children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("span", {
-              className: "tw-font-medium",
-              children: "Full Size:"
-            }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("span", {
-              children: backup.size
-            })]
-          }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsxs)("div", {
-            className: "tw-flex tw-items-center tw-justify-between tw-py-1 tw-border-b tw-border-gray-100",
-            children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("span", {
-              className: "tw-font-medium",
-              children: "Date:"
-            }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("span", {
-              children: backup.date
-            })]
-          })]
-        })]
-      }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsxs)("div", {
-        children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("label", {
-          className: "tw-text-sm tw-font-medium tw-text-gray-700 tw-block tw-mb-3",
-          children: "Select components to restore:"
-        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("div", {
-          className: "tw-space-y-2",
-          children: backup.type.map(function (type) {
-            return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsxs)("label", {
-              className: "tw-flex tw-items-center tw-space-x-3 tw-p-3 tw-border tw-border-gray-200 tw-rounded-lg tw-cursor-pointer hover:tw-bg-gray-50",
-              children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("input", {
-                type: "checkbox",
-                defaultChecked: selectedBackupRestoreTypes.includes(type),
-                onChange: function onChange(e) {
-                  if (e.target.checked) {
-                    setSelectedBackupRestoreTypes([].concat(_toConsumableArray(selectedBackupRestoreTypes), [type]));
-                  } else {
-                    setSelectedBackupRestoreTypes(selectedBackupRestoreTypes.filter(function (t) {
-                      return t !== type;
-                    }));
-                  }
-                },
-                className: "tw-h-4 tw-w-4 tw-text-blue-600 tw-border-gray-300 tw-rounded focus:tw-ring-blue-500"
-              }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsxs)("div", {
-                className: "tw-flex tw-items-center tw-space-x-2",
-                children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)(_BackupTypeBadge__WEBPACK_IMPORTED_MODULE_1__["default"], {
-                  type: type
-                }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsxs)("span", {
-                  className: "tw-text-sm tw-text-gray-700",
-                  children: [type === 'database' && 'Database tables and content', type === 'plugin' && 'Plugin files and settings', type === 'theme' && 'Theme files and customizations', type === 'uploads' && 'Media files and uploads']
-                })]
-              })]
-            }, type);
-          })
-        })]
-      }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("div", {
-        className: "tw-bg-yellow-50 tw-border tw-border-yellow-200 tw-rounded-lg tw-p-4",
-        children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsxs)("div", {
-          className: "tw-flex tw-items-start tw-space-x-3",
-          children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("svg", {
-            className: "tw-w-5 tw-h-5 tw-text-yellow-600 tw-mt-0.5 tw-flex-shrink-0",
-            fill: "none",
-            stroke: "currentColor",
-            viewBox: "0 0 24 24",
-            children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("path", {
-              strokeLinecap: "round",
-              strokeLinejoin: "round",
-              strokeWidth: 2,
-              d: "M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-2.5L13.732 4c-.77-.833-1.964-.833-2.732 0L3.732 16.5c-.77.833.192 2.5 1.732 2.5z"
-            })
-          }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsxs)("div", {
-            className: "tw-text-sm tw-text-yellow-800",
-            children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("p", {
-              className: "tw-font-semibold tw-mb-1",
-              children: "Warning"
-            }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("p", {
-              className: "tw-leading-relaxed",
-              children: "This will overwrite your current data. Make sure you have a recent backup before proceeding."
-            }), selectedBackupRestoreTypes.includes('database') && /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("p", {
-              className: "tw-font-medium tw-mt-2 tw-text-yellow-700",
-              children: "\uD83D\uDD04 Heads up! After we restore your database, you'll probably get logged out automatically. Don't freak out - this is totally normal! Your login session gets reset when we bring back your old data, so you'll just need to log back in. No biggie! \uD83D\uDE0A"
-            })]
-          })]
-        })
-      }), worrprba_php_data.current_domain != backup.site_url && selectedBackupRestoreTypes.includes('database') && /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("div", {
-        className: "tw-bg-yellow-50 tw-border tw-border-yellow-200 tw-rounded-lg tw-p-4",
-        children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsxs)("div", {
-          className: "tw-flex tw-items-start tw-space-x-3",
-          children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("svg", {
-            className: "tw-w-5 tw-h-5 tw-text-yellow-600 tw-mt-0.5 tw-flex-shrink-0",
-            fill: "none",
-            stroke: "currentColor",
-            viewBox: "0 0 24 24",
-            children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("path", {
-              strokeLinecap: "round",
-              strokeLinejoin: "round",
-              strokeWidth: 2,
-              d: "M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-2.5L13.732 4c-.77-.833-1.964-.833-2.732 0L3.732 16.5c-.77.833.192 2.5 1.732 2.5z"
-            })
-          }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsxs)("div", {
-            className: "tw-text-sm tw-text-yellow-800",
-            children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("p", {
-              className: "tw-font-semibold tw-mb-1",
-              children: "Domain Mismatch Warning"
-            }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsxs)("p", {
-              className: "tw-leading-relaxed",
-              children: ["This restore package was created for a different domain than your current WordPress site. After restoring the database, you may be ", /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("b", {
-                children: "logged out"
-              }), " and might need to ", /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("a", {
-                href: "https://github.com/miketropi/worry-proof-backup/blob/master/doc/manually-update-the-site-url.md",
-                target: "_blank",
-                rel: "noopener noreferrer",
-                className: "tw-text-blue-600 tw-font-semibold hover:tw-text-blue-800 tw-underline",
-                children: "manually update the site URL"
-              }), "."]
-            }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("p", {
-              className: "tw-font-medium tw-mt-2 tw-text-yellow-700",
-              children: "\u26A0\uFE0F Please ensure you really want to proceed with this restore."
-            })]
-          })]
-        })
-      }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsxs)("div", {
-        className: "tw-flex tw-justify-end tw-gap-3 tw-pt-4",
-        children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("button", {
-          onClick: closeModal,
-          className: "tw-px-4 tw-py-2 tw-text-sm tw-font-medium tw-text-gray-700 tw-bg-white tw-border tw-border-gray-300 tw-rounded-md hover:tw-bg-gray-50 focus:tw-outline-none focus:tw-ring-2 focus:tw-ring-offset-2 focus:tw-ring-blue-500",
-          children: "Cancel"
-        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("button", {
-          onClick: function onClick() {
-            if (selectedBackupRestoreTypes.length === 0) {
-              toast({
-                message: 'Please select at least one backup type to restore.',
-                type: 'warning'
-              });
-              return;
-            }
-            buildRestoreProcess({
-              folder_name: backup.folder_name,
-              types: selectedBackupRestoreTypes
-            });
-            closeModal();
-          },
-          className: "tw-px-4 tw-py-2 tw-text-sm tw-font-medium tw-border tw-rounded-md focus:tw-outline-none focus:tw-ring-2 focus:tw-ring-offset-2 focus:tw-ring-blue-500 ".concat(selectedBackupRestoreTypes.length === 0 ? 'tw-text-gray-400 tw-bg-gray-200 tw-border-gray-200 tw-cursor-not-allowed' : 'tw-text-white tw-bg-blue-600 tw-border-transparent hover:tw-bg-blue-700'),
-          disabled: selectedBackupRestoreTypes.length === 0,
-          children: "Yes, Restore Backup! \uD83D\uDE80"
-        })]
-      })]
-    })
+var Heading = function Heading(_ref) {
+  var _ref$title = _ref.title,
+    title = _ref$title === void 0 ? "Dummy Pack Center" : _ref$title,
+    subtitle = _ref.subtitle,
+    icon = _ref.icon,
+    _ref$className = _ref.className,
+    className = _ref$className === void 0 ? "" : _ref$className;
+  var IconComponent = icon || /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)(lucide_react__WEBPACK_IMPORTED_MODULE_1__["default"], {
+    className: "tw-w-5 tw-h-5"
   });
-}
+  return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsxs)("div", {
+    className: "tw-bg-white tw-p-8 tw-mb-8 tw-border tw-border-gray-200 ".concat(className),
+    children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsxs)("h2", {
+      className: "tw-text-2xl tw-font-semibold tw-text-gray-900 tw-mb-2 tw-flex tw-items-center tw-gap-2",
+      children: [IconComponent && /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("span", {
+        className: "tw-bg-gray-100 tw-p-2 tw-rounded-xl tw-shadow-sm tw-flex tw-items-center tw-justify-center tw-border tw-border-gray-200 tw-mr-1",
+        children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("span", {
+          className: "tw-text-blue-500 tw-drop-shadow-sm",
+          children: IconComponent
+        })
+      }), title]
+    }), subtitle && /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("p", {
+      className: "tw-text-sm tw-text-gray-600 tw-leading-relaxed",
+      children: subtitle
+    })]
+  });
+};
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (Heading);
 
 /***/ }),
 
-/***/ "./src/components/RestoreProcess.jsx":
-/*!*******************************************!*\
-  !*** ./src/components/RestoreProcess.jsx ***!
-  \*******************************************/
+/***/ "./src/components/dummy-pack/InstallProcess.jsx":
+/*!******************************************************!*\
+  !*** ./src/components/dummy-pack/InstallProcess.jsx ***!
+  \******************************************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */   "default": () => (/* binding */ InstallProcess)
 /* harmony export */ });
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var _util_store__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../util/store */ "./src/util/store.js");
-/* harmony import */ var _util_lib__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../util/lib */ "./src/util/lib.js");
-/* harmony import */ var _Toast__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./Toast */ "./src/components/Toast.jsx");
-/* harmony import */ var _Modal__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./Modal */ "./src/components/Modal.jsx");
-/* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! react/jsx-runtime */ "./node_modules/react/jsx-runtime.js");
+/* harmony import */ var _util_dummyPackStore__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../util/dummyPackStore */ "./src/util/dummyPackStore.js");
+/* harmony import */ var _Modal__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../Modal */ "./src/components/Modal.jsx");
+/* harmony import */ var _util_dummyPackLib__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../../util/dummyPackLib */ "./src/util/dummyPackLib.js");
+/* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! react/jsx-runtime */ "./node_modules/react/jsx-runtime.js");
 function _typeof(o) { "@babel/helpers - typeof"; return _typeof = "function" == typeof Symbol && "symbol" == typeof Symbol.iterator ? function (o) { return typeof o; } : function (o) { return o && "function" == typeof Symbol && o.constructor === Symbol && o !== Symbol.prototype ? "symbol" : typeof o; }, _typeof(o); }
-function _toConsumableArray(r) { return _arrayWithoutHoles(r) || _iterableToArray(r) || _unsupportedIterableToArray(r) || _nonIterableSpread(); }
-function _nonIterableSpread() { throw new TypeError("Invalid attempt to spread non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method."); }
-function _iterableToArray(r) { if ("undefined" != typeof Symbol && null != r[Symbol.iterator] || null != r["@@iterator"]) return Array.from(r); }
-function _arrayWithoutHoles(r) { if (Array.isArray(r)) return _arrayLikeToArray(r); }
+var _excluded = ["setInstallProcessInProgress", "setInstallProcessInProgressStep", "setInstallProcessModalOpen"];
 function _regenerator() { /*! regenerator-runtime -- Copyright (c) 2014-present, Facebook, Inc. -- license (MIT): https://github.com/babel/babel/blob/main/packages/babel-helpers/LICENSE */ var e, t, r = "function" == typeof Symbol ? Symbol : {}, n = r.iterator || "@@iterator", o = r.toStringTag || "@@toStringTag"; function i(r, n, o, i) { var c = n && n.prototype instanceof Generator ? n : Generator, u = Object.create(c.prototype); return _regeneratorDefine2(u, "_invoke", function (r, n, o) { var i, c, u, f = 0, p = o || [], y = !1, G = { p: 0, n: 0, v: e, a: d, f: d.bind(e, 4), d: function d(t, r) { return i = t, c = 0, u = e, G.n = r, a; } }; function d(r, n) { for (c = r, u = n, t = 0; !y && f && !o && t < p.length; t++) { var o, i = p[t], d = G.p, l = i[2]; r > 3 ? (o = l === n) && (u = i[(c = i[4]) ? 5 : (c = 3, 3)], i[4] = i[5] = e) : i[0] <= d && ((o = r < 2 && d < i[1]) ? (c = 0, G.v = n, G.n = i[1]) : d < l && (o = r < 3 || i[0] > n || n > l) && (i[4] = r, i[5] = n, G.n = l, c = 0)); } if (o || r > 1) return a; throw y = !0, n; } return function (o, p, l) { if (f > 1) throw TypeError("Generator is already running"); for (y && 1 === p && d(p, l), c = p, u = l; (t = c < 2 ? e : u) || !y;) { i || (c ? c < 3 ? (c > 1 && (G.n = -1), d(c, u)) : G.n = u : G.v = u); try { if (f = 2, i) { if (c || (o = "next"), t = i[o]) { if (!(t = t.call(i, u))) throw TypeError("iterator result is not an object"); if (!t.done) return t; u = t.value, c < 2 && (c = 0); } else 1 === c && (t = i["return"]) && t.call(i), c < 2 && (u = TypeError("The iterator does not provide a '" + o + "' method"), c = 1); i = e; } else if ((t = (y = G.n < 0) ? u : r.call(n, G)) !== a) break; } catch (t) { i = e, c = 1, u = t; } finally { f = 1; } } return { value: t, done: y }; }; }(r, o, i), !0), u; } var a = {}; function Generator() {} function GeneratorFunction() {} function GeneratorFunctionPrototype() {} t = Object.getPrototypeOf; var c = [][n] ? t(t([][n]())) : (_regeneratorDefine2(t = {}, n, function () { return this; }), t), u = GeneratorFunctionPrototype.prototype = Generator.prototype = Object.create(c); function f(e) { return Object.setPrototypeOf ? Object.setPrototypeOf(e, GeneratorFunctionPrototype) : (e.__proto__ = GeneratorFunctionPrototype, _regeneratorDefine2(e, o, "GeneratorFunction")), e.prototype = Object.create(u), e; } return GeneratorFunction.prototype = GeneratorFunctionPrototype, _regeneratorDefine2(u, "constructor", GeneratorFunctionPrototype), _regeneratorDefine2(GeneratorFunctionPrototype, "constructor", GeneratorFunction), GeneratorFunction.displayName = "GeneratorFunction", _regeneratorDefine2(GeneratorFunctionPrototype, o, "GeneratorFunction"), _regeneratorDefine2(u), _regeneratorDefine2(u, o, "Generator"), _regeneratorDefine2(u, n, function () { return this; }), _regeneratorDefine2(u, "toString", function () { return "[object Generator]"; }), (_regenerator = function _regenerator() { return { w: i, m: f }; })(); }
 function _regeneratorDefine2(e, r, n, t) { var i = Object.defineProperty; try { i({}, "", {}); } catch (e) { i = 0; } _regeneratorDefine2 = function _regeneratorDefine(e, r, n, t) { if (r) i ? i(e, r, { value: n, enumerable: !t, configurable: !t, writable: !t }) : e[r] = n;else { var o = function o(r, n) { _regeneratorDefine2(e, r, function (e) { return this._invoke(r, n, e); }); }; o("next", 0), o("throw", 1), o("return", 2); } }, _regeneratorDefine2(e, r, n, t); }
 function ownKeys(e, r) { var t = Object.keys(e); if (Object.getOwnPropertySymbols) { var o = Object.getOwnPropertySymbols(e); r && (o = o.filter(function (r) { return Object.getOwnPropertyDescriptor(e, r).enumerable; })), t.push.apply(t, o); } return t; }
@@ -34545,591 +30087,278 @@ function _unsupportedIterableToArray(r, a) { if (r) { if ("string" == typeof r) 
 function _arrayLikeToArray(r, a) { (null == a || a > r.length) && (a = r.length); for (var e = 0, n = Array(a); e < a; e++) n[e] = r[e]; return n; }
 function _iterableToArrayLimit(r, l) { var t = null == r ? null : "undefined" != typeof Symbol && r[Symbol.iterator] || r["@@iterator"]; if (null != t) { var e, n, i, u, a = [], f = !0, o = !1; try { if (i = (t = t.call(r)).next, 0 === l) { if (Object(t) !== t) return; f = !1; } else for (; !(f = (e = i.call(t)).done) && (a.push(e.value), a.length !== l); f = !0); } catch (r) { o = !0, n = r; } finally { try { if (!f && null != t["return"] && (u = t["return"](), Object(u) !== u)) return; } finally { if (o) throw n; } } return a; } }
 function _arrayWithHoles(r) { if (Array.isArray(r)) return r; }
+function _objectWithoutProperties(e, t) { if (null == e) return {}; var o, r, i = _objectWithoutPropertiesLoose(e, t); if (Object.getOwnPropertySymbols) { var n = Object.getOwnPropertySymbols(e); for (r = 0; r < n.length; r++) o = n[r], -1 === t.indexOf(o) && {}.propertyIsEnumerable.call(e, o) && (i[o] = e[o]); } return i; }
+function _objectWithoutPropertiesLoose(r, e) { if (null == r) return {}; var t = {}; for (var n in r) if ({}.hasOwnProperty.call(r, n)) { if (-1 !== e.indexOf(n)) continue; t[n] = r[n]; } return t; }
 
 
 
 
 
-
-var RestoreProcess = function RestoreProcess() {
-  var _useBackupStore = (0,_util_store__WEBPACK_IMPORTED_MODULE_1__["default"])(),
-    restoreProcess = _useBackupStore.restoreProcess,
-    setRestoreInProgress = _useBackupStore.setRestoreInProgress,
-    setRestoreInProgressStep = _useBackupStore.setRestoreInProgressStep,
-    fetchBackups_Fn = _useBackupStore.fetchBackups_Fn;
-  var restoreProcessSteps = restoreProcess.process,
-    inProgress = restoreProcess.inProgress,
-    inProgressStep = restoreProcess.inProgressStep;
-  var _useState = (0,react__WEBPACK_IMPORTED_MODULE_0__.useState)({}),
+function InstallProcess() {
+  var _useDummyPackStore = (0,_util_dummyPackStore__WEBPACK_IMPORTED_MODULE_1__["default"])(),
+    setInstallProcessInProgress = _useDummyPackStore.setInstallProcessInProgress,
+    setInstallProcessInProgressStep = _useDummyPackStore.setInstallProcessInProgressStep,
+    setInstallProcessModalOpen = _useDummyPackStore.setInstallProcessModalOpen,
+    rest = _objectWithoutProperties(_useDummyPackStore, _excluded);
+  var _rest$installProcess = rest.installProcess,
+    process = _rest$installProcess.process,
+    inProgress = _rest$installProcess.inProgress,
+    inProgressStep = _rest$installProcess.inProgressStep,
+    isModalOpen = _rest$installProcess.isModalOpen,
+    packData = _rest$installProcess.packData;
+  var _useState = (0,react__WEBPACK_IMPORTED_MODULE_0__.useState)(null),
     _useState2 = _slicedToArray(_useState, 2),
-    responsePerStep = _useState2[0],
-    setResponsePerStep = _useState2[1];
+    error = _useState2[0],
+    setError = _useState2[1];
   var _useState3 = (0,react__WEBPACK_IMPORTED_MODULE_0__.useState)({}),
     _useState4 = _slicedToArray(_useState3, 2),
-    responseOldStep = _useState4[0],
-    setResponseOldStep = _useState4[1];
-  var _useState5 = (0,react__WEBPACK_IMPORTED_MODULE_0__.useState)(null),
+    payload = _useState4[0],
+    setPayload = _useState4[1];
+  var _useState5 = (0,react__WEBPACK_IMPORTED_MODULE_0__.useState)(false),
     _useState6 = _slicedToArray(_useState5, 2),
-    error = _useState6[0],
-    setError = _useState6[1];
-  var toast = (0,_Toast__WEBPACK_IMPORTED_MODULE_3__.useToast)();
-  var _restoreProcessHandler = /*#__PURE__*/function () {
+    allInstallProcessDone = _useState6[0],
+    setAllInstallProcessDone = _useState6[1];
+  var _useState7 = (0,react__WEBPACK_IMPORTED_MODULE_0__.useState)({}),
+    _useState8 = _slicedToArray(_useState7, 2),
+    responsePerStep = _useState8[0],
+    setResponsePerStep = _useState8[1];
+  var onStartInstallProcess = function onStartInstallProcess() {
+    setInstallProcessInProgress(true);
+  };
+  var _installProcessHandler = /*#__PURE__*/function () {
     var _ref = _asyncToGenerator(/*#__PURE__*/_regenerator().m(function _callee(process) {
       var retry,
+        __payload,
         response,
+        error_message,
         response_data,
         _args = arguments;
       return _regenerator().w(function (_context) {
         while (1) switch (_context.n) {
           case 0:
             retry = _args.length > 1 && _args[1] !== undefined ? _args[1] : 0;
+            __payload = _objectSpread(_objectSpread({}, payload), process.payload);
             _context.n = 1;
-            return (0,_util_lib__WEBPACK_IMPORTED_MODULE_2__.doRestoreProcess)(process);
+            return (0,_util_dummyPackLib__WEBPACK_IMPORTED_MODULE_3__.doInstallProcess)(_objectSpread(_objectSpread({}, process), {}, {
+              payload: __payload
+            }));
           case 1:
             response = _context.v;
             if (!(response.success != true)) {
               _context.n = 3;
               break;
             }
+            // alert('error: ' + response.data.error_message);
+            error_message = response.data.error_message ? response.data.error_message : response.data;
             if (!(retry > 4)) {
               _context.n = 2;
               break;
             }
-            setError(response.data);
+            setError(error_message);
             return _context.a(2);
           case 2:
             // recall
             setTimeout(function () {
-              _restoreProcessHandler(process, retry + 1);
+              _installProcessHandler(process, retry + 1);
             }, 4000);
             return _context.a(2);
           case 3:
+            response_data = _objectSpread(_objectSpread({}, payload), response.data);
+            setPayload(response_data);
             setResponsePerStep(_objectSpread(_objectSpread({}, responsePerStep), {}, _defineProperty({}, process.step, response.data)));
-            if (!(response.data.restore_process_status == 'done')) {
-              _context.n = 5;
-              break;
-            }
-            setRestoreInProgressStep(restoreProcessSteps.length + 1);
-            setResponseOldStep({});
-            _context.n = 4;
-            return fetchBackups_Fn();
-          case 4:
-            toast({
-              message: "🎉 Restore complete! Everything is back to its former glory. ✨",
-              type: 'success'
-            });
-            return _context.a(2);
-          case 5:
-            response_data = _objectSpread(_objectSpread({}, responseOldStep), response.data);
-            setResponseOldStep(response_data);
             if (!(response.data.next_step == true)) {
-              _context.n = 6;
+              _context.n = 4;
               break;
             }
-            setRestoreInProgressStep(process.step + 1);
+            setInstallProcessInProgressStep(inProgressStep + 1);
             return _context.a(2);
-          case 6:
-            _restoreProcessHandler(_objectSpread(_objectSpread({}, process), {}, {
-              payload: _objectSpread(_objectSpread({}, process.payload), response_data)
+          case 4:
+            _installProcessHandler(_objectSpread(_objectSpread({}, process), {}, {
+              payload: _objectSpread(_objectSpread({}, process.payload), response.data)
             }));
-          case 7:
+          case 5:
             return _context.a(2);
         }
       }, _callee);
     }));
-    return function restoreProcessHandler(_x) {
+    return function installProcessHandler(_x) {
       return _ref.apply(this, arguments);
     };
   }();
   (0,react__WEBPACK_IMPORTED_MODULE_0__.useEffect)(function () {
-    if (inProgressStep > restoreProcessSteps.length) {
-      setTimeout(function () {
-        setRestoreInProgress(false);
-      }, 3000);
+    // If inProgressStep is greater than or equal to process.length, the installation is done
+    if (inProgress && inProgressStep >= process.length) {
+      // Mark install process as complete
+      setInstallProcessInProgress(false);
+      setAllInstallProcessDone(true);
+      return;
     }
-  }, [inProgressStep]);
-  (0,react__WEBPACK_IMPORTED_MODULE_0__.useEffect)(function () {
     if (inProgress == true) {
-      var process = _toConsumableArray(restoreProcessSteps).find(function (step) {
-        return step.step === inProgressStep;
-      });
-      if (!process) {
-        return;
-      }
-      process = _objectSpread(_objectSpread({}, process), {}, {
-        payload: _objectSpread(_objectSpread({}, process.payload), responseOldStep)
-      });
-      _restoreProcessHandler(process);
+      _installProcessHandler(process[inProgressStep]);
     }
-  }, [inProgress, inProgressStep]);
-  return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)(_Modal__WEBPACK_IMPORTED_MODULE_4__["default"], {
-    isOpen: inProgress && restoreProcessSteps.length > 0,
+  }, [inProgressStep, inProgress]);
+  if (!packData) return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.Fragment, {});
+  return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsxs)(_Modal__WEBPACK_IMPORTED_MODULE_2__["default"], {
+    isOpen: isModalOpen,
     onClose: function onClose() {
-      return setRestoreInProgress(false);
+      setInstallProcessModalOpen(false);
     },
-    title: "Restore Progress",
+    title: "Install \"".concat(packData.name, "\""),
     size: "lg",
-    children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)("ol", {
+    children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsxs)("div", {
+      className: "tw-bg-yellow-50 tw-border tw-border-yellow-200 tw-p-4 tw-rounded-md tw-mb-6 tw-flex tw-items-start tw-gap-3",
+      children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)("svg", {
+        className: "tw-w-5 tw-h-5 tw-text-yellow-400 tw-mt-0.5 tw-flex-shrink-0",
+        fill: "none",
+        stroke: "currentColor",
+        viewBox: "0 0 24 24",
+        children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)("path", {
+          strokeLinecap: "round",
+          strokeLinejoin: "round",
+          strokeWidth: 2,
+          d: "M12 9v2m0 4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"
+        })
+      }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsxs)("span", {
+        className: "tw-text-xs tw-text-yellow-900 tw-leading-relaxed tw-font-space-mono",
+        children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)("strong", {
+          className: "tw-font-semibold",
+          children: "Warning:"
+        }), " Your data (database, plugins, uploads) will be lost during this process; for safety, please back it up before proceeding.", /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)("br", {}), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)("hr", {
+          className: "tw-my-2 tw-border-t-1 tw-border-b-0 tw-border-yellow-200"
+        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)("strong", {
+          className: "tw-font-semibold",
+          children: "Important:"
+        }), " To ensure the installation process works properly, please do not close your browser, reload the page, or close this popup while the installation is in progress."]
+      })]
+    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)("ol", {
       className: "tw-relative tw-border-l-2 tw-border-blue-200 tw-ml-4",
-      children: restoreProcessSteps.map(function (step, idx) {
+      children: process.map(function (step, idx) {
         var _responsePerStep$step, _responsePerStep$step2;
-        var isCompleted = inProgressStep > step.step;
-        var isCurrent = inProgressStep === step.step;
-        return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsxs)("li", {
+        var isCompleted = inProgressStep > idx; // step.step;
+        var isCurrent = inProgressStep === idx; // step.step;
+        return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsxs)("li", {
           className: "tw-mb-8 tw-ml-6 tw-last:mb-0",
-          children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)("span", {
+          children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)("span", {
             className: "tw-absolute tw--left-4 tw-flex tw-items-center tw-justify-center tw-w-8 tw-h-8 tw-rounded-full tw-border-2 ".concat(isCompleted ? 'tw-bg-blue-500 tw-border-blue-500' : isCurrent ? 'tw-bg-white tw-border-blue-500 tw-animate-pulse' : 'tw-bg-gray-100 tw-border-gray-300'),
-            children: isCompleted ? /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)("svg", {
+            children: isCompleted ? /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)("svg", {
               className: "tw-w-5 tw-h-5 tw-text-white",
               fill: "none",
               stroke: "currentColor",
               viewBox: "0 0 24 24",
-              children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)("path", {
+              children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)("path", {
                 strokeLinecap: "round",
                 strokeLinejoin: "round",
                 strokeWidth: 2,
                 d: "M5 13l4 4L19 7"
               })
-            }) : /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)("span", {
+            }) : /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)("span", {
               className: "tw-text-base ".concat(isCurrent ? 'tw-text-blue-600' : 'tw-text-gray-400'),
               children: step.step
             })
-          }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsxs)("div", {
+          }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsxs)("div", {
             className: "tw-pl-4",
-            children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)("h3", {
+            children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)("h3", {
               className: "tw-text-base tw-font-semibold ".concat(isCompleted ? 'tw-text-blue-600' : isCurrent ? 'tw-text-blue-700' : 'tw-text-gray-500'),
               children: step.name
-            }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)("p", {
+            }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)("p", {
               className: "tw-mt-1 tw-text-sm tw-text-gray-500",
               children: step.description
-            }), error && inProgressStep === step.step && /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)("div", {
+            }), error && inProgressStep === step.step && /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)("div", {
               className: "tw-mt-3 tw-p-3 tw-bg-red-50 tw-border tw-border-red-200 tw-rounded-md",
-              children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsxs)("div", {
+              children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsxs)("div", {
                 className: "tw-flex tw-items-start tw-gap-2",
-                children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)("svg", {
+                children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)("svg", {
                   className: "tw-w-4 tw-h-4 tw-text-red-500 tw-mt-0.5 tw-flex-shrink-0",
                   fill: "none",
                   stroke: "currentColor",
                   viewBox: "0 0 24 24",
-                  children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)("path", {
+                  children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)("path", {
                     strokeLinecap: "round",
                     strokeLinejoin: "round",
                     strokeWidth: 2,
                     d: "M12 8v4m0 4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"
                   })
-                }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)("p", {
+                }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)("p", {
                   className: "tw-text-sm tw-text-red-700 tw-leading-relaxed",
                   children: error
                 })]
               })
-            }), isCurrent && !error && /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsxs)("div", {
+            }), isCurrent && inProgress && !error && /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsxs)("div", {
               className: "tw-mt-2 tw-flex tw-items-center tw-gap-2",
-              children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsxs)("svg", {
+              children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsxs)("svg", {
                 className: "tw-w-4 tw-h-4 tw-text-blue-400 tw-animate-spin",
                 fill: "none",
                 stroke: "currentColor",
                 viewBox: "0 0 24 24",
-                children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)("circle", {
+                children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)("circle", {
                   className: "tw-opacity-25",
                   cx: "12",
                   cy: "12",
                   r: "10",
                   stroke: "currentColor",
                   strokeWidth: "4"
-                }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)("path", {
+                }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)("path", {
                   className: "tw-opacity-75",
                   fill: "currentColor",
                   d: "M4 12a8 8 0 018-8v8z"
                 })]
-              }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsxs)("span", {
+              }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsxs)("span", {
                 className: "tw-text-xs tw-text-blue-500 tw-font-medium",
-                children: ["In progress ", (_responsePerStep$step = responsePerStep[step.step]) !== null && _responsePerStep$step !== void 0 && _responsePerStep$step.__log_process_status ? "(".concat((_responsePerStep$step2 = responsePerStep[step.step]) === null || _responsePerStep$step2 === void 0 ? void 0 : _responsePerStep$step2.__log_process_status, ")") : '', " ..."]
+                children: ["In progress ", (_responsePerStep$step = responsePerStep[step.step]) !== null && _responsePerStep$step !== void 0 && _responsePerStep$step.__log_process_status ? "(".concat((_responsePerStep$step2 = responsePerStep[step.step]) === null || _responsePerStep$step2 === void 0 ? void 0 : _responsePerStep$step2.__log_process_status, ")") : '', "..."]
               })]
-            }), isCompleted && /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)("span", {
+            }), isCompleted && /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)("span", {
               className: "tw-mt-2 tw-inline-block tw-text-xs tw-text-green-600 tw-font-medium",
               children: "Completed"
             })]
           })]
         }, step.step);
       })
-    })
-  });
-};
-/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (RestoreProcess);
-
-/***/ }),
-
-/***/ "./src/components/ServerMetrics.jsx":
-/*!******************************************!*\
-  !*** ./src/components/ServerMetrics.jsx ***!
-  \******************************************/
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
-/* harmony export */ });
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var lucide_react__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! lucide-react */ "./node_modules/lucide-react/dist/esm/icons/bug.js");
-/* harmony import */ var lucide_react__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! lucide-react */ "./node_modules/lucide-react/dist/esm/icons/clock.js");
-/* harmony import */ var lucide_react__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! lucide-react */ "./node_modules/lucide-react/dist/esm/icons/code.js");
-/* harmony import */ var lucide_react__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! lucide-react */ "./node_modules/lucide-react/dist/esm/icons/database.js");
-/* harmony import */ var lucide_react__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! lucide-react */ "./node_modules/lucide-react/dist/esm/icons/file-archive.js");
-/* harmony import */ var lucide_react__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! lucide-react */ "./node_modules/lucide-react/dist/esm/icons/hard-drive.js");
-/* harmony import */ var lucide_react__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! lucide-react */ "./node_modules/lucide-react/dist/esm/icons/lock.js");
-/* harmony import */ var lucide_react__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! lucide-react */ "./node_modules/lucide-react/dist/esm/icons/plus.js");
-/* harmony import */ var lucide_react__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! lucide-react */ "./node_modules/lucide-react/dist/esm/icons/server.js");
-/* harmony import */ var lucide_react__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! lucide-react */ "./node_modules/lucide-react/dist/esm/icons/shield.js");
-/* harmony import */ var lucide_react__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! lucide-react */ "./node_modules/lucide-react/dist/esm/icons/terminal.js");
-/* harmony import */ var lucide_react__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! lucide-react */ "./node_modules/lucide-react/dist/esm/icons/upload.js");
-/* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! react/jsx-runtime */ "./node_modules/react/jsx-runtime.js");
-
-
-
-// Helper functions for formatting
-
-var formatBytes = function formatBytes(bytes) {
-  if (bytes === null || bytes === undefined || bytes === "") return "-";
-  if (isNaN(bytes)) return bytes;
-  var sizes = ["Bytes", "KB", "MB", "GB", "TB"];
-  if (bytes === 0) return "0 Byte";
-  var i = Math.floor(Math.log(bytes) / Math.log(1024));
-  return "".concat((bytes / Math.pow(1024, i)).toFixed(2), " ").concat(sizes[i]);
-};
-var formatSeconds = function formatSeconds(seconds) {
-  if (seconds === null || seconds === undefined || seconds === "") return "-";
-  if (isNaN(seconds)) return seconds;
-  if (seconds < 60) return "".concat(seconds, "s");
-  var m = Math.floor(seconds / 60);
-  var s = seconds % 60;
-  if (m < 60) return "".concat(m, "m ").concat(s, "s");
-  var h = Math.floor(m / 60);
-  return "".concat(h, "h ").concat(m % 60, "m ").concat(s, "s");
-};
-
-// Minimum recommended values for warnings
-var minimums = {
-  php_version: {
-    value: "8.0",
-    compare: function compare(v) {
-      return v && parseFloat(v) < 8.0;
-    },
-    message: "Recommended PHP >= 8.0"
-  },
-  memory_limit: {
-    value: 256 * 1024 * 1024,
-    compare: function compare(v) {
-      return v && v < 256 * 1024 * 1024;
-    },
-    message: "Recommended Memory >= 256MB"
-  },
-  disk_free_space: {
-    value: 1 * 1024 * 1024 * 1024,
-    compare: function compare(v) {
-      return v && v < 1 * 1024 * 1024 * 1024;
-    },
-    message: "Recommended Free Space >= 1GB"
-  },
-  max_execution_time: {
-    value: 60,
-    compare: function compare(v) {
-      return v && v < 60;
-    },
-    message: "Recommended Execution Time >= 60s"
-  },
-  ZipArchive: {
-    value: true,
-    compare: function compare(v) {
-      return !v;
-    },
-    message: "ZipArchive should be enabled"
-  },
-  WP_Debug: {
-    value: false,
-    compare: function compare(v) {
-      return !!v;
-    },
-    message: "WP Debug should be Off"
-  },
-  WP_CLI: {
-    value: true,
-    compare: function compare(v) {
-      return !v;
-    },
-    message: "WP CLI should be enabled"
-  },
-  safe_mode: {
-    value: false,
-    compare: function compare(v) {
-      return !!v;
-    },
-    message: "Safe Mode should be Off"
-  },
-  mysql_version: {
-    value: "5.7",
-    compare: function compare(v) {
-      return v && parseFloat(v) < 5.7;
-    },
-    message: "Recommended MySQL >= 5.7"
-  }
-};
-var metricsConfig = [{
-  key: "disk_free_space",
-  label: "Disk Free Space",
-  format: formatBytes,
-  icon: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_13__.jsx)(lucide_react__WEBPACK_IMPORTED_MODULE_6__["default"], {
-    className: "tw-w-5 tw-h-5",
-    color: "#3B82F6"
-  })
-}, {
-  key: "disk_total_space",
-  label: "Disk Total Space",
-  format: formatBytes,
-  icon: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_13__.jsx)(lucide_react__WEBPACK_IMPORTED_MODULE_4__["default"], {
-    className: "tw-w-5 tw-h-5",
-    color: "#6366F1"
-  })
-}, {
-  key: "memory_limit",
-  label: "Memory Limit",
-  format: formatBytes,
-  icon: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_13__.jsx)(lucide_react__WEBPACK_IMPORTED_MODULE_10__["default"], {
-    className: "tw-w-5 tw-h-5",
-    color: "#10B981"
-  })
-}, {
-  key: "memory_usage",
-  label: "Memory Usage",
-  format: formatBytes,
-  icon: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_13__.jsx)(lucide_react__WEBPACK_IMPORTED_MODULE_2__["default"], {
-    className: "tw-w-5 tw-h-5",
-    color: "#EAB308"
-  })
-}, {
-  key: "max_execution_time",
-  label: "Max Execution Time",
-  format: formatSeconds,
-  icon: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_13__.jsx)(lucide_react__WEBPACK_IMPORTED_MODULE_2__["default"], {
-    className: "tw-w-5 tw-h-5",
-    color: "#EC4899"
-  })
-}, {
-  key: "upload_max_filesize",
-  label: "Upload Max Filesize",
-  format: formatBytes,
-  icon: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_13__.jsx)(lucide_react__WEBPACK_IMPORTED_MODULE_12__["default"], {
-    className: "tw-w-5 tw-h-5",
-    color: "#8B5CF6"
-  })
-}, {
-  key: "post_max_size",
-  label: "Post Max Size",
-  format: formatBytes,
-  icon: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_13__.jsx)(lucide_react__WEBPACK_IMPORTED_MODULE_8__["default"], {
-    className: "tw-w-5 tw-h-5",
-    color: "#EF4444"
-  })
-}, {
-  key: "server_software",
-  label: "Server Software",
-  format: function format(v) {
-    return v || "-";
-  },
-  icon: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_13__.jsx)(lucide_react__WEBPACK_IMPORTED_MODULE_9__["default"], {
-    className: "tw-w-5 tw-h-5",
-    color: "#06B6D4"
-  })
-}, {
-  key: "php_version",
-  label: "PHP Version",
-  format: function format(v) {
-    return v || "-";
-  },
-  icon: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_13__.jsx)(lucide_react__WEBPACK_IMPORTED_MODULE_3__["default"], {
-    className: "tw-w-5 tw-h-5",
-    color: "#D946EF"
-  })
-}, {
-  key: "ZipArchive",
-  label: "ZipArchive",
-  format: function format(v) {
-    return v ? "On" : "Off";
-  },
-  icon: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_13__.jsx)(lucide_react__WEBPACK_IMPORTED_MODULE_5__["default"], {
-    className: "tw-w-5 tw-h-5",
-    color: "#F97316"
-  })
-}, {
-  key: "wp_version",
-  label: "WP Version",
-  format: function format(v) {
-    return v || "-";
-  },
-  icon: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_13__.jsx)(lucide_react__WEBPACK_IMPORTED_MODULE_3__["default"], {
-    className: "tw-w-5 tw-h-5",
-    color: "#10B981"
-  })
-}, {
-  key: "mysql_version",
-  label: "MySQL Version",
-  format: function format(v) {
-    return v || "-";
-  },
-  icon: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_13__.jsx)(lucide_react__WEBPACK_IMPORTED_MODULE_4__["default"], {
-    className: "tw-w-5 tw-h-5",
-    color: "#14B8A6"
-  })
-}, {
-  key: "WP_Debug",
-  label: "WP Debug",
-  format: function format(v) {
-    return v ? "On" : "Off";
-  },
-  icon: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_13__.jsx)(lucide_react__WEBPACK_IMPORTED_MODULE_1__["default"], {
-    className: "tw-w-5 tw-h-5",
-    color: "#F59E0B"
-  })
-}, {
-  key: "WP_CLI",
-  label: "WP CLI",
-  format: function format(v) {
-    return v ? "On" : "Off";
-  },
-  icon: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_13__.jsx)(lucide_react__WEBPACK_IMPORTED_MODULE_11__["default"], {
-    className: "tw-w-5 tw-h-5",
-    color: "#64748B"
-  })
-},
-// {
-//   key: "WP_Max_Upload_Size",
-//   label: "WP Max Upload Size",
-//   format: formatBytes,
-//   icon: <Upload className="tw-w-5 tw-h-5" color="#8B5CF6" />,
-// },
-{
-  key: "safe_mode",
-  label: "Safe Mode",
-  format: function format(v) {
-    return v ? "On" : "Off";
-  },
-  icon: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_13__.jsx)(lucide_react__WEBPACK_IMPORTED_MODULE_7__["default"], {
-    className: "tw-w-5 tw-h-5",
-    color: "#F43F5E"
-  })
-}];
-var Warning = function Warning(_ref) {
-  var message = _ref.message;
-  return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_13__.jsx)("span", {
-    className: "tw-text-xs tw-text-gray-400",
-    title: message,
-    children: message
-  });
-};
-var ServerMetrics = function ServerMetrics(_ref2) {
-  var metrics = _ref2.metrics,
-    _ref2$showWarnings = _ref2.showWarnings,
-    showWarnings = _ref2$showWarnings === void 0 ? true : _ref2$showWarnings;
-  return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_13__.jsx)("div", {
-    className: "tw-max-w-3xl tw-mx-auto tw-px-2 sm:tw-px-0 tw-py-10 tw-bg-white",
-    children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_13__.jsxs)("aside", {
-      className: "tw-py-4 tw-mx-auto tw-mb-6 tw-w-full sm:tw-max-w-full",
-      children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_13__.jsxs)("h2", {
-        className: "tw-text-base tw-font-semibold tw-text-gray-800 tw-mb-4 tw-flex tw-items-center tw-gap-2",
-        children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_13__.jsx)(lucide_react__WEBPACK_IMPORTED_MODULE_9__["default"], {
-          className: "tw-w-5 tw-h-5 tw-text-gray-400"
-        }), "Server Metrics"]
-      }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_13__.jsx)("div", {
-        className: "tw-bg-gradient-to-r tw-from-indigo-50 tw-to-purple-50 tw-border tw-border-indigo-200 tw-rounded-md tw-p-6 tw-mb-6 tw-shadow-sm",
-        children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_13__.jsxs)("div", {
-          className: "tw-flex tw-items-start tw-gap-4",
-          children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_13__.jsx)("div", {
-            className: "tw-flex-shrink-0 tw-mt-1",
-            children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_13__.jsx)("div", {
-              className: "tw-w-8 tw-h-8 tw-bg-gradient-to-r tw-from-indigo-500 tw-to-purple-600 tw-rounded-lg tw-flex tw-items-center tw-justify-center",
-              children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_13__.jsx)("span", {
-                className: "tw-text-white tw-text-sm",
-                children: "\u26A1"
-              })
-            })
-          }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_13__.jsxs)("div", {
-            children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_13__.jsx)("h3", {
-              className: "tw-text-base tw-font-semibold tw-text-indigo-900 tw-mb-2 tw-flex tw-items-center tw-gap-2",
-              children: "Pro Tips for Your Server Setup \uD83D\uDCA1"
-            }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_13__.jsx)("p", {
-              className: "tw-text-sm tw-leading-relaxed tw-text-indigo-700 tw-font-space-mono",
-              children: "Hey there! \uD83D\uDC4B Your server setup is like choosing the right gear for a mission - it totally depends on your site's vibe! Small sites? You're good with the basics! But if you're running a massive site with tons of plugins, themes, or getting that sweet traffic flow, maybe consider leveling up your server resources. It's like upgrading from a bicycle to a rocket ship! \uD83D\uDE80\u2728"
-            })]
-          })]
-        })
-      }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_13__.jsx)("div", {
-        className: "tw-overflow-x-auto",
-        children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_13__.jsxs)("table", {
-          className: "tw-w-full tw-bg-white tw-text-sm tw-border-collapse tw-shadow-sm tw-border tw-border-gray-200",
-          children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_13__.jsx)("thead", {
-            className: "tw-bg-gray-50",
-            children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_13__.jsxs)("tr", {
-              children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_13__.jsx)("th", {
-                className: "tw-px-4 tw-py-3 tw-text-left tw-text-xs tw-font-medium tw-text-gray-500 ",
-                children: " "
-              }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_13__.jsx)("th", {
-                className: "tw-px-4 tw-py-3 tw-text-left tw-text-xs tw-font-medium tw-text-gray-500 ",
-                children: "METRIC"
-              }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_13__.jsx)("th", {
-                className: "tw-px-4 tw-py-3 tw-text-left tw-text-xs tw-font-medium tw-text-gray-500 ",
-                children: "VALUE"
-              }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_13__.jsx)("th", {
-                className: "tw-px-4 tw-py-3 tw-text-left tw-text-xs tw-font-medium tw-text-gray-500 ",
-                children: " "
-              })]
-            })
-          }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_13__.jsx)("tbody", {
-            children: metricsConfig.map(function (_ref3) {
-              var key = _ref3.key,
-                label = _ref3.label,
-                format = _ref3.format,
-                icon = _ref3.icon;
-              var value = metrics === null || metrics === void 0 ? void 0 : metrics[key];
-              var warning = showWarnings && minimums[key] && minimums[key].compare(value) ? minimums[key].message : null;
-              return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_13__.jsxs)("tr", {
-                className: "tw-border-t tw-border-gray-100 hover:tw-bg-gray-50 tw-transition-colors tw-font-space-mono",
-                children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_13__.jsx)("td", {
-                  className: "tw-px-4 tw-py-3 tw-align-middle",
-                  children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_13__.jsx)("span", {
-                    className: "tw-w-5 tw-h-5 tw-flex tw-items-center tw-justify-center tw-text-gray-400",
-                    children: /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().cloneElement(icon, {
-                      className: "tw-w-4 tw-h-4 tw-text-gray-400"
-                    })
-                  })
-                }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_13__.jsx)("td", {
-                  className: "tw-px-4 tw-py-3 tw-align-middle tw-text-gray-700 tw-whitespace-nowrap",
-                  children: label
-                }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_13__.jsx)("td", {
-                  className: "tw-px-4 tw-py-3 tw-align-middle tw-font-mono tw-text-gray-900 tw-break-all",
-                  children: format(value)
-                }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_13__.jsx)("td", {
-                  className: "tw-px-4 tw-py-3 tw-align-middle",
-                  children: warning && /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_13__.jsx)(Warning, {
-                    message: warning
-                  })
-                })]
-              }, key);
-            })
-          })]
-        })
+    }), !inProgress && !error && !allInstallProcessDone && /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsxs)("div", {
+      className: "tw-mt-8 tw-flex tw-justify-end",
+      children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)("button", {
+        type: "button",
+        className: "tw-inline-flex tw-items-center tw-px-4 tw-py-2 tw-bg-gray-100 hover:tw-bg-gray-200 tw-text-gray-700 tw-rounded-md tw-font-medium tw-shadow-sm tw-transition-all tw-duration-150 focus:tw-outline-none focus:tw-ring-2 focus:tw-ring-offset-2 focus:tw-ring-gray-400 tw-mr-2",
+        "aria-label": "Close",
+        onClick: function onClick() {
+          setInstallProcessModalOpen(false);
+        },
+        children: "Close"
+      }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)("button", {
+        type: "button",
+        className: "tw-inline-flex tw-items-center tw-px-5 tw-py-2.5 tw-bg-blue-600 hover:tw-bg-blue-700 tw-text-white tw-rounded-md tw-font-semibold tw-shadow-sm tw-transition-all tw-duration-150 focus:tw-outline-none focus:tw-ring-2 focus:tw-ring-offset-2 focus:tw-ring-blue-500",
+        onClick: onStartInstallProcess,
+        children: "Yes, Install Now"
       })]
-    })
+    }), allInstallProcessDone && /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsxs)("div", {
+      className: "tw-mt-8 tw-flex tw-justify-end",
+      children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)("button", {
+        type: "button",
+        className: "tw-inline-flex tw-items-center tw-px-4 tw-py-2 tw-bg-gray-100 hover:tw-bg-gray-200 tw-text-gray-700 tw-rounded-md tw-font-medium tw-shadow-sm tw-transition-all tw-duration-150 focus:tw-outline-none focus:tw-ring-2 focus:tw-ring-offset-2 focus:tw-ring-gray-400 tw-mr-2",
+        "aria-label": "Close",
+        onClick: function onClick() {
+          setInstallProcessModalOpen(false);
+        },
+        children: "Close"
+      }), (payload === null || payload === void 0 ? void 0 : payload.current_domain) && /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)("a", {
+        href: payload.current_domain,
+        target: "_blank",
+        rel: "noopener noreferrer",
+        className: "tw-inline-flex tw-items-center tw-px-5 tw-py-2.5 tw-bg-blue-600 hover:tw-bg-blue-700 tw-text-white hover:tw-text-white tw-rounded-md tw-font-semibold tw-shadow-sm tw-transition-all tw-duration-150 focus:tw-outline-none focus:tw-ring-2 focus:tw-ring-offset-2 focus:tw-ring-blue-500",
+        style: {
+          marginLeft: 8
+        },
+        children: "Visit Homepage"
+      })]
+    })]
   });
-};
-/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (ServerMetrics);
+}
 
 /***/ }),
 
-/***/ "./src/components/Tab.jsx":
-/*!********************************!*\
-  !*** ./src/components/Tab.jsx ***!
-  \********************************/
+/***/ "./src/components/dummy-pack/PackGrid.jsx":
+/*!************************************************!*\
+  !*** ./src/components/dummy-pack/PackGrid.jsx ***!
+  \************************************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
@@ -35139,7 +30368,216 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ });
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react/jsx-runtime */ "./node_modules/react/jsx-runtime.js");
+/* harmony import */ var lucide_react__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! lucide-react */ "./node_modules/lucide-react/dist/esm/icons/download.js");
+/* harmony import */ var lucide_react__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! lucide-react */ "./node_modules/lucide-react/dist/esm/icons/external-link.js");
+/* harmony import */ var lucide_react__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! lucide-react */ "./node_modules/lucide-react/dist/esm/icons/file-archive.js");
+/* harmony import */ var lucide_react__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! lucide-react */ "./node_modules/lucide-react/dist/esm/icons/package.js");
+/* harmony import */ var _util_dummyPackLib__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../../util/dummyPackLib */ "./src/util/dummyPackLib.js");
+/* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! react/jsx-runtime */ "./node_modules/react/jsx-runtime.js");
+
+
+
+
+/**
+ * PackGrid Component
+ * 
+ * Displays dummy packs in a responsive grid layout with clean, minimal styling.
+ * 
+ * @param {Array} packs - Array of pack objects
+ * @param {Function} onInstall - Callback function when install button is clicked (pack) => void
+ * @param {Function} onPreview - Callback function when preview button is clicked (pack) => void
+ */
+
+var PackGrid = function PackGrid(_ref) {
+  var _ref$packs = _ref.packs,
+    packs = _ref$packs === void 0 ? [] : _ref$packs,
+    onInstall = _ref.onInstall,
+    onPreview = _ref.onPreview;
+  if (!packs || packs.length === 0) {
+    return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsxs)("div", {
+      className: "tw-text-center tw-py-12 tw-bg-gray-50 tw-border tw-border-gray-200 tw-rounded-lg",
+      children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsx)(lucide_react__WEBPACK_IMPORTED_MODULE_3__["default"], {
+        className: "tw-mx-auto tw-h-12 tw-w-12 tw-text-gray-400 tw-mb-4"
+      }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsx)("h3", {
+        className: "tw-text-sm tw-font-medium tw-text-gray-900 tw-mb-1",
+        children: "No packs available"
+      }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsx)("p", {
+        className: "tw-text-sm tw-text-gray-500",
+        children: "Check back soon for available dummy packs."
+      })]
+    });
+  }
+  return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsx)("div", {
+    className: "tw-grid tw-grid-cols-1 md:tw-grid-cols-2 lg:tw-grid-cols-3 tw-gap-6",
+    children: packs.map(function (pack) {
+      return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsx)(PackCard, {
+        pack: pack,
+        onInstall: onInstall,
+        onPreview: onPreview
+      }, pack.ID);
+    })
+  });
+};
+
+/**
+ * PackCard Component
+ * 
+ * Individual card with clean, minimal design.
+ */
+var PackCard = function PackCard(_ref2) {
+  var pack = _ref2.pack,
+    onInstall = _ref2.onInstall,
+    onPreview = _ref2.onPreview;
+  var handlePreview = function handlePreview(e) {
+    e.preventDefault();
+    if (pack.preview_url && pack.preview_url !== '#') {
+      if (onPreview) {
+        onPreview(pack);
+      } else {
+        window.open(pack.preview_url, '_blank', 'noopener,noreferrer');
+      }
+    }
+  };
+  var handleInstall = function handleInstall(e) {
+    e.preventDefault();
+    if (onInstall) {
+      onInstall(pack);
+    }
+  };
+  return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsxs)("div", {
+    className: "tw-bg-white tw-border tw-border-gray-200 tw-overflow-hidden hover:tw-shadow-md tw-transition-shadow tw-duration-200",
+    children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsx)("div", {
+      className: "tw-relative tw-w-full tw-h-48 tw-bg-gray-50 tw-overflow-hidden tw-group",
+      children: pack.image ? /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsx)("img", {
+        src: pack.image,
+        alt: pack.name,
+        className: "tw-w-full tw-h-full tw-object-cover tw-border-none",
+        loading: "lazy"
+      }) : /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsx)("div", {
+        className: "tw-w-full tw-h-full tw-flex tw-items-center tw-justify-center",
+        children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsx)(lucide_react__WEBPACK_IMPORTED_MODULE_4__["default"], {
+          className: "tw-w-16 tw-h-16 tw-text-gray-300"
+        })
+      })
+    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsxs)("div", {
+      className: "tw-p-4",
+      children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsx)("h3", {
+        className: "tw-text-base tw-font-semibold tw-text-gray-900 tw-mb-2 tw-line-clamp-1",
+        children: pack.name
+      }), pack.description && /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsx)("p", {
+        className: "tw-text-xs tw-text-gray-600 tw-leading-relaxed tw-mb-3 tw-line-clamp-2 tw-font-space-mono",
+        children: pack.description ? pack.description.split(" ").slice(0, 10).join(" ") + (pack.description.split(" ").length > 10 ? "..." : "") : ""
+      }), pack.tags && pack.tags.length > 0 && /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsx)("div", {
+        className: "tw-flex tw-flex-wrap tw-gap-2 tw-mb-3",
+        children: pack.tags.map(function (tag, index) {
+          return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsx)("span", {
+            className: "tw-inline-flex tw-items-center tw-px-2 tw-py-0.5 tw-text-xs tw-font-medium tw-rounded-md tw-bg-blue-50 tw-text-blue-700 tw-border tw-border-blue-100",
+            children: tag
+          }, index);
+        })
+      }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsx)("div", {
+        className: "tw-space-y-2 tw-mb-4 tw-font-space-mono",
+        children: pack.required && pack.required.length > 0 && /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsx)("div", {
+          className: "tw-mb-2 tw-border-gray-100 tw-pt-2",
+          children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsx)("ul", {
+            className: "tw-space-y-1 tw-pl-0 tw-pt-1",
+            children: pack.required.map(function (req, index) {
+              return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsx)("li", {
+                className: "tw-flex tw-items-center tw-gap-2 tw-text-xs tw-text-gray-700 tw-pl-1 tw-mb-0",
+                children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsxs)(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.Fragment, {
+                  children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsx)("span", {
+                    children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsxs)("strong", {
+                      className: "tw-font-semibold",
+                      children: [req.type.replace(/_/g, " ").replace(/\b\w/g, function (l) {
+                        return l.toUpperCase();
+                      }), " ", req.value, req.type === 'php_version' ? '+' : '+']
+                    })
+                  }), (0,_util_dummyPackLib__WEBPACK_IMPORTED_MODULE_5__.validateVersionPackageRequirements)(req.type, req.value) ? /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsx)("span", {
+                    className: "tw-inline-flex tw-items-center tw-gap-1 tw-bg-green-100 tw-text-green-700 tw-px-2 tw-py-0.5 tw-rounded-full tw-text-xs tw-font-semibold",
+                    title: "Compatible",
+                    children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsx)("svg", {
+                      className: "tw-w-3 tw-h-3",
+                      fill: "none",
+                      stroke: "currentColor",
+                      strokeWidth: "2",
+                      viewBox: "0 0 24 24",
+                      children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsx)("path", {
+                        strokeLinecap: "round",
+                        strokeLinejoin: "round",
+                        d: "M5 13l4 4L19 7"
+                      })
+                    })
+                  }) : /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsx)("span", {
+                    className: "tw-inline-flex tw-items-center tw-gap-1 tw-bg-red-100 tw-text-red-700 tw-px-2 tw-py-0.5 tw-rounded-full tw-text-xs tw-font-semibold",
+                    title: "Not compatible",
+                    children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsx)("svg", {
+                      className: "tw-w-3 tw-h-3",
+                      fill: "none",
+                      stroke: "currentColor",
+                      strokeWidth: "2",
+                      viewBox: "0 0 24 24",
+                      children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsx)("path", {
+                        strokeLinecap: "round",
+                        strokeLinejoin: "round",
+                        d: "M6 18L18 6M6 6l12 12"
+                      })
+                    })
+                  })]
+                })
+              }, index);
+            })
+          })
+        })
+      }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsxs)("div", {
+        className: "tw-flex tw-gap-2 tw-pt-3 tw-border-t tw-border-gray-200",
+        children: [pack.preview_url && pack.preview_url !== '#' && /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsxs)("button", {
+          onClick: handlePreview,
+          className: "tw-flex-1 tw-inline-flex tw-items-center tw-justify-center tw-gap-1.5 tw-px-3 tw-py-2 tw-text-xs tw-font-semibold tw-text-gray-700 tw-bg-white tw-border tw-border-gray-300 tw-rounded-md hover:tw-bg-gray-50 focus:tw-outline-none focus:tw-ring-2 focus:tw-ring-offset-2 focus:tw-ring-blue-500 tw-transition-colors __tw-font-space-mono",
+          children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsx)(lucide_react__WEBPACK_IMPORTED_MODULE_2__["default"], {
+            className: "tw-w-4 tw-h-4"
+          }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsx)("span", {
+            children: "Preview"
+          })]
+        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsxs)("button", {
+          onClick: handleInstall,
+          className: "tw-flex-1 tw-inline-flex tw-items-center tw-justify-center tw-gap-1.5 tw-px-3 tw-py-2 tw-text-xs tw-font-semibold tw-text-white tw-bg-blue-600 tw-border tw-border-transparent tw-rounded-md hover:tw-bg-blue-700 focus:tw-outline-none focus:tw-ring-2 focus:tw-ring-offset-2 focus:tw-ring-blue-500 tw-transition-colors __tw-font-space-mono" + (pack.required && pack.required.length > 0 && !pack.required.every(function (req) {
+            return (0,_util_dummyPackLib__WEBPACK_IMPORTED_MODULE_5__.validateVersionPackageRequirements)(req.type, req.value);
+          }) ? " tw-opacity-60 tw-cursor-not-allowed hover:tw-bg-blue-600" : ""),
+          disabled: pack.required && pack.required.length > 0 && !pack.required.every(function (req) {
+            return (0,_util_dummyPackLib__WEBPACK_IMPORTED_MODULE_5__.validateVersionPackageRequirements)(req.type, req.value);
+          }),
+          children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsx)(lucide_react__WEBPACK_IMPORTED_MODULE_1__["default"], {
+            className: "tw-w-4 tw-h-4"
+          }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsx)("span", {
+            children: "Install"
+          })]
+        })]
+      })]
+    })]
+  });
+};
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (PackGrid);
+
+/***/ }),
+
+/***/ "./src/hooks/useDummyPack.js":
+/*!***********************************!*\
+  !*** ./src/hooks/useDummyPack.js ***!
+  \***********************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (/* binding */ useDummyPack)
+/* harmony export */ });
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _util_dummyPackLib__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../util/dummyPackLib */ "./src/util/dummyPackLib.js");
+function _regenerator() { /*! regenerator-runtime -- Copyright (c) 2014-present, Facebook, Inc. -- license (MIT): https://github.com/babel/babel/blob/main/packages/babel-helpers/LICENSE */ var e, t, r = "function" == typeof Symbol ? Symbol : {}, n = r.iterator || "@@iterator", o = r.toStringTag || "@@toStringTag"; function i(r, n, o, i) { var c = n && n.prototype instanceof Generator ? n : Generator, u = Object.create(c.prototype); return _regeneratorDefine2(u, "_invoke", function (r, n, o) { var i, c, u, f = 0, p = o || [], y = !1, G = { p: 0, n: 0, v: e, a: d, f: d.bind(e, 4), d: function d(t, r) { return i = t, c = 0, u = e, G.n = r, a; } }; function d(r, n) { for (c = r, u = n, t = 0; !y && f && !o && t < p.length; t++) { var o, i = p[t], d = G.p, l = i[2]; r > 3 ? (o = l === n) && (u = i[(c = i[4]) ? 5 : (c = 3, 3)], i[4] = i[5] = e) : i[0] <= d && ((o = r < 2 && d < i[1]) ? (c = 0, G.v = n, G.n = i[1]) : d < l && (o = r < 3 || i[0] > n || n > l) && (i[4] = r, i[5] = n, G.n = l, c = 0)); } if (o || r > 1) return a; throw y = !0, n; } return function (o, p, l) { if (f > 1) throw TypeError("Generator is already running"); for (y && 1 === p && d(p, l), c = p, u = l; (t = c < 2 ? e : u) || !y;) { i || (c ? c < 3 ? (c > 1 && (G.n = -1), d(c, u)) : G.n = u : G.v = u); try { if (f = 2, i) { if (c || (o = "next"), t = i[o]) { if (!(t = t.call(i, u))) throw TypeError("iterator result is not an object"); if (!t.done) return t; u = t.value, c < 2 && (c = 0); } else 1 === c && (t = i["return"]) && t.call(i), c < 2 && (u = TypeError("The iterator does not provide a '" + o + "' method"), c = 1); i = e; } else if ((t = (y = G.n < 0) ? u : r.call(n, G)) !== a) break; } catch (t) { i = e, c = 1, u = t; } finally { f = 1; } } return { value: t, done: y }; }; }(r, o, i), !0), u; } var a = {}; function Generator() {} function GeneratorFunction() {} function GeneratorFunctionPrototype() {} t = Object.getPrototypeOf; var c = [][n] ? t(t([][n]())) : (_regeneratorDefine2(t = {}, n, function () { return this; }), t), u = GeneratorFunctionPrototype.prototype = Generator.prototype = Object.create(c); function f(e) { return Object.setPrototypeOf ? Object.setPrototypeOf(e, GeneratorFunctionPrototype) : (e.__proto__ = GeneratorFunctionPrototype, _regeneratorDefine2(e, o, "GeneratorFunction")), e.prototype = Object.create(u), e; } return GeneratorFunction.prototype = GeneratorFunctionPrototype, _regeneratorDefine2(u, "constructor", GeneratorFunctionPrototype), _regeneratorDefine2(GeneratorFunctionPrototype, "constructor", GeneratorFunction), GeneratorFunction.displayName = "GeneratorFunction", _regeneratorDefine2(GeneratorFunctionPrototype, o, "GeneratorFunction"), _regeneratorDefine2(u), _regeneratorDefine2(u, o, "Generator"), _regeneratorDefine2(u, n, function () { return this; }), _regeneratorDefine2(u, "toString", function () { return "[object Generator]"; }), (_regenerator = function _regenerator() { return { w: i, m: f }; })(); }
+function _regeneratorDefine2(e, r, n, t) { var i = Object.defineProperty; try { i({}, "", {}); } catch (e) { i = 0; } _regeneratorDefine2 = function _regeneratorDefine(e, r, n, t) { if (r) i ? i(e, r, { value: n, enumerable: !t, configurable: !t, writable: !t }) : e[r] = n;else { var o = function o(r, n) { _regeneratorDefine2(e, r, function (e) { return this._invoke(r, n, e); }); }; o("next", 0), o("throw", 1), o("return", 2); } }, _regeneratorDefine2(e, r, n, t); }
+function asyncGeneratorStep(n, t, e, r, o, a, c) { try { var i = n[a](c), u = i.value; } catch (n) { return void e(n); } i.done ? t(u) : Promise.resolve(u).then(r, o); }
+function _asyncToGenerator(n) { return function () { var t = this, e = arguments; return new Promise(function (r, o) { var a = n.apply(t, e); function _next(n) { asyncGeneratorStep(a, r, o, _next, _throw, "next", n); } function _throw(n) { asyncGeneratorStep(a, r, o, _next, _throw, "throw", n); } _next(void 0); }); }; }
 function _slicedToArray(r, e) { return _arrayWithHoles(r) || _iterableToArrayLimit(r, e) || _unsupportedIterableToArray(r, e) || _nonIterableRest(); }
 function _nonIterableRest() { throw new TypeError("Invalid attempt to destructure non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method."); }
 function _unsupportedIterableToArray(r, a) { if (r) { if ("string" == typeof r) return _arrayLikeToArray(r, a); var t = {}.toString.call(r).slice(8, -1); return "Object" === t && r.constructor && (t = r.constructor.name), "Map" === t || "Set" === t ? Array.from(r) : "Arguments" === t || /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(t) ? _arrayLikeToArray(r, a) : void 0; } }
@@ -35148,598 +30586,258 @@ function _iterableToArrayLimit(r, l) { var t = null == r ? null : "undefined" !=
 function _arrayWithHoles(r) { if (Array.isArray(r)) return r; }
 
 
-/**
- * Modern Tab Component
- * 
- * A responsive, accessible tab component with multiple design variants and mobile optimization.
- * 
- * FEATURES:
- * - Responsive design for mobile, tablet, and desktop
- * - Smooth animations and transitions
- * - Accessible with proper ARIA attributes
- * - Touch-friendly for mobile devices
- * - Clean, modern UI with Tailwind CSS
- * - Multiple design variants (default, pills, underline)
- * - Different sizes (sm, md, lg)
- * - Icon and badge support
- * - Keyboard navigation
- * 
- * USAGE:
- * 
- * Basic Usage:
- * ```jsx
- * const tabs = [
- *   {
- *     label: 'Overview',
- *     content: <div>Overview content here</div>
- *   },
- *   {
- *     label: 'Settings',
- *     content: <div>Settings content here</div>
- *   }
- * ];
- * 
- * <Tab tabs={tabs} />
- * ```
- * 
- * With Icons and Badges:
- * ```jsx
- * const tabs = [
- *   {
- *     label: 'Overview',
- *     icon: <svg>...</svg>,
- *     content: <div>Content</div>
- *   },
- *   {
- *     label: 'Analytics',
- *     icon: <svg>...</svg>,
- *     badge: 'New',
- *     content: <div>Content</div>
- *   }
- * ];
- * ```
- * 
- * Different Variants:
- * ```jsx
- * <Tab tabs={tabs} variant="default" />    // Default rounded style
- * <Tab tabs={tabs} variant="pills" />      // Pill-shaped tabs
- * <Tab tabs={tabs} variant="underline" />  // Underline style
- * ```
- * 
- * Different Sizes:
- * ```jsx
- * <Tab tabs={tabs} size="sm" />  // Small
- * <Tab tabs={tabs} size="md" />  // Medium (default)
- * <Tab tabs={tabs} size="lg" />  // Large
- * ```
- * 
- * Full Width:
- * ```jsx
- * <Tab tabs={tabs} fullWidth />
- * ```
- * 
- * With Callback:
- * ```jsx
- * <Tab 
- *   tabs={tabs} 
- *   onTabChange={(index, tab) => {
- *     console.log('Tab changed to:', index, tab.label);
- *   }}
- * />
- * ```
- * 
- * PROPS:
- * @param {Array} tabs - Array of tab objects
- *   @param {string} tabs[].label - Tab label text
- *   @param {ReactNode} tabs[].content - Tab content (JSX or function)
- *   @param {ReactNode} [tabs[].icon] - Optional icon (SVG recommended)
- *   @param {string} [tabs[].badge] - Optional badge text
- *   @param {boolean} [tabs[].disabled] - Disable tab if true
- * @param {number} [defaultActiveTab=0] - Index of initially active tab
- * @param {string} [className] - Additional CSS classes
- * @param {string} [variant='default'] - Design variant: 'default', 'pills', 'underline'
- * @param {string} [size='md'] - Size: 'sm', 'md', 'lg'
- * @param {boolean} [fullWidth=false] - Expand tabs to full width
- * @param {function} [onTabChange] - Callback when tab changes (index, tab) => void
- * 
- * TAB OBJECT STRUCTURE:
- * {
- *   label: string,           // Required: Tab label
- *   content: ReactNode,      // Required: Tab content (JSX or function)
- *   icon?: ReactNode,        // Optional: Icon element
- *   badge?: string,          // Optional: Badge text
- *   disabled?: boolean       // Optional: Disable tab
- * }
- * 
- * KEYBOARD NAVIGATION:
- * - Tab/Shift+Tab: Navigate between tabs
- * - Enter/Space: Activate tab
- * - Arrow Left/Right: Navigate between tabs
- * 
- * ACCESSIBILITY:
- * - Proper ARIA attributes (role, aria-selected, aria-controls)
- * - Keyboard navigation support
- * - Screen reader friendly
- * - Focus management
- * - High contrast support
- */
-
-var Tab = function Tab(_ref) {
-  var _ref$tabs = _ref.tabs,
-    tabs = _ref$tabs === void 0 ? [] : _ref$tabs,
-    _ref$defaultActiveTab = _ref.defaultActiveTab,
-    defaultActiveTab = _ref$defaultActiveTab === void 0 ? 0 : _ref$defaultActiveTab,
-    _ref$className = _ref.className,
-    className = _ref$className === void 0 ? '' : _ref$className,
-    _ref$variant = _ref.variant,
-    variant = _ref$variant === void 0 ? 'default' : _ref$variant,
-    _ref$size = _ref.size,
-    size = _ref$size === void 0 ? 'md' : _ref$size,
-    _ref$fullWidth = _ref.fullWidth,
-    fullWidth = _ref$fullWidth === void 0 ? false : _ref$fullWidth,
-    _ref$onTabChange = _ref.onTabChange,
-    onTabChange = _ref$onTabChange === void 0 ? null : _ref$onTabChange;
-  var _useState = (0,react__WEBPACK_IMPORTED_MODULE_0__.useState)(defaultActiveTab),
+function useDummyPack() {
+  var _useState = (0,react__WEBPACK_IMPORTED_MODULE_0__.useState)(null),
     _useState2 = _slicedToArray(_useState, 2),
-    activeTab = _useState2[0],
-    setActiveTab = _useState2[1];
+    packs = _useState2[0],
+    setPacks = _useState2[1];
   var _useState3 = (0,react__WEBPACK_IMPORTED_MODULE_0__.useState)(false),
     _useState4 = _slicedToArray(_useState3, 2),
-    isMobile = _useState4[0],
-    setIsMobile = _useState4[1];
-  var tabRefs = (0,react__WEBPACK_IMPORTED_MODULE_0__.useRef)([]);
-  var indicatorRef = (0,react__WEBPACK_IMPORTED_MODULE_0__.useRef)(null);
-
-  // Check if device is mobile
+    isLoading = _useState4[0],
+    setIsLoading = _useState4[1];
+  var _useState5 = (0,react__WEBPACK_IMPORTED_MODULE_0__.useState)(null),
+    _useState6 = _slicedToArray(_useState5, 2),
+    error = _useState6[0],
+    setError = _useState6[1];
   (0,react__WEBPACK_IMPORTED_MODULE_0__.useEffect)(function () {
-    var checkMobile = function checkMobile() {
-      setIsMobile(window.innerWidth < 768);
-    };
-    checkMobile();
-    window.addEventListener('resize', checkMobile);
-    return function () {
-      return window.removeEventListener('resize', checkMobile);
-    };
+    var fetchPacks = /*#__PURE__*/function () {
+      var _ref = _asyncToGenerator(/*#__PURE__*/_regenerator().m(function _callee() {
+        var _response$success, response, _response$success2, _t;
+        return _regenerator().w(function (_context) {
+          while (1) switch (_context.p = _context.n) {
+            case 0:
+              setIsLoading(true);
+              _context.p = 1;
+              _context.n = 2;
+              return (0,_util_dummyPackLib__WEBPACK_IMPORTED_MODULE_1__.getDummyPacks)();
+            case 2:
+              response = _context.v;
+              if (!((response === null || response === void 0 || (_response$success = response.success) === null || _response$success === void 0 ? void 0 : _response$success.valueOf()) == false)) {
+                _context.n = 3;
+                break;
+              }
+              console.log('getDummyPacks', (response === null || response === void 0 || (_response$success2 = response.success) === null || _response$success2 === void 0 ? void 0 : _response$success2.valueOf()) == false);
+              setError(response.data);
+              setPacks(null);
+              return _context.a(2);
+            case 3:
+              setPacks(response);
+              setError(null);
+              _context.n = 5;
+              break;
+            case 4:
+              _context.p = 4;
+              _t = _context.v;
+              setError(_t.data);
+              setPacks(null);
+            case 5:
+              _context.p = 5;
+              setIsLoading(false);
+              return _context.f(5);
+            case 6:
+              return _context.a(2);
+          }
+        }, _callee, null, [[1, 4, 5, 6]]);
+      }));
+      return function fetchPacks() {
+        return _ref.apply(this, arguments);
+      };
+    }();
+    fetchPacks();
   }, []);
-
-  // Update active tab indicator position
-  (0,react__WEBPACK_IMPORTED_MODULE_0__.useEffect)(function () {
-    if (indicatorRef.current && tabRefs.current[activeTab]) {
-      var activeTabElement = tabRefs.current[activeTab];
-      var indicator = indicatorRef.current;
-      indicator.style.left = "".concat(activeTabElement.offsetLeft, "px");
-      indicator.style.width = "".concat(activeTabElement.offsetWidth, "px");
-    }
-  }, [activeTab, isMobile]);
-  var handleTabClick = function handleTabClick(index) {
-    setActiveTab(index);
-    if (onTabChange) {
-      onTabChange(index, tabs[index]);
-    }
+  return {
+    packs: packs,
+    isLoading: isLoading,
+    error: error
   };
-  var handleKeyDown = function handleKeyDown(event, index) {
-    if (event.key === 'Enter' || event.key === ' ') {
-      event.preventDefault();
-      handleTabClick(index);
-    } else if (event.key === 'ArrowRight') {
-      var _tabRefs$current$next;
-      event.preventDefault();
-      var nextIndex = (index + 1) % tabs.length;
-      handleTabClick(nextIndex);
-      (_tabRefs$current$next = tabRefs.current[nextIndex]) === null || _tabRefs$current$next === void 0 || _tabRefs$current$next.focus();
-    } else if (event.key === 'ArrowLeft') {
-      var _tabRefs$current$prev;
-      event.preventDefault();
-      var prevIndex = index === 0 ? tabs.length - 1 : index - 1;
-      handleTabClick(prevIndex);
-      (_tabRefs$current$prev = tabRefs.current[prevIndex]) === null || _tabRefs$current$prev === void 0 || _tabRefs$current$prev.focus();
-    }
-  };
-
-  // Size classes
-  var sizeClasses = {
-    sm: {
-      tab: 'tw-px-3 tw-py-2 tw-text-sm',
-      content: 'tw-p-4',
-      icon: 'tw-w-4 tw-h-4',
-      badge: 'tw-text-xs tw-px-1.5 tw-py-0.5'
-    },
-    md: {
-      tab: 'tw-px-4 tw-py-2 tw-text-sm',
-      content: 'tw-p-4',
-      icon: 'tw-w-5 tw-h-5',
-      badge: 'tw-text-xs tw-px-2 tw-py-0.5'
-    },
-    lg: {
-      tab: 'tw-px-6 tw-py-3 tw-text-base',
-      content: 'tw-p-6',
-      icon: 'tw-w-6 tw-h-6',
-      badge: 'tw-text-sm tw-px-2.5 tw-py-1'
-    }
-  };
-
-  // Variant classes
-  var getVariantClasses = function getVariantClasses(isActive) {
-    var baseClasses = 'tw-transition-all tw-duration-200 tw-ease-in-out tw-font-medium tw-relative';
-    switch (variant) {
-      case 'pills':
-        return "".concat(baseClasses, " tw-rounded-md ").concat(isActive ? 'tw-bg-blue-600 tw-text-white' : 'tw-bg-gray-100 tw-text-gray-700 hover:tw-bg-gray-200');
-      case 'underline':
-        return "".concat(baseClasses, " tw-border-b-2 ").concat(isActive ? 'tw-border-blue-600 tw-text-blue-600' : 'tw-border-transparent tw-text-gray-600 hover:tw-text-gray-800 hover:tw-border-gray-300');
-      default:
-        return "".concat(baseClasses, " tw-border tw-border-b-0 ").concat(isActive ? 'tw-bg-white tw-text-gray-900 tw-border-gray-200 tw-z-10 tw-relative' : 'tw-bg-gray-100 tw-text-gray-600 hover:tw-bg-gray-50 hover:tw-text-gray-800 tw-border-gray-200 tw-border-b-gray-200');
-    }
-  };
-  if (!tabs || tabs.length === 0) {
-    return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("div", {
-      className: "tw-text-center tw-text-gray-500 tw-py-8",
-      children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("div", {
-        className: "tw-text-sm tw-font-medium",
-        children: "No tabs available"
-      })
-    });
-  }
-  return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)("div", {
-    className: "tw-w-full ".concat(className),
-    children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("div", {
-      className: "tw-relative",
-      children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)("div", {
-        className: "\n            tw-flex tw-gap-0 tw-bg-gray-100 tw-border tw-border-gray-200 tw-border-b-0 tw-p-1 tw-pb-0\n            ".concat(fullWidth ? 'tw-w-full' : 'tw-w-fit', "\n            ").concat(variant === 'underline' ? 'tw-bg-transparent tw-p-0 tw-border-b tw-border-gray-200' : '', "\n            ").concat(variant === 'pills' ? 'tw-bg-gray-100 tw-p-1 tw-rounded-lg tw-border' : '', "\n            tw-overflow-x-auto tw-scrollbar-hide tw-whitespace-nowrap md:tw-flex-wrap md:tw-overflow-visible\n          "),
-        role: "tablist",
-        "aria-label": "Tab navigation"
-        // Mobile: horizontal scroll, hide scrollbar
-        ,
-        style: {
-          WebkitOverflowScrolling: 'touch'
-        },
-        children: [tabs.map(function (tab, index) {
-          return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)("button", {
-            ref: function ref(el) {
-              return tabRefs.current[index] = el;
-            },
-            className: "\n                ".concat(sizeClasses[size].tab, "\n                ").concat(getVariantClasses(activeTab === index), "\n                ").concat(fullWidth ? 'tw-flex-1' : '', "\n                tw-flex tw-items-center tw-justify-center tw-gap-2\n                focus:tw-outline-none focus:tw-ring-2 focus:tw-ring-blue-500 focus:tw-ring-offset-2\n                disabled:tw-opacity-50 disabled:tw-cursor-not-allowed\n                ").concat(variant === 'default' ? 'tw-mr-1 last:tw-mr-0' : '', "\n                tw-min-w-[3.5rem] sm:tw-min-w-[5rem] tw-py-3 sm:tw-py-2 tw-px-4\n              "),
-            role: "tab",
-            "aria-selected": activeTab === index,
-            "aria-controls": "tabpanel-".concat(index),
-            id: "tab-".concat(index),
-            onClick: function onClick() {
-              return handleTabClick(index);
-            },
-            onKeyDown: function onKeyDown(e) {
-              return handleKeyDown(e, index);
-            },
-            disabled: tab.disabled,
-            tabIndex: activeTab === index ? 0 : -1
-            // Mobile: increase touch target
-            ,
-            style: {
-              touchAction: 'manipulation'
-            },
-            children: [tab.icon && /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("span", {
-              className: "".concat(sizeClasses[size].icon, " tw-flex-shrink-0 tw-flex tw-items-center tw-justify-center"),
-              children: tab.icon
-            }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("span", {
-              className: "tw-truncate",
-              children: tab.label
-            }), tab.badge && /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("span", {
-              className: "\n                  tw-bg-red-100 tw-text-red-800 tw-font-medium tw-rounded-full\n                  ".concat(sizeClasses[size].badge, " tw-ml-1\n                "),
-              children: tab.badge
-            })]
-          }, index);
-        }), variant === 'underline' && /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("div", {
-          ref: indicatorRef,
-          className: "tw-absolute tw-bottom-0 tw-h-1 md:tw-h-0.5 tw-bg-blue-600 tw-transition-all tw-duration-200 tw-ease-in-out"
-          // Mobile: thicker indicator
-        })]
-      })
-    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("div", {
-      className: "tw-mt-0",
-      children: tabs.map(function (tab, index) {
-        return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("div", {
-          role: "tabpanel",
-          id: "tabpanel-".concat(index),
-          "aria-labelledby": "tab-".concat(index),
-          className: "\n              ".concat(activeTab === index ? 'tw-block' : 'tw-hidden', "\n              ").concat(sizeClasses[size].content, "\n              tw-bg-white tw-border tw-border-gray-200\n              ").concat(variant === 'default' ? 'tw-border-t-0' : 'tw-rounded-lg', "\n            "),
-          children: typeof tab.content === 'function' ? tab.content() : tab.content
-        }, index);
-      })
-    }), isMobile && tabs.length > 1 && /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("div", {
-      className: "tw-flex tw-justify-center tw-mt-4 tw-gap-1",
-      children: tabs.map(function (_, index) {
-        return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("div", {
-          className: "tw-w-2 tw-h-2 tw-rounded-full tw-transition-all tw-duration-200 ".concat(activeTab === index ? 'tw-bg-blue-600' : 'tw-bg-gray-300')
-        }, index);
-      })
-    })]
-  });
-};
-/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (Tab);
+}
 
 /***/ }),
 
-/***/ "./src/components/Toast.jsx":
+/***/ "./src/util/dummyPackLib.js":
 /*!**********************************!*\
-  !*** ./src/components/Toast.jsx ***!
+  !*** ./src/util/dummyPackLib.js ***!
   \**********************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   ToastProvider: () => (/* binding */ ToastProvider),
-/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__),
-/* harmony export */   useToast: () => (/* binding */ useToast)
+/* harmony export */   decodePayload: () => (/* binding */ decodePayload),
+/* harmony export */   doInstallProcess: () => (/* binding */ doInstallProcess),
+/* harmony export */   encodePayload: () => (/* binding */ encodePayload),
+/* harmony export */   getDownloadPackUrl: () => (/* binding */ getDownloadPackUrl),
+/* harmony export */   getDummyPacks: () => (/* binding */ getDummyPacks),
+/* harmony export */   validateVersionPackageRequirements: () => (/* binding */ validateVersionPackageRequirements)
 /* harmony export */ });
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var react_dom__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react-dom */ "./node_modules/react-dom/index.js");
-/* harmony import */ var lucide_react__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! lucide-react */ "./node_modules/lucide-react/dist/esm/icons/circle-check.js");
-/* harmony import */ var lucide_react__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! lucide-react */ "./node_modules/lucide-react/dist/esm/icons/circle-x.js");
-/* harmony import */ var lucide_react__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! lucide-react */ "./node_modules/lucide-react/dist/esm/icons/triangle-alert.js");
-/* harmony import */ var lucide_react__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! lucide-react */ "./node_modules/lucide-react/dist/esm/icons/info.js");
-/* harmony import */ var lucide_react__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! lucide-react */ "./node_modules/lucide-react/dist/esm/icons/x.js");
-/* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! react/jsx-runtime */ "./node_modules/react/jsx-runtime.js");
-function _toConsumableArray(r) { return _arrayWithoutHoles(r) || _iterableToArray(r) || _unsupportedIterableToArray(r) || _nonIterableSpread(); }
-function _nonIterableSpread() { throw new TypeError("Invalid attempt to spread non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method."); }
-function _iterableToArray(r) { if ("undefined" != typeof Symbol && null != r[Symbol.iterator] || null != r["@@iterator"]) return Array.from(r); }
-function _arrayWithoutHoles(r) { if (Array.isArray(r)) return _arrayLikeToArray(r); }
+/* harmony import */ var _lib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./lib */ "./src/util/lib.js");
+function _typeof(o) { "@babel/helpers - typeof"; return _typeof = "function" == typeof Symbol && "symbol" == typeof Symbol.iterator ? function (o) { return typeof o; } : function (o) { return o && "function" == typeof Symbol && o.constructor === Symbol && o !== Symbol.prototype ? "symbol" : typeof o; }, _typeof(o); }
 function _slicedToArray(r, e) { return _arrayWithHoles(r) || _iterableToArrayLimit(r, e) || _unsupportedIterableToArray(r, e) || _nonIterableRest(); }
 function _nonIterableRest() { throw new TypeError("Invalid attempt to destructure non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method."); }
 function _unsupportedIterableToArray(r, a) { if (r) { if ("string" == typeof r) return _arrayLikeToArray(r, a); var t = {}.toString.call(r).slice(8, -1); return "Object" === t && r.constructor && (t = r.constructor.name), "Map" === t || "Set" === t ? Array.from(r) : "Arguments" === t || /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(t) ? _arrayLikeToArray(r, a) : void 0; } }
 function _arrayLikeToArray(r, a) { (null == a || a > r.length) && (a = r.length); for (var e = 0, n = Array(a); e < a; e++) n[e] = r[e]; return n; }
 function _iterableToArrayLimit(r, l) { var t = null == r ? null : "undefined" != typeof Symbol && r[Symbol.iterator] || r["@@iterator"]; if (null != t) { var e, n, i, u, a = [], f = !0, o = !1; try { if (i = (t = t.call(r)).next, 0 === l) { if (Object(t) !== t) return; f = !1; } else for (; !(f = (e = i.call(t)).done) && (a.push(e.value), a.length !== l); f = !0); } catch (r) { o = !0, n = r; } finally { try { if (!f && null != t["return"] && (u = t["return"](), Object(u) !== u)) return; } finally { if (o) throw n; } } return a; } }
 function _arrayWithHoles(r) { if (Array.isArray(r)) return r; }
+function ownKeys(e, r) { var t = Object.keys(e); if (Object.getOwnPropertySymbols) { var o = Object.getOwnPropertySymbols(e); r && (o = o.filter(function (r) { return Object.getOwnPropertyDescriptor(e, r).enumerable; })), t.push.apply(t, o); } return t; }
+function _objectSpread(e) { for (var r = 1; r < arguments.length; r++) { var t = null != arguments[r] ? arguments[r] : {}; r % 2 ? ownKeys(Object(t), !0).forEach(function (r) { _defineProperty(e, r, t[r]); }) : Object.getOwnPropertyDescriptors ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t)) : ownKeys(Object(t)).forEach(function (r) { Object.defineProperty(e, r, Object.getOwnPropertyDescriptor(t, r)); }); } return e; }
+function _defineProperty(e, r, t) { return (r = _toPropertyKey(r)) in e ? Object.defineProperty(e, r, { value: t, enumerable: !0, configurable: !0, writable: !0 }) : e[r] = t, e; }
+function _toPropertyKey(t) { var i = _toPrimitive(t, "string"); return "symbol" == _typeof(i) ? i : i + ""; }
+function _toPrimitive(t, r) { if ("object" != _typeof(t) || !t) return t; var e = t[Symbol.toPrimitive]; if (void 0 !== e) { var i = e.call(t, r || "default"); if ("object" != _typeof(i)) return i; throw new TypeError("@@toPrimitive must return a primitive value."); } return ("string" === r ? String : Number)(t); }
+function _regenerator() { /*! regenerator-runtime -- Copyright (c) 2014-present, Facebook, Inc. -- license (MIT): https://github.com/babel/babel/blob/main/packages/babel-helpers/LICENSE */ var e, t, r = "function" == typeof Symbol ? Symbol : {}, n = r.iterator || "@@iterator", o = r.toStringTag || "@@toStringTag"; function i(r, n, o, i) { var c = n && n.prototype instanceof Generator ? n : Generator, u = Object.create(c.prototype); return _regeneratorDefine2(u, "_invoke", function (r, n, o) { var i, c, u, f = 0, p = o || [], y = !1, G = { p: 0, n: 0, v: e, a: d, f: d.bind(e, 4), d: function d(t, r) { return i = t, c = 0, u = e, G.n = r, a; } }; function d(r, n) { for (c = r, u = n, t = 0; !y && f && !o && t < p.length; t++) { var o, i = p[t], d = G.p, l = i[2]; r > 3 ? (o = l === n) && (u = i[(c = i[4]) ? 5 : (c = 3, 3)], i[4] = i[5] = e) : i[0] <= d && ((o = r < 2 && d < i[1]) ? (c = 0, G.v = n, G.n = i[1]) : d < l && (o = r < 3 || i[0] > n || n > l) && (i[4] = r, i[5] = n, G.n = l, c = 0)); } if (o || r > 1) return a; throw y = !0, n; } return function (o, p, l) { if (f > 1) throw TypeError("Generator is already running"); for (y && 1 === p && d(p, l), c = p, u = l; (t = c < 2 ? e : u) || !y;) { i || (c ? c < 3 ? (c > 1 && (G.n = -1), d(c, u)) : G.n = u : G.v = u); try { if (f = 2, i) { if (c || (o = "next"), t = i[o]) { if (!(t = t.call(i, u))) throw TypeError("iterator result is not an object"); if (!t.done) return t; u = t.value, c < 2 && (c = 0); } else 1 === c && (t = i["return"]) && t.call(i), c < 2 && (u = TypeError("The iterator does not provide a '" + o + "' method"), c = 1); i = e; } else if ((t = (y = G.n < 0) ? u : r.call(n, G)) !== a) break; } catch (t) { i = e, c = 1, u = t; } finally { f = 1; } } return { value: t, done: y }; }; }(r, o, i), !0), u; } var a = {}; function Generator() {} function GeneratorFunction() {} function GeneratorFunctionPrototype() {} t = Object.getPrototypeOf; var c = [][n] ? t(t([][n]())) : (_regeneratorDefine2(t = {}, n, function () { return this; }), t), u = GeneratorFunctionPrototype.prototype = Generator.prototype = Object.create(c); function f(e) { return Object.setPrototypeOf ? Object.setPrototypeOf(e, GeneratorFunctionPrototype) : (e.__proto__ = GeneratorFunctionPrototype, _regeneratorDefine2(e, o, "GeneratorFunction")), e.prototype = Object.create(u), e; } return GeneratorFunction.prototype = GeneratorFunctionPrototype, _regeneratorDefine2(u, "constructor", GeneratorFunctionPrototype), _regeneratorDefine2(GeneratorFunctionPrototype, "constructor", GeneratorFunction), GeneratorFunction.displayName = "GeneratorFunction", _regeneratorDefine2(GeneratorFunctionPrototype, o, "GeneratorFunction"), _regeneratorDefine2(u), _regeneratorDefine2(u, o, "Generator"), _regeneratorDefine2(u, n, function () { return this; }), _regeneratorDefine2(u, "toString", function () { return "[object Generator]"; }), (_regenerator = function _regenerator() { return { w: i, m: f }; })(); }
+function _regeneratorDefine2(e, r, n, t) { var i = Object.defineProperty; try { i({}, "", {}); } catch (e) { i = 0; } _regeneratorDefine2 = function _regeneratorDefine(e, r, n, t) { if (r) i ? i(e, r, { value: n, enumerable: !t, configurable: !t, writable: !t }) : e[r] = n;else { var o = function o(r, n) { _regeneratorDefine2(e, r, function (e) { return this._invoke(r, n, e); }); }; o("next", 0), o("throw", 1), o("return", 2); } }, _regeneratorDefine2(e, r, n, t); }
+function asyncGeneratorStep(n, t, e, r, o, a, c) { try { var i = n[a](c), u = i.value; } catch (n) { return void e(n); } i.done ? t(u) : Promise.resolve(u).then(r, o); }
+function _asyncToGenerator(n) { return function () { var t = this, e = arguments; return new Promise(function (r, o) { var a = n.apply(t, e); function _next(n) { asyncGeneratorStep(a, r, o, _next, _throw, "next", n); } function _throw(n) { asyncGeneratorStep(a, r, o, _next, _throw, "throw", n); } _next(void 0); }); }; }
+
+var _worrprba_dummy_pack_ = worrprba_dummy_pack_center_data,
+  endpoint = _worrprba_dummy_pack_.endpoint,
+  theme_slug = _worrprba_dummy_pack_.theme_slug,
+  nonce = _worrprba_dummy_pack_.nonce,
+  ajax_url = _worrprba_dummy_pack_.ajax_url,
+  php_version = _worrprba_dummy_pack_.php_version,
+  parent_theme_version = _worrprba_dummy_pack_.parent_theme_version,
+  wordpress_version = _worrprba_dummy_pack_.wordpress_version,
+  license_key = _worrprba_dummy_pack_.license_key,
+  header_meta_attached_api = _worrprba_dummy_pack_.header_meta_attached_api;
+var encodePayload = function encodePayload(obj) {
+  var json = JSON.stringify(obj);
+  var reversed = json.split('').reverse().join('');
+  return btoa(unescape(encodeURIComponent(reversed)));
+};
+var decodePayload = function decodePayload(encoded) {
+  try {
+    var reversed = decodeURIComponent(escape(atob(encoded)));
+    var json = reversed.split('').reverse().join('');
+    return JSON.parse(json);
+  } catch (e) {
+    console.error('Decode failed', e);
+    return null;
+  }
+};
+var headers = {
+  'Content-Type': 'application/json',
+  // 'license_key': license_key
+  'xxx-meta': encodePayload(header_meta_attached_api)
+};
+var getDummyPacks = /*#__PURE__*/function () {
+  var _ref = _asyncToGenerator(/*#__PURE__*/_regenerator().m(function _callee() {
+    var response;
+    return _regenerator().w(function (_context) {
+      while (1) switch (_context.n) {
+        case 0:
+          _context.n = 1;
+          return (0,_lib__WEBPACK_IMPORTED_MODULE_0__.__request)("".concat(endpoint, "packages/").concat(theme_slug), {
+            method: 'GET',
+            headers: headers
+          });
+        case 1:
+          response = _context.v;
+          return _context.a(2, response);
+      }
+    }, _callee);
+  }));
+  return function getDummyPacks() {
+    return _ref.apply(this, arguments);
+  };
+}();
+var getDownloadPackUrl = /*#__PURE__*/function () {
+  var _ref2 = _asyncToGenerator(/*#__PURE__*/_regenerator().m(function _callee2(packID) {
+    var response;
+    return _regenerator().w(function (_context2) {
+      while (1) switch (_context2.n) {
+        case 0:
+          _context2.n = 1;
+          return (0,_lib__WEBPACK_IMPORTED_MODULE_0__.__request)("".concat(endpoint, "packages/").concat(theme_slug, "/").concat(packID), {
+            method: 'GET',
+            headers: headers
+          });
+        case 1:
+          response = _context2.v;
+          return _context2.a(2, response);
+      }
+    }, _callee2);
+  }));
+  return function getDownloadPackUrl(_x) {
+    return _ref2.apply(this, arguments);
+  };
+}();
+
 /**
- * Toast Notification System (Context + Hook)
- * 
- * Features:
- * - Multiple toast types: success, error, warning, info
- * - Auto-dismiss with customizable duration
- * - Stacked notifications
- * - Accessible and responsive
- * 
- * Usage:
- * 1. Wrap your app with ToastProvider:
- * 
- *    import { ToastProvider } from './Toast';
- *    
- *    <ToastProvider>
- *      <App />
- *    </ToastProvider>
- * 
- * 2. Use the useToast hook anywhere:
- * 
- *    import { useToast } from './Toast';
- * 
- *    const toast = useToast();
- * 
- *    // Show success toast
- *    toast({
- *      message: 'Backup created successfully!',
- *      type: 'success',  // 'success' | 'error' | 'warning' | 'info'
- *      duration: 5000,   // milliseconds, default: 5000, use 0 for no auto-dismiss
- *    });
- * 
- *    // Show error toast
- *    toast({
- *      message: 'Failed to create backup',
- *      type: 'error',
- *    });
+ * Validate package version requirements
+ * @param {string} type - theme_version | php_version
+ * @param {string} version - Required version string
+ * @returns {boolean} - true if the current version meets the requirement, false otherwise
  */
-
-
-
-
-
-var ToastContext = /*#__PURE__*/(0,react__WEBPACK_IMPORTED_MODULE_0__.createContext)(null);
-
-// Toast types with their respective styles and icons
-var TOAST_TYPES = {
-  success: {
-    icon: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_7__.jsx)(lucide_react__WEBPACK_IMPORTED_MODULE_2__["default"], {
-      color: "white",
-      className: "tw-w-5 tw-h-5"
-    }),
-    style: 'tw-text-green-500 tw-bg-green-50 tw-border-green-200'
-  },
-  error: {
-    icon: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_7__.jsx)(lucide_react__WEBPACK_IMPORTED_MODULE_3__["default"], {
-      color: "white",
-      className: "tw-w-5 tw-h-5"
-    }),
-    style: 'tw-text-red-500 tw-bg-red-50 tw-border-red-200'
-  },
-  warning: {
-    icon: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_7__.jsx)(lucide_react__WEBPACK_IMPORTED_MODULE_4__["default"], {
-      color: "white",
-      className: "tw-w-5 tw-h-5"
-    }),
-    style: 'tw-text-yellow-500 tw-bg-yellow-50 tw-border-yellow-200'
-  },
-  info: {
-    icon: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_7__.jsx)(lucide_react__WEBPACK_IMPORTED_MODULE_5__["default"], {
-      color: "white",
-      className: "tw-w-5 tw-h-5"
-    }),
-    style: 'tw-text-blue-500 tw-bg-blue-50 tw-border-blue-200'
+var validateVersionPackageRequirements = function validateVersionPackageRequirements(type, version) {
+  if (!type || !version) {
+    return false;
   }
-};
-
-// Individual toast notification component
-var Toast = function Toast(_ref) {
-  var message = _ref.message,
-    _ref$type = _ref.type,
-    type = _ref$type === void 0 ? 'info' : _ref$type,
-    onDismiss = _ref.onDismiss,
-    onPause = _ref.onPause,
-    onResume = _ref.onResume;
-  var _ref2 = TOAST_TYPES[type] || TOAST_TYPES.info,
-    icon = _ref2.icon,
-    style = _ref2.style;
-  return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_7__.jsxs)("div", {
-    className: "tw-flex tw-items-center tw-p-6 tw-mb-4 tw-border tw-rounded-md tw-backdrop-blur-sm tw-bg-white/95 tw-transform tw-transition-all tw-duration-500 tw-ease-out ".concat(style),
-    role: "alert",
-    onMouseEnter: onPause,
-    onMouseLeave: onResume,
-    children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_7__.jsx)("div", {
-      className: "tw-flex-shrink-0 tw-p-2 tw-rounded-full tw-bg-opacity-10 tw-bg-current",
-      children: icon
-    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_7__.jsx)("div", {
-      className: "tw-ml-4 tw-mr-6 tw-flex-1 tw-text-sm tw-font-medium tw-leading-relaxed",
-      children: message
-    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_7__.jsxs)("button", {
-      onClick: onDismiss,
-      className: "tw-flex-shrink-0 tw-rounded-full tw-p-2 tw-inline-flex tw-items-center tw-justify-center tw-text-gray-400 hover:tw-text-gray-600 hover:tw-bg-gray-100 focus:tw-outline-none focus:tw-ring-2 focus:tw-ring-offset-2 focus:tw-ring-blue-500 tw-transition-all tw-duration-200",
-      children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_7__.jsx)("span", {
-        className: "tw-sr-only",
-        children: "Close"
-      }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_7__.jsx)(lucide_react__WEBPACK_IMPORTED_MODULE_6__["default"], {
-        className: "tw-h-5 tw-w-5"
-      })]
-    })]
-  });
-};
-
-// Toast container that renders all active toasts
-var ToastContainer = function ToastContainer(_ref3) {
-  var toasts = _ref3.toasts,
-    removeToast = _ref3.removeToast,
-    pauseToast = _ref3.pauseToast,
-    resumeToast = _ref3.resumeToast;
-  return /*#__PURE__*/(0,react_dom__WEBPACK_IMPORTED_MODULE_1__.createPortal)(/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_7__.jsx)("div", {
-    className: "tw-fixed tw-top-10 tw-right-4 tw-z-50 tw-w-full tw-max-w-sm tw-space-y-2 tw-font-space-mono",
-    children: toasts.map(function (toast) {
-      return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_7__.jsx)("div", {
-        className: "tw-transform tw-transition-all tw-duration-300 tw-ease-in-out",
-        children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_7__.jsx)(Toast, {
-          message: toast.message,
-          type: toast.type,
-          onDismiss: function onDismiss() {
-            return removeToast(toast.id);
-          },
-          onPause: function onPause() {
-            return pauseToast(toast.id);
-          },
-          onResume: function onResume() {
-            return resumeToast(toast.id);
-          }
-        })
-      }, toast.id);
-    })
-  }), document.body);
-};
-
-// Provider component that manages toast state
-var ToastProvider = function ToastProvider(_ref4) {
-  var children = _ref4.children;
-  var _useState = (0,react__WEBPACK_IMPORTED_MODULE_0__.useState)([]),
-    _useState2 = _slicedToArray(_useState, 2),
-    toasts = _useState2[0],
-    setToasts = _useState2[1];
-  // Store timer and remaining time for each toast
-  var timers = react__WEBPACK_IMPORTED_MODULE_0___default().useRef({});
-  var removeToast = (0,react__WEBPACK_IMPORTED_MODULE_0__.useCallback)(function (id) {
-    setToasts(function (prevToasts) {
-      return prevToasts.filter(function (toast) {
-        return toast.id !== id;
-      });
-    });
-    if (timers.current[id]) {
-      clearTimeout(timers.current[id].timeoutId);
-      delete timers.current[id];
-    }
-  }, []);
-  var pauseToast = (0,react__WEBPACK_IMPORTED_MODULE_0__.useCallback)(function (id) {
-    var timer = timers.current[id];
-    if (timer && !timer.paused) {
-      clearTimeout(timer.timeoutId);
-      timer.paused = true;
-      timer.remaining = timer.end - Date.now();
-    }
-  }, []);
-  var resumeToast = (0,react__WEBPACK_IMPORTED_MODULE_0__.useCallback)(function (id) {
-    var timer = timers.current[id];
-    if (timer && timer.paused) {
-      timer.paused = false;
-      timer.end = Date.now() + timer.remaining;
-      timer.timeoutId = setTimeout(function () {
-        return removeToast(id);
-      }, timer.remaining);
-    }
-  }, [removeToast]);
-  var addToast = (0,react__WEBPACK_IMPORTED_MODULE_0__.useCallback)(function (_ref5) {
-    var message = _ref5.message,
-      _ref5$type = _ref5.type,
-      type = _ref5$type === void 0 ? 'info' : _ref5$type,
-      _ref5$duration = _ref5.duration,
-      duration = _ref5$duration === void 0 ? 5000 : _ref5$duration;
-    var id = Date.now().toString() + Math.random().toString(36).substr(2, 5);
-    setToasts(function (prevToasts) {
-      return [].concat(_toConsumableArray(prevToasts), [{
-        id: id,
-        message: message,
-        type: type
-      }]);
-    });
-    if (duration > 0) {
-      var end = Date.now() + duration;
-      var timeoutId = setTimeout(function () {
-        return removeToast(id);
-      }, duration);
-      timers.current[id] = {
-        timeoutId: timeoutId,
-        end: end,
-        remaining: duration,
-        paused: false
-      };
-    }
-    return id;
-  }, [removeToast]);
-  (0,react__WEBPACK_IMPORTED_MODULE_0__.useEffect)(function () {
-    // Clean up timers on unmount
-    return function () {
-      Object.values(timers.current).forEach(function (timer) {
-        clearTimeout(timer.timeoutId);
-      });
-      timers.current = {};
-    };
-  }, []);
-  return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_7__.jsxs)(ToastContext.Provider, {
-    value: addToast,
-    children: [children, /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_7__.jsx)(ToastContainer, {
-      toasts: toasts,
-      removeToast: removeToast,
-      pauseToast: pauseToast,
-      resumeToast: resumeToast
-    })]
-  });
-};
-
-// Hook to use toast
-var useToast = function useToast() {
-  var addToast = (0,react__WEBPACK_IMPORTED_MODULE_0__.useContext)(ToastContext);
-  if (!addToast) {
-    throw new Error('useToast must be used within a ToastProvider');
+  var currentVersion = '';
+  if (type === 'theme_version') {
+    currentVersion = parent_theme_version || '';
+  } else if (type === 'php_version') {
+    currentVersion = php_version || '';
+  } else if (type === 'wordpress_version') {
+    currentVersion = wordpress_version || '';
+  } else {
+    return false;
   }
-  return (0,react__WEBPACK_IMPORTED_MODULE_0__.useCallback)(function (_ref6) {
-    var message = _ref6.message,
-      type = _ref6.type,
-      duration = _ref6.duration;
-    return addToast({
-      message: message,
-      type: type,
-      duration: duration
-    });
-  }, [addToast]);
+  if (!currentVersion) {
+    return false;
+  }
+
+  // Compare versions: current version should be >= required version
+  var currentParts = currentVersion.toString().split('.').map(Number);
+  var requiredParts = version.toString().split('.').map(Number);
+  var maxLength = Math.max(currentParts.length, requiredParts.length);
+  for (var i = 0; i < maxLength; i++) {
+    var currentPart = currentParts[i] || 0;
+    var requiredPart = requiredParts[i] || 0;
+    if (currentPart > requiredPart) return true;
+    if (currentPart < requiredPart) return false;
+  }
+  return true; // Versions are equal
 };
-/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (Toast);
+var doInstallProcess = /*#__PURE__*/function () {
+  var _ref3 = _asyncToGenerator(/*#__PURE__*/_regenerator().m(function _callee3(process) {
+    var action, payload, response;
+    return _regenerator().w(function (_context3) {
+      while (1) switch (_context3.n) {
+        case 0:
+          action = process.action, payload = process.payload;
+          _context3.n = 1;
+          return (0,_lib__WEBPACK_IMPORTED_MODULE_0__.__request)(ajax_url, {
+            method: 'POST',
+            headers: {
+              'Content-Type': 'application/x-www-form-urlencoded'
+            },
+            body: new URLSearchParams(_objectSpread(_objectSpread({
+              action: action
+            }, Object.fromEntries(Object.entries(payload).map(function (_ref4) {
+              var _ref5 = _slicedToArray(_ref4, 2),
+                key = _ref5[0],
+                value = _ref5[1];
+              return ["payload[".concat(key, "]"), value];
+            }))), {}, {
+              installNonce: nonce
+            }))
+          });
+        case 1:
+          response = _context3.v;
+          return _context3.a(2, response);
+      }
+    }, _callee3);
+  }));
+  return function doInstallProcess(_x2) {
+    return _ref3.apply(this, arguments);
+  };
+}();
 
 /***/ }),
 
-/***/ "./src/components/UploadBackup.jsx":
-/*!*****************************************!*\
-  !*** ./src/components/UploadBackup.jsx ***!
-  \*****************************************/
+/***/ "./src/util/dummyPackStore.js":
+/*!************************************!*\
+  !*** ./src/util/dummyPackStore.js ***!
+  \************************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
@@ -35747,305 +30845,101 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
 /* harmony export */ });
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var _Toast__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./Toast */ "./src/components/Toast.jsx");
-/* harmony import */ var lucide_react__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! lucide-react */ "./node_modules/lucide-react/dist/esm/icons/file-up.js");
-/* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! react/jsx-runtime */ "./node_modules/react/jsx-runtime.js");
-function _createForOfIteratorHelper(r, e) { var t = "undefined" != typeof Symbol && r[Symbol.iterator] || r["@@iterator"]; if (!t) { if (Array.isArray(r) || (t = _unsupportedIterableToArray(r)) || e && r && "number" == typeof r.length) { t && (r = t); var _n = 0, F = function F() {}; return { s: F, n: function n() { return _n >= r.length ? { done: !0 } : { done: !1, value: r[_n++] }; }, e: function e(r) { throw r; }, f: F }; } throw new TypeError("Invalid attempt to iterate non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method."); } var o, a = !0, u = !1; return { s: function s() { t = t.call(r); }, n: function n() { var r = t.next(); return a = r.done, r; }, e: function e(r) { u = !0, o = r; }, f: function f() { try { a || null == t["return"] || t["return"](); } finally { if (u) throw o; } } }; }
-function _slicedToArray(r, e) { return _arrayWithHoles(r) || _iterableToArrayLimit(r, e) || _unsupportedIterableToArray(r, e) || _nonIterableRest(); }
-function _nonIterableRest() { throw new TypeError("Invalid attempt to destructure non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method."); }
-function _unsupportedIterableToArray(r, a) { if (r) { if ("string" == typeof r) return _arrayLikeToArray(r, a); var t = {}.toString.call(r).slice(8, -1); return "Object" === t && r.constructor && (t = r.constructor.name), "Map" === t || "Set" === t ? Array.from(r) : "Arguments" === t || /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(t) ? _arrayLikeToArray(r, a) : void 0; } }
-function _arrayLikeToArray(r, a) { (null == a || a > r.length) && (a = r.length); for (var e = 0, n = Array(a); e < a; e++) n[e] = r[e]; return n; }
-function _iterableToArrayLimit(r, l) { var t = null == r ? null : "undefined" != typeof Symbol && r[Symbol.iterator] || r["@@iterator"]; if (null != t) { var e, n, i, u, a = [], f = !0, o = !1; try { if (i = (t = t.call(r)).next, 0 === l) { if (Object(t) !== t) return; f = !1; } else for (; !(f = (e = i.call(t)).done) && (a.push(e.value), a.length !== l); f = !0); } catch (r) { o = !0, n = r; } finally { try { if (!f && null != t["return"] && (u = t["return"](), Object(u) !== u)) return; } finally { if (o) throw n; } } return a; } }
-function _arrayWithHoles(r) { if (Array.isArray(r)) return r; }
+/* harmony import */ var zustand__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! zustand */ "./node_modules/zustand/esm/react.mjs");
+/* harmony import */ var zustand_middleware_immer__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! zustand/middleware/immer */ "./node_modules/zustand/esm/middleware/immer.mjs");
+/* harmony import */ var _dummyPackLib__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./dummyPackLib */ "./src/util/dummyPackLib.js");
 
 
 
-
-/**
- * UploadBackup Usage Example:
- *
- * import React, { useRef } from 'react';
- * import UploadBackup from './UploadBackup';
- *
- * function MyComponent() {
- *   const uploadRef = useRef();
- *
- *   const handleUpload = (files) => {
- *     // Start your upload logic here
- *     // To update progress:
- *     uploadRef.current?.setUploadProgress(30); // 30%
- *     // To reset progress:
- *     uploadRef.current?.resetProgress();
- *   };
- *
- *   return (
- *     <UploadBackup
- *       ref={uploadRef}
- *       onUpload={handleUpload}
- *       accept=".zip,.tar,.gz,.sql"
- *       maxFiles={1}
- *       maxSize={1024 * 1024 * 512} // 512MB
- *     />
- *   );
- * }
- */
-
-/**
- * UploadBackup - Modern, dependency-free file upload component
- * - Drag & drop or click to select
- * - Shows selected files
- * - Calls onUpload(files) prop when files are selected or uploaded
- * - Uses toast for feedback
- * - Clean, modern, accessible UI
- * - Supports upload progress (parent can update via ref)
- */
-
-var UploadBackup = /*#__PURE__*/(0,react__WEBPACK_IMPORTED_MODULE_0__.forwardRef)(function (_ref, ref) {
-  var onUpload = _ref.onUpload,
-    _ref$accept = _ref.accept,
-    accept = _ref$accept === void 0 ? '.zip,.tar,.gz,.sql' : _ref$accept,
-    _ref$maxFiles = _ref.maxFiles,
-    maxFiles = _ref$maxFiles === void 0 ? 1 : _ref$maxFiles,
-    _ref$maxSize = _ref.maxSize,
-    maxSize = _ref$maxSize === void 0 ? 1024 * 1024 * 512 : _ref$maxSize;
-  var toast = (0,_Toast__WEBPACK_IMPORTED_MODULE_1__.useToast)();
-  var inputRef = (0,react__WEBPACK_IMPORTED_MODULE_0__.useRef)();
-  var _useState = (0,react__WEBPACK_IMPORTED_MODULE_0__.useState)([]),
-    _useState2 = _slicedToArray(_useState, 2),
-    files = _useState2[0],
-    setFiles = _useState2[1];
-  var _useState3 = (0,react__WEBPACK_IMPORTED_MODULE_0__.useState)(false),
-    _useState4 = _slicedToArray(_useState3, 2),
-    dragActive = _useState4[0],
-    setDragActive = _useState4[1];
-  var _useState5 = (0,react__WEBPACK_IMPORTED_MODULE_0__.useState)(''),
-    _useState6 = _slicedToArray(_useState5, 2),
-    error = _useState6[0],
-    setError = _useState6[1];
-  var _useState7 = (0,react__WEBPACK_IMPORTED_MODULE_0__.useState)(0),
-    _useState8 = _slicedToArray(_useState7, 2),
-    uploadProgress = _useState8[0],
-    _setUploadProgress = _useState8[1]; // 0-100
-
-  // Expose setUploadProgress to parent via ref
-  (0,react__WEBPACK_IMPORTED_MODULE_0__.useImperativeHandle)(ref, function () {
-    return {
-      setUploadProgress: function setUploadProgress(progress) {
-        _setUploadProgress(progress);
-      },
-      resetProgress: function resetProgress() {
-        return _setUploadProgress(0);
-      }
-    };
-  }, []);
-
-  // Validate file type and size
-  var validateFiles = function validateFiles(fileList) {
-    var acceptedTypes = accept.split(',').map(function (ext) {
-      return ext.trim().replace(/^\./, '');
-    });
-    var validFiles = [];
-    var _iterator = _createForOfIteratorHelper(fileList),
-      _step;
-    try {
-      for (_iterator.s(); !(_step = _iterator.n()).done;) {
-        var file = _step.value;
-        var ext = file.name.split('.').pop().toLowerCase();
-        if (!acceptedTypes.includes(ext)) {
-          setError("File type .".concat(ext, " not accepted."));
-          toast({
-            message: "File type .".concat(ext, " not accepted."),
-            type: 'error'
-          });
-          return [];
+var useDummyPackStore = (0,zustand__WEBPACK_IMPORTED_MODULE_0__.create)((0,zustand_middleware_immer__WEBPACK_IMPORTED_MODULE_1__.immer)(function (set, get) {
+  return {
+    // State
+    installProcess: {
+      process: [],
+      inProgress: false,
+      inProgressStep: 0,
+      isModalOpen: false,
+      packData: null
+    },
+    buildInstallProcess: function buildInstallProcess(packData) {
+      var ID = packData.ID,
+        size = packData.size;
+      var process = [{
+        step: 1,
+        name: "Download Package ".concat(size ? "(".concat(size, ")") : ''),
+        description: '⬇️ Downloading the dummy pack package. Please wait while we fetch the files for you!',
+        action: 'worrprba_ajax_download_dummy_pack',
+        payload: {
+          ID: ID
         }
-        if (file.size > maxSize) {
-          setError("File ".concat(file.name, " is too large (max ").concat(Math.round(maxSize / (1024 * 1024)), "MB)."));
-          toast({
-            message: "File ".concat(file.name, " is too large."),
-            type: 'error'
-          });
-          return [];
-        }
-        validFiles.push(file);
-      }
-    } catch (err) {
-      _iterator.e(err);
-    } finally {
-      _iterator.f();
-    }
-    setError('');
-    return validFiles;
-  };
-  var handleFiles = function handleFiles(fileList) {
-    var valid = validateFiles(Array.from(fileList));
-    if (valid.length > 0) {
-      if (maxFiles === 1) valid = [valid[0]];
-      setFiles(valid);
-      // if (onUpload) onUpload(valid);
-      toast({
-        message: 'File ready to upload!',
-        type: 'success'
+      }, {
+        step: 2,
+        name: 'Unzip Package',
+        description: '🗃️ Unzipping the downloaded package to prepare for installation!',
+        action: 'worrprba_ajax_unzip_dummy_pack',
+        payload: {}
+      }, {
+        step: 3,
+        name: 'Read Config File',
+        description: '📖 Checking the dummy pack configuration! Taking a quick look at what will be restored so we know exactly what to set up. 🧐✨',
+        action: 'worrprba_ajax_restore_read_dummy_pack_config_file',
+        payload: {}
+      }, {
+        step: 4,
+        name: 'Restore Uploads',
+        description: '📁 Restoring uploads from the dummy pack. All your media and files are being brought back!',
+        action: 'worrprba_ajax_restore_dummy_pack_uploads',
+        payload: {}
+      }, {
+        step: 5,
+        name: 'Restore Plugins',
+        description: '🔌 Restoring plugins from the dummy pack. Your site\'s functionality is coming back online!',
+        action: 'worrprba_ajax_restore_dummy_pack_plugins',
+        payload: {}
+      }, {
+        step: 6,
+        name: 'Restore Database',
+        description: '🗄️ Restoring the database from the dummy pack. All your data is being carefully placed!',
+        action: 'worrprba_ajax_restore_dummy_pack_database',
+        payload: {}
+      }, {
+        step: 7,
+        name: 'Done',
+        description: '🎉 All done! Your dummy pack is fully installed. Everything is set up and ready to go! 🥳',
+        action: 'worrprba_ajax_dummy_pack_install_done',
+        payload: {}
+      }];
+      set(function (state) {
+        state.installProcess.process = process;
+        // set inProgress to true
+        state.installProcess.inProgress = false;
+        // set inProgressStep to 0
+        state.installProcess.inProgressStep = 0;
+        state.installProcess.isModalOpen = true;
+        state.installProcess.packData = packData;
+      });
+    },
+    // close install process modal
+    setInstallProcessModalOpen: function setInstallProcessModalOpen(isOpen) {
+      set(function (state) {
+        state.installProcess.isModalOpen = isOpen;
+      });
+    },
+    // set install process in progress
+    setInstallProcessInProgress: function setInstallProcessInProgress(inProgress) {
+      set(function (state) {
+        state.installProcess.inProgress = inProgress;
+      });
+    },
+    // set install process in progress step
+    setInstallProcessInProgressStep: function setInstallProcessInProgressStep(inProgressStep) {
+      set(function (state) {
+        state.installProcess.inProgressStep = inProgressStep;
       });
     }
   };
-  var handleInputChange = function handleInputChange(e) {
-    handleFiles(e.target.files);
-  };
-  var handleDrop = function handleDrop(e) {
-    e.preventDefault();
-    setDragActive(false);
-    if (e.dataTransfer.files && e.dataTransfer.files.length > 0) {
-      handleFiles(e.dataTransfer.files);
-    }
-  };
-  var handleDragOver = function handleDragOver(e) {
-    e.preventDefault();
-    setDragActive(true);
-  };
-  var handleDragLeave = function handleDragLeave(e) {
-    e.preventDefault();
-    setDragActive(false);
-  };
-  var removeFile = function removeFile(file) {
-    setFiles(function (prev) {
-      return prev.filter(function (f) {
-        return f !== file;
-      });
-    });
-
-    // update inputRef when remove file
-    inputRef.current.value = '';
-    toast({
-      message: 'File removed',
-      type: 'info'
-    });
-  };
-  return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsxs)("div", {
-    className: "tw-w-full tw-max-w-lg tw-mx-auto tw-p-6 tw-bg-white tw-rounded-md tw-border tw-border-gray-200 tw-space-y-4",
-    children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsxs)("div", {
-      className: 'tw-flex tw-flex-col tw-items-center tw-justify-center tw-py-12 tw-px-4 tw-border-2 tw-border-dashed tw-rounded-lg tw-cursor-pointer ' + (dragActive ? 'tw-border-blue-500 tw-bg-blue-50' : 'tw-border-gray-300 tw-bg-gray-50'),
-      tabIndex: 0,
-      "aria-label": "File upload dropzone",
-      onClick: function onClick() {
-        return inputRef.current.click();
-      },
-      onDrop: handleDrop,
-      onDragOver: handleDragOver,
-      onDragLeave: handleDragLeave,
-      onDragEnd: handleDragLeave,
-      children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("input", {
-        ref: inputRef,
-        type: "file",
-        accept: accept,
-        multiple: maxFiles > 1,
-        className: "tw-hidden",
-        onChange: handleInputChange
-      }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)(lucide_react__WEBPACK_IMPORTED_MODULE_2__["default"], {
-        className: "tw-w-10 tw-h-10 tw-text-gray-400"
-      }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("p", {
-        className: "tw-mt-4 tw-text-base tw-font-medium tw-text-gray-700 tw-text-center",
-        children: dragActive ? 'Drop the file here...' : 'Drag & drop a backup file here, or click to select'
-      }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsxs)("p", {
-        className: "tw-mt-2 tw-text-xs tw-text-gray-500",
-        children: ["Accepted: ", accept.replace(/\./g, '').replace(/,/g, ', ')]
-      }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsxs)("p", {
-        className: "tw-mt-1 tw-text-xs tw-text-gray-400",
-        children: ["Max size: ", Math.round(maxSize / (1024 * 1024)), "MB"]
-      })]
-    }), uploadProgress > 0 && uploadProgress < 100 && /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsxs)("div", {
-      className: "tw-w-full tw-bg-gray-200 tw-rounded tw-h-3 tw-mt-2",
-      children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("div", {
-        className: "tw-bg-blue-500 tw-h-3 tw-rounded tw-transition-all tw-duration-300",
-        style: {
-          width: "".concat(uploadProgress, "%")
-        }
-      }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsxs)("div", {
-        className: "tw-text-xs tw-text-gray-600 tw-mt-1 tw-text-right",
-        children: ["Uploading... ", uploadProgress, "%"]
-      })]
-    }), error && /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("div", {
-      className: "tw-text-red-600 tw-text-sm tw-mt-2",
-      children: error
-    }), files.length > 0 && /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsxs)("div", {
-      className: "tw-mt-4 tw-space-y-2",
-      children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsxs)("div", {
-        className: "tw-text-sm tw-font-semibold tw-text-gray-800",
-        children: ["Selected file", files.length > 1 ? 's' : '', ":"]
-      }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("ul", {
-        className: "tw-space-y-1",
-        children: files.map(function (file, idx) {
-          return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsxs)("li", {
-            className: "tw-flex tw-items-center tw-justify-between tw-bg-gray-100 tw-p-2 tw-rounded tw-text-gray-700",
-            children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsxs)("span", {
-              className: "tw-flex tw-items-center tw-gap-2",
-              children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsxs)("svg", {
-                className: "tw-w-4 tw-h-4 tw-text-gray-400",
-                fill: "none",
-                stroke: "currentColor",
-                viewBox: "0 0 24 24",
-                children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("path", {
-                  strokeLinecap: "round",
-                  strokeLinejoin: "round",
-                  strokeWidth: 2,
-                  d: "M4 16V4a2 2 0 012-2h8a2 2 0 012 2v12"
-                }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("path", {
-                  strokeLinecap: "round",
-                  strokeLinejoin: "round",
-                  strokeWidth: 2,
-                  d: "M4 16l4-4 4 4m0 0V4m0 12l-4-4-4 4"
-                })]
-              }), file.name, " ", /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsxs)("span", {
-                className: "tw-text-xs tw-text-gray-400",
-                children: ["(", (file.size / 1024 / 1024).toFixed(2), " MB)"]
-              })]
-            }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("button", {
-              type: "button",
-              className: "tw-ml-2 tw-p-1 tw-rounded hover:tw-bg-red-100",
-              onClick: function onClick() {
-                return removeFile(file);
-              },
-              "aria-label": "Remove ".concat(file.name),
-              children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("svg", {
-                className: "tw-w-4 tw-h-4 tw-text-red-500",
-                fill: "none",
-                stroke: "currentColor",
-                viewBox: "0 0 24 24",
-                children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("path", {
-                  strokeLinecap: "round",
-                  strokeLinejoin: "round",
-                  strokeWidth: 2,
-                  d: "M6 18L18 6M6 6l12 12"
-                })
-              })
-            })]
-          }, file.name + idx);
-        })
-      })]
-    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsxs)("div", {
-      className: "tw-flex tw-justify-end tw-gap-2",
-      children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("button", {
-        type: "button",
-        onClick: function onClick() {
-          return inputRef.current.click();
-        },
-        className: "tw-px-4 tw-py-2 tw-bg-blue-600 tw-text-white tw-rounded-md tw-font-medium tw-shadow-sm hover:tw-bg-blue-700 focus:tw-outline-none focus:tw-ring-2 focus:tw-ring-blue-200 tw-font-space-mono",
-        children: "Choose File"
-      }), files.length > 0 && /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("button", {
-        type: "button",
-        onClick: function onClick() {
-          if (onUpload) onUpload(files);
-          // toast({ message: 'Uploading file...', type: 'info' });
-        },
-        className: "tw-px-4 tw-py-2 tw-bg-green-600 tw-text-white tw-rounded-md tw-font-medium tw-shadow-sm hover:tw-bg-green-700 focus:tw-outline-none focus:tw-ring-2 focus:tw-ring-green-200 tw-font-space-mono",
-        children: "Upload"
-      })]
-    })]
-  });
-});
-/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (UploadBackup);
+}));
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (useDummyPackStore);
 
 /***/ }),
 
@@ -36450,228 +31344,6 @@ var getBackupScheduleConfig = /*#__PURE__*/function () {
   };
 }();
 
-/***/ }),
-
-/***/ "./src/util/store.js":
-/*!***************************!*\
-  !*** ./src/util/store.js ***!
-  \***************************/
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
-/* harmony export */ });
-/* harmony import */ var zustand__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! zustand */ "./node_modules/zustand/esm/react.mjs");
-/* harmony import */ var zustand_middleware_immer__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! zustand/middleware/immer */ "./node_modules/zustand/esm/middleware/immer.mjs");
-/* harmony import */ var _lib__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./lib */ "./src/util/lib.js");
-function _toConsumableArray(r) { return _arrayWithoutHoles(r) || _iterableToArray(r) || _unsupportedIterableToArray(r) || _nonIterableSpread(); }
-function _nonIterableSpread() { throw new TypeError("Invalid attempt to spread non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method."); }
-function _unsupportedIterableToArray(r, a) { if (r) { if ("string" == typeof r) return _arrayLikeToArray(r, a); var t = {}.toString.call(r).slice(8, -1); return "Object" === t && r.constructor && (t = r.constructor.name), "Map" === t || "Set" === t ? Array.from(r) : "Arguments" === t || /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(t) ? _arrayLikeToArray(r, a) : void 0; } }
-function _iterableToArray(r) { if ("undefined" != typeof Symbol && null != r[Symbol.iterator] || null != r["@@iterator"]) return Array.from(r); }
-function _arrayWithoutHoles(r) { if (Array.isArray(r)) return _arrayLikeToArray(r); }
-function _arrayLikeToArray(r, a) { (null == a || a > r.length) && (a = r.length); for (var e = 0, n = Array(a); e < a; e++) n[e] = r[e]; return n; }
-function _regenerator() { /*! regenerator-runtime -- Copyright (c) 2014-present, Facebook, Inc. -- license (MIT): https://github.com/babel/babel/blob/main/packages/babel-helpers/LICENSE */ var e, t, r = "function" == typeof Symbol ? Symbol : {}, n = r.iterator || "@@iterator", o = r.toStringTag || "@@toStringTag"; function i(r, n, o, i) { var c = n && n.prototype instanceof Generator ? n : Generator, u = Object.create(c.prototype); return _regeneratorDefine2(u, "_invoke", function (r, n, o) { var i, c, u, f = 0, p = o || [], y = !1, G = { p: 0, n: 0, v: e, a: d, f: d.bind(e, 4), d: function d(t, r) { return i = t, c = 0, u = e, G.n = r, a; } }; function d(r, n) { for (c = r, u = n, t = 0; !y && f && !o && t < p.length; t++) { var o, i = p[t], d = G.p, l = i[2]; r > 3 ? (o = l === n) && (u = i[(c = i[4]) ? 5 : (c = 3, 3)], i[4] = i[5] = e) : i[0] <= d && ((o = r < 2 && d < i[1]) ? (c = 0, G.v = n, G.n = i[1]) : d < l && (o = r < 3 || i[0] > n || n > l) && (i[4] = r, i[5] = n, G.n = l, c = 0)); } if (o || r > 1) return a; throw y = !0, n; } return function (o, p, l) { if (f > 1) throw TypeError("Generator is already running"); for (y && 1 === p && d(p, l), c = p, u = l; (t = c < 2 ? e : u) || !y;) { i || (c ? c < 3 ? (c > 1 && (G.n = -1), d(c, u)) : G.n = u : G.v = u); try { if (f = 2, i) { if (c || (o = "next"), t = i[o]) { if (!(t = t.call(i, u))) throw TypeError("iterator result is not an object"); if (!t.done) return t; u = t.value, c < 2 && (c = 0); } else 1 === c && (t = i["return"]) && t.call(i), c < 2 && (u = TypeError("The iterator does not provide a '" + o + "' method"), c = 1); i = e; } else if ((t = (y = G.n < 0) ? u : r.call(n, G)) !== a) break; } catch (t) { i = e, c = 1, u = t; } finally { f = 1; } } return { value: t, done: y }; }; }(r, o, i), !0), u; } var a = {}; function Generator() {} function GeneratorFunction() {} function GeneratorFunctionPrototype() {} t = Object.getPrototypeOf; var c = [][n] ? t(t([][n]())) : (_regeneratorDefine2(t = {}, n, function () { return this; }), t), u = GeneratorFunctionPrototype.prototype = Generator.prototype = Object.create(c); function f(e) { return Object.setPrototypeOf ? Object.setPrototypeOf(e, GeneratorFunctionPrototype) : (e.__proto__ = GeneratorFunctionPrototype, _regeneratorDefine2(e, o, "GeneratorFunction")), e.prototype = Object.create(u), e; } return GeneratorFunction.prototype = GeneratorFunctionPrototype, _regeneratorDefine2(u, "constructor", GeneratorFunctionPrototype), _regeneratorDefine2(GeneratorFunctionPrototype, "constructor", GeneratorFunction), GeneratorFunction.displayName = "GeneratorFunction", _regeneratorDefine2(GeneratorFunctionPrototype, o, "GeneratorFunction"), _regeneratorDefine2(u), _regeneratorDefine2(u, o, "Generator"), _regeneratorDefine2(u, n, function () { return this; }), _regeneratorDefine2(u, "toString", function () { return "[object Generator]"; }), (_regenerator = function _regenerator() { return { w: i, m: f }; })(); }
-function _regeneratorDefine2(e, r, n, t) { var i = Object.defineProperty; try { i({}, "", {}); } catch (e) { i = 0; } _regeneratorDefine2 = function _regeneratorDefine(e, r, n, t) { if (r) i ? i(e, r, { value: n, enumerable: !t, configurable: !t, writable: !t }) : e[r] = n;else { var o = function o(r, n) { _regeneratorDefine2(e, r, function (e) { return this._invoke(r, n, e); }); }; o("next", 0), o("throw", 1), o("return", 2); } }, _regeneratorDefine2(e, r, n, t); }
-function asyncGeneratorStep(n, t, e, r, o, a, c) { try { var i = n[a](c), u = i.value; } catch (n) { return void e(n); } i.done ? t(u) : Promise.resolve(u).then(r, o); }
-function _asyncToGenerator(n) { return function () { var t = this, e = arguments; return new Promise(function (r, o) { var a = n.apply(t, e); function _next(n) { asyncGeneratorStep(a, r, o, _next, _throw, "next", n); } function _throw(n) { asyncGeneratorStep(a, r, o, _next, _throw, "throw", n); } _next(void 0); }); }; }
-
-
-
-var useBackupStore = (0,zustand__WEBPACK_IMPORTED_MODULE_0__.create)((0,zustand_middleware_immer__WEBPACK_IMPORTED_MODULE_1__.immer)(function (set, get) {
-  return {
-    // State
-    backups: [],
-    backupProcess: [],
-    inProgress: false,
-    inProgressStep: 0,
-    restoreProcess: {
-      process: [],
-      inProgress: false,
-      inProgressStep: 0
-    },
-    // Actions
-    setInProgress: function setInProgress(inProgress) {
-      return set(function (state) {
-        state.inProgress = inProgress;
-      });
-    },
-    setInProgressStep: function setInProgressStep(inProgressStep) {
-      return set(function (state) {
-        state.inProgressStep = inProgressStep;
-      });
-    },
-    setRestoreInProgress: function setRestoreInProgress(inProgress) {
-      return set(function (state) {
-        state.restoreProcess.inProgress = inProgress;
-      });
-    },
-    setRestoreInProgressStep: function setRestoreInProgressStep(inProgressStep) {
-      return set(function (state) {
-        state.restoreProcess.inProgressStep = inProgressStep;
-      });
-    },
-    setBackups: function setBackups(backups) {
-      return set(function (state) {
-        state.backups = backups;
-      });
-    },
-    deleteBackupById: function deleteBackupById(backupId) {
-      return set(function (state) {
-        state.backups = state.backups.filter(function (backup) {
-          return backup.id !== backupId;
-        });
-      });
-    },
-    buildBackupProcess: function buildBackupProcess(backupConfig) {
-      var name = backupConfig.name,
-        types = backupConfig.types;
-      // backup process had 2 steps: 1. generate config file containing the backup config, 2. generate the backup with types (database, plugins, themes, uploads)
-      var process = [{
-        step: 1,
-        name: 'Generate Config File',
-        description: '📝 Let\'s set the stage! Creating a shiny new config file with your backup preferences. Almost like writing a recipe for your perfect backup. 🍰',
-        action: 'worrprba_ajax_create_backup_config_file',
-        payload: {
-          name: name,
-          types: types
-        }
-      }];
-      var typeMessages = {
-        database: "\uD83D\uDDC4\uFE0F Safeguarding your precious database records! \uD83D\uDCCA Our data guardians are carefully preserving every table and relationship. Your information is in good hands! \uD83D\uDD12\u2728",
-        plugin: "\uD83D\uDD0C Securing your powerful plugins! \uD83D\uDEE0\uFE0F Each extension is being carefully wrapped and preserved. Your site's functionality is our top priority! \uD83D\uDE80\uD83D\uDCAB",
-        theme: "\uD83C\uDFA8 Preserving your beautiful theme! \uD83C\uDFAD Every design element and customization is being carefully archived. Your site's look and feel is safe with us! \uD83C\uDFAA\u2728",
-        uploads: "\uD83D\uDCC1 Backing up your uploads folder! \uD83D\uDDBC\uFE0F Every image, document, and media file is being carefully preserved. Your content is our treasure! \uD83D\uDC8E\uD83C\uDF1F"
-      };
-
-      // for each types, add a step to the process
-      types.forEach(function (type) {
-        process.push({
-          step: process.length + 1,
-          name: "Generating ".concat(type, " backup"),
-          description: typeMessages[type],
-          action: "worrprba_ajax_generate_backup_".concat(type),
-          payload: {
-            name: name,
-            type: type
-          }
-        });
-      });
-
-      // add done step
-      process.push({
-        step: process.length + 1,
-        name: 'Done',
-        description: '🎉 All done! Your backup is complete and safe. Time to celebrate! 🥳',
-        action: 'worrprba_ajax_generate_backup_done',
-        payload: {}
-      });
-      set(function (state) {
-        state.backupProcess = process;
-      });
-
-      // set inProgress to true
-      set(function (state) {
-        state.inProgress = true;
-      });
-
-      // set step to 1
-      set(function (state) {
-        state.inProgressStep = 1;
-      });
-    },
-    fetchBackups_Fn: function fetchBackups_Fn() {
-      return _asyncToGenerator(/*#__PURE__*/_regenerator().m(function _callee() {
-        var response, _t;
-        return _regenerator().w(function (_context) {
-          while (1) switch (_context.p = _context.n) {
-            case 0:
-              _context.p = 0;
-              _context.n = 1;
-              return (0,_lib__WEBPACK_IMPORTED_MODULE_2__.getBackups)();
-            case 1:
-              response = _context.v;
-              if (response.success == true) {
-                set(function (state) {
-                  state.backups = response.data;
-                });
-              }
-              _context.n = 3;
-              break;
-            case 2:
-              _context.p = 2;
-              _t = _context.v;
-              console.error('Error fetching backups:', _t);
-            case 3:
-              return _context.a(2);
-          }
-        }, _callee, null, [[0, 2]]);
-      }))();
-    },
-    buildRestoreProcess: function buildRestoreProcess(backup) {
-      var folder_name = backup.folder_name;
-      var types = _toConsumableArray(backup.types);
-      var typeMessages = {
-        database: "\uD83D\uDDC4\uFE0F Restoring your precious database records! \uD83D\uDCCA Our data wizards are carefully bringing back every table and relationship. Your information is coming back to life! \uD83D\uDD04\u2728",
-        plugin: "\uD83D\uDD0C Restoring your powerful plugins! \uD83D\uDEE0\uFE0F Each extension is being carefully unwrapped and brought back online. Your site's functionality is getting its groove back! \uD83D\uDE80\uD83D\uDCAB",
-        theme: "\uD83C\uDFA8 Restoring your beautiful theme! \uD83C\uDFAD Every design element and customization is being carefully revived. Your site's look and feel is getting its glow back! \uD83C\uDFAA\u2728",
-        uploads: "\uD83D\uDCC1 Restoring your uploads folder! \uD83D\uDDBC\uFE0F Every image, document, and media file is being carefully brought back. Your content is getting its sparkle back! \uD83D\uDC8E\uD83C\uDF1F"
-      };
-      var process = [{
-        step: 1,
-        name: 'Read Config File',
-        description: '📖 Oop, let me check what you wanted restored! Reading your backup config like a pro detective 🔍✨',
-        action: 'worrprba_ajax_restore_read_backup_config_file',
-        payload: {
-          folder_name: folder_name,
-          types: types.join(',')
-        }
-      }];
-
-      // check types include database, and move it to the end of the array
-      if (types.includes('database')) {
-        types.push(types.splice(types.indexOf('database'), 1)[0]);
-        console.log('types', types);
-      }
-
-      // for each type, add a step to the process
-      types.forEach(function (type) {
-        process.push({
-          step: process.length + 1,
-          name: "Restoring ".concat(type),
-          description: typeMessages[type],
-          action: "worrprba_ajax_restore_".concat(type),
-          payload: {
-            folder_name: folder_name,
-            type: type
-          }
-        });
-      });
-
-      // add done step
-      process.push({
-        step: process.length + 1,
-        name: 'Done',
-        description: '🎉 All done! Your restore is complete and everything is back to normal. Time to celebrate! 🥳',
-        action: 'worrprba_ajax_restore_done',
-        payload: {
-          folder_name: folder_name
-        }
-      });
-      console.log('process', process);
-      set(function (state) {
-        state.restoreProcess.process = process;
-        // set inProgress to true
-        state.restoreProcess.inProgress = true;
-        // set inProgressStep to 1
-        state.restoreProcess.inProgressStep = 1;
-      });
-    }
-  };
-}));
-/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (useBackupStore);
-
 /***/ })
 
 /******/ 	});
@@ -36758,17 +31430,21 @@ var __webpack_exports__ = {};
 // This entry needs to be wrapped in an IIFE because it needs to be in strict mode.
 (() => {
 "use strict";
-/*!*********************!*\
-  !*** ./src/main.js ***!
-  \*********************/
+/*!*****************************!*\
+  !*** ./src/dummy-center.js ***!
+  \*****************************/
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var react_dom_client__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react-dom/client */ "./node_modules/react-dom/client.js");
-/* harmony import */ var _App__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./App */ "./src/App.jsx");
+/* harmony import */ var _WorrprbaDummyCenter__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./WorrprbaDummyCenter */ "./src/WorrprbaDummyCenter.jsx");
 /* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! react/jsx-runtime */ "./node_modules/react/jsx-runtime.js");
 /**
- * Main file
+ * Dummy Center.
+ * 
+ * @package Worry_Proof_Backup
+ * @subpackage Dummy_Center
+ * @since 0.2.0
  */
 
 
@@ -36779,21 +31455,19 @@ __webpack_require__.r(__webpack_exports__);
   'use strict';
 
   // react dom ready
-  var WpBackup_Init = function WpBackup_Init() {
-    // root id "WP-BACKUP-ADMIN"
-    var el = document.getElementById('WP-BACKUP-ADMIN');
+  var WorrprbaDummyCenter_Init = function WorrprbaDummyCenter_Init() {
+    // root id "WORRPRBA-DUMMY-PACK-CENTER-ROOT"
+    var el = document.getElementById('WORRPRBA-DUMMY-PACK-CENTER-ROOT');
 
     // check if el is exists
-    if (!el) {
-      return;
-    }
+    if (!el) return;
     var root = (0,react_dom_client__WEBPACK_IMPORTED_MODULE_1__.createRoot)(el);
-    root.render(/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)(_App__WEBPACK_IMPORTED_MODULE_2__["default"], {}));
+    root.render(/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)(_WorrprbaDummyCenter__WEBPACK_IMPORTED_MODULE_2__["default"], {}));
   };
 
   // dom ready
   $(document).ready(function () {
-    WpBackup_Init();
+    WorrprbaDummyCenter_Init();
   });
 })(jQuery);
 })();
