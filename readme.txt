@@ -5,7 +5,7 @@ Tags: backup, restore, import, export, database
 Requires at least: 6.0
 Tested up to: 6.9
 Requires PHP: 8.0
-Stable tag: 0.2.1
+Stable tag: 0.2.2
 License: GPLv2 or later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
 
@@ -82,6 +82,13 @@ Yes, you can use the import/export tools to move your site or demo content betwe
 * [Plugin Source](https://github.com/miketropi/worry-proof-backup)
 
 == Changelog ==
+
+= 0.2.2 =
+* Update: Installation of dummy/demo data packs now requires PHP 8.0 or higher and WordPress 6.0 or above for optimal compatibility and performance.
+* Improvement: Enhanced validation and user feedback for plugin/theme/Uploads restore steps when installing demo packs from Dummy Pack Center.
+* Fix: Resolved issues with extracting large zip files that caused incomplete restores on certain hosting providers.
+* Fix: Improved support for excluding backup plugin folders from uploads restore to prevent unnecessary file overwrite.
+* Maintenance: Updated documentation, requirements notices, and internal callbacks for more robust error handling during demo/dummy pack install and restore.
 
 = 0.2.1 =
 * New: Install Dummy Pack Center—one-click install of prebuilt demo/dummy content packs.
