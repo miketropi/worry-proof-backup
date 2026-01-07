@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { ExternalLink, Download, Code, Server, FileArchive, Package, Info } from 'lucide-react';
+import { ExternalLink, Download, Code, Server, FileArchive, Package, Info, LockKeyhole } from 'lucide-react';
 import { validateVersionPackageRequirements } from '../../util/dummyPackLib';
 import PluginRequirementsModal from './PluginRequirementsModal';
 
@@ -88,6 +88,12 @@ const PackCard = ({ pack, onInstall, onPreview }) => {
             <Package className="tw-w-16 tw-h-16 tw-text-gray-300" />
           </div>
         )}
+
+        {pack?.free && (
+        <span className="tw-absolute tw-top-2 tw-left-2 tw-bg-green-500 tw-text-white tw-text-xs tw-font-semibold tw-px-2 tw-py-0.5 tw-rounded-full tw-z-10 tw-font-space-mono tw-border-2 tw-border-white">
+          Free
+        </span>
+        )}
       </div>
 
       {/* Content */}
@@ -99,7 +105,7 @@ const PackCard = ({ pack, onInstall, onPreview }) => {
 
         {/* Description */}
         {pack.description && (
-          <p className="tw-text-xs tw-text-gray-600 tw-leading-relaxed tw-mb-3 tw-line-clamp-2 tw-font-space-mono">
+          <p className="tw-text-xs tw-text-gray-600 tw-leading-relaxed tw-mb-3 tw-line-clamp-2 tw-font-space-mono" title={ pack.description }>
             {pack.description
               ? pack.description.split(" ").slice(0, 10).join(" ") +
                 (pack.description.split(" ").length > 10 ? "..." : "")
@@ -218,29 +224,46 @@ const PackCard = ({ pack, onInstall, onPreview }) => {
               <span>Preview</span>
             </button>
           )}
-          <button
-            onClick={handleInstall}
-            className={
-              "tw-flex-1 tw-inline-flex tw-items-center tw-justify-center tw-gap-1.5 tw-px-3 tw-py-2 tw-text-xs tw-font-semibold tw-text-white tw-bg-blue-600 tw-border tw-border-transparent tw-rounded-md hover:tw-bg-blue-700 focus:tw-outline-none focus:tw-ring-2 focus:tw-ring-offset-2 focus:tw-ring-blue-500 tw-transition-colors __tw-font-space-mono" +
-              (
-                (pack.required && 
-                pack.required.length > 0 && 
-                !pack.required.every(req => validateVersionPackageRequirements(req.type, req.value)) ||
-                !buttonInstallActiveByPluginRequirements)
-                  ? " tw-opacity-60 tw-cursor-not-allowed hover:tw-bg-blue-600"
-                  : ""
-              )
-            }
-            disabled={
-              (pack.required &&
-              pack.required.length > 0 &&
-              !pack.required.every(req => validateVersionPackageRequirements(req.type, req.value)) ||
-              !buttonInstallActiveByPluginRequirements)
-            }
-          >
-            <Download className="tw-w-4 tw-h-4" />
-            <span>Install</span>
-          </button>
+          {
+            (() => {
+              if(pack.locked) {
+                return <button
+                  className={
+                    "tw-flex-1 tw-inline-flex tw-items-center tw-justify-center tw-gap-1.5 tw-px-3 tw-py-2 tw-text-xs tw-font-semibold tw-text-white tw-bg-blue-600 tw-border tw-border-transparent tw-rounded-md hover:tw-bg-blue-700 focus:tw-outline-none focus:tw-ring-2 focus:tw-ring-offset-2 focus:tw-ring-blue-500 tw-transition-colors __tw-font-space-mono tw-opacity-60 tw-cursor-not-allowed hover:tw-bg-blue-600"
+                  }
+                  disabled={true}
+                >
+                  <LockKeyhole className="tw-w-4 tw-h-4" />
+                  <span>Locked</span>
+                </button>
+              }
+
+              return <button
+                onClick={handleInstall}
+                className={
+                  "tw-flex-1 tw-inline-flex tw-items-center tw-justify-center tw-gap-1.5 tw-px-3 tw-py-2 tw-text-xs tw-font-semibold tw-text-white tw-bg-blue-600 tw-border tw-border-transparent tw-rounded-md hover:tw-bg-blue-700 focus:tw-outline-none focus:tw-ring-2 focus:tw-ring-offset-2 focus:tw-ring-blue-500 tw-transition-colors __tw-font-space-mono" +
+                  (
+                    (pack.required && 
+                    pack.required.length > 0 && 
+                    !pack.required.every(req => validateVersionPackageRequirements(req.type, req.value)) ||
+                    !buttonInstallActiveByPluginRequirements)
+                      ? " tw-opacity-60 tw-cursor-not-allowed hover:tw-bg-blue-600"
+                      : ""
+                  )
+                }
+                disabled={
+                  (pack.required &&
+                  pack.required.length > 0 &&
+                  !pack.required.every(req => validateVersionPackageRequirements(req.type, req.value)) ||
+                  !buttonInstallActiveByPluginRequirements)
+                }
+              >
+                <Download className="tw-w-4 tw-h-4" />
+                <span>Install</span>
+              </button>
+            })()
+          }
+          
         </div>
       </div>
 

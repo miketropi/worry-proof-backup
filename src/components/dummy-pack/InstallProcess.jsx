@@ -2,10 +2,12 @@ import { useState, useEffect } from 'react';
 import useDummyPackStore from '../../util/dummyPackStore';
 import Modal from '../Modal';
 import { doInstallProcess } from '../../util/dummyPackLib';
+import useDummyPackPreinstall from '../../hooks/useDummyPackPreinstall';
 
 export default function InstallProcess() {
-  const { setInstallProcessInProgress, setInstallProcessInProgressStep, setInstallProcessModalOpen, ...rest } = useDummyPackStore();
+  const { setInstallProcessInProgress, setInstallProcessInProgressStep, setInstallProcessModalOpen, resetInstallProcess, ...rest } = useDummyPackStore();
   const { process, inProgress, inProgressStep, isModalOpen, packData } = rest.installProcess;
+  const { resultPreinstall, errorPreinstall, loadingPreinstall } = useDummyPackPreinstall(packData?.ID);
   const [error, setError] = useState(null);
   const [payload, setPayload] = useState({});
   const [allInstallProcessDone, setAllInstallProcessDone] = useState(false);
@@ -72,15 +74,8 @@ export default function InstallProcess() {
 
   if(!packData) return <></>
 
-  return (
-    <Modal
-      isOpen={ isModalOpen }
-      onClose={ () => {
-        setInstallProcessModalOpen(false);
-      } }
-      title={ `Install "${packData.name}"` }
-      size='lg'
-    >
+  const processStepContent = (
+    <>
       <div className="tw-bg-yellow-50 tw-border tw-border-yellow-200 tw-p-4 tw-rounded-md tw-mb-6 tw-flex tw-items-start tw-gap-3">
         <svg className="tw-w-5 tw-h-5 tw-text-yellow-400 tw-mt-0.5 tw-flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 9v2m0 4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
@@ -163,7 +158,10 @@ export default function InstallProcess() {
             className="tw-inline-flex tw-items-center tw-px-4 tw-py-2 tw-bg-gray-100 hover:tw-bg-gray-200 tw-text-gray-700 tw-rounded-md tw-font-medium tw-shadow-sm tw-transition-all tw-duration-150 focus:tw-outline-none focus:tw-ring-2 focus:tw-ring-offset-2 focus:tw-ring-gray-400 tw-mr-2"
             aria-label="Close"
             onClick={ () => {
-              setInstallProcessModalOpen(false);
+              // setInstallProcessModalOpen(false);
+              resetInstallProcess();
+              setAllInstallProcessDone(false);
+              setError(null);
             } }
           >
             Close
@@ -185,7 +183,10 @@ export default function InstallProcess() {
             className="tw-inline-flex tw-items-center tw-px-4 tw-py-2 tw-bg-gray-100 hover:tw-bg-gray-200 tw-text-gray-700 tw-rounded-md tw-font-medium tw-shadow-sm tw-transition-all tw-duration-150 focus:tw-outline-none focus:tw-ring-2 focus:tw-ring-offset-2 focus:tw-ring-gray-400 tw-mr-2"
             aria-label="Close"
             onClick={ () => {
-              setInstallProcessModalOpen(false);
+              // setInstallProcessModalOpen(false);
+              resetInstallProcess();
+              setAllInstallProcessDone(false);
+              setError(null);
             } }
           >
             Close
@@ -204,6 +205,70 @@ export default function InstallProcess() {
           )}
         </div>
       )}
+    </>
+  )
+
+  return (
+    <Modal
+      isOpen={ isModalOpen }
+      onClose={ () => {
+        // setInstallProcessModalOpen(false);
+        resetInstallProcess();
+        setAllInstallProcessDone(false);
+        setError(null);
+      } }
+      title={ `Install "${packData.name}"` }
+      size='lg'
+    >
+      {
+        (() => {
+          if(loadingPreinstall) {
+            return (
+              <div className="tw-flex tw-flex-col tw-items-center tw-justify-center tw-py-12">
+                <svg className="tw-w-4 tw-h-4 tw-text-blue-400 tw-animate-spin" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <circle className="tw-opacity-25" cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="4"></circle>
+                  <path className="tw-opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8v8z"></path>
+                </svg>
+                <span className="tw-font-semibold tw-mt-2">Validating package, please wait...</span>
+              </div>
+            );
+          }
+
+          if(errorPreinstall) {
+            return (
+              <>
+                <div className="tw-bg-yellow-50 tw-border tw-border-yellow-200 tw-rounded-md tw-p-4 tw-flex tw-items-start tw-gap-3 tw-mx-auto tw-max-w-md">
+                  <svg className="tw-w-5 tw-h-5 tw-text-yellow-400 tw-mt-0.5 tw-flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 9v2m0 4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+                  </svg>
+                  <div>
+                    <span className="tw-block tw-font-semibold tw-text-yellow-900">Warning: Failed to Validate Package</span>
+                    <span className="tw-text-xs tw-text-yellow-800 tw-font-space-mono">{errorPreinstall}</span>
+                  </div>
+                </div>
+
+                <div className="tw-mt-8 tw-flex tw-justify-end">
+                  <button
+                    type="button"
+                    className="tw-inline-flex tw-items-center tw-px-4 tw-py-2 tw-bg-gray-100 hover:tw-bg-gray-200 tw-text-gray-700 tw-rounded-md tw-font-medium tw-shadow-sm tw-transition-all tw-duration-150 focus:tw-outline-none focus:tw-ring-2 focus:tw-ring-offset-2 focus:tw-ring-gray-400 tw-mr-2"
+                    aria-label="Close"
+                    onClick={ () => {
+                      // setInstallProcessModalOpen(false);
+                      resetInstallProcess();
+                      setAllInstallProcessDone(false);
+                      setError(null);
+                    } }
+                  >
+                    Close
+                  </button>
+                </div>
+              </>
+            );
+          }
+
+          return processStepContent
+        })()
+      }
     </Modal>
   );
 }
