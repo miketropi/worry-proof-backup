@@ -1,3 +1,109 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+/** Basic formatting styles for HTML content in .__html-content-styled parent */
+.__html-content-styled {
+  font-family: inherit;
+  font-size: 1rem;
+  line-height: 1.7;
+}
+
+.__html-content-styled b,
+.__html-content-styled strong {
+  font-weight: 600;
+}
+
+.__html-content-styled i,
+.__html-content-styled em {
+  font-style: italic;
+}
+
+.__html-content-styled u {
+  text-decoration: underline;
+}
+
+.__html-content-styled a {
+  color: #2563eb;
+  text-decoration: underline;
+  transition: color 0.2s;
+  word-break: break-all;
+}
+.__html-content-styled a:hover {
+  color: #1d4ed8;
+}
+
+.__html-content-styled p {
+  margin-bottom: 0.8em;
+  margin-top: 0;
+}
+
+.__html-content-styled ul,
+.__html-content-styled ol {
+  margin: 0 0 1em 1.5em;
+  padding: 0;
+}
+
+.__html-content-styled ul {
+  list-style-type: disc;
+}
+
+.__html-content-styled ol {
+  list-style-type: decimal;
+}
+
+.__html-content-styled li {
+  margin-bottom: 0.25em;
+}
+
+.__html-content-styled blockquote {
+  margin: 0.8em 0;
+  padding: 0.6em 1em;
+  border-left: 4px solid #d1d5db;
+  background: #f9fafb;
+  color: #374151;
+  font-style: italic;
+}
+
+.__html-content-styled code {
+  font-family: "Fira Mono", "Menlo", "Monaco", "Consolas", monospace;
+  font-size: 0.95em;
+  background: #f3f4f6;
+  color: #334155;
+  padding: 0.15em 0.35em;
+  border-radius: 4px;
+}
+
+.__html-content-styled pre {
+  font-family: "Fira Mono", "Menlo", "Monaco", "Consolas", monospace;
+  font-size: 0.95em;
+  background: #f3f4f6;
+  color: #334155;
+  padding: 1em;
+  border-radius: 4px;
+  overflow-x: auto;
+  margin-bottom: 1em;
+}
+
+.__html-content-styled h1,
+.__html-content-styled h2,
+.__html-content-styled h3,
+.__html-content-styled h4,
+.__html-content-styled h5,
+.__html-content-styled h6 {
+  font-weight: 600;
+  margin-top: 1.2em;
+  margin-bottom: 0.6em;
+  line-height: 1.22;
+}
+
+.__html-content-styled h1 { font-size: 2rem; }
+.__html-content-styled h2 { font-size: 1.5rem; }
+.__html-content-styled h3 { font-size: 1.25rem; }
+.__html-content-styled h4 { font-size: 1.12rem; }
+.__html-content-styled h5 { font-size: 1.05rem; }
+.__html-content-styled h6 { font-size: 1rem; }
+
+.__html-content-styled > :last-child {
+  margin-bottom: 0 !important;
+}

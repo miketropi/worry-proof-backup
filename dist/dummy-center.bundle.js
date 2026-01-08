@@ -30216,7 +30216,7 @@ var Heading = function Heading(_ref) {
   return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsxs)("div", {
     className: "tw-bg-white tw-p-8 tw-mb-8 tw-border tw-border-gray-200 ".concat(className),
     children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsxs)("h2", {
-      className: "tw-text-2xl tw-font-semibold tw-text-gray-900 tw-mb-2 tw-flex tw-items-center tw-gap-2",
+      className: "tw-text-2xl tw-font-semibold tw-text-gray-900 tw-mb-3 tw-flex tw-items-center tw-gap-2",
       children: [IconComponent && /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("span", {
         className: "tw-bg-gray-100 tw-p-2 tw-rounded-xl tw-shadow-sm tw-flex tw-items-center tw-justify-center tw-border tw-border-gray-200 tw-mr-1",
         children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("span", {
@@ -30224,9 +30224,11 @@ var Heading = function Heading(_ref) {
           children: IconComponent
         })
       }), title]
-    }), subtitle && /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("p", {
-      className: "tw-text-sm tw-text-gray-600 tw-leading-relaxed",
-      children: subtitle
+    }), subtitle && /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("div", {
+      className: "tw-text-sm tw-text-gray-600 tw-leading-relaxed __html-content-styled",
+      dangerouslySetInnerHTML: {
+        __html: subtitle
+      }
     })]
   });
 };
@@ -30310,6 +30312,10 @@ function InstallProcess() {
     _useState8 = _slicedToArray(_useState7, 2),
     responsePerStep = _useState8[0],
     setResponsePerStep = _useState8[1];
+  var _useState9 = (0,react__WEBPACK_IMPORTED_MODULE_0__.useState)(false),
+    _useState0 = _slicedToArray(_useState9, 2),
+    showAllSteps = _useState0[0],
+    setShowAllSteps = _useState0[1];
   var onStartInstallProcess = function onStartInstallProcess() {
     setInstallProcessInProgress(true);
   };
@@ -30386,6 +30392,68 @@ function InstallProcess() {
     }
   }, [inProgressStep, inProgress]);
   if (!packData) return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.Fragment, {});
+
+  // Get visible steps: previous, current, and next
+  var getVisibleSteps = function getVisibleSteps() {
+    var visibleSteps = [];
+
+    // Handle case when all steps are completed (inProgressStep >= process.length)
+    if (inProgressStep >= process.length && process.length > 0) {
+      var lastIdx = process.length - 1;
+      // Show last 2 steps as completed, or just the last one if there's only 1 step
+      if (lastIdx > 0) {
+        var secondLastIdx = lastIdx - 1;
+        if (process[secondLastIdx]) {
+          visibleSteps.push({
+            step: process[secondLastIdx],
+            idx: secondLastIdx,
+            type: 'completed'
+          });
+        }
+      }
+      if (process[lastIdx]) {
+        visibleSteps.push({
+          step: process[lastIdx],
+          idx: lastIdx,
+          type: 'completed'
+        });
+      }
+      return visibleSteps;
+    }
+
+    // Normal case: show previous, current, and next
+    var safeInProgressStep = inProgressStep < process.length ? inProgressStep : Math.max(0, process.length - 1);
+    var prevIdx = safeInProgressStep > 0 ? safeInProgressStep - 1 : null;
+    var currentIdx = safeInProgressStep < process.length ? safeInProgressStep : null;
+    var nextIdx = safeInProgressStep < process.length - 1 ? safeInProgressStep + 1 : null;
+    if (prevIdx !== null && prevIdx >= 0 && prevIdx < process.length && process[prevIdx]) {
+      visibleSteps.push({
+        step: process[prevIdx],
+        idx: prevIdx,
+        type: 'completed'
+      });
+    }
+    if (currentIdx !== null && currentIdx >= 0 && currentIdx < process.length && process[currentIdx]) {
+      visibleSteps.push({
+        step: process[currentIdx],
+        idx: currentIdx,
+        type: 'current'
+      });
+    }
+    if (nextIdx !== null && nextIdx >= 0 && nextIdx < process.length && process[nextIdx]) {
+      visibleSteps.push({
+        step: process[nextIdx],
+        idx: nextIdx,
+        type: 'upcoming'
+      });
+    }
+    return visibleSteps;
+  };
+  var visibleSteps = getVisibleSteps();
+  var totalSteps = process.length;
+  var completedSteps = inProgressStep;
+  var progressPercentage = totalSteps > 0 ? Math.round(completedSteps / totalSteps * 100) : 0;
+  var currentStepNumber = inProgress ? inProgressStep + 1 : 0;
   var processStepContent = /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsxs)(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.Fragment, {
     children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsxs)("div", {
       className: "tw-bg-yellow-50 tw-border tw-border-yellow-200 tw-p-4 tw-rounded-md tw-mb-6 tw-flex tw-items-start tw-gap-3",
@@ -30412,12 +30480,108 @@ function InstallProcess() {
           children: "Important:"
         }), " To ensure the installation process works properly, please do not close your browser, reload the page, or close this popup while the installation is in progress."]
       })]
+    }), inProgress && /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsxs)("div", {
+      className: "tw-bg-gradient-to-r tw-from-blue-50 tw-to-indigo-50 tw-border tw-border-blue-200 tw-rounded-lg tw-p-5 tw-mb-6",
+      children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsxs)("div", {
+        className: "tw-flex tw-items-center tw-justify-between tw-mb-4",
+        children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsxs)("div", {
+          children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)("h3", {
+            className: "tw-text-sm tw-font-semibold tw-text-gray-900 tw-mb-1",
+            children: "Installation Progress"
+          }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsxs)("p", {
+            className: "tw-text-xs tw-text-gray-600 tw-font-space-mono",
+            children: [completedSteps, " of ", totalSteps, " steps completed"]
+          })]
+        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsxs)("div", {
+          className: "tw-text-right tw-font-space-mono",
+          children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsxs)("div", {
+            className: "tw-text-2xl tw-font-bold tw-text-blue-600",
+            children: [progressPercentage, "%"]
+          }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)("div", {
+            className: "tw-text-xs tw-text-gray-500 tw-mt-1",
+            children: "Complete"
+          })]
+        })]
+      }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)("div", {
+        className: "tw-w-full tw-bg-gray-200 tw-rounded-full tw-h-3 tw-mb-3 tw-overflow-hidden",
+        children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)("div", {
+          className: "tw-bg-gradient-to-r tw-from-blue-500 tw-to-indigo-600 tw-h-3 tw-rounded-full tw-transition-all tw-duration-500 tw-ease-out",
+          style: {
+            width: "".concat(progressPercentage, "%")
+          }
+        })
+      }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsxs)("div", {
+        className: "tw-flex tw-items-center tw-justify-between tw-text-xs tw-font-space-mono",
+        children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsxs)("span", {
+          className: "tw-text-gray-600 tw-font-medium",
+          children: ["Current: Step ", currentStepNumber, "/", totalSteps]
+        }), process[inProgressStep] && inProgressStep < process.length && /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)("span", {
+          className: "tw-text-blue-700 tw-font-semibold",
+          children: process[inProgressStep].name
+        })]
+      })]
+    }), !inProgress && !allInstallProcessDone && /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsxs)("div", {
+      className: "tw-bg-gray-50 tw-border tw-border-gray-200 tw-rounded-lg tw-p-4 tw-mb-6",
+      children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsxs)("div", {
+        className: "tw-flex tw-items-center tw-justify-between",
+        children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsxs)("div", {
+          children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)("h3", {
+            className: "tw-text-sm tw-font-semibold tw-text-gray-900 tw-mb-1",
+            children: "Installation Summary"
+          }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsxs)("p", {
+            className: "tw-text-xs tw-text-gray-600 tw-font-space-mono",
+            children: [totalSteps, " steps will be executed"]
+          })]
+        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsxs)("div", {
+          className: "tw-text-right tw-font-space-mono",
+          children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)("div", {
+            className: "tw-text-lg tw-font-bold tw-text-gray-600",
+            children: totalSteps
+          }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)("div", {
+            className: "tw-text-xs tw-text-gray-500",
+            children: "Steps"
+          })]
+        })]
+      }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)("div", {
+        className: "tw-mt-4 tw-pt-4 tw-border-t tw-border-gray-200 tw-font-space-mono",
+        children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsxs)("div", {
+          className: "tw-flex tw-flex-wrap tw-gap-2",
+          children: [(showAllSteps ? process : process.slice(0, 3)).map(function (step, idx) {
+            return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsxs)("div", {
+              className: "tw-flex tw-items-center tw-gap-2 tw-text-xs",
+              children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)("span", {
+                className: "tw-flex tw-items-center tw-justify-center tw-w-5 tw-h-5 tw-rounded-full tw-bg-gray-300 tw-text-gray-600 tw-font-semibold tw-text-xs",
+                children: step.step
+              }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)("span", {
+                className: "tw-text-gray-600",
+                children: step.name
+              })]
+            }, idx);
+          }), totalSteps > 3 && /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)("div", {
+            className: "tw-flex tw-items-center tw-gap-2 tw-text-xs tw-text-gray-500",
+            onClick: function onClick(e) {
+              e.preventDefault();
+              e.stopPropagation();
+              setShowAllSteps(!showAllSteps);
+            },
+            children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)("span", {
+              className: "tw-cursor-pointer tw-underline hover:tw-text-blue-600",
+              children: showAllSteps ? 'Show less' : "Show all (".concat(totalSteps, ")")
+            })
+          })]
+        })
+      })]
     }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)("ol", {
-      className: "tw-relative tw-border-l-2 tw-border-blue-200 tw-ml-4",
-      children: process.map(function (step, idx) {
+      className: ['tw-relative tw-border-l-2 tw-border-blue-200 tw-ml-4', !inProgress ? 'hidden' : '', allInstallProcessDone ? 'hidden' : ''].join(' '),
+      children: visibleSteps.map(function (_ref2) {
         var _responsePerStep$step, _responsePerStep$step2;
-        var isCompleted = inProgressStep > idx; // step.step;
-        var isCurrent = inProgressStep === idx; // step.step;
+        var step = _ref2.step,
+          idx = _ref2.idx,
+          type = _ref2.type;
+        // Safety check: skip if step is undefined
+        if (!step) return null;
+        var isCompleted = type === 'completed';
+        var isCurrent = type === 'current';
         return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsxs)("li", {
           className: "tw-mb-8 tw-ml-6 tw-last:mb-0",
           children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)("span", {
@@ -30445,7 +30609,7 @@ function InstallProcess() {
             }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)("p", {
               className: "tw-mt-1 tw-text-sm tw-text-gray-500",
               children: step.description
-            }), error && inProgressStep === step.step && /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)("div", {
+            }), error && isCurrent && /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)("div", {
               className: "tw-mt-3 tw-p-3 tw-bg-red-50 tw-border tw-border-red-200 tw-rounded-md",
               children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsxs)("div", {
                 className: "tw-flex tw-items-start tw-gap-2",
@@ -30514,6 +30678,53 @@ function InstallProcess() {
         onClick: onStartInstallProcess,
         children: "Yes, Install Now"
       })]
+    }), allInstallProcessDone && /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.Fragment, {
+      children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsxs)("div", {
+        className: "tw-bg-gradient-to-r tw-from-green-50 tw-to-emerald-50 tw-border tw-border-green-200 tw-rounded-lg tw-p-5 tw-mb-6",
+        children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsxs)("div", {
+          className: "tw-flex tw-items-center tw-justify-between tw-mb-4",
+          children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsxs)("div", {
+            className: "tw-flex tw-items-center tw-gap-3",
+            children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)("div", {
+              className: "tw-flex tw-items-center tw-justify-center tw-w-12 tw-h-12 tw-rounded-full tw-bg-green-500",
+              children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)("svg", {
+                className: "tw-w-6 tw-h-6 tw-text-white",
+                fill: "none",
+                stroke: "currentColor",
+                viewBox: "0 0 24 24",
+                children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)("path", {
+                  strokeLinecap: "round",
+                  strokeLinejoin: "round",
+                  strokeWidth: 2,
+                  d: "M5 13l4 4L19 7"
+                })
+              })
+            }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsxs)("div", {
+              children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)("h3", {
+                className: "tw-text-base tw-font-semibold tw-text-gray-900 tw-mb-1",
+                children: "Installation Complete!"
+              }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsxs)("p", {
+                className: "tw-text-xs tw-text-gray-600 tw-font-space-mono",
+                children: ["All ", totalSteps, " steps completed successfully"]
+              })]
+            })]
+          }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsxs)("div", {
+            className: "tw-text-right tw-font-space-mono",
+            children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)("div", {
+              className: "tw-text-2xl tw-font-bold tw-text-green-600",
+              children: "100%"
+            }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)("div", {
+              className: "tw-text-xs tw-text-gray-500 tw-mt-1",
+              children: "Complete"
+            })]
+          })]
+        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)("div", {
+          className: "tw-w-full tw-bg-gray-200 tw-rounded-full tw-h-3 tw-overflow-hidden",
+          children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)("div", {
+            className: "tw-bg-gradient-to-r tw-from-green-500 tw-to-emerald-600 tw-h-3 tw-rounded-full tw-transition-all tw-duration-500"
+          })
+        })]
+      })
     }), allInstallProcessDone && /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsxs)("div", {
       className: "tw-mt-8 tw-flex tw-justify-end",
       children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)("button", {
@@ -30579,7 +30790,7 @@ function InstallProcess() {
       if (errorPreinstall) {
         return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsxs)(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.Fragment, {
           children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsxs)("div", {
-            className: "tw-bg-yellow-50 tw-border tw-border-yellow-200 tw-rounded-md tw-p-4 tw-flex tw-items-start tw-gap-3 tw-mx-auto tw-max-w-md",
+            className: "tw-bg-yellow-50 tw-border tw-border-yellow-200 tw-rounded-md tw-p-4 tw-flex tw-items-start tw-gap-3",
             children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)("svg", {
               className: "tw-w-5 tw-h-5 tw-text-yellow-400 tw-mt-0.5 tw-flex-shrink-0",
               fill: "none",
@@ -30606,7 +30817,7 @@ function InstallProcess() {
             className: "tw-mt-8 tw-flex tw-justify-end",
             children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)("button", {
               type: "button",
-              className: "tw-inline-flex tw-items-center tw-px-4 tw-py-2 tw-bg-gray-100 hover:tw-bg-gray-200 tw-text-gray-700 tw-rounded-md tw-font-medium tw-shadow-sm tw-transition-all tw-duration-150 focus:tw-outline-none focus:tw-ring-2 focus:tw-ring-offset-2 focus:tw-ring-gray-400 tw-mr-2",
+              className: "tw-inline-flex tw-items-center tw-px-4 tw-py-2 tw-bg-gray-100 hover:tw-bg-gray-200 tw-text-gray-700 tw-rounded-md tw-font-medium tw-shadow-sm tw-transition-all tw-duration-150 focus:tw-outline-none focus:tw-ring-2 focus:tw-ring-offset-2 focus:tw-ring-gray-400",
               "aria-label": "Close",
               onClick: function onClick() {
                 // setInstallProcessModalOpen(false);
@@ -30733,7 +30944,7 @@ var PackCard = function PackCard(_ref2) {
     setIsPluginModalOpen(true);
   };
   var buttonInstallActiveByPluginRequirements = pack.validated_required_plugins ? pack.validated_required_plugins.passed : true;
-  console.log(buttonInstallActiveByPluginRequirements);
+  // console.log(buttonInstallActiveByPluginRequirements)
   return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsxs)("div", {
     className: "tw-bg-white tw-border tw-border-gray-200 tw-overflow-hidden hover:tw-shadow-md tw-transition-shadow tw-duration-200",
     children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsxs)("div", {

@@ -71,7 +71,7 @@ const PackCard = ({ pack, onInstall, onPreview }) => {
   };
 
   const buttonInstallActiveByPluginRequirements = pack.validated_required_plugins ? pack.validated_required_plugins.passed : true;
-  console.log(buttonInstallActiveByPluginRequirements)
+  // console.log(buttonInstallActiveByPluginRequirements)
   return (
     <div className="tw-bg-white tw-border tw-border-gray-200 tw-overflow-hidden hover:tw-shadow-md tw-transition-shadow tw-duration-200">
       {/* Image */}

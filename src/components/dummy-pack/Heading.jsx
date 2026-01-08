@@ -21,7 +21,7 @@ const Heading = ({
 
   return (
     <div className={`tw-bg-white tw-p-8 tw-mb-8 tw-border tw-border-gray-200 ${className}`}>
-      <h2 className="tw-text-2xl tw-font-semibold tw-text-gray-900 tw-mb-2 tw-flex tw-items-center tw-gap-2">
+      <h2 className="tw-text-2xl tw-font-semibold tw-text-gray-900 tw-mb-3 tw-flex tw-items-center tw-gap-2">
         {IconComponent && (
           <span className="tw-bg-gray-100 tw-p-2 tw-rounded-xl tw-shadow-sm tw-flex tw-items-center tw-justify-center tw-border tw-border-gray-200 tw-mr-1">
             <span className="tw-text-blue-500 tw-drop-shadow-sm">
@@ -32,9 +32,8 @@ const Heading = ({
         {title}
       </h2>
       {subtitle && (
-        <p className="tw-text-sm tw-text-gray-600 tw-leading-relaxed">
-          {subtitle}
-        </p>
+        <div className="tw-text-sm tw-text-gray-600 tw-leading-relaxed __html-content-styled" dangerouslySetInnerHTML={{ __html: subtitle }}>
+        </div>
       )}
     </div>
   );
