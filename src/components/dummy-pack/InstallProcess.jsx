@@ -218,7 +218,7 @@ export default function InstallProcess() {
         setError(null);
       } }
       title={ `Install "${packData.name}"` }
-      size='lg'
+      size='xl'
     >
       {
         (() => {
@@ -243,7 +243,9 @@ export default function InstallProcess() {
                   </svg>
                   <div>
                     <span className="tw-block tw-font-semibold tw-text-yellow-900">Warning: Failed to Validate Package</span>
-                    <span className="tw-text-xs tw-text-yellow-800 tw-font-space-mono">{errorPreinstall}</span>
+                    <div 
+                      className="tw-text-xs tw-text-yellow-800 tw-font-space-mono" 
+                      dangerouslySetInnerHTML={{ __html: errorPreinstall }}></div>
                   </div>
                 </div>
 
