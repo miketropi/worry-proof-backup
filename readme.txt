@@ -5,7 +5,7 @@ Tags: backup, restore, import, export, database
 Requires at least: 6.0
 Tested up to: 6.9
 Requires PHP: 8.0
-Stable tag: 0.2.2
+Stable tag: 0.2.3
 License: GPLv2 or later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
 
@@ -82,6 +82,17 @@ Yes, you can use the import/export tools to move your site or demo content betwe
 * [Plugin Source](https://github.com/miketropi/worry-proof-backup)
 
 == Changelog ==
+
+= 0.2.3 =
+* New: Enhanced Dummy Pack installation flow with explicit support for different package types:
+    - **Premium Packs**: Packs marked as premium now require license checks and validation before install. Installation will not proceed unless a valid license is detected (future versions may expand license management options).
+    - **Free Packs**: No license verification required; install is one-click and streamlined.
+    - **Locked Packs**: UI now clearly displays locked packs. Attempting to install presents a notice that admin action or additional steps may be required (for example, connecting to licensing server).
+* UI: Updated Dummy Pack Center—each pack now shows "Premium," "Free," or "Locked" indicators for instant clarity on requirements.
+* Feature: Improved backend/frontend coordination for locked and premium package logic, including step-by-step license checks.
+* Enhancement: Import/install process UI now shows more detailed, real-time step indicators, status, and errors for each phase (download, unpack, validate, restore, etc.).
+* Improvement: Smoother (and clearer) visual feedback during all stages of the import process, with clearer error or license prompts when actions are blocked.
+* Maintenance: Internal refactoring for easier extension (future support of license keys, pro packs, or external validation APIs).
 
 = 0.2.2 =
 * Update: Installation of dummy/demo data packs now requires PHP 8.0 or higher and WordPress 6.0 or above for optimal compatibility and performance.
