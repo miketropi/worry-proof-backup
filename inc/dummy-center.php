@@ -275,7 +275,7 @@ function worrprba_dummy_pack_get_packs() {
     }, $data['packages']);
   }
 
-  return $data;
+  return apply_filters( 'worrprba_dummy_pack_get_packs_data', $data );
 }
 
 

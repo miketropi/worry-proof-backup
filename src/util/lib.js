@@ -1,7 +1,11 @@
 const { ajax_url, nonce } = worrprba_php_data;
 
-export const __request = async (url, options) => {
+export const __request = async (url, options, returnRawResponse = false) => {
   const response = await fetch(url, options);
+
+  if(returnRawResponse) {
+    return response;
+  }
 
   if (!response.ok) {
     // throw new Error(`HTTP error! status: ${response.status}`);

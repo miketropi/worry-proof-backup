@@ -36093,23 +36093,32 @@ var _worrprba_php_data = worrprba_php_data,
   nonce = _worrprba_php_data.nonce;
 var __request = /*#__PURE__*/function () {
   var _ref = _asyncToGenerator(/*#__PURE__*/_regenerator().m(function _callee(url, options) {
-    var response;
+    var returnRawResponse,
+      response,
+      _args = arguments;
     return _regenerator().w(function (_context) {
       while (1) switch (_context.n) {
         case 0:
+          returnRawResponse = _args.length > 2 && _args[2] !== undefined ? _args[2] : false;
           _context.n = 1;
           return fetch(url, options);
         case 1:
           response = _context.v;
-          if (response.ok) {
+          if (!returnRawResponse) {
             _context.n = 2;
+            break;
+          }
+          return _context.a(2, response);
+        case 2:
+          if (response.ok) {
+            _context.n = 3;
             break;
           }
           return _context.a(2, {
             success: false,
             data: "HTTP error! status: ".concat(response.status)
           });
-        case 2:
+        case 3:
           return _context.a(2, response.json());
       }
     }, _callee);

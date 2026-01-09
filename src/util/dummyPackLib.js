@@ -185,3 +185,12 @@ export function isVersionGte(v1, v2) {
   }
   return true;
 }
+
+export const doPreinstall = async (packID) => {
+  const response = await __request(`${ endpoint }packages/preinstall/${ theme_slug }/${ packID }`, {
+    method: 'GET',
+    headers,
+  }, true);
+
+  return response.json();
+}

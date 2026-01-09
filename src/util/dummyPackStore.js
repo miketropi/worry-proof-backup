@@ -97,6 +97,18 @@ const useDummyPackStore = create(
       set((state) => {
         state.installProcess.inProgressStep = inProgressStep;
       });
+    },
+    // reset installProcess
+    resetInstallProcess: () => {
+      set((state) => {
+        state.installProcess = {
+          process: [],
+          inProgress: false,
+          inProgressStep: 0,
+          isModalOpen: false,
+          packData: null,
+        };
+      });
     }
 	})),
 );
