@@ -5,7 +5,7 @@ Tags: backup, restore, import, export, database
 Requires at least: 6.0
 Tested up to: 6.9
 Requires PHP: 8.0
-Stable tag: 0.2.3
+Stable tag: 0.2.4
 License: GPLv2 or later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
 
@@ -82,6 +82,15 @@ Yes, you can use the import/export tools to move your site or demo content betwe
 * [Plugin Source](https://github.com/miketropi/worry-proof-backup)
 
 == Changelog ==
+
+= 0.2.4 =
+* Enhancement: Added a new filter/hook `worrprba_dummy_pack_skip_install_proccess` that allows developers to programmatically skip any install process step in dummy/demo pack install. You can now hook like:
+  ```
+  add_filter('worrprba_dummy_pack_skip_install_proccess', function($skip) {
+      return ['restore_plugins']; // support: restore_uploads, restore_plugins, restore_database
+  }, 10);
+  ```
+* Maintenance: Code cleanup and improved inline documentation for the new hook.
 
 = 0.2.3 =
 * New: Enhanced Dummy Pack installation flow with explicit support for different package types:
