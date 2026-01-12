@@ -123,6 +123,11 @@ function worrprba_dummy_pack_center_enqueue_script() {
     'wordpress_version' => wp_get_wp_version(),
     'license_key' => $license_key,
     'header_meta_attached_api' => worrprba_dummy_pack_header_meta_attached_api(),
+    'skip_install_proccess' => apply_filters( 'worrprba_dummy_pack_skip_install_proccess', [
+      // 'restore_uploads',
+      // 'restore_plugins',
+      // 'restore_database',
+    ] ),
   ) );
 }
 
@@ -159,9 +164,12 @@ function worrprba_dummy_pack_center_register_submenu() {
  */
 function worrprba_dummy_pack_center_page() {
   ?>
-  <div id="WORRPRBA-DUMMY-PACK-CENTER-ROOT">
-    <!-- We are use react js for this content -->
-  </div> <!-- #WORRPRBA-DUMMY-PACK-CENTER-ROOT -->
+  <div>
+    <h1></h1>
+    <div id="WORRPRBA-DUMMY-PACK-CENTER-ROOT">
+      <!-- We are use react js for this content -->
+    </div> <!-- #WORRPRBA-DUMMY-PACK-CENTER-ROOT -->
+  </div>
   <?php
 }
 

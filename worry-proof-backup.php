@@ -6,7 +6,7 @@
  * Version: 0.2.3
  * Requires at least: 6.0
  * Requires PHP: 8.0
- * Author: @Mike
+ * Author: Beplus
  * Author URI: https://github.com/miketropi
  * Text Domain: worry-proof-backup
  * Domain Path: /languages

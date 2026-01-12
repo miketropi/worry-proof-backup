@@ -78,7 +78,6 @@ export default function WorrprbaDummyCenter() {
 
   return (
     <div className="tw-max-w-7xl tw-mx-auto tw-px-2 sm:tw-px-4 tw-py-10">
-      <h1></h1>
       <Heading
         title={ packs?.name }
         subtitle={ packs?.description }

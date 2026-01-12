@@ -1,6 +1,7 @@
 import { create } from 'zustand';
 import { immer } from 'zustand/middleware/immer';
 import { doInstallProcess } from './dummyPackLib';
+const { skip_install_proccess } = worrprba_dummy_pack_center_data;
 
 const useDummyPackStore = create(
 	immer((set, get) => ({
@@ -16,8 +17,9 @@ const useDummyPackStore = create(
       const { ID, size, ...rest } = packData;
       const restorePluginsPayload = rest.skip_restore_plugins && rest.skip_restore_plugins.length > 0 ? { skip_restore_plugins: rest.skip_restore_plugins.join(',') } : {};
       
-      const process = [
+      let process = [
 				{
+					_id: 'download_package',
 					step: 1,
 					name: `Download Package ${ size ? `(${size})` : '' }`,
 					description: '⬇️ Downloading the dummy pack package. Please wait while we fetch the files for you!',
@@ -27,6 +29,7 @@ const useDummyPackStore = create(
           }
 				},
 				{
+					_id: 'unzip_package',
 					step: 2,
 					name: 'Unzip Package',
 					description: '🗃️ Unzipping the downloaded package to prepare for installation!',
@@ -34,6 +37,7 @@ const useDummyPackStore = create(
 					payload: {},
 				},
 				{
+					_id: 'read_config_file',
 					step: 3,
 					name: 'Read Config File',
 					description: '📖 Checking the dummy pack configuration! Taking a quick look at what will be restored so we know exactly what to set up. 🧐✨',
@@ -41,6 +45,7 @@ const useDummyPackStore = create(
 					payload: {},
 				},
 				{
+					_id: 'restore_uploads',
 					step: 4,
 					name: 'Restore Uploads',
 					description: '📁 Restoring uploads from the dummy pack. All your media and files are being brought back!',
@@ -48,6 +53,7 @@ const useDummyPackStore = create(
 					payload: {},
 				},
 				{
+					_id: 'restore_plugins',
 					step: 5,
 					name: 'Restore Plugins',
 					description: '🔌 Restoring plugins from the dummy pack. Your site\'s functionality is coming back online!',
@@ -55,6 +61,7 @@ const useDummyPackStore = create(
 					payload: restorePluginsPayload,
 				},
 				{
+					_id: 'restore_database',
 					step: 6,
 					name: 'Restore Database',
 					description: '🗄️ Restoring the database from the dummy pack. All your data is being carefully placed!',
@@ -62,6 +69,7 @@ const useDummyPackStore = create(
 					payload: {},
 				},
 				{
+					_id: 'done',
 					step: 7,
 					name: 'Done',
 					description: '🎉 All done! Your dummy pack is fully installed. Everything is set up and ready to go! 🥳',
@@ -69,6 +77,11 @@ const useDummyPackStore = create(
 					payload: {},
 				}
 			];
+
+			// array map, if _id in skip add method skip true
+			process = process.map((step) => {
+				return { ...step, skip: skip_install_proccess.includes(step._id) };
+			});
 
       set((state) => {
         state.installProcess.process = process;

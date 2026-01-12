@@ -20,6 +20,12 @@ export default function InstallProcess() {
 
   const installProcessHandler = async (process, retry = 0) => {
     let __payload = { ...payload, ...process.payload };
+
+    if(process.skip) {
+      setInstallProcessInProgressStep(inProgressStep + 1);
+      return;
+    }
+
     const response = await doInstallProcess({
       ...process,
       payload: __payload,
@@ -196,7 +202,7 @@ export default function InstallProcess() {
                   <span className="tw-flex tw-items-center tw-justify-center tw-w-5 tw-h-5 tw-rounded-full tw-bg-gray-300 tw-text-gray-600 tw-font-semibold tw-text-xs">
                     {step.step}
                   </span>
-                  <span className="tw-text-gray-600">{step.name}</span>
+                  <span className={ [ 'tw-text-gray-600', step.skip ? 'tw-line-through tw-text-gray-400' : '' ].join(' ') }>{step.name} {step.skip ? '(Skipped)' : ''}</span>
                 </div>
               ))}
               {totalSteps > 3 && (
@@ -243,14 +249,14 @@ export default function InstallProcess() {
                 )}
               </span>
               <div className="tw-pl-4">
-                <h3 className={`tw-text-base tw-font-semibold ${
+                <h3 className={`tw-text-base tw-font-semibold ${step.skip ? 'tw-line-through tw-text-gray-400' : ''} ${
                   isCompleted
                     ? 'tw-text-blue-600'
                     : isCurrent
                     ? 'tw-text-blue-700'
                     : 'tw-text-gray-500'
                 }`}>
-                  {step.name}
+                  {step.name} {step.skip ? '(Skipped)' : ''}
                 </h3>
                 <p className="tw-mt-1 tw-text-sm tw-text-gray-500">{step.description}</p>
                 {error && isCurrent && (

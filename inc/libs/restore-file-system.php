@@ -17,7 +17,7 @@ class WORRPB_Restore_File_System {
 
 	private $errors = [];
 
-	private $batch_size = 50; // SAFE DEFAULT
+	private $batch_size = 150; // SAFE DEFAULT
 	private $start_index = 0;
 	private $progress_file;
 
