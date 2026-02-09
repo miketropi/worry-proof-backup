@@ -197,12 +197,12 @@ const BackupTable = () => {
     return <LoadingSkeleton />;
   }
 
-  if (!backups || backups.length === 0) {
-    return <EmptyState />;
-  }
+  // if (!backups || backups.length === 0) {
+  //   return <EmptyState />;
+  // }
 
   return (
-    <div className="tw-bg-white tw-border tw-border-gray-200">
+    <div className="tw-bg-white tw-border tw-border-gray-200"> 
       <BackupTableTools 
         onFilterChange={handleFilterChange} 
         onDeleteBackups={handleDeleteSelectedBackups}
@@ -210,58 +210,68 @@ const BackupTable = () => {
         onUploadBackup={handleUploadBackup}
         onBackupSchedule={handleBackupSchedule}
       />
-
-      {/* Mobile/Tablet View */}
-      <div className="tw-block md:tw-hidden tw-bg-white tw-border-t tw-border-gray-200">
-        {filteredBackups.map((backup) => (
-          <BackupMobileCard
-            key={backup.id}
-            backup={backup}
-            isSelected={selectedBackups.includes(backup.id)}
-            onSelect={handleSelectBackup}
-            onDelete={handleDeleteBackup}
-            onDownload={handleDownloadBackup}
-            onRestore={handleRestoreBackup}
-          />
-        ))}
-      </div>
-
-      {/* Desktop View */}
-      <div className="tw-hidden md:tw-block tw-overflow-x-auto">
-        <table className="tw-min-w-full tw-divide-y tw-divide-gray-200">
-          <thead className="tw-bg-gray-50">
-            <tr>
-              <th scope="col" className="tw-px-6 tw-py-3 tw-text-left tw-text-xs tw-font-medium tw-text-gray-500" width="3%">
-                <input 
-                    type="checkbox" 
-                    className="tw-form-checkbox tw-h-4 tw-w-4 tw-text-blue-600" 
-                    checked={filteredBackups.length > 0 && selectedBackups.length === filteredBackups.length} 
-                    onChange={handleSelectAllBackups} 
-                    disabled={filteredBackups.length === 0}
+      {
+        (!backups || backups.length === 0) 
+        ?
+          <div className="tw-p-4">
+            <EmptyState />
+          </div>
+        : 
+          <>
+            {/* Mobile/Tablet View */}
+            <div className="tw-block md:tw-hidden tw-bg-white tw-border-t tw-border-gray-200">
+              {filteredBackups.map((backup) => (
+                <BackupMobileCard
+                  key={backup.id}
+                  backup={backup}
+                  isSelected={selectedBackups.includes(backup.id)}
+                  onSelect={handleSelectBackup}
+                  onDelete={handleDeleteBackup}
+                  onDownload={handleDownloadBackup}
+                  onRestore={handleRestoreBackup}
                 />
-              </th>
-              <th scope="col" className="tw-px-6 tw-py-3 tw-text-left tw-text-xs tw-font-medium tw-text-gray-500 tw-uppercase">Name</th>
-              <th scope="col" className="tw-px-6 tw-py-3 tw-text-left tw-text-xs tw-font-medium tw-text-gray-500 tw-uppercase tw-tracking-wider">Date</th>
-              <th scope="col" className="tw-px-6 tw-py-3 tw-text-left tw-text-xs tw-font-medium tw-text-gray-500 tw-uppercase tw-tracking-wider">Size</th>
-              <th scope="col" className="tw-px-6 tw-py-3 tw-text-left tw-text-xs tw-font-medium tw-text-gray-500 tw-uppercase tw-tracking-wider">Status</th>
-              <th scope="col" className="tw-relative tw-px-6 tw-py-3"><span className="tw-sr-only">Actions</span></th>
-            </tr>
-          </thead>
-          <tbody className="tw-bg-white tw-divide-y tw-divide-gray-200">
-            {filteredBackups.map((backup) => (
-              <BackupTableRow
-                key={backup.id}
-                backup={backup}
-                isSelected={selectedBackups.includes(backup.id)}
-                onSelect={handleSelectBackup}
-                onDelete={handleDeleteBackup}
-                onDownload={handleDownloadBackup}
-                onRestore={handleRestoreBackup}
-              />
-            ))}
-          </tbody>
-        </table>
-      </div>
+              ))}
+            </div>
+
+            {/* Desktop View */}
+            <div className="tw-hidden md:tw-block tw-overflow-x-auto">
+              <table className="tw-min-w-full tw-divide-y tw-divide-gray-200">
+                <thead className="tw-bg-gray-50">
+                  <tr>
+                    <th scope="col" className="tw-px-6 tw-py-3 tw-text-left tw-text-xs tw-font-medium tw-text-gray-500" width="3%">
+                      <input 
+                          type="checkbox" 
+                          className="tw-form-checkbox tw-h-4 tw-w-4 tw-text-blue-600" 
+                          checked={filteredBackups.length > 0 && selectedBackups.length === filteredBackups.length} 
+                          onChange={handleSelectAllBackups} 
+                          disabled={filteredBackups.length === 0}
+                      />
+                    </th>
+                    <th scope="col" className="tw-px-6 tw-py-3 tw-text-left tw-text-xs tw-font-medium tw-text-gray-500 tw-uppercase">Name</th>
+                    <th scope="col" className="tw-px-6 tw-py-3 tw-text-left tw-text-xs tw-font-medium tw-text-gray-500 tw-uppercase tw-tracking-wider">Date</th>
+                    <th scope="col" className="tw-px-6 tw-py-3 tw-text-left tw-text-xs tw-font-medium tw-text-gray-500 tw-uppercase tw-tracking-wider">Size</th>
+                    <th scope="col" className="tw-px-6 tw-py-3 tw-text-left tw-text-xs tw-font-medium tw-text-gray-500 tw-uppercase tw-tracking-wider">Status</th>
+                    <th scope="col" className="tw-relative tw-px-6 tw-py-3"><span className="tw-sr-only">Actions</span></th>
+                  </tr>
+                </thead>
+                <tbody className="tw-bg-white tw-divide-y tw-divide-gray-200">
+                  {filteredBackups.map((backup) => (
+                    <BackupTableRow
+                      key={backup.id}
+                      backup={backup}
+                      isSelected={selectedBackups.includes(backup.id)}
+                      onSelect={handleSelectBackup}
+                      onDelete={handleDeleteBackup}
+                      onDownload={handleDownloadBackup}
+                      onRestore={handleRestoreBackup}
+                    />
+                  ))}
+                </tbody>
+              </table>
+            </div>
+          </>
+      }
+      
     </div>
   );
 };
