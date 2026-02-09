@@ -29832,7 +29832,7 @@ function WorrprbaDummyCenter() {
   }();
   return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_9__.jsxs)("div", {
     className: "tw-max-w-7xl tw-mx-auto tw-px-2 sm:tw-px-4 tw-py-10",
-    children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_9__.jsx)("h1", {}), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_9__.jsx)(_components_dummy_pack_Heading__WEBPACK_IMPORTED_MODULE_2__["default"], {
+    children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_9__.jsx)(_components_dummy_pack_Heading__WEBPACK_IMPORTED_MODULE_2__["default"], {
       title: packs === null || packs === void 0 ? void 0 : packs.name,
       subtitle: packs === null || packs === void 0 ? void 0 : packs.description
     }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_9__.jsxs)("div", {
@@ -30332,45 +30332,52 @@ function InstallProcess() {
           case 0:
             retry = _args.length > 1 && _args[1] !== undefined ? _args[1] : 0;
             __payload = _objectSpread(_objectSpread({}, payload), process.payload);
-            _context.n = 1;
+            if (!process.skip) {
+              _context.n = 1;
+              break;
+            }
+            setInstallProcessInProgressStep(inProgressStep + 1);
+            return _context.a(2);
+          case 1:
+            _context.n = 2;
             return (0,_util_dummyPackLib__WEBPACK_IMPORTED_MODULE_3__.doInstallProcess)(_objectSpread(_objectSpread({}, process), {}, {
               payload: __payload
             }));
-          case 1:
+          case 2:
             response = _context.v;
             if (!(response.success != true)) {
-              _context.n = 3;
+              _context.n = 4;
               break;
             }
             // alert('error: ' + response.data.error_message);
             error_message = response.data.error_message ? response.data.error_message : response.data;
             if (!(retry > 4)) {
-              _context.n = 2;
+              _context.n = 3;
               break;
             }
             setError(error_message);
             return _context.a(2);
-          case 2:
+          case 3:
             // recall
             setTimeout(function () {
               _installProcessHandler(process, retry + 1);
             }, 4000);
             return _context.a(2);
-          case 3:
+          case 4:
             response_data = _objectSpread(_objectSpread({}, payload), response.data);
             setPayload(response_data);
             setResponsePerStep(_objectSpread(_objectSpread({}, responsePerStep), {}, _defineProperty({}, process.step, response.data)));
             if (!(response.data.next_step == true)) {
-              _context.n = 4;
+              _context.n = 5;
               break;
             }
             setInstallProcessInProgressStep(inProgressStep + 1);
             return _context.a(2);
-          case 4:
+          case 5:
             _installProcessHandler(_objectSpread(_objectSpread({}, process), {}, {
               payload: _objectSpread(_objectSpread({}, process.payload), response.data)
             }));
-          case 5:
+          case 6:
             return _context.a(2);
         }
       }, _callee);
@@ -30552,9 +30559,9 @@ function InstallProcess() {
               children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)("span", {
                 className: "tw-flex tw-items-center tw-justify-center tw-w-5 tw-h-5 tw-rounded-full tw-bg-gray-300 tw-text-gray-600 tw-font-semibold tw-text-xs",
                 children: step.step
-              }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)("span", {
-                className: "tw-text-gray-600",
-                children: step.name
+              }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsxs)("span", {
+                className: ['tw-text-gray-600', step.skip ? 'tw-line-through tw-text-gray-400' : ''].join(' '),
+                children: [step.name, " ", step.skip ? '(Skipped)' : '']
               })]
             }, idx);
           }), totalSteps > 3 && /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)("div", {
@@ -30603,9 +30610,9 @@ function InstallProcess() {
             })
           }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsxs)("div", {
             className: "tw-pl-4",
-            children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)("h3", {
-              className: "tw-text-base tw-font-semibold ".concat(isCompleted ? 'tw-text-blue-600' : isCurrent ? 'tw-text-blue-700' : 'tw-text-gray-500'),
-              children: step.name
+            children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsxs)("h3", {
+              className: "tw-text-base tw-font-semibold ".concat(step.skip ? 'tw-line-through tw-text-gray-400' : '', " ").concat(isCompleted ? 'tw-text-blue-600' : isCurrent ? 'tw-text-blue-700' : 'tw-text-gray-500'),
+              children: [step.name, " ", step.skip ? '(Skipped)' : '']
             }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)("p", {
               className: "tw-mt-1 tw-text-sm tw-text-gray-500",
               children: step.description
@@ -31899,12 +31906,20 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var zustand__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! zustand */ "./node_modules/zustand/esm/react.mjs");
 /* harmony import */ var zustand_middleware_immer__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! zustand/middleware/immer */ "./node_modules/zustand/esm/middleware/immer.mjs");
 /* harmony import */ var _dummyPackLib__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./dummyPackLib */ "./src/util/dummyPackLib.js");
+function _typeof(o) { "@babel/helpers - typeof"; return _typeof = "function" == typeof Symbol && "symbol" == typeof Symbol.iterator ? function (o) { return typeof o; } : function (o) { return o && "function" == typeof Symbol && o.constructor === Symbol && o !== Symbol.prototype ? "symbol" : typeof o; }, _typeof(o); }
 var _excluded = ["ID", "size"];
+function ownKeys(e, r) { var t = Object.keys(e); if (Object.getOwnPropertySymbols) { var o = Object.getOwnPropertySymbols(e); r && (o = o.filter(function (r) { return Object.getOwnPropertyDescriptor(e, r).enumerable; })), t.push.apply(t, o); } return t; }
+function _objectSpread(e) { for (var r = 1; r < arguments.length; r++) { var t = null != arguments[r] ? arguments[r] : {}; r % 2 ? ownKeys(Object(t), !0).forEach(function (r) { _defineProperty(e, r, t[r]); }) : Object.getOwnPropertyDescriptors ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t)) : ownKeys(Object(t)).forEach(function (r) { Object.defineProperty(e, r, Object.getOwnPropertyDescriptor(t, r)); }); } return e; }
+function _defineProperty(e, r, t) { return (r = _toPropertyKey(r)) in e ? Object.defineProperty(e, r, { value: t, enumerable: !0, configurable: !0, writable: !0 }) : e[r] = t, e; }
+function _toPropertyKey(t) { var i = _toPrimitive(t, "string"); return "symbol" == _typeof(i) ? i : i + ""; }
+function _toPrimitive(t, r) { if ("object" != _typeof(t) || !t) return t; var e = t[Symbol.toPrimitive]; if (void 0 !== e) { var i = e.call(t, r || "default"); if ("object" != _typeof(i)) return i; throw new TypeError("@@toPrimitive must return a primitive value."); } return ("string" === r ? String : Number)(t); }
 function _objectWithoutProperties(e, t) { if (null == e) return {}; var o, r, i = _objectWithoutPropertiesLoose(e, t); if (Object.getOwnPropertySymbols) { var n = Object.getOwnPropertySymbols(e); for (r = 0; r < n.length; r++) o = n[r], -1 === t.indexOf(o) && {}.propertyIsEnumerable.call(e, o) && (i[o] = e[o]); } return i; }
 function _objectWithoutPropertiesLoose(r, e) { if (null == r) return {}; var t = {}; for (var n in r) if ({}.hasOwnProperty.call(r, n)) { if (-1 !== e.indexOf(n)) continue; t[n] = r[n]; } return t; }
 
 
 
+var _worrprba_dummy_pack_ = worrprba_dummy_pack_center_data,
+  skip_install_proccess = _worrprba_dummy_pack_.skip_install_proccess;
 var useDummyPackStore = (0,zustand__WEBPACK_IMPORTED_MODULE_0__.create)((0,zustand_middleware_immer__WEBPACK_IMPORTED_MODULE_1__.immer)(function (set, get) {
   return {
     // State
@@ -31923,6 +31938,7 @@ var useDummyPackStore = (0,zustand__WEBPACK_IMPORTED_MODULE_0__.create)((0,zusta
         skip_restore_plugins: rest.skip_restore_plugins.join(',')
       } : {};
       var process = [{
+        _id: 'download_package',
         step: 1,
         name: "Download Package ".concat(size ? "(".concat(size, ")") : ''),
         description: '⬇️ Downloading the dummy pack package. Please wait while we fetch the files for you!',
@@ -31931,42 +31947,55 @@ var useDummyPackStore = (0,zustand__WEBPACK_IMPORTED_MODULE_0__.create)((0,zusta
           ID: ID
         }
       }, {
+        _id: 'unzip_package',
         step: 2,
         name: 'Unzip Package',
         description: '🗃️ Unzipping the downloaded package to prepare for installation!',
         action: 'worrprba_ajax_unzip_dummy_pack',
         payload: {}
       }, {
+        _id: 'read_config_file',
         step: 3,
         name: 'Read Config File',
         description: '📖 Checking the dummy pack configuration! Taking a quick look at what will be restored so we know exactly what to set up. 🧐✨',
         action: 'worrprba_ajax_restore_read_dummy_pack_config_file',
         payload: {}
       }, {
+        _id: 'restore_uploads',
         step: 4,
         name: 'Restore Uploads',
         description: '📁 Restoring uploads from the dummy pack. All your media and files are being brought back!',
         action: 'worrprba_ajax_restore_dummy_pack_uploads',
         payload: {}
       }, {
+        _id: 'restore_plugins',
         step: 5,
         name: 'Restore Plugins',
         description: '🔌 Restoring plugins from the dummy pack. Your site\'s functionality is coming back online!',
         action: 'worrprba_ajax_restore_dummy_pack_plugins',
         payload: restorePluginsPayload
       }, {
+        _id: 'restore_database',
         step: 6,
         name: 'Restore Database',
         description: '🗄️ Restoring the database from the dummy pack. All your data is being carefully placed!',
         action: 'worrprba_ajax_restore_dummy_pack_database',
         payload: {}
       }, {
+        _id: 'done',
         step: 7,
         name: 'Done',
         description: '🎉 All done! Your dummy pack is fully installed. Everything is set up and ready to go! 🥳',
         action: 'worrprba_ajax_dummy_pack_install_done',
         payload: {}
       }];
+
+      // array map, if _id in skip add method skip true
+      process = process.map(function (step) {
+        return _objectSpread(_objectSpread({}, step), {}, {
+          skip: skip_install_proccess.includes(step._id)
+        });
+      });
       set(function (state) {
         state.installProcess.process = process;
         // set inProgress to true

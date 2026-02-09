@@ -32112,9 +32112,11 @@ var BackupTable = function BackupTable() {
   if (isLoading) {
     return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_16__.jsx)(_LoadingSkeleton__WEBPACK_IMPORTED_MODULE_7__["default"], {});
   }
-  if (!backups || backups.length === 0) {
-    return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_16__.jsx)(_EmptyState__WEBPACK_IMPORTED_MODULE_8__["default"], {});
-  }
+
+  // if (!backups || backups.length === 0) {
+  //   return <EmptyState />;
+  // }
+
   return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_16__.jsxs)("div", {
     className: "tw-bg-white tw-border tw-border-gray-200",
     children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_16__.jsx)(_BackupTableTools__WEBPACK_IMPORTED_MODULE_2__["default"], {
@@ -32123,75 +32125,80 @@ var BackupTable = function BackupTable() {
       selectedBackups: selectedBackups,
       onUploadBackup: handleUploadBackup,
       onBackupSchedule: handleBackupSchedule
-    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_16__.jsx)("div", {
-      className: "tw-block md:tw-hidden tw-bg-white tw-border-t tw-border-gray-200",
-      children: filteredBackups.map(function (backup) {
-        return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_16__.jsx)(_BackupMobileCard__WEBPACK_IMPORTED_MODULE_11__["default"], {
-          backup: backup,
-          isSelected: selectedBackups.includes(backup.id),
-          onSelect: handleSelectBackup,
-          onDelete: handleDeleteBackup,
-          onDownload: handleDownloadBackup,
-          onRestore: handleRestoreBackup
-        }, backup.id);
-      })
-    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_16__.jsx)("div", {
-      className: "tw-hidden md:tw-block tw-overflow-x-auto",
-      children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_16__.jsxs)("table", {
-        className: "tw-min-w-full tw-divide-y tw-divide-gray-200",
-        children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_16__.jsx)("thead", {
-          className: "tw-bg-gray-50",
-          children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_16__.jsxs)("tr", {
-            children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_16__.jsx)("th", {
-              scope: "col",
-              className: "tw-px-6 tw-py-3 tw-text-left tw-text-xs tw-font-medium tw-text-gray-500",
-              width: "3%",
-              children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_16__.jsx)("input", {
-                type: "checkbox",
-                className: "tw-form-checkbox tw-h-4 tw-w-4 tw-text-blue-600",
-                checked: filteredBackups.length > 0 && selectedBackups.length === filteredBackups.length,
-                onChange: handleSelectAllBackups,
-                disabled: filteredBackups.length === 0
-              })
-            }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_16__.jsx)("th", {
-              scope: "col",
-              className: "tw-px-6 tw-py-3 tw-text-left tw-text-xs tw-font-medium tw-text-gray-500 tw-uppercase",
-              children: "Name"
-            }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_16__.jsx)("th", {
-              scope: "col",
-              className: "tw-px-6 tw-py-3 tw-text-left tw-text-xs tw-font-medium tw-text-gray-500 tw-uppercase tw-tracking-wider",
-              children: "Date"
-            }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_16__.jsx)("th", {
-              scope: "col",
-              className: "tw-px-6 tw-py-3 tw-text-left tw-text-xs tw-font-medium tw-text-gray-500 tw-uppercase tw-tracking-wider",
-              children: "Size"
-            }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_16__.jsx)("th", {
-              scope: "col",
-              className: "tw-px-6 tw-py-3 tw-text-left tw-text-xs tw-font-medium tw-text-gray-500 tw-uppercase tw-tracking-wider",
-              children: "Status"
-            }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_16__.jsx)("th", {
-              scope: "col",
-              className: "tw-relative tw-px-6 tw-py-3",
-              children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_16__.jsx)("span", {
-                className: "tw-sr-only",
-                children: "Actions"
-              })
-            })]
-          })
-        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_16__.jsx)("tbody", {
-          className: "tw-bg-white tw-divide-y tw-divide-gray-200",
-          children: filteredBackups.map(function (backup) {
-            return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_16__.jsx)(_BackupTableRow__WEBPACK_IMPORTED_MODULE_10__["default"], {
-              backup: backup,
-              isSelected: selectedBackups.includes(backup.id),
-              onSelect: handleSelectBackup,
-              onDelete: handleDeleteBackup,
-              onDownload: handleDownloadBackup,
-              onRestore: handleRestoreBackup
-            }, backup.id);
-          })
-        })]
-      })
+    }), !backups || backups.length === 0 ? /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_16__.jsx)("div", {
+      className: "tw-p-4",
+      children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_16__.jsx)(_EmptyState__WEBPACK_IMPORTED_MODULE_8__["default"], {})
+    }) : /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_16__.jsxs)(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_16__.Fragment, {
+      children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_16__.jsx)("div", {
+        className: "tw-block md:tw-hidden tw-bg-white tw-border-t tw-border-gray-200",
+        children: filteredBackups.map(function (backup) {
+          return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_16__.jsx)(_BackupMobileCard__WEBPACK_IMPORTED_MODULE_11__["default"], {
+            backup: backup,
+            isSelected: selectedBackups.includes(backup.id),
+            onSelect: handleSelectBackup,
+            onDelete: handleDeleteBackup,
+            onDownload: handleDownloadBackup,
+            onRestore: handleRestoreBackup
+          }, backup.id);
+        })
+      }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_16__.jsx)("div", {
+        className: "tw-hidden md:tw-block tw-overflow-x-auto",
+        children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_16__.jsxs)("table", {
+          className: "tw-min-w-full tw-divide-y tw-divide-gray-200",
+          children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_16__.jsx)("thead", {
+            className: "tw-bg-gray-50",
+            children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_16__.jsxs)("tr", {
+              children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_16__.jsx)("th", {
+                scope: "col",
+                className: "tw-px-6 tw-py-3 tw-text-left tw-text-xs tw-font-medium tw-text-gray-500",
+                width: "3%",
+                children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_16__.jsx)("input", {
+                  type: "checkbox",
+                  className: "tw-form-checkbox tw-h-4 tw-w-4 tw-text-blue-600",
+                  checked: filteredBackups.length > 0 && selectedBackups.length === filteredBackups.length,
+                  onChange: handleSelectAllBackups,
+                  disabled: filteredBackups.length === 0
+                })
+              }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_16__.jsx)("th", {
+                scope: "col",
+                className: "tw-px-6 tw-py-3 tw-text-left tw-text-xs tw-font-medium tw-text-gray-500 tw-uppercase",
+                children: "Name"
+              }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_16__.jsx)("th", {
+                scope: "col",
+                className: "tw-px-6 tw-py-3 tw-text-left tw-text-xs tw-font-medium tw-text-gray-500 tw-uppercase tw-tracking-wider",
+                children: "Date"
+              }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_16__.jsx)("th", {
+                scope: "col",
+                className: "tw-px-6 tw-py-3 tw-text-left tw-text-xs tw-font-medium tw-text-gray-500 tw-uppercase tw-tracking-wider",
+                children: "Size"
+              }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_16__.jsx)("th", {
+                scope: "col",
+                className: "tw-px-6 tw-py-3 tw-text-left tw-text-xs tw-font-medium tw-text-gray-500 tw-uppercase tw-tracking-wider",
+                children: "Status"
+              }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_16__.jsx)("th", {
+                scope: "col",
+                className: "tw-relative tw-px-6 tw-py-3",
+                children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_16__.jsx)("span", {
+                  className: "tw-sr-only",
+                  children: "Actions"
+                })
+              })]
+            })
+          }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_16__.jsx)("tbody", {
+            className: "tw-bg-white tw-divide-y tw-divide-gray-200",
+            children: filteredBackups.map(function (backup) {
+              return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_16__.jsx)(_BackupTableRow__WEBPACK_IMPORTED_MODULE_10__["default"], {
+                backup: backup,
+                isSelected: selectedBackups.includes(backup.id),
+                onSelect: handleSelectBackup,
+                onDelete: handleDeleteBackup,
+                onDownload: handleDownloadBackup,
+                onRestore: handleRestoreBackup
+              }, backup.id);
+            })
+          })]
+        })
+      })]
     })]
   });
 };
